@@ -43,6 +43,22 @@
       <para>2025-06-01</para>
       <itemizedlist>
         <listitem>
+          <para>[bdubbs] - Update to systemd-257.6. Fixes
+          <ulink url='&lfs-ticket-root;5774'>#5774</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to setuptools-80.9.0. Fixes
+          <ulink url='&lfs-ticket-root;5728'>#5728</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to meson-1.8.1. Fixes
+          <ulink url='&lfs-ticket-root;5731'>#5731</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to automake-1.18. Fixes
+          <ulink url='&lfs-ticket-root;5734'>#5734</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[bdubbs] - Update build instructions to accomodate
           gcc-15 for bc, expect, ncurses, and gmp.</para>
         </listitem>
