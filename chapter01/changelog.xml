@@ -40,6 +40,48 @@
     appropriate for the entry or if needed the entire day's listitem.
     -->
     <listitem>
+      <para>2025-07-01</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Update to iana-etc-20250618. Addresses
+          <ulink url='&lfs-ticket-root;5006'>#5006</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to vim-9.1.1497. Addresses
+          <ulink url='&lfs-ticket-root;4500'>#4500</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to util-linux-2.41.1. Fixes
+          <ulink url='&lfs-ticket-root;5749'>#5749</ulink>.</para>
+        </listitem>
+        <listitem revision='sysv'>
+          <para>[bdubbs] - Update to shadow-4.18.0. Fixes
+          <ulink url='&lfs-ticket-root;5750'>#5750</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to pkgconf-2.5.1. Fixes
+          <ulink url='&lfs-ticket-root;5746'>#5746</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to ninja-1.13.0. Fixes
+          <ulink url='&lfs-ticket-root;5745'>#5745</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to linux-6.15.4. Fixes
+          <ulink url='&lfs-ticket-root;5748'>#5748</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to less-679. Fixes
+          <ulink url='&lfs-ticket-root;5747'>#5747</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to automake-1.18.1. Fixes
+          <ulink url='&lfs-ticket-root;5752'>#5752</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2025-06-15</para>
       <itemizedlist>
         <listitem>
