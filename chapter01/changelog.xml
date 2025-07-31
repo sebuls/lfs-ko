@@ -41,6 +41,36 @@
     -->
 
     <listitem>
+      <para>2025-08-01</para>
+      <itemizedlist>
+        <listitem>
+          <para>[bdubbs] - Update to meson-1.8.3. Fixes
+          <ulink url='&lfs-ticket-root;5771'>#5771</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to gdbm-1.26. Fixes
+          <ulink url='&lfs-ticket-root;5770'>#5770</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to binutils-2.45. Fixes
+          <ulink url='&lfs-ticket-root;5766'>#5766</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to gettext-0.26. Fixes
+          <ulink url='&lfs-ticket-root;5762'>#5762</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to glibc-2.42. Fixes
+          <ulink url='&lfs-ticket-root;5765'>#5765</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[bdubbs] - Update to man-pages-6.15. Fixes
+          <ulink url='&lfs-ticket-root;5763'>#5763</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2025-07-15</para>
       <itemizedlist>
         <listitem>
