@@ -105,7 +105,8 @@ unset SRCDIR</userinput></screen>
 <screen><userinput remap="test">make test</userinput></screen>
 
     <para>Three tests (out of over 43000 total tests) from the cmdAH.test file
-    are known to fail.</para>
+    are known to fail in the chroot environment.  All tests pass in a full
+    system. </para>
 
     <para>Install the package:</para>
 
