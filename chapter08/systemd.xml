@@ -64,7 +64,7 @@ meson setup ..                \
       -D sysusers=false       \
       -D rpmmacrosdir=no      \
       -D homed=disabled       \
-      -D userdb=true          \
+      -D userdb=false         \
       -D man=disabled         \
       -D mode=release         \
       -D pamconfdir=no        \
@@ -141,18 +141,11 @@ meson setup ..                \
       </varlistentry>
 
       <varlistentry>
-        <term><parameter>-D homed=disabled</parameter></term>
+        <term><parameter>-D homed=disabled</parameter> and
+        <parameter>-D userdb=false</parameter></term>
         <listitem>
-          <para>Remove a daemon with dependencies that do not fit
+          <para>Remove two daemons with dependencies that do not fit
           within the scope of LFS.</para>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><parameter>-D userdb=true</parameter></term>
-        <listitem>
-          <para>Enable the <command>systemd-userdbd</command> daemon that
-          GDM in BLFS will use.</para>
         </listitem>
       </varlistentry>
 
@@ -299,8 +292,7 @@ ninja test</userinput></screen>
         systemd-socket-activate, systemd-stdio-bridge, systemd-sysext,
         systemd-tmpfiles, systemd-tty-ask-password-agent,
         systemd-umount (symlink to systemd-mount),
-        telinit (symlink to systemctl), timedatectl, udevadm, and
-        userdbctl</seg>
+        telinit (symlink to systemctl), timedatectl, and udevadm</seg>
         <seg>libnss_myhostname.so.2, libnss_mymachines.so.2,
         libnss_resolve.so.2, libnss_systemd.so.2,
         libsystemd.so, libsystemd-shared-&systemd-version;.so (in /usr/lib/systemd),
@@ -870,16 +862,6 @@ ninja test</userinput></screen>
           triggers uevents for a given device</para>
           <indexterm zone="ch-system-systemd udevadm">
             <primary sortas="b-udevadm">udevadm</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="userdbctl">
-        <term><command>userdbctl</command></term>
-        <listitem>
-          <para>Inspects users, groups and group memberships</para>
-          <indexterm zone="ch-system-systemd userdbctl">
-            <primary sortas="b-userdbctl">userdbctl</primary>
           </indexterm>
         </listitem>
       </varlistentry>
