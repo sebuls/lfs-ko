@@ -44,7 +44,7 @@
       <para>2026-02-14</para>
       <itemizedlist>
         <listitem>
-          <para>[bdubbs] - Update to vim-9.1.2144. Addresses
+          <para>[bdubbs] - Update to vim-9.1.2144 (Security Update). Addresses
           <ulink url='&lfs-ticket-root;4500'>#4500</ulink>.</para>
         </listitem>
         <listitem>
