@@ -4,4 +4,5 @@ conditional.ent
 version.ent
 appendices/*.script
 *.swp
+*.mo
 fop.log
