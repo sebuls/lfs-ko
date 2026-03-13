@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-openssl" role="wrap">
+  <?dbhtml filename="openssl.html"?>
+
+  <sect1info condition="script">
+<productname>openssl</productname>
+<productnumber>&openssl-version;</productnumber> <address>&openssl-url;</address></sect1info>
+
+  <title>OpenSSL-&openssl-version;</title>
+
+  <indexterm zone="ch-system-openssl">
+    <primary sortas="a-OpenSSL">OpenSSL</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>OpenSSL 패키지는 암호화와 관련된 관리 도구 및 라이브러리를 포함합니다. 이들은 OpenSSH, 이메일 애플리케이션, 웹
+브라우저(HTTPS 사이트 접속용) 같은 다른 패키지에 암호화 기능을 제공하는 데 쓸 만합니다.  </para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&openssl-fin-sbu;</seg>
+        <seg>&openssl-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>OpenSSL 설치</title>
+
+    <!--
+    <para>
+First fix a problem with some advanced architectures with avx512
+    capability:</para>
+
+ <screen><userinput remap="pre">sed -e '/bn_reduce.*m1/i\    factor_size /= sizeof(BN_ULONG) * 8;' \
+    -i crypto/bn/rsaz_exp_x2.c</userinput></screen>
+-->
+<para>OpenSSL 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib          \
+         shared                \
+         zlib-dynamic</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">HARNESS_JOBS=<replaceable>$(nproc)</replaceable> make test</userinput></screen>
+
+    <para>One test, 30-test_afalg.t, is known to fail if the host kernel does not have
+<option>CONFIG_CRYPTO_USER_API_SKCIPHER</option> enabled, or does not have
+any options providing an AES with CBC implementation (for example, the
+combination of <option>CONFIG_CRYPTO_AES</option> and
+<option>CONFIG_CRYPTO_CBC</option>, or
+<option>CONFIG_CRYPTO_AES_NI_INTEL</option> if the CPU supports AES-NI)
+enabled.  If it fails, it can safely be ignored.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
+make MANSUFFIX=ssl install</userinput></screen>
+
+    <para>Add the version to the documentation directory name, to be consistent with
+other packages:</para>
+
+<screen><userinput remap="install">mv -v /usr/share/doc/openssl /usr/share/doc/openssl-&openssl-version;</userinput></screen>
+
+    <para>If desired, install some additional documentation:</para>
+
+<screen><userinput remap="install">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput></screen>
+
+    <note>
+      <para>
+        취약점을 수정한 새 버전이 발표되면 OpenSSL을 업데이트해야 합니다. OpenSSL 3.0.0 버전부터는
+MAJOR.MINOR.PATCH 형식을 따릅니다. 같은 MAJOR 버전 번호 내에서는 API/ABI 호환성이 보장됩니다. LFS는 공유
+라이브러리(shared libraries)만 설치하기 때문에, <emphasis>같은 MAJOR 버전 번호를 가진 버전으로 업그레이드할
+때</emphasis> 는 <filename class="libraryfile">libcrypto.so</filename> 또는
+<filename class="libraryfile">libssl.so</filename> 에 링크된 패키지를 다시 컴파일할 필요가
+없습니다.
+      </para>
+
+      <para>
+        그러나, 해당 라이브러리에 링크되어 실행 중인 프로그램들은 모두 중단하고 재시작해야 합니다. 자세한 내용은 <xref
+linkend='pkgmgmt-upgrade-issues'/> 관련 항목을 참조하십시오.
+      </para>
+
+    </note>
+
+  </sect2>
+
+  <sect2 id="contents-openssl" role="content">
+    <title>OpenSSL 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>
+          c_rehash and openssl
+        </seg>
+        <seg>
+          libcrypto.so 및 libssl.so
+        </seg>
+        <seg>
+          /etc/ssl, /usr/include/openssl, /usr/lib/engines 및
+/usr/share/doc/openssl-&openssl-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="c_rehash">
+        <term><command>c_rehash</command></term>
+        <listitem>
+          <para>
+            디렉터리 내의 모든 파일을 스캔하여 해당 파일의 해시값으로 심볼릭 링크를 생성하는
+<application>Perl</application> 스크립트입. <command>c_rehash</command> 사용하는 것은
+현재 권장되지 않으며(obsolete), 대신 <command>openssl rehash</command> 명령어를 사용하시오
+          </para>
+          <indexterm zone="ch-system-openssl c_rehash">
+            <primary sortas="b-c_rehash">c_rehash</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="openssl-prog">
+        <term><command>openssl</command></term>
+        <listitem>
+          <para>
+            <application>OpenSSL</application> 암호화 라이브러리가 제공하는 다양한 암호화 기능을 셸(shell)에서
+사용하기 위한 명령행 도구(command-line tool). 이 도구는 <ulink role='man'
+url='&man;openssl.1'>openssl(1)</ulink> 매뉴얼 페이지에 설명된 다양한 용도로 사용될 수 있습니다
+          </para>
+          <indexterm zone="ch-system-openssl openssl-prog">
+            <primary sortas="b-openssl">openssl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libcrypto">
+        <term><filename class="libraryfile">libcrypto.so</filename></term>
+        <listitem>
+          <para>
+            다양한 인터넷 표준에서 사용되는 광범위한 암호화 알고리즘을 구현. 이 라이브러리가 제공하는 서비스는
+<application>OpenSSL</application> 의 SSL, TLS 및 S/MIME 구현에 사용되며,
+<application>OpenSSH</application>, <application>OpenPGP</application> 및 기타
+암호화 표준을 구현하는 데에도 사용되어 왔습니다
+          </para>
+          <indexterm zone="ch-system-openssl libcrypto">
+            <primary sortas="c-libcrypto">libcrypto.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libssl">
+        <term><filename class="libraryfile">libssl.so</filename></term>
+        <listitem>
+          <para>
+            Transport Layer Security (TLS v1) 프로토콜을 구현합니다. 이는 풍부한 API를 제공하며, 이에 대한 문서는
+<ulink role='man' url='&man;ssl.7'>ssl(7)</ulink> 에서 확인할 수 있습니다
+          </para>
+          <indexterm zone="ch-system-openssl libssl">
+            <primary sortas="c-libssl">libssl.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

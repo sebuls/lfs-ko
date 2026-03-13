@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+  <!ENTITY tdbc-ver          "1.1.12">
+  <!ENTITY itcl-ver          "4.3.4">
+]>
+
+<sect1 id="ch-system-tcl" role="wrap">
+  <?dbhtml filename="tcl.html"?>
+
+  <sect1info condition="script">
+<productname>tcl</productname> <productnumber>&tcl-version;</productnumber>
+<address>&tcl-url;</address></sect1info>
+
+  <title>Tcl-&tcl-version;</title>
+
+  <indexterm zone="ch-system-tcl">
+    <primary sortas="a-Tcl">Tcl</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para><application>Tcl</application> 패키지에는 강력한 범용 스크립팅 언어인 Tool Command Language가
+들어 있습니다. <application>Expect</application> 패키지는
+<application>Tcl</application>("티클"로 발음)로 만들었습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&tcl-tmp-sbu;</seg>
+        <seg>&tcl-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Tcl 설치</title>
+
+    <para>이 패키지와 다음 두 패키지(Expect 및 DejaGNU)는 Binutils, GCC 및 다른 패키지의 테스트 스위트 실행을 지원하기
+위해 설치합니다. 테스트 목적으로 패키지 세 개를 설치하는 것이 과해 보일 수도 있지만, 가장 중요한 도구들이 제대로 작동하고 있는지
+확인하는 것은 필수적이지는 않더라도 매우 든든한 일입니다.</para>
+
+    <para>Tcl 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">SRCDIR=$(pwd)
+cd unix
+./configure --prefix=/usr           \
+            --mandir=/usr/share/man \
+            --disable-rpath</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure parameters:</title>
+
+      <varlistentry>
+        <term><parameter>--disable-rpath</parameter></term>
+        <listitem>
+          <para>This parameter prevents hard coding library search paths (rpath) into the
+binary executable files and shared libraries.  This package does not need
+rpath for an installation into the standard location, and rpath may
+sometimes cause unwanted effects or even security issues.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>패키지 빌드:</para>
+
+<screen><userinput remap="make">make
+
+sed -e "s|$SRCDIR/unix|/usr/lib|" \
+    -e "s|$SRCDIR|/usr/include|"  \
+    -i tclConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/tdbc&tdbc-ver;|/usr/lib/tdbc&tdbc-ver;|" \
+    -e "s|$SRCDIR/pkgs/tdbc&tdbc-ver;/generic|/usr/include|"     \
+    -e "s|$SRCDIR/pkgs/tdbc&tdbc-ver;/library|/usr/lib/tcl8.6|"  \
+    -e "s|$SRCDIR/pkgs/tdbc&tdbc-ver;|/usr/include|"             \
+    -i pkgs/tdbc&tdbc-ver;/tdbcConfig.sh
+
+sed -e "s|$SRCDIR/unix/pkgs/itcl&itcl-ver;|/usr/lib/itcl&itcl-ver;|" \
+    -e "s|$SRCDIR/pkgs/itcl&itcl-ver;/generic|/usr/include|"    \
+    -e "s|$SRCDIR/pkgs/itcl&itcl-ver;|/usr/include|"            \
+    -i pkgs/itcl&itcl-ver;/itclConfig.sh
+
+unset SRCDIR</userinput></screen>
+
+    <para><quote>make</quote> 명령 뒤에 나오는 다양한 <quote>sed</quote> 지침은 설정 파일에서 빌드 디렉터리에 대한
+참조를 제거하고 이를 설치 디렉터리로 바꿉니다. 이것은 이후의 LFS 과정에서 필수적인 것은 아니지만, 나중에 빌드되는 패키지가 Tcl을
+사용하는 경우 필요할 수 있습니다.</para>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">LC_ALL=C.UTF-8 make test</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install 
+chmod 644 /usr/lib/libtclstub&tcl-major-version;.a</userinput></screen>
+
+    <para>나중에 디버깅 심볼을 제거할 수 있도록 설치된 라이브러리를 쓰기 가능하게 만듭니다:</para>
+
+<screen><userinput remap="install">chmod -v u+w /usr/lib/libtcl&tcl-major-version;.so</userinput></screen>
+
+    <para>Install Tcl's headers. The next package, Expect, requires them.</para>
+
+<screen><userinput remap="install">make install-private-headers</userinput></screen>
+
+    <para>Now make a necessary symbolic link:</para>
+
+<screen><userinput remap="install">ln -sfv tclsh&tcl-major-version; /usr/bin/tclsh</userinput></screen>
+
+    <para>Rename a man page that conflicts with a Perl man page:</para>
+
+    <screen><userinput remap="install">mv -v /usr/share/man/man3/{Thread,Tcl_Thread}.3</userinput></screen>
+
+    <para>Optionally, install the documentation by issuing the following commands:</para>
+
+<screen><userinput remap="install">cd ..
+tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1
+mkdir -v -p /usr/share/doc/tcl-&tcl-version;
+cp -v -r  ./html/* /usr/share/doc/tcl-&tcl-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-tcl" role="content">
+    <title>Tcl 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 라이브러리</segtitle>
+
+      <seglistitem>
+        <seg>
+          tclsh (link to tclsh&tcl-major-version;) and tclsh&tcl-major-version;
+        </seg>
+        <seg>
+          libtcl&tcl-major-version;.so 및 libtclstub&tcl-major-version;.a
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tclsh&tcl-major-version;">
+        <term><command>tclsh&tcl-major-version;</command></term>
+        <listitem>
+          <para>Tcl 명령 셸</para>
+          <indexterm zone="ch-system-tcl tclsh&tcl-major-version;">
+            <primary sortas="b-tclsh&tcl-major-version;">tclsh&tcl-major-version;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="tclsh">
+        <term><command>tclsh</command></term>
+        <listitem>
+          <para>A link to tclsh&tcl-major-version;</para>
+          <indexterm zone="ch-system-tcl tclsh">
+            <primary sortas="b-tclsh">tclsh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libtcl&tcl-major-version;.so">
+        <term><filename class="libraryfile">libtcl&tcl-major-version;.so</filename></term>
+        <listitem>
+          <para>The Tcl library</para>
+          <indexterm zone="ch-system-tcl libtcl&tcl-major-version;.so">
+            <primary sortas="c-libtcl&tcl-major-version;.so">libtcl&tcl-major-version;.so</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libtclstub&tcl-major-version;.a">
+        <term><filename class="libraryfile">libtclstub&tcl-major-version;.a</filename></term>
+        <listitem>
+          <para>The Tcl Stub library</para>
+          <indexterm zone="ch-system-tcl libtclstub&tcl-major-version;.a">
+            <primary sortas="c-libtclstub&tcl-major-version;.a">libtclstub&tcl-major-version;.a</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

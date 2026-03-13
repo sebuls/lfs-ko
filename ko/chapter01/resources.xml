@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-intro-resources">
+  <?dbhtml filename="resources.html"?>
+
+  <title>리소스</title>
+
+  <sect2 id="ch-intro-faq">
+    <title>FAQ</title>
+
+    <para>LFS 시스템을 빌드하는 동안 오류가 발생하거나, 궁금한 점이 있거나, 책에 오타가 있다고 생각되면 우선 <ulink
+url="&faq-root;"/> 자주 묻는 질문(FAQ) 목록을 참고해 주시기 바랍니다.</para>
+
+  </sect2>
+
+  <sect2 id="ch-intro-maillists" xreflabel="제1장 - 메일링 리스트">
+    <title>메일링 리스트</title>
+
+    <para><systemitem class='domainname'>linuxfromscratch.org</systemitem> 서버는 LFS
+프로젝트 개발에 사용되는 여러 메일링 리스트를 운영하고 있습니다. 이 리스트에는 주요 개발 및 기술 지원 리스트 등이 들어갑니다. 만약
+FAQ 페이지에서 문제에 대한 답을 찾을 수 없다면, 다음 단계로 <ulink url="&lfs-root;search.html"/>에서
+메일링 리스트를 검색해 보십시오.</para>
+
+    <para>다양한 리스트에 대한 정보, 구독 방법, 보관소 위치 및 기타 추가 정보는 <ulink
+url="&lfs-root;mail.html"/>을 방문하십시오.</para>
+
+  </sect2>
+
+  
+
+  <!-- FIXME: Remove until such time as we have our own News Server, JH 20060105
+
+  <sect2 id="ch-intro-newsserver">
+
+    <title>News Server</title>
+
+    <para>The mailing lists hosted at <uri>linuxfromscratch.org</uri> are
+    also accessible via the Network News Transfer Protocol (NNTP) server.
+    All messages posted to a mailing list are copied to the corresponding
+    newsgroup, and vice versa.</para>
+
+    <para>The news server is located at
+    <uri>news.linuxfromscratch.org</uri>.</para>
+
+  </sect2> -->
+<sect2 id="ch-intro-irc">
+    <title>IRC</title>
+
+    <para>LFS 커뮤니티의 여러 구성원이 인터넷 릴레이 채팅(IRC)을 통해 도움을 드리고 있습니다. 이 지원 서비스를 이용하기 전에, 질문하려는
+내용이 LFS FAQ나 메일링 리스트 보관소에 이미 답변되어 있는지 확인하십시오. IRC 네트워크 주소는 <systemitem
+class='domainname'>irc.libera.chat</systemitem>, 지원 채널 이름은 #lfs-support 입니다.</para>
+
+  </sect2>
+
+  
+
+  <!-- Commentted out until the target link is updated
+  <sect2 id="ch-intro-references">
+
+    <title>References</title>
+
+    <para>For additional information on the packages, useful tips are
+    available in the LFS Package Reference page located at <ulink
+    url="https://www.linuxfromscratch.org/~matthew/LFS-references.html"/>.</para>
+
+  </sect2>  -->
+<sect2 id="ch-intro-mirrors" xreflabel="제1장 - 미러 사이트">
+    <title>Mirror Sites</title>
+
+    <para>LFS 프로젝트는 웹사이트 접속과 필요한 패키지 다운로드를 더욱 편리하게 할 수 있도록 전 세계에 여러 미러 사이트를 갖고
+있습니다. 현재 운영 중인 미러 리스트는 LFS 웹사이트 <ulink url="&lfs-root;mirrors.html"/>에서
+확인하십시오.</para>
+
+  </sect2>
+
+  <sect2 id="ch-intro-contactinfo">
+    <title>연락 정보</title>
+
+    <para>모든 질문과 의견은 LFS 메일링 리스트 중 한 곳으로 보내 주십시오.(위를 보십시오).</para>
+
+  </sect2>
+
+</sect1>

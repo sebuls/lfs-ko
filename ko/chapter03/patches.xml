@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-materials-patches">
+  <?dbhtml filename="patches.html"?>
+
+  <title>필요한 패치</title>
+
+  <para>패키지 외에도 여러 패치가 필요합니다. 이 패치는 관리자가 수정해야 할 패키지 내의 오류를 바로잡습니다. 또한, 패치를 통해 패키지를 더
+다루기 쉽게 약간의 수정을 하기도 합니다. LFS 시스템을 빌드하기 위해 우리에게 필요한 패치:</para>
+
+  <variablelist role="materials">
+
+
+    <!--
+    <varlistentry>
+
+      <term>Autoconf Consolidated Fixes Patch - <token>&autoconf-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&autoconf-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&autoconf-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Bash Cross Compile Fix Patch - <token>&bash-crosscompile-fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&bash-crosscompile-fix-patch;"/></para>
+        <para>MD5 sum: <literal>&bash-crosscompile-fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<!--
+    <varlistentry>
+
+      <term>Binutils Upstream Fixes Patch - <token>&binutils-upstream-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&binutils-upstream-patch;"/></para>
+        <para>MD5 sum: <literal>&binutils-upstream-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<varlistentry>
+      <term>Bzip2 문서 패치 - <token>&bzip2-docs-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&bzip2-docs-patch;"/></para>
+        <para>MD5 sum: <literal>&bzip2-docs-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Coreutils Internationalization Fixes Patch -
+<token>&coreutils-i18n-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&coreutils-i18n-patch;"/></para>
+        <para>MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Expect GCC15 Patch - <token>&expect-gcc15-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&expect-gcc15-patch;"/></para>
+        <para>MD5 sum: <literal>&expect-gcc15-patch-md5;</literal></para>
+      </listitem>
+   </varlistentry>
+
+
+
+
+
+    <!--
+    <varlistentry>
+
+      <term>Gcc glibc-2.36 Fixes Patch - <token>&gcc-upstream-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&gcc-upstream-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&gcc-upstream-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<!--
+    <varlistentry>
+
+      <term>Glibc Upstream Fix Patch - <token>&glibc-upstream-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&glibc-upstream-patch;"/></para>
+        <para>MD5 sum: <literal>&glibc-upstream-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<varlistentry>
+      <term>Glibc FHS Patch - <token>&glibc-fhs-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&glibc-fhs-patch;"/></para>
+        <para>MD5 sum: <literal>&glibc-fhs-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Kbd 백스페이스/삭제 픽스 패치 - <token>&kbd-backspace-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&kbd-backspace-patch;"/></para>
+        <para>MD5 sum: <literal>&kbd-backspace-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+
+    <!--
+    <varlistentry>
+
+      <term>Meson Upstream Fix Patch - <token>&meson-fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&meson-fix-patch;"/></para>
+        <para>MD5 sum: <literal>&meson-fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Libpipeline Checks Patch - <token>&libpipeline-checks-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&libpipeline-checks-patch;"/></para>
+        <para>MD5 sum: <literal>&libpipeline-checks-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Perl Upstream Fix Patch - <token>&perl-upstream-fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&perl-upstream-fix-patch;"/></para>
+        <para>MD5 sum: <literal>&perl-upstream-fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Python Security Fix Patch - <token>&python-security-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&python-security-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&python-security-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<varlistentry revision="sysv">
+      <term>SysVinit Consolidated Patch -
+<token>&sysvinit-consolidated-patch-size;</token>:</term>
+      <listitem>
+        <para>다운로드: <ulink url="&patches-root;&sysvinit-consolidated-patch;"/></para>
+        <para>MD5 sum: <literal>&sysvinit-consolidated-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+<!--
+    <varlistentry revision="systemd">
+
+      <term>Systemd Upstream Fixes Patch - <token>&systemd-upstream-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&systemd-upstream-patch;"/></para>
+        <para>MD5 sum: <literal>&systemd-upstream-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<!--
+    <varlistentry>
+
+      <term>Xz Upstream Fix Patch - <token>&xz-upstream-fix-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&xz-upstream-fix-patch;"/></para>
+        <para>MD5 sum: <literal>&xz-upstream-fix-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+<!--
+    <varlistentry>
+
+      <term>Zstd Upstream Fixes Patch - <token>&zstd-upstream-fixes-patch-size;</token>:</term>
+      <listitem>
+        <para>Download: <ulink url="&patches-root;&zstd-upstream-fixes-patch;"/></para>
+        <para>MD5 sum: <literal>&zstd-upstream-fixes-patch-md5;</literal></para>
+      </listitem>
+    </varlistentry>
+-->
+
+
+
+  </variablelist>
+
+  <para>패치 전체 크기: 약 <returnvalue/></para>
+
+  <para>위에서 언급한 필수 패치 외에도, LFS 커뮤니티에서 만든 수많은 선택적 패치가 있습니다. 이러한 선택적 패치는 사소한 문제들을
+해결하거나, 기본적으로는 활성화되지 않는 기능을 사용할 수 있게 해줍니다. <ulink
+url="&lfs-root;patches/downloads/"/> 에 위치한 패치 데이터베이스를 자유롭게 살펴보고, 우리 시스템 필요에
+맞는 추가 패치를 확보하십시오.</para>
+
+</sect1>

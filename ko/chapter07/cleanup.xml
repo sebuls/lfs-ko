@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-cleanup">
+  <?dbhtml filename="cleanup.html"?>
+
+  <title>임시 시스템 정리 및 저장</title>
+
+  <sect2>
+    <title>Cleaning</title>
+
+    <para>첫째, 현재 설치된 문서 파일이 최종 시스템에 포함되는 것을 방지하고 약 35MB의 공간을 절약하기 위해 이 파일들을 삭제:</para>
+
+<screen><userinput>rm -rf /usr/share/{info,man,doc}/*</userinput></screen>
+
+    <para>둘째, 현대적인 리눅스 시스템에서 libtool .la 파일은 오직 libltdl에서만 유용합니다. LFS의 어떤 라이브러리도
+libltdl에 의해 로드되지 않으며, 일부 .la 파일은 BLFS 패키지 빌드 실패를 일으키는 것으로 알려져 있습니다. 이제 이
+파일들을 삭제:</para>
+
+<screen><userinput>find /usr/{lib,libexec} -name \*.la -delete</userinput></screen>
+
+    <para>
+      현재 시스템 크기는 약 3GB이지만, 이제 /tools 디렉터리는 더 이상 필요하지 않습니다. 이 디렉터리는 약 1GB의 디스크 공간을
+사용합니다. 지금 삭제:
+    </para>
+
+<screen><userinput>rm -rf /tools</userinput></screen>
+  </sect2>
+
+  <sect2>
+    <title>Backup</title>
+
+    <para>
+      이 시점에서 필수적인 프로그램과 라이브러리가 모두 생성되었으며, 현재 LFS 시스템은 양호한 상태입니다. 이제 나중에 다시 사용할 수
+있도록 시스템을 백업할 수 있습니다. 이후의 장에서 치명적인 실패가 발생할 경우, 모든 것을 삭제하고 (더 주의 깊게) 처음부터 다시
+시작하는 것이 복구를 위한 가장 좋은 방법인 경우가 많습니다. 불행히도 임시 파일 역시 삭제됩니다. 이미 성공적으로 완료한 작업을 다시
+수행하느라 추가 시간을 소비하지 않으려면, 현재 LFS 시스템의 백업을 만들어 두는 것이 좋습니다.
+    </para>
+
+    <note><para>
+      이 섹션의 나머지 모든 단계는 선택 사항입니다. 그럼에도 불구하고, <xref
+linkend="chapter-building-system"/>에서 패키지 설치를 시작하자마자 임시 파일들이 덮어쓰여질 것입니다. 따라서
+아래에 설명된 대로 현재 우리의 시스템을 백업해 두는 것이 좋습니다.
+    </para></note>
+
+    <para>
+      다음 단계들은 chroot 환경 외부에서 수행됩니다. 즉, 계속 진행하기 전에 먼저 chroot 환경에서 나가야 함을 의미합니다. 그
+까닭은 백업 아카이브를 저장하거나 읽기 위해 chroot 환경 외부의 파일 시스템 위치에 접근하기 위함이며, 이 아카이브는
+<filename class="directory">$LFS</filename> 계층 구조 내에 안 두는 게 좋습니다.
+    </para>
+
+    <para>
+       If you have decided to make a backup, leave the chroot environment:
+    </para>
+
+<screen role="nodump"><userinput>exit</userinput></screen>
+
+    <important>
+      <para>
+        다음의 모든 지침은 호스트 시스템 <systemitem class="username">root</systemitem> 계정으로
+실행합니다. 여기서 실수를 하면 호스트 시스템이 수정될 수 있으므로 실행하려는 명령어를 각별히 주의해서 다루어야 합니다. 환경 변수
+<envar>LFS</envar>는 기본적으로 <systemitem class="username">lfs</systemitem> 사용자를
+위해 설정되어 있지만, <systemitem class="username">root</systemitem> 사용자에 대해서는
+설정<emphasis>안</emphasis> 되었을 수도 있다는 점을 명심하십시오.
+     </para>
+     <para>
+        <systemitem class="username">root</systemitem> 계정으로 명령어를 실행할 때 마다
+<envar>LFS</envar> 변수가 설정되어 있는지 확인하십시오.
+     </para>
+     <para>
+       이 내용은 <xref linkend='ch-partitioning-aboutlfs' role='.'/> 에서 논의되었습니다
+      </para>
+    </important>
+
+    <para>백업 만들기 전에, 가상 파일 시스템 언마운트:</para>
+
+<screen role="nodump"><userinput>mountpoint -q $LFS/dev/shm &amp;&amp; umount $LFS/dev/shm
+umount $LFS/dev/pts
+umount $LFS/{sys,proc,run,dev}</userinput></screen>
+
+    <para>
+      백업 아카이브를 생성할 디렉터리가 포함된 파일 시스템에 최소 1GB의 여유 디스크 공간이 있는지 확인하십시오(소스
+타르볼(tarball)도 백업 아카이브에 포함됩니다).
+    </para>
+
+    <para>
+      아래 지침은 일반적으로 루트 파일 시스템에 있는 호스트 시스템 <systemitem
+class="username">root</systemitem> 사용자의 홈 디렉터리를 지정하고 있습니다. 만약 백업 파일을
+<systemitem class="username">root</systemitem>의 홈 디렉터리에 저장하고 싶지 않다면,
+<envar>$HOME</envar>을 원하는 디렉터리로 바꾸십시오.
+    </para>
+
+    <para>
+      백업 아카이브를 다음 명령을 실행하여 생성:
+    </para>
+
+    <note>
+       <para>
+          백업 아카이브가 압축되기 때문에, 상당히 빠른 시스템에서도 상대적으로 긴 시간(10분 이상)이 걸립니다.
+       </para>
+    </note>
+
+<screen role="nodump"><userinput>cd $LFS
+tar -cJpf $HOME/lfs-temp-tools-&version;.tar.xz .</userinput></screen>
+
+    <note>
+      <para>
+        제8장으로 계속 진행하려면 아래 <quote>Important</quote> 박스에 설명된 대로 chroot 환경에 다시 들어가는 것을
+잊지 마시오.
+      </para>
+    </note>
+
+  </sect2>
+
+  <sect2>
+    <title>Restore</title>
+
+    <para>
+      실수가 발생하여 처음부터 다시 시작해야 하는 경우, 이 백업을 사용하여 시스템을 복구하고 복구 시간을 단축할 수 있습니다. 소스 파일들이
+<filename class="directory">$LFS</filename> 아래에 위치하므로 백업 아카이브에도 함께 포함되며, 따라서
+소스들을 다시 다운로드할 필요가 없습니다. <envar>$LFS</envar> 가 제대로 설정되었는지 확인한 후, 백업을 복구하려면 다음
+명령 실행:
+    </para>
+
+
+
+    <!-- Make the following look different so users don't blindly run the
+     restore when they don't need to. -->
+<warning><para>다음 명령은 매우 위험합니다. 만약 &root; 사용자로 <command>rm -rf ./*</command> 명령을 실행할 때,
+$LFS 디렉터리로 이동하지 않았거나 &root; 사용자에 대한 <envar>LFS</envar> 환경 변수가 설정되어 있지 않다면,
+호스트 시스템 전체를 파괴하게 될 것입니다. 경고했습니니다.</para></warning>
+
+<screen role="nodump"><literal>cd $LFS
+rm -rf ./*
+tar -xpf $HOME/lfs-temp-tools-&version;.tar.xz</literal></screen>
+
+    <para>
+       다시 한번 환경이 제대로 설정되었는지 확인하고, 시스템의 나머지 부분에 대한 빌드를 계속 진행하십시오.
+    </para>
+
+    <important>
+      <para>
+         백업을 생성하거나 복구를 이용해 빌드를 다시 시작하기 위해 chroot 환경을 벗어났다면, 가상 파일 시스템이 여전히 마운트되어 있는지
+확인해야 함을 기억하십시오. (<command>findmnt | grep $LFS</command> 했을 때 적어도 <filename
+class="directory">$LFS/dev</filename>, <filename
+class="directory">$LFS/proc</filename>, 및 <filename
+class="directory">$LFS/sys</filename> 가 마운트된 상태로 표시되어야 합니다). 만약 마운트되어 있지
+않다면, <xref linkend='ch-tools-kernfs'/> 설명 대로 지금 다시 마운트하고, 계속 진행하기 전에 chroot
+환경에 다시 입장하십시오(<xref linkend='ch-tools-chroot'/> 참고).
+       </para>
+    </important>
+
+  </sect2>
+
+</sect1>

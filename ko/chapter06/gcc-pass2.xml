@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-gcc-pass2" role="wrap" xreflabel="gcc-pass2">
+  <?dbhtml filename="gcc-pass2.html"?>
+
+  <sect1info condition="script">
+<productname>gcc-pass2</productname>
+<productnumber>&gcc-version;</productnumber> <address>&gcc-url;</address></sect1info>
+
+  <title>GCC-&gcc-version; - 패스 2</title>
+
+  <indexterm zone="ch-tools-gcc-pass2">
+    <primary sortas="a-GCC">GCC</primary>
+    <secondary>tools, pass 2</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/gcc.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gcc-tmpp2-sbu;</seg>
+        <seg>&gcc-tmpp2-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>GCC 설치</title>
+
+    <para>GCC의 첫 번째 빌드 때와 마찬가지로, GMP, MPFR 및 MPC 패키지가 필요합니다. 타르볼(tarball) 압축을 풀고 그것을
+필요한 디렉터리로 이동:</para>
+
+<screen><userinput remap="pre">tar -xf ../mpfr-&mpfr-version;.tar.xz
+mv -v mpfr-&mpfr-version; mpfr
+tar -xf ../gmp-&gmp-version;.tar.xz
+mv -v gmp-&gmp-version; gmp
+tar -xf ../mpc-&mpc-version;.tar.gz
+mv -v mpc-&mpc-version; mpc</userinput></screen>
+
+    <para>만약 x86_64 환경에서 빌드 중이라면, 64비트 라이브러리를 위한 기본 디렉터리 이름을 <quote>lib</quote>으로 변경:</para>
+
+<screen><userinput remap="pre">case $(uname -m) in
+  x86_64)
+    sed -e '/m64=/s/lib64/lib/' \
+        -i.orig gcc/config/i386/t-linux64
+  ;;
+esac</userinput></screen>
+
+    <para>libgcc와 libstdc++ 헤더의 빌드 규칙을 무시(Override)하고 새로 지정하여 이 라이브러리들을 POSIX 스레드 지원을
+포함하여 빌드할 수 있게:</para>
+
+<screen><userinput remap="pre">sed '/thread_header =/s/@.*@/gthr-posix.h/' \
+    -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in</userinput></screen>
+
+    <para>별도의 빌드 디렉터리를 다시 생성:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <para>GCC 빌드를 시작하기 전에, 기본 최적화 플래그를 무시하는 모든 환경 변수 설정을 해제하십시오.</para>
+
+    <para>이제 컴파일용 GCC 준비:</para>
+
+<screen><userinput remap="configure">../configure                   \
+    --build=$(../config.guess) \
+    --host=$LFS_TGT            \
+    --target=$LFS_TGT          \
+    --prefix=/usr              \
+    --with-build-sysroot=$LFS  \
+    --enable-default-pie       \
+    --enable-default-ssp       \
+    --disable-nls              \
+    --disable-multilib         \
+    --disable-libatomic        \
+    --disable-libgomp          \
+    --disable-libquadmath      \
+    --disable-libsanitizer     \
+    --disable-libssp           \
+    --disable-libvtv           \
+    --enable-languages=c,c++   \
+    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc</userinput></screen>
+
+    <variablelist>
+      <title>새 configure 옵션 뜻:</title>
+
+      <!-- WIP -->
+<varlistentry>
+        <term><parameter>--with-build-sysroot=$LFS</parameter></term>
+        <listitem>
+          <para>보통 <parameter>--host</parameter> 매개변수를 사용하면 GCC 빌드를 위해 크로스 컴파일러가 사용되는 것을
+보장하며, 그 컴파일러는 <filename class="directory">$LFS</filename> 디렉터리에서 헤더와 라이브러리를
+찾아야 한다는 점을 알고 있습니다. 그러나, GCC 빌드 시스템은 이 위치를 인지하지 못하는 추가 도구들을 사용합니다. 이 스위치를
+추가해야 하는데, 왜냐하면 그래야만 해당 도구들이 필요한 파일들을 호스트 시스템이 아닌 <filename
+class="directory">$LFS</filename> 안에서 찾을 수 있기 때문.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--target=$LFS_TGT</parameter></term>
+        <listitem>
+          <para>우리는 지금 GCC를 크로스 컴파일하고 있습니다. 따라서 이번 단계에서 컴파일된 GCC 바이너리로 타겟 라이브러리(<filename
+class="libraryfile">libgcc</filename> 및 <filename
+class="libraryfile">libstdc++</filename>)를 빌드하는 것은 불가능합니다. 왜냐하면 그 바이너리들은
+호스트에서 실행되지 않기 때문입니다. GCC 빌드 시스템은 기본적으로 호스트의 C 및 C++ 컴파일러를 사용하는 방식으로 이 문제를
+해결하려 시도할 것입니다. 다른 버전의 GCC로 GCC 타겟 라이브러리를 빌드하는 것은 지원되지 않으며, 호스트 컴파일러를 사용하면
+빌드가 실패할 수 있습니다. 이 매개변수를 사용하십시오. 왜냐하면 그래야만 라이브러리들이 GCC 패스 1 결과물에 의해 제대로 빌드되기
+때문.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>LDFLAGS_FOR_TARGET=...</parameter></term>
+        <listitem>
+          <para><filename class="libraryfile">libstdc++</filename> 가 <xref
+linkend='ch-tools-gcc-pass1'/>에서 빌드되었던 이전 버전 대신, 이번 단계에서 빌드 중인 <filename
+class="libraryfile">libgcc</filename>를 사용하도록 허용하십시오. 이전 버전은 libc 지원 없이 빌드되었기
+때문에 C++ 예외 처리를 제대로 지원할 수 없기 때문입니다.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-libsanitizer</parameter></term>
+        <listitem>
+          <para>GCC 새니타이저 런타임 라이브러리들을 비활성화하십시오. 왜냐하면 지금 만드는 임시 설치 단계에서는 그것들이 필요하지 않기
+때문입니다. <xref linkend='ch-tools-gcc-pass1'/> 에서는
+<parameter>--disable-libstdcxx</parameter> 옵션에 의해 이 작업이 암시적으로 포함되었지만, 이제는
+우리가 명시적으로 이 옵션을 전달할 수 있습니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make DESTDIR=$LFS install</userinput></screen>
+
+    <para>마무리 작업으로, 유틸리티 심볼릭 링크를 생성하십시오. 많은 프로그램과 스크립트가 <command>gcc</command> 대신
+<command>cc</command>를 실행하는데, 왜냐하면 프로그램을 일반적(generic)으로 유지하여 GNU C 컴파일러가 항상
+설치되어 있지 않은 모든 종류의 UNIX 시스템에서도 사용할 수 있게 하기 위함입니다. <command>cc</command>를
+실행하도록 두면 시스템 관리자가 어떤 C 컴파일러를 설치할지 자유롭게 결정:</para>
+
+<screen><userinput remap="install">ln -sv gcc $LFS/usr/bin/cc</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>이 패키지 상세 정보 <xref linkend="contents-gcc" role="."/></para>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-intro-askforhelp">
+  <?dbhtml filename="askforhelp.html"?>
+
+  <title>도움말</title>
+
+  <note>
+    <para>
+      LFS 지침에 따라 패키지를 빌드하던 중 문제가 발생한 경우, <xref linkend="ch-intro-resources"
+role='.'/>에 나열된 LFS 지원 채널에서 먼저 논의하기 전에 업스트림 지원 채널에 직접 문제를 게시하지 말 것을 강력히
+권장합니다. 업스트림 유지 관리자는 LFS의 빌드 절차에 익숙하지 않은 경우가 많아 그렇게 하는 것은 매우 비효율적일 때가 많기
+때문입니다. 설령 정말로 업스트림 자체의 문제라 하더라도, LFS 커뮤니티는 업스트림 유지 관리자가 원하는 정보를 선별하고 적절한
+보고서를 작성하도록 도움을 줄 수 있습니다.
+    </para>
+
+    <para>
+      만약 업스트림 지원 채널을 통해 직접 질문해야 한다면, 최소한 많은 상위 프로젝트가 지원 채널과 버그 추적기(bug tracker)를
+분리하여 운영한다는 점을 유의해야 합니다. 질문을 하기 위해 제출한 <quote>버그</quote> 보고서는 유효하지 않은 것으로
+간주되며, 해당 프로젝트의 개발자들을 번거롭게 만들 수 있습니다.
+    </para>
+  </note>
+
+  <para>이 책의 내용을 따라가다가 문제나 궁금한 점이 생기면 우선 <ulink url="&faq-root;#generalfaq"/>에 있는
+FAQ 페이지를 확인해 보십시오. 많은 질문에 대한 답변이 이미 그곳에 있습니다. 만약 해당 페이지에서 답을 찾을 수 없다면, 문제의
+원인을 찾아보십시오. 다음 힌트 문서에서 문제 해결에 관한 지침을 얻을 수 있습니다: <ulink
+url="&hints-root;errors.txt"/>.</para>
+
+  <para>발생한 문제를 FAQ에서 못 찾으면, <ulink url="&lfs-root;search.html"/>에서 메일링 리스트를 검색해
+보십시오.</para>
+
+  <para>메일링 리스트와 IRC를 통해 기꺼이 도움을 주려는 훌륭한 LFS 커뮤니티도 있습니다(이 책의 <xref
+linkend="ch-intro-resources"/> 섹션 참조). 그러나, 매일 수많은 지원 요청이 들어오는데, 그중 상당수는
+FAQ를 확인하거나 메일링 리스트를 먼저 검색하는 것만으로도 쉽게 해결할 수 있는 것입니다. 따라서, 우리가 최선의 도움을 드릴 수
+있도록, 먼저 스스로 충분히 찾아보기를 권장합니다. 그러면 우리가 좀 더 특별한 지원이 필요한 사례에 집중할 수 있습니다. 만약 검색으로
+해결책을 못 찾는다면, 도움을 요청할 때 (아래에 언급된) 관련 정보를 모두 넣어 주십시오.</para>
+
+  <sect2>
+    <title>언급할 것</title>
+
+    <para>겪고 있는 문제에 대한 간략한 설명과 더불어, 모든 도움 요청에는 다음과 같은 필수 사항들이 포함되어야 합니다:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>사용 중인 책의 버전 (이 경우에는 &version;)</para>
+      </listitem>
+      <listitem>
+        <para>LFS를 만들기 위해 사용 중인 호스트 배포판 및 버전</para>
+      </listitem>
+      <listitem>
+        <para><xref linkend='version-check'/> 스크립트 실행결과</para>
+      </listitem>
+      <listitem>
+        <para>문제가 생긴 패키지 또는 섹션</para>
+      </listitem>
+      <listitem>
+        <para>정확한 오류 메시지 또는 문제에 대한 간결한 설명</para>
+      </listitem>
+      <listitem>
+        <para>책의 내용에서 조금이라도 벗어난 부분이 있는지 명시 </para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>책의 내용에서 벗어났다고 안 도와준다는 뜻은 <emphasis>아니며</emphasis>, 결국 LFS는 개인의 취향에 관한
+것입니다. 기존 절차에서 변경한 사항을 미리 솔직하게 알려주시면, 우리가 문제의 가능한 원인을 평가하고 진단하는 데 큰 도움이 됩니다.</para>
+    </note>
+
+  </sect2>
+
+  <sect2>
+    <title>Configure 스크립트 문제</title>
+
+    <para><command>configure</command> 스크립트를 실행하는 동안 문제가 생기면,
+<filename>config.log</filename> 파일을 보십시오. 이 파일에는
+<command>configure</command> 도중 생겼지만 화면에는 출력되지 않은 오류들이 들어 있을 수 있습니다. 도움을
+요청해야 한다면 <emphasis>관련된</emphasis> 줄을 넣으십시오.</para>
+
+  </sect2>
+
+  <sect2>
+    <title>컴파일 문제</title>
+
+    <para>컴파일 문제의 원인을 파악하는 데는 화면 출력 내용과 다양한 파일의 내용이 모두 유용하게
+쓰입니다. <command>configure</command> 스크립트와 <command>make</command> 실행 시 화면 출력이
+도움이 될 수 있습니다. 출력 전체를 포함할 필요는 없지만, 관련된 모든 정보는 반드시 포함해야 합니다. 여기
+<command>make</command> 화면 출력에서 포함해야 할 정보의 유형을 보여주는 예시가 있습니다.</para>
+
+<screen><computeroutput>gcc -D ALIASPATH=\"/mnt/lfs/usr/share/locale:.\"
+-D LOCALEDIR=\"/mnt/lfs/usr/share/locale\"
+-D LIBDIR=\"/mnt/lfs/usr/lib\"
+-D INCLUDEDIR=\"/mnt/lfs/usr/include\" -D HAVE_CONFIG_H -I. -I.
+-g -O2 -c getopt1.c
+gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o
+expand.o file.o function.o getopt.o implicit.o job.o main.o
+misc.o read.o remake.o rule.o signame.o variable.o vpath.o
+default.o remote-stub.o version.o opt1.o
+-lutil job.o: In function `load_too_high':
+/lfs/tmp/make-3.79.1/job.c:1565: undefined reference
+to `getloadavg'
+collect2: ld returned 1 exit status
+make[2]: *** [make] Error 1
+make[2]: Leaving directory `/lfs/tmp/make-3.79.1'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/lfs/tmp/make-3.79.1'
+make: *** [all-recursive-am] Error 2</computeroutput></screen>
+
+    <para>이 경우, 많은 사람들이 마지막 부분만 포함:</para>
+
+<screen><computeroutput>make [2]: *** [make] Error 1</computeroutput></screen>
+
+    <para>이것만으로는 문제를 진단할 정보가 충분하지 않습니다. 무언가 잘못되었다는 사실만 나타낼 뿐, <emphasis>무엇이</emphasis>
+잘못 되었는지 안 보여주기 때문입니다. 위의 예시처럼 섹션 전체를 저장해야 하는데, 실행된 명령과 그와 관련된 모든 에러 메시지가 거기
+들어있기 때문입니다.</para>
+
+    <para>인터넷에서 도움을 요청하는 방법에 관한 훌륭한 글을 <ulink
+url="http://catb.org/~esr/faqs/smart-questions.html"/>에서 온라인으로 볼 수 있습니다. 이
+문서를 읽고 힌트를 따라 보십시오. 그러면 여러분이 필요한 도움을 받을 가능성이 높아질 겁니다.</para>
+
+  </sect2>
+
+</sect1>

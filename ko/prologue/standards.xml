@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-standards">
+  <?dbhtml filename="standards.html"?>
+
+  <title>LFS 및 표준</title>
+
+  
+
+     <!--<sect2>
+
+    <title/> -->
+<para>LFS 구조는 가능한 한 리눅스 표준을 따릅니다. 기본 표준:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para><ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/">
+POSIX.1-2008</ulink>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html">
+Filesystem Hierarchy Standard (FHS) Version 3.0</ulink></para>
+
+      </listitem>
+      <listitem>
+        <para><ulink url="https://refspecs.linuxfoundation.org/lsb.shtml">Linux Standard
+Base (LSB) Version 5.0 (2015)</ulink></para>
+
+        <para>LSB에는 네 가지 별도 사양이 있습니다: 핵심(Core), 데스크톱(Desktop), 언어(Languages),
+이미징(Imaging). 핵심 및 데스크톱 사양의 일부는 아키텍처에 따라 다릅니다. 두 가지 시험판 사양도 있습니다: Gtk3 및
+그래픽. LFS는 이전 섹션에서 다룬 IA32(32비트 x86) 또는 AMD64(x86_64) 아키텍처에 대한 LSB 사양을 준수하려고
+노력합니다.</para>
+
+        <note><para>이러한 요구 사항에 동의하지 않는 사람이 많습니다. LSB의 주된 목적은 독점 소프트웨어를 사양을 준수하는 시스템에 설치하고 실행할 수
+있도록 보장하는 것입니다. LFS는 소스 기반이므로 사용자는 원하는 패키지를 완전히 제어할 수 있습니다. 즉, LSB에서 지정한 일부
+패키지를 설치하지 않기로 선택할 수도 있습니다.</para></note>
+
+      </listitem>
+    </itemizedlist>
+
+    <para><quote>from scratch</quote> LSB 인증 테스트를 통과할 수 있는 완전한 시스템을 만드는 것 가능하지만, LFS
+책의 범위를 벗어나는 수많은 추가 패키지가 필요합니다. 이러한 추가 패키지 중 일부에 대한 설치 지침은 BLFS에서 찾아볼 수 있습니다. </para>
+
+    <variablelist>
+      <bridgehead renderas="sect3">LSB 요구 사항을 충족하기 위해 LFS에서 제공하는 패키지</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry>
+        <term><emphasis>LSB Core:</emphasis></term>
+        <listitem>
+          <para>
+            Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC,
+Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed, Shadow, <phrase
+revision='sysv'>SysVinit</phrase><phrase
+revision='systemd'>Systemd</phrase>, Tar, Util-linux, Zlib
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 데스크톱:</emphasis></term>
+        <listitem>
+          <para>None</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 언어:</emphasis></term>
+        <listitem>
+          <para>Perl</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 이미징:</emphasis></term>
+        <listitem>
+          <para>None</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB Gtk3 및 LSB 그래픽스 (Trial Use):</emphasis></term>
+        <listitem>
+          <para>None</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">BLSB 요구 사항을 충족하기 위해 LFS에서 제공하는 패키지들</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry>
+        <term><emphasis>LSB Core:</emphasis></term>
+        <listitem>
+          <para>At, Batch (a part of At), BLFS Bash Startup Files, Cpio, Ed, Fcrontab,
+LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (or Postfix or Exim), Time
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 데스크톱:</emphasis></term>
+        <listitem>
+          <para>Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig, Gdk-pixbuf,
+Glib2, GLU, Icon-naming-utils, Libjpeg-turbo, Libxml2, Mesa, Pango,
+Xdg-utils, Xorg</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 언어:</emphasis></term>
+        <listitem>
+          <para>Libxml2, Libxslt</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 이미징:</emphasis></term>
+        <listitem>
+          <para>CUPS, Cups-filters, Ghostscript, SANE</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB Gtk3 및 LSB 그래픽스 (Trial Use):</emphasis></term>
+        <listitem>
+          <para>GTK+3</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Components not supplied or optionally supplied by LFS or BLFS needed to
+satisfy the LSB Requirements</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry>
+        <term><emphasis>LSB Core:</emphasis></term>
+        <listitem>
+          <para>
+            <command>install_initd</command>, <filename
+class='libraryfile'>libcrypt.so.1</filename> (can be provided with optional
+instructions for the LFS Libxcrypt package), <filename
+class='libraryfile'>libncurses.so.5</filename> (can be provided with
+optional instructions for the LFS Ncurses package), <filename
+class='libraryfile'>libncursesw.so.5</filename> (but <filename
+class='libraryfile'>libncursesw.so.6</filename> is provided by the LFS
+Ncurses package)
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 데스크톱:</emphasis></term>
+        <listitem>
+          <para>
+            <filename class='libraryfile'>libgdk-x11-2.0.so</filename> (but <filename
+class='libraryfile'>libgdk-3.so</filename> is provided by the BLFS GTK+-3
+package), <filename class='libraryfile'>libgtk-x11-2.0.so</filename> (but
+<filename class='libraryfile'>libgtk-3.so</filename> and <filename
+class='libraryfile'>libgtk-4.so</filename> are provided by the BLFS GTK+-3
+and GTK-4 packages), <filename class='libraryfile'>libpng12.so</filename>
+(but <filename class='libraryfile'>libpng16.so</filename> is provided by the
+BLFS Libpng package), <filename class='libraryfile'>libQt*.so.4</filename>
+(but <filename class='libraryfile'>libQt6*.so.6</filename> are provided by
+the BLFS Qt6 package), <filename class='libraryfile'>libtiff.so.4</filename>
+(but <filename class='libraryfile'>libtiff.so.6</filename> is provided by
+the BLFS Libtiff package)
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 언어:</emphasis></term>
+        <listitem>
+          <para><command>/usr/bin/python</command> (LSB requires Python2 but LFS 및 BLFS only
+provide Python3)</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB 이미징:</emphasis></term>
+        <listitem>
+          <para>None</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><emphasis>LSB Gtk3 및 LSB 그래픽스 (Trial Use):</emphasis></term>
+        <listitem>
+          <para>
+            <filename class='libraryfile'>libpng15.so</filename> (but <filename
+class='libraryfile'>libpng16.so</filename> is provided by the BLFS Libpng
+package)
+          </para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+</sect1>
+

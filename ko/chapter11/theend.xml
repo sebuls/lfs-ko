@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-finish-theend">
+  <?dbhtml filename="theend.html"?>
+
+  <title>마치며</title>
+
+  <indexterm zone="ch-finish-theend">
+    <primary sortas="e-/etc/lfs-release">/etc/lfs-release</primary>
+  </indexterm>
+
+  <indexterm zone="ch-finish-theend">
+    <primary sortas="e-/etc/lsb-release">/etc/lsb-release</primary>
+  </indexterm>
+
+  <indexterm zone="ch-finish-theend">
+    <primary sortas="e-/etc/os-release">/etc/os-release</primary>
+  </indexterm>
+
+  <para>참 잘 했어요! 새 LFS 시스템이 설치되었습니다! 여러분이 직접 빌드하여 빛나는 이 새로운 맞춤형 리눅스 시스템과 함께 큰 성공을
+거두시길 바랍니다.</para>
+
+  <para><filename>/etc/lfs-release</filename> 파일을 만드는 것이 좋습니다. 이 파일이 있으면 시스템에 설치된
+LFS 버전이 무엇인지 여러분이 확인하기에(그리고 나중에 도움을 요청할 일이 생겼을 때 우리가 확인하기에도) 매우 편리합니다. 다음
+명령을 실행하여 이 파일을 생성:</para>
+
+<screen><userinput>echo &version; &gt; /etc/lfs-release</userinput></screen>
+
+  <para>설치된 시스템을 설명하는 두 파일은 나중에 시스템에 설치될 패키지들이 바이너리 형태이거나 혹은 직접 빌드하는 경우 모두에서 사용될 수
+있습니다.</para>
+
+  <para>첫 번째 파일은 리눅스 표준 베이스(LSB)와 관련된 새 시스템의 상태를 보여줍니다. 이 파일을 만들려면 다음을 실행:</para>
+
+<screen><userinput>cat &gt; /etc/lsb-release &lt;&lt; "EOF"
+DISTRIB_ID="Linux From Scratch"
+DISTRIB_RELEASE="&version;"
+DISTRIB_CODENAME="&lt;your name here&gt;"
+DISTRIB_DESCRIPTION="Linux From Scratch"
+EOF</userinput></screen>
+
+  <para>두 번째 파일에는 거의 같은 정보가 들어가며, systemd 및 일부 그래픽 데스크톱 환경에서 쓰입니다. 이 파일을 만들려면 실행:</para>
+
+<screen><userinput>cat &gt; /etc/os-release &lt;&lt; "EOF"
+NAME="Linux From Scratch"
+VERSION="&version;"
+ID=lfs
+PRETTY_NAME="Linux From Scratch &version;"
+VERSION_CODENAME="&lt;your name here&gt;"
+HOME_URL="&lfs-root;lfs/"
+RELEASE_TYPE="&os-release-type;"
+EOF</userinput></screen>
+
+  <para>'DISTRIB_CODENAME'과 'VERSION_CODENAME' 필드를 여러분만의 값으로 설정하여 여러분의 시스템을 독자적인 것으로
+만드십시오.</para>
+
+</sect1>

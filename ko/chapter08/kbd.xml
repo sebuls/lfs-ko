@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-kbd" role="wrap">
+  <?dbhtml filename="kbd.html"?>
+
+  <sect1info condition="script">
+<productname>kbd</productname> <productnumber>&kbd-version;</productnumber>
+<address>&kbd-url;</address></sect1info>
+
+  <title>Kbd-&kbd-version;</title>
+
+  <indexterm zone="ch-system-kbd">
+    <primary sortas="a-Kbd">Kbd</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Kbd 패키지에는 key-table files, console fonts,및 keyboard utilities 들어갑니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&kbd-fin-sbu;</seg>
+        <seg>&kbd-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Kbd 설치</title>
+
+    <para>백스페이스와 딜리트(delete) 키의 동작이 Kbd 패키지의 키맵 간에 일관되지 않습니다. 다음 패치는 i386 키맵에서 이 문제를
+해결:</para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../&kbd-backspace-patch;</userinput></screen>
+
+    <para>패치를 적용한 후, 백스페이스 키는 코드 127의 문자를 생성하며, 딜리트(delete) 키는 잘 알려진 이스케이프 시퀀스를 생성합니다.</para>
+
+    <para>불필요한 <command>resizecons</command> 프로그램과 그 매뉴얼 페이지를 제거하십시오. (이 프로그램은 비디오 모드
+파일을 제공하기 위해 지금은 사라진 svgalib을 필요로 합니다. 일반적인 용도로는 <command>setfont</command>가
+콘솔 크기를 적절하게 조정).</para>
+
+<screen><userinput remap="pre">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure
+sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput></screen>
+
+    <para>Kbd 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr --disable-vlock</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--disable-vlock</parameter></term>
+        <listitem>
+          <para>이 옵션은 vlock 유틸리티가 빌드되는 것을 방지합니다. 이 유틸리티는 AM 라이브러리를 필요로 하는데,chroot 환경에서 사용할 수
+없습니니다.</para>
+       </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <note>
+      <para>일부 언어(예: 벨라루스어)의 경우 Kbd 패키지는 유용한 키맵을 제공하지 않습니다. 기본 <quote>by</quote> 키맵은
+ISO-8859-5 인코딩을 가정하고 있으며, 보통 CP1251 키맵이 사용되기 때문입니다. 이러한 언어 사용자는 별도로 작동하는 키맵을
+다운로드해야 합니다.</para>
+    </note>
+
+    <para>필요하면 문서 설치:</para>
+
+<screen><userinput remap="install">cp -R -v docs/doc -T /usr/share/doc/kbd-&kbd-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-kbd" role="content">
+    <title>Kbd 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg><!--resizecons,-->
+chvt, deallocvt, dumpkeys, fgconsole, getkeycodes, kbdinfo, kbd_mode,
+kbdrate, loadkeys, loadunimap, mapscrn, openvt, psfaddtable (link to
+psfxtable), psfgettable (link to psfxtable), psfstriptable (link to
+psfxtable), psfxtable, setfont, setkeycodes, setleds, setmetamode, setvtrgb,
+showconsolefont, showkey, unicode_start 및 unicode_stop</seg>
+        <seg>/usr/share/consolefonts, /usr/share/consoletrans, /usr/share/keymaps,
+/usr/share/doc/kbd-&kbd-version;, 및 /usr/share/unimaps</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="chvt">
+        <term><command>chvt</command></term>
+        <listitem>
+          <para>포그라운드 가상 터미널을 변경</para>
+          <indexterm zone="ch-system-kbd chvt">
+            <primary sortas="b-chvt">chvt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="deallocvt">
+        <term><command>deallocvt</command></term>
+        <listitem>
+          <para>사용하지 않는 가상 터미널을 할당 해제</para>
+          <indexterm zone="ch-system-kbd deallocvt">
+            <primary sortas="b-deallocvt">deallocvt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dumpkeys">
+        <term><command>dumpkeys</command></term>
+        <listitem>
+          <para>키보드 변환 테이블을 덤프</para>
+          <indexterm zone="ch-system-kbd dumpkeys">
+            <primary sortas="b-dumpkeys">dumpkeys</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fgconsole">
+        <term><command>fgconsole</command></term>
+        <listitem>
+          <para>활성 가상 터미널의 번호를 출력</para>
+          <indexterm zone="ch-system-kbd fgconsole">
+            <primary sortas="b-fgconsole">fgconsole</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getkeycodes">
+        <term><command>getkeycodes</command></term>
+        <listitem>
+          <para>커널의 스캔코드-키코드(scancode-to-keycode) 매핑 테이블을 출력</para>
+          <indexterm zone="ch-system-kbd getkeycodes">
+            <primary sortas="b-getkeycodes">getkeycodes</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="kbdinfo">
+        <term><command>kbdinfo</command></term>
+        <listitem>
+          <para>콘솔 상태에 관한 정보 얻기</para>
+          <indexterm zone="ch-system-kbd kbdinfo">
+            <primary sortas="b-kbdinfo">kbdinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="kbd_mode">
+        <term><command>kbd_mode</command></term>
+        <listitem>
+          <para>키보드 모드를 보고하거나 설정</para>
+          <indexterm zone="ch-system-kbd kbd_mode">
+            <primary sortas="b-kbd_mode">kbd_mode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="kbdrate">
+        <term><command>kbdrate</command></term>
+        <listitem>
+          <para>키보드 반복(repeat) 및 지연(delay) 속도를 설정</para>
+          <indexterm zone="ch-system-kbd kbdrate">
+            <primary sortas="b-kbdrate">kbdrate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="loadkeys">
+        <term><command>loadkeys</command></term>
+        <listitem>
+          <para>키보드 변환 테이블을 로드</para>
+          <indexterm zone="ch-system-kbd loadkeys">
+            <primary sortas="b-loadkeys">loadkeys</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="loadunimap">
+        <term><command>loadunimap</command></term>
+        <listitem>
+          <para>커널의 유니코드-폰트(unicode-to-font) 매핑 테이블을 로드</para>
+          <indexterm zone="ch-system-kbd loadunimap">
+            <primary sortas="b-loadunimap">loadunimap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mapscrn">
+        <term><command>mapscrn</command></term>
+        <listitem>
+          <para>사용자 정의 출력 문자 매핑 테이블을 콘솔 드라이버로 로드하는 데 사용되었던 구식 프로그램입니다. 현재 이 작업은
+<command>setfont</command> 가 수행</para>
+          <indexterm zone="ch-system-kbd mapscrn">
+            <primary sortas="b-mapscrn">mapscrn</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="openvt">
+        <term><command>openvt</command></term>
+        <listitem>
+          <para>새로운 가상 터미널(VT)에서 프로그램을 시작</para>
+          <indexterm zone="ch-system-kbd openvt">
+            <primary sortas="b-openvt">openvt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="psfaddtable">
+        <term><command>psfaddtable</command></term>
+        <listitem>
+          <para>콘솔 폰트에 유니코드 문자 테이블을 추가</para>
+          <indexterm zone="ch-system-kbd psfaddtable">
+            <primary sortas="b-psfaddtable">psfaddtable</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="psfgettable">
+        <term><command>psfgettable</command></term>
+        <listitem>
+          <para>콘솔 폰트에서 내장된 유니코드 문자 테이블을 추출</para>
+          <indexterm zone="ch-system-kbd psfgettable">
+            <primary sortas="b-psfgettable">psfgettable</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="psfstriptable">
+        <term><command>psfstriptable</command></term>
+        <listitem>
+          <para>콘솔 폰트에서 내장된 유니코드 문자 테이블을 제거</para>
+          <indexterm zone="ch-system-kbd psfstriptable">
+            <primary sortas="b-psfstriptable">psfstriptable</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="psfxtable">
+        <term><command>psfxtable</command></term>
+        <listitem>
+          <para>콘솔 폰트용 유니코드 문자 테이블을 처리</para>
+          <indexterm zone="ch-system-kbd psfxtable">
+            <primary sortas="b-psfxtable">psfxtable</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setfont">
+        <term><command>setfont</command></term>
+        <listitem>
+          <para>콘솔의 EGA(Enhanced Graphic Adapter) 및 VGA(Video Graphics Array) 폰트를 변경</para>
+          <indexterm zone="ch-system-kbd setfont">
+            <primary sortas="b-setfont">setfont</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setkeycodes">
+        <term><command>setkeycodes</command></term>
+        <listitem>
+          <para>커널의 스캔코드-키코드(scancode-to-keycode) 매핑 테이블 항목을 로드. 이는 키보드에 특이한 키가 있을 때 유용</para>
+          <indexterm zone="ch-system-kbd setkeycodes">
+            <primary sortas="b-setkeycodes">setkeycodes</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setleds">
+        <term><command>setleds</command></term>
+        <listitem>
+          <para>키보드 플래그 및 LED(Light Emitting Diodes)를 설정</para>
+          <indexterm zone="ch-system-kbd setleds">
+            <primary sortas="b-setleds">setleds</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setmetamode">
+        <term><command>setmetamode</command></term>
+        <listitem>
+          <para>키보드 메타 키(meta-key) 처리 방식을 정의</para>
+          <indexterm zone="ch-system-kbd setmetamode">
+            <primary sortas="b-setmetamode">setmetamode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setvtrgb">
+        <term><command>setvtrgb</command></term>
+        <listitem>
+          <para>모든 가상 터미널의 콘솔 색상 맵(color map)을 설정</para>
+          <indexterm zone="ch-system-kbd setvtrgb">
+            <primary sortas="b-setvtrgb">setvtrgb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="showconsolefont">
+        <term><command>showconsolefont</command></term>
+        <listitem>
+          <para>현재 EGA/VGA 콘솔 화면 폰트를 표시</para>
+          <indexterm zone="ch-system-kbd showconsolefont">
+            <primary sortas="b-showconsolefont">showconsolefont</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="showkey">
+        <term><command>showkey</command></term>
+        <listitem>
+          <para>키보드에서 눌린 키의 스캔코드(scancode), 키코드(keycode) 및 ASCII 코드를 보고</para>
+          <indexterm zone="ch-system-kbd showkey">
+            <primary sortas="b-showkey">showkey</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="unicode_start">
+        <term><command>unicode_start</command></term>
+        <listitem>
+          <para>키보드와 콘솔을 유니코드(UNICODE) 모드로 전환. [키맵 파일이 ISO-8859-1 인코딩인 경우에만 이 프로그램을
+사용하십시오. 다른 인코딩의 경우, 이 유틸리티는 잘못된 결과를 생성합니다.]</para>
+          <indexterm zone="ch-system-kbd unicode_start">
+            <primary sortas="b-unicode_start">unicode_start</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="unicode_stop">
+        <term><command>unicode_stop</command></term>
+        <listitem>
+          <para>키보드와 콘솔을 유니코드(UNICODE) 모드에서 이전 상태로 되돌리기</para>
+          <indexterm zone="ch-system-kbd unicode_stop">
+            <primary sortas="b-unicode_stop">unicode_stop</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

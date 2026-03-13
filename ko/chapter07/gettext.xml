@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-gettext" role="wrap">
+  <?dbhtml filename="gettext.html"?>
+
+  <sect1info condition="script">
+<productname>gettext</productname>
+<productnumber>&gettext-version;</productnumber> <address>&gettext-url;</address></sect1info>
+
+  <title>Gettext-&gettext-version;</title>
+
+  <indexterm zone="ch-tools-gettext">
+    <primary sortas="a-Gettext">Gettext</primary>
+    <secondary>tools</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/gettext.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gettext-tmp-sbu;</seg>
+        <seg>&gettext-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Gettext 설치</title>
+
+    <para>먼저, glibc-2.43에서 도입된 몇 가지 수정 사항을 적용하십시오:</para>
+
+<screen><userinput remap="pre">sed -r '/_GL_EXTERN_C/s/w?memchr|bsearch/(&amp;)/' \
+    -i $(find -name \*.in.h)</userinput></screen>
+
+    <para>우리 임시 도구 모음의 경우, Gettext에서 프로그램 3개만 설치하면 됩니다.</para>
+
+    <para>Gettext 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --disable-shared</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--disable-shared</parameter></term>
+        <listitem>
+          <para>현재는 공유 Gettext 라이브러리를 설치할 필요가 없으므로, 이를 빌드할 필요가 없습니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para><command>msgfmt</command>, <command>msgmerge</command> 및
+<command>xgettext</command> 프로그램을 설치:</para>
+
+<screen><userinput remap="install">cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>이 패키지 상세 정보 <xref linkend="contents-gettext" role="."/></para>
+
+  </sect2>
+
+</sect1>

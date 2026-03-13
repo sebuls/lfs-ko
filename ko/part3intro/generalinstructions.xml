@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-generalinstructions"
+       xreflabel="일반 컴파일 지침">
+  <?dbhtml filename="generalinstructions.html"?>
+
+  <title>일반 컴파일 지침</title>
+
+  <caution>
+    <para>
+      LFS 개발 주기 동안 책의 지침은 패키지 업데이트에 맞추거나 업데이트된 패키지의 새로운 기능을 활용하기 위해 자주 수정됩니다. 서로
+다른 버전의 LFS 책에 담긴 지침을 섞어서 사용하면 미묘한 결함이 발생할 수 있습니다. 이런 종류의 문제는 일반적으로 이전 LFS
+릴리스를 위해 만들었던 스크립트를 재사용할 때 발생합니다. 이러한 재사용은 강력히 권장하지 않습니다. 만약 어떤 이유로든 이전 LFS
+릴리스의 스크립트를 재사용한다면, 현재 버전의 LFS 책과 일치하도록 스크립트를 매우 주의 깊게 업데이트해야 합니다.
+    </para>
+  </caution>
+
+  <para>각 패키지를 빌드할 때 알아두어야 할 몇 가지 사항:</para>
+
+  <itemizedlist>
+
+  <listitem>
+    <para>여러 패키지는 컴파일 전에 패치가 적용되지만, 이는 오직 문제를 해결하기 위해 패치가 필요한 경우에만 해당합니다. 현재 장과 다음 장
+모두에서 패치가 필요한 경우가 많지만, 때로는 똑같은 패키지가 여러 번 빌드될 때 당장은 패치가 필요치 않을 수도 있습니다. 그러므로
+다운로드한 패치에 대한 지침이 없는 것처럼 보이더라도 걱정하지 마십시오. 패치를 적용할 때
+<emphasis>offset</emphasis> 또는 <emphasis>fuzz</emphasis>에 대한 경고 메시지가 나타날 수도
+있습니다. 이러한 경고에 대해서는 걱정하지 마십시오. 패치는 여전히 성공적으로 적용된 것입니다.</para>
+  </listitem>
+
+  <listitem>
+    <para>대부분의 패키지를 컴파일하는 동안 화면에 몇 가지 경고 메시지가 지나갈 것입니다. 이는 정상적인 현상이며 안심하고 무시하셔도
+됩니다. 이러한 경고는 보통 권장되지 않지만(deprecated) 유효하지 않은 것은 아닌 C 또는 C++ 구문 사용에 관한
+것입니다. C 표준은 상당히 자주 바뀌며, 일부 패키지는 아직 업데이트되지 않았을 뿐입니다. 이는 심각한 문제가 아니지만, 경고 메시지가
+나타나는 원인이 됩니다.</para>
+  </listitem>
+
+  <listitem>
+    <para>Check one last time that the <envar>LFS</envar> environment variable is set
+up properly:</para>
+
+<screen role="nodump"><userinput>echo $LFS</userinput></screen>
+
+    <para>우리 예제에 따라, 출력 결과에 LFS 파티션의 마운트 지점 <filename
+class="directory">/mnt/lfs</filename> 디렉터리 경로가 표시되는지 확인하십시오.</para>
+  </listitem>
+
+  <listitem>
+
+    <para>마지막으로, 두 가지 중요한 사항을 반드시 강조해야 합니다:</para>
+
+    <important>
+
+      <para>빌드 지침은 심볼릭 링크를 포함하여 <xref linkend='ch-partitioning-hostreqs'/> 이 적절히 설정되었다고
+가정:</para>
+
+      <itemizedlist role='important'>
+
+        <listitem override='bullet'><para><command>bash</command> is the shell in use.</para></listitem>
+
+        <listitem override='bullet'><para><command>sh</command> is a symbolic link to <command>bash</command>.</para></listitem>
+
+        <listitem override='bullet'><para><command>/usr/bin/awk</command> is a symbolic link to
+<command>gawk</command>.</para></listitem>
+
+        <listitem override='bullet'><para><command>/usr/bin/yacc</command> is a symbolic link to
+<command>bison</command>, or to a small script that executes bison.</para></listitem>
+
+      </itemizedlist>
+    </important>
+
+    <important>
+      <para>빌드 과정의 개요는 다음과 같습니다.</para>
+
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para><!-- Do
+          <emphasis>
+not</emphasis> put sources in
+          <filename class="directory">/mnt/lfs/tools/</filename>. -->
+모든 소스 파일과 패치를 chroot 환경에서 접근 가능한 <filename
+class="directory">/mnt/lfs/sources/</filename> 같은 디렉터리에 배치하십시오.</para>
+        </listitem>
+        <listitem>
+          <para><filename class="directory">/mnt/lfs/sources/</filename> 디렉터리로 이동.</para>
+        </listitem>
+        <listitem id='buildinstr' xreflabel='패키지 빌드 명령'>
+          <para>각 패키지:</para>
+          <orderedlist numeration="loweralpha" spacing="compact">
+            <listitem>
+              <para><command>tar</command> 프로그램을 사용하여 빌드할 패키지의 압축을 푸십시오. <xref
+linkend="chapter-cross-tools"/> 및 <xref linkend="chapter-temporary-tools"/>
+에서는 패키지 압축을 풀 때 반드시 <emphasis>lfs</emphasis> 사용자 권한인지 확인하십시오.</para>
+            <para>소스 코드를 추출할 때는 <command>tar</command> 명령 이외의 어떠한 방법도 사용하지 마십시오. 특히
+<command>cp -R</command> 명령을 사용하여 소스 코드 트리를 다른 곳으로 복사하는 것은 소스 트리의 타임스탬프를
+손상시켜 빌드 실패를 초래할 수 있습니다.</para>
+            </listitem>
+            <listitem>
+              <para>패키지의 압축을 풀 때 생성된 디렉터리로 이동하십시오.</para>
+            </listitem>
+            <listitem>
+              <para>패키지 빌드를 위한 지침을 따르십시오.</para>
+            </listitem>
+            <listitem>
+              <para>빌드가 완료되면 sources 디렉터리로 다시 이동하십시오.</para>
+            </listitem>
+            <listitem>
+              <para>별도의 지시가 없는 한, 압축을 풀었던 소스 디렉터리를 삭제하십시오.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+      </orderedlist>
+    </important>
+  </listitem>
+
+  </itemizedlist>
+
+</sect1>

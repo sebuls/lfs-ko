@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-libelf" role="wrap">
+  <?dbhtml filename="libelf.html"?>
+
+  <sect1info condition="script">
+<productname>libelf</productname>
+<productnumber>&elfutils-version;</productnumber> <address>&elfutils-url;</address></sect1info>
+
+  <title>Elfutils-&elfutils-version; 에서 온 Libelf</title>
+
+  <indexterm zone="ch-system-libelf">
+    <primary sortas="a-Libelf">Libelf</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Libelf는 ELF(Executable 및 Linkable Format) 파일을 다루기 위한 라이브러리입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&elfutils-fin-sbu;</seg>
+        <seg>&elfutils-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Libelf 설치</title>
+
+      <para>Libelf는 elfutils-&elfutils-version; 패키지의
+일부입니다. elfutils-&elfutils-version;.tar.bz2 파일을 소스 tarball 로 사용하십시오.</para>
+
+    <para>Libelf 컴파일 준비하기:</para>
+
+    <screen><userinput remap="configure">./configure --prefix=/usr        \
+            --disable-debuginfod \
+            --enable-libdebuginfod=dummy</userinput></screen>
+
+    <para>Libelf 만 컴파일:</para>
+
+<!--
+    <para>
+To test the results, issue:</para>
+
+<screen><userinput remap="test">make -k check</userinput></screen>
+
+    <para>The above command builds the utilities that are part of the package
+    as well as the unit tests. Two tests are known to fail: dwarf_srclang_check
+    and run-backtrace-native-core.sh.</para>
+-->
+<screen><userinput remap="make">make -C lib
+make -C libelf</userinput></screen>
+
+    <para>The test suite fails to build with glibc-2.43 or newer.</para>
+
+    <para>Libelf만 설치:</para>
+
+<screen><userinput remap="install">make -C libelf install
+install -vm644 config/libelf.pc /usr/lib/pkgconfig
+rm /usr/lib/libelf.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-elfutils" role="content">
+    <title>Libelf 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 라이브러리</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>
+          libelf.so 
+        </seg>
+        <seg>
+          /usr/include/elfutils
+        </seg>
+      </seglistitem>
+
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libelf">
+        <term><filename class="libraryfile">libelf.so</filename></term>
+        <listitem>
+          <para>Contains API functions to handle ELF object files</para>
+          <indexterm zone="ch-system-libelf libelf">
+            <primary sortas="c-libelf">libelf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

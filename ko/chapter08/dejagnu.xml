@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-dejagnu" role="wrap">
+  <?dbhtml filename="dejagnu.html"?>
+
+  <sect1info condition="script">
+<productname>dejagnu</productname>
+<productnumber>&dejagnu-version;</productnumber> <address>&dejagnu-url;</address></sect1info>
+
+  <title>DejaGNU-&dejagnu-version;</title>
+
+  <indexterm zone="ch-system-dejagnu">
+    <primary sortas="a-DejaGNU">DejaGNU</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para><application>DejaGnu</application> 패키지에는 GNU 도구들의 테스트 스위트를 실행하기 위한 프레임워크가 들어
+있습니다. 이는 <command>expect</command>로 작성되었으며, <command>expect</command>는 내부적으로
+<application>Tcl</application> (Tool Command Language)을 씁니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&dejagnu-tmp-sbu;</seg>
+        <seg>&dejagnu-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>DejaGNU 설치</title>
+
+    <para>The upstream recommends building DejaGNU in a dedicated build directory:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <para>DejaGNU 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">../configure --prefix=/usr
+makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi
+makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install
+install -v -dm755  /usr/share/doc/dejagnu-&dejagnu-version;
+install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-&dejagnu-version;</userinput></screen>
+
+  </sect2>
+
+
+  <sect2 id="contents-dejagnu" role="content">
+    <title>DejaGNU 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>dejagnu and runtest</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="dejagnu">
+        <term><command>dejagnu</command></term>
+        <listitem>
+          <para>DejaGNU auxiliary command launcher</para>
+          <indexterm zone="ch-system-dejagnu dejagnu">
+            <primary sortas="b-dejagnu">dejagnu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="runtest">
+        <term><command>runtest</command></term>
+        <listitem>
+          <para>A wrapper script that locates the proper <command>expect</command> shell and
+then runs DejaGNU</para>
+          <indexterm zone="ch-system-dejagnu runtest">
+            <primary sortas="b-runtest">runtest</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

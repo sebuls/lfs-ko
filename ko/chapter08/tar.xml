@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-tar" role="wrap">
+  <?dbhtml filename="tar.html"?>
+
+  <sect1info condition="script">
+<productname>tar</productname> <productnumber>&tar-version;</productnumber>
+<address>&tar-url;</address></sect1info>
+
+  <title>Tar-&tar-version;</title>
+
+  <indexterm zone="ch-system-tar">
+    <primary sortas="a-Tar">Tar</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Tar 패키지는 tar 아카이브를 생성하고 다양한 방식의 아카이브 조작을 수행하는 기능을 제공합니다. Tar를 사용하면 이전에 생성된
+아카이브에서 파일을 추출, 추가 파일을 저장, 이미 저장된 파일을 업데이트하거나 목록을 확인할 수 있습니다. </para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&tar-fin-sbu;</seg>
+        <seg>&tar-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Tar 설치</title>
+
+    <para>Tar 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">FORCE_UNSAFE_CONFIGURE=1  \
+./configure --prefix=/usr</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><envar>FORCE_UNSAFE_CONFIGURE=1</envar></term>
+        <listitem>
+          <para>이 설정은 <function>mknod</function> 테스트를 강제로 <systemitem
+class="username">root</systemitem> 계정에서 실행하게 합니다. 일반적으로 이 테스트를 <systemitem
+class="username">root</systemitem> 사용자로 실행하는 것은 위험하다고 간주되지만, 현재는 시스템이 부분적으로만
+빌드된 상태에서 실행 중이므로 이를 강제로 실행(overriding)해도 됩니다.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>binary store/restore 라는 이름의 한 테스트는 LFS(Linux From Scratch)에 SELinux가 없기 때문에
+실행할 때 실패하는 것으로 알려져 있습니다. 그러나 LFS 빌드에 사용되는 파일 시스템에 대해 호스트 커널이 확장 속성(extended
+attributes) 또는 보안 레이블(security labels)을 지원하지 않으면 해당 테스트를 건너뜁니다.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install
+make -C doc install-html docdir=/usr/share/doc/tar-&tar-version;</userinput></screen>
+
+  </sect2>
+
+
+  <sect2 id="contents-tar" role="content">
+    <title>Tar 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>tar</seg>
+        <seg>/usr/share/doc/tar-&tar-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tar">
+        <term><command>tar</command></term>
+        <listitem>
+          <para>흔히 타르볼(tarball)이라고도 하는 아카이브를 생성하고, 아카이브에서 파일을 추출하거나 그 내용을 나열</para>
+          <indexterm zone="ch-system-tar tar">
+            <primary sortas="b-tar">tar</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

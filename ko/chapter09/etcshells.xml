@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE part PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-config-shells" xreflabel="/etc/shells 파일 생성">
+  <?dbhtml filename="etcshells.html"?>
+
+  <title>/etc/shells 파일 생성</title>
+
+  <indexterm zone="ch-config-shells">
+    <primary sortas="e-etc-shells">/etc/shells</primary>
+  </indexterm>
+
+  <para><filename>shells</filename> 파일은 시스템에 있는 로그인 셸 목록을 담고 있습니다. 애플리케이션은 이 파일을 써서
+특정 셸이 유효한지 확인합니다. 각 셸에 대해 디렉터리 구조의 루트(/)를 기준으로 한 셸의 경로를 한 줄에 하나씩 기록해야 합니다.</para>
+
+  <para>예를 들어, 일반 사용자가 자신의 계정에 대한 로그인 셸을 변경할 수 있는지 결정할 때 <command>chsh</command>
+명령어가 이 파일을 참조합니다. 만약 해당 셸 이름이 목록에 없다면, 사용자 셸 변경 권한은 거부됩니다.</para>
+
+  <para>이 파일은 <filename>/etc/shells</filename>를 찾지 못하면 face browser(사용자 목록)를 채우지 않는
+<application>GDM</application>과 같은 애플리케이션이나, 전통적으로 이 파일에 포함되지 않은 셸을 사용하는
+사용자의 접근을 거부하는 FTP 데몬 등에게 필수적인 요구 사항입니다.</para>
+
+<screen role="root"><userinput>cat &gt; /etc/shells &lt;&lt; "EOF"
+<literal># Begin /etc/shells
+
+/bin/sh
+/bin/bash
+
+# End /etc/shells</literal>
+EOF</userinput></screen>
+
+</sect1>

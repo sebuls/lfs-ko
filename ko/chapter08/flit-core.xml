@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-flit-core" role="wrap">
+  <?dbhtml filename="flit-core.html"?>
+
+  <sect1info condition="script">
+<productname>flit-core</productname>
+<productnumber>&flit-core-version;</productnumber> <address>&flit-core-url;</address></sect1info>
+
+  <title>Flit-Core-&flit-core-version;</title>
+
+  <indexterm zone="ch-system-flit-core">
+    <primary sortas="a-flit-core">Flit-core</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Flit-core는 Flit(간단한 파이썬 모듈용 패키징 도구) 중에서 배포판을 빌드하는 부분입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+      <seglistitem>
+        <seg>&flit-core-fin-sbu;</seg>
+        <seg>&flit-core-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Flit-Core 설치</title>
+
+    <para>패키지 빌드:</para>
+
+<screen><userinput remap="make">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">pip3 install --no-index --find-links dist flit_core</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the pip3 configuration options and commands:</title>
+
+      <varlistentry>
+        <term><command>wheel</command></term>
+        <listitem>
+           <para>This command builds the wheel archive for this package.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>-w dist</parameter></term>
+        <listitem>
+           <para>Instructs pip to put the created wheel into the <filename
+class='directory'>dist</filename> directory.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--no-cache-dir</parameter></term>
+        <listitem>
+          <para>Prevents pip from copying the created wheel into the <filename
+class='directory'>/root/.cache/pip</filename> directory.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><command>install</command></term>
+        <listitem>
+           <para>이 명령은 패키지를 설치합니다.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--no-build-isolation</parameter>,
+<parameter>--no-deps</parameter>, and <parameter>--no-index</parameter></term>
+        <listitem>
+          <para>이 옵션들은 온라인 패키지 저장소(PyPI)에서 파일을 가져오는 것을 막습니다. 패키지들이 올바른 순서로 설치된다면, 처음에 pip가
+파일을 가져올 필요가 없습니다. 이 옵션들은 사용자 실수에 대비하여 안전성을 더해줍니다.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--find-links dist</parameter></term>
+        <listitem>
+           <para>Instructs pip to search for wheel archives in the <filename
+class='directory'>dist</filename> directory.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="contents-flit-core" role="content">
+    <title>Flit-Core 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+         <seg>
+            /usr/lib/python&python-minor;/site-packages/flit_core 및
+/usr/lib/python&python-minor;/site-packages/flit_core-&flit-core-version;.dist-info
+         </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
+

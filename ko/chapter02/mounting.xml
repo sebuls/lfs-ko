@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-partitioning-mounting">
+  <?dbhtml filename="mounting.html"?>
+
+  <title>새 파티션 마운트</title>
+
+  <para>이제 파일 시스템이 생성되었으므로, 호스트 시스템이 해당 파티션에 접근할 수 있도록 마운트(mount)해야 합니다. 이 책은 이전
+섹션에서 설명한 <envar>LFS</envar> 환경 변수로 지정된 디렉터리에 파일 시스템이 마운트되어 있다고 가정합니다.
+  </para>
+  
+  <para>엄밀히 말하면, <quote>파티션을 마운트</quote> 할 수는 없습니다. 파티션에 내장된 <emphasis>파일
+시스템</emphasis>을 마운트하는 것입니다. 그러나 단일 파티션이 둘 이상의 파일 시스템을 포함될 수 없기 때문에, 사람들은 종종
+파티션과 그에 연결된 파일 시스템을 동일한 것으로 간주하여 이야기하곤 합니다.</para>
+
+  <para>다음 명령 사용하여 마운트 지점을 생성하고 LFS 파일 시스템을 마운트:</para>
+
+<screen role="nodump"><userinput>mkdir -pv $LFS
+mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput></screen>
+
+  <para><replaceable>&lt;xxx&gt;</replaceable> 를 LFS 파티션 이름으로 바꾸십시오.</para>
+
+  <para>LFS를 위해 여러 파티션을 사용하는 경우(예: 하나는 <filename class="directory">/</filename> 그리고
+다른 하나는 <filename class="directory">/home</filename>에 사용하는 경우), 다음과 같이 마운트:</para>
+
+<screen role="nodump"><userinput>mkdir -pv $LFS
+mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS
+mkdir -v $LFS/home
+mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/home</userinput></screen>
+
+  <para>Replace <replaceable>&lt;xxx&gt;</replaceable> and
+<replaceable>&lt;yyy&gt;</replaceable> with the appropriate partition names.</para>
+
+  <para>호스트 배포판의 <command>mkfs</command> 기본값이 다르게 설정되어 있을 수 있으므로, <filename
+class='directory'>$LFS</filename> 디렉터리(즉, LFS 시스템을 위해 새로 생성된 파일 시스템의 루트
+디렉터리)의 소유자를 &root; 로, 권한 모드를 <literal>755</literal>로 설정:</para>
+
+<screen role='nodump'><userinput>chown root:root $LFS
+chmod 755 $LFS</userinput></screen>
+
+  <para>이 새 파티션이 너무 제한적인 권한(예: <option>nosuid</option> 또는 <option>nodev</option>
+옵션)으로 마운트되지 않도록 확인하십시오. 매개변수 없이 <command>mount</command> 명령을 실행하여 마운트된 LFS
+파티션에 어떤 옵션이 설정되어 있는지 확인합니다. 만약 <option>nosuid</option> 또는
+<option>nodev</option>가 설정되어 있다면, 해당 파티션을 다시 마운트(remount)해야 합니다.</para>
+
+  <warning><para>위의 지침은 LFS 과정 내내 컴퓨터를 재시작하지 않는다고 가정합니다. 시스템을 종료한다면, 빌드 프로세스를 다시 시작할 때마다 LFS
+파티션을 매번 다시 마운트하거나, 재부팅 시 자동으로 마운트되도록 호스트 시스템의 &fstab; 파일을 수정해야 합니다. 예를 들어,
+&fstab; 파일에 다음 라인을 추가할 수 있습니다: <screen role="nodump">/dev/<replaceable>&lt;xxx&gt;</replaceable>  /mnt/lfs ext4   defaults      1     1</screen> 만약 추가적인
+선택용 파티션들을 사용한다면, 그것들도 잊지 말고 추가해 주어야 합니다.
+
+  </para></warning>
+
+
+  <para><systemitem class="filesystem">swap</systemitem> 파티션을 사용한다면,
+<command>swapon</command> 명령어를 사용하여 활성화되어 있는지 확인하십시오:</para>
+
+<screen role="nodump"><userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput></screen>
+
+  <para><replaceable>&lt;zzz&gt;</replaceable> 를 <systemitem
+class="filesystem">swap</systemitem> 파티션 이름으로 바꾸시오.</para>
+
+  <para>이제 새로운 LFS 파티션이 제 역할을 할 준비가 되었으니, 패키지를 다운로드할 차례입니다.</para>
+
+</sect1>
+

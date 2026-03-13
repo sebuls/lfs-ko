@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-autoconf" role="wrap">
+  <?dbhtml filename="autoconf.html"?>
+
+  <sect1info condition="script">
+<productname>autoconf</productname>
+<productnumber>&autoconf-version;</productnumber> <address>&autoconf-url;</address></sect1info>
+
+  <title>Autoconf-&autoconf-version;</title>
+
+  <indexterm zone="ch-system-autoconf">
+    <primary sortas="a-Autoconf">Autoconf</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Autoconf 패키지에는 소스 코드를 자동으로 구성할 수 있는 셸 스크립트를 생성하는 프로그램이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&autoconf-fin-sbu;</seg>
+        <seg>&autoconf-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Autoconf 설치</title>
+
+    <para>Autoconf 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><!--
+    <para>
+The test suite is currently broken by bash-5 and libtool-2.4.3.
+    To run the tests anyway, issue:</para>
+ -->
+<userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-autoconf" role="content">
+    <title>Autoconf 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>autoconf, autoheader, autom4te, autoreconf, autoscan, autoupdate 및 ifnames</seg>
+        <seg>/usr/share/autoconf</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="autoconf">
+        <term><command>autoconf</command></term>
+        <listitem>
+          <para>다양한 종류의 유닉스계 시스템에 맞게 소프트웨어 소스 코드 패키지를 자동으로 구성하는 셸 스크립트를 생성합니다. 이렇게 생성된 구성
+스크립트는 독립적으로 작동하므로, 이를 실행할 때 <command>autoconf</command> 프로그램이 따로 필요치 않습니다.</para>
+          <indexterm zone="ch-system-autoconf autoconf">
+            <primary sortas="b-autoconf">autoconf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="autoheader">
+        <term><command>autoheader</command> </term>
+        <listitem>
+          <para>configure에서 사용할 C <emphasis>#define</emphasis> 문 템플릿 파일을 생성하는 도구</para>
+          <indexterm zone="ch-system-autoconf autoheader">
+            <primary sortas="b-autoheader">autoheader</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="autom4te">
+        <term><command>autom4te</command></term>
+        <listitem>
+          <para>M4 매크로 프로세서 래퍼</para>
+          <indexterm zone="ch-system-autoconf autom4te">
+            <primary sortas="b-autom4te">autom4te</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="autoreconf">
+        <term><command>autoreconf</command></term>
+        <listitem>
+          <para><command>autoconf</command> 및 <command>automake</command> 템플릿 파일이 바뀌었을 때,
+시간을 절약하기 위해 <command>autoconf</command>, <command>autoheader</command>,
+<command>aclocal</command>, <command>automake</command>,
+<command>gettextize</command>, <command>libtoolize</command>를 올바른 순서로 자동 실행</para>
+          <indexterm zone="ch-system-autoconf autoreconf">
+            <primary sortas="b-autoreconf">autoreconf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="autoscan">
+        <term><command>autoscan</command> </term>
+        <listitem>
+          <para>소프트웨어 패키지를 위한 <filename>configure.in</filename> 파일을 만드는 데 도움을 줍니다. 이 도구는
+디렉터리 트리에 있는 소스 파일들을 조사하여 일반적인 이식성(portability) 문제를 찾아내고, 해당 패키지를 위한 예비
+<filename>configure.in</filename> 파일 역할을 하는
+<filename>configure.scan</filename> 파일을 생성</para>
+          <indexterm zone="ch-system-autoconf autoscan">
+            <primary sortas="b-autoscan">autoscan</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="autoupdate">
+        <term><command>autoupdate</command></term>
+        <listitem>
+          <para>이전 이름으로 <command>autoconf</command> 매크로를 호출하는
+<filename>configure.in</filename> 파일을 수정하여 현재의 매크로 이름을 사용하도록 바꿈</para>
+          <indexterm zone="ch-system-autoconf autoupdate">
+            <primary sortas="b-autoupdate">autoupdate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ifnames">
+        <term><command>ifnames</command> </term>
+        <listitem>
+          <para>소프트웨어 패키지를 위한 <filename>configure.in</filename> 파일을 작성할 때 도움 됩니다. 이 프로그램은
+패키지의 C 전처리기 조건문에서 사용하는 식별자들을 출력합니다. [이미 패키지에 어느 정도 이식성이 갖춰져 있다면, 이 프로그램은
+<command>configure</command>가 무엇을 점검해야 하는지 결정하는 데 도움을 줄 수 있습니다. 또한
+<command>autoscan</command>이 생성한 <filename>configure.in</filename> 파일의 빈틈을
+채워주기도 합니다.]</para>
+          <indexterm zone="ch-system-autoconf ifnames">
+            <primary sortas="b-ifnames">ifnames</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

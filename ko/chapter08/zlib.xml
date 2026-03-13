@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-zlib" role="wrap">
+  <?dbhtml filename="zlib.html"?>
+
+  <sect1info condition="script">
+<productname>zlib</productname>
+<productnumber>&zlib-version;</productnumber> <address>&zlib-url;</address></sect1info>
+
+  <title>Zlib-&zlib-version;</title>
+
+  <indexterm zone="ch-system-zlib">
+    <primary sortas="a-Zlib">Zlib</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Zlib package contains compression and decompression routines used by
+some programs.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&zlib-fin-sbu;</seg>
+        <seg>&zlib-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Zlib 설치</title>
+
+    <para>Zlib 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>불필요한 정적 라이브러리 제거:</para>
+
+<screen><userinput remap="install">rm -fv /usr/lib/libz.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-zlib" role="content">
+    <title>Zlib 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>Installed libraries</segtitle>
+
+      <seglistitem>
+        <seg>libz.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libz">
+        <term><filename class="libraryfile">libz</filename></term>
+        <listitem>
+          <para>Contains compression and decompression functions used by some programs</para>
+          <indexterm zone="ch-system-zlib libz">
+            <primary sortas="c-libz">libz</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

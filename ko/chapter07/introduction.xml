@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-introduction-chroot">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 장에서는 임시 시스템에서 마지막으로 빠진 부분들, 즉 다양한 패키지를 빌드하는 데 필요한 도구들을 빌드하는 방법을 보여줍니다. 이제
+순환 의존성(circular dependencies)이 모두 해결되었으므로, 호스트 운영 체제로부터 (실행 중인 커널을 제외하고) 완전히
+격리된 <quote>chroot</quote> 환경을 빌드에 사용할 수 있습니다.</para>
+
+  <para>격리된 환경이 적절히 작동하려면 실행 중인 커널과의 통신이 반드시 이루어져야 합니다. 이는 chroot 환경에 진입하기 전에 마운트할
+소위 <emphasis>가상 커널 파일 시스템(Virtual Kernel File Systems)</emphasis>을 통해
+수행됩니다. <command>findmnt</command> 명령을 실행하여 이들이 제대로 마운트되었는지 확인해 보는 것이 좋습니다.</para>
+
+  <para><xref linkend="ch-tools-chroot"/> 전까지 모든 명령은 <envar>LFS</envar> 변수가 설정된 상태에서
+<systemitem class="username">root</systemitem> 사용자로 실행해야 합니다. chroot에 진입한
+후에는 모든 명령이 그대로 root로 실행되지만, 다행히 LFS를 빌드하고 있는 호스트 컴퓨터의 운영체제에는 접근할 수 없습니다. 언제나
+주의하십시오. 왜냐하면 잘못된 명령으로 LFS 시스템 전체를 파괴하기 쉽기 때문.</para>
+
+</sect1>

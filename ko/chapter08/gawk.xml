@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-gawk" role="wrap">
+  <?dbhtml filename="gawk.html"?>
+
+  <sect1info condition="script">
+<productname>gawk</productname>
+<productnumber>&gawk-version;</productnumber> <address>&gawk-url;</address></sect1info>
+
+  <title>Gawk-&gawk-version;</title>
+
+  <indexterm zone="ch-system-gawk">
+    <primary sortas="a-Gawk">Gawk</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Gawk 패키지에는 텍스트 파일을 조작하기 위한 프로그램이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gawk-fin-sbu;</seg>
+        <seg>&gawk-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Gawk 설치</title>
+
+    <para>먼저, 불필요한 파일이 설치되지 않도록 하십시오:</para>
+
+<screen><userinput remap="pre">sed -i 's/extras//' Makefile.in</userinput></screen>
+
+    <para>Gawk 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">chown -R tester .
+su tester -c "PATH=$PATH make check"</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">rm -f /usr/bin/gawk-&gawk-version;
+make install</userinput></screen>
+
+    <variablelist>
+      <title>명령어의 뜻:</title>
+
+      <varlistentry>
+        <term><command>rm -f /usr/bin/gawk-&gawk-version;</command></term>
+        <listitem>
+           <para>빌드 시스템은 하드 링크인 <filename>gawk-&gawk-version;</filename> 이 이미 존재할 경우 이를 다시
+생성하지 않습니다. 이전에 <xref linkend='ch-tools-gawk'/> 단계에서 설치된 하드 링크가 여기서 확실히
+업데이트되도록 기존 링크를 지우십시오.</para>
+       </listitem>
+      </varlistentry>
+   </variablelist>
+
+    <para>설치 과정에서 이미 <command>awk</command> 가 <command>gawk</command> 를 가리키는 심볼릭 링크로
+생성되었습니다. 이와 마찬가지로 해당 매뉴얼 페이지(man page)도 심볼릭 링크로 생성:</para>
+
+<screen><userinput remap="install">ln -sv gawk.1 /usr/share/man/man1/awk.1</userinput></screen>
+
+    <para>필요하면 문서 설치:</para>
+
+<screen><userinput remap="install">install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-&gawk-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-gawk" role="content">
+    <title>Gawk 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>awk (link to gawk), gawk, 및 gawk-&gawk-version;</seg>
+        <seg>filefuncs.so, fnmatch.so, fork.so, inplace.so, intdiv.so, ordchr.so,
+readdir.so, readfile.so, revoutput.so, revtwoway.so, rwarray.so 및 time.so
+(all in /usr/lib/gawk)</seg>
+        <seg>/usr/lib/gawk, /usr/libexec/awk, /usr/share/awk, 및
+/usr/share/doc/gawk-&gawk-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="awk">
+        <term><command>awk</command></term>
+        <listitem>
+          <para><command>gawk</command> 가리키는 링크</para>
+          <indexterm zone="ch-system-gawk awk">
+            <primary sortas="b-awk">awk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gawk">
+        <term><command>gawk</command></term>
+        <listitem>
+          <para>텍스트 파일을 조작하기 위한 프로그램으로, <command>awk</command> 의 GNU 구현</para>
+          <indexterm zone="ch-system-gawk gawk">
+            <primary sortas="b-gawk">gawk</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gawk-version">
+        <term><command>gawk-&gawk-version;</command></term>
+        <listitem>
+          <para><command>gawk</command> 가리키는 하드링크</para>
+          <indexterm zone="ch-system-gawk gawk-version">
+            <primary sortas="b-gawk-&gawk-version;">gawk-&gawk-version;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

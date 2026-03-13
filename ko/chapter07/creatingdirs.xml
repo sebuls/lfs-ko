@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-creatingdirs">
+  <?dbhtml filename="creatingdirs.html"?>
+
+  <title>디텍터리 생성</title>
+
+  <para>이제 LFS 파일 시스템에 전체 디렉터리 구조를 생성할 시간입니다.</para>
+
+  <note><para>이 섹션에서 언급된 디렉터리 중 일부는 앞서 명시적인 지침에 따라 생성되었거나, 일부 패키지를 설치할 때 이미 생성되었을 수도
+있습니다. 완전성을 위해 아래에 다시 반복하여 명시합니다.</para></note>
+
+  <para>다음 명령을 실행하여 이전 장들에서 필요했던 제한된 집합에는 포함되지 않았던 몇몇 루트 수준 디렉터리들을 생성:</para>
+
+<screen><userinput>mkdir -pv /{boot,home,mnt,opt,srv}</userinput></screen>
+
+  <para>다음 명령들을 실행하여 루트 수준 아래에 필요한 하위 디렉터리 집합을 생성:</para>
+
+<screen><userinput>mkdir -pv /etc/{opt,sysconfig}
+mkdir -pv /lib/firmware
+mkdir -pv /media/{floppy,cdrom}
+mkdir -pv /usr/{,local/}{include,src}
+mkdir -pv /usr/lib/locale
+mkdir -pv /usr/local/{bin,lib,sbin}
+mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}
+mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}
+mkdir -pv /usr/{,local/}share/man/man{1..8}
+mkdir -pv /var/{cache,local,log,mail,opt,spool}
+mkdir -pv /var/lib/{color,misc,locate}
+
+ln -sfv /run /var/run
+ln -sfv /run/lock /var/lock
+
+install -dv -m 0750 /root
+install -dv -m 1777 /tmp /var/tmp</userinput></screen>
+
+  <para>디렉터리는 기본적으로 권한 모드 755로 생성되지만, 모든 곳에서 이 모드가 바람직한 것은 아닙니다. 위의 명령들에서는 두 가지 변경
+사항이 적용되는데, 하나는 <systemitem class="username">root</systemitem> 사용자 홈 디렉터리에 대한
+것이고, 다른 하나는 임시 파일들을 위한 디렉터리들에 대한 것입니다.</para>
+
+  <para>첫 번째 모드 변경은 일반 사용자가 자신의 홈 디렉터리에 그런 것처럼, 아무나 <filename
+class="directory">/root</filename> 디렉터리에 들어올 수 없도록 보장합니다. 두 번째 모드 변경은 어떤
+사용자라도 <filename class="directory">/tmp</filename> 및 <filename
+class="directory">/var/tmp</filename> 디렉터리에 쓸 수 있게 하지만, 그곳에서 다른 사용자의 파일을 삭제할
+수는 없도록 보장합니다. 후자는 1777 비트 마스크의 가장 높은 비트(1)인 이른바 <quote>스티키 비트(sticky
+bit)</quote>에 의해 금지됩니다.</para>
+
+  <sect2>
+    <title>FHS Compliance Note</title>
+
+    <para>이 디렉터리 트리는 파일 시스템 계층 표준(FHS, <ulink
+url="https://refspecs.linuxfoundation.org/fhs.shtml"/>에서 확인 가능)을 기반으로
+합니다. 또한 FHS는 <filename class="directory">/usr/local/games</filename> 및
+<filename class="directory">/usr/share/games</filename> 같은 추가적인 디렉터리들의 선택적
+존재를 명시합니다. LFS에서 우리는 정말 필요한 디렉터리들만 생성합니다. 하지만 원하신다면 자유롭게 더 많은 디렉터리를 생성하셔도
+좋습니다.  </para>
+
+  <warning>
+    <para>
+      FHS는 <filename class="directory">/usr/lib64</filename> 디렉터리의 존재를 강제하지 않으며,
+LFS 편집자는 이 디렉터리를 사용하지 않기로 결정했습니다. LFS 및 BLFS의 지침들이 올바르게 작동하려면 이 디렉터리가 존재하지
+않아야 합니다. 이 디렉터리는 부주의하게 생성되기 쉽고, 그럴 경우 아마도 시스템이 망가질 것이므로, 때때로 존재하지 않는지
+확인하십시오.
+    </para>
+  </warning>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-bash" role="wrap">
+  <?dbhtml filename="bash.html"?>
+
+  <sect1info condition="script">
+<productname>bash</productname>
+<productnumber>&bash-version;</productnumber> <address>&bash-url;</address></sect1info>
+
+  <title>Bash-&bash-version;</title>
+
+  <indexterm zone="ch-system-bash">
+    <primary sortas="a-Bash">Bash</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Bash 패키지에는 본 어게인 셸(Bourne-Again Shell)이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&bash-fin-sbu;</seg>
+        <seg>&bash-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Bash 설치</title>
+
+    <para>Bash 컴파일 준비하기:</para>
+
+    <screen><userinput remap="configure">./configure --prefix=/usr             \
+            --without-bash-malloc     \
+            --with-installed-readline \
+            --docdir=/usr/share/doc/bash-&bash-version;</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure option:</title>
+
+      <varlistentry>
+        <term><parameter>--with-installed-readline</parameter></term>
+        <listitem>
+          <para>이 옵션은 Bash가 자체 readline 버전을 사용하는 대신 시스템에 이미 설치된 <filename
+class="libraryfile">readline</filename> 라이브러리를 사용하도록 합니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>테스트 스위트를 실행하지 않는다면 <quote>Install the package</quote>로 건너뛰십시오.</para>
+
+    <para>테스트를 준비하기 위해, <systemitem class="username">tester</systemitem> 사용자가 소스
+트리(sources tree) 쓰기 권한을 가졌는지 확인:</para>
+
+<screen><userinput remap="test">chown -R tester .</userinput></screen>
+
+    <para>이 패키지의 테스트 스위트는 표준 입력(standard input)에 연결된 터미널의 소유자인 &root; 아닌 사용자로 실행하도록
+설계되었습니다. 이 요구사항을 충족하려면, <application>Expect</application>를 써서 새로운 의사
+터미널(pseudo terminal)을 생성하고 <systemitem class="username">tester</systemitem>
+사용자로 테스트를 실행:</para>
+
+<screen><userinput remap="test">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; "EOF"
+set timeout -1
+spawn make tests
+expect eof
+lassign [wait] _ _ _ value
+exit $value
+EOF</userinput></screen>
+
+    <para><!-- Some host distros set core file size hard limit < 1000, then the
+         test "ulimit -c -S 1000" attempts to set soft limit >
+ hard limit
+         and fail.  -->
+이 테스트 스위트는 테스트 스크립트 출력과 예상 출력 사이의 차이를 감지하기 위해 <command>diff</command>를
+씁니다. 차이를 무시해도 좋다는 메시지가 없는 한, <command>diff</command>에서 출력되는 모든
+내용(<computeroutput>&lt;</computeroutput> and
+<computeroutput>&gt;</computeroutput> 로 시작)은 테스트 실패를
+뜻합니다. <filename>run-builtins</filename> 라는 이름의 테스트는 일부 호스트 배포판에서 출력물의 479번 및
+480번 줄에 차이가 발생하여 실패하는 것으로 알려져 있습니다. 다른 일부 테스트는 <literal>zh_TW.BIG5</literal>
+및 <literal>ja_JP.SJIS</literal> 로캘이 필요하며, 해당 로캘이 설치되어 있지 않으면 실패하는 것으로 알려져
+있습니다.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>새로 컴파일된 <command>bash</command> 프로그램을 실행 (현재 실행 중인 프로그램을 이 프로그램으로 교체):</para>
+
+ <screen role="nodump"><userinput>exec /usr/bin/bash --login</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-bash" role="content">
+    <title>Bash 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>bash, bashbug, and sh (link to bash)</seg>
+        <seg>/usr/include/bash, /usr/lib/bash, 및 /usr/share/doc/bash-&bash-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="bash">
+        <term><command>bash</command></term>
+        <listitem>
+          <para>널리 사용되는 명령 해석기. 명령을 실행하기 전에 주어진 명령행에 대해 다양한 유형의 확장(expansion)과
+치환(substitution)을 수행하며, 그래서 이 해석기는 강력한 도구</para>
+          <indexterm zone="ch-system-bash bash">
+            <primary sortas="b-bash">bash</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="bashbug">
+        <term><command>bashbug</command></term>
+        <listitem>
+          <para>사용자가 <command>bash</command>와 관련된 표준 형식의 버그 보고서를 작성하고 발송하는 것을 돕는 셸 스크립트</para>
+          <indexterm zone="ch-system-bash bashbug">
+            <primary sortas="b-bashbug">bashbug</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="sh">
+        <term><command>sh</command></term>
+        <listitem>
+          <para><command>bash</command> 프로그램으로 연결된 심볼릭 링크. <command>bash</command>를
+<command>sh</command>로 실행하면, POSIX 표준을 준수하면서도 초기 버전 <command>sh</command>의
+시작 동작을 가능한 한 비슷하게 흉내 내려고 시도</para>
+          <indexterm zone="ch-system-bash sh">
+            <primary sortas="b-sh">sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

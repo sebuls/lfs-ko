@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-bootable-kernel" role="wrap">
+  <?dbhtml filename="kernel.html"?>
+
+  <sect1info condition="script">
+<productname>kernel</productname>
+<productnumber>&linux-version;</productnumber> <address>&linux-url;</address></sect1info>
+
+  <title>Linux-&linux-version;</title>
+
+  <indexterm zone="ch-bootable-kernel">
+    <primary sortas="a-Linux">Linux</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Linux package contains the Linux kernel.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&linux-knl-sbu;</seg>
+        <seg>&linux-knl-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>커널 설치</title>
+
+    <para>Building the kernel involves a few steps&mdash;configuration, compilation,
+and installation. Read the <filename>README</filename> file in the kernel
+source tree for alternative methods to the way this book configures the
+kernel.</para>
+
+    <important>
+      <para>
+        Building the linux kernel for the first time is one of the most challenging
+tasks in LFS.  Getting it right depends on the specific hardware for the
+target system and your specific needs. There are almost 12,000 configuration
+items that are available for the kernel although only about a third of them
+are needed for most computers. The LFS editors recommend that users not
+familiar with this process follow the procedures below fairly closely.  The
+objective is to get an initial system to a point where you can log in at the
+command line when you reboot later in <xref linkend="ch-finish-reboot"
+role='.'/> At this point optimization and customization is not a goal.
+      </para>
+
+      
+      <para>
+        For general information on kernel configuration see <ulink
+url="&hints-root;kernel-configuration.txt"/>.  Additional information about
+configuring and building the kernel can be found at <ulink
+url="&anduin-sources;/kernel-nutshell/"/>.  These references are a bit
+dated, but still give a reasonable overview of the process.
+      </para>
+
+      <para>
+        If all else fails, you can ask for help on the <ulink
+url="https://www.linuxfromscratch.org/mail.html">lfs-support</ulink> mailing
+list.  Note that subscribing is required in order for the list to avoid
+spam.
+      </para>
+    </important>
+
+    <para>Prepare for compilation by running the following command:</para>
+
+<screen><userinput remap="pre">make mrproper</userinput></screen>
+
+    <para>This ensures that the kernel tree is absolutely clean. The kernel team
+recommends that this command be issued prior to each kernel compilation. Do
+not rely on the source tree being clean after un-tarring.</para>
+
+    <para>There are several ways to configure the kernel options. Usually, this is
+done through a menu-driven interface, for example:</para>
+
+<!-- Support for compiling a keymap into the kernel is deliberately removed -->
+<screen role="nodump"><userinput>make menuconfig</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of optional make environment variables:</title>
+
+      <varlistentry>
+        <term><parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter></term>
+        <listitem>
+          <para>This establishes the locale setting to the one used on the host.  This may
+be needed for a proper menuconfig ncurses interface line drawing on a UTF-8
+linux text console.</para>
+
+          <para>If used, be sure to replace
+<replaceable>&lt;host_LANG_value&gt;</replaceable> by the value of the
+<envar>$LANG</envar> variable from your host.  You can alternatively use
+instead the host's value of <envar>$LC_ALL</envar> or
+<envar>$LC_CTYPE</envar>.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><command>make menuconfig</command></term>
+        <listitem>
+          <para>This launches an ncurses menu-driven interface. For other (graphical)
+interfaces, type <command>make help</command>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    
+
+
+    <note>
+      <?dbfo keep-together="auto"?>
+      <para>A good starting place for setting up the kernel configuration is to run
+<command>make defconfig</command>. This will set the base configuration to a
+good state that takes your current system architecture into account.</para>
+
+      <para>Be sure to enable/disable/set the following features or the system might not
+work correctly or boot at all:</para>
+
+      
+
+      <!-- To editors: for updating kernel configuration, edit
+           kernel/*.toml and regenerate kernel/*.xml with
+           "make -C kernel KERNEL_TREE=</usr/src/linux-&linux-version> -->
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="kernel/sysv.xml"/>
+
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="kernel/systemd.xml"/>
+   
+      <para>Enable some additional features if you are building a 64-bit system.  If you
+are using menuconfig, enable them in the order of
+<parameter>CONFIG_PCI_MSI</parameter> first, then
+<parameter>CONFIG_IRQ_REMAP</parameter>, at last
+<parameter>CONFIG_X86_X2APIC</parameter> because an option only shows up
+after its dependencies are selected.</para>
+
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="kernel/x2apic.xml"/>
+
+      <para>If you are building a 32-bit system, adjust the configuration so the kernel
+will be able to use up to 4GB physical RAM:</para>
+
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="kernel/highmem.xml"/>
+
+      <para>If the partition for the LFS system is in a NVME SSD (i. e. the device node
+for the partition is <filename>/dev/nvme*</filename> instead of
+<filename>/dev/sd*</filename>), enable NVME support or the LFS system won't
+boot:</para>
+
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        href="kernel/nvme.xml"/>
+    </note>
+
+    <note revision="systemd">
+      <para>While "The IPv6 Protocol" is not strictly required, it is highly recommended
+by the systemd developers.</para>
+    </note>
+
+    <para>There are several other options that may be desired depending on the
+requirements for the system. For a list of options needed for BLFS packages,
+see the <ulink
+url="&lfs-root;blfs/view/&short-version;/longindex.html#kernel-config-index">BLFS
+Index of Kernel Settings</ulink>.</para>
+
+    <note>
+      <para>If your host hardware is using UEFI and you wish to boot the LFS system with
+it, you should adjust some kernel configuration following <ulink
+url="&blfs-book;postlfs/grub-setup.html#uefi-kernel"> the BLFS page</ulink>
+<emphasis role='bold'>even if you'll use the UEFI bootloader from the host
+distro</emphasis>.</para>
+    </note>
+
+    <variablelist>
+      <title>The rationale for the above configuration items:</title>
+
+      <varlistentry>
+        <term><parameter>Randomize the address of the kernel image (KASLR)</parameter></term>
+        <listitem>
+          <para>Enable ASLR for kernel image, to mitigate some attacks based on fixed
+addresses of sensitive data or code in the kernel.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Compile the kernel with warnings as errors </parameter>
+        </term>
+        <listitem>
+          <para>This may cause building failure if the compiler and/or configuration are
+different from those of the kernel developers.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Enable kernel headers through /sys/kernel/kheaders.tar.xz
+</parameter>
+        </term>
+        <listitem>
+          <para>This will require <command>cpio</command> building the kernel.
+<command>cpio</command> is not installed by LFS.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Configure standard kernel features (expert users)  </parameter>
+        </term>
+        <listitem>
+          <para>This will make some options show up in the configuration interface but
+changing those options may be dangerous.  Do not use this unless you know
+what you are doing.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>Strong Stack Protector</parameter></term>
+        <listitem>
+          <para>Enable SSP for the kernel.  We've enabled it for the entire userspace with
+<parameter>--enable-default-ssp</parameter> configuring GCC, but the kernel
+does not use GCC default setting for SSP.  We enable it explicitly here.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>Support for uevent helper</parameter></term>
+        <listitem>
+          <para>Having this option set may interfere with device management when using Udev.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>Maintain a devtmpfs</parameter></term>
+        <listitem>
+          <para>This will create automated device nodes which are populated by the kernel,
+even without Udev running.  Udev then runs on top of this, managing
+permissions and adding symlinks.  This configuration item is required for
+all users of Udev.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>Automount devtmpfs at /dev</parameter></term>
+        <listitem>
+          <para>This will mount the kernel view of the devices on /dev upon switching to
+root filesystem just before starting init.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Display a user-friendly message when a kernel panic occurs
+</parameter>
+        </term>
+        <listitem>
+          <para>This will make the kernel correctly display the message in case a kernel
+panic happens and a running DRM driver supports to do so.  Without this, it
+would be more difficult to diagnose a panic: if no DRM driver is running,
+we'd be on the VGA console which can only hold 24 lines and the relevant
+kernel message is often flushed away; if a DRM driver is running, the
+display is often completely messed up on panic.  As of Linux-6.12, none of
+the dedicated drivers for mainstream GPU models really supports this, but
+it's supported by the <quote>Simple framebuffer driver</quote> which runs on
+the VESA (or EFI) framebuffer before the dedicated GPU driver is loaded.  If
+the dedicated GPU driver is built as a module (instead of a part of the
+kernel image) and no initramfs is used, this functionality will work just
+fine before the root file system is mounted and it's already enough for
+providing information about most LFS configuration errors causing a panic
+(for example, an incorrect <parameter>root=</parameter> setting in <xref
+linkend='ch-bootable-grub'/>).</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Panic screen formatter </parameter>
+        </term>
+        <listitem>
+          <para>Set this <literal>kmsg</literal> to make sure the last kernel messages lines
+are displayed when a kernel panic happens.  The default,
+<literal>user</literal>, would make the kernel show only a <quote>user
+friendly</quote> panic message which is not helpful on diagnostic.  The
+third choice, <literal>qr_code</literal>, would make the kernel to compress
+the last kernel message lines into a QR code and display it.  The QR code
+can hold more message lines than plain text and it can be decoded with an
+external device (like a smart phone).  But it requires a Rust compiler that
+LFS does not provide.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Mark VGA/VBE/EFI FB as generic system framebuffer </parameter>
+and <parameter>Simple framebuffer driver</parameter>
+        </term>
+        <listitem>
+          <para>These allow to use the VESA framebuffer (or the EFI framebuffer if booting
+the LFS system via UEFI) as a DRM device.  The VESA framebuffer will be set
+up by GRUB (or the EFI framebuffer will be set up by the UEFI firmware), so
+the DRM panic handler can function before the GPU-specific DRM driver is
+loaded.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+          <parameter> Enable legacy fbdev support for your modesetting driver
+</parameter> and <parameter>Framebuffer Console support</parameter>
+        </term>
+        <listitem>
+          <para>These are needed to display the Linux console on a GPU driven by a DRI
+(Direct Rendering Infrastructure) driver.  As <option>CONFIG_DRM</option>
+(Direct Rendering Manager) is enabled, we should enable these two options as
+well or we'll see a blank screen once the DRI driver is loaded.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>Support x2apic</parameter></term>
+        <listitem>
+          <para>Support running the interrupt controller of 64-bit x86 processors in x2APIC
+mode.  x2APIC may be enabled by firmware on 64-bit x86 systems, and a kernel
+without this option enabled will panic on boot if x2APIC is enabled by
+firmware.  This option has no effect, but also does no harm if x2APIC is
+disabled by the firmware.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Alternatively, <command>make oldconfig</command> may be more appropriate in
+some situations. See the <filename>README</filename> file for more
+information.</para>
+
+    <para>If desired, skip kernel configuration by copying the kernel config file,
+<filename>.config</filename>, from the host system (assuming it is
+available) to the unpacked <filename
+class="directory">linux-&linux-version;</filename> directory. However, we do
+not recommend this option. It is often better to explore all the
+configuration menus and create the kernel configuration from scratch.</para>
+
+    <para>Compile the kernel image and modules:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>If using kernel modules, module configuration in <filename
+class="directory">/etc/modprobe.d</filename> may be required.  Information
+pertaining to modules and kernel configuration is located in <xref
+linkend="ch-config-udev"/> and in the kernel documentation in the <filename
+class="directory">linux-&linux-version;/Documentation</filename> directory.
+Also, <ulink role='man' url='&man;modprobe.d.5'>modprobe.d(5)</ulink> may be
+of interest.</para>
+
+    <para>Unless module support has been disabled in the kernel configuration, install
+the modules with:</para>
+
+<screen><userinput remap="install">make modules_install</userinput></screen>
+
+    <para>After kernel compilation is complete, additional steps are required to
+complete the installation. Some files need to be copied to the <filename
+class="directory">/boot</filename> directory.</para>
+
+    <caution>
+      <para>If you've decided to use a separate &boot-dir; partition for the LFS system
+(maybe sharing a &boot-dir; partition with the host distro), the files
+copied below should go there. The easiest way to do that is to create the
+entry for &boot-dir; in &fstab; first (read the previous section for
+details), then issue the following command as the &root; user in the
+<emphasis>chroot environment</emphasis>:</para>
+
+<screen role="nodump"><userinput>mount /boot</userinput></screen>
+
+      <para>The path to the device node is omitted in the command because
+<command>mount</command> can read it from &fstab;.</para>
+    </caution>
+
+    <para>The path to the kernel image may vary depending on the platform being
+used. The filename below can be changed to suit your taste, but the stem of
+the filename should be <emphasis>vmlinuz</emphasis> to be compatible with
+the automatic setup of the boot process described in the next section.  The
+following command assumes an x86 architecture:</para>
+
+<screen><userinput remap="install">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput></screen>
+
+    <para><filename>System.map</filename> is a symbol file for the kernel.  It maps
+the function entry points of every function in the kernel API, as well as
+the addresses of the kernel data structures for the running kernel.  It is
+used as a resource when investigating kernel problems.  Issue the following
+command to install the map file:</para>
+
+<screen><userinput remap="install">cp -iv System.map /boot/System.map-&linux-version;</userinput></screen>
+
+    <para>The kernel configuration file <filename>.config</filename> produced by the
+<command>make menuconfig</command> step above contains all the configuration
+selections for the kernel that was just compiled. It is a good idea to keep
+this file for future reference:</para>
+
+<screen><userinput remap="install">cp -iv .config /boot/config-&linux-version;</userinput></screen>
+
+    <para>Install the documentation for the Linux kernel:</para>
+
+<screen><userinput remap="install">cp -r Documentation -T /usr/share/doc/linux-&linux-version;</userinput></screen>
+
+    <para>It is important to note that the files in the kernel source directory are
+not owned by <emphasis>root</emphasis>. Whenever a package is unpacked as
+user <emphasis>root</emphasis> (like we did inside chroot), the files have
+the user and group IDs of whatever they were on the packager's
+computer. This is usually not a problem for any other package to be
+installed because the source tree is removed after the
+installation. However, the Linux source tree is often retained for a long
+time.  Because of this, there is a chance that whatever user ID the packager
+used will be assigned to somebody on the machine. That person would then
+have write access to the kernel source.</para>
+
+    <note>
+      <para>In many cases, the configuration of the kernel will need to be updated for
+packages that will be installed later in BLFS.  Unlike other packages, it is
+not necessary to remove the kernel source tree after the newly built kernel
+is installed.</para>
+
+      <para>If the kernel source tree is going to be retained, run <command>chown -R
+0:0</command> on the <filename
+class="directory">linux-&linux-version;</filename> directory to ensure all
+files are owned by user <emphasis>root</emphasis>.</para>
+
+      <para>If you are updating the configuration and rebuilding the kernel from a
+retained kernel source tree, normally you should <emphasis
+role='bold'>not</emphasis> run the <command>make mrproper</command>
+command.  The command would purge the <filename>.config</filename> file and
+all the <filename class='extension'>.o</filename> files from the previous
+build.  Despite it's easy to restore <filename>.config</filename> from the
+copy in <filename class='directory'>/boot</filename>, purging all the
+<filename class='extension'>.o</filename> files is still a waste: for a
+simple configuration change, often only a few <filename
+class='extension'>.o</filename> files need to be (re)built and the kernel
+build system will correctly skip other <filename
+class='extension'>.o</filename> files if they are not purged.</para>
+
+      <para>On the other hand, if you've upgraded GCC, you should run <command>make
+clean</command> to purge all the <filename class='extension'>.o</filename>
+files from the previous build, or the new build may fail.</para>
+    </note>
+
+    <warning>
+      <para>Some kernel documentation recommends creating a symlink from <filename
+class="symlink">/usr/src/linux</filename> pointing to the kernel source
+directory.  This is specific to kernels prior to the 2.6 series and
+<emphasis>must not</emphasis> be created on an LFS system as it can cause
+problems for packages you may wish to build once your base LFS system is
+complete.</para>
+    </warning>
+
+  </sect2>
+
+  <sect2 id="conf-modprobe" role="configuration">
+    <title>Configuring Linux Module Load Order</title>
+
+    <indexterm zone="conf-modprobe">
+      <primary sortas="e-/etc/modprobe.d/usb.conf">/etc/modprobe.d/usb.conf</primary>
+    </indexterm>
+
+    <para>Most of the time Linux modules are loaded automatically, but sometimes it
+needs some specific direction.  The program that loads modules,
+<command>modprobe</command> or <command>insmod</command>, uses
+<filename>/etc/modprobe.d/usb.conf</filename> for this purpose.  This file
+needs to be created so that if the USB drivers (ehci_hcd, ohci_hcd and
+uhci_hcd) have been built as modules, they will be loaded in the correct
+order; ehci_hcd needs to be loaded prior to ohci_hcd and uhci_hcd in order
+to avoid a warning being output at boot time.</para>
+
+    <para>Create a new file <filename>/etc/modprobe.d/usb.conf</filename> by running
+the following:</para>
+
+<screen><userinput>install -v -m755 -d /etc/modprobe.d
+cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; "EOF"
+<literal># Begin /etc/modprobe.d/usb.conf
+
+install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+
+# End /etc/modprobe.d/usb.conf</literal>
+EOF</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-kernel" role="content">
+    <title>Contents of Linux</title>
+
+    <segmentedlist>
+      <segtitle>Installed files</segtitle>
+      <segtitle>Installed directories</segtitle>
+
+      <seglistitem>
+        <seg>config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, and
+System.map-&linux-version;</seg>
+        <seg>/lib/modules, /usr/share/doc/linux-&linux-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="config">
+        <term><filename>config-&linux-version;</filename></term>
+        <listitem>
+          <para>Contains all the configuration selections for the kernel</para>
+          <indexterm zone="ch-bootable-kernel config">
+            <primary sortas="e-/boot/config">/boot/config-&linux-version;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lfskernel">
+        <term><filename>vmlinuz-&linux-version;-lfs-&version;</filename></term>
+        <listitem>
+          <para>The engine of the Linux system. When turning on the computer, the kernel is
+the first part of the operating system that gets loaded.  It detects and
+initializes all components of the computer's hardware, then makes these
+components available as a tree of files to the software and turns a single
+CPU into a multitasking machine capable of running scores of programs
+seemingly at the same time</para>
+          <indexterm zone="ch-bootable-kernel lfskernel">
+            <primary sortas="b-lfskernel">lfskernel-&linux-version;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="System.map">
+        <term><filename>System.map-&linux-version;</filename></term>
+        <listitem>
+          <para>A list of addresses and symbols; it maps the entry points and addresses of
+all the functions and data structures in the kernel</para>
+          <indexterm zone="ch-bootable-kernel System.map">
+            <primary sortas="e-/boot/System.map">/boot/System.map-&linux-version;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

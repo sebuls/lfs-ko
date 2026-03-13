@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-typography">
+  <?dbhtml filename="typography.html"?>
+
+  <title>타이포그래피</title>
+
+  <para>내용을 더 쉽게 따라올 수 있도록, 이 책 전반에 걸쳐 몇 가지 타이포그래피 규칙이 사용되었습니다. 이 섹션에는 Linux From
+Scratch 전반에서 볼 수 있는 타이포그래피 형식의 몇 가지 예시가 들어 있습니다.</para>
+
+<screen role="nodump"><userinput>./configure --prefix=/usr</userinput></screen>
+
+  <para>이런 형식 텍스트는 주변 텍스트에 보이는 그대로 (별도 언급 없으면) 정확히 입력하도록 설계되었습니다. 또한 설명 섹션에서 어떤 명령이
+참조되고 있는지 식별하는 데에도 쓰입니다.</para>
+
+  <para>어떤 경우에는 논리적인 줄 하나가 줄 끝에 있는 역슬래시로 인해 둘 이상의 물리적인 줄로 확장되기도 합니다.</para>
+
+<screen role="nodump"><userinput>CC="gcc -B/usr/bin/" ../binutils-2.18/configure \
+  --prefix=/tools --disable-nls --disable-werror</userinput></screen>
+
+  <para>역슬래시 바로 뒤에는 반드시 줄바꿈이 와야 한다는 점에 유의하십시오. 공백이나 탭 문자와 같은 다른 공백 문자가 섞이면 잘못된 결과가
+생길 수 있습니다.</para>
+
+<screen><computeroutput>install-info: unknown option '--dir-file=/mnt/lfs/usr/info/dir'</computeroutput></screen>
+
+  <para>이런 형식 텍스트(고정폭 텍스트)는 대개 실행된 명령의 결과 화면 출력입니다. 만약 HTML 형식(PDF 대신)으로 책을 읽고 있다면,
+이 텍스트는 파란색일 겁니다.</para>
+
+  <para>고정폭 텍스트는 파일 이름을 나타내는 데에도 쓰입니다. 예시: <filename>/etc/ld.so.conf</filename>.</para>
+
+  <note>
+    <para>브라우저에서 고정폭 텍스트를 적절한 등폭(monospaced) 폰트로 표시하도록 설정하십시오. 해당 폰트는
+<literal>Il1</literal> 또는 <literal>O0</literal>와 같은 글리프를 명확하게 구별할 수 있어야 합니다.</para>
+  </note>
+
+  <para><emphasis>강조</emphasis></para>
+
+  <para>이러한 형식의 텍스트는 이 책에서 여러 목적으로 사용됩니다. 그것의 주요 목적은 중요한 점이나 항목을 강조하는 것입니다.</para>
+
+  <para><ulink url="&lfs-root;"/></para>
+
+  <para>이 형식은 LFS 커뮤니티 내부나 외부 페이지로 연결되는 하이퍼링크에 쓰입니다. 그것은 HOWTO, 다운로드 위치, 웹사이트 등을
+포함합니다.</para>
+
+<screen role="nodump"><userinput>cat &gt; $LFS/etc/group &lt;&lt; "EOF"
+<literal>root:x:0:
+bin:x:1:
+......</literal>
+EOF</userinput></screen>
+
+  <para>이 형식은 설정 파일을 생성할 때 쓰입니다. 첫 명령은 시스템에 다음 줄부터 파일 끝(EOF) 문구가 나타날 때까지 입력하는 모든 내용을
+<filename>$LFS/etc/group</filename> 파일로 만들라고 지시하는 것입니다. 따라서 이 섹션 전체는 대개 보이는
+그대로 입력합니다.</para>
+
+  <para><replaceable>&lt;REPLACED TEXT&gt;</replaceable></para>
+
+  <para>이 형식은 보이는 그대로 입력해서는 안 되거나 복사해서 붙여넣기에는 적절하지 않은 텍스트를 감싸는 데 쓰입니다.</para>
+
+  <para><replaceable>[OPTIONAL TEXT]</replaceable></para>
+
+  <para>이 형식은 선택 사항 텍스트를 감싸는 데 쓰입니다.</para>
+
+  <para><ulink role='man' url='&man;passwd.5'>passwd(5)</ulink></para>
+
+  <para>이 형식은 특정 매뉴얼(man) 페이지를 참조할 때 쓰입니다. 괄호 안의 숫자는 매뉴얼 내부의 특정 섹션을 나타냅니다. 예를 들어,
+<command>passwd</command>는 두 개의 매뉴얼 페이지를 가지고 있습니다. LFS 설치 지침에 따르면, 이 두 매뉴얼
+페이지는 <filename>/usr/share/man/man1/passwd.1</filename> 및
+<filename>/usr/share/man/man5/passwd.5</filename>에 위치합니다. 이 책에서 <ulink
+role='man' url='&man;/passwd.5'>passwd(5)</ulink> 사용할 때는 구체적으로
+<filename>/usr/share/man/man5/passwd.5</filename>를 참조하는 것입니다. <command>man
+passwd</command>는 <quote>passwd</quote>와 일치하는 것 중 처음 발견되는 매뉴얼 페이지를 출력하며, 이는
+<filename>/usr/share/man/man1/passwd.1</filename>이 될 것입니다. 이 예시의 경우, 지정된
+페이지를 읽으려면 <command>man 5 passwd</command>를 실행해야 합니다. 대부분의 매뉴얼 페이지는 서로 다른 섹션에
+중복된 페이지 이름을 가지고 있지 않다는 점에 유의하십시오. 따라서, <command>man <replaceable>&lt;program
+name&gt;</replaceable></command> 이면 대개 충분합니다. LFS 책에서 이러한 매뉴얼 페이지 참조는 하이퍼링크로
+되어 있으며, 해당 참조를 클릭하면 <ulink url='https://man.archlinux.org/'>Arch Linux 매뉴얼
+페이지</ulink>에서 HTML로 렌더링된 매뉴얼 페이지가 열립니다.</para>
+
+</sect1>
+

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-gettext" role="wrap">
+  <?dbhtml filename="gettext.html"?>
+
+  <sect1info condition="script">
+<productname>gettext</productname>
+<productnumber>&gettext-version;</productnumber> <address>&gettext-url;</address></sect1info>
+
+  <title>Gettext-&gettext-version;</title>
+
+  <indexterm zone="ch-system-gettext">
+    <primary sortas="a-Gettext">Gettext</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Gettext 패키지에는 국제화(internationalization) 및 지역화(localization)용 유틸리티가 들어
+있습니다. 이를 통해 프로그램이 NLS(Native Language Support, 원어 지원)와 함께 컴파일 될 수 있으며, 사용자의
+모국어로 메시지를 출력할 수 있게 됩니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gettext-fin-sbu;</seg>
+        <seg>&gettext-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Gettext 설치</title>
+
+    <para>First, make a fix required by glibc-2.43 and later:</para>
+
+<screen><userinput remap="pre">sed -r '/_GL_EXTERN_C/s/w?memchr|bsearch/(&amp;)/' \
+    -i $(find -name \*.in.h)</userinput></screen>
+
+    <para>Gettext 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/gettext-&gettext-version;</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+
+<!--
+   <variablelist>
+
+      <title>The meaning of the make parameter:</title>
+
+      <varlistentry>
+        <term><parameter>BISON_LOCALEDIR=/usr/share/locale</parameter></term>
+        <listitem>
+          <para>Since bison is not yet installed in /usr, configure hardcodes
+          the directory containing translations for the bison program (the
+          "locale" directory) as /tools/share/locale. Passing this variable
+           to make allows overriding the choice made by configure.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+-->
+<screen><!--<screen>
+<userinput remap="make">make BISON_LOCALEDIR=/usr/share/locale</userinput></screen>-->
+<userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install
+chmod -v 0755 /usr/lib/preloadable_libintl.so</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-gettext" role="content">
+    <title>Gettext 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>autopoint, envsubst, gettext, gettext.sh, gettextize, msgattrib, msgcat,
+msgcmp, msgcomm, msgconv, msgen, msgexec, msgfilter, msgfmt, msggrep,
+msginit, msgmerge, msgunfmt, msguniq, ngettext, recode-sr-latin 및 xgettext</seg>
+        <seg>libasprintf.so, libgettextlib.so, libgettextpo.so, libgettextsrc.so,
+libtextstyle.so 및 preloadable_libintl.so</seg>
+        <seg>/usr/lib/gettext, /usr/share/doc/gettext-&gettext-version;,
+/usr/share/gettext, 및 /usr/share/gettext-&gettext-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="autopoint">
+        <term><command>autopoint</command></term>
+        <listitem>
+          <para>표준 Gettext 기반 파일을 소스 패키지로 복사</para>
+          <indexterm zone="ch-system-gettext autopoint">
+            <primary sortas="b-autopoint">autopoint</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="envsubst">
+        <term><command>envsubst</command></term>
+        <listitem>
+          <para>셸 형식 문자열에 있는 환경 변수를 치환</para>
+          <indexterm zone="ch-system-gettext envsubst">
+            <primary sortas="b-envsubst">envsubst</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gettext">
+        <term><command>gettext</command></term>
+        <listitem>
+          <para>메시지 카탈로그에서 번역을 찾아 자연어 메시지를 사용자의 언어로 번역</para>
+          <indexterm zone="ch-system-gettext gettext">
+            <primary sortas="b-gettext">gettext</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gettext.sh">
+        <term><command>gettext.sh</command></term>
+        <listitem>
+          <para>주로 Gettext를 위한 셸 함수 라이브러리 역할을 수행</para>
+          <indexterm zone="ch-system-gettext gettext.sh">
+            <primary sortas="b-gettext.sh">gettext.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gettextize">
+        <term><command>gettextize</command></term>
+        <listitem>
+          <para>패키지의 국제화를 시작하기 위해, 모든 표준 Gettext 파일들을 지정된 패키지 최상위 디렉터리로 복사</para>
+          <indexterm zone="ch-system-gettext gettextize">
+            <primary sortas="b-gettextize">gettextize</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgattrib">
+        <term><command>msgattrib</command></term>
+        <listitem>
+          <para>Filters the messages of a translation catalog according to their attributes
+and manipulates the attributes</para>
+          <indexterm zone="ch-system-gettext msgattrib">
+            <primary sortas="b-msgattrib">msgattrib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgcat">
+        <term><command>msgcat</command></term>
+        <listitem>
+          <para>Concatenates and merges the given <filename class="extension">.po</filename>
+files</para>
+          <indexterm zone="ch-system-gettext msgcat">
+            <primary sortas="b-msgcat">msgcat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgcmp">
+        <term><command>msgcmp</command></term>
+        <listitem>
+          <para>Compares two <filename class="extension">.po</filename> files to check that
+both contain the same set of msgid strings</para>
+          <indexterm zone="ch-system-gettext msgcmp">
+            <primary sortas="b-msgcmp">msgcmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgcomm">
+        <term><command>msgcomm</command></term>
+        <listitem>
+          <para>Finds the messages that are common to the given <filename
+class="extension">.po</filename> files</para>
+          <indexterm zone="ch-system-gettext msgcomm">
+            <primary sortas="b-msgcomm">msgcomm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgconv">
+        <term><command>msgconv</command></term>
+        <listitem>
+          <para>Converts a translation catalog to a different character encoding</para>
+          <indexterm zone="ch-system-gettext msgconv">
+            <primary sortas="b-msgconv">msgconv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgen">
+        <term><command>msgen</command></term>
+        <listitem>
+          <para>Creates an English translation catalog</para>
+          <indexterm zone="ch-system-gettext msgen">
+            <primary sortas="b-msgen">msgen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgexec">
+        <term><command>msgexec</command></term>
+        <listitem>
+          <para>Applies a command to all translations of a translation catalog</para>
+          <indexterm zone="ch-system-gettext msgexec">
+            <primary sortas="b-msgexec">msgexec</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgfilter">
+        <term><command>msgfilter</command></term>
+        <listitem>
+          <para>Applies a filter to all translations of a translation catalog</para>
+          <indexterm zone="ch-system-gettext msgfilter">
+            <primary sortas="b-msgfilter">msgfilter</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgfmt">
+        <term><command>msgfmt</command></term>
+        <listitem>
+          <para>Generates a binary message catalog from a translation catalog</para>
+          <indexterm zone="ch-system-gettext msgfmt">
+            <primary sortas="b-msgfmt">msgfmt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msggrep">
+        <term><command>msggrep</command></term>
+        <listitem>
+          <para>Extracts all messages of a translation catalog that match a given pattern or
+belong to some given source files</para>
+          <indexterm zone="ch-system-gettext msggrep">
+            <primary sortas="b-msggrep">msggrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msginit">
+        <term><command>msginit</command></term>
+        <listitem>
+          <para>Creates a new <filename class="extension">.po</filename> file, initializing
+the meta information with values from the user's environment</para>
+          <indexterm zone="ch-system-gettext msginit">
+            <primary sortas="b-msginit">msginit</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgmerge">
+        <term><command>msgmerge</command></term>
+        <listitem>
+          <para>Combines two raw translations into a single file</para>
+          <indexterm zone="ch-system-gettext msgmerge">
+            <primary sortas="b-msgmerge">msgmerge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msgunfmt">
+        <term><command>msgunfmt</command></term>
+        <listitem>
+          <para>Decompiles a binary message catalog into raw translation text</para>
+          <indexterm zone="ch-system-gettext msgunfmt">
+            <primary sortas="b-msgunfmt">msgunfmt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="msguniq">
+        <term><command>msguniq</command></term>
+        <listitem>
+          <para>Unifies duplicate translations in a translation catalog</para>
+          <indexterm zone="ch-system-gettext msguniq">
+            <primary sortas="b-msguniq">msguniq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ngettext">
+        <term><command>ngettext</command></term>
+        <listitem>
+          <para>Displays native language translations of a textual message whose grammatical
+form depends on a number</para>
+          <indexterm zone="ch-system-gettext ngettext">
+            <primary sortas="b-ngettext">ngettext</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="recode-sr-latin">
+        <term><command>recode-sr-latin</command></term>
+        <listitem>
+          <para>Recodes Serbian text from Cyrillic to Latin script</para>
+          <indexterm zone="ch-system-gettext recode-sr-latin">
+            <primary sortas="b-recode-sr-latin">recode-sr-latin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xgettext">
+        <term><command>xgettext</command></term>
+        <listitem>
+          <para>첫 번째 번역 템플릿을 만들기 위해, 지정된 소스 파일에서 번역 가능한 메시지 행들을 추출</para>
+          <indexterm zone="ch-system-gettext xgettext">
+            <primary sortas="b-xgettext">xgettext</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libasprintf">
+        <term><filename class="libraryfile">libasprintf</filename></term>
+        <listitem>
+          <para><emphasis>autosprintf</emphasis> 클래스를 정의합니다. 이 클래스는
+<emphasis>&lt;string&gt;</emphasis> 문자열 및
+<emphasis>&lt;iostream&gt;</emphasis> 스트림과 함께 사용할 수 있도록 C 형식 출력 루틴을 C++
+프로그램에서 사용할 수 있게 해줍니다</para>
+          <indexterm zone="ch-system-gettext libasprintf">
+            <primary sortas="c-libasprintf">libasprintf</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libgettextlib">
+        <term><filename class="libraryfile">libgettextlib</filename></term>
+        <listitem>
+          <para>Contains common routines used by the various Gettext programs; these are not
+intended for general use</para>
+          <indexterm zone="ch-system-gettext libgettextlib">
+            <primary sortas="c-libgettextlib">libgettextlib</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libgettextpo">
+        <term><filename class="libraryfile">libgettextpo</filename></term>
+        <listitem>
+          <para><filename class="extension">.po</filename> 파일을 처리하는 특수 프로그램을 작성할 때 사용. 이
+라이브러리는 Gettext와 함께 제공되는 표준 애플리케이션(<command>msgcomm</command>,
+<command>msgcmp</command>, <command>msgattrib</command>,
+<command>msgen</command> 등)만으로는 충분하지 않을 때 사용</para>
+          <indexterm zone="ch-system-gettext libgettextpo">
+            <primary sortas="c-libgettextpo">libgettextpo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libgettextsrc">
+        <term><filename class="libraryfile">libgettextsrc</filename></term>
+        <listitem>
+          <para>Provides common routines used by the various Gettext programs; these are not
+intended for general use</para>
+          <indexterm zone="ch-system-gettext libgettextsrc">
+            <primary sortas="c-libgettextsrc">libgettextsrc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libtextstyle">
+        <term><filename class="libraryfile">libtextstyle</filename></term>
+        <listitem>
+          <para>Text styling library</para>
+          <indexterm zone="ch-system-gettext libtextstyle">
+            <primary sortas="c-libtextstyle">libtextstyle</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="preloadable_libintl">
+        <term><filename class="libraryfile">preloadable_libintl</filename></term>
+        <listitem>
+          <para>LD_PRELOAD를 통해 사용하도록 설계된 라이브러리로, <filename
+class="libraryfile">libintl</filename> 이 번역되지 않은 메시지들을 기록(log)할 수 있게 도움</para>
+          <indexterm zone="ch-system-gettext preloadable_libintl">
+            <primary sortas="c-preloadable_libintl">preloadable_libintl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </sect2>
+
+</sect1>

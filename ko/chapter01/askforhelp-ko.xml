@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-intro-askforhelp">
+  <?dbhtml filename="askforhelp.html"?>
+
+  <title>도움말</title>
+
+  <note>
+    <para>
+      In case you've hit an issue building one package with the LFS instruction,
+we strongly discourage posting the issue directly onto the upstream support
+channel before discussing via a LFS support channel listed in <xref
+linkend="ch-intro-resources" role='.'/> Doing so is often quite inefficient
+because the upstream maintainers are rarely familiar with LFS building
+procedure.  Even if you've really hit an upstream issue, the LFS community
+can still help to isolate the information wanted by the upstream maintainers
+and make a proper report.
+    </para>
+
+    <para>
+      If you must ask a question directly via an upstream support channel, you
+shall at least note that many upstream projects have the support channels
+separated from the bug tracker.  The <quote>bug</quote> reports for asking
+questions are considered invalid and may annoy upstream developers for these
+projects.
+    </para>
+  </note>
+
+  <para>이 책의 내용을 따라가다가 문제나 궁금한 점이 생기면 우선 <ulink url="&faq-root;#generalfaq"/>에 있는
+FAQ 페이지를 확인해 보십시오. 많은 질문에 대한 답변이 이미 그곳에 있습니다. 만약 해당 페이지에서 답을 찾을 수 없다면, 문제의
+원인을 찾아보십시오. 다음 힌트 문서에서 문제 해결에 관한 지침을 얻을 수 있습니다: <ulink
+url="&hints-root;errors.txt"/>.</para>
+
+  <para>If you cannot find your problem listed in the FAQ, search the mailing lists
+at <ulink url="&lfs-root;search.html"/>.</para>
+
+  <para>We also have a wonderful LFS community that is willing to offer assistance
+through the mailing lists and IRC (see the <xref
+linkend="ch-intro-resources"/> section of this book). However, we get
+several support questions every day, and many of them could have been easily
+answered by going to the FAQ or by searching the mailing lists first.  So,
+for us to offer the best assistance possible, you should first do some
+research on your own. That allows us to focus on the more unusual support
+needs. If your searches do not produce a solution, please include all the
+relevant information (mentioned below) in your request for help.</para>
+
+  <sect2>
+    <title>Things to Mention</title>
+
+    <para>Apart from a brief explanation of the problem being experienced, any request
+for help should include these essential things:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>The version of the book being used (in this case &version;)</para>
+      </listitem>
+      <listitem>
+        <para>The host distribution and version being used to create LFS</para>
+      </listitem>
+      <listitem>
+        <para>The output from the <xref linkend='version-check'/> script</para>
+      </listitem>
+      <listitem>
+        <para>The package or section the problem was encountered in</para>
+      </listitem>
+      <listitem>
+        <para>The exact error message, or a clear description of the problem</para>
+      </listitem>
+      <listitem>
+        <para>Note whether you have deviated from the book at all </para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>Deviating from this book does <emphasis>not</emphasis> mean that we will not
+help you. After all, LFS is about personal preference.  Being up-front about
+any changes to the established procedure helps us evaluate and determine
+possible causes of your problem.</para>
+    </note>
+
+  </sect2>
+
+  <sect2>
+    <title>Configure Script Problems</title>
+
+    <para>If something goes wrong while running the <command>configure</command>
+script, review the <filename>config.log</filename> file. This file may
+contain errors encountered during <command>configure</command> which were
+not printed to the screen. Include the <emphasis>relevant</emphasis> lines
+if you need to ask for help.</para>
+
+  </sect2>
+
+  <sect2>
+    <title>컴파일 문제</title>
+
+    <para>컴파일 문제의 원인을 파악하는 데는 화면 출력 내용과 다양한 파일의 내용이 모두 유용하게
+쓰입니다. <command>configure</command> 스크립트와 <command>make</command> 실행 시 화면 출력이
+도움이 될 수 있습니다. 출력 전체를 포함할 필요는 없지만, 관련된 모든 정보는 반드시 포함해야 합니다. 여기
+<command>make</command> 화면 출력에서 포함해야 할 정보의 유형을 보여주는 예시가 있습니다.</para>
+
+<screen><computeroutput>gcc -D ALIASPATH=\"/mnt/lfs/usr/share/locale:.\"
+-D LOCALEDIR=\"/mnt/lfs/usr/share/locale\"
+-D LIBDIR=\"/mnt/lfs/usr/lib\"
+-D INCLUDEDIR=\"/mnt/lfs/usr/include\" -D HAVE_CONFIG_H -I. -I.
+-g -O2 -c getopt1.c
+gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o
+expand.o file.o function.o getopt.o implicit.o job.o main.o
+misc.o read.o remake.o rule.o signame.o variable.o vpath.o
+default.o remote-stub.o version.o opt1.o
+-lutil job.o: In function `load_too_high':
+/lfs/tmp/make-3.79.1/job.c:1565: undefined reference
+to `getloadavg'
+collect2: ld returned 1 exit status
+make[2]: *** [make] Error 1
+make[2]: Leaving directory `/lfs/tmp/make-3.79.1'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/lfs/tmp/make-3.79.1'
+make: *** [all-recursive-am] Error 2</computeroutput></screen>
+
+    <para>이 경우, 많은 사람들이 마지막 부분만 포함합니다:</para>
+
+<screen><computeroutput>make [2]: *** [make] Error 1</computeroutput></screen>
+
+    <para>이것만으로는 문제를 진단할 정보가 충분하지 않습니다. 무언가 잘못되었다는 사실만 나타낼 뿐, <emphasis>무엇이</emphasis>
+잘못 되었는지 안 보여주기 때문입니다. 위의 예시처럼 섹션 전체를 저장해야 하는데, 실행된 명령과 그와 관련된 모든 에러 메시지가 거기
+들어있기 때문입니다.</para>
+
+    <para>인터넷에서 도움을 요청하는 방법에 관한 훌륭한 글을 <ulink
+url="http://catb.org/~esr/faqs/smart-questions.html"/>에서 온라인으로 볼 수 있습니다. 이
+문서를 읽고 힌트를 따라 보십시오. 그러면 여러분이 필요한 도움을 받을 가능성이 높아질 겁니다.</para>
+
+  </sect2>
+
+</sect1>

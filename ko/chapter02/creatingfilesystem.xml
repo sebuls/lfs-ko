@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-partitioning-creatingfilesystem">
+  <?dbhtml filename="creatingfilesystem.html"?>
+
+  <title>파티션에 파일 시스템 생성</title>
+
+  <para>파티션은 단지 디스크 드라이브의 섹터 범위일 뿐이며, 파티션 테이블에 설정된 경계로 구분됩니다. 운영체제가 파티션을 파일 저장용으로
+사용하려면 먼저 파일 시스템이 들어있도록 포맷해야 합니다. 파일 시스템은 보통 레이블, 디렉터리 블록, 데이터 블록, 그리고 필요할 때
+특정 파일을 찾아내기 위한 인덱싱 체계로 구성됩니다. 또한 파일 시스템은 운영체제가 파티션 내의 빈 공간을 추적하고, 새 파일을 만들거나
+기존 파일을 확장할 때 필요한 섹터를 할당하며, 파일을 삭제할 때 생기는 빈 데이터 세그먼트를 재활용하도록 돕습니다. 데이터 중복성과
+오류 복구용 기능을 제공하기도 합니다.</para>
+  
+  <para>LFS는 리눅스 커널이 인식하는 모든 파일 시스템을 사용할 수 있지만, 가장 일반적인 유형은 ext3 및 ext4 입니다. 적절한 파일
+시스템을 선택하는 일은 복잡할 수 있으며, 이는 파일의 특성과 파티션의 크기에 따라 다릅니다. 예를 들면:</para>
+
+  <variablelist>
+    <varlistentry>
+      <term>ext2</term>
+      <listitem><para>/boot 처럼 업데이트가 빈번하지 않은 작은 파티션에 적합.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ext3</term>
+      <listitem><para>ext2의 업그레이드 버전으로 비정상적인 종료가 발생했을 때 파티션 상태 복구를 돕는 저널(journal) 기능을 포함합니다. 이는
+일반적으로 다목적 파일 시스템으로 널리 사용됩니다.
+      </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ext4</term>
+      <listitem><para>ext 파일 시스템 제품군의 최신 버전. 나노초 단위의 타임스탬프, 매우 큰 파일(최대 16TB)의 생성 및 사용, 그리고 속도 향상을
+포함한 여러 가지 새로운 기능을 제공.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>FAT32, NTFS, JFS, XFS를 포함한 다른 파일 시스템들은 특수한 목적에 유용. 이러한 파일 시스템들과 그 외 다양한 방식들에
+대한 더 많은 정보는 <ulink
+url="https://en.wikipedia.org/wiki/Comparison_of_file_systems"/> 에 있습니다.</para>
+
+  <para>LFS는 루트 파일 시스템(/)이 ext4 유형이라고 가정합니다. <systemitem
+class="filesystem">ext4</systemitem> 파일 시스템을 LFS 파티션에 생성하려면 다음 명령을 실행:</para>
+
+<screen role="nodump"><userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput></screen>
+
+  <para><replaceable>&lt;xxx&gt;</replaceable> 를 LFS 파티션 이름으로 바꾸십시오.</para>
+
+  <para>기존 <systemitem class="filesystem">swap</systemitem> 파티션을 사용한다면, 포맷할 필요가
+없습니다. 만약 새 <systemitem class="filesystem">swap</systemitem> 파티션을 생성했다면, 다음
+명령을 사용하여 초기화:</para>
+
+<screen role="nodump"><userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput></screen>
+
+  <para><replaceable>&lt;yyy&gt;</replaceable>를 <systemitem
+class="filesystem">swap</systemitem> 파티션 이름으로 바꾸십시오.</para>
+
+</sect1>

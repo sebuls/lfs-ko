@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-introduction-cross">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 장은 방금 빌드한 크로스 툴체인을 써서 기본 유틸리티를 크로스 컴파일하는 방법을 보여줍니다. 이 유틸리티는 최종 위치에 설치되지만,
+아직 사용할 수 없습니다. 기본 작업은 여전히 호스트의 도구에 의존합니다. 그럼에도 불구하고, 설치된 라이브러리들은 링크(linking)
+시에 사용됩니다.</para>
+
+  <para>다음 장에서 <quote>chroot</quote> 환경에 진입한 후에는 유틸리티들을 사용할 수 있게 됩니다. 그러나, 그렇게 하기 전에
+이번 장에서 빌드하는 모든 패키지를 먼저 빌드해야 합니다. 따라서, 우리는 아직 호스트 시스템으로부터 독립할 수 없습니다.</para>
+
+  <para>다시 한번 상기합시다. <systemitem class="username">root</systemitem> 계정으로 빌드하면서
+<envar>LFS</envar> 환경 변수를 부적절하게 설정하면 여러분의 컴퓨터를 사용할 수 없게 만들 수 있습니다. 이번 장의 모든
+과정은 반드시 <systemitem class="username">lfs</systemitem> 사용자로 수행해야 하며, 환경 설정은
+<xref linkend="ch-preps-settingenviron" role='.'/>에 기술된 상태여야 합니다</para>
+
+</sect1>

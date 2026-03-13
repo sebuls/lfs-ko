@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-grep" role="wrap">
+  <?dbhtml filename="grep.html"?>
+
+  <sect1info condition="script">
+<productname>grep</productname>
+<productnumber>&grep-version;</productnumber> <address>&grep-url;</address></sect1info>
+
+  <title>Grep-&grep-version;</title>
+
+  <indexterm zone="ch-system-grep">
+    <primary sortas="a-Grep">Grep</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Grep 패키지에는 파일의 내용을 검색하기 위한 프로그램이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&grep-fin-sbu;</seg>
+        <seg>&grep-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Grep 설치</title>
+
+    <para>
+       First, remove a warning about using egrep and fgrep that makes tests on some
+packages fail:
+    </para>
+
+<screen><userinput remap="pre">sed -i "s/echo/#echo/" src/egrep.sh</userinput></screen>
+
+    <para>Grep 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-grep" role="content">
+    <title>Grep 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>egrep, fgrep, 및 grep</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="egrep">
+        <term><command>egrep</command></term>
+        <listitem>
+          <para>Prints lines matching an extended regular expression.  It is obsolete, use
+<command>grep -E</command> instead</para>
+          <indexterm zone="ch-system-grep egrep">
+            <primary sortas="b-egrep">egrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="fgrep">
+        <term><command>fgrep</command></term>
+        <listitem>
+          <para>Prints lines matching a list of fixed strings.  It is obsolete, use
+<command>grep -F</command> instead</para>
+          <indexterm zone="ch-system-grep fgrep">
+            <primary sortas="b-fgrep">fgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="grep">
+        <term><command>grep</command></term>
+        <listitem>
+          <para>Prints lines matching a basic regular expression</para>
+          <indexterm zone="ch-system-grep grep">
+            <primary sortas="b-grep">grep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

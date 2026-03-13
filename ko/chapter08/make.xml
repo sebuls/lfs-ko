@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-make" role="wrap">
+  <?dbhtml filename="make.html"?>
+
+  <sect1info condition="script">
+<productname>make</productname>
+<productnumber>&make-version;</productnumber> <address>&make-url;</address></sect1info>
+
+  <title>Make-&make-version;</title>
+
+  <indexterm zone="ch-system-make">
+    <primary sortas="a-Make">Make</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Make 패키지는 소스 파일로부터 패키지의 실행 파일 및 기타 소스가 아닌 파일들의 생성을 제어하는 프로그램을 포함합니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&make-fin-sbu;</seg>
+        <seg>&make-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Make 설치</title>
+
+    <para>Make 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<!-- Running tests as root causes failures:
+         https://savannah.gnu.org/bugs/?63852 -->
+<screen><userinput remap="make">make</userinput></screen>
+
+    
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">chown -R tester .
+su tester -c "PATH=$PATH make check"</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+
+  <sect2 id="contents-make" role="content">
+    <title>Make 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>make</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="make">
+        <term><command>make</command></term>
+        <listitem>
+          <para>패키지의 어느 부분을 (재)컴파일해야 하는지 자동으로 결정한 후 관련 명령을 실행</para>
+          <indexterm zone="ch-system-make make">
+            <primary sortas="b-make">make</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-file" role="wrap">
+  <?dbhtml filename="file.html"?>
+
+  <sect1info condition="script">
+<productname>file</productname>
+<productnumber>&file-version;</productnumber> <address>&file-url;</address></sect1info>
+
+  <title>File-&file-version;</title>
+
+  <indexterm zone="ch-system-file">
+    <primary sortas="a-File">File</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>File 패키지에는 주어진 파일의 유형을 결정하기 위한 유틸리티가 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&file-fin-sbu;</seg>
+        <seg>&file-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>File 설치</title>
+
+    <para>File 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+
+  <sect2 id="contents-file" role="content">
+    <title>File 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 라이브러리</segtitle>
+
+      <seglistitem>
+        <seg>file</seg>
+        <seg>libmagic.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="file">
+        <term><command>file</command></term>
+        <listitem>
+          <para>각각의 주어진 파일을 분류하려고 시도하며, 이를 위해 파일 시스템 테스트, 매직 넘버(magic number) 테스트, 언어 테스트 등
+여러 가지 테스트를 수행</para>
+          <indexterm zone="ch-system-file file">
+            <primary sortas="b-file">file</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libmagic">
+        <term><filename class="libraryfile">libmagic</filename></term>
+        <listitem>
+          <para><command>file</command> 프로그램에서 사용하는 매직 넘버(magic number) 인식용 루틴 포함</para>
+          <indexterm zone="ch-system-file libmagic">
+            <primary sortas="c-libmagic">libmagic</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

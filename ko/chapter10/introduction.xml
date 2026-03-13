@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-bootable-introduction">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이제 LFS 시스템을 부팅 가능하게 만들 시간입니다. 이 장에서는 <filename>/etc/fstab</filename> 파일을
+생성하고, 새 LFS 시스템을 위한 커널을 빌드하며, 부팅 시 LFS 시스템을 선택할 수 있도록 GRUB 부트 로더를 설치하는 과정을
+다룹니다.</para>
+
+</sect1>

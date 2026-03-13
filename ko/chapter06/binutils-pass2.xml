@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-binutils-pass2" role="wrap">
+  <?dbhtml filename="binutils-pass2.html"?>
+
+  <sect1info condition="script">
+<productname>binutils-pass2</productname>
+<productnumber>&binutils-version;</productnumber> <address>&binutils-url;</address></sect1info>
+
+  <title>Binutils-&binutils-version; - 패스 2</title>
+
+  <indexterm zone="ch-tools-binutils-pass2">
+    <primary sortas="a-Binutils">Binutils</primary>
+    <secondary>tools, pass 2</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/binutils.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&binutils-tmpp2-sbu;</seg>
+        <seg>&binutils-tmpp2-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Binutils 설치</title>
+
+    
+    <!-- Don't remove this until Binutils upstream resolves this issue.
+         We can test by building Binutils on a complete system with
+         zlib (libz.so) installed, passing enable-shared and
+         without-system-zlib.  If the resulted libctf.so still links against
+         libz.so (check with readelf -d) despite we are saying
+         without-system-zlib, then the issue is still unresolved.  -->
+<para>Binutils 빌드 시스템은 내부 정적 라이브러리를 링크하기 위해 포함된 libtool 복사본에 의존하지만, 패키지에 포함된
+libiberty 및 zlib 복사본은 libtool을 사용하지 않습니다. 이러한 불일치는 생성된 바이너리들이 실수로 호스트 배포판의
+라이브러리들과 링크되는 원인이 될 수 있습니다. 이 문제를 해결하려면:</para>
+
+<screen><userinput remap="pre">sed '6031s/$add_dir//' -i ltmain.sh</userinput></screen>
+
+    <para>별도의 빌드 디렉터리를 다시 생성:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <para>Binutils 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">../configure                   \
+    --prefix=/usr              \
+    --build=$(../config.guess) \
+    --host=$LFS_TGT            \
+    --disable-nls              \
+    --enable-shared            \
+    --enable-gprofng=no        \
+    --disable-werror           \
+    --enable-64-bit-bfd        \
+    --enable-new-dtags         \
+    --enable-default-hash-style=gnu</userinput></screen>
+
+    <variablelist>
+      <title>새 configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-shared</parameter></term>
+        <listitem>
+          <para>Builds <filename class="libraryfile">libbfd</filename> as a shared library.</para>
+        </listitem>
+      </varlistentry>
+
+
+      <varlistentry>
+        <term><parameter>--enable-64-bit-bfd</parameter></term>
+        <listitem>
+          <para>64비트 지원을 활성화합니다(워드 크기가 더 작은 호스트에서). 64비트 시스템에서는 필요하지 않을 수 있지만, 활성화해도 아무런 해가
+없습니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make DESTDIR=$LFS install</userinput></screen>
+
+    <para>libtool 아카이브 파일을 삭제하십시오. 왜냐하면 크로스 컴파일에 해롭기 때문입니다. 그리고, 불필요한 정적 라이브러리도 삭제:</para>
+
+<screen><userinput remap="install">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>이 패키지에 대한 자세한 내용은 <xref linkend="contents-binutils" role="."/></para>
+
+  </sect2>
+
+</sect1>

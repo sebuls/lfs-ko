@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-preps-introduction">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 장에서는 임시 시스템 빌드를 준비하기 위해 몇 가지 추가 작업을 수행합니다. <filename
+class="directory">$LFS</filename> 안에 (임시 도구들을 설치할) 디렉터리 세트를 생성하고, 비특권 사용자를
+추가하며, 해당 사용자를 위한 적절한 빌드 환경을 조성합니다. 또한 LFS 패키지를 빌드하는 데 걸리는 시간을 측정하기 위해 사용하는
+시간 단위(<quote>SBU</quote>)에 대해 설명하고, 패키지 테스트 스위트에 관한 정보도 제공합니다.</para>
+
+</sect1>

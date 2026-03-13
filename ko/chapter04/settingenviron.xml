@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-preps-settingenviron">
+  <?dbhtml filename="settingenvironment.html"?>
+
+  <title>환경 설정</title>
+
+  <para><command>bash</command> 셸을 위한 두 개의 새 시작 파일을 생성하여 좋은 작업 환경을
+구축합니다. <systemitem class="username">lfs</systemitem> 사용자로 로그인한 상태에서, 다음 명령어를
+실행하여 새 <filename>.bash_profile</filename>을 생성:</para>
+
+<screen><userinput>cat &gt; ~/.bash_profile &lt;&lt; "EOF"
+<literal>exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash</literal>
+EOF</userinput></screen>
+
+  <para><systemitem class="username">lfs</systemitem> 사용자로 로그인하거나,
+<quote><parameter>-</parameter></quote> 옵션을 사용한 <command>su</command> 명령으로
+&lfs-user; 사용자로 전환하면, 초기 셸은 호스트의 <filename>/etc/profile</filename>(아마도 일부
+설정과 환경 변수가 포함되어 있을 것입니다)과 <filename>.bash_profile</filename>을 읽어 들이는 로그인 셸이
+됩니다. <filename>.bash_profile</filename> 파일에 있는 <command>exec env
+-i.../bin/bash</command> 명령은 현재 실행 중인 셸을 <envar>HOME</envar>,
+<envar>TERM</envar>, <envar>PS1</envar> 변수를 제외하고 환경이 완전히 비어 있는 새로운 셸로
+대체합니다. 이를 통해 호스트 시스템의 원치 않거나 잠재적으로 위험할 수 있는 환경 변수가 빌드 환경으로 유입되는 것을 막습니다.</para>
+
+  <para>새로 실행된 셸 인스턴스는 <emphasis>non-login</emphasis> 셸입니다. 이 셸은
+<filename>/etc/profile</filename> 또는 <filename>.bash_profile</filename> 파일의
+내용을 읽어서 실행하지 않는 대신, <filename>.bashrc</filename> 파일을 읽어서 실행합니다. 이제
+<filename>.bashrc</filename> 파일을 생성:</para>
+
+<screen><userinput>cat &gt; ~/.bashrc &lt;&lt; "EOF"
+<literal>set +h
+umask 022
+LFS=/mnt/lfs
+LC_ALL=POSIX
+LFS_TGT=$(uname -m)-lfs-linux-gnu
+PATH=/usr/bin
+if [ ! -L /bin ]; then PATH=/bin:$PATH; fi
+PATH=$LFS/tools/bin:$PATH
+CONFIG_SITE=$LFS/usr/share/config.site
+export LFS LC_ALL LFS_TGT PATH CONFIG_SITE</literal>
+EOF</userinput></screen>
+
+  <variablelist>
+    <title>The meaning of the settings in <filename>.bashrc</filename></title>
+
+    <varlistentry>
+      <term><parameter>set +h</parameter></term>
+      <listitem>
+  <para>The <command>set +h</command> command turns off <command>bash</command>'s
+hash function. Hashing is ordinarily a useful
+feature&mdash;<command>bash</command> uses a hash table to remember the full
+path to executable files to avoid searching the <envar>PATH</envar> time and
+again to find the same executable. However, the new tools should be used as
+soon as they are installed. Switching off the hash function forces the shell
+to search the <envar>PATH</envar> whenever a program is to be run. As such,
+the shell will find the newly compiled tools in <filename
+class="directory">$LFS/tools/bin</filename> as soon as they are available
+without remembering a previous version of the same program provided by the
+host distro, in <filename class='directory'>/usr/bin</filename> or <filename
+class='directory'>/bin</filename>.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>umask 022</parameter></term>
+      <listitem>
+        <para>Setting the umask as we've already explained in <xref
+linkend='ch-partitioning-aboutlfs' role='.'/></para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>LFS=/mnt/lfs</parameter></term>
+      <listitem>
+  <para>The <envar>LFS</envar> variable should be set to the chosen mount point.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>LC_ALL=POSIX</parameter></term>
+      <listitem>
+  <para>The <envar>LC_ALL</envar> variable controls the localization of certain
+programs, making their messages follow the conventions of a specified
+country.  Setting <envar>LC_ALL</envar> to <quote>POSIX</quote> or
+<quote>C</quote> (the two are equivalent) ensures that everything will work
+as expected in the cross-compilation environment.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>LFS_TGT=$(uname -m)-lfs-linux-gnu</parameter></term>
+      <listitem>
+  <para>The <envar>LFS_TGT</envar> variable sets a non-default, but compatible
+machine description for use when building our cross-compiler and linker and
+when cross-compiling our temporary toolchain. More information is provided
+by <xref linkend="ch-tools-toolchaintechnotes" role=""/>.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>PATH=/usr/bin</parameter></term>
+      <listitem>
+  <para>Many modern Linux distributions have merged <filename
+class="directory">/bin</filename> and <filename
+class="directory">/usr/bin</filename>. When this is the case, the standard
+<envar>PATH</envar> variable should be set to <filename
+class="directory">/usr/bin/</filename> for the <xref
+linkend="chapter-temporary-tools"/> environment. When this is not the case,
+the following line adds <filename class="directory">/bin</filename> to the
+path.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter></term>
+      <listitem>
+  <para>If <filename class="directory">/bin</filename> is not a symbolic link, it
+must be added to the <envar>PATH</envar> variable.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>PATH=$LFS/tools/bin:$PATH</parameter></term>
+      <listitem>
+  <para>By putting <filename class="directory">$LFS/tools/bin</filename> ahead of
+the standard <envar>PATH</envar>, the cross-compiler installed at the
+beginning of <xref linkend="chapter-cross-tools"/> is picked up by the shell
+immediately after its installation. This, combined with turning off hashing,
+limits the risk that the compiler from the host is used instead of the
+cross-compiler.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>CONFIG_SITE=$LFS/usr/share/config.site</parameter></term>
+      <listitem>
+  <para>In <xref linkend="chapter-cross-tools"/> and <xref
+linkend="chapter-temporary-tools"/>, if this variable is not set,
+<command>configure</command> scripts may attempt to load configuration items
+specific to some distributions from
+<filename>/usr/share/config.site</filename> on the host system. Override it
+to prevent potential contamination from the host.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term><parameter>export ...</parameter></term>
+      <listitem>
+        <para>While the preceding commands have set some variables, in order to make them
+visible within any sub-shells, we export them.</para>
+      </listitem>
+    </varlistentry>
+
+  </variablelist>
+
+  <important>
+
+     <para>일부 상용 배포판은 <command>bash</command> 초기화 과정에 문서화되지 않은
+<filename>/etc/bash.bashrc</filename> 설정을 추가하기도 합니다. 이 파일은 핵심 LFS 패키지 빌드에
+영향을 줄 수 있는 방식으로 <systemitem class="username">lfs</systemitem> 사용자 환경을 수정할
+가능성이 있습니다. <systemitem class="username">lfs</systemitem> 사용자 환경이 깨끗한지 확인하려면,
+<filename>/etc/bash.bashrc</filename> 파일이 존재하는지 점검하고, 존재한다면 다른 곳으로 옮겨
+두십시오. <systemitem class="username">root</systemitem> 사용자로 다음을 실행:</para>
+
+     <screen role="nodump"><userinput>[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE</userinput></screen>
+
+     <para>더 이상 <systemitem class="username">lfs</systemitem> 사용자가 필요하지 않을 때(<xref
+linkend="chapter-chroot-temporary-tools"/>의 시작 부분), (원한다면)
+<filename>/etc/bash.bashrc</filename>를 안전하게 복구해도 됩니다.</para>
+
+     <para>우리가 <xref linkend="ch-system-bash"/>에서 빌드할 LFS Bash 패키지는
+<filename>/etc/bash.bashrc</filename>를 불러오거나 실행하도록 설정하지 않으므로, 이 파일은 완성된 LFS
+시스템에서 쓸모없음을 유의하십시오.</para>
+  </important>
+
+  <para>
+    여러 개의 프로세서(또는 코어)를 갖춘 많은 현대적 시스템의 경우, 명령줄 옵션이나 환경 변수를 통해 make 프로그램에 사용 가능한
+프로세서가 몇 개인지 알려주어 "병렬 make(parallel make)"를 수행함으로써 패키지 컴파일 시간을 단축할 수 있습니다. 예를
+들어, 인텔 코어 i9-13900K 프로세서는 8개의 P(성능) 코어와 16개의 E(효율) 코어를 가지고 있으며, P 코어 하나는 동시에
+두 개의 스레드를 실행할 수 있어 리눅스 커널은 각 P 코어를 두 개의 논리 코어로 모델링합니다. 그 결과 총 32개의 논리 코어가
+존재하게 됩니다. 이 모든 논리 코어를 사용하는 명확한 방법 중 하나는 <command>make</command>가 최대 32개의 빌드
+작업을 생성하도록 허용하는 것입니다. 이는 <command>make</command>에 <parameter>-j32</parameter>
+옵션을 전달함으로써 가능합니다:
+  </para>
+
+  <screen role='nodump'><userinput>make -j32</userinput></screen>
+
+  <para>
+    또는 <envar>MAKEFLAGS</envar> 환경 변수를 설정하면, <command>make</command>가 그 내용을 명령줄
+옵션으로 자동 사용:
+  </para>
+
+  <screen role='nodump'><userinput>export MAKEFLAGS=-j32</userinput></screen>
+
+  <important>
+    <para>
+      <command>make</command>를 실행할 때 숫자 없이 <parameter>-j</parameter> 옵션만 전달하거나,
+<envar>MAKEFLAGS</envar>에 해당 옵션을 설정하지 마십시오. 그렇게 하면 <command>make</command>가
+무한 빌드 작업을 생성하며 시스템 안정성 문제를 일으킬 수 있습니다.
+    </para>
+  </important>
+
+  <para>
+    <xref linkend='chapter-cross-tools'/> 및 <xref
+linkend='chapter-temporary-tools'/>에서 패키지를 빌드하는 데 사용할 수 있는 모든 논리 코어를 활용하려면,
+지금 <filename>.bashrc</filename>에 <envar>MAKEFLAGS</envar>를 설정:
+  </para>
+
+<screen><userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; "EOF"
+<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>
+EOF</userinput></screen>
+
+  <para>
+    모든 논리 코어를 사용하고 싶지 않다면, <replaceable>$(nproc)</replaceable> 대신 본인이 사용하고자 하는
+논리 코어의 숫자를 입력하십시오.
+  </para>
+
+  <para>마지막으로, 임시 도구들을 빌드하기 위한 환경이 완벽하게 준비되었는지 확인하기 위해, <command>bash</command> 셸이
+새로운 사용자 프로필을 강제로 읽어 들이도록 합니다:</para>
+
+<screen><userinput>source ~/.bash_profile</userinput></screen>
+
+</sect1>

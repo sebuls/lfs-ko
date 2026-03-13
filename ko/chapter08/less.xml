@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-less" role="wrap">
+  <?dbhtml filename="less.html"?>
+
+  <sect1info condition="script">
+<productname>less</productname>
+<productnumber>&less-version;</productnumber> <address>&less-url;</address></sect1info>
+
+  <title>Less-&less-version;</title>
+
+  <indexterm zone="ch-system-less">
+    <primary sortas="a-Less">Less</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Less package contains a text file viewer.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&less-fin-sbu;</seg>
+        <seg>&less-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Less 설치</title>
+
+    <para>Less 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr --sysconfdir=/etc</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--sysconfdir=/etc</parameter></term>
+        <listitem>
+          <para>This option tells the programs created by the package to look in <filename
+class="directory">/etc</filename> for the configuration files.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-less" role="content">
+    <title>Less 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>less, lessecho, 및 lesskey</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="less">
+        <term><command>less</command></term>
+        <listitem>
+          <para>A file viewer or pager; it displays the contents of the given file, letting
+the user scroll, find strings, and jump to marks</para>
+          <indexterm zone="ch-system-less less">
+            <primary sortas="b-less">less</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lessecho">
+        <term><command>lessecho</command></term>
+        <listitem>
+          <para>Needed to expand meta-characters, such as <emphasis>*</emphasis> and
+<emphasis>?</emphasis>, in filenames on Unix systems</para>
+          <indexterm zone="ch-system-less lessecho">
+            <primary sortas="b-lessecho">lessecho</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lesskey">
+        <term><command>lesskey</command></term>
+        <listitem>
+          <para>Used to specify the key bindings for <command>less</command></para>
+          <indexterm zone="ch-system-less lesskey">
+            <primary sortas="b-lesskey">lesskey</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

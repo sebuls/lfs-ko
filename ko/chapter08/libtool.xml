@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-libtool" role="wrap">
+  <?dbhtml filename="libtool.html"?>
+
+  <sect1info condition="script">
+<productname>libtool</productname>
+<productnumber>&libtool-version;</productnumber> <address>&libtool-url;</address></sect1info>
+
+  <title>Libtool-&libtool-version;</title>
+
+  <indexterm zone="ch-system-libtool">
+    <primary sortas="a-Libtool">Libtool</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Libtool 패키지에는 GNU 일반 라이브러리 지원 스크립트가 들어 있습니다. 이는 일관되고 이식 가능한 인터페이스를 통해 공유
+라이브러리의 사용을 더 단순하게 해줍니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&libtool-fin-sbu;</seg>
+        <seg>&libtool-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Libtool 설치</title>
+
+    <para>Libtool 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+<para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<!-- dev: - -disable-static works but causes additional test failures
+              so we manually remove the static library -->
+<screen><userinput remap="install">make install</userinput></screen>
+
+    
+
+    <para>테스트 도구 모음에만 유용한 정적 라이브러리를 제거:</para>
+
+<screen><userinput remap="install">rm -fv /usr/lib/libltdl.a</userinput></screen>
+
+  </sect2>
+
+
+  <sect2 id="contents-libtool" role="content">
+    <title>Libtool 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>libtool 및 libtoolize</seg>
+        <seg>libltdl.so</seg>
+        <seg>/usr/include/libltdl 및 /usr/share/libtool</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libtool">
+        <term><command>libtool</command></term>
+        <listitem>
+          <para>일반화된 라이브러리 구축 지원 서비스를 제공</para>
+          <indexterm zone="ch-system-libtool libtool">
+            <primary sortas="b-libtool">libtool</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libtoolize">
+        <term><command>libtoolize</command></term>
+        <listitem>
+          <para>패키지에 <command>libtool</command> 지원을 추가하는 표준 방법을 제공</para>
+          <indexterm zone="ch-system-libtool libtoolize">
+            <primary sortas="b-libtoolize">libtoolize</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libltdl">
+        <term><filename class="libraryfile">libltdl</filename></term>
+        <listitem>
+          <para>동적으로 로드된 라이브러리를 여는 데 따르는 다양한 어려움을 숨김</para>
+          <indexterm zone="ch-system-libtool libltdl">
+            <primary sortas="c-libltdl">libltdl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-Python" role="wrap">
+  <?dbhtml filename="Python.html"?>
+
+  <sect1info condition="script">
+<productname>Python</productname>
+<productnumber>&python-version;</productnumber> <address>&python-url;</address></sect1info>
+
+  <title>Python-&python-version;</title>
+
+  <indexterm zone="ch-tools-Python">
+    <primary sortas="a-Python">Python</primary>
+    <secondary>temporary</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/python.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+    <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&python-tmp-sbu;</seg>
+        <seg>&python-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Python 설치</title>
+
+    <note>
+      <para>There are two package files whose name starts with the <quote>python</quote>
+prefix. The one to extract from is
+<filename>Python-&python-version;.tar.xz</filename> (notice the uppercase
+first letter).</para>
+    </note>
+
+    <para>Python 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr       \
+            --enable-shared     \
+            --without-ensurepip \
+            --without-static-libpython</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-shared</parameter></term>
+        <listitem>
+          <para>This switch prevents installation of static libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-ensurepip</parameter></term>
+        <listitem>
+          <para>This switch disables the Python package installer, which is not needed at
+this stage.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-static-libpython</parameter></term>
+        <listitem>
+          <para>This switch prevents building a large, but unneeded, static library.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <note>
+      <para>
+        의존성 패키지들이 아직 설치 안 되어서 일부 Python 3 모듈은 지금 빌드될 수
+없습니다. <filename>ssl</filename> 모듈의 경우, <computeroutput>Python requires a
+OpenSSL 1.1.1 or newer</computeroutput>라는 메시지가 출력됩니다. 이 메시지는 무시하십시오. 최상위
+<command>make</command> 명령어가 실패하지 않았는지만 확인하십시오. 선택적인 모듈은 지금은 불필요하며, <xref
+linkend="chapter-building-system"/>에서 빌드됩니다.
+      </para>
+    </note>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>이 패키지 상세 정보 <xref linkend="contents-python" role="."/></para>
+
+  </sect2>
+
+</sect1>

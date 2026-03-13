@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-config-network" revision="sysv">
+  <?dbhtml filename="network.html"?>
+
+  <title>일반 네트워크 설정</title>
+
+  <indexterm zone="ch-config-network">
+    <primary sortas="d-network">network</primary>
+  <secondary>configuring</secondary></indexterm>
+
+  <sect2>
+    <title>네트워크 인터페이스 설정 파일 생성</title>
+
+    <para>보통 <filename class="directory">/etc/sysconfig/</filename> 디렉터리에 있는 파일이 네트워크
+스크립트에 의해 어떤 인터페이스를 활성화하거나 비활성화할지 결정합니다. 이 디렉터리에는
+<filename>ifconfig.xyz</filename>와 같이 설정할 각 인터페이스용 파일이 들어 있어야 하며, 여기서
+<quote>xyz</quote>는 네트워크 카드를 설명하는 이름입니다. 일반적으로 인터페이스 이름(예: eth0)을 사용하는 것이
+적절합니다. 각 파일에는 해당 인터페이스 IP 주소, 서브넷 마스크 등과 같은 속성이 들어갑니다. 파일 이름 앞부분은 반드시
+<emphasis>ifconfig</emphasis>로 시작해야 합니다.</para>
+
+    <note>
+      <para>이전 섹션의 절차를 안 썼다면, udev는 시스템 물리적 특성에 기반하여 enp2s1 같은 네트워크 카드 인터페이스 이름을 할당할
+것입니다. 인터페이스 이름이 무엇인지 확실하지 않다면, 시스템을 부팅한 후 언제든지 <command>ip link</command> 또는
+<command>ls /sys/class/net</command> 명령어를 실행하여 확인할 수 있습니다.
+      </para>
+
+      <para>인터페이스 이름은 시스템에서 실행 중인 udev 데몬의 구현 방식과 설정에 따라 달라집니다. LFS용 udev 데몬(<xref
+linkend="ch-system-udev"/>에서 설치됨)은 LFS 시스템으로 부팅해야 실행됩니다. 따라서 <emphasis>심지어
+chroot 환경이라 할지라도</emphasis>, 호스트 배포판에서 해당 명령어들을 실행해서는 LFS 시스템의 인터페이스 이름을 정확히
+알아낼 수 없습니다.</para>
+    </note>
+
+    <para>다음 명령어는 고정 IP 주소를 가진 <emphasis>eth0</emphasis> 장치용 샘플 파일을 생성합니다:</para>
+
+<screen><!-- jhalfs relies on the values for IFACE, IP, etc. If you want to change
+     them, please inform the jhalfs maintainer(s). -->
+<userinput>cd /etc/sysconfig/
+cat &gt; ifconfig.<replaceable>eth0</replaceable> &lt;&lt; "EOF"
+<literal>ONBOOT=<replaceable>yes</replaceable>
+IFACE=<replaceable>eth0</replaceable>
+SERVICE=<replaceable>ipv4-static</replaceable>
+IP=<replaceable>192.168.1.2</replaceable>
+GATEWAY=<replaceable>192.168.1.1</replaceable>
+PREFIX=<replaceable>24</replaceable>
+BROADCAST=<replaceable>192.168.1.255</replaceable></literal>
+EOF</userinput></screen>
+
+    <para>각 파일에서 이탤릭체(기울임꼴)로 표시된 값들을 변경하여, 인터페이스를 올바르게 설정하십시오.</para>
+
+    <para><envar>ONBOOT</envar> 변수를 <literal>yes</literal>로 설정하면, 시스템 부팅 과정에서 System V
+네트워크 스크립트가 네트워크 인터페이스 카드(NIC)를 활성화합니다. <literal>yes</literal> 이외의 값으로 설정하면,
+네트워크 스크립트는 해당 NIC를 무시하며 자동으로 시작하지 않습니다. 인터페이스는 <command>ifup</command> 및
+<command>ifdown</command> 명령어를 사용하여 수동으로 시작하거나 중지할 수 있습니다.</para>
+
+    <para><envar>IFACE</envar> 변수는 인터페이스 이름(예: eth0)을 정의합니다. 이 변수는 모든 네트워크 장치 설정 파일에
+필수적이며, 파일 확장자는 반드시 이 값과 일치해야 합니다.</para>
+
+    <para><envar>SERVICE</envar> 변수는 IP 주소를 할당받기 위해 사용하는 방식을 정의합니다. LFS-Bootscripts
+패키지는 모듈형 IP 할당 형식을 갖추고 있으며, <filename
+class="directory">/lib/services/</filename> 디렉터리에 추가 파일을 생성하여 다른 IP 할당 방식을
+사용할 수 있습니다. 이 방식은 주로 BLFS 책에서 다루는 DHCP(Dynamic Host Configuration
+Protocol)용으로 쓰입니다.</para>
+
+    <para>The <envar>GATEWAY</envar> variable should contain the default gateway IP
+address, if one is present. If not, then comment out the variable entirely.</para>
+
+    <para>The <envar>PREFIX</envar> variable specifies the number of bits used in the
+subnet. Each segment of an IP address is 8 bits. If the subnet's netmask is
+255.255.255.0, then it is using the first three segments (24 bits) to
+specify the network number. If the netmask is 255.255.255.240, the subnet is
+using the first 28 bits.  Prefixes longer than 24 bits are commonly used by
+DSL and cable-based Internet Service Providers (ISPs).  In this example
+(PREFIX=24), the netmask is 255.255.255.0. Adjust the <envar>PREFIX</envar>
+variable according to your specific subnet.  If omitted, the PREFIX defaults
+to 24.</para>
+
+    <para>For more information see the <command>ifup</command> man page.</para>
+
+  </sect2>
+  <sect2 id="resolv.conf">
+    <title>파일 /etc/resolv.conf 생성</title>
+
+    <indexterm zone="resolv.conf">
+      <primary sortas="e-/etc/resolv.conf">/etc/resolv.conf</primary>
+    </indexterm>
+
+    <para>The system will need some means of obtaining Domain Name Service (DNS) name
+resolution to resolve Internet domain names to IP addresses, and vice
+versa. This is best achieved by placing the IP address of the DNS server,
+available from the ISP or network administrator, into
+<filename>/etc/resolv.conf</filename>. Create the file by running the
+following:</para>
+
+<screen><userinput>cat &gt; /etc/resolv.conf &lt;&lt; "EOF"
+<literal># Begin /etc/resolv.conf
+
+domain <replaceable>&lt;Your Domain Name&gt;</replaceable>
+nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>
+nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>
+
+# End /etc/resolv.conf</literal>
+EOF</userinput></screen>
+
+    <para>The <varname>domain</varname> statement can be omitted or replaced with a
+<varname>search</varname> statement.  See the man page for resolv.conf for
+more details.</para>
+
+    <para>Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with
+the IP address of the DNS most appropriate for the setup. There will often
+be more than one entry (requirements demand secondary servers for fallback
+capability). If you only need or want one DNS server, remove the second
+<emphasis>nameserver</emphasis> line from the file. The IP address may also
+be a router on the local network.</para>
+
+    <note>
+      <para>The Google Public IPv4 DNS addresses are 8.8.8.8 and 8.8.4.4.</para>
+    </note>
+
+  </sect2>
+
+  <sect2 id="ch-config-hostname">
+    <title>Configuring the System Hostname</title>
+
+    <indexterm zone="ch-config-hostname">
+      <primary sortas="d-hostname">hostname</primary>
+      <secondary>configuring</secondary>
+    </indexterm>
+
+     <para>During the boot process, the file <filename>/etc/hostname</filename> is used
+for establishing the system's hostname.</para>
+
+     <para>Create the <filename>/etc/hostname</filename> file and enter a hostname by
+running:</para>
+
+<screen><userinput>echo "<replaceable>&lt;lfs&gt;</replaceable>" &gt; /etc/hostname</userinput></screen>
+
+     <para><replaceable>&lt;lfs&gt;</replaceable> needs to be replaced with the name
+given to the computer. Do not enter the Fully Qualified Domain Name (FQDN)
+here. That information goes in the <filename>/etc/hosts</filename> file.</para>
+
+  </sect2>
+
+  <sect2 id="ch-config-hosts">
+     <title>/etc/hosts 파일 설정</title>
+
+     <indexterm zone="ch-config-hosts">
+       <primary sortas="e-/etc/hosts">/etc/hosts</primary>
+     </indexterm>
+
+     <indexterm zone="ch-config-hosts">
+       <primary sortas="d-localnet">localnet</primary>
+       <secondary>/etc/hosts</secondary>
+     </indexterm>
+
+     <indexterm zone="ch-config-hosts">
+       <primary sortas="d-network">network</primary>
+       <secondary>/etc/hosts</secondary>
+     </indexterm>
+
+     <para>Decide on a fully-qualified domain name (FQDN), and possible aliases for use
+in the <filename>/etc/hosts</filename> file. If using static IP addresses,
+you'll also need to decide on an IP address. The syntax for a hosts file
+entry is:</para>
+
+<screen><literal>IP_address myhost.example.org aliases</literal></screen>
+
+     <para>Unless the computer is to be visible to the Internet (i.e., there is a
+registered domain and a valid block of assigned IP addresses&mdash;most
+users do not have this), make sure that the IP address is in the private
+network IP address range. Valid ranges are:</para>
+
+<screen><literal>Private Network Address Range      Normal Prefix
+10.0.0.1 - 10.255.255.254           8
+172.x.0.1 - 172.x.255.254           16
+192.168.y.1 - 192.168.y.254         24</literal></screen>
+
+     <para>x can be any number in the range 16-31. y can be any number in the range
+0-255.</para>
+
+     <para>A valid private IP address could be 192.168.1.2.</para>
+
+     <para>If the computer is to be visible to the Internet, a valid FQDN can be the
+domain name itself, or a string resulted by concatenating a prefix (often
+the hostname) and the domain name with a <quote>.</quote> character.  And,
+you need to contact the domain provider to resolve the FQDN to your public
+IP address.</para>
+
+     <para>Even if the computer is not visible to the Internet, a FQDN is still needed
+for certain programs, such as MTAs, to operate properly.  A special FQDN,
+<literal>localhost.localdomain</literal>, can be used for this purpose.</para>
+
+     <para>Create the <filename>/etc/hosts</filename> file by running:</para>
+
+<screen><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
+<literal># Begin /etc/hosts
+
+127.0.0.1 localhost.localdomain localhost
+127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>
+<replaceable>&lt;192.168.1.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2 ...]</replaceable>
+::1       localhost ip6-localhost ip6-loopback
+ff02::1   ip6-allnodes
+ff02::2   ip6-allrouters
+
+# End /etc/hosts</literal>
+EOF</userinput></screen>
+
+     <para>The <replaceable>&lt;192.168.1.2&gt;</replaceable>,
+<replaceable>&lt;FQDN&gt;</replaceable>, and
+<replaceable>&lt;HOSTNAME&gt;</replaceable> values need to be changed for
+specific uses or requirements (if assigned an IP address by a network/system
+administrator and the machine will be connected to an existing network). The
+optional alias name(s) can be omitted.</para>
+
+
+
+   <!--  This is not very useful
+
+     <para>
+If a network card is not going to be configured, create the
+     <filename>/etc/hosts</filename> file by running:</para>
+
+<screen role="nodump"><userinput>cat &gt; /etc/hosts &lt;&lt; "EOF"
+<literal># Begin /etc/hosts (no network card version)
+
+127.0.0.1 localhost
+127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>
+::1       localhost ip6-localhost ip6-loopback
+ff02::1   ip6-allnodes
+ff02::2   ip6-allrouters
+
+# End /etc/hosts (no network card version)</literal>
+EOF</userinput></screen> -->
+</sect2>
+
+</sect1>

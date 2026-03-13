@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-changingowner">
+  <?dbhtml filename="changingowner.html"?>
+
+  <title>소유권 바꾸기</title>
+
+  <note>
+    <para>이 책의 나머지 부분에 나오는 명령들은 더 이상 <systemitem class="username">lfs</systemitem>
+사용자가 아닌 <systemitem class="username">root</systemitem> 사용자로 로그인한 상태에서 수행해야
+합니다. 또한 <systemitem class="username">root</systemitem>의 환경 변수에
+<envar>$LFS</envar>가 설정되어 있는지 다시 확인하십시오.</para>
+  </note>
+
+  <para>현재 <filename class="directory">$LFS</filename> 안의 모든 디렉터리 계층 구조는 호스트 시스템에만
+존재하는 <systemitem class="username">lfs</systemitem> 사용자 소유로 되어 있습니다. 만약
+<filename class="directory">$LFS</filename> 아래 디렉터리와 파일을 현재 상태 그대로 둔다면, 그것들은
+대응하는 계정이 없는 사용자 ID(UID)의 소유가 됩니다. 이것은 위험한데, 왜냐면 나중에 생성된 사용자 계정이 우연히 이와 동일한
+사용자 ID를 갖게 되어 <filename class="directory">$LFS</filename> 아래의 모든 파일을 소유할 수
+있고, 결과적으로 이 파일들이 악의적인 조작에 노출될 수 있기 때문입니다.</para>
+
+  <para>이 문제를 해결하려면, <filename class="directory">$LFS/*</filename> 디렉터리의 소유권을
+<systemitem class="username">root</systemitem> 사용자로 변경하십시오. 아래 명령 실행:</para>
+
+<screen><userinput>chown --from &lfs-username; -R root:root $LFS/{usr,var,etc,tools}
+case $(uname -m) in
+  x86_64) chown --from &lfs-username; -R root:root $LFS/lib64 ;;
+esac</userinput></screen>
+
+</sect1>

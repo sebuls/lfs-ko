@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-binutils-pass1" role="wrap" xreflabel="binutils-pass1">
+  <?dbhtml filename="binutils-pass1.html"?>
+
+  <sect1info condition="script">
+<productname>binutils-pass1</productname>
+<productnumber>&binutils-version;</productnumber> <address>&binutils-url;</address></sect1info>
+
+  <title>Binutils-&binutils-version; - 패스 1</title>
+
+  <indexterm zone="ch-tools-binutils-pass1">
+    <primary sortas="a-Binutils">Binutils</primary>
+    <secondary>tools, pass 1</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/binutils.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&binutils-tmpp1-sbu;</seg>
+        <seg>&binutils-tmpp1-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Cross Binutils 설치</title>
+
+    <note><para><xref linkend="ch-tools-generalinstructions"/> 섹션에 있는 노트들을 다시 돌아가서
+읽어보십시오. 중요(important) 표시된 노트들을 이해하면 나중에 발생할 수 있는 많은 문제를 막을 수 있습니다.</para></note>
+
+    <para>Binutils를 가장 먼저 컴파일하는 것이 중요한데 왜냐면 Glibc와 GCC 모두 사용 가능한 링커와 어셈블러에 대해 다양한 테스트를
+수행하여 각각 어떤 기능을 활성화할지 결정하기 때문입니다.</para>
+
+    <para>Binutils 문서는 전용 빌드 디렉터리에서 Binutils를 빌드할 것을 권장합니다:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <note>
+      <para>이후의 책 내용에 나열된 SBU 값이 유용하게 쓰일 수 있도록, 설정(configuration)부터 첫 번째 설치를 포함한 단계까지 이
+패키지를 빌드하는 데 걸리는 시간을 측정하십시오. 이를 쉽게 수행하려면, 다음과 같이 명령들을 <command>time</command>
+명령으로 감싸십시오: <userinput>time { ../configure ... &amp;&amp; make &amp;&amp;
+make install; }</userinput>.</para>
+    </note>
+
+    <para>이제 Binutils의 컴파일을 준비합니다:</para>
+
+    <screen><userinput remap="configure">../configure --prefix=$LFS/tools \
+             --with-sysroot=$LFS \
+             --target=$LFS_TGT   \
+             --disable-nls       \
+             --enable-gprofng=no \
+             --disable-werror    \
+             --enable-new-dtags  \
+             --enable-default-hash-style=gnu</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <note>
+        <para>
+          다른 패키지와 달리, 아래에 나열된 모든 옵션이 <command>./configure --help</command>를 실행할 때 나타나는
+것은 아닙니다. 예를 들어, <option>--with-sysroot</option> 옵션을 찾으려면
+<command>ld/configure --help</command>를 실행해야 합니다. 모든 옵션은
+<command>./configure --help=recursive</command> 명령을 통해 한꺼번에 나열할 수 있습니다.
+        </para>
+      </note>
+
+      <varlistentry>
+        <term><parameter>--prefix=$LFS/tools</parameter></term>
+        <listitem>
+          <para>This tells the configure script to prepare to install the Binutils programs
+in the <filename class="directory">$LFS/tools</filename> directory.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-sysroot=$LFS</parameter></term>
+        <listitem>
+          <para>For cross compilation, this tells the build system to look in $LFS for the
+target system libraries as needed.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><envar>--target=$LFS_TGT</envar></term>
+        <listitem>
+          <para>Because the machine description in the <envar>LFS_TGT</envar> variable is
+slightly different than the value returned by the
+<command>config.guess</command> script, this switch will tell the
+<command>configure</command> script to adjust binutil's build system for
+building a cross linker.  </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-nls</parameter></term>
+        <listitem>
+          <para>This disables internationalization as i18n is not needed for the temporary
+tools.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-gprofng=no</parameter></term>
+        <listitem>
+          <para>This disables building gprofng which is not needed for the temporary tools.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-werror</parameter></term>
+        <listitem>
+          <para>This prevents the build from stopping in the event that there are warnings
+from the host's compiler.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-new-dtags</parameter></term>
+        <listitem>
+          <para>This makes the linker use the <quote>runpath</quote> tag for embedding
+library search paths into executables and shared libraries, instead of the
+traditional <quote>rpath</quote> tag.  It makes debugging dynamically linked
+executables easier and works around potential issues in the test suite of
+some packages.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-default-hash-style=gnu</parameter></term>
+        <listitem>
+          <para>By default, the linker would generate both the GNU-style hash table and the
+classic ELF hash table for shared libraries and dynamically linked
+executables.  The hash tables are only intended for a dynamic linker to
+perform symbol lookup.  On LFS the dynamic linker (provided by the Glibc
+package) will always use the GNU-style hash table which is faster to query.
+So the classic ELF hash table is completely useless.  This makes the linker
+only generate the GNU-style hash table by default, so we can avoid wasting
+time to generate the classic ELF hash table when we build the packages, or
+wasting disk space to store it.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일 계속:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>이 패키지에 대한 자세한 내용은 <xref linkend="contents-binutils" role="."/></para>
+
+  </sect2>
+
+</sect1>

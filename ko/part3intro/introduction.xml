@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-part3intro-intro">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 부분은 세 단계로 나뉩니다. 첫째, 크로스 컴파일러와 관련 라이브러리를 빌드합니다. 둘째, 이 크로스 툴체인을 사용하여 호스트
+배포판으로부터 격리된 방식으로 여러 유틸리티를 빌드합니다. 셋째, (호스트 격리를 더욱 강화하는) chroot 환경으로 진입하여 최종
+시스템을 빌드하는 데 필요한 나머지 도구들을 구축합니다.</para>
+
+  <important><para>여기서부터 새 시스템을 빌드하는 실제 작업이 시작됩니다. 책에 나온 지시 사항을 정확하게 따르도록 매우 주의하십시오. 각 명령어가 무엇을
+하는지 이해하려고 해야 하며, 빌드를 빨리 끝내고 싶더라도 명령어를 무작정 입력하는 것은 삼가야 합니다. 이해 안 되는 부분이 있다면
+문서를 읽어보십시오. 또한, <command>tee</command> 유틸리티를 사용하여 터미널 출력을 파일로 보냄으로써 사용자가 입력한
+내용과 명령어의 출력 결과를 기록해 두십시오. 이렇게 하면 문제가 발생했을 때 디버깅하기가 더 쉬워집니다.</para></important>
+
+  <para>다음 섹션은 빌드 과정에 대한 기술적인 소개이며, 그 뒤에 이어지는 섹션은 <emphasis role="strong">매우
+중요한</emphasis> 일반 지침을 다룹니다.</para>
+
+</sect1>

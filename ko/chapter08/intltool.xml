@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-intltool" role="wrap">
+  <?dbhtml filename="intltool.html"?>
+
+  <sect1info condition="script">
+<productname>intltool</productname>
+<productnumber>&intltool-version;</productnumber> <address>&intltool-url;</address></sect1info>
+
+  <title>Intltool-&intltool-version;</title>
+
+  <indexterm zone="ch-system-intltool">
+    <primary sortas="a-Intltool">Intltool</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Intltool은 소스 파일에서 번역 가능한 문자열을 추출하는 데 사용하는 국제화(internationalization) 도구입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&intltool-fin-sbu;</seg>
+        <seg>&intltool-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Intltool 설치</title>
+
+    <para>먼저, perl-5.22 및 그 이후 버전에서 발생하는 경고를 수정:</para>
+
+<screen><userinput remap="pre">sed -i 's:\\\${:\\\$\\{:' intltool-update.in</userinput></screen>
+
+    <note><para>위의 정규 표현식은 수많은 백슬래시 때문에 생소해 보일 수 있습니다. 이 식이 하는 일은 백슬래시를 '\${' 시퀀스에서 오른쪽 중괄호
+문자 앞에 추가하여 '\$\{' 로 만드는 것입니다.</para></note>
+
+    <para>Intltool 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install
+install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-&intltool-version;/I18N-HOWTO</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-intltool" role="content">
+    <title>Intltool 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>intltool-extract, intltool-merge, intltool-prepare, intltool-update, 및
+intltoolize</seg>
+        <seg>/usr/share/doc/intltool-&intltool-version; 및 /usr/share/intltool</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="intltoolize">
+        <term><command>intltoolize</command></term>
+        <listitem>
+          <para>패키지에서 intltool을 사용할 수 있도록 준비</para>
+          <indexterm zone="ch-system-intltool intltoolize">
+            <primary sortas="b-intltoolize">intltoolize</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="intltool-extract">
+        <term><command>intltool-extract</command></term>
+        <listitem>
+          <para><command>gettext</command>가 읽을 수 있는 헤더 파일을 생성</para>
+          <indexterm zone="ch-system-intltool intltool-extract">
+            <primary sortas="b-intltool-extract">intltool-extract</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="intltool-merge">
+        <term><command>intltool-merge</command></term>
+        <listitem>
+          <para>번역된 문자열을 다양한 파일 형식으로 병합</para>
+          <indexterm zone="ch-system-intltool intltool-merge">
+            <primary sortas="b-intltool-merge">intltool-merge</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="intltool-prepare">
+        <term><command>intltool-prepare</command></term>
+        <listitem>
+          <para>pot 파일을 업데이트하고 번역 파일과 병합</para>
+          <indexterm zone="ch-system-intltool intltool-prepare">
+            <primary sortas="b-intltool-prepare">intltool-prepare</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="intltool-update">
+        <term><command>intltool-update</command></term>
+        <listitem>
+          <para>po 템플릿 파일들을 업데이트하고 번역물과 병합</para>
+          <indexterm zone="ch-system-intltool intltool-update">
+            <primary sortas="b-intltool-update">intltool-update</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

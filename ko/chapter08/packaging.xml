@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-packaging" role="wrap">
+  <?dbhtml filename="packaging.html"?>
+
+  <sect1info condition="script">
+<productname>packaging</productname>
+<productnumber>&packaging-version;</productnumber> <address>&packaging-url;</address></sect1info>
+
+  <title>Packaging-&packaging-version;</title>
+
+  <indexterm zone="ch-system-packaging">
+    <primary sortas="a-packaging">packaging</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>
+      packaging 모듈은 명확하게 하나의 올바른 동작을 가지는 상호운용성 사양(PEP440)을 구현하거나, 단일 공유 구현을 통해 큰
+이득을 얻는 사양(PEP425)을 구현하는 유틸리티를 제공하는 파이썬 라이브러리입니다. 여기에는 버전 처리,
+지정자(specifiers), 마커(markers), 태그(tags) 및 요구 사항(requirements)을 위한 유틸리티가
+들어있습니다.
+    </para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+      <seglistitem>
+        <seg>&packaging-fin-sbu;</seg>
+        <seg>&packaging-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Packaging 설치</title>
+
+    <para>다음 명령어로 packaging을 컴파일:</para>
+
+<screen><userinput remap="make">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput></screen>
+
+    <para>아래 명령으로 패키지 설치:</para>
+
+<screen><userinput remap="install">pip3 install --no-index --find-links dist packaging</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-packaging" role="content">
+    <title>Packaging 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>
+           /usr/lib/python&python-minor;/site-packages/packaging 및
+/usr/lib/python&python-minor;/site-packages/packaging-&packaging-version;.dist-info
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
+

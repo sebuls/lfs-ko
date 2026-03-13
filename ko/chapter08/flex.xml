@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-flex" role="wrap">
+  <?dbhtml filename="flex.html"?>
+
+  <sect1info condition="script">
+<productname>flex</productname>
+<productnumber>&flex-version;</productnumber> <address>&flex-url;</address></sect1info>
+
+  <title>Flex-&flex-version;</title>
+
+  <indexterm zone="ch-system-flex">
+    <primary sortas="a-Flex">Flex</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Flex 패키지에는 텍스트 내의 패턴을 인식하는 프로그램을 생성하는 유틸리티가 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&flex-fin-sbu;</seg>
+        <seg>&flex-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Flex 설치</title>
+
+
+
+    <!--
+    <para>
+First, fix a problem introduced with glibc-2.26:</para>
+
+<screen><userinput remap="pre">sed -i "/math.h/a #include &lt;malloc.h&gt;" src/flexdef.h</userinput></screen>
+
+    <para>The build procedure assumes the <application>help2man</application>
+    program is available to create a man page from the executable - -help option.
+    This is not present, so we use an environment variable to skip this process.
+    Now, prepare Flex for compilation:</para> -->
+<para>Flex 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/flex-&flex-version;</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>A few programs do not know about <command>flex</command> yet and try to run
+its predecessor, <command>lex</command>. To support those programs, create a
+symbolic link named <filename>lex</filename> that runs
+<filename>flex</filename> in <command>lex</command> emulation mode, and also
+create the man page of <command>lex</command> as a symlink:</para>
+
+<screen><userinput remap="install">ln -sv flex   /usr/bin/lex
+ln -sv flex.1 /usr/share/man/man1/lex.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-flex" role="content">
+    <title>Flex 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>flex, flex++ (link to flex), and lex (link to flex)</seg>
+        <seg>libfl.so</seg>
+        <seg>/usr/share/doc/flex-&flex-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="flex">
+        <term><command>flex</command></term>
+        <listitem>
+          <para>A tool for generating programs that recognize patterns in text; it allows
+for the versatility to specify the rules for pattern-finding, eradicating
+the need to develop a specialized program</para>
+          <indexterm zone="ch-system-flex flex">
+            <primary sortas="b-flex">flex</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="flexpp">
+        <term><command>flex++</command></term>
+        <listitem>
+          <para>An extension of flex, is used for generating C++ code and classes. It is a
+symbolic link to <command>flex</command></para>
+          <indexterm zone="ch-system-flex flexpp">
+            <primary sortas="b-flex++">flex++</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lex">
+        <term><command>lex</command></term>
+        <listitem>
+          <para>A symbolic link that runs <command>flex</command> in <command>lex</command>
+emulation mode</para>
+          <indexterm zone="ch-system-flex lex">
+            <primary sortas="b-lex">lex</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfl">
+        <term><filename class="libraryfile">libfl</filename></term>
+        <listitem>
+          <para><filename class="libraryfile">flex</filename> 라이브러리</para>
+          <indexterm zone="ch-system-flex libfl">
+            <primary sortas="c-libfl">libfl</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

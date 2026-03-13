@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-config-udev">
+  <?dbhtml filename="udev.html"?>
+
+  <title>장치 및 모듈 처리 개요</title>
+
+  <indexterm zone="ch-config-udev">
+    <primary sortas="a-Udev">Udev</primary>
+    <secondary>usage</secondary>
+  </indexterm>
+
+  <para><xref linkend="chapter-building-system"/>에서, <phrase
+revision="sysv">udev</phrase> <phrase revision="systemd">systemd</phrase>가
+빌드될 때 udev 데몬을 설치했습니다. udev가 작동하는 방식에 대한 세부 사항을 알아보기 전에, 이전의 장치 처리 방법들에 대한
+짧은 역사를 먼저 살펴보겠습니다.</para>
+
+  <para>리눅스 시스템은 전통적으로 정적 장치 생성 방식을 사용해 왔습니다. 이 방식에서는 해당 하드웨어 장치의 실제 존재 여부와 상관없이
+<filename class="directory">/dev</filename> 아래에 아주 많은 장치 노드(때로는 수천 개에 달함)를
+생성했습니다. 이는 대개 <command>MAKEDEV</command> 스크립트를 통해 수행되었는데, 이 스크립트에는 세상에 존재할 수
+있는 모든 장치에 대해 관련 주 번호(Major)와 부 번호(Minor)를 인자로 하는<command>mknod</command>
+프로그램 호출이 수없이 포함되어 있었습니다.</para>
+
+  <para>udev 방식을 사용하면, 커널에 의해 감지된 장치들에 대해서만 장치 노드가 생성됩니다. 이러한 장치 노드들은 시스템이 부팅될 때마다
+생성되며, 시스템 메모리에 완전히 상주하는 가상 파일 시스템인 <systemitem
+class="filesystem">devtmpfs</systemitem> 파일 시스템에 저장됩니다. 장치 노드는 많은 공간을 차지하지
+않으므로, 이때 사용되는 메모리 양은 무시할 만 합니다.</para>
+
+  <sect2>
+    <title>History</title>
+
+    <para>2000년 2월, <systemitem class="filesystem">devfs</systemitem> 라 불리는 새 파일 시스템이
+2.3.46 커널에 통합되었으며, 2.4 시리즈 안정화 커널 기간 동안 사용할 수 있었습니다. 비록 커널 소스 자체에는 포함되어
+있었으나, 장치를 동적으로 생성하는 이 방식은 핵심 커널 개발자들로부터 압도적인 지지를 받지는 못했습니다.</para>
+
+    <para><systemitem class="filesystem">devfs</systemitem>가 채택한 방식의 주요 문제는 장치 감지, 생성
+및 명명(naming)을 처리하는 방식이었습니다. 그중에서도 장치 노드 명명 문제는 아마도 가장 심각했습니다. 장치 이름을 설정할 수
+있다면, 명명 정책은 개발자에 의해 강요되는 것이 아니라 시스템 관리자가 선택해야 한다는 것이 일반적인 견해입니다. 또한
+<systemitem class="filesystem">devfs</systemitem> 파일 시스템은 설계 자체에 내재된 경쟁
+상태(race conditions) 문제도 안고 있었는데, 이는 커널의 대대적인 수정 없이는 해결할 수 없는
+것이었습니다. <systemitem class="filesystem">devfs</systemitem>는 더 이상 사용되지
+않음(deprecated)으로 오래도록 표시되어 있다가, 2006년 6월에 마침내 커널에서 완전히 제거되었습니다.</para>
+
+    <para>2.5 불안정 커널 트리의 개발과 함께, 이후 2.6 시리즈 안정화 커널로 출시된 <systemitem
+class="filesystem">sysfs</systemitem>라 불리는 새로운 가상 파일 시스템이
+탄생했습니다. <systemitem class="filesystem">sysfs</systemitem>의 역할은 시스템의 하드웨어 구성
+정보를 사용자 공간(userspace) 프로세스에 제공하는 것입니다. 사용자 공간에서 이 정보를 가시적으로 볼 수 있게 됨에 따라,
+<systemitem class="filesystem">devfs</systemitem>를 대체할 사용자 공간용 프로그램을 개발하는 것이
+가능해졌습니다.</para>
+
+  </sect2>
+
+  <sect2>
+    <title>Udev 구현</title>
+
+    <sect3>
+      <title>Sysfs</title>
+
+      <para><systemitem class="filesystem">sysfs</systemitem> 파일 시스템에 대해 위에서 잠시
+언급했습니다. <systemitem class="filesystem">sysfs</systemitem>가 시스템에 존재하는 장치들을
+어떻게 파악하는지, 그리고 그 장치에 어떤 장치 번호를 사용해야 하는지 어떻게 아는지 궁금할 수 있습니다. 커널에 포함되어 컴파일된
+드라이버는 커널에 의해 감지될 때 자신의 객체를 <systemitem
+class="filesystem">sysfs</systemitem>(내부적으로는 devtmpfs)에 등록합니다. 모듈로 컴파일된
+드라이버는 모듈이 로드될 때 등록됩니다. 일단 <systemitem class="filesystem">sysfs</systemitem>
+파일 시스템이 (<filename class="directory">/sys</filename> 디렉터리에) 마운트되면, 드라이버가
+<systemitem class="filesystem">sysfs</systemitem>에 등록한 데이터를 사용자
+공간(userspace) 프로세스와 udevd가 처리(장치 노드 수정 포함)할 수 있게 됩니다.</para>
+
+    </sect3>
+
+    <sect3 id='ch-config-udev-device-node-creation'>
+      <title>Device Node Creation</title>
+
+      <para>장치 파일들은 커널에 의해 <systemitem class="filesystem">devtmpfs</systemitem> 파일 시스템
+안에 생성됩니다. 장치 노드를 등록하려는 모든 드라이버는 (드라이버 코어를 통해) <systemitem
+class="filesystem">devtmpfs</systemitem>를 써서 등록합니다. <systemitem
+class="filesystem">devtmpfs</systemitem> 인스턴스가 <filename
+class="directory">/dev</filename> 디렉터리에 마운트되면, 장치 노드는 처음에 고정된 이름, 권한 및 소유자를
+가진 채로 사용자 공간(userspace)에 노출됩니다.</para>
+
+      <para>잠시 후, 커널은 <command>udevd</command>에 uevent를 보냅니다. <filename
+class="directory">/etc/udev/rules.d</filename>, <filename
+class="directory">/usr/lib/udev/rules.d</filename>, 그리고 <filename
+class="directory">/run/udev/rules.d</filename> 디렉터리 안의 파일에 명시된 규칙에 따라,
+<command>udevd</command>는 장치 노드에 대한 추가적인 심볼릭 링크를 생성하거나, 권한, 소유자, 그룹을 바꾸거나,
+해당 객체에 대한 내부 <command>udevd</command> 데이터베이스 항목(이름)을 바꿉니다.</para>
+
+      <para>The rules in these three directories are numbered and all three directories
+are merged together. If <command>udevd</command> can't find a rule for the
+device it is creating, it will leave the permissions and ownership at
+whatever <systemitem class="filesystem">devtmpfs</systemitem> used
+initially.</para> </sect3>
+
+    <sect3 id="module-loading">
+      <title>Module Loading</title>
+
+      <para>모듈로 컴파일된 장치 드라이버에는 별칭(alias)이 내장되어 있을 수 있습니다. 별칭은 <command>modinfo</command>
+프로그램 출력에서 확인할 수 있으며, 대개 모듈이 지원하는 장치의 버스별 식별자(bus-specific identifiers)와 관련
+있습니다. 예를 들어, <emphasis>snd-fm801</emphasis> 드라이버는 벤더 ID 0x1319와 장치 ID
+0x0801을 가진 PCI 장치를 지원하며,
+<literal>pci:v00001319d00000801svsdbc04sc01i*</literal> 별칭을 가집니다. 대부분의 장치에서
+버스 드라이버는 해당 장치를 처리할 드라이버의 별칭을 <systemitem
+class="filesystem">sysfs</systemitem> 통해 내보냅니다. 예를 들어,
+<filename>/sys/bus/pci/devices/0000:00:0d.0/modalias</filename> 파일은
+<literal>pci:v00001319d00000801sv00001319sd00001319bc04sc01i00</literal>
+문자열을 포함할 수 있습니다. udev와 함께 제공되는 기본 규칙은 <command>udevd</command>가
+<envar>MODALIAS</envar> uevent 환경 변수(sysfs의 modalias 파일 내용과 똑같아야 함)의 내용을 가지고
+<command>/sbin/modprobe</command>를 호출하게 하며, 결과적으로 와일드카드 확장 후 이 문자열과 일치하는 별칭을
+가진 모든 모듈을 로드하게 됩니다.</para>
+
+      <para>이 예제에서, 이는 <emphasis>snd-fm801</emphasis> 외에도 만약 사용 가능하다면 더 이상 사용되지 않는(그리고
+원치 않는) <emphasis>forte</emphasis> 드라이버가 로드될 것임을 뜻합니다. 원치 않는 드라이버 로드를 막는 방법은
+아래 참고.</para>
+
+      <para>커널 자체적으로도 네트워크 프로토콜, 파일 시스템 및 NLS 지원을 위한 모듈을 필요에 따라(on demand) 로드할 수 있습니다.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>Handling Hotpluggable/Dynamic Devices</title>
+
+      <para>When you plug in a device, such as a Universal Serial Bus (USB) MP3 player,
+the kernel recognizes that the device is now connected and generates a
+uevent. This uevent is then handled by <command>udevd</command> as described
+above.</para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2>
+    <title>Problems with Loading Modules and Creating Devices</title>
+
+    <para>There are a few possible problems when it comes to automatically creating
+device nodes.</para>
+
+    <sect3>
+      <title>커널 모듈이 자동 로드 안 됨</title>
+
+      <para>Udev will only load a module if it has a bus-specific alias and the bus
+driver properly exports the necessary aliases to <systemitem
+class="filesystem">sysfs</systemitem>. In other cases, one should arrange
+module loading by other means. With Linux-&linux-version;, udev is known to
+load properly-written drivers for INPUT, IDE, PCI, USB, SCSI, SERIO, and
+FireWire devices.</para>
+
+      <para>To determine if the device driver you require has the necessary support for
+udev, run <command>modinfo</command> with the module name as the argument.
+Now try locating the device directory under <filename
+class="directory">/sys/bus</filename> and check whether there is a
+<filename>modalias</filename> file there.</para>
+
+      <para>If the <filename>modalias</filename> file exists in <systemitem
+class="filesystem">sysfs</systemitem>, the driver supports the device and
+can talk to it directly, but doesn't have the alias, it is a bug in the
+driver. Load the driver without the help from udev and expect the issue to
+be fixed later.</para>
+
+      <para>If there is no <filename>modalias</filename> file in the relevant directory
+under <filename class="directory">/sys/bus</filename>, this means that the
+kernel developers have not yet added modalias support to this bus type. With
+Linux-&linux-version;, this is the case with ISA busses. Expect this issue
+to be fixed in later kernel versions.</para>
+
+      <para>Udev is not intended to load <quote>wrapper</quote> drivers such as
+<emphasis>snd-pcm-oss</emphasis> and non-hardware drivers such as
+<emphasis>loop</emphasis> at all.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>커널 모듈이 자동 로드 안 되고, Udev는 이를 로드하도록 설계되지 않았음</title>
+
+      <para>If the <quote>wrapper</quote> module only enhances the functionality
+provided by some other module (e.g., <emphasis>snd-pcm-oss</emphasis>
+enhances the functionality of <emphasis>snd-pcm</emphasis> by making the
+sound cards available to OSS applications), configure
+<command>modprobe</command> to load the wrapper after udev loads the wrapped
+module. To do this, add a <quote>softdep</quote> line to the corresponding
+<filename>/etc/modprobe.d/<replaceable>&lt;filename&gt;</replaceable>.conf</filename>
+file. For example:</para>
+
+<screen role="nodump"><literal>softdep snd-pcm post: snd-pcm-oss</literal></screen>
+
+      <para>Note that the <quote>softdep</quote> command also allows
+<literal>pre:</literal> dependencies, or a mixture of both
+<literal>pre:</literal> and <literal>post:</literal> dependencies.  See the
+<ulink role='man' url='&man;modprobe.d.5'>modprobe.d(5)</ulink> manual page
+for more information on <quote>softdep</quote> syntax and capabilities.</para>
+
+      <para revision="sysv">If the module in question is not a wrapper and is useful by itself,
+configure the <command>modules</command> bootscript to load this module on
+system boot. To do this, add the module name to the
+<filename>/etc/sysconfig/modules</filename> file on a separate line.  This
+works for wrapper modules too, but is suboptimal in that case.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>Udev Loads Some Unwanted Module</title>
+
+      <para>Either don't build the module, or blacklist it in a
+<filename>/etc/modprobe.d/blacklist.conf</filename> file as done with the
+<emphasis>forte</emphasis> module in the example below:</para>
+
+<screen role="nodump"><literal>blacklist forte</literal></screen>
+
+      <para>Blacklisted modules can still be loaded manually with the explicit
+<command>modprobe</command> command.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>Udev Creates a Device Incorrectly, or Makes the Wrong Symlink</title>
+
+      <para>This usually happens if a rule unexpectedly matches a device. For example, a
+poorly-written rule can match both a SCSI disk (as desired)  and the
+corresponding SCSI generic device (incorrectly) by vendor.  Find the
+offending rule and make it more specific, with the help of the
+<command>udevadm info</command> command.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>Udev Rule Works Unreliably</title>
+
+      <para>This may be another manifestation of the previous problem. If not, and your
+rule uses <systemitem class="filesystem">sysfs</systemitem> attributes, it
+may be a kernel timing issue, to be fixed in later kernels.  For now, you
+can work around it by creating a rule that waits for the used <systemitem
+class="filesystem">sysfs</systemitem> attribute and appending it to the
+<filename>/etc/udev/rules.d/10-wait_for_sysfs.rules</filename> file (create
+this file if it does not exist). Please notify the LFS Development list if
+you do so and it helps.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>Udev Does Not Create a Device</title>
+
+      <para>우선, 드라이버가 커널에 포함되어 빌드되었거나 이미 모듈로 로드되어 있는지, 그리고 udev가 장치 이름을 잘못 생성하고 있는지
+확인하십시오.</para>
+
+      <para>만약 커널 드라이버가 자신의 데이터를 <systemitem class="filesystem">sysfs</systemitem>로 내보내지
+않는다면, udev는 장치 노드를 생성하는 데 필요한 정보가 모자라게 됩니다. 이런 현상은 커널 트리 외부에서 제공되는 서드파티
+드라이버에서 발생할 가능성이 가장 높습니다. 이 경우 적절한 주(major)/부(minor) 번호를 확인하여
+<filename>/usr/lib/udev/devices</filename>에 정적 장치 노드를 생성하십시오(커널 문서 내의
+<filename>devices.txt</filename> 파일이나 서드파티 드라이버 제조사에서 제공하는 문서 참고). 이렇게 생성된
+정적 장치 노드는 <command>udev</command>에 의해 <filename
+class="directory">/dev</filename> 디렉터리로 복사됩니다.</para>
+
+    </sect3>
+
+    <sect3>
+      <title>재부팅 후 장치 명명 순서가 무작위로 바뀜</title>
+
+      <para>이것은 udev가 설계상 uevent를 병렬로 처리하고 모듈을 병렬로 로드하기 때문에 발생하는 현상이며, 그 결과 로드 순서를 예측할 수
+없게 됩니다. 이 문제는 절대 <quote>수정(fixed)</quote>되지 않을 것입니다. 따라서 커널 장치 이름이 일정하게 유지될
+것이라고 믿으면 안 됩니다. 대신, 장치의 시리얼 번호나 udev와 함께 설치되는 다양한 *_id 유틸리티의 출력 결과처럼, 장치의
+고유하고 변하지 않는 속성을 기반으로 고정된 이름의 심볼릭 링크를 생성하는 규칙을 직접 만드십시오. <xref
+linkend="ch-config-symlinks"/> 및 <xref linkend="ch-config-network"/> 참고.</para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2>
+    <title>읽어볼 만 한 것</title>
+
+    <para>도움이 될 만한 추가 문서:</para>
+
+    <itemizedlist>
+
+      <listitem>
+        <para>A Userspace Implementation of <systemitem
+class="filesystem">devfs</systemitem> <ulink
+url="http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf"/></para>
+      </listitem>
+
+      <listitem>
+        <para>The <systemitem class="filesystem">sysfs</systemitem> Filesystem <ulink
+url="https://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/ols-2005/mochel.pdf"/></para>
+      </listitem>
+
+
+    <!--  No longer available
+      <listitem>
+
+        <para>Pointers to further reading
+        <ulink url="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"/>
+        </para>
+      </listitem>
+-->
+</itemizedlist>
+
+  </sect2>
+
+</sect1>

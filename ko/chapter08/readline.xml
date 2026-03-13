@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-readline" role="wrap">
+  <?dbhtml filename="readline.html"?>
+
+  <sect1info condition="script">
+<productname>readline</productname>
+<productnumber>&readline-version;</productnumber> <address>&readline-url;</address></sect1info>
+
+  <title>Readline-&readline-version;</title>
+
+  <indexterm zone="ch-system-readline">
+    <primary sortas="a-Readline">Readline</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Readline 패키지는 명령줄 편집 및 히스토리 기능을 제공하는 라이브러리 모음입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&readline-fin-sbu;</seg>
+        <seg>&readline-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Readline 설치</title>
+
+    <para>Readline을 재설치하면 기존 라이브러리들이 &lt;libraryname&gt;.old 로 이동합니다. 대개 문제가 되지 않지만,
+일부 경우 <command>ldconfig</command>에서 링크 오류(linking bug) 될 수 있습니다. 이를 막으려면 다음
+두 가지 sed 명령을 실행:</para>
+
+<screen><userinput remap="pre">sed -i '/MV.*old/d' Makefile.in
+sed -i '/{OLDSUFF}/c:' support/shlib-install</userinput></screen>
+
+    <para>공유 라이브러리에 라이브러리 검색 경로(rpath)를 하드 코딩하는 것을 막습니다. 이 패키지는 표준 위치에 설치할 때는 rpath가
+필요하지 않으며, rpath는 때때로 원치 않는 부작용이나 보안 문제를 일으킬 수 있습니다:</para>
+
+<screen><userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput></screen>
+
+    <para>
+      이 버전의 Readline에 대해 업스트림에서 확인된 문제를 수정:
+    </para>
+
+<screen><userinput>sed -e '270a\
+     else\
+       chars_avail = 1;'      \
+    -e '288i\   result = -1;' \
+    -i.orig input.c</userinput></screen>
+
+    <para>Readline 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr    \
+            --disable-static \
+            --with-curses    \
+            --docdir=/usr/share/doc/readline-&readline-version;</userinput></screen>
+
+     <variablelist>
+      <title>The meaning of the new configure option:</title>
+
+      <varlistentry>
+        <term><parameter>--with-curses</parameter></term>
+        <listitem>
+          <para>이 옵션은 Readline이 별도의 termcap 라이브러리가 아니라, curses 라이브러리에서 termcap 라이브러리 함수를 찾을
+수 있음을 말합니다. 이것은 올바른 <filename>readline.pc</filename> 파일을 생성합니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make SHLIB_LIBS="-lncursesw"</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the make option:</title>
+
+      <varlistentry>
+        <term><parameter>SHLIB_LIBS="-lncursesw"</parameter></term>
+        <listitem>
+          <para>이 옵션은 ReadLine이 <filename class="libraryfile">libncursesw</filename> 라이브러리와
+연결되도록 강제합니다. 자세한 내용은 패키지의 <filename>README</filename> 파일 안에서 <quote>Shared
+Libraries</quote> 섹션을 참조하십시오.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>이 패키지에는 테스트 스위트가 없습니다.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>필요하면 문서 설치:</para>
+
+<screen><userinput remap="install">install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-&readline-version;</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-readline" role="content">
+    <title>Readline 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>libhistory.so 및 libreadline.so</seg>
+        <seg>/usr/include/readline 및 /usr/share/doc/readline-&readline-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libhistory">
+        <term><filename class="libraryfile">libhistory</filename></term>
+        <listitem>
+          <para>이전 기록(history)의 행들을 다시 불러올 수 있도록 일관된 사용자 인터페이스를 제공</para>
+          <indexterm zone="ch-system-readline libhistory">
+            <primary sortas="c-libhistory">libhistory</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libreadline">
+        <term><filename class="libraryfile">libreadline</filename></term>
+        <listitem>
+          <para>프로그램의 대화형 세션에서 입력된 텍스트를 조작할 수 있는 일련의 명령들을 제공</para>
+          <indexterm zone="ch-system-readline libreadline">
+            <primary sortas="c-libreadline">libreadline</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-config-introduction" revision="sysv">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+    <para>리눅스 시스템을 부팅하는 과정은 여러 작업을 포함합니다. 프로세스는 가상 및 실제 파일 시스템을 모두 마운트하고, 장치를 초기화하며,
+파일 시스템의 무결성을 검사해야 합니다. 또한 스왑 파티션이나 파일을 마운트 및 활성화하고, 시스템 시계를 설정하며, 네트워킹을
+시작하고, 시스템에 필요한 데몬들을 실행하며, 사용자가 지정한 기타 사용자 정의 작업을 수행해야 합니다. 이 프로세스는 작업이 올바른
+순서대로 수행되고 최대한 빠르게 실행되도록 조직적으로 구축되어야 합니다.</para>
+
+  <sect2 id='sysv-desc'>
+    <title>System V</title>
+
+    <para>System V는 1983년경부터 유닉스 및 리눅스와 같은 유닉스 계열 시스템에서 사용되어 온 전통적인 부팅 프로세스입니다. 이
+프로세스는 getty를 통해 <command>login</command>과 같은 기본 프로세스를 설정하고 스크립트를 실행하는 작은
+프로그램 <command>init</command>로 구성됩니다. 이 스크립트는 대개 <command>rc</command> 로 불리며,
+시스템을 초기화하는 데 필요한 작업을 수행하는 추가 스크립트 세트의 실행을 제어합니다.</para>
+
+    <para><command>init</command> 프로그램은 <filename>/etc/inittab</filename> 파일이 제어하며,
+사용자가 선택할 수 있는 런 레벨(run levels)로 조직되어 있습니다. LFS에서 각 런 레벨은 다음과 같이 쓰입니다:</para>
+
+<literallayout>0 &mdash; halt
+1 &mdash; Single user mode
+2 &mdash; User definable
+3 &mdash; Full multiuser mode
+4 &mdash; User definable
+5 &mdash; Full multiuser mode with display manager
+6 &mdash; reboot</literallayout>
+
+    <para>보통 기본 런 레벨은 3 또는 5.</para>
+
+    <bridgehead renderas="sect3">장점</bridgehead>
+
+    <itemizedlist>
+      <listitem>
+          <para>확립된, 잘 이해된 시스템.</para>
+      </listitem>
+
+      <listitem>
+          <para>사용자 정의(커스터마이징)가 쉽습니다.</para>
+      </listitem>
+
+    </itemizedlist>
+
+
+    <bridgehead renderas="sect3">단점</bridgehead>
+
+    <itemizedlist>
+      <listitem>
+          <para>부팅 속도가 다소 느릴 수 있습니다. 중간 사양의 기본 LFS 시스템에서는 첫 커널 메시지부터 로그인 프롬프트가 뜰 때까지 측정된 부팅
+시간이 약 8~12초 정도 됩니다. 네트워크 연결은 보통 로그인 프롬프트가 나타난 후 약 2초 뒤에 설정됩니다.</para>
+      </listitem>
+
+      <listitem>
+          <para>부팅 작업의 직렬 처리 방식. 이는 이전 항목과 관련이 있습니다. 파일 시스템 검사 등 특정 프로세스에서 지연은 전체 부팅 과정이
+지연되어 전체 부트 프로세스를 늦춥니다.</para>
+      </listitem>
+
+      <listitem>
+          <para>제어 그룹(cgroups) 및 사용자별 공정 배분 스케줄링(per-user fair share scheduling) 같은 고급 기능을
+직접 지원하지 않습니다.</para>
+      </listitem>
+
+      <listitem>
+          <para>스크립트를 추가할 때 수동으로 정적인 실행 순서를 결정해야 합니다.</para>
+      </listitem>
+
+    </itemizedlist>
+
+  </sect2>
+
+</sect1>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-preps-abouttestsuites">
+  <?dbhtml filename="abouttestsuites.html"?>
+
+  <title>Test Suites 관련</title>
+
+  <para>대부분의 패키지는 테스트 스위트를 제공합니다. 새로 빌드된 패키지에 대해 테스트 스위트를 실행하는 것은 모든 것이 올바르게 컴파일되었음을
+나타내는 <quote>sanity check</quote>를 제공할 수 있기 때문에 좋은 생각입니다. 검사 세트를 통과한 테스트 스위트는
+일반적으로 패키지가 개발자가 의도한 대로 작동하고 있음을 증명합니다. 그러나 패키지에 버그가 전혀 없다는 보장은 없습니다.</para>
+
+  <para>Some test suites are more important than others. For example, the test
+suites for the core toolchain packages&mdash;GCC, binutils, and
+glibc&mdash;are of the utmost importance due to their central role in a
+properly functioning system. The test suites for GCC and glibc can take a
+very long time to complete, especially on slower hardware, but are strongly
+recommended.</para>
+
+  <note>
+    <para><xref linkend="chapter-cross-tools"/> 및 <xref
+linkend="chapter-temporary-tools"/> 에서 테스트 스위트를 실행하는 것은 의미 없습니다. 왜냐면 테스트
+프로그램이 크로스 컴파일러로 빌드되기 때문에, 빌드 호스트에서는 아마 실행되지 않을 것이기 때문.</para>
+  </note>
+
+  <para>A common issue with running the test suites for binutils and GCC is running
+out of pseudo terminals (PTYs). This can result in a large number of failing
+tests. This may happen for several reasons, but the most likely cause is
+that the host system does not have the <systemitem
+class="filesystem">devpts</systemitem> file system set up correctly. This
+issue is discussed in greater detail at <ulink
+url="&lfs-root;lfs/faq.html#no-ptys"/>.</para>
+
+  <para>Sometimes package test suites will fail for reasons which the developers are
+aware of and have deemed non-critical. Consult the logs located at <ulink
+url="&test-results;"/> to verify whether or not these failures are
+expected. This site is valid for all test suites throughout this book.</para>
+
+</sect1>

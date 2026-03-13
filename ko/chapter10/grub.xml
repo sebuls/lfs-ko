@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-bootable-grub" role="wrap">
+  <?dbhtml filename="grub.html"?>
+
+  <sect1info condition="script">
+<productname>grub</productname>
+<productnumber>&grub-version;</productnumber> <address>&grub-url;</address></sect1info>
+
+  <title>GRUB을 사용하여 부팅 프로세스 구축</title>
+
+  <note>
+    <para>
+      사용 중인 시스템이 UEFI를 지원하고 LFS를 UEFI 방식으로 부팅하고자 한다면, 이 페이지의 지침은 건너뛰어야 합니다. 다만 이
+페이지를 통해 <filename>grub.cfg</filename> 구문과 파일 내에서 파티션을 지정하는 방법 등은 익혀 두는 것이
+좋습니다. 이후 <ulink url="&blfs-book;postlfs/grub-setup.html">BLFS 페이지</ulink>에서
+제공하는 지침에 따라 UEFI 지원 기능이 포함된 GRUB을 설정하십시오.
+    </para>
+  </note>
+
+  <sect2>
+    <title>소개</title>
+
+    <warning><para>GRUB을 잘못 설정하면 CD-ROM이나 부팅 가능한 USB 드라이브 같은 별도의 부팅 장치 없이는 시스템을 사용할 수 없는 상태가 될
+수 있습니다. 이 섹션의 내용이 LFS 시스템을 부팅하는 데 반드시 필요한 것은 아닙니다. 현재 사용 중인 부트 로더(예:
+Grub-Legacy, GRUB2, LILO 등)를 그대로 수정하여 사용하는 형태를 선택할 수도 있다.</para></warning>
+
+    <para> 컴퓨터를 사용할 수 없는 상태(부팅 불가)에 빠질 경우를 대비해, 컴퓨터를 <quote>복구</quote> 할 수 있는 비상용 부팅
+디스크가 준비되어 있는지 반드시 확인하십시오. 아직 부팅 장치가 없다면 새로 만들 수도 있습니다. 아래 절차를 진행하려면, 우선 BLFS
+부분으로 넘어가서 <ulink
+url="&blfs-book;multimedia/libisoburn.html">libisoburn</ulink> 패키지에 서
+<userinput>xorriso</userinput>를 설치해야 합니다.</para>
+
+<screen role="nodump"><userinput>cd /tmp
+grub-mkrescue --output=grub-img.iso
+xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput></screen>
+
+  </sect2>
+
+  <sect2>
+    <title>GRUB Naming Conventions</title>
+
+    <para>GRUB은 드라이브와 파티션에 대해 <emphasis>(hdn,m)</emphasis> 형태의 독자적인 명명 체계를 사용합니다. 여기서
+<emphasis>n</emphasis>은 하드 드라이브 번호이고, <emphasis>m</emphasis>은 파티션 번호입니다. 하드
+드라이브 번호는 0부터 시작하지만, 파티션 번호의 경우 일반 파티션은 1부터(확장 파티션은 5부터) 시작합니다. 두 번호 모두 0부터
+시작했던 이전 버전과는 차이가 있으니 주의해야 합니다. 예를 들어, 리눅스의 <filename
+class="partition">sda1</filename> 파티션은 GRUB에서 <emphasis>(hd0,1)</emphasis>이
+되고, <filename class="partition">sdb3</filename>은
+<emphasis>(hd1,3)</emphasis>이 됩니다. 리눅스와 달리 GRUB은 CD-ROM 드라이브를 하드 드라이브로 간주하지
+않습니다. 예를 들어 <filename class="partition">hdb</filename>에 CD를 사용하고 <filename
+class="partition">hdc</filename>에 두 번째 하드 드라이브가 있다면, 그 두 번째 하드 드라이브는 여전히
+<emphasis>(hd1)</emphasis>이 됩니다.</para>
+
+  </sect2>
+
+  <sect2>
+    <title>Setting Up the Configuration</title>
+
+    <para>GRUB은 하드 디스크의 첫 번째 물리적 트랙에 데이터를 기록하는 방식으로 동작합니다. 이 영역은 어떤 파일 시스템에도 속하지 않는
+구역입니다. 이곳에 저장된 프로그램들은 부팅 파티션에 있는 GRUB 모듈에 접근합니다.기본 경로는
+/boot/grub/ 입니다.</para>
+
+    <para>부팅 파티션 위치는 사용자의 선택에 달려 있으며, 이 선택은 설정 과정에도 영향을 미칩니다. 권장하는 방법 하나는 부팅 정보만을 담을
+별도의 작은 파티션(권장 크기 200MB)을 만드는 것입니다. 이렇게 하면 LFS나 다른 상용 배포판 등 각각의 빌드들이 동일한 부팅
+파일에 접근할 수 있고, 어떤 부팅 시스템에서도 이 파일들에 접근할 수 있는 형태가 됩니다. 만약 이 방식을 선택한다면, 별도의 파티션을
+마운트한 뒤 현재 <filename class="directory">/boot</filename> 디렉터리에 있는 모든 파일(예를 들어
+이전 섹션에서 막 빌드한 리눅스 커널 등)을 새 파티션으로 옮겨야 합니다. 그 다음 파티션 마운트를 해제하고 다시 <filename
+class="directory">/boot</filename>에 마운트합니다. 이 과정을 마친 후에는 반드시
+<filename>/etc/fstab</filename> 파일을 업데이트해야 합니다.</para>
+
+    <para>현재의 LFS 파티션에 <filename class="directory">/boot</filename>를 그대로 두는 방식도 가능하지만,
+여러 시스템을 함께 사용하기 위한 설정 과정은 더 까다로워집니다.</para>
+
+    <para>위에서 설명한 정보들을 바탕으로 루트 파티션(또는 별도의 파티션을 사용하는 경우 부팅 파티션)에 적절한 명칭을 결정하십시오. 다음
+예제에서는 루트 파티션(또는 별도의 부팅 파티션)이 <filename class="partition">sda2</filename>라고
+가정합니다.</para>
+
+    <para>Install the GRUB files into <filename
+class="directory">/boot/grub</filename> 및 set up the boot track:</para>
+
+    <warning>
+      <para>다음 명령을 실행하면 현재 사용 중인 부트 로더를 덮어쓰게 됩니다. 만약 마스터 부트 레코드(MBR)를 관리하기 위해 제3자 부트
+매니저를 사용하는 등, 현재 설정을 유지하고 싶다면 이 명령을 실행하지 마십시오.</para>
+    </warning>
+
+<screen role="nodump"><userinput>grub-install /dev/sda</userinput></screen>
+
+    <note>
+      <para>시스템이 UEFI를 사용하여 부팅되었다면 <command>grub-install</command>은 x86_64-efi 타겟을 위한
+파일들을 설치하려 시도하겠지만, 해당 파일들은 <xref linkend="chapter-building-system"/>에서 설치되지
+않았습니다. 이런 경우라면 위의 명령어에 <option>--target i386-pc</option> 옵션을 추가하십시오.</para>
+    </note>
+
+  </sect2>
+
+  <sect2 id="grub-cfg">
+    <title>GRUB 설정 파일 생성하기</title>
+
+    <para><filename>/boot/grub/grub.cfg</filename> 생성:</para>
+
+    <screen><userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; "EOF"
+<literal># Begin /boot/grub/grub.cfg
+set default=0
+set timeout=5
+
+insmod part_gpt
+insmod ext2
+set root=(hd0,2)
+set gfxpayload=1024x768x32
+
+menuentry "GNU/Linux, Linux &linux-version;-lfs-&version;" {
+        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro
+}</literal>
+EOF</userinput></screen>
+
+    <para>
+      The <command>insmod</command> commands load the
+<application>GRUB</application> modules named <filename>part_gpt</filename>
+and <filename>ext2</filename>.  Despite the naming,
+<filename>ext2</filename> actually supports <systemitem
+class='filesystem'>ext2</systemitem>, <systemitem
+class='filesystem'>ext3</systemitem>, and <systemitem
+class='filesystem'>ext4</systemitem> filesystems.  The
+<command>grub-install</command> command has embedded some modules into the
+main <application>GRUB</application> image (installed into the MBR or the
+GRUB BIOS partition) to access the other modules (in <filename
+class='directory'>/boot/grub/i386-pc</filename>) without a chicken-or-egg
+issue, so with a typical configuration these two modules are already
+embedded and those two <command>insmod</command> commands will do nothing.
+But they do no harm anyway, and they may be needed with some rare
+configurations.
+    </para>
+
+    <para>
+      The <command>set gfxpayload=1024x768x32</command> command sets the
+resolution and color depth of the VESA framebuffer to be passed to the
+kernel.  It's necessary for the kernel SimpleDRM driver to use the VESA
+framebuffer.  You can use a different resolution or color depth value which
+better suits for your monitor.
+    </para>
+
+    <note><para><application>GRUB</application> 관점에서 커널 파일들은 사용된 파티션을 기준으로 한 상대 경로로
+취급됩니다. 만약 별도의 /boot 파티션을 사용했다면, 위의 <emphasis>linux</emphasis> 줄에서 /boot 를
+제거하십시오. 또한 <emphasis>set root</emphasis> 행이 부트 파티션을 가리키도록 변경하십시오.
+    </para></note>
+
+    <note>
+      <para>디스크를 추가하거나 제거하면(USB 메모리 같은 이동식 장치 포함) 파티션에 대한 GRUB 지정자가 바뀔 수
+있습니다. <filename>grub.cfg</filename>가 일부 <quote>오래된</quote> 지정자를 참조하고 있으면 이
+변경으로 인해 부팅 실패할 수 있습니다. 이러한 문제를 피하고 싶다면, 장치를 지정할 때 GRUB 지정자 대신 파티션의 UUID와 파일
+시스템의 UUID를 사용하면 됩니다. <command>lsblk -o
+UUID,PARTUUID,PATH,MOUNTPOINT</command>를 실행하여 파일 시스템의
+UUID(<literal>UUID</literal> 열)와 파티션의 UUID(<literal>PARTUUID</literal> 열)를
+확인하십시오. 그런 다음 <literal>set root=(hdx,y)</literal>를 <literal>search
+--set=root --fs-uuid <replaceable>&lt;커널이 설치된 파일 시스템의
+UUID&gt;</replaceable></literal>로 바꾸고, <literal>root=/dev/sda2</literal>를
+<literal>root=PARTUUID=<replaceable>&lt;LFS가 빌드된 파티션의
+UUID&gt;</replaceable></literal>로 바꾸십시오.</para>
+      <para>Note that the UUID of a partition is completely different from the UUID of
+the filesystem in this partition.  Some online resources may instruct you to
+use <literal>root=UUID=<replaceable>&lt;filesystem
+UUID&gt;</replaceable></literal> instead of
+<literal>root=PARTUUID=<replaceable>&lt;partition
+UUID&gt;</replaceable></literal>, but doing so will require an initramfs,
+which is beyond the scope of LFS.</para>
+      <para>The name of the device node for a partition in <filename
+class='directory'>/dev</filename> may also change (this is less likely than
+a GRUB designator change).  You can also replace paths to device nodes like
+<literal>/dev/sda1</literal> with
+<literal>PARTUUID=<replaceable>&lt;partition
+UUID&gt;</replaceable></literal>, in <filename>/etc/fstab</filename>, to
+avoid a potential boot failure in case the device node name has changed.</para>
+    </note>
+
+    <para>GRUB은 매우 강력한 프로그램이며 다양한 장치, 운영 체제, 파티션 유형으로부터 부팅하기 위한 다양한 옵션을 제공합니다. 또한 그래픽
+시작 화면(splash screens), 사운드 재생, 마우스 입력 등과 같은 사용자 정의를 위한 많은 옵션이 있습니다. 이러한 옵션들에
+대한 자세한 내용은 이 입문서의 범위를 벗어납니다.</para>
+
+    <caution><para>설정 파일을 자동으로 작성해 주는 <application>grub-mkconfig</application> 명령어가 있습니다. 이
+명령어는 /etc/grub.d/ 디렉터리에 있는 일련의 스크립트를 사용하며, 당신이 직접 수정한 모든 커스터마이징 내용을 지웁니다. 이
+스크립트는 주로 소스 기반이 아닌 배포판을 위해 설계되었으므로 LFS에서는 권장하지 않습니다. 만약 상용 리눅스 배포판을 설치한다면 이
+프로그램이 실행될 가능성이 높으므로, 반드시 당신의 grub.cfg 파일을 백업해 두십시오.</para></caution>
+
+   </sect2>
+
+</sect1>

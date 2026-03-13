@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-creatingminlayout">
+  <?dbhtml filename="creatingminlayout.html"?>
+
+  <title>LFS 파일 시스템에서 제한된 디렉터리 레이아웃 구축하기</title>
+
+  <para>이 섹션에서 우리는 최종적인 리눅스 시스템을 구성할 조각들로 LFS 파일 시스템을 채우기 시작합니다. 첫 단계는 제한된 디렉터리 계층
+구조를 생성, 이를 통해 <xref linkend="chapter-temporary-tools"/>에서 컴파일된 프로그램(그리고
+<xref linkend="chapter-cross-tools"/>의 glibc와 libstdc++)이 최종 위치에 설치될 수 있도록
+합니다. 이렇게 하는 이유는 <xref linkend="chapter-building-system"/>에서 최종 버전들이 빌드될 때 해당
+임시 프로그램을 덮어쓰도록 하기 위해서입니다.</para>
+
+  <para><systemitem class="username">root</systemitem> 사용자로 다음 명령어들을 실행하여 필요한 디렉터리
+레이아웃을 생성:</para>
+
+<screen><userinput>mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
+
+for i in bin lib sbin; do
+  ln -sv usr/$i $LFS/$i
+done
+
+case $(uname -m) in
+  x86_64) mkdir -pv $LFS/lib64 ;;
+esac</userinput></screen>
+
+  <para><xref linkend="chapter-temporary-tools"/>의 프로그램들은 크로스 컴파일러(자세한 내용은 <xref
+linkend="ch-tools-toolchaintechnotes"/> 섹션 참조)로 컴파일할 것입니다. 이 크로스 컴파일러는 다른
+프로그램들과 분리하기 위해 특별한 디렉터리에 설치할 것입니다. 여전히 &root; 사용자로 다음 명령어를 실행하여 해당 디렉터리를 생성:</para>
+
+<screen><userinput>mkdir -pv $LFS/tools</userinput></screen>
+
+  <note>
+    <para>
+      LFS 편집자들은 의도적으로 <filename class="directory">/usr/lib64</filename> 디렉터리를 사용하지
+않기로 결정했습니다. 툴체인이 이 디렉터리를 사용하지 않도록 보장하기 위해 여러 조치가 취해집니다. 만약 어떤 이유로든 이 디렉터리가
+나타난다면(지시 사항을 따르는 과정에서 실수를 했거나, LFS를 마친 후 이를 생성하는 바이너리 패키지를 설치한 경우 등), 시스템이
+망가질 수 있습니다. 이 디렉터리가 존재하지 않는지 항상 확인해야 합니다.
+    </para>
+  </note>
+
+</sect1>

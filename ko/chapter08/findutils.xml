@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-findutils" role="wrap">
+  <?dbhtml filename="findutils.html"?>
+
+  <sect1info condition="script">
+<productname>findutils</productname>
+<productnumber>&findutils-version;</productnumber> <address>&findutils-url;</address></sect1info>
+
+  <title>Findutils-&findutils-version;</title>
+
+  <indexterm zone="ch-system-findutils">
+    <primary sortas="a-Findutils">Findutils</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Findutils 패키지에는 파일을 찾기 위한 프로그램이 들어 있습니다. 디렉터리 트리의 모든 파일을 검색하는 프로그램과 데이터베이스를
+생성, 유지 및 검색하는 프로그램이 제공됩니다(데이터베이스 검색은 재귀적인 find보다 빠를 때가 많지만, 최근에 업데이트되지 않았다면
+신뢰하기 어렵습니다). 또한 Findutils는 검색을 통해 선택된 각 파일에 대해 지정된 명령을 실행하는 데 사용할 수 있는
+<command>xargs</command> 프로그램도 제공합니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&findutils-fin-sbu;</seg>
+        <seg>&findutils-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Findutils 설치</title>
+
+    <para>Findutils 컴파일 준비하기:</para>
+
+
+    <screen><!-- no longer needed with gcc13
+<screen>
+<userinput remap="configure">case $(uname -m) in
+    i?86)   TIME_T_32_BIT_OK=yes ./configure - -prefix=/usr - -localstatedir=/var/lib/locate ;;
+    x86_64) ./configure - -prefix=/usr - -localstatedir=/var/lib/locate ;;
+esac</userinput></screen>
+-->
+<userinput remap="configure">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput></screen>
+
+    <variablelist>
+      <title>configure 옵션 뜻:</title>
+
+      <!--
+      <varlistentry>
+
+        <term><command>TIME_32_BIT_OK=yes</command></term>
+        <listitem>
+          <para>This setting is needed for building on a 32 bit system.</para>
+        </listitem>
+      </varlistentry>
+-->
+<varlistentry>
+        <term><parameter>--localstatedir</parameter></term>
+        <listitem>
+          <para>This option moves the <command>locate</command> database to <filename
+class="directory">/var/lib/locate</filename>, which is the FHS-compliant
+location.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">chown -R tester .
+su tester -c "PATH=$PATH make check"</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-findutils" role="content">
+    <title>Findutils 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>find, locate, updatedb, 및 xargs</seg>
+        <seg>/var/lib/locate</seg>
+      </seglistitem>
+
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="find">
+        <term><command>find</command></term>
+        <listitem>
+          <para>Searches given directory trees for files matching the specified criteria</para>
+          <indexterm zone="ch-system-findutils find">
+            <primary sortas="b-find">find</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="locate">
+        <term><command>locate</command></term>
+        <listitem>
+          <para>Searches through a database of file names and reports the names that contain
+a given string or match a given pattern</para>
+          <indexterm zone="ch-system-findutils locate">
+            <primary sortas="b-locate">locate</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="updatedb">
+      <term><command>updatedb</command></term>
+        <listitem>
+          <para>Updates the <command>locate</command> database; it scans the entire file
+system (including other file systems that are currently mounted, unless told
+not to) and puts every file name it finds into the database</para>
+          <indexterm zone="ch-system-findutils updatedb">
+            <primary sortas="b-updatedb">updatedb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xargs">
+        <term><command>xargs</command></term>
+        <listitem>
+          <para>Can be used to apply a given command to a list of files</para>
+          <indexterm zone="ch-system-findutils xargs">
+            <primary sortas="b-xargs">xargs</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

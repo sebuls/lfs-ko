@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-partitioning-introduction">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 장에서는 LFS를 빌드하는 데 필요한 호스트 도구들을 점검하고, 필요하면 설치합니다. 그다음, LFS 시스템이 들어갈 파티션을
+준비합니다. 파티션 자체를 생성하고, 그 위에 파일 시스템을 만든 다음 마운트할 것입니다.</para>
+
+</sect1>

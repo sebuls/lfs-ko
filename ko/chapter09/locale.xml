@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-config-locale">
+  <?dbhtml filename="locale.html"?>
+
+  <title>시스템 로캘 설정</title>
+
+  <indexterm zone="ch-config-locale">
+    <primary sortas="e-/etc/profile">/etc/profile</primary>
+  </indexterm>
+
+  <indexterm zone="ch-config-locale" revision='systemd'>
+    <primary sortas="e-/etc/profile">/etc/locale.conf</primary>
+  </indexterm>
+
+  <para>기본 언어 지원(native language support) 하려면 몇 가지 환경 변수가 필요합니다. 이 변수들을 올바르게 설정하면
+다음과 같은 결과가 나타납니다:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>프로그램의 출력 결과가 사용자의 기본 언어로 번역되어 나타납니다</para>
+    </listitem>
+    <listitem>
+      <para>문자를 알파벳, 숫자 및 기타 클래스로 정확하게 분류합니다. 이는 영어 아닌 로캘의 명령줄에서
+<command>bash</command>가 ASCII 아닌 문자를 올바르게 수용하기 위해 필요한 설정</para>
+    </listitem>
+    <listitem>
+      <para>해당 나라에 맞는 올바른 알파벳 순서 정렬</para>
+    </listitem>
+    <listitem>
+      <para>적절한 기본 종이 크기</para>
+    </listitem>
+    <listitem>
+      <para>통화, 시간 및 날짜 값의 올바른 형식 설정</para>
+    </listitem>
+  </itemizedlist>
+
+  <para>아래의 <replaceable>&lt;ll&gt;</replaceable> 부분을 우리가 원하는 언어의 두 자리 코드(예:
+<literal>en</literal>)로 바꾸고, <replaceable>&lt;CC&gt;</replaceable> 를 두 자리
+적절한 나라 코드(예: <literal>GB</literal>)로
+바꾸세요. <replaceable>&lt;charmap&gt;</replaceable> 은 선택한 로캘의 표준 문자 맵(canonical
+charmap)으로 바꾸어야 합니다. <literal>@euro</literal>와 같은 선택 수정자(modifiers)가 있을 수도
+있습니다.</para>
+
+  <para>Glibc가 지원하는 모든 로캘 목록을 얻으려면 다음 명령어 실행:</para>
+
+<screen role="nodump"><userinput>locale -a</userinput></screen>
+
+  <para>문자 맵에는 여러 별칭이 있을 수 있습니다. 예를 들어 <literal>ISO-8859-1</literal> 은
+<literal>iso8859-1</literal> 또는 <literal>iso88591</literal>로도 불립니다. 일부
+애플리케이션은 이러한 다양한 동의어를 올바르게 처리하지 못하므로(예: <literal>utf8</literal>이 아닌
+<literal>UTF-8</literal>로 표기해야 함), 대부분의 경우 특정 로캘에 대한 표준 이름(canonical name)을
+선택하는 것이 가장 안전합니다. 표준 이름을 확인하려면 다음 명령어 실행(<replaceable>&lt;locale
+name&gt;</replaceable>부분에 <command>locale -a</command> 명령어로 확인한 당신이 선호하는 로캘
+명칭 입력, 예시에서는 <literal>en_GB.iso88591</literal>).</para>
+
+<screen role="nodump"><userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale charmap</userinput></screen>
+
+  <para><literal>en_GB.iso88591</literal> 로캘의 경우, 위 명령어를 실행하면 다음과 같이 출력됩니다:</para>
+
+<screen><computeroutput>ISO-8859-1</computeroutput></screen>
+
+  <para>이 과정을 거치면 최종 로캘 설정은 <literal>en_GB.ISO-8859-1</literal>. 위에서 사용한 경험적
+방법(heuristic)으로 찾은 로캘을 테스트 먼저 하고 Bash 시작 파일에 추가하는 것이 중요합니다:</para>
+
+<screen role="nodump"><userinput>LC_ALL=&lt;locale name&gt; locale language
+LC_ALL=&lt;locale name&gt; locale charmap
+LC_ALL=&lt;locale name&gt; locale int_curr_symbol
+LC_ALL=&lt;locale name&gt; locale int_prefix</userinput></screen>
+
+  <para>위 명령어들을 실행하면 언어 명칭, 로캘에서 사용하는 문자 인코딩, 지역 통화, 그리고 해당 나라로 전화하기 위한 나라 번호가 출력되어야
+합니다. 만약 위 명령어 중 하나라도 아래와 비슷한 메시지를 내며 실패한다면, 제8장에서 로캘이 설치되지 않았거나 Glibc 기본 설치
+사양에서 해당 로캘을 지원하지 않는다는 뜻입니다.</para>
+
+<screen><computeroutput>locale: Cannot set LC_* to default locale: No such file or directory</computeroutput></screen>
+
+  <para>이런 오류가 발생하면 <command>localedef</command> 명령어를 사용하여 우리가 원하는 로캘을 직접 설치하거나, 다른
+로캘을 선택하는 것을 고려해야 합니다. 이후의 설명은 Glibc에서 이러한 에러 메시지가 나타나지 않는다고 가정합니다.</para>
+
+  <para>로캘 명칭이 예상과 맞지 않을 경우, 다른 패키지들이 잘못 작동할 수도 있습니다(반드시 에러 메시지를 표시하는 것은 아닙니다). 이
+경우, 다른 리눅스 배포판이 우리가 사용하는 로캘을 어떻게 지원하는지 조사해 보는 것이 유용한 정보를 얻는 방법이 될 수 있습니다.</para>
+
+  <para revision='systemd'>적절한 로캘 설정이 결정되었다면, <filename>/etc/locale.conf</filename> 파일 생성:</para>
+
+<screen revision='systemd'><userinput>cat &gt; /etc/locale.conf &lt;&lt; "EOF"
+<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>
+EOF</userinput></screen>
+
+  <para>셸 프로그램 <command>/bin/bash</command>(이하 <quote>셸</quote>)는 실행 환경을 만드는 데 도움이
+되는 여러 시작 파일 모음을 사용합니다. 각 파일은 특정한 용도가 있으며 로그인 환경과 대화형 환경에 서로 다른 영향을 미칠 수
+있습니다. <filename class="directory">/etc</filename> 디렉터리에 있는 파일들은 전역 설정을
+제공합니다. 만약 홈 디렉터리에 동일한 파일이 있다면, 그 파일들이 전역 설정을 덮어쓸 수 있습니다.</para>
+
+  <para>대화형 로그인 셸은 <filename>/etc/passwd</filename> 파일을 읽어
+<command>/bin/login</command> 통한 로그인 성공 후 시작됩니다. 대화형 비로그인 셸은 명령줄에서 시작됩니다(예:
+<prompt>[prompt]$</prompt><command>/bin/bash</command>). 비대화형 셸은 대개 셸 스크립트가
+실행될 때 나타납니다. 스크립트를 처리하는 중이며 명령어 사이마다 사용자의 입력을 기다리지 않기 때문에 비대화형이라고 합니다.</para>
+
+  <para><phrase revision='systemd'>로그인 셸은 <filename>/etc/locale.conf</filename>의 설정에
+영향을 받지 않는 경우가 많습니다. </phrase> 적절한 로캘 설정이 결정되었다면 <phrase revision='sysv'>우리가
+원하는 로캘을 설정하기 위해</phrase><phrase
+revision='systemd'><filename>/etc/locale.conf</filename>에서 로캘 설정을 읽어와
+익스포트(export)하도록</phrase> <filename>/etc/profile</filename> 파일을 생성하십시오. 단,
+리눅스 콘솔에서 실행 중인 경우에는 <literal>C.UTF-8</literal> 로캘을 대신 설정하십시오(프로그램이 리눅스 콘솔에서
+렌더링할 수 없는 문자를 출력하는 것을 막기 위함):</para>
+
+<screen revision="systemd"><userinput>cat &gt; /etc/profile &lt;&lt; "EOF"
+<literal># Begin /etc/profile
+
+for i in $(locale); do
+  unset ${i%=*}
+done
+
+if [[ "$TERM" = linux ]]; then
+  export LANG=C.UTF-8
+else
+  source /etc/locale.conf
+
+  for i in $(locale); do
+    key=${i%=*}
+    if [[ -v $key ]]; then
+      export $key
+    fi
+  done
+fi
+
+# End /etc/profile</literal>
+EOF</userinput></screen>
+
+<screen revision="sysv"><userinput>cat &gt; /etc/profile &lt;&lt; "EOF"
+<literal># Begin /etc/profile
+
+for i in $(locale); do
+  unset ${i%=*}
+done
+
+if [[ "$TERM" = linux ]]; then
+  export LANG=C.UTF-8
+else
+  export LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>
+fi
+
+# End /etc/profile</literal>
+EOF</userinput></screen>
+
+  <para revision='systemd'>참고로 systemd의 <command>localectl</command> 유틸리티를 사용하여
+<filename>/etc/locale.conf</filename> 파일을 수정할 수 있습니다. 위 예시처럼
+<command>localectl</command> 사용하려면 다음 명령어 실행:</para>
+
+<screen revision='systemd' role="nodump"><userinput>localectl set-locale LANG="<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>"</userinput></screen>
+
+  <para revision='systemd'>또한 <envar>LANG</envar>, <envar>LC_CTYPE</envar>, <envar>LC_NUMERIC</envar> 등
+<command>locale</command> 출력 결과에 포함된 다른 언어 관련 환경 변수들을 직접 지정할 수도 있습니다. 각 변수는
+공백으로 구분하면 됩니다. 예를 들어 <envar>LANG</envar>은 en_US.UTF-8로 설정하고
+<envar>LC_CTYPE</envar>은 en_US로 설정하려면 다음 명령어 실행:</para>
+
+<screen revision='systemd' role="nodump"><userinput>localectl set-locale LANG="en_US.UTF-8" LC_CTYPE="en_US"</userinput></screen>
+
+  <note revision='systemd'><para>Please note that the <command>localectl</command> command doesn't work in
+the chroot environment.  It can only be used after the LFS system is booted
+with systemd.</para></note>
+
+  <para><literal>C</literal>(기본값) 로캘과 <literal>en_US</literal>(미국 영어 사용자에게 권장되는 값)
+로캘은 서로 다릅니다. <literal>C</literal> 로캘은 US-ASCII 7비트 문자 집합을 사용하며, 최상위 비트가 설정된
+바이트를 유효하지 않은 문자로 취급합니다. 이 때문에 해당 로캘에서는 <command>ls</command> 명령어 실행 시 문자가
+물음표로 표시되기도 합니다. 또한 Mutt 또는 Pine에서 이러한 문자가 포함된 메일을 보내려 하면 RFC 규격을 따르지 않는 메시지가
+전송됩니다(보내는 메일의 문자 집합이 <computeroutput>unknown 8-bit</computeroutput>으로
+표시됨). 8비트 문자가 전혀 필요없다고 확신하는 경우에만 <literal>C</literal> 로캘을 사용하는 것이 좋습니다.</para>
+
+</sect1>

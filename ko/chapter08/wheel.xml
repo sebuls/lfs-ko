@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-wheel" role="wrap">
+  <?dbhtml filename="wheel.html"?>
+
+  <sect1info condition="script">
+<productname>wheel</productname>
+<productnumber>&wheel-version;</productnumber> <address>&wheel-url;</address></sect1info>
+
+  <title>Wheel-&wheel-version;</title>
+
+  <indexterm zone="ch-system-wheel">
+    <primary sortas="a-wheel">wheel</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Wheel은 파이썬 휠 패키징 표준 참조 구현인 파이썬 라이브러리입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+      <seglistitem>
+        <seg>&wheel-fin-sbu;</seg>
+        <seg>&wheel-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Wheel 설치</title>
+
+    <para>다음 명령어로 Wheel을 컴파일:</para>
+
+<screen><userinput remap="make">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput></screen>
+
+    <para>다음 명령어로 Wheel 설치:</para>
+
+<screen><userinput remap="install">pip3 install --no-index --find-links dist wheel</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-wheel" role="content">
+    <title>Wheel 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>wheel</seg>
+        <seg>
+           /usr/lib/python&python-minor;/site-packages/wheel 및
+/usr/lib/python&python-minor;/site-packages/wheel-&wheel-version;.dist-info
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="wheel-wheel">
+        <term><command>wheel</command></term>
+        <listitem>
+          <para>
+            휠(wheel) 아카이브를 풀거나, 묶거나, 변환하는 유틸리티
+          </para>
+          <indexterm zone="ch-system-wheel">
+            <primary sortas="b-wheel">wheel</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </sect2>
+
+</sect1>
+

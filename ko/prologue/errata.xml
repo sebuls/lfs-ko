@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-errata">
+  <?dbhtml filename="errata.html"?>
+
+  <title>정오표 및 보안 권고</title>
+
+  <para>LFS 시스템을 만드는 데 사용되는 소프트웨어들은 끊임없이 업데이트되고 개선됩니다. 보안 경고 및 버그 수정 사항이 LFS 책이 출시된
+이후에도 나올 수 있습니다. 이번 LFS 버전에 포함된 패키지 버전이나 지침에 보안 취약점 해결 또는 버그 수정을 위한 변경이 필요한지
+확인하려면, 빌드를 진행하기 전에 <ulink url="&errata;"/>를 방문해 주시기 바랍니다. 확인된 모든 변경 사항을 메모해
+두었다가, LFS 시스템을 빌드할 때 책의 해당 섹션에 적용해야 합니다.</para>
+
+  <para>또한, LFS 편집자들은 책이 출시된 <emphasis>이후</emphasis>에 발견된 보안 취약점 목록을 관리하고 있습니다. 이
+목록을 확인하려면 빌드를 진행하기 전에 <ulink url="&secadv;"/> 방문하십시오. LFS 시스템을 빌드할 때, 보안 권고
+사항에서 제안하는 변경 사항들을 책의 해당 섹션에 적용해야 합니다. 그리고 만약 LFS 시스템을 실제 데스크톱이나 서버 시스템으로 사용할
+계획이라면, 시스템이 완전히 구축된 이후에도 계속해서 권고 사항을 참조하여 보안 취약점을 수정해야 합니다.</para>
+
+</sect1>

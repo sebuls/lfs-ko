@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-vim" role="wrap">
+  <?dbhtml filename="vim.html"?>
+
+  <sect1info condition="script">
+<productname>vim</productname> <productnumber>&vim-version;</productnumber>
+<address>&vim-url;</address></sect1info>
+
+  <title>Vim-&vim-version;</title>
+
+  <indexterm zone="ch-system-vim">
+    <primary sortas="a-Vim">Vim</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Vim 패키지에는 강력한 텍스트 편집기가 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&vim-fin-sbu;</seg>
+        <seg>&vim-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <tip>
+      <title>Vim 대체</title>
+
+      <para>만약 Emacs, Joe, 또는 Nano 같은 다른 편집기를 선호하신다면, 권장 설치 안내가 포함된 <ulink
+url="&blfs-book;postlfs/editors.html"/> 참고하시기 바랍니다.</para>
+    </tip>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Vim 설치</title>
+
+    <para>우선, <filename>vimrc</filename> 설정 파일의 기본 위치를 <filename
+class="directory">/etc</filename>로 변경:</para>
+
+<screen><userinput remap="pre">echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h</userinput></screen>
+
+    <para>Vim 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>테스트를 준비하려면, <systemitem class="username">tester</systemitem> 사용자가 소스 트리에 쓸 수
+있는지 확인하고, <command>curl</command> 또는 <command>wget</command>이 필요한 테스트가 들어간
+파일 하나를 제외:</para>
+
+<screen><userinput remap="test">chown -R tester .
+sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak</userinput></screen>
+
+    <para>이제 <systemitem class="username">tester</systemitem> 사용자로 테스트를 실행:</para>
+
+<screen><userinput remap="test">su tester -c "TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test" \
+   &amp;> vim-test.log</userinput></screen>
+
+    <para>테스트 도구 모음(test suite)은 화면에 많은 이진 데이터를 출력합니다. 이는 현재 터미널의 설정에 문제를 일으킬 수
+있습니다(특히 테스트 도구 모음의 일부 가정을 충족하기 위해 <envar>TERM</envar> 변수를 무시하고 설정하는 동안에는 더욱
+그렇습니다). 이 문제는 위에서 보여준 것처럼 출력을 로그 파일로 리디렉트하여 피할 수 있습니다. 테스트가 성공하면 완료 시 로그 파일에
+<computeroutput>ALL DONE</computeroutput>이라는 문구가 나옵니다.</para>
+
+    <para>한 테스트 test_matchfuzzy.vim 은 일부 시스템에서 실패하는 것으로 알려져 있습니다.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+    <para>많은 사용자가 반사적으로 <command>vim</command> 대신 <command>vi</command>를 입력하곤
+합니다. 사용자가 평소 습관대로 <command>vi</command>를 입력하더라도 <command>vim</command>이 실행될
+수 있도록, 바이너리와 제공된 언어별 매뉴얼 페이지(man page) 모두에 대한 심볼릭 링크(symlink)를 생성:</para>
+
+<screen><userinput remap="install">ln -sv vim /usr/bin/vi
+for L in  /usr/share/man/{,*/}man1/vim.1; do
+    ln -sv vim.1 $(dirname $L)/vi.1
+done</userinput></screen>
+
+    <para>By default, Vim's documentation is installed in <filename
+class="directory">/usr/share/vim</filename>. The following symlink allows
+the documentation to be accessed via <filename
+class="directory">/usr/share/doc/vim-&vim-version;</filename>, making it
+consistent with the location of documentation for other packages:</para>
+
+<screen><userinput remap="install">ln -sv ../&vim-docdir;/doc /usr/share/doc/vim-&vim-version;</userinput></screen>
+
+    <para>LFS 시스템에 X 윈도우 시스템(X Window System)을 설치할 예정이라면, X 설치 후 Vim을 다시 컴파일해야 할 수도
+있습니다. Vim은 X와 몇몇 추가 라이브러리의 설치가 필요한 GUI 버전의 편집기를 함께 제공합니다. 이 과정에 대한 더 자세한 내용은
+Vim 문서와 <ulink url="&blfs-book;postlfs/vim.html"/> 에 있는 BLFS book의 Vim 설치
+페이지를 참고하십시오.</para>
+
+  </sect2>
+
+  <sect2 id="conf-vim" role="configuration">
+    <title>Vim 설정</title>
+
+    <indexterm zone="conf-vim">
+      <primary sortas="e-/etc/vimrc">/etc/vimrc</primary>
+    </indexterm>
+
+    <para>By default, <command>vim</command> runs in vi-incompatible mode.  This may
+be new to users who have used other editors in the past. The
+<quote>nocompatible</quote> setting is included below to highlight the fact
+that a new behavior is being used. It also reminds those who would change to
+<quote>compatible</quote> mode that it should be the first setting in the
+configuration file. This is necessary because it changes other settings, and
+overrides must come after this setting. Create a default
+<command>vim</command> configuration file by running the following:</para>
+
+<screen><userinput>cat &gt; /etc/vimrc &lt;&lt; "EOF"
+<literal>" Begin /etc/vimrc
+
+" Ensure defaults are set before customizing settings, not after
+source $VIMRUNTIME/defaults.vim
+let skip_defaults_vim=1
+
+set nocompatible
+set backspace=2
+set mouse=
+syntax on
+if (&amp;term == "xterm") || (&amp;term == "putty")
+  set background=dark
+endif
+
+" End /etc/vimrc</literal>
+EOF</userinput></screen>
+
+    <para><parameter>set nocompatible</parameter> 설정은 <command>vim</command>이 vi 호환
+방식보다 더 유용한 방식(기본값)으로 동작하게 합니다. 기존의 <command>vi</command> 동작 방식을 유지하려면
+<quote>no</quote>를 제거하십시오. <parameter>set backspace=2</parameter> 설정은 줄 바꿈,
+자동 들여쓰기, 삽입 시작 지점에서도 백스페이스를 사용할 수 있게 합니다. <parameter>syntax on</parameter>
+매개변수는 vim의 구문 강조(syntax highlighting) 기능을 활성화합니다. <parameter>set
+mouse=</parameter> 설정은 chroot 환경이나 원격 접속 시 마우스로 텍스트를 제대로 붙여넣을 수 있게
+합니다. 마지막으로, <parameter>set background=dark</parameter> 설정을 포함한
+<emphasis>if</emphasis> 문은 일부 터미널 에뮬레이터의 배경색에 대한 <command>vim</command>의 추측을
+교정합니다. 이를 통해 해당 프로그램의 검은색 배경에서 구문 강조가 더 보기 좋은 색상으로 표시됩니다.</para>
+
+    <para>Documentation for other available options can be obtained by running the
+following command:</para>
+
+<screen role="nodump"><userinput>vim -c ':options'</userinput></screen>
+
+    <note>
+      <para>By default, vim only installs spell-checking files for the English
+language.  To install spell-checking files for your preferred language, copy
+the <filename class='extension'>.spl</filename> and optionally, the
+<filename class='extension'>.sug</filename> files for your language and
+character encoding from <filename class='directory'>runtime/spell</filename>
+into <filename class='directory'> /usr/share/&vim-docdir;/spell/</filename>.</para>
+
+      <para>To use these spell-checking files, some configuration in
+<filename>/etc/vimrc</filename> is needed, e.g.:</para>
+
+<screen><literal>set spelllang=en,ru
+set spell</literal></screen>
+
+      <para>For more information, see <filename>runtime/spell/README.txt</filename>.</para>
+    </note>
+
+  </sect2>
+
+  <sect2 id="contents-vim" role="content">
+    <title>Vim 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+       <seg> ex (link to vim), rview (link to vim), rvim (link to vim), vi (link to vim),
+view (link to vim), vim, vimdiff (link to vim), vimtutor, and xxd</seg>
+        <seg>/usr/share/vim</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ex">
+        <term><command>ex</command></term>
+        <listitem>
+          <para>Starts <command>vim</command> in ex mode</para>
+          <indexterm zone="ch-system-vim ex">
+            <primary sortas="b-ex">ex</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rview">
+        <term><command>rview</command></term>
+        <listitem>
+          <para>Is a restricted version of <command>view</command>; no shell commands can be
+started and <command>view</command> cannot be suspended</para>
+          <indexterm zone="ch-system-vim rview">
+            <primary sortas="b-rview">rview</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rvim">
+        <term><command>rvim</command></term>
+        <listitem>
+          <para>Is a restricted version of <command>vim</command>; no shell commands can be
+started and <command>vim</command> cannot be suspended</para>
+          <indexterm zone="ch-system-vim rvim">
+            <primary sortas="b-rvim">rvim</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vi">
+        <term><command>vi</command></term>
+        <listitem>
+          <para>Link to <command>vim</command></para>
+          <indexterm zone="ch-system-vim vi">
+            <primary sortas="b-vi">vi</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="view">
+        <term><command>view</command></term>
+        <listitem>
+          <para>Starts <command>vim</command> in read-only mode</para>
+          <indexterm zone="ch-system-vim view">
+            <primary sortas="b-view">view</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vim">
+        <term><command>vim</command></term>
+        <listitem>
+          <para>Is the editor</para>
+          <indexterm zone="ch-system-vim vim">
+            <primary sortas="b-vim">vim</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vimdiff">
+        <term><command>vimdiff</command></term>
+        <listitem>
+          <para>Edits two or three versions of a file with <command>vim</command> and shows
+differences</para>
+          <indexterm zone="ch-system-vim vimdiff">
+            <primary sortas="b-vimdiff">vimdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vimtutor">
+        <term><command>vimtutor</command></term>
+        <listitem>
+          <para>Teaches the basic keys and commands of <command>vim</command></para>
+          <indexterm zone="ch-system-vim vimtutor">
+            <primary sortas="b-vimtutor">vimtutor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="xxd">
+        <term><command>xxd</command></term>
+        <listitem>
+          <para>Creates a hex dump of the given file; it can also perform the inverse
+operation, so it can be used for binary patching</para>
+          <indexterm zone="ch-system-vim xxd">
+            <primary sortas="b-xxd">xxd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-architecture">
+  <?dbhtml filename="architecture.html"?>
+
+  <title>LFS 대상 아키텍처</title>
+
+<para>LFS의 주요 대상 아키텍처는 AMD/Intel x86(32비트) 및 x86_64(64비트) CPU입니다. 반면, 이 책의 지침은 일부
+수정을 거치면 Power PC 및 ARM CPU에서도 작동하는 것으로 알려져 있습니다. 이러한 대체 CPU 중 하나를 사용하는 시스템을
+구축하려면, 다음 페이지에 나오는 사항 외에 해당 아키텍처를 대상으로 하는 이전 LFS 설치본, Ubuntu, Red
+Hat/Fedora, SuSE 또는 기타 배포판 같은 기존 리눅스 시스템이 주요 선행 조건으로 필요합니다. (64비트 AMD/Intel
+컴퓨터에 32비트 배포판을 설치하여 호스트 시스템으로 사용할 수 있다는 점에 유의하십시오.)</para>
+
+<para>64비트 시스템에서 빌드하여 얻는 이점은 32비트 시스템과 비교했을 때 최소한입니다. 예를 들어, 코어 4개를 사용하는 Core
+i7-4790 CPU 기반 시스템에서 진행한 LFS-9.1 테스트 빌드에서는 다음과 같은 통계가 측정되었습니다:</para>
+
+<screen><computeroutput>Architecture Build Time     Build Size
+32-bit       239.9 minutes  3.6 GB
+64-bit       233.2 minutes  4.4 GB</computeroutput></screen>
+
+<para>보시는 바와 같이, 동일한 하드웨어에서 64비트 빌드는 32비트 빌드보다 단 3% 빠를 뿐이며(크기는 22% 더 큽니다), 만약 LFS를
+LAMP 서버나 방화벽으로 사용할 계획이라면 32비트 CPU로도 충분할 수 있습니다. 반면, 현재 BLFS의 몇몇 패키지는 빌드하거나
+실행하는 데 4GB 이상의 RAM이 필요합니다. LFS를 데스크톱으로 사용할 계획이라면, LFS 작성자는 64비트 시스템을 구축할 것을
+권장합니다.</para>
+
+<para>LFS에서 결과물로 나오는 기본 64비트 빌드는 <quote>순수한(pure)</quote> 64비트 시스템입니다. 즉, 64비트 실행
+파일만 지원합니다. <quote>멀티리브(multi-lib)</quote> 시스템을 구축하려면 많은 응용 프로그램을 32비트용으로 한
+번, 64비트용으로 한 번, 이렇게 두 번 컴파일해야 합니다. 이는 기초적인 리눅스 시스템에 필요한 최소한의 지침을 제공하려는 교육적
+목표에 방해가 되기 때문에 LFS에서 직접 지원하지 않습니다. 일부 LFS/BLFS 편집자가 <ulink
+url="https://www.linuxfromscratch.org/~thomas/multilib/index.html"/>에서 접근
+가능한 LFS의 멀티리브 포크(fork)를 유지 관리하고 있습니다. 하지만 이는 고급 주제에 속합니다.</para>
+
+</sect1>

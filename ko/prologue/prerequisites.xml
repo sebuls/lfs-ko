@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-prerequisites">
+  <?dbhtml filename="prerequisites.html"?>
+
+  <title>전제조건</title>
+
+  <para>LFS 시스템을 빌드하는 것은 간단한 작업이 아닙니다. 문제를 해결하고 나열된 명령어들을 정확히 실행하기 위해서는 유닉스 시스템 관리에
+관한 어느 정도 지식이 필요합니다. 특히, 최소한 파일과 디렉터리를 복사하거나 이동하고, 디렉터리와 파일 목록을 확인하며, 현재
+디렉터리를 변경하는 등의 커맨드 라인(셸) 사용법은 이미 알고 있어야 합니다. 또한 리눅스 소프트웨어를 설치하고 사용하는 방법도 숙지하고
+있어야 합니다.</para>
+
+  <para>LFS 책은 <emphasis>적어도</emphasis> 이러한 기초적인 수준의 기술을 갖추고 있다고 가정하므로, 다양한 LFS 지원
+포럼에서 이 분야에 대한 많은 도움을 받기는 어렵습니다. 이러한 기초 지식에 관한 질문은 답변을 받지 못할 가능성이 크며(또는 단순히
+LFS 필수 사전 읽기 목록을 참조하라는 안내만 받게 될 겁니다).</para>
+
+  <para>LFS 시스템 빌드 전에 읽으면 좋은 글:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>Software-Building-HOWTO <ulink
+url="https://tldp.org/HOWTO/Software-Building-HOWTO.html"/></para>
+
+      <para>이 자료는 리눅스 환경에서 <quote>generic</quote> 유닉스 소프트웨어 패키지를 빌드하고 설치하는 방법을 다루는 종합
+가이드입니다. 작성된 지는 꽤 지났지만, 소프트웨어를 빌드하고 설치하는 데 사용되는 기본적인 기술들을 여전히 잘 요약하여 보여줍니다.</para>
+    </listitem>
+
+    <listitem>
+      <para>Beginner's Guide to Installing from Source <ulink
+url="https://moi.vonos.net/linux/beginners-installing-from-source/"/></para>
+
+      <para>이 가이드는 소스 코드로부터 소프트웨어를 빌드하는 데 필요한 기본 기술과 기법에 대한 유용한 요약을 제공합니다.</para>
+    </listitem>
+
+  <!--
+    <listitem>
+
+      <para>The Essential Pre-Reading Hint
+      <ulink url="&hints-root;essential_prereading.txt"/></para>
+
+      <para>This is an LFS Hint written specifically for users new to Linux.
+      It includes a list of links to excellent sources of information on a
+      wide range of topics. Anyone attempting to install LFS should have an
+      understanding of many of the topics in this hint.</para>
+    </listitem>
+-->
+</itemizedlist>
+
+</sect1>

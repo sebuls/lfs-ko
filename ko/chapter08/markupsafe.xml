@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-markupsafe" role="wrap">
+  <?dbhtml filename="markupsafe.html"?>
+
+  <sect1info condition="script">
+<productname>markupsafe</productname>
+<productnumber>&markupsafe-version;</productnumber> <address>&markupsafe-url;</address></sect1info>
+
+  <title>MarkupSafe-&markupsafe-version;</title>
+
+  <indexterm zone="ch-system-markupsafe">
+    <primary sortas="a-markupsafe">MarkupSafe</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>MarkupSafe는 XML/HTML/XHTML에서 안전한 마크업 문자열을 구현하는 파이썬 모듈입니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+      <seglistitem>
+        <seg>&markupsafe-fin-sbu;</seg>
+        <seg>&markupsafe-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>MarkupSafe 설치</title>
+
+    <para>다음 명령을 사용하여 MarkupSafe를 컴파일:</para>
+
+<screen><userinput remap="make">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput></screen>
+
+    <para>이 패키지에는 테스트 스위트가 없습니다.</para>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">pip3 install --no-index --find-links dist Markupsafe</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-markupsafe" role="content">
+    <title>MarkupSafe 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>
+           /usr/lib/python&python-minor;/site-packages/MarkupSafe-&markupsafe-version;.dist-info
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
+

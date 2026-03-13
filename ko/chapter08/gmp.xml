@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-gmp" role="wrap">
+  <?dbhtml filename="gmp.html"?>
+
+  <sect1info condition="script">
+<productname>gmp</productname> <productnumber>&gmp-version;</productnumber>
+<address>&gmp-url;</address></sect1info>
+
+  <title>GMP-&gmp-version;</title>
+
+  <indexterm zone="ch-system-gmp">
+    <primary sortas="a-GMP">GMP</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>GMP 패키지에는 수학 라이브러리들이 포함되어 있습니다. 여기에는 임의 정밀도 산술 연산(arbitrary precision
+arithmetic)에 유용한 함수들이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gmp-fin-sbu;</seg>
+        <seg>&gmp-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>GMP 설치</title>
+
+    <note>
+      <para>만약 32비트 x86용으로 빌드하고 있지만 64비트 코드를 실행할 수 있는 CPU를 사용 중이고,
+<emphasis>그리고</emphasis> 환경 변수에 <envar>CFLAGS</envar>를 지정했다면, configure
+스크립트는 64비트용으로 설정을 시도하다가 실패할 것입니다. 이를 막으려면 아래의 configure 명령을 <screen role="nodump"><userinput><parameter>ABI=32</parameter> ./configure ...</userinput></screen> 과 함께 호출하십시오.</para>
+    </note>
+
+    <note>
+      <para>GMP의 기본 설정은 호스트 프로세서에 최적화된 라이브러리를 생성합니다. 만약 호스트의 CPU보다 성능이 낮은 프로세서들에 적합한
+라이브러리가 필요하다면, <command>configure</command> 명령에
+<option>--host=none-linux-gnu</option> 옵션을 추가하여 범용(generic) 라이브러리를 구축할 수
+있습니다.</para>
+
+      
+    <!-- To editors: the configure script says "the none host is obsolete,
+           use - -disable-assembly," but don't believe it: with the latter
+           CFLAGS is still automatically set to -march=something.  -->
+</note>
+
+    <para>먼저, gcc-15 및 그 이후 버전과의 호환성을 위해 설정을 조정:</para>
+
+<screen><userinput remap="pre">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput></screen>
+
+    <para>GMP 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr    \
+            --enable-cxx     \
+            --disable-static \
+            --docdir=/usr/share/doc/gmp-&gmp-version;</userinput></screen>
+
+    <variablelist>
+      <title>새 configure 옵션 뜻:</title>
+
+      <varlistentry>
+        <term><parameter>--enable-cxx</parameter></term>
+        <listitem>
+          <para>이 매개변수는 C++ 지원을 가능하게 함</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--docdir=/usr/share/doc/gmp-&gmp-version;</parameter></term>
+        <listitem>
+          <para>이 변수는 문서(documentation)가 저장될 올바른 위치를 지정합니다.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>패키지를 컴파일하고 HTML 문서를 생성:</para>
+
+<screen><userinput remap="make">make
+make html</userinput></screen>
+
+    <important>
+      <para>이 섹션에 있는 GMP 테스트 스위트는 매우 중요한(critical) 것으로 간주됩니다. 어떤 상황에서도 이 단계를 건너뛰지 마시오.</para>
+    </important>
+
+    <para>결과 테스트:</para>
+
+<screen><userinput remap="test">make check 2>&amp;1 | tee gmp-check-log</userinput></screen>
+
+    <caution><para>GMP 코드는 빌드되는 프로세서에 고도로 최적화되어 있습니다. 때때로 프로세서를 감지하는 코드가 시스템 성능을 잘못 식별하여, 테스트나
+GMP 라이브러리를 사용하는 다른 애플리케이션에서 <computeroutput>Illegal
+instruction</computeroutput> 메시지와 함께 오류가 발생할 수 있습니다. 이 경우, GMP를
+<option>--host=none-linux-gnu</option> 옵션과 함께 다시 설정(reconfigure)하고 다시 빌드해야
+합니다.</para></caution>
+
+    
+    <!-- Some tests PASS on a specific uarch but SKIP on other CPUs.
+         For example on K8 the following command outputs 200.  -->
+<para>테스트 스위트에서 최소 199개의 테스트가 통과되었는지 확인하십시오. 다음 명령을 실행하여 결과를 확인:</para>
+
+<screen><userinput remap="test">awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log</userinput></screen>
+
+    <para>패키지 및 문서 설치:</para>
+
+<screen><userinput remap="install">make install
+make install-html</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-gmp" role="content">
+    <title>GMP 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>Installed libraries</segtitle>
+      <segtitle>설치된 디렉터리</segtitle>
+
+      <seglistitem>
+        <seg>libgmp.so 및 libgmpxx.so</seg>
+        <seg>/usr/share/doc/gmp-&gmp-version;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libgmp">
+        <term><filename class="libraryfile">libgmp</filename></term>
+        <listitem>
+          <para>고정밀 수학 함수를 포함</para>
+          <indexterm zone="ch-system-gmp libgmp">
+            <primary sortas="c-libgmp">libgmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libgmpxx">
+        <term><filename class="libraryfile">libgmpxx</filename></term>
+        <listitem>
+          <para>C++ 고정밀 수학 함수를 포함</para>
+          <indexterm zone="ch-system-gmp libgmpxx">
+            <primary sortas="c-libgmpxx">libgmpxx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </sect2>
+
+</sect1>

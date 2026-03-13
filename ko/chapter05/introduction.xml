@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-introduction">
+  <?dbhtml filename="introduction.html"?>
+
+  <title>소개</title>
+
+  <para>이 장에서는 크로스 컴파일러와 그와 관련된 도구들을 빌드하는 방법을 보여줍니다. 여기서는 크로스 컴파일을 가상으로 흉내 내어 진행하지만,
+그 원리는 실제 크로스 툴체인을 만드는 것과 동일합니다.</para>
+
+  <para>이 장에서 컴파일한 프로그램들은 <filename class="directory">$LFS/tools</filename> 디렉터리 아래에
+설치해서, 다음 장들에서 설치할 파일들과 분리할 것입니다. 반면, 라이브러리들은 우리가 구축하고자 하는 시스템에 속하므로 최종 위치에
+설치합니다.</para>
+
+</sect1>

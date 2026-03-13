@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-partitioning-creatingpartition">
+  <?dbhtml filename="creatingpartition.html"?>
+
+  <title>새 파티션 만들기</title>
+
+  <para>대부분의 다른 운영 체제와 마찬가지로, LFS는 보통 전용 파티션에 설치됩니다. LFS 시스템을 빌드할 때 권장하는 접근 방식은 사용
+가능한 빈 파티션을 사용하거나, 파티션 안 된 공간이 충분하다면 새로 만드는 것입니다.</para>
+
+  <para>최소 시스템을 구축하려면 약 10GB 파티션이 필요합니다. 이 정도면 모든 소스 타르볼(tarball)을 저장하고 패키지를 컴파일하기에
+충분합니다. 그러나, LFS 시스템을 주 리눅스 시스템으로 사용할 계획이라면, 추가 소프트웨어를 설치하게 될 것이므로 더 많은 공간이
+필요할 것입니다. 향후 확장을 고려하면 30GB 정도의 파티션 크기가 적당합니다. LFS 시스템 자체가 이만큼의 공간을 모두 차지하지는
+않습니다. 이러한 요구 공간의 상당 부분은 충분한 임시 저장 공간을 확보하고, LFS 구축을 완료한 후 추가 기능을 더하기 위한
+용도입니다. 또한, 패키지를 컴파일할 때 많은 디스크 공간이 필요할 수 있지만, 이는 패키지 설치가 끝난 후 다시 확보됩니다.</para>
+
+  <para>컴파일 과정에서 사용할 수 있는 RAM(Random Access Memory)이 늘 충분한 건 아니므로, 작은 디스크 파티션을
+<systemitem class="filesystem">swap</systemitem> 공간으로 사용하는 것이 좋습니다. 커널은 이를
+이용해 자주 사용하지 않는 데이터를 저장하고, 활성화된 프로세스가 더 많은 메모리를 사용할 수 있도록 여유 공간을 확보합니다. LFS
+시스템용 <systemitem class="filesystem">swap</systemitem> 파티션은 호스트 시스템에서 사용하는 것과
+똑같은 것을 쑬 수 있으며, 이 경우 별도의 파티션을 추가로 만들지 않아도 됩니다.</para>
+
+  <para>새 파티션을 생성할 하드 디스크의 이름을 명령줄 옵션으로 지정하여 <command>cfdisk</command> 또는
+<command>fdisk</command> 같은 디스크 파티션 프로그램을 실행합니다. 예를 들어, 기본 디스크 드라이브라면
+<filename class="devicefile">/dev/sda</filename> 를 입력합니다. 그다음 리눅스 기본(native)
+파티션과, 필요한 경우 <systemitem class="filesystem">swap</systemitem> 파티션을 만드십세오. 해당
+프로그램의 사용법을 아직 잘 모르다면 <ulink role='man' url='&man;cfdisk.8'>cfdisk(8)</ulink>
+또는 <ulink role='man' url='&man;fdisk.8'>fdisk(8)</ulink> 페이지를 참조하십시오.</para>
+
+  <note><para>숙련된 사용자의 경우, 다른 파티션 구성 체계도 가능합니다. 새로운 LFS 시스템을 소프트웨어 <ulink
+url="&blfs-book;postlfs/raid.html">RAID</ulink> 어레이 또는 <ulink
+url="&blfs-book;postlfs/aboutlvm.html">LVM</ulink> 논리 볼륨 위에 구축할 수 있습니다. 그러나,
+이런 옵션 중 일부는 고급 주제인 <ulink
+url="&blfs-book;postlfs/initramfs.html">initramfs</ulink> 필요 합니다. 이런 파티션 구성
+방법론은 LFS를 처음 접하는 사용자에게는 권장 안 합니다.</para></note>
+
+  <para>새로 만든 파티션의 명칭(예: <filename class="devicefile">sda5</filename>)을 기억하십시오. 이
+책에서는 이를 LFS 파티션이라고 부를 것입니다. 또한 <systemitem
+class="filesystem">swap</systemitem> 파티션 명칭도 기억하십시오. 이 이름은 나중에
+<filename>/etc/fstab</filename> 파일을 작성할 때 필요합니다.</para>
+
+  <sect2>
+  <title>다른 파티션 문제</title>
+
+  <para>시스템 파티션 분할에 대한 조언을 구하는 글이 LFS 메일링 리스트에 자주 올라옵니다. 이는 매우 주관적인 주제입니다. 대부분의 배포판은
+하나의 작은 스왑(swap) 파티션을 제외하고 드라이브 전체를 사용하는 것을 기본값으로 합니다. 여러 이유로 인해 LFS에는 이 방식이
+최적은 아닙니다. 이 방식은 유연성을 떨어뜨리고, 여러 배포판이나 LFS 빌드 간의 데이터 공유를 더 어렵게 만들며, 백업 시간을
+늘리고, 파일 시스템 구조의 비효율적인 할당으로 인해 디스크 공간을 낭비할 수 있습니다.</para>
+
+    <sect3>
+    <title>Root 파티션</title>
+
+    <para>A root LFS partition (not to be confused with the <filename
+class="directory">/root</filename> directory) of twenty gigabytes is a good
+compromise for most systems.  It provides enough space to build LFS and most
+of BLFS, but is small enough so that multiple partitions can be easily
+created for experimentation.</para> </sect3>
+
+    <sect3>
+    <title>The Swap Partition</title>
+
+    <para>Most distributions automatically create a swap partition.  Generally the
+recommended size of the swap partition is about twice the amount of physical
+RAM, however this is rarely needed.  If disk space is limited, hold the swap
+partition to two gigabytes and monitor the amount of disk swapping.</para>
+
+    <para>If you want to use the hibernation feature (suspend-to-disk) of Linux, it
+writes out the contents of RAM to the swap partition before turning off the
+machine. In this case the size of the swap partition should be at least as
+large as the system's installed RAM.</para>
+
+    <para>Swapping is never good. For mechanical hard drives you can generally tell if
+a system is swapping by just listening to disk activity and observing how
+the system reacts to commands. With an SSD you will not be able to hear
+swapping, but you can tell how much swap space is being used by running the
+<command>top</command> or <command>free</command> programs.  Use of an SSD
+for a swap partition should be avoided if possible.  The first reaction to
+swapping should be to check for an unreasonable command such as trying to
+edit a five gigabyte file. If swapping becomes a normal occurrence, the best
+solution is to purchase more RAM for your system.</para> </sect3>
+
+    <sect3>
+    <title>GRUB BIOS 파티션</title>
+
+    <para>If the <emphasis>boot disk</emphasis> has been partitioned with a GUID
+Partition Table (GPT), then a small, typically 1 MB, partition must be
+created if it does not already exist.  This partition is not formatted, but
+must be available for GRUB to use during installation of the boot
+loader. This partition will normally be labeled 'BIOS Boot' if using
+<command>fdisk</command> or have a code of <emphasis>EF02</emphasis> if
+using the <command>gdisk</command> command.</para>
+
+    <note><para>Grub Bios 파티션은 BIOS가 시스템 부팅용으로 사용하는 드라이브에 있어야 합니다. 이 드라이브가 반드시 LFS 루트 파티션이
+들어있는 드라이브일 필요는 없습니다. 시스템의 디스크들은 서로 다른 파티션 테이블 유형을 사용할 수 있습니다. Grub Bios 파티션의
+필요성은 오직 부트 디스크의 파티션 테이블 유형에 따라 결정됩니다.</para></note>
+    </sect3>
+
+    <sect3>
+    <title>Convenience Partitions</title>
+
+    <para>There are several other partitions that are not required, but should be
+considered when designing a disk layout.  The following list is not
+comprehensive, but is meant as a guide.</para>
+
+    <itemizedlist>
+
+      <listitem><para>/boot &ndash; Highly recommended.  Use this partition to store kernels and
+other booting information.  To minimize potential boot problems with larger
+disks, make this the first physical partition on your first disk drive.  A
+partition size of 200 megabytes is adequate.</para></listitem>
+
+      <listitem><para>/boot/efi &ndash; The EFI System Partition, which is needed for booting the
+system with UEFI.  Read <ulink url="&blfs-book;postlfs/grub-setup.html">the
+BLFS page</ulink> for details.</para></listitem>
+
+      <listitem><para>/home &ndash; Highly recommended.  Share your home directory and user
+customization across multiple distributions or LFS builds.  The size is
+generally fairly large and depends on available disk space.</para></listitem>
+
+      <listitem><para>/usr &ndash; In LFS, <filename class="directory">/bin</filename>, <filename
+class="directory">/lib</filename>, and <filename
+class="directory">/sbin</filename> are symlinks to their counterparts in
+<filename class="directory">/usr</filename>.  So <filename
+class="directory">/usr</filename> contains all the binaries needed for the
+system to run.  For LFS a separate partition for <filename
+class="directory">/usr</filename> is normally not needed.  If you create it
+anyway, you should make a partition large enough to fit all the programs and
+libraries in the system. The root partition can be very small (maybe just
+one gigabyte) in this configuration, so it's suitable for a thin client or
+diskless workstation (where <filename class="directory">/usr</filename> is
+mounted from a remote server). However, you should be aware that an
+initramfs (not covered by LFS) will be needed to boot a system with a
+separate <filename class="directory">/usr</filename> partition.</para></listitem>
+
+      <listitem><para>/opt &ndash; This directory is most useful for BLFS, where multiple large
+packages like KDE or Texlive can be installed without embedding the files in
+the /usr hierarchy.  If used, 5 to 10 gigabytes is generally adequate.</para>
+      </listitem>
+
+      <listitem revision='sysv'><para>/tmp &ndash; A separate /tmp partition is rare, but useful if configuring a
+thin client.  This partition, if used, will usually not need to exceed a
+couple of gigabytes.  If you have enough RAM, you can mount a <systemitem
+class='filesystem'>tmpfs</systemitem> on /tmp to make access to temporary
+files faster.</para></listitem>
+
+      <listitem revision='systemd'><para>/tmp &ndash; By default, systemd mounts a <systemitem
+class='filesystem'>tmpfs</systemitem> here.  If you want to override that
+behavior, follow <xref linkend='systemd-no-tmpfs'/> when configuring the LFS
+system.</para></listitem>
+
+      <listitem><para>/usr/src &ndash; This partition is very useful for providing a location to
+store BLFS source files and share them across LFS builds. It can also be
+used as a location for building BLFS packages. A reasonably large partition
+of 30-50 gigabytes provides plenty of room.</para></listitem>
+
+    </itemizedlist>
+
+    <para>Any separate partition that you want automatically mounted when the system
+starts must be specified in the <filename>/etc/fstab</filename> file.
+Details about how to specify partitions will be discussed in <xref
+linkend="ch-bootable-fstab"/>.</para>
+
+    </sect3>
+  </sect2>
+</sect1>

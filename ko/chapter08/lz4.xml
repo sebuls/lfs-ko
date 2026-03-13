@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-lz4" role="wrap">
+  <?dbhtml filename="lz4.html"?>
+
+  <sect1info condition="script">
+<productname>Lz4</productname> <productnumber>&lz4-version;</productnumber>
+<address>&lz4-url;</address></sect1info>
+
+  <title>Lz4-&lz4-version;</title>
+
+  <indexterm zone="ch-system-lz4">
+    <primary sortas="a-lz4">Lz4</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Lz4는 무손실 압축 알고리즘으로, 코어당 500 MB/s 이상의 압축 속도를 제공합니다. 또한 코어당 초당 수 GB에 달하는 매우 빠른
+디코더 성능이 특징입니다. Lz4는 Zstandard와 함께 작동하여 두 알고리즘 모두 데이터를 더 빠르게 압축할 수 있도록 돕습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&lz4-fin-sbu;</seg>
+        <seg>&lz4-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Lz4 설치</title>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make BUILD_STATIC=no PREFIX=/usr</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+    
+
+<screen><!-- This needs to be done at -j1 because otherwise test files do not
+         get generated correctly. -->
+<userinput remap="test">make -j1 check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make BUILD_STATIC=no PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-lz4" role="content">
+    <title>Lz4 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+      <segtitle>설치된 라이브러리</segtitle>
+
+      <seglistitem>
+        <seg>lz4, lz4c (link to lz4), lz4cat (link to lz4), 및 unlz4 (link to lz4)
+        </seg>
+
+        <seg>liblz4.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="lz4">
+        <term><command>lz4</command></term>
+        <listitem>
+          <para>Lz4 형식 사용한 파일 압축 또는 해제</para>
+          <indexterm zone="ch-system-lz4 lz4">
+            <primary sortas="b-lz4">lz4</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lz4c">
+        <term><command>lz4c</command></term>
+        <listitem>
+          <para>LZ4 형식 사용한 파일 압축</para>
+          <indexterm zone="ch-system-lz4 lz4c">
+            <primary sortas="b-lz4c">lz4c</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lz4cat">
+        <term><command>lz4cat</command></term>
+        <listitem>
+          <para>LZ4 사용한 압축된 파일의 내용 나열</para>
+          <indexterm zone="ch-system-lz4 lz4cat">
+            <primary sortas="b-lz4cat">lz4cat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="unlz4">
+        <term><command>unlz4</command></term>
+        <listitem>
+          <para>LZ4 형식 사용 파일 압축해제</para>
+          <indexterm zone="ch-system-lz4 unlz4">
+             <primary sortas="b-unlz4">unlz4</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="liblz4">
+        <term><filename class="libraryfile">liblz4</filename></term>
+        <listitem>
+          <para>LZ4 알고리즘을 사용하여 무손실 데이터 압축을 구현하는 라이브러리</para>
+          <indexterm zone="ch-system-lz4 liblz4">
+            <primary sortas="c-liblz4">liblz4</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

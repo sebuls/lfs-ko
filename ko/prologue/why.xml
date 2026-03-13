@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-why">
+  <?dbhtml filename="package-choices.html"?>
+
+  <title>이 책에 있는 패키지 선정근거</title>
+
+    <para>LFS의 목표는 자기 자신을 복제하는 데 필요한 모든 패키지를 포함하여, 완전하고 사용 가능한 기초 수준의 시스템을 빌드하는
+것입니다. 또한 사용자의 선택에 따라 더 완전한 시스템으로 커스터마이징할 수 있는 비교적 최소한의 베이스를 제공합니다. 이것이 LFS가
+가능한 가장 작은 시스템이라는 뜻은 아닙니다. 엄격히 말해 필수적이지 않은 몇몇 중요한 패키지들도 포함되어 있습니다. 아래 목록은 이
+책에 들어간 각 패키지 선정 이유입니다.</para>
+
+    <itemizedlist>
+
+      <listitem>
+        <para>Acl</para>
+
+        <para>이 패키지에는 액세스 제어 목록(ACL)을 관리하는 유틸리티가 들어있습니다. ACL은 파일과 디렉터리에 대해 세밀하고 자유로운 액세스
+권한을 정의하는 데 사용됩니다.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Attr</para>
+
+        <para>이 패키지에는 파일 시스템 객체의 확장 속성(extended attributes)을 관리하는 프로그램이 들어있습니다.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Autoconf</para>
+
+        <para>이 패키지에는 개발자의 템플릿으로부터 소스 코드를 자동으로 설정할 수 있는 셸 스크립트를 생성하는 프로그램이 들어있습니다. 보통 빌드
+절차가 업데이트된 후 패키지를 다시 빌드할 때 필요합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Automake</para>
+
+        <para>이 패키지에는 템플릿으로부터 메이크 파일(Make file)을 생성하는 프로그램이 들어있습니다. 보통 빌드 절차가 업데이트된 후 패키지를
+재빌드할 때 필요합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Bash</para>
+
+        <para>이 패키지는 시스템에 본 셸(Bourne Shell) 인터페이스를 제공해야 한다는 LSB 핵심 요구 사항을 충족합니다. 다른 셸
+패키지들다 이 패키지를 선택한 이유는 널리 사용되기도 하고 기능이 광범위하기 때문입니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Bc</para>
+
+        <para>이 패키지에는 임의 정밀도 숫자 처리 언어가 들어있습니다. 이 패키지는 리눅스 커널을 빌드하는 데 필요한 요구 사항을 충족합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Binutils</para>
+
+        <para>이 패키지에는 링커, 어셈블러, 그리고 오브젝트 파일을 다루는 기타 도구들이 들어있습니다. 이 패키지에 들어있는 프로그램들은 LFS
+시스템의 패키지 대부분을 컴파일하는 데 필요합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Bison</para>
+
+        <para>이 패키지에는 여러 LFS 프로그램을 빌드하는 데 필요한 GNU 버전 yacc(Yet Another Compiler Compiler)가
+들어있습니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Bzip2</para>
+
+        <para>이 패키지에는 파일을 압축하고 푸는 프로그램이 들어있습니다. 많은 LFS 패키지의 압축을 푸는 데 이 패키지가 필요합니다.</para>
+      </listitem>
+
+      <!--
+      <listitem>
+
+        <para>Check</para>
+
+        <para>This package provides a test harness for other programs.</para>
+      </listitem>
+-->
+<listitem>
+        <para>Coreutils</para>
+
+        <para>이 패키지에는 파일과 디렉터리를 보고 조작하는 데 필요한 여러 필수 프로그램이 들어있습니다. 이 프로그램들은 명령행 파일 관리에
+필요하며, LFS의 모든 패키지 설치 절차에 필수적입니다.</para>
+      </listitem>
+
+      <listitem revision="systemd">
+        <para>D-Bus</para>
+
+        <para>이 패키지에는 애플리케이션들이 서로 대화할 수 있는 간단한 방법인 메시지 버스 시스템을 구현하는 프로그램이 들어있습니다.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>DejaGNU</para>
+
+        <para>이 패키지에는 다른 프로그램 테스트용 프레임워크가 들어있습니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Diffutils</para>
+
+        <para>이 패키지에는 파일이나 디렉터리 사이의 차이점을 보여주는 프로그램이 들어있습니다. 이 프로그램은 패치 생성용으로 사용할 수 있으며, 많은
+패키지의 빌드 절차에서도 사용됩니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>E2fsprogs</para>
+
+        <para>이 패키지에는 ext2, ext3, ext4 파일 시스템 관리용 유틸리티가 들어있습니다. 이 파일 시스템들은 리눅스가 지원하는 가장
+일반적이고 철저하게 검증된 파일 시스템입니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Expat</para>
+
+        <para>이 패키지에는 비교적 작은 XML 파싱 라이브러리가 들어있습니다. 이 라이브러리는 XML::Parser Perl 모듈에 필요합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Expect</para>
+
+        <para>이 패키지에는 다른 대화형 프로그램과 스크립트 기반 대화를 수행하는 프로그램이 들어있습니다. 보통 다른 패키지 테스트용으로 쓰입니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>File</para>
+
+        <para>This package contains a utility for determining the type of a given file or
+files. A few packages need it in their build scripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Findutils</para>
+
+        <para>This package provides programs to find files in a file system.  It is used
+in many packages' build scripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Flex</para>
+
+        <para>This package contains a utility for generating programs that recognize
+patterns in text.  It is the GNU version of the lex (lexical analyzer)
+program.  It is required to build several LFS packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Gawk</para>
+
+        <para>This package supplies programs for manipulating text files.  It is the GNU
+version of awk (Aho-Weinberg-Kernighan). It is used in many other packages'
+build scripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>GCC</para>
+
+        <para>This is the Gnu Compiler Collection.  It contains the C and C++ compilers as
+well as several others not built by LFS.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>GDBM</para>
+
+        <para>This package contains the GNU Database Manager library.  It is used by one
+other LFS package, Man-DB.</para>
+      </listitem>
+
+      <listitem>
+        <para>Gettext</para>
+
+        <para>This package provides utilities and libraries for the internationalization
+and localization of many packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Glibc</para>
+
+        <para>This package contains the main C library.  Linux programs will not run
+without it.</para>
+      </listitem>
+
+      <listitem>
+        <para>GMP</para>
+
+        <para>This package supplies math libraries that provide useful functions for
+arbitrary precision arithmetic.  It is needed to build GCC.</para>
+      </listitem>
+
+      <listitem>
+        <para>Gperf</para>
+
+        <para>This package produces a program that generates a perfect hash function from
+a set of keys. It is required by <phrase revision='sysv'>Udev</phrase>
+<phrase revision='systemd'>Systemd</phrase>.</para>
+      </listitem>
+
+      <listitem>
+        <para>Grep</para>
+
+        <para>This package contains programs for searching through files. These programs
+are used by most packages' build scripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Groff</para>
+
+        <para>This package contributes programs for processing and formatting text.  One
+important function of these programs is to format man pages.</para>
+      </listitem>
+
+      <listitem>
+        <para>GRUB</para>
+
+        <para>This is the Grand Unified Boot Loader.  It is the most flexible of several
+boot loaders available.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Gzip</para>
+
+        <para>This package contains programs for compressing and decompressing files. It
+is needed to decompress many packages in LFS.</para>
+      </listitem>
+
+      <listitem>
+        <para>Iana-etc</para>
+
+        <para>This package provides data for network services and protocols.  It is needed
+to enable proper networking capabilities.</para>
+      </listitem>
+
+      <listitem>
+        <para>Inetutils</para>
+
+        <para>This package supplies programs for basic network administration.</para>
+      </listitem>
+
+      <listitem>
+        <para>Intltool</para>
+
+        <para>This package contributes tools for extracting translatable strings from
+source files.</para>
+      </listitem>
+
+      <listitem>
+        <para>IProute2</para>
+
+        <para>This package contains programs for basic and advanced IPv4 and IPv6
+networking.  It was chosen over the other common network tools package
+(net-tools) for its IPv6 capabilities.  </para>
+      </listitem>
+
+      <listitem revision="systemd">
+        <para>Jinja2</para>
+
+        <para>This package is a Python module for text templating.  It's required to build
+Systemd.</para>
+      </listitem>
+
+      <listitem>
+        <para>Kbd</para>
+
+        <para>This package produces key-table files, keyboard utilities for non-US
+keyboards, and a number of console fonts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Kmod</para>
+
+        <para>This package supplies programs needed to administer Linux kernel modules.</para>
+      </listitem>
+
+      <listitem>
+        <para>Less</para>
+
+        <para>This package contains a very nice text file viewer that allows scrolling up
+or down when viewing a file.  Many packages use it for paging the output.</para>
+      </listitem>
+
+      <listitem>
+        <para>Libcap</para>
+
+        <para>This package implements the userspace interfaces to the POSIX 1003.1e
+capabilities available in Linux kernels.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>Libelf</para>
+
+        <para>The elfutils project provides libraries and tools for ELF files and DWARF
+data.  Most utilities in this package are available in other packages, but
+the library is needed to build the Linux kernel using the default (and most
+efficient) configuration.</para>
+
+      </listitem>
+
+      <listitem>
+        <para>Libffi</para>
+
+        <para>This package implements a portable, high level programming interface to
+various calling conventions.  Some programs may not know at the time of
+compilation what arguments are to be passed to a function. For instance, an
+interpreter may be told at run-time about the number and types of arguments
+used to call a given function. Libffi can be used in such programs to
+provide a bridge from the interpreter program to compiled code.</para>
+
+      </listitem>
+
+      <listitem>
+        <para>Libpipeline</para>
+
+        <para>The Libpipeline package supplies a library for manipulating pipelines of
+subprocesses in a flexible and convenient way. It is required by the Man-DB
+package.</para>
+      </listitem>
+
+      <listitem>
+        <para>Libtool</para>
+
+        <para>This package contains the GNU generic library support script. It wraps the
+complexity of using shared libraries into a consistent, portable interface.
+It is needed by the test suites in other LFS packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Libxcrypt</para>
+
+        <para>This package provides the <systemitem class='library'>libcrypt</systemitem>
+library needed by various packages (notably, Shadow) for hashing passwords.
+It replaces the obsolete <systemitem class='library'>libcrypt</systemitem>
+implementation in Glibc.</para>
+      </listitem>
+
+      <listitem>
+        <para>Linux Kernel</para>
+
+        <para>This package is the Operating System.  It is the Linux in the GNU/Linux
+environment.</para>
+      </listitem>
+
+      <listitem>
+        <para>M4</para>
+
+        <para>This package provides a general text macro processor useful as a build tool
+for other programs.</para>
+      </listitem>
+
+      <listitem>
+        <para>Make</para>
+
+        <para>This package contains a program for directing the building of packages.  It
+is required by almost every package in LFS.</para>
+      </listitem>
+
+      <listitem revision="systemd">
+        <para>MarkupSafe</para>
+
+        <para>이 패키지는 HTML/XHTML/XML 내의 문자열을 안전하게 처리하기 위한 파이썬 모듈입니다. Jinja2를 빌드하기 위해서는 이
+패키지가 반드시 필요합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>Man-DB</para>
+
+        <para>This package contains programs for finding and viewing man pages.  It was
+chosen instead of the <application>man</application> package because of its
+superior internationalization capabilities.  It supplies the man program.</para>
+      </listitem>
+
+      <listitem>
+        <para>Man-pages</para>
+
+        <para>This package provides the actual contents of the basic Linux man pages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Meson</para>
+
+        <para>This package provides a software tool for automating the building of
+software. The main goal of Meson is to minimize the amount of time that
+software developers need to spend configuring a build system.  It's required
+to build Systemd, as well as many BLFS packages.</para>
+
+      </listitem>
+
+      <listitem>
+        <para>MPC</para>
+
+        <para>This package supplies arithmetic functions for complex numbers. It is
+required by GCC.</para>
+      </listitem>
+
+      <listitem>
+        <para>MPFR</para>
+
+        <para>This package contains functions for multiple precision arithmetic.  It is
+required by GCC.</para>
+      </listitem>
+
+      <listitem>
+        <para>Ninja</para>
+
+        <para>This package furnishes a small build system with a focus on speed.  It is
+designed to have its input files generated by a higher-level build system,
+and to run builds as fast as possible.  This package is required by Meson.</para>
+
+      </listitem>
+
+      <listitem>
+        <para>Ncurses</para>
+
+        <para>This package contains libraries for terminal-independent handling of
+character screens.  It is often used to provide cursor control for a menuing
+system. It is needed by a number of the packages in LFS.</para>
+      </listitem>
+
+      <listitem>
+        <para>Openssl</para>
+
+        <para>This package provides management tools and libraries relating to
+cryptography. These supply cryptographic functions to other packages,
+including the Linux kernel.</para>
+      </listitem>
+
+      <listitem>
+        <para>Patch</para>
+
+        <para>This package contains a program for modifying or creating files by applying
+a <emphasis>patch</emphasis> file typically created by the
+<application>diff</application> program.  It is needed by the build
+procedure for several LFS packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Pcre2</para>
+
+        <para>This package provides a set of functions that implement regular expression
+pattern matching using the same syntax and semantics as Perl 5.</para>
+      </listitem>
+
+      <listitem>
+        <para>Perl</para>
+
+        <para>This package is an interpreter for the runtime language PERL. It is needed
+for the installation and test suites of several LFS packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Pkgconf</para>
+
+        <para>This package contains a program which helps to configure compiler and linker
+flags for development libraries.  The program can be used as a drop-in
+replacement of <command>pkg-config</command>, which is needed by the
+building system of many packages.  It's maintained more actively and
+slightly faster than the original Pkg-config package.</para>
+      </listitem>
+
+      <listitem>
+        <para>Procps-NG</para>
+
+        <para>This package contains programs for monitoring processes. These programs are
+useful for system administration, and are also used by the LFS Bootscripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Psmisc</para>
+
+        <para>This package produces programs for displaying information about running
+processes. These programs are useful for system administration.</para>
+      </listitem>
+
+      <listitem>
+        <para>Python 3</para>
+
+        <para>This package provides an interpreted language that has a design philosophy
+emphasizing code readability.</para>
+
+      </listitem>
+
+      <listitem>
+        <para>Readline</para>
+
+        <para>This package is a set of libraries that offer command-line editing and
+history capabilities.  It is used by Bash.</para>
+      </listitem>
+
+      <listitem>
+        <para>Sed</para>
+
+        <para>This package allows editing of text without opening it in a text editor. It
+is also needed by many LFS packages' configure scripts.</para>
+      </listitem>
+
+      <listitem>
+        <para>Shadow</para>
+
+        <para>This package contains programs for handling passwords securely.</para>
+      </listitem>
+
+      <listitem>
+        <para>Sqlite</para>
+
+        <para>This package provides a serverless, zero-configuration, transactional SQL
+database engine.</para>
+      </listitem>
+
+      <listitem revision="sysv">
+        <para>Sysklogd</para>
+
+        <para>This package supplies programs for logging system messages, such as those
+emitted by the kernel or daemon processes when unusual events occur.</para>
+      </listitem>
+
+      <listitem revision="systemd">
+        <para>Systemd</para>
+
+        <para>This package provides an <application>init</application> program and several
+additional boot and system control capabilities as an alternative to
+SysVinit.  It is used by many Linux distributions.
+        </para>
+      </listitem>
+
+      <listitem revision="sysv">
+        <para>SysVinit</para>
+
+        <para>This package provides the <application>init</application> program, the
+parent of all the other processes on a running Linux system. </para>
+      </listitem>
+
+      <listitem revision="sysv">
+        <para>Udev</para>
+
+        <para>This package is a device manager.  It dynamically controls the ownership,
+permissions, names, and symbolic links of device nodes in the /dev directory
+when devices are added to or removed from the system.</para>
+      </listitem>
+
+      <listitem>
+        <para>Tar</para>
+
+        <para>This package provides archiving and extraction capabilities of virtually all
+the packages used in LFS.</para>
+      </listitem>
+
+      <listitem>
+        <para>Tcl</para>
+
+        <para>This package contains the Tool Command Language used in many test suites.</para>
+      </listitem>
+
+      <listitem>
+        <para>Texinfo</para>
+
+        <para>This package supplies programs for reading, writing, and converting info
+pages.  It is used in the installation procedures of many LFS packages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Util-linux</para>
+
+        <para>This package contains miscellaneous utility programs.  Among them are
+utilities for handling file systems, consoles, partitions, and messages.</para>
+      </listitem>
+
+      <listitem>
+        <para>Vim</para>
+
+        <para>This package provides an editor. It was chosen because of its compatibility
+with the classic vi editor and its huge number of powerful capabilities.  An
+editor is a very personal choice for many users. Any other editor can be
+substituted, if you wish.</para>
+      </listitem>
+      
+      <listitem>
+        <para>Wheel</para>
+
+        <para>This package supplies a Python module that is the reference implementation
+of the Python wheel packaging standard.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>XML::Parser</para>
+
+        <para>This package is a Perl module that interfaces with Expat.</para>
+      </listitem>
+
+      <listitem>
+        <para>XZ Utils</para>
+
+        <para>This package contains programs for compressing and decompressing files.  It
+provides the highest compression generally available and is useful for
+decompressing packages in XZ or LZMA format.</para>
+      </listitem>
+
+      <listitem>
+        <para>Zlib</para>
+
+        <para>This package contains compression and decompression routines used by some
+programs.</para>
+      </listitem>
+
+      <listitem>
+        <para>Zstd</para>
+
+        <para>This package supplies compression and decompression routines used by some
+programs. It provides high compression ratios and a very wide range of
+compression / speed trade-offs.</para>
+      </listitem>
+
+    </itemizedlist>
+
+</sect1>
+

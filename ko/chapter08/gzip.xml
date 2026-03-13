@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-gzip" role="wrap">
+  <?dbhtml filename="gzip.html"?>
+
+  <sect1info condition="script">
+<productname>gzip</productname>
+<productnumber>&gzip-version;</productnumber> <address>&gzip-url;</address></sect1info>
+
+  <title>Gzip-&gzip-version;</title>
+
+  <indexterm zone="ch-system-gzip">
+    <primary sortas="a-Gzip">Gzip</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Gzip 패키지에는 파일을 압축하고 압축을 해제하기 위한 프로그램이 들어 있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gzip-fin-sbu;</seg>
+        <seg>&gzip-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Gzip 설치</title>
+
+    <para>Gzip 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-gzip" role="content">
+    <title>Gzip 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>gunzip, gzexe, gzip, uncompress (hard link with gunzip), zcat, zcmp, zdiff,
+zegrep, zfgrep, zforce, zgrep, zless, zmore 및 znew</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="gunzip">
+        <term><command>gunzip</command></term>
+        <listitem>
+          <para>gzip 파일 압축풀기</para>
+          <indexterm zone="ch-system-gzip gunzip">
+            <primary sortas="b-gunzip">gunzip</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gzexe">
+        <term><command>gzexe</command></term>
+        <listitem>
+          <para>Creates self-decompressing executable files</para>
+          <indexterm zone="ch-system-gzip gzexe">
+            <primary sortas="b-gzexe">gzexe</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gzip">
+        <term><command>gzip</command></term>
+        <listitem>
+          <para>Lempel-Ziv(LZ77) 코딩을 사용하여 주어진 파일을 압축</para>
+          <indexterm zone="ch-system-gzip gzip">
+            <primary sortas="b-gzip">gzip</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="uncompress">
+        <term><command>uncompress</command></term>
+        <listitem>
+          <para>압축된 파일 풀기</para>
+          <indexterm zone="ch-system-gzip uncompress">
+            <primary sortas="b-uncompress">uncompress</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zcat">
+        <term><command>zcat</command></term>
+        <listitem>
+          <para>주어진 gzip 압축 파일들의 압축을 해제하여 표준 출력(standard output)으로 내보내기</para>
+          <indexterm zone="ch-system-gzip zcat">
+            <primary sortas="b-zcat">zcat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zcmp">
+        <term><command>zcmp</command></term>
+        <listitem>
+          <para>Runs <command>cmp</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zcmp">
+            <primary sortas="b-zcmp">zcmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zdiff">
+        <term><command>zdiff</command></term>
+        <listitem>
+          <para>Runs <command>diff</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zdiff">
+            <primary sortas="b-zdiff">zdiff</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zegrep">
+        <term><command>zegrep</command></term>
+        <listitem>
+          <para>Runs <command>egrep</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zegrep">
+            <primary sortas="b-zegrep">zegrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zfgrep">
+        <term><command>zfgrep</command></term>
+        <listitem>
+          <para>Runs <command>fgrep</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zfgrep">
+            <primary sortas="b-zfgrep">zfgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zforce">
+        <term><command>zforce</command></term>
+        <listitem>
+          <para>gzip으로 압축된 모든 파일에 강제로 <filename class="extension">.gz</filename> 확장자를 붙여서
+<command>gzip</command>이 해당 파일들을 다시 압축하지 않도록 합니다. 파일 전송 중에 파일 이름이 잘렸을 때
+유용합니다.</para>
+          <indexterm zone="ch-system-gzip zforce">
+            <primary sortas="b-zforce">zforce</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zgrep">
+        <term><command>zgrep</command></term>
+        <listitem>
+          <para>Runs <command>grep</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zgrep">
+            <primary sortas="b-zgrep">zgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zless">
+        <term><command>zless</command></term>
+        <listitem>
+          <para>Runs <command>less</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zless">
+            <primary sortas="b-zless">zless</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="zmore">
+        <term><command>zmore</command></term>
+        <listitem>
+          <para>Runs <command>more</command> on gzipped files</para>
+          <indexterm zone="ch-system-gzip zmore">
+            <primary sortas="b-zmore">zmore</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="znew">
+        <term><command>znew</command></term>
+        <listitem>
+          <para><command>compress</command> 형식 파일을 <command>gzip</command> 형식으로 다시 압축—즉,
+<filename class="extension">.Z</filename> 파일을 <filename
+class="extension">.gz</filename> 파일로 변환</para>
+          <indexterm zone="ch-system-gzip znew">
+            <primary sortas="b-znew">znew</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

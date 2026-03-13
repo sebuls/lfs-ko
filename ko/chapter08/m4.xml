@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-m4" role="wrap">
+  <?dbhtml filename="m4.html"?>
+
+  <sect1info condition="script">
+<productname>m4</productname> <productnumber>&m4-version;</productnumber>
+<address>&m4-url;</address></sect1info>
+
+  <title>M4-&m4-version;</title>
+
+  <indexterm zone="ch-system-m4">
+    <primary sortas="a-M4">M4</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>M4 패키지에는 매크로 프로세서가 들어있습니다.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&m4-fin-sbu;</seg>
+        <seg>&m4-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>M4 설치</title>
+
+    <para>First, make a fix required by glibc-2.43 and later:</para>
+
+<screen><userinput remap="pre">sed -r '/_GL_EXTERN_C/s/w?memchr|bsearch/(&amp;)/' \
+    -i $(find -name \*.in.h)</userinput></screen>
+
+    <para>M4 컴파일 준비하기:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr</userinput></screen>
+
+    <para>패키지 컴파일:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>결과를 테스트하려면 실행:</para>
+
+<screen><userinput remap="test">make check</userinput></screen>
+
+    <para>패키지 설치:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-m4" role="content">
+    <title>M4 구성 요소</title>
+
+    <segmentedlist>
+      <segtitle>설치된 프로그램</segtitle>
+
+      <seglistitem>
+        <seg>m4</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">짧은 설명</bridgehead>
+      <?dbfo list-presentation="list"?> <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="m4">
+         
+        <!-- Don't remove the extra space, it prevet a FOP warning. -->
+<term><command>m4 </command></term>
+        <listitem>
+          <para>주어진 파일들을 복사하면서 그 안에 들어간 매크로를 확장합니다. 이 매크로는 내장되거나 사용자가 정의한 것이며, 개수에 상관없이 인자를
+받을 수 있습니다. 매크로 확장 기능 외에도, <command>m4</command>는 지정된 파일 포함, 유닉스 명령 실행, 정수 산술
+연산, 텍스트 조작, 재귀 등을 처리하는 내장 함수를 가지고 있습니다. <command>m4</command> 프로그램은 컴파일러의
+프런트엔드로 사용되거나 그 자체로 독립적인 매크로 프로세서로 사용될 수 있습니다</para>
+          <indexterm zone="ch-system-m4 m4">
+            <primary sortas="b-m4">m4</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

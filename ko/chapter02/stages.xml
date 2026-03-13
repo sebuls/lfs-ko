@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-partitioning-stages">
+  <?dbhtml filename="stages.html"?>
+
+  <title>스테이지별 LFS 빌드</title>
+
+  <para>LFS는 한 세션 내에서 빌드하도록 설계되었습니다. 즉, 이 지침은 구축 과정 중에 시스템을 종료하지 않는다는 것을 전제로
+합니다. 그렇다고 반드시 한자리에 앉아 한 번에 빌드를 끝내야 한다는 뜻은 아닙니다. 문제는 서로 다른 지점에서 LFS 작업을 재개할
+때, 재부팅 후 특정 절차들을 반드시 다시 반복해야 한다는 점입니다.</para>
+
+  <sect2>
+  <title>제1-4장</title>
+
+    <para>이 장들은 호스트 시스템에서 명령어를 실행합니다. 작업을 다시 시작할 때, 반드시 확인해야 할 한 가지:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>2.4절 이후에 <systemitem class="username">root</systemitem> 사용자로 수행하는 절차들은 반드시
+<emphasis>ROOT 사용자에게</emphasis> LFS 환경 변수가 설정되어 있어야 합니다.</para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+
+  <sect2>
+  <title>제5-6장</title>
+
+    <itemizedlist>
+      <listitem>
+        <para>/mnt/lfs 파티션이 마운트 되어야 합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para>이 두 장은 <emphasis>반드시</emphasis> 사용자 <systemitem
+class="username">lfs</systemitem> 로 진행해야 합니다. <command>su - lfs</command>
+명령어를 이 장들의 작업을 수행하기 전에 반드시 실행해야 합니다. 그렇지 않으면 호스트에 패키지를 설치하게 될 위험이 있으며, 호스트
+시스템을 못 쓰게 될 수도 있습니다.</para>
+      </listitem>
+
+      <listitem>
+         <para><xref linkend='ch-tools-generalinstructions'/>의 절차는 매우 중요합니다. 패키지가 올바르게
+설치되었는지 조금이라도 의심된다면, 이전에 풀었던 타르볼(tarball)을 삭제했는지 확인 후, 다시 압축을 풀고 해당 섹션의 모든
+지침을 완료하십시오.</para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+
+  <sect2>
+  <title>제7-10장</title>
+
+    <itemizedlist>
+      <listitem>
+         <para>/mnt/lfs 파티션이 마운트 되어야 합니다.</para>
+      </listitem>
+
+      <listitem>
+        <para><quote>가상 커널 파일 시스템 구축 준비</quote>부터 <quote>Chroot 환경 진입</quote>까지 몇 가지 작업은
+<systemitem class="username">root</systemitem> 사용자로 수행해야 하며, &root; 사용자에 대해
+LFS 환경 변수가 설정되어 있어야 합니다.</para>
+      </listitem>
+
+      <listitem>
+         <para> chroot 진입할 때, <systemitem class="username">root</systemitem> 사용자에 대해 LFS 환경
+변수가 설정되어 있어야 합니다. chroot 환경에 진입한 후에는 LFS 변수가 사용되지 않습니다.</para>
+      </listitem>
+
+      <listitem>
+         <para> 가상 파일 시스템이 마운트되어야 합니다. 이 작업은 호스트의 가상 터미널로 전환하여 <systemitem
+class="username">root</systemitem> 사용자로 <xref linkend='ch-tools-bindmount'/>
+및 <xref linkend='ch-tools-kernfsmount' role='.'/> 에 나오는 명령을 실행함으로써 chroot
+진입하기 전 또는 후에 수행할 수 있습니다.</para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+</sect1>
