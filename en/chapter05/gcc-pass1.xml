@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-gcc-pass1" role="wrap" xreflabel="gcc-pass1">
+  <?dbhtml filename="gcc-pass1.html"?>
+
+  <sect1info condition="script">
+    <productname>gcc-pass1</productname>
+    <productnumber>&gcc-version;</productnumber>
+    <address>&gcc-url;</address>
+  </sect1info>
+
+  <title>GCC-&gcc-version; - Pass 1</title>
+
+  <indexterm zone="ch-tools-gcc-pass1">
+    <primary sortas="a-GCC">GCC</primary>
+    <secondary>tools, pass 1</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/gcc.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&gcc-tmpp1-sbu;</seg>
+        <seg>&gcc-tmpp1-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Cross GCC</title>
+
+    <para>GCC requires the GMP, MPFR and MPC packages. As these packages may
+    not be included in your host distribution, they will be built with
+    GCC.  Unpack each package into the GCC source directory and rename the
+    resulting directories so the GCC build procedures will automatically
+    use them:</para>
+
+    <note><para>There are frequent misunderstandings about this chapter.  The
+    procedures are the same as every other chapter, as explained earlier (<xref
+    linkend='buildinstr'/>).  First, extract the gcc-&gcc-version; tarball from the sources
+    directory, and then change to the directory created.  Only then should you
+    proceed with the instructions below.</para></note>
+
+<screen><userinput remap="pre">tar -xf ../mpfr-&mpfr-version;.tar.xz
+mv -v mpfr-&mpfr-version; mpfr
+tar -xf ../gmp-&gmp-version;.tar.xz
+mv -v gmp-&gmp-version; gmp
+tar -xf ../mpc-&mpc-version;.tar.gz
+mv -v mpc-&mpc-version; mpc</userinput></screen>
+
+    <para>On x86_64 hosts, set the default directory name for
+    64-bit libraries to <quote>lib</quote>:</para>
+
+<screen><userinput remap="pre">case $(uname -m) in
+  x86_64)
+    sed -e '/m64=/s/lib64/lib/' \
+        -i.orig gcc/config/i386/t-linux64
+ ;;
+esac</userinput></screen>
+
+    <note>
+      <para>
+        This example demonstrates the use of the
+        <parameter>-i.orig</parameter> switch.  It makes the
+        <command>sed</command> copy the <filename>t-linux64</filename> file
+        to <filename>t-linux64.orig</filename>, and then edit the original
+        <filename>t-linux64</filename> file inplace.  So you may run
+        <command>diff -u gcc/config/i386/t-linux64{.orig,}</command>
+        to visualize the change done by the <command>sed</command> command
+        afterwards.  We'll simply use <parameter>-i</parameter> (which just
+        edits the original file inplace without copying it) for all other
+        packages in the book, but you can change it to
+        <parameter>-i.orig</parameter> in any case you want to keep a copy
+        of the original file.
+      </para>
+    </note>
+
+    <para>The GCC documentation recommends building GCC
+    in a dedicated build directory:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <para>Prepare GCC for compilation:</para>
+
+<screen><userinput remap="configure">../configure                  \
+    --target=$LFS_TGT         \
+    --prefix=$LFS/tools       \
+    --with-glibc-version=&glibc-version; \
+    --with-sysroot=$LFS       \
+    --with-newlib             \
+    --without-headers         \
+    --enable-default-pie      \
+    --enable-default-ssp      \
+    --disable-nls             \
+    --disable-shared          \
+    --disable-multilib        \
+    --disable-threads         \
+    --disable-libatomic       \
+    --disable-libgomp         \
+    --disable-libquadmath     \
+    --disable-libssp          \
+    --disable-libvtv          \
+    --disable-libstdcxx       \
+    --enable-languages=c,c++</userinput></screen>
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--with-glibc-version=&glibc-version;</parameter></term>
+        <listitem>
+          <para>This option specifies the version of Glibc which will be
+          used on the target. It is not relevant to the libc of the host
+          distro because everything compiled by pass1 GCC will run in the
+          chroot environment, which is isolated from libc of the host
+          distro.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-newlib</parameter></term>
+        <listitem>
+          <para>Since a working C library is not yet available, this ensures
+          that the inhibit_libc constant is defined when building libgcc. This prevents
+          the compiling of any code that requires libc support.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-headers</parameter></term>
+        <listitem>
+          <para>When creating a complete cross-compiler, GCC requires
+          standard headers compatible with the target system. For our
+          purposes these headers will not be needed. This switch prevents
+          GCC from looking for them.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+      <term><parameter>--enable-default-pie and
+      --enable-default-ssp</parameter></term>
+        <listitem>
+          <para>Those switches allow GCC to compile programs with
+           some hardening security features (more information on those in
+           the <xref linkend="pie-ssp-info"/> in chapter 8) by default. They
+           are not strictly needed at this stage, since the compiler will
+           only produce temporary executables. But it is cleaner to have the
+           temporary packages be as close as possible to the final ones.
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-shared</parameter></term>
+        <listitem>
+          <para>This switch forces GCC to link its internal libraries
+          statically. We need this because the shared libraries require Glibc,
+          which is not yet installed on the target system.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-multilib</parameter></term>
+        <listitem>
+          <para>On x86_64, LFS does not support a multilib configuration.
+          This switch is harmless for x86.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-threads,
+        --disable-libatomic, --disable-libgomp,
+        --disable-libquadmath, --disable-libssp, --disable-libvtv,
+        --disable-libstdcxx</parameter></term>
+        <listitem>
+          <para>These switches disable support for
+          threading, libatomic, libgomp, libquadmath, libssp,
+          libvtv, and the C++ standard library respectively. These features
+          may fail to compile when building a cross-compiler and are not
+          necessary for the task of cross-compiling the temporary libc.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-languages=c,c++</parameter></term>
+        <listitem>
+          <para>This option ensures that only the C and C++ compilers are built.
+          These are the only languages needed now.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Compile GCC by running:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>Install the package:</para>
+
+    <screen><userinput remap="install">make install</userinput></screen>
+
+    <para>This build of GCC has installed a couple of internal system
+    headers.  Normally one of them, <filename>limits.h</filename>, would in turn
+    include the corresponding system <filename>limits.h</filename> header, in
+    this case, <filename>$LFS/usr/include/limits.h</filename>. However, at the
+    time of this build of GCC <filename>$LFS/usr/include/limits.h</filename>
+    does not exist, so the internal header that has just been installed is a
+    partial, self-contained file and does not include the extended features of
+    the system header. This is adequate for building Glibc, but the full
+    internal header will be needed later.  Create a full version of the internal
+    header using a command that is identical to what the GCC build system does
+    in normal circumstances:</para>
+
+    <note>
+      <para>The command below shows an example of nested command substitution
+      using two methods: backquotes and a <literal>$()</literal> construct. 
+      It could be rewritten using the same method for both substitutions,
+      but is shown this way to demonstrate how they can be mixed.  Generally
+      the <literal>$()</literal> method is preferred.</para>
+    </note>
+
+<screen><userinput remap="install">cd ..
+cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
+  `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h</userinput></screen>
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in
+    <xref linkend="contents-gcc" role="."/></para>
+
+  </sect2>
+
+</sect1>

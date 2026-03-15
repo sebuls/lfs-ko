@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-ncurses" role="wrap">
+  <?dbhtml filename="ncurses.html"?>
+
+  <sect1info condition="script">
+    <productname>ncurses</productname>
+    <productnumber>&ncurses-version;</productnumber>
+    <address>&ncurses-url;</address>
+  </sect1info>
+
+  <title>Ncurses-&ncurses-version;</title>
+
+  <indexterm zone="ch-tools-ncurses">
+    <primary sortas="a-Ncurses">Ncurses</primary>
+    <secondary>tools</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/ncurses.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&ncurses-tmp-sbu;</seg>
+        <seg>&ncurses-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Ncurses</title>
+
+    <para>First, run the following commands to build the <command>tic</command>
+      program on the build host. We install it in
+      <filename class="directory">$LFS/tools</filename>, so that it is found
+      in the <envar>PATH</envar> when needed:</para>
+
+<screen><userinput remap="pre">mkdir build
+pushd build
+  ../configure --prefix=$LFS/tools AWK=gawk
+  make -C include
+  make -C progs tic
+  install progs/tic $LFS/tools/bin
+popd</userinput></screen>
+
+    <para>Prepare Ncurses for compilation:</para>
+
+<screen><userinput remap="configure">./configure --prefix=/usr                \
+            --host=$LFS_TGT              \
+            --build=$(./config.guess)    \
+            --mandir=/usr/share/man      \
+            --with-manpage-format=normal \
+            --with-shared                \
+            --without-normal             \
+            --with-cxx-shared            \
+            --without-debug              \
+            --without-ada                \
+            --disable-stripping          \
+            AWK=gawk</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the new configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--with-manpage-format=normal</parameter></term>
+        <listitem>
+          <para>This prevents Ncurses from installing compressed manual
+          pages, which may happen if the host distribution itself
+          has compressed manual pages.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-shared</parameter></term>
+        <listitem>
+          <para>This makes Ncurses build and install shared C libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-normal</parameter></term>
+        <listitem>
+          <para>This prevents Ncurses from building and installing static C
+          libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-debug</parameter></term>
+        <listitem>
+          <para>This prevents Ncurses from building and installing debug
+          libraries.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--with-cxx-shared</parameter></term>
+        <listitem>
+          <para>This makes Ncurses build and install shared C++ bindings. It
+          also prevents it building and installing static C++ bindings.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--without-ada</parameter></term>
+        <listitem>
+          <para>This ensures that Ncurses does not build support for the Ada
+          compiler, which may be present on the host but will not be available
+          once we enter the <command>chroot</command> environment.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-stripping</parameter></term>
+        <listitem>
+          <para>This switch prevents the building system from
+          using the <command>strip</command> program from the host.
+          Using host tools on cross-compiled programs can cause failure.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>AWK=gawk</parameter></term>
+        <listitem>
+          <para>This switch prevents the building system from using the
+          <command>mawk</command> program from the host.
+          Some<!-- FIXME vauge --> versions of <command>mawk</command> can
+          cause this package to fail to build.  <!-- It seems happened in 2015,
+          is there any updated into? --></para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make DESTDIR=$LFS install
+ln -sv libncursesw.so $LFS/usr/lib/libncurses.so
+sed -e 's/^#if.*XOPEN.*$/#if 1/' \
+    -i $LFS/usr/include/curses.h</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the install options:</title>
+
+      <varlistentry>
+        <term><command>ln -sv libncursesw.so $LFS/usr/lib/libncurses.so</command></term>
+        <listitem>
+          <para>The <filename>libncurses.so</filename> library is needed by
+          a few packages we will build soon. We create this symlink to use
+          <filename>libncursesw.so</filename> as a replacement.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><command>sed -e 's/^#if.*XOPEN.*$/#if 1/' ...</command></term>
+        <listitem>
+          <para>The header file <filename>curses.h</filename> contains
+          the definition of various Ncurses data structures.  With different
+          preprocessor macro definitions two different sets of the data
+          structure definition may be used: the 8-bit definition is
+          compatible with <filename>libncurses.so</filename> and the
+          wide-character definition is compatible with
+          <filename>libncursesw.so</filename>.  Since we are using
+          <filename>libncursesw.so</filename> as a replacement of
+          <filename>libncurses.so</filename>, edit the header file so it
+          will always use the wide-character data structure definition
+          compatible with <filename>libncursesw.so</filename>.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in
+    <xref linkend="contents-ncurses" role="."/></para>
+
+  </sect2>
+
+</sect1>

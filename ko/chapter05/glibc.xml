@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-glibc" role="wrap">
+  <?dbhtml filename="glibc.html"?>
+
+  <sect1info condition="script">
+<productname>glibc</productname>
+<productnumber>&glibc-version;</productnumber> <address>&glibc-url;</address></sect1info>
+
+  <title>Glibc-&glibc-version;</title>
+
+  <indexterm zone="ch-tools-glibc">
+    <primary sortas="a-Glibc">Glibc</primary>
+    <secondary>tools</secondary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../chapter08/glibc.xml"
+    xpointer="xpointer(/sect1/sect2[1]/para[1])"/>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&glibc-tmp-sbu;</seg>
+        <seg>&glibc-tmp-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Glibc</title>
+
+    <para>First, create a symbolic link for LSB compliance. Additionally, for x86_64,
+create a compatibility symbolic link required for proper operation of the
+dynamic library loader:</para>
+
+<screen><userinput remap="pre">case $(uname -m) in
+    i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3
+    ;;
+    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64
+            ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3
+    ;;
+esac</userinput></screen>
+
+    <note>
+      <para>
+        The above command is correct.  The <command>ln</command> command has several
+syntactic versions, so be sure to check <command>info coreutils ln</command>
+and <ulink role='man' url='&man;ln.1'>ln(1)</ulink> before reporting what
+may appear to be an error.
+      </para>
+    </note>
+
+    <para>Some of the Glibc programs use the non-FHS-compliant <filename
+class="directory">/var/db</filename> directory to store their runtime
+data. Apply the following patch to make such programs store their runtime
+data in the FHS-compliant locations:</para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../&glibc-fhs-patch;</userinput></screen>
+
+    <para>The Glibc documentation recommends building Glibc in a dedicated build
+directory:</para>
+
+<screen><userinput remap="pre">mkdir -v build
+cd       build</userinput></screen>
+
+    <para>Ensure that the <command>ldconfig</command> and <command>sln</command>
+utilities are installed into <filename
+class="directory">/usr/sbin</filename>:</para>
+
+<screen><userinput remap="pre">echo "rootsbindir=/usr/sbin" &gt; configparms</userinput></screen>
+
+    <para>Next, prepare Glibc for compilation:</para>
+
+<screen><userinput remap="configure">../configure                             \
+      --prefix=/usr                      \
+      --host=$LFS_TGT                    \
+      --build=$(../scripts/config.guess) \
+      --disable-nscd                     \
+      libc_cv_slibdir=/usr/lib           \
+      --enable-kernel=&min-kernel;</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term><parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter></term>
+        <listitem>
+          <para>The combined effect of these switches is that Glibc's build system
+configures itself to be cross-compiled, using the cross-linker and
+cross-compiler in <filename class="directory">$LFS/tools</filename>.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--enable-kernel=&min-kernel;</parameter></term>
+        <listitem>
+          <para>This tells Glibc to compile the library with support for &min-kernel; and
+later Linux kernels.  Workarounds for older kernels are not enabled.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>libc_cv_slibdir=/usr/lib</parameter></term>
+        <listitem>
+          <para>This ensures that the library is installed in /usr/lib instead of the
+default /lib64 on 64-bit machines.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--disable-nscd</parameter></term>
+        <listitem>
+          <para>Do not build the name service cache daemon which is no longer used.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>During this stage the following warning might appear:</para>
+
+    <blockquote>
+<screen><computeroutput>configure: WARNING:
+*** These auxiliary programs are missing or
+*** incompatible versions: msgfmt
+*** some features will be disabled.
+*** Check the INSTALL file for required versions.</computeroutput></screen>
+    </blockquote>
+
+    <para>The missing or incompatible <command>msgfmt</command> program is generally
+harmless. This <command>msgfmt</command> program is part of the Gettext
+package, which the host distribution should provide.</para>
+
+    <note><para>There have been reports that this package may fail when building as a
+<quote>parallel make.</quote> If that occurs, rerun the make command with
+the <option>-j1</option> option.</para></note>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>Install the package:</para>
+
+    <warning><para>If <envar>LFS</envar> is not properly set, and despite the recommendations,
+you are building as <systemitem class="username">root</systemitem>, the next
+command will install the newly built Glibc to your host system, which will
+almost certainly render it unusable. So double-check that the environment is
+correctly set, and that you are not &root;, before running the following
+command.</para></warning>
+
+<screen><userinput remap="install">make DESTDIR=$LFS install</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the <command>make install</command> option:</title>
+
+      <varlistentry>
+        <term><parameter>DESTDIR=$LFS</parameter></term>
+        <listitem>
+          <para>The <envar>DESTDIR</envar> make variable is used by almost all packages to
+define the location where the package should be installed. If it is not set,
+it defaults to the root (<filename class="directory">/</filename>)
+directory. Here we specify that the package is installed in <filename
+class="directory"> $LFS</filename>, which will become the root directory in
+<xref linkend= "ch-tools-chroot" role='.'/></para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Fix a hard coded path to the executable loader in the <command>ldd</command>
+script:</para>
+
+<screen><userinput remap="install">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput></screen>
+
+    <para>Now that our cross toolchain is in place, it is important to ensure that
+compiling and linking will work as expected. We do this by performing some
+sanity checks:</para>
+
+<screen><userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log
+readelf -l a.out | grep ': /lib'</userinput></screen>
+
+  <para>There should be no errors, and the output of the last command will be
+(allowing for platform-specific differences in the dynamic linker name):</para>
+
+<screen><computeroutput>[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]</computeroutput></screen>
+
+  <para>Note that this path should not contain <filename
+class='directory'>/mnt/lfs</filename> (or the value of the
+<envar>LFS</envar> variable if you used a different one).  The path is
+resolved when the compiled program is executed, and that should only happen
+after we enter the chroot environment where the kernel would consider
+<filename class='directory'>$LFS</filename> as the root directory (<filename
+class='directory'>/</filename>).</para>
+
+  <para>Now make sure that we're set up to use the correct start files:</para>
+
+<screen><userinput>grep -E -o "$LFS/lib.*/S?crt[1in].*succeeded" dummy.log</userinput></screen>
+
+  <para>The output of the last command should be:</para>
+
+<screen><computeroutput>/mnt/lfs/lib/../lib/Scrt1.o succeeded
+/mnt/lfs/lib/../lib/crti.o succeeded
+/mnt/lfs/lib/../lib/crtn.o succeeded</computeroutput></screen>
+
+  <para>Verify that the compiler is searching for the correct header files:</para>
+
+<screen><userinput>grep -B3 "^ $LFS/usr/include" dummy.log</userinput></screen>
+
+  <para>This command should return the following output:</para>
+
+<screen><computeroutput>#include &lt;...&gt; search starts here:
+ /mnt/lfs/tools/lib/gcc/x86_64-lfs-linux-gnu/&gcc-version;/include
+ /mnt/lfs/tools/lib/gcc/x86_64-lfs-linux-gnu/&gcc-version;/include-fixed
+ /mnt/lfs/usr/include</computeroutput></screen>
+
+   <para>Again, the directory named after your target triplet may be different than
+the above, depending on your system architecture.</para>
+
+  <para>Next, verify that the new linker is being used with the correct search
+paths:</para>
+
+<screen><userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'</userinput></screen>
+
+  <para>References to paths that have components with '-linux-gnu' should be
+ignored, but otherwise the output of the last command should be:</para>
+
+<screen><computeroutput>SEARCH_DIR("=/mnt/lfs/tools/x86_64-lfs-linux-gnu/lib64")
+SEARCH_DIR("=/usr/local/lib64")
+SEARCH_DIR("=/lib64")
+SEARCH_DIR("=/usr/lib64")
+SEARCH_DIR("=/mnt/lfs/tools/x86_64-lfs-linux-gnu/lib")
+SEARCH_DIR("=/usr/local/lib")
+SEARCH_DIR("=/lib")
+SEARCH_DIR("=/usr/lib");</computeroutput></screen>
+
+   <para>A 32-bit system may use a few other directories, but anyway the important
+facet here is all the paths should begin with an equal sign
+(<literal>=</literal>), which would be replaced with the sysroot directory
+that we've configured for the linker.</para>
+
+  <para>Next make sure that we're using the correct libc:</para>
+
+<screen><userinput>grep "/lib.*/libc.so.6 " dummy.log</userinput></screen>
+
+  <para>The output of the last command should be:</para>
+
+<screen><computeroutput>attempt to open /mnt/lfs/usr/lib/libc.so.6 succeeded</computeroutput></screen>
+
+  <para>Make sure GCC is using the correct dynamic linker:</para>
+
+<screen><userinput>grep found dummy.log</userinput></screen>
+
+  <para>The output of the last command should be (allowing for platform-specific
+differences in dynamic linker name):</para>
+
+<screen><computeroutput>found ld-linux-x86-64.so.2 at /mnt/lfs/usr/lib/ld-linux-x86-64.so.2</computeroutput></screen>
+
+  <para>If the output does not appear as shown above or is not received at all, then
+something is seriously wrong. Investigate and retrace the steps to find out
+where the problem is and correct it.  Any issues should be resolved before
+continuing with the process.</para>
+
+  <para>Once everything is working correctly, clean up the test files:</para>
+
+<screen><userinput>rm -v a.out dummy.log</userinput></screen>
+
+    <note><para>Building the packages in the next chapter will serve as an additional check
+that the toolchain has been built properly. If some package, especially
+Binutils-pass2 or GCC-pass2, fails to build, it is an indication that
+something has gone wrong with the preceding Binutils, GCC, or Glibc
+installations.</para></note>
+
+  <!--
+    <para>
+Now that our cross-toolchain is complete, finalize the installation
+    of the limits.h header. To do this, run a utility provided by the GCC
+    developers:</para>
+
+<screen><userinput>$LFS/tools/libexec/gcc/$LFS_TGT/&gcc-version;/install-tools/mkheaders</userinput></screen>
+-->
+</sect2>
+
+  <sect2 role="content">
+    <title/>
+
+    <para>Details on this package are located in <xref linkend="contents-glibc"
+role="."/></para>
+
+  </sect2>
+
+</sect1>

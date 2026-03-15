@@ -1,0 +1,8 @@
+<![ %sysv; [
+<!ENTITY version           "unknown">
+]]>
+<![ %systemd; [
+<!ENTITY version           "unknown-systemd">
+]]>
+<!ENTITY releasedate       "unknown">
+<!ENTITY copyrightdate     "1999-2023">

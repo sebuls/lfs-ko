@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-cleanup">
+  <?dbhtml filename="cleanup.html"?>
+
+  <title>Cleaning Up</title>
+
+  <para>Finally, clean up some extra files left over from running tests:</para>
+
+  <screen><userinput>rm -rf /tmp/{*,.*}</userinput></screen>
+
+  <para>There are also several files in the /usr/lib and /usr/libexec
+  directories with a file name extension of .la. These are "libtool archive"
+  files. On a modern Linux system the libtool .la files are
+  only useful for libltdl.  No libraries in LFS are expected to be loaded
+  by libltdl, and it's known that some .la files can break BLFS package
+  builds.  Remove those files now:</para>
+
+<screen><userinput>find /usr/lib /usr/libexec -name \*.la -delete</userinput></screen>
+
+   <para>For more information about libtool archive files, see the <ulink
+   url="&blfs-book;introduction/la-files.html">BLFS section "About Libtool
+   Archive (.la) files"</ulink>.</para>
+
+   <para>The compiler built in <xref linkend="chapter-temporary-tools"/> and
+   <xref linkend="chapter-chroot-temporary-tools"/> is still partially
+   installed and not needed anymore. Remove it with:</para>
+
+<screen><userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf</userinput></screen>
+
+   <para>Finally, remove the temporary 'tester' user account created at the
+   beginning of the previous chapter.</para>
+
+<screen><userinput>userdel -r tester</userinput></screen>
+</sect1>

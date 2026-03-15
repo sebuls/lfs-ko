@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-intro-how">
+  <?dbhtml filename="how.html"?>
+
+  <title>How to Build an LFS System</title>
+
+  <para>The LFS system will be built by using an already installed
+  Linux distribution (such as Debian, OpenMandriva, Fedora, or openSUSE). This
+  existing Linux system (the host) will be used as a starting point to
+  provide necessary programs, including a compiler, linker, and shell,
+  to build the new system. Select the <quote>development</quote> option
+  during the distribution installation to include these
+  tools.</para>
+
+  <note><para>There are many ways to install a Linux distribution and
+  the defaults are usually not optimal for building an LFS system.
+  For suggestions on setting up a commercial distribution see:
+  <ulink url="&lfs-root;hints/downloads/files/partitioning-for-lfs.txt"/>.</para></note>
+
+  <para>As an alternative to installing a separate distribution on your
+  machine, you may wish to use a LiveCD from a commercial distribution.</para>
+
+  <!--
+  <note>
+    <para>The LFS LiveCD might not work on newer hardware configurations,
+    failing to boot or failing to detect some devices such as some SATA hard
+    drives.</para>
+  </note> -->
+
+  <para><xref linkend="chapter-partitioning"/> of this book describes how
+  to create a new Linux native partition and file system,
+  where the new LFS system will be compiled and installed. <xref
+  linkend="chapter-getting-materials"/> explains which packages and
+  patches must be downloaded to build an LFS system, and how to store
+  them on the new file system. <xref linkend="chapter-final-preps"/>
+  discusses the setup of an appropriate working environment. Please read
+  <xref linkend="chapter-final-preps"/> carefully as it explains several
+  important issues you should be aware of before you begin to
+  work your way through <xref linkend="chapter-cross-tools"/> and beyond.</para>
+
+  <para><xref linkend="chapter-cross-tools"/>  explains the installation of
+  the initial tool chain, (binutils, gcc, and glibc) using cross-compilation
+  techniques to isolate the new tools from the host system.</para>
+
+  <para><xref linkend="chapter-temporary-tools"/> shows you how to
+  cross-compile basic utilities using the just built cross-toolchain.</para>
+
+  <para><xref linkend="chapter-chroot-temporary-tools"/> then enters a
+  "chroot" environment, where we use the new tools to build all
+  the rest of the tools needed to create the LFS system.</para>
+
+  <para>This effort to isolate the new system from the host distribution may
+  seem excessive. A full technical explanation as to why this is done is
+  provided in <xref linkend="ch-tools-toolchaintechnotes"/>.</para>
+
+  <para>In <xref linkend="chapter-building-system"/> the
+  full-blown LFS system is built. Another advantage provided by the chroot
+  environment is that it allows you to continue using the host system
+  while LFS is being built. While waiting for package compilations to
+  complete, you can continue using your computer as usual.</para>
+
+  <para>To finish the installation, the basic system configuration is set up in
+  <xref linkend="chapter-config"/>, and the kernel and boot loader are created
+  in <xref linkend="chapter-bootable"/>. <xref linkend="chapter-finalizing"/>
+  contains information on continuing the LFS experience beyond this book.
+  After the steps in this chapter have been implemented, the computer is
+  ready to boot into the new LFS system.</para>
+
+  <para>This is the process in a nutshell. Detailed information on each
+  step is presented in the following chapters.
+  Items that seem complicated now will be clarified, and everything will
+  fall into place as you commence your LFS adventure.</para>
+
+</sect1>

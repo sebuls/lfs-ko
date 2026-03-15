@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-creatingminlayout">
+  <?dbhtml filename="creatingminlayout.html"?>
+
+  <title>Creating a Limited Directory Layout in the LFS Filesystem</title>
+
+  <para>In this section, we begin populating the LFS filesystem with the
+  pieces that will constitute the final Linux system. The first step is to
+  create a limited directory hierarchy, so that the programs compiled in <xref
+  linkend="chapter-temporary-tools"/> (as well as glibc and libstdc++ in <xref
+  linkend="chapter-cross-tools"/>) can be installed in their final
+  location. We do this so those temporary programs will be overwritten when
+  the final versions are built in <xref linkend="chapter-building-system"/>.</para>
+
+  <para>Create the required directory layout by issuing the following commands as
+  <systemitem class="username">root</systemitem>:</para>
+
+<screen><userinput>mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
+
+for i in bin lib sbin; do
+  ln -sv usr/$i $LFS/$i
+done
+
+case $(uname -m) in
+  x86_64) mkdir -pv $LFS/lib64 ;;
+esac</userinput></screen>
+
+  <para>Programs in <xref linkend="chapter-temporary-tools"/> will be compiled
+  with a cross-compiler (more details can be found in section <xref
+  linkend="ch-tools-toolchaintechnotes"/>). This cross-compiler will be installed
+  in a special directory, to separate it from the other programs. Still acting as
+  &root;, create that directory with this command:</para>
+
+<screen><userinput>mkdir -pv $LFS/tools</userinput></screen>
+
+  <note>
+    <para>
+      The LFS editors have deliberately decided not to use a
+      <filename class="directory">/usr/lib64</filename> directory.  Several
+      steps are taken to be sure the toolchain will not use it. If for any
+      reason this directory appears (either because you made an error in
+      following the instructions, or because you installed a binary package that
+      created it after finishing LFS), it may break your system.
+      You should always be sure this directory does not exist.
+    </para>
+  </note>
+
+</sect1>

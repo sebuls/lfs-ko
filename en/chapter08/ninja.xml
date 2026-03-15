@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-ninja" role="wrap">
+  <?dbhtml filename="ninja.html"?>
+
+  <sect1info condition="script">
+    <productname>ninja</productname>
+    <productnumber>&ninja-version;</productnumber>
+    <address>&ninja-url;</address>
+  </sect1info>
+
+  <title>Ninja-&ninja-version;</title>
+
+  <indexterm zone="ch-system-ninja">
+    <primary sortas="a-Ninja">Ninja</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>Ninja is a small build system with a focus on speed.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&ninja-fin-sbu;</seg>
+        <seg>&ninja-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Ninja</title>
+
+    <para>When run, <command>ninja</command> normally utilizes the greatest
+    possible number of processes in parallel.  By default this is the number of cores on the system,
+    plus two.  This may overheat the CPU, or make the system run out
+    of memory.  When <command>ninja</command> is invoked from the command line, passing the -jN parameter
+    will limit the number of parallel processes. Some packages
+    embed the execution of <command>ninja</command>, and do not pass the -j parameter on to it.</para>
+
+    <para>Using the <emphasis>optional</emphasis> procedure below allows a user to
+    limit the number of parallel processes via an environment variable,
+    NINJAJOBS.  <emphasis role="bold">For example</emphasis>, setting:
+
+    <screen>export NINJAJOBS=4</screen>
+
+    will limit <command>ninja</command> to four parallel processes.</para>
+
+    <para>If desired, make <command>ninja</command> recognize the environment variable
+    NINJAJOBS by running the stream editor:</para>
+
+<screen><userinput remap="pre">sed -i '/int Guess/a \
+  int   j = 0;\
+  char* jobs = getenv( "NINJAJOBS" );\
+  if ( jobs != NULL ) j = atoi( jobs );\
+  if ( j > 0 ) return j;\
+' src/ninja.cc</userinput></screen>
+
+    <para>Build Ninja with:</para>
+
+<screen><userinput remap="configure">python3 configure.py --bootstrap --verbose</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the build option:</title>
+
+      <varlistentry>
+        <term><parameter>--bootstrap</parameter></term>
+        <listitem>
+          <para>This parameter forces Ninja to rebuild itself for the current
+          system.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>--verbose</parameter></term>
+        <listitem>
+          <para>This parameter makes <command>configure.py</command> show
+          the progress building Ninja.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>The package tests cannot run in the chroot environment. They require 
+    <ulink url="&blfs-book;general/cmake.html">cmake</ulink>.  But the basic
+    function of this package is already tested by rebuilding itself
+    (with the <parameter>--bootstrap</parameter> option) anyway.</para>
+<!--
+    <para>To test the results, issue:</para>
+
+<screen><userinput remap="test">./ninja ninja_test
+./ninja_test - -gtest_filter=-SubprocessTest.SetWithLots</userinput></screen>
+-->
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">install -vm755 ninja /usr/bin/
+install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja
+install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-ninja" role="content">
+    <title>Contents of Ninja</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+
+      <seglistitem>
+        <seg>ninja</seg>
+      </seglistitem>
+    </segmentedlist>
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ninja">
+        <term><command>ninja</command></term>
+        <listitem>
+          <para>is the Ninja build system</para>
+          <indexterm zone="ch-system-ninja ninja">
+            <primary sortas="b-ninja">ninja</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
+

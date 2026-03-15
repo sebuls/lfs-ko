@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-errata">
+  <?dbhtml filename="errata.html"?>
+
+  <title>Errata and Security Advisories</title>
+
+  <para>The software used to create an LFS system is constantly being updated
+  and enhanced. Security warnings and bug fixes may become available after
+  the LFS book has been released. To check whether the package versions or
+  instructions in this release of LFS need any modifications&mdash;to repair
+  security vulnerabilities or to fix other bugs&mdash;please visit
+  <ulink url="&errata;"/>
+  before proceeding with your build. You should note any
+  changes shown and apply them to the relevant sections of the book as you
+  build the LFS system.</para>
+
+  <para>In addition, the Linux From Scratch editors maintain a list of security
+  vulnerabilities discovered <emphasis>after</emphasis> a book has been released. To read the list, please visit
+  <ulink url="&secadv;"/> before proceeding with your build. You should apply
+  the changes suggested by the advisories to the relevant sections of the
+  book as you build the LFS system.  And, if you will use the LFS system as
+  a real desktop or server system, you should continue to consult the
+  advisories and fix any security vulnerabilities, even when the LFS system
+  has been completely constructed.</para>
+
+</sect1>

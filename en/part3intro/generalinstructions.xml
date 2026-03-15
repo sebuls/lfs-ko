@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-generalinstructions"
+       xreflabel="General Compilation Instructions">
+  <?dbhtml filename="generalinstructions.html"?>
+
+  <title>General Compilation Instructions</title>
+
+  <caution>
+    <para>
+      During a development cycle of LFS, the instructions in the book are
+      often modified to adapt for a package update or take the advantage of
+      new features from updated packages.  Mixing up the instructions of
+      different versions of the LFS book can cause subtle breakages.  This
+      kind of issue is generally a result from reusing some script created
+      for a prior LFS release.  Such a reuse is strongly discouraged.  If
+      you are reusing scripts for a prior LFS release for any reason, you'll
+      need to be very careful to update the scripts to match current version
+      of the LFS book.
+    </para>
+  </caution>
+
+  <para>Here are some things you should know about building each package:</para>
+
+  <itemizedlist>
+
+  <listitem>
+    <para>Several packages are patched before compilation, but only when
+    the patch is needed to circumvent a problem. A patch is often needed in
+    both the current and the following chapters, but sometimes, when the same package
+    is built more than once, the patch is not needed right away.
+    Therefore, do not be concerned if instructions for a downloaded patch seem
+    to be missing.  Warning messages about <emphasis>offset</emphasis> or
+    <emphasis>fuzz</emphasis> may also be encountered when applying a patch. Do
+    not worry about these warnings; the patch was still successfully
+    applied.</para>
+  </listitem>
+
+  <listitem>
+    <para>During the compilation of most packages, some
+    warnings will scroll by on the screen. These are normal and can safely be
+    ignored.  These warnings are usually about
+    deprecated, but not invalid, use of the C or C++ syntax. C standards change
+    fairly often, and some packages have not yet been updated. This is not a
+    serious problem, but it does cause the warnings to appear.</para>
+  </listitem>
+
+  <listitem>
+    <para>Check one last time that the <envar>LFS</envar> environment variable
+    is set up properly:</para>
+
+<screen role="nodump"><userinput>echo $LFS</userinput></screen>
+
+    <para>Make sure the output shows the path to the LFS partition's mount
+    point, which is <filename class="directory">/mnt/lfs</filename>, using our
+    example.</para>
+  </listitem>
+
+  <listitem>
+
+    <para>Finally, two important items must be emphasized:</para>
+
+    <important>
+
+      <para>The build instructions assume that the <xref
+      linkend='ch-partitioning-hostreqs'/>, including symbolic links, have
+      been set properly:</para>
+
+      <itemizedlist role='important'>
+
+        <listitem override='bullet'><para><command>bash</command> is the shell
+        in use.</para></listitem>
+
+        <listitem override='bullet'><para><command>sh</command> is a symbolic
+        link to <command>bash</command>.</para></listitem>
+
+        <listitem override='bullet'><para><command>/usr/bin/awk</command> is a
+        symbolic link to <command>gawk</command>.</para></listitem>
+
+        <listitem override='bullet'><para><command>/usr/bin/yacc</command> is a
+        symbolic link to <command>bison</command>, or to a small script that
+        executes bison.</para></listitem>
+
+      </itemizedlist>
+    </important>
+
+    <important>
+      <para>Here is a synopsis of the build process.</para>
+
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>Place all the sources and patches in a directory that will be
+          accessible from the chroot environment, such as
+          <filename class="directory">/mnt/lfs/sources/</filename>.<!-- Do
+          <emphasis>not</emphasis> put sources in
+          <filename class="directory">/mnt/lfs/tools/</filename>. --></para>
+        </listitem>
+        <listitem>
+          <para>Change to the <filename class="directory">/mnt/lfs/sources/</filename> directory.</para>
+        </listitem>
+        <listitem id='buildinstr' xreflabel='Package build instructions'>
+          <para>For each package:</para>
+          <orderedlist numeration="loweralpha" spacing="compact">
+            <listitem>
+              <para>Using the <command>tar</command> program, extract the package
+              to be built.  In <xref linkend="chapter-cross-tools"/> and
+              <xref linkend="chapter-temporary-tools"/>, ensure you are
+              the <emphasis>lfs</emphasis> user when extracting the package.</para>
+            <para>Do not use any method except the <command>tar</command> command
+              to extract the source code. Notably, using the <command>cp -R</command>
+              command to copy the
+              source code tree somewhere else can destroy
+              timestamps in the source tree, and cause the build to fail.</para>
+            </listitem>
+            <listitem>
+              <para>Change to the directory created when the package was
+              extracted.</para>
+            </listitem>
+            <listitem>
+              <para>Follow the instructions for building the package.</para>
+            </listitem>
+            <listitem>
+              <para>Change back to the sources directory when the build is complete.</para>
+            </listitem>
+            <listitem>
+              <para>Delete the extracted source directory unless instructed otherwise.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+      </orderedlist>
+    </important>
+  </listitem>
+
+  </itemizedlist>
+
+</sect1>

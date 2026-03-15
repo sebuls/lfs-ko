@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-chroot">
+  <?dbhtml filename="chroot.html"?>
+
+  <title>Entering the Chroot Environment</title>
+
+  <para>Now that all the packages which are required to build the rest of the
+  needed tools are on the system, it is time to enter the chroot environment and
+  finish installing the temporary tools. This environment will also be
+  used to install the final system. As user <systemitem
+  class="username">root</systemitem>, run the following command to enter the
+  environment that is, at the moment, populated with nothing but temporary
+  tools:</para>
+
+<screen role="nodump"><userinput>chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/usr/bin:/usr/sbin     \
+    MAKEFLAGS="-j<replaceable>$(nproc)</replaceable>"      \
+    TESTSUITEFLAGS="-j<replaceable>$(nproc)</replaceable>" \
+    /bin/bash --login</userinput></screen>
+
+  <para>
+    If you don't want to use all available logical cores, replace
+    <replaceable>$(nproc)</replaceable> with the number of logical cores you
+    want to use for building packages in this chapter and the following
+    chapters.  The test suites of some packages (notably Autoconf, Libtool,
+    and Tar) in &ch-final; are not affected by <envar>MAKEFLAGS</envar>, they
+    use a <envar>TESTSUITEFLAGS</envar> environment variable instead. We
+    set that here as well for running these test suites with multiple cores.
+  </para>
+
+  <para>The <parameter>-i</parameter> option given to the <command>env</command>
+  command will clear all the variables in the chroot environment. After that, only
+  the <envar>HOME</envar>, <envar>TERM</envar>, <envar>PS1</envar>, and
+  <envar>PATH</envar> variables are set again. The
+  <parameter>TERM=$TERM</parameter> construct sets the <envar>TERM</envar>
+  variable inside chroot to the same value as outside chroot. This variable is
+  needed so programs like <command>vim</command> and <command>less</command>
+  can operate properly.  If other variables are desired, such as
+  <envar>CFLAGS</envar> or <envar>CXXFLAGS</envar>, this is a good place to set
+  them.</para>
+
+  <para>From this point on, there is no need to use the
+  <envar>LFS</envar> variable any more because all work will be restricted
+  to the LFS file system; the <command>chroot</command> command runs the
+  Bash shell with the root
+  (<filename class="directory">/</filename>) directory set to
+  <filename class='directory'>$LFS</filename>.</para>
+
+  <para>Notice that <filename class="directory">/tools/bin</filename> is not
+  in the <envar>PATH</envar>. This means that the cross toolchain will no longer be
+  used.</para>
+
+  <para>Also note that the <command>bash</command> prompt will say
+  <computeroutput>I have no name!</computeroutput> This is normal because the
+  <filename>/etc/passwd</filename> file has not been created yet.</para>
+
+  <note>
+    <para>It is important that all the commands throughout the remainder of this
+    chapter and the following chapters are run from within the chroot
+    environment. If you leave this environment for any reason (rebooting for
+    example), ensure that the virtual kernel filesystems are mounted as
+    explained in <xref linkend="ch-tools-bindmount"/> and <xref
+    linkend="ch-tools-kernfsmount"/> and enter chroot again before continuing
+    with the installation.</para>
+  </note>
+
+</sect1>

@@ -1,0 +1,2 @@
+<!ENTITY % sysv    "IGNORE ">
+<!ENTITY % systemd "INCLUDE">

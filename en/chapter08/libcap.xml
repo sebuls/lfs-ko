@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-libcap" role="wrap">
+  <?dbhtml filename="libcap.html"?>
+
+  <sect1info condition="script">
+    <productname>libcap</productname>
+    <productnumber>&libcap-version;</productnumber>
+    <address>&libcap-url;</address>
+  </sect1info>
+
+  <title>Libcap-&libcap-version;</title>
+
+  <indexterm zone="ch-system-libcap">
+    <primary sortas="a-Libcap">Libcap</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Libcap package implements the userspace interface to the POSIX
+    1003.1e capabilities available in Linux kernels. These capabilities
+    partition the all-powerful root privilege into a set of distinct
+    privileges.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&libcap-fin-sbu;</seg>
+        <seg>&libcap-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Libcap</title>
+
+    <note>
+      <para>
+        If updating this package on an existing system and the go compiler is
+        installed, prevent a build error by using <command>export GOLANG=no</command>
+        before running the commands below.  Be sure to unset <envar>GOLANG</envar>
+        after installation is complete.
+      </para>
+    </note>
+
+    <para>Prevent static libraries from being installed:</para>
+
+<screen><userinput remap="pre">sed -i '/install -m.*STA/d' libcap/Makefile</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make prefix=/usr lib=lib</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the make option:</title>
+
+      <varlistentry>
+        <term><parameter>lib=lib</parameter></term>
+        <listitem>
+          <para>This parameter sets the library directory to
+          <filename>/usr/lib</filename> rather than
+          <filename>/usr/lib64</filename> on x86_64. It has no effect on
+          x86.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>To test the results, issue:</para>
+
+<screen><userinput remap="test">make test</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make prefix=/usr lib=lib install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-libcap" role="content">
+    <title>Contents of Libcap</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+      <segtitle>Installed library</segtitle>
+
+      <seglistitem>
+        <seg>capsh, getcap, getpcaps, and setcap</seg>
+        <seg>libcap.so and libpsx.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="capsh">
+        <term><command>capsh</command></term>
+        <listitem>
+          <para>A shell wrapper to explore and constrain capability support</para>
+          <indexterm zone="ch-system-libcap capsh">
+            <primary sortas="b-capsh">capsh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getcap">
+        <term><command>getcap</command></term>
+        <listitem>
+          <para>Examines file capabilities</para>
+          <indexterm zone="ch-system-libcap getcap">
+            <primary sortas="b-getcap">getcap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getpcaps">
+        <term><command>getpcaps</command></term>
+        <listitem>
+          <para>Displays the capabilities of the queried process(es)</para>
+          <indexterm zone="ch-system-libcap getpcaps">
+            <primary sortas="b-getpcaps">getpcaps</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="setcap">
+        <term><command>setcap</command></term>
+        <listitem>
+          <para>Sets file capabilities</para>
+          <indexterm zone="ch-system-libcap setcap">
+            <primary sortas="b-setcap">setcap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libcap">
+        <term><filename class="libraryfile">libcap</filename></term>
+        <listitem>
+          <para>Contains the library functions for manipulating POSIX 1003.1e
+          capabilities</para>
+          <indexterm zone="ch-system-libcap libcap">
+            <primary sortas="c-libcap">libcap</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libpsx">
+        <term><filename class="libraryfile">libpsx</filename></term>
+        <listitem>
+          <para>Contains functions to support POSIX semantics for syscalls
+          associated with the pthread library</para>
+          <indexterm zone="ch-system-libcap libpsx">
+            <primary sortas="c-libpsx">libpsx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

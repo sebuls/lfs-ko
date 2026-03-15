@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-tools-kernfs">
+  <?dbhtml filename="kernfs.html"?>
+
+  <title>Preparing Virtual Kernel File Systems</title>
+
+  <indexterm zone="ch-tools-kernfs">
+    <primary sortas="e-/dev/">/dev/*</primary>
+  </indexterm>
+
+    <para>Applications running in userspace utilize various file 
+    systems created by the kernel to communicate 
+    with the kernel itself. These file systems are virtual: no disk
+    space is used for them. The content of these file systems resides in
+    memory. These file systems must be mounted in the $LFS directory tree
+    so the applications can find them in the chroot environment.</para>
+
+    <para>Begin by creating the directories on which these virtual file systems will be
+    mounted:</para>
+
+<screen><userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput></screen>
+
+  <sect2 id="ch-tools-bindmount">
+    <title>Mounting and Populating /dev</title>
+
+      <para>During a normal boot of an LFS system, the kernel automatically
+      mounts the <systemitem class="filesystem">devtmpfs</systemitem>
+      file system on the
+      <filename class="directory">/dev</filename> directory; the kernel
+      creates device nodes on that virtual file system during the boot process,
+      or when a device is first detected or accessed. The udev daemon may
+      change the ownership or permissions of the device nodes created by the
+      kernel, and create new device nodes or symlinks, to ease the work of
+      distro maintainers and system administrators.  (See
+      <xref linkend='ch-config-udev-device-node-creation'/> for details.)
+      If the host kernel supports &devtmpfs;, we can simply mount a
+      &devtmpfs; at <filename class='directory'>$LFS/dev</filename> and rely
+      on the kernel to populate it.</para>
+
+      <para>But some host kernels lack &devtmpfs; support; these
+      host distros use different methods to create the content of
+      <filename class="directory">/dev</filename>.
+      So the only host-agnostic way to populate the
+      <filename class="directory">$LFS/dev</filename> directory is
+      by bind mounting the host system's
+      <filename class="directory">/dev</filename> directory. A bind mount is
+      a special type of mount that makes a directory subtree or a file
+      visible at some other location. Use the following
+      command to do this.</para>
+
+<screen><userinput>mount -v --bind /dev $LFS/dev</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="ch-tools-kernfsmount">
+    <title>Mounting Virtual Kernel File Systems</title>
+
+      <para>Now mount the remaining virtual kernel file systems:</para>
+
+      <!-- Do not put any option after $LFS/${mountpoint} or jhalfs cannot
+           handle it! -->
+
+<screen><userinput>mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the mount options for devpts:</title>
+
+      <varlistentry>
+        <term><parameter>gid=5</parameter></term>
+        <listitem>
+          <para>This ensures that all devpts-created device nodes are owned by
+          group ID 5.  This is the ID we will use later on for the <systemitem
+          class="groupname">tty</systemitem> group.  We use the group ID instead
+          of a name, since the host system might use a different ID for its
+          <systemitem class="groupname">tty</systemitem> group.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><parameter>mode=0620</parameter></term>
+        <listitem>
+          <para>This ensures that all devpts-created device nodes have mode 0620
+          (user readable and writable, group writable).  Together with the
+          option above, this ensures that devpts will create device nodes that
+          meet the requirements of grantpt(), meaning the Glibc
+          <command>pt_chown</command> helper binary (which is not installed by
+          default) is not necessary.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+      <para>In some host systems, <filename>/dev/shm</filename> is a
+      symbolic link to a directory, typically
+      <filename class="directory">/run/shm</filename>.
+      The /run tmpfs was mounted above so in this case only a
+      directory needs to be created with the correct permissions.</para>
+
+      <para>In other host systems <filename>/dev/shm</filename> is a mount point 
+      for a tmpfs. In that case the mount of /dev above will only create
+      /dev/shm as a directory in the chroot environment. In this situation
+      we must explicitly mount a tmpfs:</para>
+
+<screen><userinput>if [ -h $LFS/dev/shm ]; then
+  install -v -d -m 1777 $LFS$(realpath /dev/shm)
+else
+  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm
+fi</userinput></screen>
+
+  </sect2>
+
+</sect1>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-kmod" role="wrap">
+  <?dbhtml filename="kmod.html"?>
+
+  <sect1info condition="script">
+    <productname>kmod</productname>
+    <productnumber>&kmod-version;</productnumber>
+    <address>&kmod-url;</address>
+  </sect1info>
+
+  <title>Kmod-&kmod-version;</title>
+
+  <indexterm zone="ch-system-kmod">
+    <primary sortas="a-Kmod">Kmod</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The Kmod package contains libraries and utilities for loading kernel
+    modules</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&kmod-fin-sbu;</seg>
+        <seg>&kmod-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of Kmod</title>
+
+    <para>Prepare Kmod for compilation:</para>
+
+    <screen><userinput remap="configure">mkdir -p build
+cd       build
+
+meson setup --prefix=/usr ..    \
+            --buildtype=release \
+            -D manpages=false</userinput></screen>
+
+    <variablelist>
+      <title>The meaning of the configure options:</title>
+
+      <varlistentry>
+        <term>
+          <parameter>-D manpages=false</parameter>
+        </term>
+        <listitem>
+          <para>This option disables generating the man pages which
+          requires an external program.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">ninja</userinput></screen>
+
+    <para>The test suite of this package requires raw kernel headers
+    (not the <quote>sanitized</quote> kernel headers installed earlier),
+    which are beyond the scope of LFS.</para>
+
+    <para>Now install the package:</para>
+
+<screen><userinput remap="install">ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-kmod" role="content">
+    <title>Contents of Kmod</title>
+
+    <segmentedlist>
+      <segtitle>Installed programs</segtitle>
+      <segtitle>Installed library</segtitle>
+
+      <seglistitem>
+        <seg>depmod (link to kmod), insmod (link to kmod), kmod,
+        lsmod (link to kmod), modinfo (link to kmod), modprobe (link to kmod),
+        and rmmod (link to kmod)</seg>
+        <seg>libkmod.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="depmod">
+        <term><command>depmod</command></term>
+        <listitem>
+          <para>Creates a dependency file based on the symbols it finds in the
+          existing set of modules; this dependency file is used by
+          <command>modprobe</command> to automatically load the required
+          modules</para>
+          <indexterm zone="ch-system-kmod depmod">
+            <primary sortas="b-depmod">depmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="insmod">
+        <term><command>insmod</command></term>
+        <listitem>
+          <para>Installs a loadable module in the running kernel</para>
+          <indexterm zone="ch-system-kmod insmod">
+            <primary sortas="b-insmod">insmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="kmod">
+        <term><command>kmod</command></term>
+        <listitem>
+          <para>Loads and unloads kernel modules</para>
+          <indexterm zone="ch-system-kmod kmod">
+            <primary sortas="b-kmod">kmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="lsmod">
+        <term><command>lsmod</command></term>
+        <listitem>
+          <para>Lists currently loaded modules</para>
+          <indexterm zone="ch-system-kmod lsmod">
+            <primary sortas="b-lsmod">lsmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="modinfo">
+        <term><command>modinfo</command></term>
+        <listitem>
+          <para>Examines an object file associated with a kernel module and
+          displays any information that it can glean</para>
+          <indexterm zone="ch-system-kmod modinfo">
+            <primary sortas="b-modinfo">modinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="modprobe">
+        <term><command>modprobe</command></term>
+        <listitem>
+          <para>Uses a dependency file, created by
+          <command>depmod</command>, to automatically load relevant modules</para>
+          <indexterm zone="ch-system-kmod modprobe">
+            <primary sortas="b-modprobe">modprobe</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rmmod">
+        <term><command>rmmod</command></term>
+        <listitem>
+          <para>Unloads modules from the running kernel</para>
+          <indexterm zone="ch-system-kmod rmmod">
+            <primary sortas="b-rmmod">rmmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libkmod">
+        <term><filename class="libraryfile">libkmod</filename></term>
+        <listitem>
+          <para>This library is used by other programs to load and unload kernel
+           modules</para>
+          <indexterm zone="ch-system-kmod">
+            <primary sortas="c-libkmod">libkmod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
+
