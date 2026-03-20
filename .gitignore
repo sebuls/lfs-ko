@@ -1,0 +1,28 @@
+# 1. po4a가 생성하는 번역본 XML (하위 폴더 포함)
+ko/**/*.xml
+ko/*.xml
+
+# 2. 최종 빌드 결과물 (HTML 등)
+*.html
+*.pdf
+*.txt
+*.log
+
+# 3. LFS 빌드 시스템 자동 생성 엔티티/데이터
+/lfs-latest-git.php
+/packages.ent
+/patches.ent
+/version.ent
+/conditional.ent
+
+# 4. 에디터 및 po4a 임시 파일
+po/*.mo
+po/*.save
+po/*.pot
+*~
+*.swp
+.DS_Store
+
+# 5. (선택 사항) 만약 ko/ 폴더 안의 모든 것을 막고 싶다면 아래 두 줄 사용
+# ko/**/*
+# !ko/**/.gitkeep
