@@ -37,19 +37,12 @@ export TZ=America/Chicago
 
 commit_date=$(git show -s --format=format:"%cd" --date=local)
 
+# 년, 월, 일을 추출하여 "2026. 1. 2." 형식으로 조합
 year=$(date --date "$commit_date" "+%Y")
-month=$(date --date "$commit_date" "+%B")
-month_digit=$(date --date "$commit_date" "+%m")
-day=$(date --date "$commit_date" "+%d" | sed 's/^0//')
+month=$(date --date "$commit_date" "+%-m")
+day=$(date --date "$commit_date" "+%-d")
 
-case $day in
-    "1" | "21" | "31" ) suffix="st";;
-    "2" | "22" ) suffix="nd";;
-    "3" | "23" ) suffix="rd";;
-    * ) suffix="th";;
-esac
-
-full_date="$month $day$suffix, $year"
+full_date="$year. $month. $day."
 
 sha="$(git describe --abbrev=1)"
 rev=$(echo "$sha" | sed 's/-g[^-]*$//')

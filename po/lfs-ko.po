@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-22 19:15+0900\n"
-"PO-Revision-Date: 2026-03-22 19:15+0900\n"
+"POT-Creation-Date: 2026-03-23 04:58+0900\n"
+"PO-Revision-Date: 2026-03-23 04:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4202,6 +4202,10 @@ msgid ""
 "are compiled with a cross-compiler, they probably can't run on the build "
 "host."
 msgstr ""
+"<xref linkend=\"chapter-cross-tools\"/> 및 <xref linkend=\"chapter-temporary-"
+"tools\"/>에서 테스트 스위트를 실행하는 것은 의미 없습니다. 왜? 테스트 프로그"
+"램이 교차 컴파일러로 빌드되었기 때문에, 아마도 빌드 호스트에서는 실행할 수 없"
+"을 것이기 때문."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/abouttestsuites.xml:34
@@ -4227,7 +4231,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter04/addinguser.xml:11
 msgid "Adding the LFS User"
-msgstr ""
+msgstr "LFS 사용자 추가"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:13
@@ -4243,6 +4247,16 @@ msgid ""
 "class=\"username\">root</systemitem>, issue the following commands to add "
 "the new user:"
 msgstr ""
+"<systemitem class=\"username\">root</systemitem> 사용자로 로그인하면 단 한 번"
+"의 실수도 시스템을 손상시키거나 깨뜨릴 수 있습니다. 따라서, 다음 두 장에 나오"
+"는 패키지는 권한 없는 일반 사용자로 빌드합니다. 자신의 사용자 이름을 사용할 "
+"수도 있지만, 깨끗한 작업 환경을 더 쉽게 구축하기 위해 <systemitem "
+"class=\"username\">lfs</systemitem>라는 새 그룹(마찬가지로 이름은 "
+"<systemitem class=\"groupname\">lfs</systemitem>)의 구성원인 <systemitem "
+"class=\"username\">lfs</systemitem> 새 사용자를 생성하고, 설치 과정 동안 "
+"&lfs-user; 권한으로 명령어를 실행하십시오. <systemitem "
+"class=\"username\">root</systemitem> 권한으로 다음 명령어 실행하여 새 사용자 "
+"추가:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/addinguser.xml:23
@@ -4325,6 +4339,11 @@ msgid ""
 "need to set a password for &lfs-user;.  Issue the following command as the "
 "&root; user to set the password:"
 msgstr ""
+"만약 &lfs-user; 사용자로 직접 로그인하거나, &root; 아닌 일반 사용자 상태에서 "
+"&lfs-user; 사용자로 전환하고 싶다면(이미 &root; 로그인한 상태에서 &lfs-user; "
+"전환하는 것과는 대조적이며, 이 경우 &lfs-user; 비밀번호가 필요하지 않습니"
+"다), &lfs-user; 위한 비밀번호를 설정해야 합니다. &root; 사용자 권한으로 다음 "
+"명령어를 실행하여 비밀번호를 설정:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/addinguser.xml:77
@@ -4339,9 +4358,9 @@ msgid ""
 "directories under <filename class=\"directory\">$LFS</filename> by making "
 "<systemitem class=\"username\">lfs</systemitem> the owner:"
 msgstr ""
-"Grant <systemitem class=\"username\">lfs</systemitem> full access to all the "
-"directories under <filename class=\"directory\">$LFS</filename> by making "
-"<systemitem class=\"username\">lfs</systemitem> the owner:"
+"<systemitem class=\"username\">lfs</systemitem>를 소유자로 지정하여, "
+"<filename class=\"directory\">$LFS</filename> 아래 모든 디렉터리에 대한 전체 "
+"권한을 <systemitem class=\"username\">lfs</systemitem>에게 부여:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/addinguser.xml:83
@@ -4361,6 +4380,10 @@ msgid ""
 "background.  If the prompt \"lfs:~$\" does not appear immediately, entering "
 "the <command>fg</command> command will fix the issue."
 msgstr ""
+"일부 호스트 시스템에서는 다음 <command>su</command> 명령어가 제대로 완료되지 "
+"않고 &lfs-user; 사용자 로그인을 백그라운드로 일시 중단시킵니다. 만약 \"lfs:~$"
+"\" 프롬프트가 즉시 나타나지 않는다면, <command>fg</command> 명령어를 입력하"
+"여 문제를 해결할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:93
@@ -4369,6 +4392,8 @@ msgid ""
 "in as &lfs-user; on a virtual console, or with the following substitute/"
 "switch user command:"
 msgstr ""
+"다음, &lfs-user; 사용자로 실행되는 셸을 시작합니다. 가상 콘솔에서 &lfs-user; "
+"로 로그인하거나, 다음의 사용자 교체/전환 명령어 사용:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/addinguser.xml:97
@@ -4385,6 +4410,10 @@ msgid ""
 "role='man' url='&man;bash.1'>bash(1)</ulink> and <command>info bash</"
 "command>."
 msgstr ""
+"<quote><parameter>-</parameter></quote>는 <command>su</command>가 로그인 셸"
+"을 시작하도록 지시합니다. 이 두 가지 유형의 셸 간 차이점은 <ulink role='man' "
+"url='&man;bash.1'>bash(1)</ulink> 및 <command>info bash</command>에 자세히 설"
+"명되어 있습니다."
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter04/chapter04.xml:8
@@ -8399,7 +8428,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter07/changingowner.xml:11
 msgid "Changing Ownership"
-msgstr ""
+msgstr "소유권 변경"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter07/changingowner.xml:14
@@ -8410,6 +8439,11 @@ msgid ""
 "that <envar>$LFS</envar> is set in <systemitem class=\"username\">root</"
 "systemitem>'s environment."
 msgstr ""
+"이 책의 남은 부분에 나오는 명령어들은 더 이상 <systemitem "
+"class=\"username\">lfs</systemitem> 사용자가 아닌 <systemitem "
+"class=\"username\">root</systemitem> 사용자로 로그인하여 수행해야 합니다. 또"
+"한, <envar>$LFS</envar> 변수가 <systemitem class=\"username\">root</"
+"systemitem>의 환경에 설정되어 있는지 다시 한번 확인하십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/changingowner.xml:21
@@ -8460,12 +8494,12 @@ msgstr "제7장"
 #. type: Content of: <chapter><title>
 #: en/chapter07/chapter07.xml:12
 msgid "Entering Chroot and Building Additional Temporary Tools"
-msgstr ""
+msgstr "chroot 진입 및 추가 임시 도구 빌드하기"
 
 #. type: Content of: <sect1><title>
 #: en/chapter07/chroot.xml:11
 msgid "Entering the Chroot Environment"
-msgstr ""
+msgstr "chroot 환경 진입"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:13
@@ -9338,6 +9372,10 @@ msgid ""
 "environment, completely isolated from the host operating system (except for "
 "the running kernel), can be used for the build."
 msgstr ""
+"이 장에서는 임시 시스템에서 마지막으로 빠진 부분, 즉 다양한 패키지를 빌드하"
+"는 데 필요한 도구를 빌드하는 방법을 보여줍니다. 이제 모든 순환 의존성이 해결"
+"되었으므로, (실행 중인 커널을 제외하고) 호스트 운영 체제로부터 완전히 격리된 "
+"<quote>chroot</quote> 환경을 빌드에 사용할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/introduction.xml:19
@@ -9348,6 +9386,10 @@ msgid ""
 "before entering the chroot environment. You may want to verify that they are "
 "mounted by issuing the <command>findmnt</command> command."
 msgstr ""
+"격리된 환경이 적절히 동작하려면 실행 중인 커널과의 통신이 이루어져야 합니다. "
+"이는 이른바 <emphasis>가상 커널 파일 시스템</emphasis>을 통해 수행되며, "
+"chroot 환경에 진입하기 전에 마운트되어야 합니다. <command>findmnt</command> "
+"명령을 실행하면 이들이 마운트되었는지 확인할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/introduction.xml:25
@@ -9359,6 +9401,11 @@ msgid ""
 "careful anyway, as it is easy to destroy the whole LFS system with bad "
 "commands."
 msgstr ""
+"<xref linkend=\"ch-tools-chroot\"/> 전까지는 <envar>LFS</envar> 변수가 설정"
+"된 상태에서 <systemitem class=\"username\">root</systemitem> 사용자로 명령어"
+"를 실행해야 합니다. chroot 진입 후에는 모든 명령어가 &root; 로 실행되는데, 다"
+"행히 LFS를 빌드 중인 컴퓨터의 운영 체제에는 접근할 수 없습니다. 하지만 잘못"
+"된 명령어로 LFS 시스템 전체를 깨뜨리기 쉬우므로 주의하십시오."
 
 #. type: Content of: <sect1><title>
 #: en/chapter07/kernfs.xml:11
