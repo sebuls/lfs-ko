@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-23 04:58+0900\n"
-"PO-Revision-Date: 2026-03-23 04:57+0900\n"
+"POT-Creation-Date: 2026-03-23 21:50+0900\n"
+"PO-Revision-Date: 2026-03-23 21:50+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -839,7 +839,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter02/creatingpartition.xml:11
 msgid "Creating a New Partition"
-msgstr ""
+msgstr "새 파티션 생성"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingpartition.xml:13
@@ -1140,11 +1140,15 @@ msgid ""
 "meet these requirements will still work, but the time to build packages will "
 "be significantly longer than documented."
 msgstr ""
+"LFS 편집자들은 시스템 CPU가 최소 4개 이상의 코어를 갖추고, 메모리는 최소 8GB "
+"이상이기를 권장합니다. 이러한 요구 사항을 충족하지 못하는 구형 시스템에서도 "
+"여전히 동작은 하겠지만, 패키지를 빌드하는 데 걸리는 시간이 문서에 기재된 것보"
+"다 훨씬 더 길어질 겁니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/hostreqs.xml:26
 msgid "Software"
-msgstr "솦트웨어"
+msgstr "소프트웨어"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter02/hostreqs.xml:28
@@ -1696,7 +1700,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter02/stages.xml:11
 msgid "Building LFS in Stages"
-msgstr "Building LFS in Stages"
+msgstr "LFS in 스테이지 빌드"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/stages.xml:13
@@ -2175,7 +2179,7 @@ msgstr "MD5 합: <literal>&bc-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:88
 msgid "Binutils (&binutils-version;) - <token>&binutils-size;</token>:"
-msgstr ""
+msgstr "Binutils (&binutils-version;) - <token>&binutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:90
@@ -4878,7 +4882,7 @@ msgstr ""
 #: en/chapter08/binutils.xml:20 en/prologue/why.xml:74
 #: en/appendices/dependencies.xml:280
 msgid "Binutils"
-msgstr ""
+msgstr "Binutils"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: en/chapter05/binutils-pass1.xml:21 en/chapter05/gcc-pass1.xml:21
@@ -5363,7 +5367,7 @@ msgstr "제5장"
 #. type: Content of: <chapter><title>
 #: en/chapter05/chapter05.xml:12
 msgid "Compiling a Cross-Toolchain"
-msgstr ""
+msgstr "크로스 툴제인 컴파일"
 
 #. type: Attribute 'xreflabel' of: <sect1>
 #: en/chapter05/gcc-pass1.xml:8
@@ -6250,6 +6254,9 @@ msgid ""
 "Although here cross-compilation is faked, the principles are the same as for "
 "a real cross-toolchain."
 msgstr ""
+"이 장은 크로스 컴파일러와 그와 관련된 도구들을 빌드하는 방법을 보여줍니다. 여"
+"기서 크로스 컴파일은 흉내를 내는 형식이지만, 원리는 실제 크로스 툴체인을 구축"
+"할 때와 같습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter05/introduction.xml:17
@@ -8494,12 +8501,12 @@ msgstr "제7장"
 #. type: Content of: <chapter><title>
 #: en/chapter07/chapter07.xml:12
 msgid "Entering Chroot and Building Additional Temporary Tools"
-msgstr "chroot 진입 및 추가 임시 도구 빌드하기"
+msgstr "Chroot 진입 및 추가 임시 도구 빌드하기"
 
 #. type: Content of: <sect1><title>
 #: en/chapter07/chroot.xml:11
 msgid "Entering the Chroot Environment"
-msgstr "chroot 환경 진입"
+msgstr "Chroot 환경 진입"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:13
@@ -8510,7 +8517,7 @@ msgid ""
 "install the final system. As user <systemitem class=\"username\">root</"
 "systemitem>, run the following command to enter the environment that is, at "
 "the moment, populated with nothing but temporary tools:"
-msgstr "needed if the kernel driver for"
+msgstr ""
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/chroot.xml:21
@@ -43109,7 +43116,7 @@ msgstr "Version &version;"
 #. type: Content of: <bookinfo><subtitle>
 #: en/prologue/bookinfo.xml:11
 msgid "Published &releasedate;"
-msgstr ""
+msgstr "발행일 &releasedate;"
 
 #. type: Content of: <bookinfo><authorgroup><author><firstname>
 #: en/prologue/bookinfo.xml:15
@@ -43157,11 +43164,13 @@ msgid ""
 "<copyright id=\"copyright\"> <year>&copyrightdate;</year> <holder>Gerard "
 "Beekmans</holder> </copyright>"
 msgstr ""
+"<copyright id=\"copyright\"> <year>&copyrightdate;</year> <holder>Gerard "
+"Beekmans</holder> </copyright>"
 
 #. type: Content of: <bookinfo><legalnotice><para>
 #: en/prologue/bookinfo.xml:41
 msgid "Copyright &copy; &copyrightdate;, Gerard Beekmans"
-msgstr ""
+msgstr "Copyright &copy; &copyrightdate;, Gerard Beekmans"
 
 #. type: Content of: <bookinfo><legalnotice><para>
 #: en/prologue/bookinfo.xml:43
@@ -43219,6 +43228,12 @@ msgid ""
 "changes shown and apply them to the relevant sections of the book as you "
 "build the LFS system."
 msgstr ""
+"LFS 시스템을 만드는 데 사용되는 소프트웨어는 늘 업데이트되고 개선됩니다. LFS "
+"책이 출시된 이후에도 보안 경고나 버그 수정 사항이 나올 수 있습니다. 보안 취약"
+"점을 해결하거나 다른 버그를 수정하기 위해 이번 LFS 릴리스의 패키지 버전이나 "
+"지침에 수정이 필요한지 확인하려면, 빌드 진행 전에 <ulink url=\"&errata;\"/>"
+"를 방문하십시오. 표시된 변경 사항을 메모하고 LFS 시스템을 빌드할 때 책의 관"
+"련 섹션에 적용해야 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/errata.xml:23
@@ -43359,7 +43374,7 @@ msgstr "구조"
 #. type: Content of: <sect1><para>
 #: en/prologue/organization.xml:13
 msgid "This book is divided into the following parts."
-msgstr ""
+msgstr "이 책은 다음과 같은 부분으로 나뉩니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/prologue/organization.xml:16
@@ -43805,6 +43820,9 @@ msgid ""
 "used throughout this book. This section contains some examples of the "
 "typographical format found throughout Linux From Scratch."
 msgstr ""
+"내용을 더 쉽게 따라갈 수 있도록 이 책 전반에서 몇 가지 타이포그래피 관례를 사"
+"용합니다. 이 섹션에는 Linux From Scratch 전반에서 볼 수 있는 타이포그래피 형"
+"식의 몇 가지 예시가 들어 있습니다."
 
 #. type: Content of: <sect1><screen>
 #: en/prologue/typography.xml:18
@@ -43987,6 +44005,12 @@ msgid ""
 "not, strictly speaking, required.  The list below documents the reasons each "
 "package in the book has been included."
 msgstr ""
+"LFS의 목표는 스스로를 복제하는 데 필요한 모든 패키지를 포함하여, 완전하고 사"
+"용 가능한 기초 수준의 시스템을 구축하는 것입니다. 또한 사용자의 선택에 따라 "
+"더 완전한 시스템을 맞춤 설정할 수 있도록 상대적으로 최소한의 기반을 제공합니"
+"다. 이것이 LFS가 가능한 가장 작은 시스템이라는 의미는 아닙니다. 엄밀히 말해 "
+"필수적이지는 않지만 중요한 몇 가지 패키지들이 포함되어 있습니다. 아래 목록은 "
+"이 책에 포함된 각 패키지의 선정 이유를 설명합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:26
@@ -48476,7 +48500,7 @@ msgstr "&lfs-rules;"
 #: en/part3intro/generalinstructions.xml:9
 #: en/part3intro/generalinstructions.xml:12
 msgid "General Compilation Instructions"
-msgstr "General Compilation Instructions"
+msgstr "일반 컴파일 명령"
 
 #. type: Content of: <sect1><caution><para>
 #: en/part3intro/generalinstructions.xml:16
@@ -48709,7 +48733,7 @@ msgstr "중요한 사전준비 사항"
 #: en/part3intro/toolchaintechnotes.xml:11
 #: en/part3intro/toolchaintechnotes.xml:14
 msgid "Toolchain Technical Notes"
-msgstr ""
+msgstr "툰체인 기술 노트"
 
 #. type: Content of: <sect1><para>
 #: en/part3intro/toolchaintechnotes.xml:16
