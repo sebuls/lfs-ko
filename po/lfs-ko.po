@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-25 02:23+0900\n"
-"PO-Revision-Date: 2026-03-25 02:23+0900\n"
+"POT-Creation-Date: 2026-03-25 07:01+0900\n"
+"PO-Revision-Date: 2026-03-25 07:00+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -82,6 +82,10 @@ msgid ""
 "questions are considered invalid and may annoy upstream developers for these "
 "projects."
 msgstr ""
+"만약 업스트림 지원 채널을 통해 직접 질문해야 한다면, 많은 업스트림 프로젝트"
+"가 지원 채널과 버그 추적기(bug tracker)를 분리하여 운영한다는 점에 최소한 유"
+"의해야 합니다. 질문하기 위해 제출된 <quote>버그</quote> 보고서는 부당한 것으"
+"로 간주되며, 해당 프로젝트의 업스트림 개발자들을 화나게 할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/askforhelp.xml:35
@@ -114,6 +118,14 @@ msgid ""
 "searches do not produce a solution, please include all the relevant "
 "information (mentioned below) in your request for help."
 msgstr ""
+"또한 메일링 리스트와 IRC를 통해 기꺼이 도움을 줄 수 있는 멋진 LFS 커뮤니티가 "
+"있습니다(이 책 <xref linkend=\"ch-intro-resources\"/> 섹션 참조). 그러나, 우"
+"리는 매일 수많은 지원 요청 질문을 받고 있으며, 그중 상당수는 FAQ를 확인하거"
+"나 메일링 리스트를 검색하는 것만으로도 쉽게 해결할 수 있는 것들입니다. 따라"
+"서, 우리가 가능한 최고의 도움을 드릴 수 있도록, 먼저 스스로 조사를 해보시기 "
+"바랍니다. 그렇게 함으로써 우리는 더 흔치 않은 지원 요청에 집중할 수 있게 됩니"
+"다. 만약 검색을 통해서도 해결책을 찾지 못했다면, 도움을 요청할 때 (아래에 언"
+"급된) 모든 관련 정보를 포함하십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/askforhelp.xml:56
@@ -126,36 +138,38 @@ msgid ""
 "Apart from a brief explanation of the problem being experienced, any request "
 "for help should include these essential things:"
 msgstr ""
+"겪고 있는 문제에 대한 간략한 설명 외에도, 도움을 요청할 때는 다음과 같은 필수"
+"사항을 포함:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:63
 msgid "The version of the book being used (in this case &version;)"
-msgstr ""
+msgstr "사용 중인 책의 버전 (&version;)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:66
 msgid "The host distribution and version being used to create LFS"
-msgstr ""
+msgstr "LFS 구축에 사용하는 호스트 배포판 및 버전"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:69
 msgid "The output from the <xref linkend='version-check'/> script"
-msgstr ""
+msgstr "<xref linkend='version-check'/> 스크립트의 출력"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:72
 msgid "The package or section the problem was encountered in"
-msgstr ""
+msgstr "문제가 발생한 패키지 또는 섹션"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:75
 msgid "The exact error message, or a clear description of the problem"
-msgstr ""
+msgstr "정확한 오류 메시지 또는 문제에 대한 명확한 설명"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter01/askforhelp.xml:78
 msgid "Note whether you have deviated from the book at all"
-msgstr ""
+msgstr "책의 내용에서 조금이라도 벗어난 부분이 있는지 명시"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter01/askforhelp.xml:83
@@ -165,11 +179,15 @@ msgid ""
 "any changes to the established procedure helps us evaluate and determine "
 "possible causes of your problem."
 msgstr ""
+"이 책의 내용에서 벗어나는 것이 우리가 도움을 드리지 않겠다는 뜻은 <emphasis>"
+"아닙니다</emphasis>. 결국 LFS는 개인의 취향에 관한 것이므로. 정해진 절차에서 "
+"변경한 사항들을 미리 솔직하게 알려주시면, 발생한 문제의 원인을 평가하고 진단"
+"하는 데 큰 도움이 됩니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/askforhelp.xml:92
 msgid "Configure Script Problems"
-msgstr ""
+msgstr "Configure 스크립트 문제"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/askforhelp.xml:94
@@ -180,6 +198,11 @@ msgid ""
 "not printed to the screen. Include the <emphasis>relevant</emphasis> lines "
 "if you need to ask for help."
 msgstr ""
+"<command>configure</command> 스크립트를 실행하는 동안 문제가 생기면 "
+"<filename>config.log</filename> 파일을 검토하십시오. 이 파일에는 화면에 출력"
+"되지 않은 <command>configure</command> 진행 중의 오류가 들어 있을 수 있습니"
+"다. 도움을 요청해야 할 경우, 우리에게 <emphasis>관련된(relevant)</emphasis> "
+"줄을 포함하여 알려주십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/askforhelp.xml:103
@@ -196,6 +219,12 @@ msgid ""
 "all of the relevant information. Here is an example of the type of "
 "information to include from the <command>make</command> screen output."
 msgstr ""
+"화면 출력 내용과 다양한 파일의 콘텐츠 모두 컴파일 문제의 원인을 파악하는 데 "
+"유용합니다. <command>configure</command> 스크립트와 <command>make</command> "
+"실행 시의 화면 출력 결과가 도움이 될 수 있습니다. 출력 전체를 포함할 필요는 "
+"없지만, 모든 <emphasis>relevant</emphasis>한 정보를 포함하십시오. 여기 "
+"<command>make</command> 화면 출력에서 포함해야 할 정보 유형의 예시가 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter01/askforhelp.xml:113
@@ -290,7 +319,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/chapter01/changelog.xml:18
 msgid "Below is a list of changes made since the previous release of the book."
-msgstr ""
+msgstr "아래는 이전 릴리스 이후 이 책에 적용된 변경사항 목록입니다."
 
 #. type: Content of: <sect1><itemizedlist><title>
 #: en/chapter01/changelog.xml:22
@@ -43572,6 +43601,13 @@ msgid ""
 "system, you should continue to consult the advisories and fix any security "
 "vulnerabilities, even when the LFS system has been completely constructed."
 msgstr ""
+"또한, Linux From Scratch 편집자들은 책이 출간된 <emphasis>이후</emphasis> 발"
+"견된 보안 취약점 목록을 관리하고 있습니다. 이 목록을 확인하려면 빌드 진행 전"
+"에 <ulink url=\"&secadv;\"/> 방문하십시오. LFS 시스템을 구축하는 동안, 해당 "
+"권고문(advisories)에서 제안하는 변경사항을 책의 관련 섹션에 적용해야 합니다. "
+"그리고 만약 LFS 시스템을 실제 데스크톱이나 서버 시스템으로 사용할 계획이라"
+"면, LFS 시스템이 완전히 구축된 이후에도 계속해서 권고문을 참고하고 보안 취약"
+"점을 수정해야 합니다."
 
 #. type: Content of: <sect1><title>
 #: en/prologue/foreword.xml:11
