@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-24 03:34+0900\n"
-"PO-Revision-Date: 2026-03-24 03:34+0900\n"
+"POT-Creation-Date: 2026-03-25 02:23+0900\n"
+"PO-Revision-Date: 2026-03-25 02:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -466,7 +466,7 @@ msgstr ""
 #. type: Attribute 'xreflabel' of: <sect1><sect2>
 #: en/chapter01/resources.xml:23
 msgid "Chapter&nbsp;1 - Mailing Lists"
-msgstr ""
+msgstr "제1장 - 메일링 리스트"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:24
@@ -509,12 +509,12 @@ msgstr ""
 #. type: Attribute 'xreflabel' of: <sect1><sect2>
 #: en/chapter01/resources.xml:76
 msgid "Chapter&nbsp;1 - Mirror sites"
-msgstr ""
+msgstr "제1장 - 미러 사이트"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:77
 msgid "Mirror Sites"
-msgstr ""
+msgstr "미러 사이트"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/resources.xml:79
@@ -528,7 +528,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:87
 msgid "Contact Information"
-msgstr ""
+msgstr "연락 정보"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/resources.xml:89
@@ -566,7 +566,7 @@ msgstr "제거됨:"
 #. type: Content of: <sect1><title>
 #: en/chapter02/aboutlfs.xml:11
 msgid "Setting the $LFS Variable and the Umask"
-msgstr ""
+msgstr "$LFS 변수 및 Umask 설정"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/aboutlfs.xml:13
@@ -580,6 +580,13 @@ msgid ""
 "partition, this directory will be the mount point for the partition.  Choose "
 "a directory location and set the variable with the following command:"
 msgstr ""
+"이 책 전반에 걸쳐, 환경 변수 <envar>LFS</envar>를 여러 번 쓸 것입니다. LFS 빌"
+"드 프로세스 내내 이 변수가 항상 정의되어 있도록 확인해야 합니다. 이 변수는 "
+"LFS 시스템을 빌드할 디렉터리 이름으로 설정해야 합니다. 우리는 <filename "
+"class=\"directory\">/mnt/lfs</filename>를 예시로 사용하겠지만, 어떤 디렉터리 "
+"이름을 자유롭게 선택해도 됩니다. 만약 별도의 파티션에 LFS를 구축하고 있다면, "
+"이 디렉터리는 해당 파티션의 마운트 포인트가 됩니다. 디렉터리 위치를 선택하고 "
+"다음 명령어로 변수 설정:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/aboutlfs.xml:23
@@ -596,6 +603,10 @@ msgid ""
 "(or whatever value the variable was set to) when it processes the command "
 "line."
 msgstr ""
+"이 변수를 설정해 두면 <command>mkdir -v $LFS/tools</command> 같은 명령어를 문"
+"자 그대로 입력할 수 있어 유익합니다. 셸이 명령행을 처리할 때 <quote>$LFS</"
+"quote> 를 <quote>/mnt/lfs</quote> (또는 해당 변수에 설정된 값)로 자동으로 치"
+"환해 주기 때문입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/aboutlfs.xml:31
@@ -603,6 +614,8 @@ msgid ""
 "Now set the file mode creation mask (umask) to <literal>022</literal> in "
 "case the host distro uses a different default:"
 msgstr ""
+"호스트 배포판이 다른 기본값을 사용할 경우를 대비해, 파일 모드 생성 마스크"
+"(umask)를 <literal>022</literal>로 설정:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/aboutlfs.xml:35
@@ -622,6 +635,12 @@ msgid ""
 "restrictive default can cause strange issues building or using the LFS "
 "system."
 msgstr ""
+"umask를 022로 설정하면, 새로 생성된 파일과 디렉터리는 소유자만 쓸 수 있고, 다"
+"른 모든 이들은 읽거나 (디렉터리만) 탐색할 수 있게 됩니다(단, <ulink "
+"role='man' url='&man;open.2'>open(2)</ulink> 시스템 호출이 기본 모드를 사용한"
+"다고 가정할 때, 새 파일은 644 권한 모드를, 디렉터리는 755 모드를 갖게 됨). 기"
+"본 권한이 너무 관대하면 LFS 시스템에 보안 허점이 생길 수 있고, 반대로 너무 제"
+"한하면 LFS 시스템을 빌드하거나 사용하는 동안 이상한 문제가 생길 수 있습니다."
 
 #. type: Content of: <sect1><caution><para>
 #: en/chapter02/aboutlfs.xml:47
@@ -632,6 +651,11 @@ msgid ""
 "class=\"username\">root</systemitem> or another user). Check that the "
 "<envar>LFS</envar> variable is set up properly with:"
 msgstr ""
+"현재 작업 환경을 벗어났다가 다시 들어올 때마다(예: <systemitem "
+"class=\"username\">root</systemitem> 또는 다른 사용자로 <command>su</"
+"command> 명령을 실행할 때), <envar>LFS</envar> 변수가 설정되어 있고 umask가 "
+"<literal>022</literal>로 되어 있는지 잊지 말고 확인하십시오. 다음 명령어를 실"
+"행하여 <envar>LFS</envar> 변수가 올바르게 설정되었는지 점검:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><screen>
 #: en/chapter02/aboutlfs.xml:54 en/part3intro/generalinstructions.xml:57
@@ -646,14 +670,13 @@ msgid ""
 "which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
 "example was followed."
 msgstr ""
-"Make sure the output shows the path to your LFS system's build location, "
-"which is <filename class=\"directory\">/mnt/lfs</filename> if the provided "
-"example was followed."
+"출력 결과에 LFS 시스템의 빌드 위치 경로가 표시되는지 확인하십시오. 제공된 예"
+"시를 따랐다면 이 경로는 <filename class=\"directory\">/mnt/lfs</filename>."
 
 #. type: Content of: <sect1><caution><para>
 #: en/chapter02/aboutlfs.xml:60
 msgid "Check that the umask is set up properly with:"
-msgstr ""
+msgstr "umask가 올바르게 설정되었는지 다음 명령어로 확인:"
 
 #. type: Content of: <sect1><caution><screen>
 #: en/chapter02/aboutlfs.xml:62
@@ -668,6 +691,9 @@ msgid ""
 "<computeroutput>022</computeroutput> (the number of leading zeros depends on "
 "the host distro)."
 msgstr ""
+"출력은 <computeroutput>0022</computeroutput> 또는 <computeroutput>022</"
+"computeroutput> 일 수 있습니다(앞에 붙는 0의 개수는 호스트 배포판에 따라 다"
+"름)."
 
 #. type: Content of: <sect1><caution><para>
 #: en/chapter02/aboutlfs.xml:68
@@ -676,6 +702,9 @@ msgid ""
 "earlier on this page to set <envar>$LFS</envar> to the correct directory "
 "name and set umask to <literal>022</literal>."
 msgstr ""
+"이 두 명령의 출력 결과 중 어느 하나라도 그르다면, 이 페이지 앞부분에서 안내"
+"한 명령어를 사용하여 <envar>$LFS</envar>를 바른 디렉터리 이름으로 설정하고 "
+"umask를 <literal>022</literal>로 설정하십시오."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter02/aboutlfs.xml:72
@@ -689,6 +718,13 @@ msgid ""
 "variable must be bash to ensure that the <filename>.bash_profile</filename> "
 "file is incorporated as a part of the login process."
 msgstr ""
+"<envar>LFS</envar> 변수와 umask가 항상 올바르게 설정되도록 보장하는 한 방법"
+"은 개인 홈 디렉터리와 <filename>/root/.bash_profile</filename>에 있는 "
+"<filename>.bash_profile</filename> 파일을 편집하여 위에서 언급한 "
+"<command>export</command> 및 <command>umask</command> 명령어를 입력하는 것입"
+"니다. 또한, <envar>LFS</envar> 변수가 필요한 모든 사용자의 <filename>/etc/"
+"passwd</filename> 파일에 지정된 셸이 반드시 bash 이어야만 로그인 프로세스 일"
+"부로 <filename>.bash_profile</filename> 파일이 통합되어 적용됩니다."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter02/aboutlfs.xml:83
@@ -703,6 +739,14 @@ msgid ""
 "instructions for a non-interactive bash invocation.  Be sure to place the "
 "commands ahead of the test for non-interactive use."
 msgstr ""
+"또 다른 고려 사항은 호스트 시스템에 로그인하는 방법입니다. 그래픽 디스플레이 "
+"관리자를 통해 로그인하는 경우, 가상 터미널을 시작할 때 사용자의 "
+"<filename>.bash_profile</filename> 은 보통 안 씁니다. 이 경우, 해당 사용자와 "
+"<systemitem class=\"username\">root</systemitem>의 <filename>.bashrc</"
+"filename> 파일에 해당 명령어들을 추가하십시오. 또한, 일부 배포판은 \"if\" 테"
+"스트를 써서 비대화형(non-interactive) bash 호출 시 나머지 <filename>.bashrc</"
+"filename> 지시를 실행하지 않기도 합니다. 비대화형 사용을 위한 테스트 문보다 "
+"앞부분에 해당 명령어들을 배치했는지 반드시 확인하십시오."
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter02/chapter02.xml:8
@@ -815,6 +859,8 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
 "partition."
 msgstr ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
+"partition."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:67
@@ -837,6 +883,8 @@ msgid ""
 "Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
 msgstr ""
+"Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
+"<systemitem class=\"filesystem\">swap</systemitem> partition."
 
 #. type: Content of: <sect1><title>
 #: en/chapter02/creatingpartition.xml:11
@@ -914,6 +962,11 @@ msgid ""
 "class=\"filesystem\">swap</systemitem> partition. These names will be needed "
 "later for the <filename>/etc/fstab</filename> file."
 msgstr ""
+"Remember the designation of the new partition (e.g., <filename "
+"class=\"devicefile\">sda5</filename>). This book will refer to this as the "
+"LFS partition. Also remember the designation of the <systemitem "
+"class=\"filesystem\">swap</systemitem> partition. These names will be needed "
+"later for the <filename>/etc/fstab</filename> file."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/creatingpartition.xml:63
@@ -931,6 +984,13 @@ msgid ""
 "LFS builds more difficult, makes backups more time consuming, and can waste "
 "disk space through inefficient allocation of file system structures."
 msgstr ""
+"Requests for advice on system partitioning are often posted on the LFS "
+"mailing lists. This is a highly subjective topic.  The default for most "
+"distributions is to use the entire drive with the exception of one small "
+"swap partition.  This is not optimal for LFS for several reasons.  It "
+"reduces flexibility, makes sharing of data across multiple distributions or "
+"LFS builds more difficult, makes backups more time consuming, and can waste "
+"disk space through inefficient allocation of file system structures."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter02/creatingpartition.xml:74
@@ -1127,7 +1187,7 @@ msgstr ""
 #: en/chapter02/hostreqs.xml:8 en/chapter02/hostreqs.xml:11
 #: en/chapter02/hostreqs.xml:176
 msgid "Host System Requirements"
-msgstr "Host System Requirements"
+msgstr "호스트 시스템 요구사항"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/hostreqs.xml:14
@@ -1163,6 +1223,13 @@ msgid ""
 "<literal><replaceable>&lt;package-name&gt;</replaceable>-dev</literal>.  Be "
 "sure to install those if your distribution provides them."
 msgstr ""
+"호스트 시스템은 아래에 명시된 최소 버전 이상의 소프트웨어들을 갖추고 있어야 "
+"합니다. 대부분의 최신 리눅스 배포판에서는 이것이 문제가 되지 않을 것입니다. "
+"또한 많은 배포판이 소프트웨어 헤더를 별도의 패키지로 나누어 제공하며, 대개 "
+"<literal><replaceable>&lt;package-name&gt;</replaceable>-devel</literal> 또"
+"는 <literal><replaceable>&lt;package-name&gt;</replaceable>-dev</literal> 같"
+"은 형식을 취한다는 점 유의하십시오. 사용 중인 배포판에서 해당 패키지들을 제공"
+"한다면 반드시 설치하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter02/hostreqs.xml:37
@@ -1170,6 +1237,8 @@ msgid ""
 "Earlier versions of the listed software packages may work, but have not been "
 "tested."
 msgstr ""
+"목록에 있는 소프트웨어 패키지의 이전 버전도 동작할 수 있지만, 테스트는 안 했"
+"습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:43
@@ -1264,6 +1333,16 @@ msgid ""
 "upstream kernel releases; read <ulink url='https://kernel.org/category/"
 "releases.html'/> for the details."
 msgstr ""
+"커널 버전 요구 사항이 있는 이유는 우리가 <xref linkend=\"chapter-cross-"
+"tools\"/>와 <xref linkend=\"chapter-building-system\"/>에서 "
+"<application>glibc</application>를 빌드할 때 해당 버전을 지정하기 때문입니"
+"다. 이렇게 하면 이전 버전 커널을 위한 임시방편(workarounds) 기능들이 활성화되"
+"지 않아, 컴파일된 <application>glibc</application>가 약간 더 빠르고 크기도 작"
+"아집니다. 2024년 12월 기준 &min-kernel;은 커널 개발자들이 여전히 지원하는 가"
+"장 오래된 커널 릴리스입니다. &min-kernel;보다 오래된 일부 커널 릴리스가 제3"
+"자 팀에 의해 여전히 지원될 수도 있지만, 공식 업스트림 커널 릴리스로 간주되지"
+"는 않습니다. 자세한 내용은 <ulink url='https://kernel.org/category/"
+"releases.html'/>를 참조:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:109
@@ -1277,6 +1356,13 @@ msgid ""
 "configuring the boot loader (assuming the host uses GRUB) are located in "
 "<xref linkend=\"chapter-bootable\"/>."
 msgstr ""
+"호스트 커널이 &min-kernel;보다 이전 버전이라면, 커널을 더 최신 버전으로 교체"
+"해야 합니다. 여기에는 두 가지 방법이 있습니다. 첫째, 사용하는 리눅스 배포판 "
+"업체에서 &min-kernel; 이상의 커널 패키지를 제공하는지 확인하십시오. 만약 제공"
+"한다면, 그것을 설치하는 것이 좋습니다. 배포판 업체에서 적절한 커널 패키지를 "
+"제공하지 않거나 설치를 원치 않는다면, 커널을 직접 컴파일할 수도 있습니다. 커"
+"널 컴파일 및 (호스트가 GRUB을 사용한다고 가정할 때) 부트로더 설정에 관한 안내"
+"는 <xref linkend=\"chapter-bootable\"/>에 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:118
@@ -1287,6 +1373,11 @@ msgid ""
 "<option>CONFIG_UNIX98_PTYS</option> is set to <literal>y</literal> in the "
 "kernel configuration."
 msgstr ""
+"우리는 호스트 커널이 UNIX 98 의사 터미널(PTY)을 지원할 것을 요구합니다. 리눅"
+"스 &min-kernel; 또는 그 이상의 최신 커널을 탑재한 모든 데스크톱이나 서버 배포"
+"판에서는 이 기능이 활성화되어 있을 것입니다. 만약 호스트 커널을 직접 빌드하"
+"여 구축하는 중이라면, 커널 설정에서 <option>CONFIG_UNIX98_PTYS</option>가 "
+"<literal>y</literal> 설정되어 있는지 확인하십시오."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:127
@@ -1354,6 +1445,8 @@ msgid ""
 "To see whether your host system has all the appropriate versions, and the "
 "ability to compile programs, run the following commands:"
 msgstr ""
+"호스트 시스템이 적절한 버전을 모두 갖추고 있는지, 그리고 프로그램을 컴파일할 "
+"능력이 있는지 확인하려면 다음 명령어 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter02/hostreqs.xml:183
@@ -1623,6 +1716,8 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
 "replaceable> with the appropriate partition names."
 msgstr ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
+"replaceable> with the appropriate partition names."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:45
@@ -1691,6 +1786,8 @@ msgid ""
 "Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
 msgstr ""
+"Replace <replaceable>&lt;zzz&gt;</replaceable> with the name of the "
+"<systemitem class=\"filesystem\">swap</systemitem> partition."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:84
@@ -1738,6 +1835,9 @@ msgid ""
 "user after Section 2.4 must have the LFS environment variable set "
 "<emphasis>FOR THE ROOT USER</emphasis>."
 msgstr ""
+"Procedures performed as the <systemitem class=\"username\">root</systemitem> "
+"user after Section 2.4 must have the LFS environment variable set "
+"<emphasis>FOR THE ROOT USER</emphasis>."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/stages.xml:37
@@ -2039,6 +2139,9 @@ msgid ""
 "downloading packages to figure out if a newer version of any package should "
 "be used to avoid security vulnerabilities."
 msgstr ""
+"Read the <ulink url='&secadv;'>security advisories</ulink> before "
+"downloading packages to figure out if a newer version of any package should "
+"be used to avoid security vulnerabilities."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter03/packages.xml:19
@@ -2271,7 +2374,7 @@ msgstr "다운로드: <ulink url=\"&dbus-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:128
 msgid "MD5 sum: <literal>&dbus-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&dbus-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:133
@@ -2291,7 +2394,7 @@ msgstr "다운로드: <ulink url=\"&dejagnu-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:137
 msgid "MD5 sum: <literal>&dejagnu-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&dejagnu-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:142
@@ -2311,7 +2414,7 @@ msgstr "다운로드: <ulink url=\"&diffutils-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:146
 msgid "MD5 sum: <literal>&diffutils-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&diffutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:151
@@ -2331,7 +2434,7 @@ msgstr "다운로드: <ulink url=\"&e2fsprogs-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:155
 msgid "MD5 sum: <literal>&e2fsprogs-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&e2fsprogs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:160
@@ -2351,7 +2454,7 @@ msgstr "다운로드: <ulink url=\"&elfutils-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:164
 msgid "MD5 sum: <literal>&elfutils-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&elfutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:169
@@ -2371,7 +2474,7 @@ msgstr "다운로드: <ulink url=\"&expat-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:173
 msgid "MD5 sum: <literal>&expat-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&expat-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:178
@@ -2391,7 +2494,7 @@ msgstr "다운로드: <ulink url=\"&expect-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:182
 msgid "MD5 sum: <literal>&expect-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&expect-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:187
@@ -2411,7 +2514,7 @@ msgstr "다운로드: <ulink url=\"&file-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:191
 msgid "MD5 sum: <literal>&file-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&file-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:196
@@ -2431,7 +2534,7 @@ msgstr "다운로드: <ulink url=\"&findutils-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:200
 msgid "MD5 sum: <literal>&findutils-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&findutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:205
@@ -2451,7 +2554,7 @@ msgstr "다운로드: <ulink url=\"&flex-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:209
 msgid "MD5 sum: <literal>&flex-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&flex-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:214
@@ -2471,7 +2574,7 @@ msgstr "다운로드: <ulink url=\"&flit-core-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:218
 msgid "MD5 sum: <literal>&flit-core-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&flit-core-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:223
@@ -2491,7 +2594,7 @@ msgstr "다운로드: <ulink url=\"&gawk-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:227
 msgid "MD5 sum: <literal>&gawk-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gawk-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:232
@@ -2511,7 +2614,7 @@ msgstr "다운로드: <ulink url=\"&gcc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:236
 msgid "MD5 sum: <literal>&gcc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gcc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:241
@@ -2531,7 +2634,7 @@ msgstr "다운로드: <ulink url=\"&gdbm-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:245
 msgid "MD5 sum: <literal>&gdbm-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gdbm-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:250
@@ -2551,7 +2654,7 @@ msgstr "다운로드: <ulink url=\"&gettext-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:254
 msgid "MD5 sum: <literal>&gettext-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gettext-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:259
@@ -2571,7 +2674,7 @@ msgstr "다운로드: <ulink url=\"&glibc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:263
 msgid "MD5 sum: <literal>&glibc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&glibc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:267
@@ -2604,7 +2707,7 @@ msgstr "다운로드: <ulink url=\"&gmp-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:286
 msgid "MD5 sum: <literal>&gmp-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gmp-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:291
@@ -2624,7 +2727,7 @@ msgstr "다운로드: <ulink url=\"&gperf-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:295
 msgid "MD5 sum: <literal>&gperf-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gperf-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:300
@@ -2644,7 +2747,7 @@ msgstr "다운로드: <ulink url=\"&grep-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:304
 msgid "MD5 sum: <literal>&grep-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&grep-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:309
@@ -2664,7 +2767,7 @@ msgstr "다운로드: <ulink url=\"&groff-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:313
 msgid "MD5 sum: <literal>&groff-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&groff-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:318
@@ -2684,7 +2787,7 @@ msgstr "다운로드: <ulink url=\"&grub-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:322
 msgid "MD5 sum: <literal>&grub-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&grub-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:327
@@ -2704,7 +2807,7 @@ msgstr "다운로드: <ulink url=\"&gzip-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:331
 msgid "MD5 sum: <literal>&gzip-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&gzip-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:336
@@ -2724,7 +2827,7 @@ msgstr "다운로드: <ulink url=\"&iana-etc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:340
 msgid "MD5 sum: <literal>&iana-etc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&iana-etc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:345
@@ -2744,7 +2847,7 @@ msgstr "다운로드: <ulink url=\"&inetutils-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:349
 msgid "MD5 sum: <literal>&inetutils-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&inetutils-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:354
@@ -2764,7 +2867,7 @@ msgstr "다운로드: <ulink url=\"&intltool-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:358
 msgid "MD5 sum: <literal>&intltool-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&intltool-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:363
@@ -2784,7 +2887,7 @@ msgstr "다운로드: <ulink url=\"&iproute2-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:367
 msgid "MD5 sum: <literal>&iproute2-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&iproute2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:372
@@ -2804,7 +2907,7 @@ msgstr "다운로드: <ulink url=\"&jinja2-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:376
 msgid "MD5 sum: <literal>&jinja2-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&jinja2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:381
@@ -2824,7 +2927,7 @@ msgstr "다운로드: <ulink url=\"&kbd-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:385
 msgid "MD5 sum: <literal>&kbd-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&kbd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:390
@@ -2844,7 +2947,7 @@ msgstr "다운로드: <ulink url=\"&kmod-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:394
 msgid "MD5 sum: <literal>&kmod-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&kmod-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:399
@@ -2864,7 +2967,7 @@ msgstr "다운로드: <ulink url=\"&less-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:403
 msgid "MD5 sum: <literal>&less-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&less-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:408
@@ -2888,7 +2991,7 @@ msgstr "다운로드: <ulink url=\"&lfs-bootscripts-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:412
 msgid "MD5 sum: <literal>&lfs-bootscripts-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&lfs-bootscripts-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:417
@@ -2908,7 +3011,7 @@ msgstr "다운로드: <ulink url=\"&libcap-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:421
 msgid "MD5 sum: <literal>&libcap-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&libcap-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:426
@@ -2928,7 +3031,7 @@ msgstr "다운로드: <ulink url=\"&libffi-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:430
 msgid "MD5 sum: <literal>&libffi-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&libffi-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:435
@@ -2950,7 +3053,7 @@ msgstr "다운로드: <ulink url=\"&libpipeline-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:439
 msgid "MD5 sum: <literal>&libpipeline-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&libpipeline-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:444
@@ -2970,7 +3073,7 @@ msgstr "다운로드: <ulink url=\"&libtool-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:448
 msgid "MD5 sum: <literal>&libtool-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&libtool-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:453
@@ -2990,7 +3093,7 @@ msgstr "다운로드: <ulink url=\"&libxcrypt-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:457
 msgid "MD5 sum: <literal>&libxcrypt-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&libxcrypt-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:462
@@ -3010,7 +3113,7 @@ msgstr "다운로드: <ulink url=\"&linux-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:466
 msgid "MD5 sum: <literal>&linux-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&linux-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:469
@@ -3081,7 +3184,7 @@ msgstr "다운로드: <ulink url=\"&lz4-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:517
 msgid "MD5 sum: <literal>&lz4-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&lz4-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:522
@@ -3101,7 +3204,7 @@ msgstr "다운로드: <ulink url=\"&m4-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:526
 msgid "MD5 sum: <literal>&m4-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&m4-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:531
@@ -3121,7 +3224,7 @@ msgstr "다운로드: <ulink url=\"&make-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:535
 msgid "MD5 sum: <literal>&make-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&make-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:540
@@ -3141,7 +3244,7 @@ msgstr "다운로드: <ulink url=\"&man-db-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:544
 msgid "MD5 sum: <literal>&man-db-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&man-db-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:549
@@ -3161,7 +3264,7 @@ msgstr "다운로드: <ulink url=\"&man-pages-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:553
 msgid "MD5 sum: <literal>&man-pages-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&man-pages-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:558
@@ -3181,12 +3284,12 @@ msgstr "다운로드: <ulink url=\"&markupsafe-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:562
 msgid "MD5 sum: <literal>&markupsafe-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&markupsafe-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:567
 msgid "Meson (&meson-version;) - <token>&meson-size;</token>:"
-msgstr ""
+msgstr "Meson (&meson-version;) - <token>&meson-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:569
@@ -3201,7 +3304,7 @@ msgstr "다운로드: <ulink url=\"&meson-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:571
 msgid "MD5 sum: <literal>&meson-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&meson-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:576
@@ -3221,7 +3324,7 @@ msgstr "다운로드: <ulink url=\"&mpc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:580
 msgid "MD5 sum: <literal>&mpc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&mpc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:585
@@ -3241,12 +3344,12 @@ msgstr "다운로드: <ulink url=\"&mpfr-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:589
 msgid "MD5 sum: <literal>&mpfr-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&mpfr-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:594
 msgid "Ncurses (&ncurses-version;) - <token>&ncurses-size;</token>:"
-msgstr ""
+msgstr "Ncurses (&ncurses-version;) - <token>&ncurses-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:596
@@ -3261,7 +3364,7 @@ msgstr "다운로드: <ulink url=\"&ncurses-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:598
 msgid "MD5 sum: <literal>&ncurses-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&ncurses-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:603
@@ -3281,7 +3384,7 @@ msgstr "다운로드: <ulink url=\"&ninja-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:607
 msgid "MD5 sum: <literal>&ninja-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&ninja-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:612
@@ -3301,7 +3404,7 @@ msgstr "다운로드: <ulink url=\"&openssl-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:616
 msgid "MD5 sum: <literal>&openssl-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&openssl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:621
@@ -3321,7 +3424,7 @@ msgstr "다운로드: <ulink url=\"&packaging-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:625
 msgid "MD5 sum: <literal>&packaging-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&packaging-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:630
@@ -3341,7 +3444,7 @@ msgstr "다운로드: <ulink url=\"&patch-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:634
 msgid "MD5 sum: <literal>&patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:639
@@ -3361,7 +3464,7 @@ msgstr "다운로드: <ulink url=\"&pcre2-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:643
 msgid "MD5 sum: <literal>&pcre2-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&pcre2-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:648
@@ -3381,7 +3484,7 @@ msgstr "다운로드: <ulink url=\"&perl-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:652
 msgid "MD5 sum: <literal>&perl-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&perl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:657
@@ -3401,7 +3504,7 @@ msgstr "다운로드: <ulink url=\"&pkgconf-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:661
 msgid "MD5 sum: <literal>&pkgconf-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&pkgconf-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:666
@@ -3421,7 +3524,7 @@ msgstr "다운로드: <ulink url=\"&procps-ng-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:670
 msgid "MD5 sum: <literal>&procps-ng-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&procps-ng-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:675
@@ -3441,7 +3544,7 @@ msgstr "다운로드: <ulink url=\"&psmisc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:679
 msgid "MD5 sum: <literal>&psmisc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&psmisc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:684
@@ -3461,7 +3564,7 @@ msgstr "다운로드: <ulink url=\"&python-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:688
 msgid "MD5 sum: <literal>&python-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&python-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:693
@@ -3478,7 +3581,7 @@ msgstr "다운로드: <ulink url=\"&python-docs-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:696
 msgid "MD5 sum: <literal>&python-docs-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&python-docs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:701
@@ -3498,7 +3601,7 @@ msgstr "다운로드: <ulink url=\"&readline-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:705
 msgid "MD5 sum: <literal>&readline-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&readline-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:710
@@ -3518,7 +3621,7 @@ msgstr "다운로드: <ulink url=\"&sed-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:714
 msgid "MD5 sum: <literal>&sed-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sed-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:719
@@ -3538,7 +3641,7 @@ msgstr "다운로드: <ulink url=\"&setuptools-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:723
 msgid "MD5 sum: <literal>&setuptools-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&setuptools-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:728
@@ -3558,7 +3661,7 @@ msgstr "다운로드: <ulink url=\"&shadow-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:732
 msgid "MD5 sum: <literal>&shadow-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&shadow-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:737
@@ -3578,7 +3681,7 @@ msgstr "다운로드: <ulink url=\"&sqlite-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:741
 msgid "MD5 sum: <literal>&sqlite-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sqlite-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:746
@@ -3594,7 +3697,7 @@ msgstr "다운로드: <ulink url=\"&sqlite-doc-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:750
 msgid "MD5 sum: <literal>&sqlite-doc-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sqlite-doc-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:753
@@ -3622,7 +3725,7 @@ msgstr "다운로드: <ulink url=\"&sysklogd-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:765
 msgid "MD5 sum: <literal>&sysklogd-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sysklogd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:770
@@ -3642,7 +3745,7 @@ msgstr "다운로드: <ulink url=\"&systemd-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:774
 msgid "MD5 sum: <literal>&systemd-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&systemd-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:779
@@ -3659,7 +3762,7 @@ msgstr "다운로드: <ulink url=\"&systemd-man-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:783
 msgid "MD5 sum: <literal>&systemd-man-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&systemd-man-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:786
@@ -3686,7 +3789,7 @@ msgstr "다운로드: <ulink url=\"&sysvinit-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:799
 msgid "MD5 sum: <literal>&sysvinit-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sysvinit-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:804
@@ -3706,7 +3809,7 @@ msgstr "다운로드: <ulink url=\"&tar-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:808
 msgid "MD5 sum: <literal>&tar-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&tar-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:813
@@ -3726,7 +3829,7 @@ msgstr "다운로드: <ulink url=\"&tcl-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:817
 msgid "MD5 sum: <literal>&tcl-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&tcl-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:822
@@ -3741,7 +3844,7 @@ msgstr "다운로드: <ulink url=\"&tcl-docs-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:825
 msgid "MD5 sum: <literal>&tcl-docs-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&tcl-docs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:830
@@ -3761,7 +3864,7 @@ msgstr "다운로드: <ulink url=\"&texinfo-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:834
 msgid "MD5 sum: <literal>&texinfo-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&texinfo-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:839
@@ -3781,7 +3884,7 @@ msgstr "다운로드: <ulink url=\"&tzdata-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:843
 msgid "MD5 sum: <literal>&tzdata-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&tzdata-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:848
@@ -3796,7 +3899,7 @@ msgstr "다운로드: <ulink url=\"&udev-lfs-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:851
 msgid "MD5 sum: <literal>&udev-lfs-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&udev-lfs-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:856
@@ -3816,7 +3919,7 @@ msgstr "다운로드: <ulink url=\"&util-linux-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:860
 msgid "MD5 sum: <literal>&util-linux-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&util-linux-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:879
@@ -3836,7 +3939,7 @@ msgstr "다운로드: <ulink url=\"&vim-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:883
 msgid "MD5 sum: <literal>&vim-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&vim-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:886
@@ -3863,7 +3966,7 @@ msgstr "다운로드: <ulink url=\"&wheel-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:898
 msgid "MD5 sum: <literal>&wheel-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&wheel-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:903
@@ -3883,7 +3986,7 @@ msgstr "다운로드: <ulink url=\"&xml-parser-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:907
 msgid "MD5 sum: <literal>&xml-parser-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&xml-parser-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:912
@@ -3903,7 +4006,7 @@ msgstr "다운로드: <ulink url=\"&xz-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:916
 msgid "MD5 sum: <literal>&xz-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&xz-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:921
@@ -3923,7 +4026,7 @@ msgstr "다운로드: <ulink url=\"&zlib-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:925
 msgid "MD5 sum: <literal>&zlib-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&zlib-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:930
@@ -3943,7 +4046,7 @@ msgstr "다운로드: <ulink url=\"&zstd-url;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:934
 msgid "MD5 sum: <literal>&zstd-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&zstd-md5;</literal>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/packages.xml:940
@@ -3978,7 +4081,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&bzip2-docs-patch;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:50
 msgid "MD5 sum: <literal>&bzip2-docs-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&bzip2-docs-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:55
@@ -3995,7 +4098,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&coreutils-i18n-patch;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:58
 msgid "MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&coreutils-i18n-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:63
@@ -4010,7 +4113,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&expect-gcc15-patch;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:66
 msgid "MD5 sum: <literal>&expect-gcc15-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&expect-gcc15-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:91
@@ -4025,7 +4128,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&glibc-fhs-patch;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:94
 msgid "MD5 sum: <literal>&glibc-fhs-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&glibc-fhs-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:99
@@ -4042,7 +4145,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&kbd-backspace-patch;\"/>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:102
 msgid "MD5 sum: <literal>&kbd-backspace-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&kbd-backspace-patch-md5;</literal>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:140
@@ -4059,7 +4162,7 @@ msgstr "다운로드: <ulink url=\"&patches-root;&sysvinit-consolidated-patch;\"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/patches.xml:143
 msgid "MD5 sum: <literal>&sysvinit-consolidated-patch-md5;</literal>"
-msgstr ""
+msgstr "MD5 sum: <literal>&sysvinit-consolidated-patch-md5;</literal>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/patches.xml:175
@@ -4479,6 +4582,11 @@ msgid ""
 "installed in a special directory, to separate it from the other programs. "
 "Still acting as &root;, create that directory with this command:"
 msgstr ""
+"Programs in <xref linkend=\"chapter-temporary-tools\"/> will be compiled "
+"with a cross-compiler (more details can be found in section <xref "
+"linkend=\"ch-tools-toolchaintechnotes\"/>). This cross-compiler will be "
+"installed in a special directory, to separate it from the other programs. "
+"Still acting as &root;, create that directory with this command:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/creatingminlayout.xml:40
@@ -4840,6 +4948,8 @@ msgid ""
 "Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
 "you want to use if you don't want to use all the logical cores."
 msgstr ""
+"Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
+"you want to use if you don't want to use all the logical cores."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/settingenviron.xml:244
@@ -5492,7 +5602,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/gcc-pass1.xml:98 en/chapter08/gcc.xml:63
 msgid "Prepare GCC for compilation:"
-msgstr ""
+msgstr "Prepare GCC for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/gcc-pass1.xml:100
@@ -6137,6 +6247,8 @@ msgid ""
 "References to paths that have components with '-linux-gnu' should be "
 "ignored, but otherwise the output of the last command should be:"
 msgstr ""
+"References to paths that have components with '-linux-gnu' should be "
+"ignored, but otherwise the output of the last command should be:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:245
@@ -6331,7 +6443,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:61
 msgid "Prepare Libstdc++ for compilation:"
-msgstr ""
+msgstr "Prepare Libstdc++ for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/libstdc++.xml:63
@@ -6414,6 +6526,8 @@ msgid ""
 "Remove the libtool archive files because they are harmful for cross-"
 "compilation:"
 msgstr ""
+"Remove the libtool archive files because they are harmful for cross-"
+"compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/libstdc++.xml:127
@@ -6861,7 +6975,7 @@ msgstr "Installation of Bash"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/bash.xml:46 en/chapter08/bash.xml:43
 msgid "Prepare Bash for compilation:"
-msgstr ""
+msgstr "Prepare Bash for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/bash.xml:48
@@ -6963,7 +7077,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/binutils-pass2.xml:65 en/chapter08/binutils.xml:50
 msgid "Prepare Binutils for compilation:"
-msgstr ""
+msgstr "Prepare Binutils for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/binutils-pass2.xml:67
@@ -7019,6 +7133,8 @@ msgid ""
 "Remove the libtool archive files because they are harmful for cross "
 "compilation, and remove unnecessary static libraries:"
 msgstr ""
+"Remove the libtool archive files because they are harmful for cross "
+"compilation, and remove unnecessary static libraries:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/binutils-pass2.xml:112
@@ -7080,7 +7196,7 @@ msgstr "Installation of Coreutils"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/coreutils.xml:46
 msgid "Prepare Coreutils for compilation:"
-msgstr ""
+msgstr "Prepare Coreutils for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/coreutils.xml:48
@@ -7175,7 +7291,7 @@ msgstr "Installation of Diffutils"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/diffutils.xml:46 en/chapter08/diffutils.xml:44
 msgid "Prepare Diffutils for compilation:"
-msgstr ""
+msgstr "Prepare Diffutils for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/diffutils.xml:48
@@ -7304,7 +7420,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/file.xml:77 en/chapter08/file.xml:44
 msgid "Prepare File for compilation:"
-msgstr ""
+msgstr "Prepare File for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:79
@@ -7323,6 +7439,7 @@ msgstr ""
 msgid ""
 "Remove the libtool archive file because it is harmful for cross compilation:"
 msgstr ""
+"Remove the libtool archive file because it is harmful for cross compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:92
@@ -7379,7 +7496,7 @@ msgstr "Installation of Findutils"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/findutils.xml:46 en/chapter08/findutils.xml:48
 msgid "Prepare Findutils for compilation:"
-msgstr ""
+msgstr "Prepare Findutils for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/findutils.xml:48
@@ -7452,7 +7569,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gawk.xml:50 en/chapter08/gawk.xml:47
 msgid "Prepare Gawk for compilation:"
-msgstr ""
+msgstr "Prepare Gawk for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gawk.xml:52 en/chapter06/m4.xml:48 en/chapter06/make.xml:47
@@ -7702,7 +7819,7 @@ msgstr "Installation of Grep"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/grep.xml:46 en/chapter08/grep.xml:50
 msgid "Prepare Grep for compilation:"
-msgstr ""
+msgstr "Prepare Grep for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/grep.xml:48 en/chapter06/sed.xml:48
@@ -7762,7 +7879,7 @@ msgstr "Installation of Gzip"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gzip.xml:46 en/chapter08/gzip.xml:44
 msgid "Prepare Gzip for compilation:"
-msgstr ""
+msgstr "Prepare Gzip for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gzip.xml:48
@@ -7859,7 +7976,7 @@ msgstr "Installation of M4"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/m4.xml:46 en/chapter08/m4.xml:43
 msgid "Prepare M4 for compilation:"
-msgstr ""
+msgstr "Prepare M4 for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/m4.xml:64
@@ -7910,7 +8027,7 @@ msgstr "Installation of Make"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/make.xml:45 en/chapter08/make.xml:44
 msgid "Prepare Make for compilation:"
-msgstr ""
+msgstr "Prepare Make for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/make.xml:64
@@ -7983,7 +8100,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/ncurses.xml:59 en/chapter08/ncurses.xml:44
 msgid "Prepare Ncurses for compilation:"
-msgstr ""
+msgstr "Prepare Ncurses for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/ncurses.xml:61
@@ -8196,7 +8313,7 @@ msgstr "Installation of Patch"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/patch.xml:46 en/chapter08/patch.xml:45
 msgid "Prepare Patch for compilation:"
-msgstr ""
+msgstr "Prepare Patch for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/patch.xml:65
@@ -8247,7 +8364,7 @@ msgstr "Installation of Sed"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/sed.xml:46 en/chapter08/sed.xml:43
 msgid "Prepare Sed for compilation:"
-msgstr ""
+msgstr "Prepare Sed for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/sed.xml:65
@@ -8298,7 +8415,7 @@ msgstr "Installation of Tar"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/tar.xml:46 en/chapter08/tar.xml:46
 msgid "Prepare Tar for compilation:"
-msgstr ""
+msgstr "Prepare Tar for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/tar.xml:65
@@ -8349,7 +8466,7 @@ msgstr "Installation of Xz"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/xz.xml:46
 msgid "Prepare Xz for compilation:"
-msgstr ""
+msgstr "Prepare Xz for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/xz.xml:48
@@ -8417,7 +8534,7 @@ msgstr "Installation of Bison"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/bison.xml:46 en/chapter08/bison.xml:43
 msgid "Prepare Bison for compilation:"
-msgstr ""
+msgstr "Prepare Bison for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/bison.xml:48
@@ -9360,7 +9477,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:49 en/chapter08/gettext.xml:46
 msgid "Prepare Gettext for compilation:"
-msgstr ""
+msgstr "Prepare Gettext for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/gettext.xml:51
@@ -9654,7 +9771,7 @@ msgstr "Installation of Perl"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/perl.xml:46
 msgid "Prepare Perl for compilation:"
-msgstr ""
+msgstr "Prepare Perl for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/perl.xml:48
@@ -9795,7 +9912,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/python.xml:53 en/chapter08/python.xml:52
 msgid "Prepare Python for compilation:"
-msgstr ""
+msgstr "Prepare Python for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/python.xml:55
@@ -9895,7 +10012,7 @@ msgstr "Installation of Texinfo"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/texinfo.xml:46 en/chapter08/texinfo.xml:49
 msgid "Prepare Texinfo for compilation:"
-msgstr ""
+msgstr "Prepare Texinfo for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/texinfo.xml:48 en/chapter08/autoconf.xml:46
@@ -9979,7 +10096,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:52 en/chapter08/util-linux.xml:45
 msgid "Prepare Util-linux for compilation:"
-msgstr ""
+msgstr "Prepare Util-linux for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/util-linux.xml:54
@@ -10396,7 +10513,7 @@ msgstr "Installation of Attr"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/attr.xml:44
 msgid "Prepare Attr for compilation:"
-msgstr ""
+msgstr "Prepare Attr for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/attr.xml:46
@@ -10544,7 +10661,7 @@ msgstr "Installation of Autoconf"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/autoconf.xml:44
 msgid "Prepare Autoconf for compilation:"
-msgstr ""
+msgstr "Prepare Autoconf for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/autoconf.xml:52 en/chapter08/bison.xml:51
@@ -10614,6 +10731,10 @@ msgid ""
 "scripts it produces are independent&mdash;running them does not require the "
 "<command>autoconf</command> program"
 msgstr ""
+"Produces shell scripts that automatically configure software source code "
+"packages to adapt to many kinds of Unix-like systems; the configuration "
+"scripts it produces are independent&mdash;running them does not require the "
+"<command>autoconf</command> program"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/autoconf.xml:92
@@ -10785,7 +10906,7 @@ msgstr "Installation of Automake"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/automake.xml:48
 msgid "Prepare Automake for compilation:"
-msgstr ""
+msgstr "Prepare Automake for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/automake.xml:50
@@ -10813,6 +10934,8 @@ msgid ""
 "Replace <replaceable>$((...))</replaceable> with the number of logical cores "
 "you want to use if you don't want to use all."
 msgstr ""
+"Replace <replaceable>$((...))</replaceable> with the number of logical cores "
+"you want to use if you don't want to use all."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/automake.xml:73
@@ -11131,7 +11254,7 @@ msgstr "Installation of Bc"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:44
 msgid "Prepare Bc for compilation:"
-msgstr ""
+msgstr "Prepare Bc for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bc.xml:46
@@ -11393,7 +11516,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:136
 msgid "Remove useless static libraries and other files:"
-msgstr ""
+msgstr "Remove useless static libraries and other files:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/binutils.xml:138
@@ -12010,7 +12133,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:58
 msgid "Prepare Bzip2 for compilation with:"
-msgstr ""
+msgstr "Prepare Bzip2 for compilation with:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:60
@@ -12112,7 +12235,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:121 en/chapter08/zlib.xml:60
 msgid "Remove a useless static library:"
-msgstr ""
+msgstr "Remove a useless static library:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:123
@@ -12568,7 +12691,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:157
 msgid "Remove the temporary group:"
-msgstr ""
+msgstr "Remove the temporary group:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:159
@@ -12672,7 +12795,7 @@ msgstr "<command>b2sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:239
 msgid "Prints or checks BLAKE2 (512-bit) checksums"
-msgstr ""
+msgstr "Prints or checks BLAKE2 (512-bit) checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:241
@@ -12737,7 +12860,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:281
 msgid "chcon"
-msgstr ""
+msgstr "chcon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:287
@@ -12815,6 +12938,8 @@ msgid ""
 "Prints the Cyclic Redundancy Check (CRC) checksum and the byte counts of "
 "each specified file"
 msgstr ""
+"Prints the Cyclic Redundancy Check (CRC) checksum and the byte counts of "
+"each specified file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:336
@@ -12882,6 +13007,8 @@ msgid ""
 "Prints sections of lines, selecting the parts according to given fields or "
 "positions"
 msgstr ""
+"Prints sections of lines, selecting the parts according to given fields or "
+"positions"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:380
@@ -12933,6 +13060,8 @@ msgid ""
 "Reports the amount of disk space available (and used) on all mounted file "
 "systems, or only on the file systems holding the selected files"
 msgstr ""
+"Reports the amount of disk space available (and used) on all mounted file "
+"systems, or only on the file systems holding the selected files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:414
@@ -13000,6 +13129,9 @@ msgid ""
 "the given directories (including all subdirectories) or by each of the given "
 "files"
 msgstr ""
+"Reports the amount of disk space used by the current directory, by each of "
+"the given directories (including all subdirectories) or by each of the given "
+"files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:459
@@ -13074,7 +13206,7 @@ msgstr "<command>factor</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:507
 msgid "Prints the prime factors of the specified integers"
-msgstr ""
+msgstr "Prints the prime factors of the specified integers"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:509
@@ -13106,7 +13238,7 @@ msgstr "<command>fmt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:528
 msgid "Reformats the paragraphs in the given files"
-msgstr ""
+msgstr "Reformats the paragraphs in the given files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:530
@@ -13136,7 +13268,7 @@ msgstr "<command>groups</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:548
 msgid "Reports a user's group memberships"
-msgstr ""
+msgstr "Reports a user's group memberships"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:550
@@ -13153,6 +13285,7 @@ msgstr "<command>head</command>"
 msgid ""
 "Prints the first ten lines (or the given number of lines)  of each given file"
 msgstr ""
+"Prints the first ten lines (or the given number of lines)  of each given file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:561
@@ -13167,7 +13300,7 @@ msgstr "<command>hostid</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:569
 msgid "Reports the numeric identifier (in hexadecimal) of the host"
-msgstr ""
+msgstr "Reports the numeric identifier (in hexadecimal) of the host"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:571
@@ -13185,6 +13318,8 @@ msgid ""
 "Reports the effective user ID, group ID, and group memberships of the "
 "current user or specified user"
 msgstr ""
+"Reports the effective user ID, group ID, and group memberships of the "
+"current user or specified user"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:582
@@ -13261,7 +13396,7 @@ msgstr "<command>logname</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:632
 msgid "Reports the current user's login name"
-msgstr ""
+msgstr "Reports the current user's login name"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:634
@@ -13291,7 +13426,7 @@ msgstr "<command>md5sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:652
 msgid "Reports or checks Message Digest 5 (MD5) checksums"
-msgstr ""
+msgstr "Reports or checks Message Digest 5 (MD5) checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:654
@@ -13431,7 +13566,7 @@ msgstr "<command>nproc</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:745
 msgid "Prints the number of processing units available to a process"
-msgstr ""
+msgstr "Prints the number of processing units available to a process"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:748
@@ -13540,7 +13675,7 @@ msgstr "<command>printenv</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:818
 msgid "Prints the environment"
-msgstr ""
+msgstr "Prints the environment"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:820
@@ -13558,6 +13693,8 @@ msgid ""
 "Prints the given arguments according to the given format, much like the C "
 "printf function"
 msgstr ""
+"Prints the given arguments according to the given format, much like the C "
+"printf function"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:831
@@ -13575,6 +13712,8 @@ msgid ""
 "Produces a permuted index from the contents of the given files, with each "
 "keyword in its context"
 msgstr ""
+"Produces a permuted index from the contents of the given files, with each "
+"keyword in its context"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:842
@@ -13589,7 +13728,7 @@ msgstr "<command>pwd</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:850
 msgid "Reports the name of the current working directory"
-msgstr ""
+msgstr "Reports the name of the current working directory"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:852
@@ -13604,7 +13743,7 @@ msgstr "<command>readlink</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:860
 msgid "Reports the value of the given symbolic link"
-msgstr ""
+msgstr "Reports the value of the given symbolic link"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:862
@@ -13619,7 +13758,7 @@ msgstr "<command>realpath</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:870
 msgid "Prints the resolved path"
-msgstr ""
+msgstr "Prints the resolved path"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:872
@@ -13634,7 +13773,7 @@ msgstr "<command>rm</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:880
 msgid "Removes files or directories"
-msgstr ""
+msgstr "Removes files or directories"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:882
@@ -13649,7 +13788,7 @@ msgstr "<command>rmdir</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:890
 msgid "Removes directories if they are empty"
-msgstr ""
+msgstr "Removes directories if they are empty"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:892
@@ -13681,6 +13820,7 @@ msgstr "<command>seq</command>"
 msgid ""
 "Prints a sequence of numbers within a given range and with a given increment"
 msgstr ""
+"Prints a sequence of numbers within a given range and with a given increment"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:913
@@ -13695,7 +13835,7 @@ msgstr "<command>sha1sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:921
 msgid "Prints or checks 160-bit Secure Hash Algorithm 1 (SHA1)  checksums"
-msgstr ""
+msgstr "Prints or checks 160-bit Secure Hash Algorithm 1 (SHA1)  checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:924
@@ -13710,7 +13850,7 @@ msgstr "<command>sha224sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:932
 msgid "Prints or checks 224-bit Secure Hash Algorithm checksums"
-msgstr ""
+msgstr "Prints or checks 224-bit Secure Hash Algorithm checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:934
@@ -13725,7 +13865,7 @@ msgstr "<command>sha256sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:942
 msgid "Prints or checks 256-bit Secure Hash Algorithm checksums"
-msgstr ""
+msgstr "Prints or checks 256-bit Secure Hash Algorithm checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:944
@@ -13740,7 +13880,7 @@ msgstr "<command>sha384sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:952
 msgid "Prints or checks 384-bit Secure Hash Algorithm checksums"
-msgstr ""
+msgstr "Prints or checks 384-bit Secure Hash Algorithm checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:954
@@ -13755,7 +13895,7 @@ msgstr "<command>sha512sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:962
 msgid "Prints or checks 512-bit Secure Hash Algorithm checksums"
-msgstr ""
+msgstr "Prints or checks 512-bit Secure Hash Algorithm checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:964
@@ -13893,7 +14033,7 @@ msgstr "<command>sum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1055
 msgid "Prints checksum and block counts for each given file"
-msgstr ""
+msgstr "Prints checksum and block counts for each given file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1057
@@ -13944,6 +14084,7 @@ msgstr "<command>tail</command>"
 msgid ""
 "Prints the last ten lines (or the given number of lines) of each given file"
 msgstr ""
+"Prints the last ten lines (or the given number of lines) of each given file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1089
@@ -13961,6 +14102,8 @@ msgid ""
 "Reads from standard input while writing both to standard output and to the "
 "given files"
 msgstr ""
+"Reads from standard input while writing both to standard output and to the "
+"given files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1100
@@ -14088,7 +14231,7 @@ msgstr "<command>tty</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1183
 msgid "Reports the file name of the terminal connected to standard input"
-msgstr ""
+msgstr "Reports the file name of the terminal connected to standard input"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1186
@@ -14103,7 +14246,7 @@ msgstr "<command>uname</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1194
 msgid "Reports system information"
-msgstr ""
+msgstr "Reports system information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1196
@@ -14148,7 +14291,7 @@ msgstr "<command>unlink</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1224
 msgid "Removes the given file"
-msgstr ""
+msgstr "Removes the given file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1226
@@ -14163,7 +14306,7 @@ msgstr "<command>users</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1234
 msgid "Reports the names of the users currently logged on"
-msgstr ""
+msgstr "Reports the names of the users currently logged on"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1236
@@ -14196,6 +14339,8 @@ msgid ""
 "Reports the number of lines, words, and bytes for each given file, as well "
 "as grand totals when more than one file is given"
 msgstr ""
+"Reports the number of lines, words, and bytes for each given file, as well "
+"as grand totals when more than one file is given"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1257
@@ -14210,7 +14355,7 @@ msgstr "<command>who</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1265
 msgid "Reports who is logged on"
-msgstr ""
+msgstr "Reports who is logged on"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1267
@@ -14225,7 +14370,7 @@ msgstr "<command>whoami</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1275
 msgid "Reports the user name associated with the current effective user ID"
-msgstr ""
+msgstr "Reports the user name associated with the current effective user ID"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1278
@@ -14241,6 +14386,7 @@ msgstr "<command>yes</command>"
 #: en/chapter08/coreutils.xml:1286
 msgid "Repeatedly outputs <literal>y</literal> or a given string, until killed"
 msgstr ""
+"Repeatedly outputs <literal>y</literal> or a given string, until killed"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1289
@@ -14323,7 +14469,7 @@ msgstr "Installation of D-Bus"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dbus.xml:49
 msgid "Prepare D-Bus for compilation:"
-msgstr ""
+msgstr "Prepare D-Bus for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:51
@@ -14636,7 +14782,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dejagnu.xml:51
 msgid "Prepare DejaGNU for compilation:"
-msgstr ""
+msgstr "Prepare DejaGNU for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dejagnu.xml:53
@@ -14852,7 +14998,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:53
 msgid "Prepare E2fsprogs for compilation:"
-msgstr ""
+msgstr "Prepare E2fsprogs for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:55
@@ -14905,7 +15051,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:121
 msgid "Remove useless static libraries:"
-msgstr ""
+msgstr "Remove useless static libraries:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:123
@@ -14991,6 +15137,8 @@ msgid ""
 "Read the man page <ulink role='man' url='&man;mke2fs.conf.5'>mke2fs.conf(5)</"
 "ulink> for details."
 msgstr ""
+"Read the man page <ulink role='man' url='&man;mke2fs.conf.5'>mke2fs.conf(5)</"
+"ulink> for details."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:171
@@ -15056,7 +15204,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:214
 msgid "chattr"
-msgstr ""
+msgstr "chattr"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/e2fsprogs.xml:220
@@ -15104,6 +15252,8 @@ msgid ""
 "Prints the super block and blocks group information for the file system "
 "present on a given device"
 msgstr ""
+"Prints the super block and blocks group information for the file system "
+"present on a given device"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:249
@@ -15118,7 +15268,7 @@ msgstr "<command>e2freefrag</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/e2fsprogs.xml:257
 msgid "Reports free space fragmentation information"
-msgstr ""
+msgstr "Reports free space fragmentation information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:259
@@ -15239,6 +15389,9 @@ msgid ""
 "systemitem> file system found on a device. [This can be used to undo a "
 "failed operation by an E2fsprogs program.]"
 msgstr ""
+"Replays the undo log for an <systemitem class=\"filesystem\">ext{234}</"
+"systemitem> file system found on a device. [This can be used to undo a "
+"failed operation by an E2fsprogs program.]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:339
@@ -15625,7 +15778,7 @@ msgstr "Installation of Expat"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expat.xml:44
 msgid "Prepare Expat for compilation:"
-msgstr ""
+msgstr "Prepare Expat for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expat.xml:46
@@ -15791,7 +15944,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:74
 msgid "Prepare Expect for compilation:"
-msgstr ""
+msgstr "Prepare Expect for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expect.xml:76
@@ -16133,7 +16286,7 @@ msgstr "Installation of Flex"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/flex.xml:54
 msgid "Prepare Flex for compilation:"
-msgstr ""
+msgstr "Prepare Flex for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/flex.xml:56
@@ -16347,6 +16500,8 @@ msgid ""
 "Prevents pip from copying the created wheel into the <filename "
 "class='directory'>/root/.cache/pip</filename> directory."
 msgstr ""
+"Prevents pip from copying the created wheel into the <filename "
+"class='directory'>/root/.cache/pip</filename> directory."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:81
@@ -16768,6 +16923,8 @@ msgid ""
 "Results can be compared with those located at <ulink url=\"&test-results;\"/"
 "> and <ulink url=\"https://gcc.gnu.org/ml/gcc-testresults/\"/>."
 msgstr ""
+"Results can be compared with those located at <ulink url=\"&test-results;\"/"
+"> and <ulink url=\"https://gcc.gnu.org/ml/gcc-testresults/\"/>."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:204
@@ -17458,7 +17615,7 @@ msgstr "<filename class=\"libraryfile\">libsupc++</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:682
 msgid "Provides supporting routines for the C++ programming language"
-msgstr ""
+msgstr "Provides supporting routines for the C++ programming language"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:685
@@ -17547,7 +17704,7 @@ msgstr "Installation of GDBM"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gdbm.xml:51
 msgid "Prepare GDBM for compilation:"
-msgstr ""
+msgstr "Prepare GDBM for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gdbm.xml:53
@@ -17608,7 +17765,7 @@ msgstr "<command>gdbm_load</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gdbm.xml:119
 msgid "Recreates a GDBM database from a dump file"
-msgstr ""
+msgstr "Recreates a GDBM database from a dump file"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gdbm.xml:121
@@ -17784,7 +17941,7 @@ msgstr "<command>gettext.sh</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gettext.xml:143
 msgid "Primarily serves as a shell function library for gettext"
-msgstr ""
+msgstr "Primarily serves as a shell function library for gettext"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gettext.xml:145
@@ -18055,7 +18212,7 @@ msgstr "<command>recode-sr-latin</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gettext.xml:327
 msgid "Recodes Serbian text from Cyrillic to Latin script"
-msgstr ""
+msgstr "Recodes Serbian text from Cyrillic to Latin script"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gettext.xml:329
@@ -18146,6 +18303,8 @@ msgid ""
 "Provides common routines used by the various Gettext programs; these are not "
 "intended for general use"
 msgstr ""
+"Provides common routines used by the various Gettext programs; these are not "
+"intended for general use"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gettext.xml:390
@@ -18223,7 +18382,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:77
 msgid "Prepare Glibc for compilation:"
-msgstr ""
+msgstr "Prepare Glibc for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:79
@@ -18804,6 +18963,8 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the time "
 "zone selected (e.g., Canada/Eastern)."
 msgstr ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the time "
+"zone selected (e.g., Canada/Eastern)."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/glibc.xml:586
@@ -19026,6 +19187,8 @@ msgid ""
 "Reports which shared libraries are required by each given program or shared "
 "library"
 msgstr ""
+"Reports which shared libraries are required by each given program or shared "
+"library"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:739
@@ -19057,7 +19220,7 @@ msgstr "<command>locale</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:758
 msgid "Prints various information about the current locale"
-msgstr ""
+msgstr "Prints various information about the current locale"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:760
@@ -19105,6 +19268,8 @@ msgid ""
 "Reads and interprets a memory trace file and displays a summary in human-"
 "readable format"
 msgstr ""
+"Reads and interprets a memory trace file and displays a summary in human-"
+"readable format"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:791
@@ -19179,7 +19344,7 @@ msgstr "<command>sprof</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:839
 msgid "Reads and displays shared object profiling data"
-msgstr ""
+msgstr "Reads and displays shared object profiling data"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:841
@@ -19652,7 +19817,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:69
 msgid "Prepare GMP for compilation:"
-msgstr ""
+msgstr "Prepare GMP for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:71
@@ -19842,7 +20007,7 @@ msgstr "Installation of Gperf"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gperf.xml:43
 msgid "Prepare Gperf for compilation:"
-msgstr ""
+msgstr "Prepare Gperf for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gperf.xml:45
@@ -19926,6 +20091,8 @@ msgid ""
 "Prints lines matching an extended regular expression.  It is obsolete, use "
 "<command>grep -E</command> instead"
 msgstr ""
+"Prints lines matching an extended regular expression.  It is obsolete, use "
+"<command>grep -E</command> instead"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:90
@@ -19943,6 +20110,8 @@ msgid ""
 "Prints lines matching a list of fixed strings.  It is obsolete, use "
 "<command>grep -F</command> instead"
 msgstr ""
+"Prints lines matching a list of fixed strings.  It is obsolete, use "
+"<command>grep -F</command> instead"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:101
@@ -19957,7 +20126,7 @@ msgstr "<command>grep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grep.xml:109
 msgid "Prints lines matching a basic regular expression"
-msgstr ""
+msgstr "Prints lines matching a basic regular expression"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:111
@@ -20024,7 +20193,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/groff.xml:52
 msgid "Prepare Groff for compilation:"
-msgstr ""
+msgstr "Prepare Groff for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/groff.xml:54
@@ -20186,6 +20355,7 @@ msgstr "<command>gperl</command>"
 msgid ""
 "Preprocessor for groff, allowing the insertion of perl code into groff files"
 msgstr ""
+"Preprocessor for groff, allowing the insertion of perl code into groff files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:176
@@ -20203,6 +20373,8 @@ msgid ""
 "Preprocessor for groff, allowing the insertion of Pinyin (Mandarin Chinese "
 "spelled with the Roman alphabet) into groff files."
 msgstr ""
+"Preprocessor for groff, allowing the insertion of Pinyin (Mandarin Chinese "
+"spelled with the Roman alphabet) into groff files."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:187
@@ -20305,6 +20477,11 @@ msgid ""
 "and <option>-t</option> are required for printing files, and reports the "
 "<command>groff</command> command including those options"
 msgstr ""
+"Reads files and guesses which of the <command>groff</command> options "
+"<option>-e</option>, <option>-man</option>, <option>-me</option>, <option>-"
+"mm</option>, <option>-ms</option>, <option>-p</option>, <option>-s</option>, "
+"and <option>-t</option> are required for printing files, and reports the "
+"<command>groff</command> command including those options"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:256
@@ -20458,6 +20635,11 @@ msgid ""
 "references containing those keywords, prints any references found on the "
 "standard output, and repeats this process until the end of input"
 msgstr ""
+"Prints a prompt on the standard error (unless the standard input is not a "
+"terminal), reads a line containing a set of keywords from the standard "
+"input, searches the bibliographic databases in a specified file for "
+"references containing those keywords, prints any references found on the "
+"standard output, and repeats this process until the end of input"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:360
@@ -20756,6 +20938,8 @@ msgid ""
 "Reads files and replaces lines of the form <emphasis>.so file</emphasis> by "
 "the contents of the mentioned <emphasis>file</emphasis>"
 msgstr ""
+"Reads files and replaces lines of the form <emphasis>.so file</emphasis> by "
+"the contents of the mentioned <emphasis>file</emphasis>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:565
@@ -20901,7 +21085,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:72
 msgid "Prepare GRUB for compilation:"
-msgstr ""
+msgstr "Prepare GRUB for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/grub.xml:74
@@ -21164,7 +21348,7 @@ msgstr "<command>grub-mknetdir</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:271
 msgid "Prepares a GRUB netboot directory"
-msgstr ""
+msgstr "Prepares a GRUB netboot directory"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:273
@@ -21258,7 +21442,7 @@ msgstr "<command>grub-probe</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:333
 msgid "Probes device information for a given path or device"
-msgstr ""
+msgstr "Probes device information for a given path or device"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:335
@@ -21288,7 +21472,7 @@ msgstr "<command>grub-render-label</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:353
 msgid "Renders Apple .disk_label for Apple Macs"
-msgstr ""
+msgstr "Renders Apple .disk_label for Apple Macs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:355
@@ -21596,6 +21780,9 @@ msgid ""
 "<command>gzip</command> format&mdash;<filename class=\"extension\">.Z</"
 "filename> to <filename class=\"extension\">.gz</filename>"
 msgstr ""
+"Re-compresses files from <command>compress</command> format to "
+"<command>gzip</command> format&mdash;<filename class=\"extension\">.Z</"
+"filename> to <filename class=\"extension\">.gz</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:220
@@ -21700,6 +21887,8 @@ msgid ""
 "Provides a mapping between friendly textual names for internet services, and "
 "their underlying assigned port numbers and protocol types"
 msgstr ""
+"Provides a mapping between friendly textual names for internet services, and "
+"their underlying assigned port numbers and protocol types"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/iana-etc.xml:84
@@ -21764,7 +21953,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:47
 msgid "Prepare Inetutils for compilation:"
-msgstr ""
+msgstr "Prepare Inetutils for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/inetutils.xml:49
@@ -21897,7 +22086,7 @@ msgstr "<command>hostname</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:174
 msgid "Reports or sets the name of the host"
-msgstr ""
+msgstr "Reports or sets the name of the host"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter08/inetutils.xml:176 en/chapter09/network.xml:145
@@ -22081,7 +22270,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/intltool.xml:52
 msgid "Prepare Intltool for compilation:"
-msgstr ""
+msgstr "Prepare Intltool for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/intltool.xml:66
@@ -22118,7 +22307,7 @@ msgstr "<command>intltoolize</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:94
 msgid "Prepares a package to use intltool"
-msgstr ""
+msgstr "Prepares a package to use intltool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:96
@@ -22563,6 +22752,8 @@ msgid ""
 "Provides Linux network statistics; it is a generalized and more feature-"
 "complete replacement for the old <command>rtstat</command> program"
 msgstr ""
+"Provides Linux network statistics; it is a generalized and more feature-"
+"complete replacement for the old <command>rtstat</command> program"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/iproute2.xml:191
@@ -22859,6 +23050,10 @@ msgid ""
 "<command>setfont</command> sizes the console appropriately) together with "
 "its manpage."
 msgstr ""
+"Remove the redundant <command>resizecons</command> program (it requires the "
+"defunct svgalib to provide the video mode files - for normal use "
+"<command>setfont</command> sizes the console appropriately) together with "
+"its manpage."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:58
@@ -22871,7 +23066,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:61
 msgid "Prepare Kbd for compilation:"
-msgstr ""
+msgstr "Prepare Kbd for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:63
@@ -22984,7 +23179,7 @@ msgstr "<command>fgconsole</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:161
 msgid "Prints the number of the active virtual terminal"
-msgstr ""
+msgstr "Prints the number of the active virtual terminal"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:163
@@ -22999,7 +23194,7 @@ msgstr "<command>getkeycodes</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:171
 msgid "Prints the kernel scancode-to-keycode mapping table"
-msgstr ""
+msgstr "Prints the kernel scancode-to-keycode mapping table"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:173
@@ -23152,7 +23347,7 @@ msgstr "<command>psfstriptable</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:274
 msgid "Removes the embedded Unicode character table from a console font"
-msgstr ""
+msgstr "Removes the embedded Unicode character table from a console font"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:277
@@ -23279,6 +23474,8 @@ msgid ""
 "Reports the scancodes, keycodes, and ASCII codes of the keys pressed on the "
 "keyboard"
 msgstr ""
+"Reports the scancodes, keycodes, and ASCII codes of the keys pressed on the "
+"keyboard"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:360
@@ -23297,6 +23494,9 @@ msgid ""
 "your keymap file is in the ISO-8859-1 encoding. For other encodings, this "
 "utility produces incorrect results.]"
 msgstr ""
+"Puts the keyboard and console in UNICODE mode [Don't use this program unless "
+"your keymap file is in the ISO-8859-1 encoding. For other encodings, this "
+"utility produces incorrect results.]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:372
@@ -23311,7 +23511,7 @@ msgstr "<command>unicode_stop</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:380
 msgid "Reverts keyboard and console from UNICODE mode"
-msgstr ""
+msgstr "Reverts keyboard and console from UNICODE mode"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:382
@@ -23366,7 +23566,7 @@ msgstr "Installation of Kmod"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kmod.xml:44
 msgid "Prepare Kmod for compilation:"
-msgstr ""
+msgstr "Prepare Kmod for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kmod.xml:46
@@ -23403,7 +23603,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kmod.xml:76
 msgid "Now install the package:"
-msgstr ""
+msgstr "이제 패키지 설치:"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/kmod.xml:83
@@ -23597,7 +23797,7 @@ msgstr "Installation of Less"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/less.xml:43
 msgid "Prepare Less for compilation:"
-msgstr ""
+msgstr "Prepare Less for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/less.xml:45
@@ -23737,7 +23937,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libcap.xml:55
 msgid "Prevent static libraries from being installed:"
-msgstr ""
+msgstr "Prevent static libraries from being installed:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libcap.xml:57
@@ -23938,7 +24138,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:47
 msgid "Prepare Libelf for compilation:"
-msgstr ""
+msgstr "Prepare Libelf for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libelf.xml:49
@@ -24087,7 +24287,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libffi.xml:64
 msgid "Prepare Libffi for compilation:"
-msgstr ""
+msgstr "Prepare Libffi for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libffi.xml:66
@@ -24184,7 +24384,7 @@ msgstr "Installation of Libpipeline"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libpipeline.xml:44
 msgid "Prepare Libpipeline for compilation:"
-msgstr ""
+msgstr "Prepare Libpipeline for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libpipeline.xml:52
@@ -24268,12 +24468,12 @@ msgstr "Installation of Libtool"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libtool.xml:45
 msgid "Prepare Libtool for compilation:"
-msgstr ""
+msgstr "Prepare Libtool for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libtool.xml:64
 msgid "Remove a static library only useful for the test suite:"
-msgstr ""
+msgstr "Remove a static library only useful for the test suite:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libtool.xml:66
@@ -24309,7 +24509,7 @@ msgstr "<command>libtool</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libtool.xml:94
 msgid "Provides generalized library-building support services"
-msgstr ""
+msgstr "Provides generalized library-building support services"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libtool.xml:96
@@ -24327,6 +24527,8 @@ msgid ""
 "Provides a standard way to add <command>libtool</command> support to a "
 "package"
 msgstr ""
+"Provides a standard way to add <command>libtool</command> support to a "
+"package"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libtool.xml:107
@@ -24403,7 +24605,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libxcrypt.xml:48
 msgid "Prepare Libxcrypt for compilation:"
-msgstr ""
+msgstr "Prepare Libxcrypt for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libxcrypt.xml:50
@@ -24794,7 +24996,7 @@ msgstr "Installation of Man-DB"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-db.xml:44
 msgid "Prepare Man-DB for compilation:"
-msgstr ""
+msgstr "Prepare Man-DB for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-db.xml:46
@@ -25042,7 +25244,7 @@ msgstr "Galician (gl)"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:206
 msgid "Romanian (ro)"
-msgstr ""
+msgstr "루마니아어 (ro)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:210
@@ -25453,6 +25655,9 @@ msgid ""
 "<application>Libxcrypt</application> will provide a better version of these "
 "man pages:"
 msgstr ""
+"Remove two man pages for password hashing functions.  "
+"<application>Libxcrypt</application> will provide a better version of these "
+"man pages:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-pages.xml:47
@@ -25611,7 +25816,7 @@ msgstr ""
 #: en/chapter08/meson.xml:14
 #, no-wrap
 msgid "&meson-url;"
-msgstr ""
+msgstr "&meson-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter08/meson.xml:12
@@ -25623,13 +25828,13 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/meson.xml:17
 msgid "Meson-&meson-version;"
-msgstr ""
+msgstr "Meson-&meson-version;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/chapter08/meson.xml:20 en/prologue/why.xml:423
 #: en/appendices/dependencies.xml:2180 en/appendices/dependencies.xml:2362
 msgid "Meson"
-msgstr ""
+msgstr "Meson"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/meson.xml:26
@@ -25641,12 +25846,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/meson.xml:33
 msgid "&meson-fin-sbu;"
-msgstr ""
+msgstr "&meson-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/meson.xml:34
 msgid "&meson-fin-du;"
-msgstr ""
+msgstr "&meson-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/meson.xml:41
@@ -25683,6 +25888,8 @@ msgid ""
 "Puts the created wheels into the <filename class='directory'>dist</filename> "
 "directory."
 msgstr ""
+"Puts the created wheels into the <filename class='directory'>dist</filename> "
+"directory."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/meson.xml:69
@@ -25699,7 +25906,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/meson.xml:85 en/chapter08/meson.xml:103
 msgid "meson"
-msgstr ""
+msgstr "meson"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/meson.xml:87
@@ -25769,7 +25976,7 @@ msgstr "Installation of MPC"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpc.xml:45
 msgid "Prepare MPC for compilation:"
-msgstr ""
+msgstr "Prepare MPC for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/mpc.xml:47
@@ -25857,7 +26064,7 @@ msgstr "Installation of MPFR"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpfr.xml:44
 msgid "Prepare MPFR for compilation:"
-msgstr ""
+msgstr "Prepare MPFR for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/mpfr.xml:46
@@ -26166,7 +26373,7 @@ msgstr "<command>ncursesw6-config</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:280
 msgid "Provides configuration information for ncurses"
-msgstr ""
+msgstr "Provides configuration information for ncurses"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:282
@@ -26181,7 +26388,7 @@ msgstr "<command>reset</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:290
 msgid "Reinitializes a terminal to its default values"
-msgstr ""
+msgstr "Reinitializes a terminal to its default values"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:292
@@ -26566,7 +26773,7 @@ msgstr "Installation of OpenSSL"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:52
 msgid "Prepare OpenSSL for compilation:"
-msgstr ""
+msgstr "Prepare OpenSSL for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:54
@@ -26755,7 +26962,7 @@ msgstr "libssl.so"
 #: en/chapter08/packaging.xml:14
 #, no-wrap
 msgid "&packaging-url;"
-msgstr ""
+msgstr "&packaging-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter08/packaging.xml:12
@@ -26772,7 +26979,7 @@ msgstr ""
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter08/packaging.xml:20
 msgid "packaging"
-msgstr ""
+msgstr "packaging"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/packaging.xml:27
@@ -26787,12 +26994,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/packaging.xml:38
 msgid "&packaging-fin-sbu;"
-msgstr ""
+msgstr "&packaging-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/packaging.xml:39
 msgid "&packaging-fin-du;"
-msgstr ""
+msgstr "&packaging-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/packaging.xml:46
@@ -26920,7 +27127,7 @@ msgstr "Installation of Pcre2"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pcre.xml:44
 msgid "Prepare pcre2 for compilation:"
-msgstr ""
+msgstr "Prepare pcre2 for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/pcre.xml:46
@@ -27538,7 +27745,7 @@ msgstr "<command>pod2usage</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:374
 msgid "Prints usage messages from embedded pod docs in files"
-msgstr ""
+msgstr "Prints usage messages from embedded pod docs in files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:376
@@ -27646,7 +27853,7 @@ msgstr "<command>shasum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:458
 msgid "Prints or checks SHA checksums"
-msgstr ""
+msgstr "Prints or checks SHA checksums"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:460
@@ -27748,7 +27955,7 @@ msgstr "Installation of Pkgconf"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgconf.xml:47
 msgid "Prepare Pkgconf for compilation:"
-msgstr ""
+msgstr "Prepare Pkgconf for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/pkgconf.xml:49
@@ -27801,7 +28008,7 @@ msgstr "<command>pkgconf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pkgconf.xml:92
 msgid "Returns meta information for the specified library or package"
-msgstr ""
+msgstr "Returns meta information for the specified library or package"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pkgconf.xml:95
@@ -28419,7 +28626,7 @@ msgstr "Installation of Procps-ng"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:43
 msgid "Prepare Procps-ng for compilation:"
-msgstr ""
+msgstr "Prepare Procps-ng for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/procps.xml:45
@@ -28516,6 +28723,8 @@ msgid ""
 "Reports the amount of free and used memory (both physical and swap memory) "
 "in the system"
 msgstr ""
+"Reports the amount of free and used memory (both physical and swap memory) "
+"in the system"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:129
@@ -28545,7 +28754,7 @@ msgstr "<command>pidof</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:147
 msgid "Reports the PIDs of the given programs"
-msgstr ""
+msgstr "Reports the PIDs of the given programs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:149
@@ -28575,7 +28784,7 @@ msgstr "<command>pmap</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:167
 msgid "Reports the memory map of the given process"
-msgstr ""
+msgstr "Reports the memory map of the given process"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:169
@@ -28605,7 +28814,7 @@ msgstr "<command>pwdx</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:198
 msgid "Reports the current working directory of a process"
-msgstr ""
+msgstr "Reports the current working directory of a process"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:200
@@ -28650,7 +28859,7 @@ msgstr "<command>tload</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:228
 msgid "Prints a graph of the current system load average"
-msgstr ""
+msgstr "Prints a graph of the current system load average"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:230
@@ -28685,6 +28894,8 @@ msgid ""
 "Reports how long the system has been running, how many users are logged on, "
 "and the system load averages"
 msgstr ""
+"Reports how long the system has been running, how many users are logged on, "
+"and the system load averages"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:252
@@ -28702,6 +28913,8 @@ msgid ""
 "Reports virtual memory statistics, giving information about processes, "
 "memory, paging, block Input/Output (IO), traps, and CPU activity"
 msgstr ""
+"Reports virtual memory statistics, giving information about processes, "
+"memory, paging, block Input/Output (IO), traps, and CPU activity"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:264
@@ -28804,7 +29017,7 @@ msgstr "Installation of Psmisc"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/psmisc.xml:44
 msgid "Prepare Psmisc for compilation:"
-msgstr ""
+msgstr "Prepare Psmisc for compilation:"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/psmisc.xml:63
@@ -28830,6 +29043,8 @@ msgid ""
 "Reports the Process IDs (PIDs) of processes that use the given files or file "
 "systems"
 msgstr ""
+"Reports the Process IDs (PIDs) of processes that use the given files or file "
+"systems"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:84
@@ -28878,7 +29093,7 @@ msgstr "<command>prtstat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/psmisc.xml:114
 msgid "Prints information about a process"
-msgstr ""
+msgstr "Prints information about a process"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:116
@@ -28893,7 +29108,7 @@ msgstr "<command>pslog</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/psmisc.xml:124
 msgid "Reports current logs path of a process"
-msgstr ""
+msgstr "Reports current logs path of a process"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:126
@@ -29270,6 +29485,10 @@ msgid ""
 "it can trigger a linking bug in <command>ldconfig</command>. This can be "
 "avoided by issuing the following two seds:"
 msgstr ""
+"Reinstalling Readline will cause the old libraries to be moved to "
+"&lt;libraryname&gt;.old. While this is normally not a problem, in some cases "
+"it can trigger a linking bug in <command>ldconfig</command>. This can be "
+"avoided by issuing the following two seds:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:49
@@ -29287,6 +29506,10 @@ msgid ""
 "location, and rpath may sometimes cause unwanted effects or even security "
 "issues:"
 msgstr ""
+"Prevent hard coding library search paths (rpath) into the shared libraries.  "
+"This package does not need rpath for an installation into the standard "
+"location, and rpath may sometimes cause unwanted effects or even security "
+"issues:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:57
@@ -29314,7 +29537,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:69
 msgid "Prepare Readline for compilation:"
-msgstr ""
+msgstr "Prepare Readline for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:71
@@ -29388,7 +29611,7 @@ msgstr "<filename class=\"libraryfile\">libhistory</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/readline.xml:144
 msgid "Provides a consistent user interface for recalling lines of history"
-msgstr ""
+msgstr "Provides a consistent user interface for recalling lines of history"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/readline.xml:147
@@ -29406,6 +29629,8 @@ msgid ""
 "Provides a set of commands for manipulating text entered in an interactive "
 "session of a program"
 msgstr ""
+"Provides a set of commands for manipulating text entered in an interactive "
+"session of a program"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/readline.xml:158
@@ -29650,7 +29875,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:99
 msgid "Prepare Shadow for compilation:"
-msgstr ""
+msgstr "Prepare Shadow for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:101
@@ -30551,7 +30776,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:49
 msgid "Prepare Sqlite for compilation with:"
-msgstr ""
+msgstr "Prepare Sqlite for compilation with:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/sqlite.xml:51
@@ -30917,7 +31142,7 @@ msgstr "Installation of Sysklogd"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sysklogd.xml:44
 msgid "Prepare the package for compilation:"
-msgstr ""
+msgstr "Prepare the package for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/sysklogd.xml:46
@@ -31046,6 +31271,9 @@ msgid ""
 "systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
 "default udev rules:"
 msgstr ""
+"Remove two unneeded groups, <systemitem class=\"groupname\">render</"
+"systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
+"default udev rules:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:48 en/chapter08/udev.xml:51
@@ -31059,7 +31287,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:52
 msgid "Prepare systemd for compilation:"
-msgstr ""
+msgstr "Prepare systemd for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:54
@@ -31185,6 +31413,8 @@ msgid ""
 "Remove a daemon which has dependencies that do not fit within the scope of "
 "LFS."
 msgstr ""
+"Remove a daemon which has dependencies that do not fit within the scope of "
+"LFS."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:151
@@ -31197,6 +31427,8 @@ msgid ""
 "Prevent the generation of man pages to avoid extra dependencies.  We will "
 "install pre-generated man pages for systemd from a tarball."
 msgstr ""
+"Prevent the generation of man pages to avoid extra dependencies.  We will "
+"install pre-generated man pages for systemd from a tarball."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:160 en/chapter08/udev.xml:96
@@ -31218,6 +31450,7 @@ msgstr ""
 msgid ""
 "Prevent the installation of a PAM configuration file not functional on LFS."
 msgstr ""
+"Prevent the installation of a PAM configuration file not functional on LFS."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:176 en/chapter08/udev.xml:104
@@ -31669,6 +31902,8 @@ msgid ""
 "Registers DNS server and domain configuration with <command>systemd-"
 "resolved</command>"
 msgstr ""
+"Registers DNS server and domain configuration with <command>systemd-"
+"resolved</command>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:503
@@ -31766,7 +32001,7 @@ msgstr "<command>systemd-ac-power</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:567
 msgid "Reports whether the system is connected to an external power source."
-msgstr ""
+msgstr "Reports whether the system is connected to an external power source."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:570
@@ -31835,6 +32070,8 @@ msgid ""
 "Recursively shows the contents of the selected Linux control group hierarchy "
 "in a tree"
 msgstr ""
+"Recursively shows the contents of the selected Linux control group hierarchy "
+"in a tree"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:615
@@ -32475,6 +32712,8 @@ msgid ""
 "Reports the previous and the current run-level, as noted in the last run-"
 "level record in <filename>/run/utmp</filename>"
 msgstr ""
+"Reports the previous and the current run-level, as noted in the last run-"
+"level record in <filename>/run/utmp</filename>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/sysvinit.xml:198
@@ -32650,7 +32889,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:53
 msgid "Prepare Tcl for compilation:"
-msgstr ""
+msgstr "Prepare Tcl for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:55
@@ -32765,7 +33004,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:125
 msgid "Rename a man page that conflicts with a Perl man page:"
-msgstr ""
+msgstr "Rename a man page that conflicts with a Perl man page:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:127
@@ -33158,7 +33397,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:55
 msgid "Remove one udev rule requiring a full Systemd installation:"
-msgstr ""
+msgstr "Remove one udev rule requiring a full Systemd installation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/udev.xml:57
@@ -33186,7 +33425,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:69
 msgid "Prepare Udev for compilation:"
-msgstr ""
+msgstr "Prepare Udev for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/udev.xml:71
@@ -33760,7 +33999,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:265
 msgid "chcpu"
-msgstr ""
+msgstr "chcpu"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:271
@@ -34156,6 +34395,8 @@ msgid ""
 "Reads or sets the system's hardware clock, also called the Real-Time Clock "
 "(RTC) or Basic Input-Output System (BIOS)  clock"
 msgstr ""
+"Reads or sets the system's hardware clock, also called the Real-Time Clock "
+"(RTC) or Basic Input-Output System (BIOS)  clock"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:537
@@ -34217,7 +34458,7 @@ msgstr "<command>ipcrm</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:575
 msgid "Removes the given Inter-Process Communication (IPC) resource"
-msgstr ""
+msgstr "Removes the given Inter-Process Communication (IPC) resource"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:577
@@ -34232,7 +34473,7 @@ msgstr "<command>ipcs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:585
 msgid "Provides IPC status information"
-msgstr ""
+msgstr "Provides IPC status information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:587
@@ -34264,7 +34505,7 @@ msgstr "<command>isosize</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:607
 msgid "Reports the size of an iso9660 file system"
-msgstr ""
+msgstr "Reports the size of an iso9660 file system"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:609
@@ -34425,7 +34666,7 @@ msgstr "<command>lscpu</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:721
 msgid "Prints CPU architecture information"
-msgstr ""
+msgstr "Prints CPU architecture information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:723
@@ -34455,7 +34696,7 @@ msgstr "<command>lsipc</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:741
 msgid "Prints information on IPC facilities currently employed in the system"
-msgstr ""
+msgstr "Prints information on IPC facilities currently employed in the system"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:744
@@ -34568,7 +34809,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:817
 msgid "mesg"
-msgstr ""
+msgstr "mesg"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:823
@@ -34776,7 +35017,7 @@ msgstr "<command>readprofile</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:960
 msgid "Reads kernel profiling information"
-msgstr ""
+msgstr "Reads kernel profiling information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:962
@@ -34791,7 +35032,7 @@ msgstr "<command>rename</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:970
 msgid "Renames the given files, replacing a given string with another"
-msgstr ""
+msgstr "Renames the given files, replacing a given string with another"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:973
@@ -34896,7 +35137,7 @@ msgstr "<command>scriptlive</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:1042
 msgid "Re-runs session typescripts using timing information"
-msgstr ""
+msgstr "Re-runs session typescripts using timing information"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:1044
@@ -35068,7 +35309,7 @@ msgstr "<command>taskset</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:1156
 msgid "Retrieves or sets a process's CPU affinity"
-msgstr ""
+msgstr "Retrieves or sets a process's CPU affinity"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:1158
@@ -35257,6 +35498,8 @@ msgid ""
 "Reports the location of the binary, source, and man page files for the given "
 "command"
 msgstr ""
+"Reports the location of the binary, source, and man page files for the given "
+"command"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:1288
@@ -35453,7 +35696,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:57
 msgid "Prepare Vim for compilation:"
-msgstr ""
+msgstr "Prepare Vim for compilation:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:65
@@ -35949,7 +36192,7 @@ msgstr "Installation of XML::Parser"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xml-parser.xml:44
 msgid "Prepare XML::Parser for compilation:"
-msgstr ""
+msgstr "Prepare XML::Parser for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/xml-parser.xml:46
@@ -35980,7 +36223,7 @@ msgstr "<filename class=\"libraryfile\">Expat</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xml-parser.xml:81
 msgid "provides the Perl Expat interface"
-msgstr ""
+msgstr "provides the Perl Expat interface"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xz.xml:26
@@ -36005,7 +36248,7 @@ msgstr "&xz-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xz.xml:47
 msgid "Prepare Xz for compilation with:"
-msgstr ""
+msgstr "Prepare Xz for compilation with:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/xz.xml:49
@@ -36449,7 +36692,7 @@ msgstr "Installation of Zlib"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zlib.xml:44
 msgid "Prepare Zlib for compilation:"
-msgstr ""
+msgstr "Prepare Zlib for compilation:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zlib.xml:62
@@ -36554,7 +36797,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zstd.xml:63
 msgid "Remove the static library:"
-msgstr ""
+msgstr "Remove the static library:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zstd.xml:64
@@ -36723,7 +36966,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:79
 msgid "checkfs"
-msgstr ""
+msgstr "checkfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/bootscripts.xml:85
@@ -36740,6 +36983,12 @@ msgid ""
 "filename>, <filename>/fastboot</filename>, and <filename>/forcefsck</"
 "filename> files"
 msgstr ""
+"Removes files that should not be preserved between reboots, such as those in "
+"<filename class=\"directory\">/run/</filename> and <filename "
+"class=\"directory\">/var/lock/</filename>; it re-creates <filename>/run/"
+"utmp</filename> and removes the possibly present <filename>/etc/nologin</"
+"filename>, <filename>/fastboot</filename>, and <filename>/forcefsck</"
+"filename> files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:94
@@ -36900,7 +37149,7 @@ msgstr ""
 #: en/chapter09/network.xml:177 en/chapter09/networkd.xml:14
 #: en/chapter09/networkd.xml:314
 msgid "network"
-msgstr ""
+msgstr "network"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/bootscripts.xml:207
@@ -36951,6 +37200,7 @@ msgstr "<command>setclock</command>"
 msgid ""
 "Resets the system clock to local time if the hardware clock is not set to UTC"
 msgstr ""
+"Resets the system clock to local time if the hardware clock is not set to UTC"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter09/bootscripts.xml:245 en/chapter09/usage.xml:264
@@ -36968,6 +37218,8 @@ msgid ""
 "Provides the functionality needed to assign a static Internet Protocol (IP) "
 "address to a network interface"
 msgstr ""
+"Provides the functionality needed to assign a static Internet Protocol (IP) "
+"address to a network interface"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:256
@@ -37037,6 +37289,8 @@ msgid ""
 "Prepares the <filename class=\"directory\">/dev</filename> directory and "
 "starts the udev daemon"
 msgstr ""
+"Prepares the <filename class=\"directory\">/dev</filename> directory and "
+"starts the udev daemon"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:310
@@ -37055,6 +37309,9 @@ msgid ""
 "class=\"directory\">/run/udev</filename> to <filename class=\"directory\">/"
 "etc/udev/rules.d</filename> if required"
 msgstr ""
+"Retries failed udev uevents, and copies generated rules files from <filename "
+"class=\"directory\">/run/udev</filename> to <filename class=\"directory\">/"
+"etc/udev/rules.d</filename> if required"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:322
@@ -37873,6 +38130,13 @@ msgid ""
 "canonical charmap for your chosen locale. Optional modifiers such as "
 "<literal>@euro</literal> may also be present."
 msgstr ""
+"Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
+"for your desired language (e.g., <literal>en</literal>) and "
+"<replaceable>&lt;CC&gt;</replaceable> with the two-letter code for the "
+"appropriate country (e.g., <literal>GB</literal>). "
+"<replaceable>&lt;charmap&gt;</replaceable> should be replaced with the "
+"canonical charmap for your chosen locale. Optional modifiers such as "
+"<literal>@euro</literal> may also be present."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:51
@@ -38306,6 +38570,12 @@ msgid ""
 "<emphasis>nameserver</emphasis> line from the file. The IP address may also "
 "be a router on the local network."
 msgstr ""
+"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
+"the IP address of the DNS most appropriate for the setup. There will often "
+"be more than one entry (requirements demand secondary servers for fallback "
+"capability). If you only need or want one DNS server, remove the second "
+"<emphasis>nameserver</emphasis> line from the file. The IP address may also "
+"be a router on the local network."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter09/network.xml:136
@@ -38758,6 +39028,13 @@ msgid ""
 "may also be a router on the local network. Another option is to use the "
 "Google Public DNS service using the IP addresses below as nameservers."
 msgstr ""
+"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
+"the IP address of the DNS server most appropriate for your setup.  There "
+"will often be more than one entry (requirements demand secondary servers for "
+"fallback capability). If you only need or want one DNS server, remove the "
+"second <emphasis>nameserver</emphasis> line from the file.  The IP address "
+"may also be a router on the local network. Another option is to use the "
+"Google Public DNS service using the IP addresses below as nameservers."
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/networkd.xml:269
@@ -39438,6 +39715,11 @@ msgid ""
 "control state, and obtain status of unit files. Here are some examples of "
 "frequently used commands:"
 msgstr ""
+"Rather than plain shell scripts used in SysVinit or BSD style init systems, "
+"systemd uses a unified format for different types of startup files (or "
+"units). The command <command>systemctl</command> is used to enable, disable, "
+"control state, and obtain status of unit files. Here are some examples of "
+"frequently used commands:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:158
@@ -39878,7 +40160,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/udev.xml:170
 msgid "Problems with Loading Modules and Creating Devices"
-msgstr ""
+msgstr "Problems with Loading Modules and Creating Devices"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/udev.xml:172
@@ -41082,6 +41364,12 @@ msgid ""
 "class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
 "this file, see <ulink role='man' url='&man;fstab.5'>fstab(5)</ulink>."
 msgstr ""
+"Replace <replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
+"replaceable>, and <replaceable>&lt;fff&gt;</replaceable> with the values "
+"appropriate for the system, for example, <filename class=\"partition\">sda2</"
+"filename>, <filename class=\"partition\">sda5</filename>, and <systemitem "
+"class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
+"this file, see <ulink role='man' url='&man;fstab.5'>fstab(5)</ulink>."
 
 #. type: Content of: <sect1><para>
 #: en/chapter10/fstab.xml:61
@@ -41507,7 +41795,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:80
 msgid "Prepare for compilation by running the following command:"
-msgstr ""
+msgstr "Prepare for compilation by running the following command:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:84
@@ -44830,7 +45118,7 @@ msgstr ""
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:121
 msgid "Mirror Maintainers"
-msgstr ""
+msgstr "미러 관리자"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:123
@@ -45676,7 +45964,7 @@ msgstr "<emphasis role=\"bold\">MB</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:329
 msgid "Megabytes"
-msgstr ""
+msgstr "Megabytes"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:334
@@ -45696,7 +45984,7 @@ msgstr "<emphasis role=\"bold\">MD5</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:343
 msgid "Message Digest 5"
-msgstr ""
+msgstr "Message Digest 5"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:348
@@ -46151,6 +46439,8 @@ msgid ""
 "Restrictions.The license granted in Section 3 above is expressly made "
 "subject to and limited by the following restrictions:"
 msgstr ""
+"Restrictions.The license granted in Section 3 above is expressly made "
+"subject to and limited by the following restrictions:"
 
 #. type: Content of: <sect1><orderedlist><listitem><orderedlist><listitem><para>
 #: en/appendices/creat-comm.xml:155
@@ -46287,7 +46577,7 @@ msgstr ""
 #. type: Content of: <sect1><orderedlist><listitem><para>
 #: en/appendices/creat-comm.xml:284
 msgid "Representations, Warranties and Disclaimer"
-msgstr ""
+msgstr "Representations, Warranties and Disclaimer"
 
 #. type: Content of: <sect1><orderedlist><listitem><para>
 #: en/appendices/creat-comm.xml:286
@@ -46361,7 +46651,7 @@ msgstr ""
 #. type: Content of: <sect1><orderedlist><listitem><para>
 #: en/appendices/creat-comm.xml:334
 msgid "Miscellaneous"
-msgstr ""
+msgstr "기타"
 
 #. type: Content of: <sect1><orderedlist><listitem><orderedlist><listitem><para>
 #: en/appendices/creat-comm.xml:339
@@ -47680,7 +47970,7 @@ msgstr ""
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/dependencies.xml:2417
 msgid "Packaging"
-msgstr ""
+msgstr "Packaging"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2422
@@ -48996,7 +49286,7 @@ msgstr "4"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:142
 msgid "Rebuild and test ccC using ccC on machine C."
-msgstr ""
+msgstr "Rebuild and test ccC using ccC on machine C."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:148
