@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-26 21:53+0900\n"
-"PO-Revision-Date: 2026-03-26 21:52+0900\n"
+"POT-Creation-Date: 2026-03-27 04:03+0900\n"
+"PO-Revision-Date: 2026-03-27 04:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -22313,7 +22313,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:217
 msgid "talk"
-msgstr ""
+msgstr "talk"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:223
@@ -22328,7 +22328,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:227
 msgid "telnet"
-msgstr ""
+msgstr "telnet"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:233
@@ -22343,7 +22343,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:237
 msgid "tftp"
-msgstr ""
+msgstr "tftp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:243
@@ -22418,7 +22418,7 @@ msgstr ""
 #: en/chapter08/intltool.xml:46
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's:\\\\\\${:\\\\\\$\\\\{:' intltool-update.in</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's:\\\\\\${:\\\\\\$\\\\{:' intltool-update.in</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/intltool.xml:48
@@ -22440,6 +22440,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-&intltool-version;/I18N-HOWTO</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-&intltool-version;/I18N-HOWTO</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/intltool.xml:72
@@ -22538,7 +22540,7 @@ msgstr "intltool-update"
 #. type: Content of: <sect1><para>
 #: en/chapter08/introduction.xml:13
 msgid "In this chapter, we start constructing the LFS system in earnest."
-msgstr ""
+msgstr "이 장에서 우리는 본격적으로 LFS 시스템을 구축하기 시작합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/introduction.xml:16
@@ -22550,6 +22552,11 @@ msgid ""
 "system work is to know what each package is used for and why you (or the "
 "system)  may need it."
 msgstr ""
+"이 소프트웨어의 설치는 간단합니다. 많은 경우 설치 지침을 더 짧고 일반적인 방"
+"식으로 만들 수 있었음에도, 우리는 실수를 최소화하기 위해 모든 패키지에 대해 "
+"전체 지침을 제공하기로 선택했습니다. 리눅스 시스템이 어떻게 작동하는지 배우"
+"는 핵심은 각 패키지가 무엇에 사용되는지, 그리고 왜 여러분(또는 시스템)에게 "
+"그 패키지가 필요한지 아는 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/introduction.xml:23
@@ -22568,6 +22575,17 @@ msgid ""
 "optimizations are often outweighed by the risks.  First-time builders of LFS "
 "are encouraged to build without custom optimizations."
 msgstr ""
+"우리는 사용자 정의 최적화를 사용하는 것을 권장하지 않습니다. 프로그램 실행 속"
+"도를 약간 더 빠르게 할 수 있지만, 컴파일 중 어려움을 겪거나 프로그램을 실행"
+"할 때 문제가 발생할 수도 있습니다. 만약 어떤 패키지가 사용자 정의 최적화로 인"
+"해 컴파일 안 되면, 최적화 없이 컴파일하여 문제가 해결되는지 확인하십시오. 설"
+"령 사용자 정의 최적화를 사용하여 패키지가 컴파일되더라도, 코드와 빌드 도구 사"
+"이의 복잡한 상호작용으로 인해 잘못 컴파일되었을 위험이 있습니다. 또한 본서에 "
+"지정되지 않은 값을 사용하는 <option>-march</option> 및 <option>-mtune</"
+"option> 옵션은 테스트 안 되었음을 유의하십시오. 이는 툴체인 패키지(Binutils, "
+"GCC 및 Glibc)에 문제를 일으킬 수 있습니다. 사용자 정의 컴파일러 최적화를 통"
+"해 얻는 작은 이득보다 위험이 더 큰 경우가 많습니다. LFS를 처음 구축하는 분은 "
+"사용자 정의 최적화 없이 빌드할 것을 권장합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/introduction.xml:37
@@ -22581,6 +22599,13 @@ msgid ""
 "<option>-O3</option>, so the resulting system will still run very fast "
 "without any customized optimization, and be stable at the same time."
 msgstr ""
+"반면, 패키지의 기본 설정으로 활성화된 최적화는 그대로 유지합니다. 또한, 패키"
+"지에서 제공하지만 기본적으로 활성화되어 있지 않은 최적화 설정을 우리가 명시적"
+"으로 활성화하는 경우도 가끔 있습니다. 패키지 유지관리자들이 이미 이러한 설정"
+"들을 테스트하고 안전하다고 판단했으므로, 빌드를 깨뜨릴 가능성은 낮습니다. 일"
+"반적으로 기본 설정에는 이미 <option>-O2</option> 또는 <option>-O3</option>가 "
+"활성화되어 있어, 사용자 정의 최적화 없이도 결과 시스템은 매우 빠르게 작동하"
+"며, 안정성을 유지할 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/introduction.xml:46
@@ -22592,6 +22617,11 @@ msgid ""
 "instructions, there is a list of programs and libraries (along with brief "
 "descriptions) that the package installs."
 msgstr ""
+"설치 지침에 앞서, 각 설치 페이지는 패키지에 대한 정보를 제공합니다. 여기에는 "
+"패키지에 포함된 내용에 대한 간결한 설명, 빌드에 소요되는 대략적인 시간, 그리"
+"고 이 빌드 프로세스 중에 필요한 디스크 공간 등이 들어갑니다. 설치 지침 다음에"
+"는 해당 패키지가 설치하는 프로그램과 라이브러리 목록(및 간단한 설명)이 나옵니"
+"다."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter08/introduction.xml:53
@@ -22601,6 +22631,9 @@ msgid ""
 "values have been calculated using four CPU cores (-j4) for all operations "
 "unless specified otherwise."
 msgstr ""
+"SBU 값과 필요한 디스크 공간은 <xref linkend=\"chapter-building-system\"/> 의 "
+"모든 해당 패키지에 대한 테스트 스위트 데이터를 포함합니다. SBU 값은 별도 지정"
+"하지 않는 한 모든 작업에 대해 4개의 CPU 코어(-j4)를 사용하여 계산했습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/introduction.xml:59
@@ -22619,6 +22652,14 @@ msgid ""
 "obvious, the relevant programs (and the procedures needed to do the linking) "
 "may not even be known."
 msgstr ""
+"일반적으로 LFS 편집자들은 정적 라이브러리를 빌드하고 설치하는 것을 권장 안 합"
+"니다. 현대적인 리눅스 시스템에서 대부분의 정적 라이브러리는 구식으로 간주됩니"
+"다. 게다가 프로그램에 정적 라이브러리를 링크하는 것은 해로울 수 있습니다. 보"
+"안 문제를 해결하기 위해 라이브러리 업데이트가 필요한 경우, 해당 정적 라이브러"
+"리를 사용하는 모든 프로그램을 새로운 라이브러리로 다시 링크해야 합니다. 정적 "
+"라이브러리의 사용 여부가 항상 명확하게 드러나는 것은 아니기 때문에, 관련 프로"
+"그램 (및 링크를 수행하는 데 필요한 절차)조차 알 수 없는 경우가 발생할 수 있습"
+"니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/introduction.xml:70
@@ -22630,6 +22671,11 @@ msgid ""
 "static libraries remains an essential feature of the package building "
 "process."
 msgstr ""
+"이 장의 절차는 대부분의 정적 라이브러리 설치를 제거하거나 비활성화합니다. 보"
+"통 이는 <command>configure</command> 에 <option>--disable-static</option> 옵"
+"션을 전달하여 진행됩니다. 다른 경우에는 대체 수단이 필요합니다. Glibc 및 GCC "
+"같은 몇 가지 경우에는 정적 라이브러리의 사용이 패키지 빌드 프로세스의 본질적"
+"인 기능으로 남아 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/introduction.xml:77
@@ -22638,6 +22684,8 @@ msgid ""
 "book;introduction/libraries.html\"> Libraries: Static or shared?</ulink> in "
 "the BLFS book."
 msgstr ""
+"라이브러리에 대한 더 자세한 논의는 BLFS 책 <ulink url=\"&blfs-"
+"book;introduction/libraries.html\">라이브러리: 정적 또는 공유?</ulink> 참조."
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/iproute2.xml:14
