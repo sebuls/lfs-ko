@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-27 04:03+0900\n"
-"PO-Revision-Date: 2026-03-27 04:02+0900\n"
+"POT-Creation-Date: 2026-03-28 04:32+0900\n"
+"PO-Revision-Date: 2026-03-28 04:32+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9532,6 +9532,23 @@ msgid ""
 "install -dv -m 0750 /root\n"
 "install -dv -m 1777 /tmp /var/tmp</userinput>"
 msgstr ""
+"<userinput>mkdir -pv /etc/{opt,sysconfig}\n"
+"mkdir -pv /lib/firmware\n"
+"mkdir -pv /media/{floppy,cdrom}\n"
+"mkdir -pv /usr/{,local/}{include,src}\n"
+"mkdir -pv /usr/lib/locale\n"
+"mkdir -pv /usr/local/{bin,lib,sbin}\n"
+"mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}\n"
+"mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}\n"
+"mkdir -pv /usr/{,local/}share/man/man{1..8}\n"
+"mkdir -pv /var/{cache,local,log,mail,opt,spool}\n"
+"mkdir -pv /var/lib/{color,misc,locate}\n"
+"\n"
+"ln -sfv /run /var/run\n"
+"ln -sfv /run/lock /var/lock\n"
+"\n"
+"install -dv -m 0750 /root\n"
+"install -dv -m 1777 /tmp /var/tmp</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/creatingdirs.xml:45
@@ -37875,6 +37892,8 @@ msgid ""
 "the chroot environment.  It can only be used after the LFS system is booted "
 "with systemd."
 msgstr ""
+"<command>localectl</command> 명령은 chroot 환경에서는 동작하지 않음에 유의하"
+"십시오. 그것은 LFS 시스템을 systemd로 부팅한 후에만 쓸 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:114
@@ -37882,12 +37901,14 @@ msgid ""
 "You can also use <command>localectl</command> utility with the corresponding "
 "parameters to change X11 keyboard layout, model, variant and options:"
 msgstr ""
+"또한 <command>localectl</command> 유틸리티에 해당 매개변수를 사용하여 X11 키"
+"보드 레이아웃, 모델, 변형(variant) 및 옵션을 변경:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/consoled.xml:118
 #, no-wrap
 msgid "<userinput>localectl set-x11-keymap LAYOUT [MODEL] [VARIANT] [OPTIONS]</userinput>"
-msgstr ""
+msgstr "<userinput>localectl set-x11-keymap LAYOUT [MODEL] [VARIANT] [OPTIONS]</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:120
@@ -38281,7 +38302,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/locale.xml:11
 msgid "Configuring the System Locale"
-msgstr ""
+msgstr "시스템 로캘 설정"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:14 en/chapter11/reboot.xml:94
@@ -38299,11 +38320,13 @@ msgid ""
 "Some environment variables are necessary for native language support. "
 "Setting them properly results in:"
 msgstr ""
+"기본 언어 지원(native language support)을 위해서는 몇 가지 환경 변수가 필수적"
+"입니다. 이들을 올바르게 설정한 결과:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:26
 msgid "The output of programs being translated into your native language"
-msgstr ""
+msgstr "프로그램의 출력이 우리 모국어로 번역됨"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:29
@@ -38312,21 +38335,24 @@ msgid ""
 "classes. This is necessary for <command>bash</command> to properly accept "
 "non-ASCII characters in command lines in non-English locales"
 msgstr ""
+"문자를 글자, 숫자 및 기타 부류로 올바르게 분류합니다. 이는 우리가 영어 아닌 "
+"로캘의 셸 명령줄에서 <command>bash</command>가 비 ASCII 문자(한글 등)를 올바"
+"르게 받아들이는 데 필수적"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:34
 msgid "The correct alphabetical sorting order for the country"
-msgstr ""
+msgstr "해당 국가에 맞는 올바른 알파벳순 정렬 순서를 보장"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:37
 msgid "The appropriate default paper size"
-msgstr ""
+msgstr "해당 국가에 적합한 기본 용지 크기를 지정"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/locale.xml:40
 msgid "The correct formatting of monetary, time, and date values"
-msgstr ""
+msgstr "통화, 시간, 날짜 값에 대한 올바른 형식을 지정"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:44
@@ -38339,26 +38365,25 @@ msgid ""
 "canonical charmap for your chosen locale. Optional modifiers such as "
 "<literal>@euro</literal> may also be present."
 msgstr ""
-"Replace <replaceable>&lt;ll&gt;</replaceable> below with the two-letter code "
-"for your desired language (e.g., <literal>en</literal>) and "
-"<replaceable>&lt;CC&gt;</replaceable> with the two-letter code for the "
-"appropriate country (e.g., <literal>GB</literal>). "
-"<replaceable>&lt;charmap&gt;</replaceable> should be replaced with the "
-"canonical charmap for your chosen locale. Optional modifiers such as "
-"<literal>@euro</literal> may also be present."
+"아래 <replaceable>&lt;ll&gt;</replaceable>는 우리가 원하는 언어에 해당하는 "
+"두 자리 코드(예: <literal>en</literal>)로, <replaceable>&lt;CC&gt;</"
+"replaceable>는 해당 국가에 맞는 두 자리 코드(예: <literal>GB</literal>)로 바"
+"꾸십시오. <replaceable>&lt;charmap&gt;</replaceable> 부분은 우리가 선택한 로"
+"캘의 표준 문자 집합(canonical charmap)으로 바꾸어야 합니다. <literal>@euro</"
+"literal>와 같은 선택적 수정자(modifier)가 들어갈 수도 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:51
 msgid ""
 "The list of all locales supported by Glibc can be obtained by running the "
 "following command:"
-msgstr ""
+msgstr "Glibc에서 지원하는 모든 로캘 목록을 얻으려면 다음 명령어 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:54
 #, no-wrap
 msgid "<userinput>locale -a</userinput>"
-msgstr ""
+msgstr "<userinput>locale -a</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:56
@@ -38373,19 +38398,29 @@ msgid ""
 "name&gt;</replaceable> is the output given by <command>locale -a</command> "
 "for your preferred locale (<literal>en_GB.iso88591</literal> in our example)."
 msgstr ""
+"문자 집합(Charmaps)은 여러 별칭을 가질 수 있습니다. 예를 들어, "
+"<literal>ISO-8859-1</literal>은 <literal>iso8859-1</literal> 또는 "
+"<literal>iso88591</literal>이라고도 불립니다. 일부 애플리케이션은 이러한 다양"
+"한 동의어를 올바르게 처리하지 못할 수 있으므로(예: <literal>utf8</literal>이 "
+"아닌 반드시 <literal>UTF-8</literal>로 표기해야 함), 대부분의 경우 특정 로캘"
+"에 대한 표준 이름(canonical name)을 선택하는 것이 가장 안전합니다. 표준 이름"
+"을 확인하려면 다음 명령어를 실행하십시오. 여기서 <replaceable>&lt;locale "
+"name&gt;</replaceable>는 우리가 선호하는 로캘에 대해 <command>locale -a</"
+"command> 명령어가 출력한 결과입니다(본문의 예시에서는 "
+"<literal>en_GB.iso88591</literal>)."
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:68
 #, no-wrap
 msgid "<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale charmap</userinput>"
-msgstr ""
+msgstr "<userinput>LC_ALL=<replaceable>&lt;locale name&gt;</replaceable> locale charmap</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:70
 msgid ""
 "For the <literal>en_GB.iso88591</literal> locale, the above command will "
 "print:"
-msgstr ""
+msgstr "<literal>en_GB.iso88591</literal> 로캘에, 위 명령어는 다음을 출력"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:73
@@ -38400,6 +38435,9 @@ msgid ""
 "literal>.  It is important that the locale found using the heuristic above "
 "is tested prior to it being added to the Bash startup files:"
 msgstr ""
+"이 결과 최종 로캘 설정은 <literal>en_GB.ISO-8859-1</literal>. 위에서 설명한 "
+"탐색 방법(heuristic)으로 찾아낸 로캘을 Bash 시작 파일에 추가하기 전에, 먼저 "
+"테스트를 거치는 것이 중요:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:79
@@ -38410,6 +38448,10 @@ msgid ""
 "LC_ALL=&lt;locale name&gt; locale int_curr_symbol\n"
 "LC_ALL=&lt;locale name&gt; locale int_prefix</userinput>"
 msgstr ""
+"<userinput>LC_ALL=&lt;locale name&gt; locale language\n"
+"LC_ALL=&lt;locale name&gt; locale charmap\n"
+"LC_ALL=&lt;locale name&gt; locale int_curr_symbol\n"
+"LC_ALL=&lt;locale name&gt; locale int_prefix</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:84
@@ -38421,6 +38463,11 @@ msgid ""
 "your locale was either not installed in Chapter&nbsp;8 or is not supported "
 "by the default installation of Glibc."
 msgstr ""
+"위의 명령어는 언어 이름, 로캘에서 사용되는 문자 인코딩, 해당 지역 통화 및 해"
+"당 국가로 전화할 때 번호 앞에 붙이는 국가 번호를 출력해야 합니다. 만약 위의 "
+"명령 중 하나라도 아래와 유사한 메시지를 내며 실패한다면, 이는 우리의 로캘이 "
+"제8장에서 설치되지 않았거나 Glibc의 기본 설치 상태에서 지원되지 않음을 뜻합니"
+"다."
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:91
@@ -38436,6 +38483,9 @@ msgid ""
 "locale.  Further instructions assume that there are no such error messages "
 "from Glibc."
 msgstr ""
+"이런 일이 생기면, <command>localedef</command> 명령어를 사용하여 원하는 로캘"
+"을 설치하거나 다른 로캘을 선택하는 것을 고려하십시오. 이후 지침은 Glibc에서 "
+"이러한 오류 메시지가 발생하지 않는다고 가정합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:98
@@ -38445,6 +38495,10 @@ msgid ""
 "expectations.  In those cases, investigating how other Linux distributions "
 "support your locale might provide some useful information."
 msgstr ""
+"로캘 이름이 패키지의 기대치와 일치하지 않으면 다른 패키지들도 제대로 동작 안 "
+"할 수 있습니다(오류 메시지를 안 보일 수도 있음). 이런 경우, 다른 리눅스 배포"
+"판이 해당 로캘을 어떻게 지원하는지 조사해 보는 것이 유용한 정보를 얻는 방법"
+"이 될 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:103
@@ -38452,6 +38506,8 @@ msgid ""
 "Once the proper locale settings have been determined, create the <filename>/"
 "etc/locale.conf</filename> file:"
 msgstr ""
+"적절한 로캘 설정이 결정되면, <filename>/etc/locale.conf</filename> 파일을 생"
+"성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:106
@@ -38461,6 +38517,9 @@ msgid ""
 "<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/locale.conf &lt;&lt; \"EOF\"\n"
+"<literal>LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable></literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:110
@@ -38473,6 +38532,12 @@ msgid ""
 "equivalent files exist in the home directory, they may override the global "
 "settings."
 msgstr ""
+"셸 프로그램 <command>/bin/bash</command>(이하 <quote>셸</quote>)는 실행 환경"
+"을 만드는 데 도움이 되는 일련의 시작 파일들을 사용합니다. 각 파일은 고유한 용"
+"도가 있으며, 로그인 환경과 대화형 환경에 서로 다른 영향을 미칠 수 있습니다. "
+"<filename class=\"directory\">/etc</filename> 디렉터리에 있는 파일들은 전역 "
+"설정을 제공합니다. 만약 홈 디렉터리에 똑같은 파일이 있다면, 해당 파일이 전역 "
+"설정을 덮어쓸 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:118
@@ -38485,6 +38550,12 @@ msgid ""
 "non-interactive because it is processing a script and not waiting for user "
 "input between commands."
 msgstr ""
+"대화형 로그인 셸은 로그인이 성공한 후 <filename>/etc/passwd</filename> 파일"
+"을 읽어 <command>/bin/login</command>을 통해 시작됩니다. 대화형 비로그인 셸"
+"은 명령줄(예: <prompt>[prompt]$</prompt><command>/bin/bash</command>)에서 시"
+"작됩니다. 비대화형 셸은 대개 셸 스크립트가 실행될 때 나타납니다. 스크립트를 "
+"처리 중이며 명령어 사이마다 사용자 입력을 기다리지 않기 때문에 비대화형이라"
+"고 부릅니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:127
@@ -38499,6 +38570,12 @@ msgid ""
 "(to prevent programs from outputting characters that the Linux console is "
 "unable to render):"
 msgstr ""
+"로그인 셸은 종종 <filename>/etc/locale.conf</filename>의 설정에 영향을 받지 "
+"않을 때가 있습니다. <filename>/etc/locale.conf</filename>에서 로캘 설정을 읽"
+"어와 내보내도록(export) <filename>/etc/profile</filename> 파일을 생성하십시"
+"오. 단, 리눅스 콘솔에서 실행 중인 경우에는 <literal>C.UTF-8</literal> 로캘을 "
+"대신 설정하여, 프로그램들이 리눅스 콘솔에서 렌더링할 수 없는 문자를 출력하지 "
+"않도록 해야 합니다."
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:138
@@ -38556,6 +38633,9 @@ msgid ""
 "systemd <command>localectl</command> utility. To use <command>localectl</"
 "command> for the example above, run:"
 msgstr ""
+"<filename>/etc/locale.conf</filename> 파일은 systemd <command>localectl</"
+"command> 유틸리티를 사용하여 수정할 수도 있음에 유의하십시오. 위의 예시에서 "
+"<command>localectl</command>를 사용하려면 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:181
@@ -38572,12 +38652,17 @@ msgid ""
 "separate them with a space. An example where <envar>LANG</envar> is set as "
 "en_US.UTF-8 but <envar>LC_CTYPE</envar> is set as just en_US is:"
 msgstr ""
+"<envar>LANG</envar>, <envar>LC_CTYPE</envar>, <envar>LC_NUMERIC</envar>와 같"
+"이 언어와 관련된 다른 환경 변수나 <command>locale</command> 명령어가 출력하"
+"는 그 밖의 모든 환경 변수를 지정할 수도 있습니다. 각 변수는 공백으로 구분만 "
+"하면 됩니다. <envar>LANG</envar>은 <literal>en_US.UTF-8</literal>로 설정하"
+"고, <envar>LC_CTYPE</envar>은 단순히 <literal>en_US</literal>로 설정한 예시:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:190
 #, no-wrap
 msgid "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"</userinput>"
-msgstr ""
+msgstr "<userinput>localectl set-locale LANG=\"en_US.UTF-8\" LC_CTYPE=\"en_US\"</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:197
@@ -38593,6 +38678,16 @@ msgid ""
 "computeroutput>). It's suggested that you use the <literal>C</literal> "
 "locale only if you are certain that you will never need 8-bit characters."
 msgstr ""
+"<literal>C</literal>(기본값) 로캘과 <literal>en_US</literal>(미국 영어 사용자"
+"에게 권장되는 값) 로캘은 서로 다릅니다. <literal>C</literal>는 US-ASCII 7비"
+"트 문자 집합을 사용하며, 최상위 비트(high bit)가 설정된 바이트를 유효하지 않"
+"은 문자로 취급합니다. 이 때문에 해당 로캘에서 <command>ls</command> 명령을 실"
+"행하면 그런 문자들을 물음표(?)로 치환하여 표시하게 됩니다. 또한, Mutt나 Pine "
+"같은 프로그램에서 이러한 문자가 포함된 메일을 보내려고 하면 RFC 규격을 따르"
+"지 않는 메시지가 전송됩니다(보내는 메일의 문자 집합이 "
+"<computeroutput>unknown 8-bit</computeroutput>로 나타남). <literal>C</"
+"literal> 로캘은 8비트 문자가 전혀 필요하지 않다고 확신하는 경우에만 사용할 것"
+"을 권장합니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/network.xml:11 en/chapter09/networkd.xml:11
