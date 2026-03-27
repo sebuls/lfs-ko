@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-28 04:32+0900\n"
-"PO-Revision-Date: 2026-03-28 04:32+0900\n"
+"POT-Creation-Date: 2026-03-28 07:54+0900\n"
+"PO-Revision-Date: 2026-03-28 07:53+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -621,7 +621,7 @@ msgstr ""
 #: en/chapter02/aboutlfs.xml:23
 #, no-wrap
 msgid "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>export LFS=<replaceable>/mnt/lfs</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/aboutlfs.xml:25
@@ -880,7 +880,7 @@ msgstr ""
 #: en/chapter02/creatingfilesystem.xml:62
 #, no-wrap
 msgid "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>mkfs -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:64 en/chapter02/mounting.xml:29
@@ -904,7 +904,7 @@ msgstr ""
 #: en/chapter02/creatingfilesystem.xml:72
 #, no-wrap
 msgid "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>mkswap /dev/<replaceable>&lt;yyy&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:74
@@ -1720,6 +1720,8 @@ msgid ""
 "<userinput>mkdir -pv $LFS\n"
 "mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:32
@@ -1738,6 +1740,10 @@ msgid ""
 "mkdir -v $LFS/home\n"
 "mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/home</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;xxx&gt;</replaceable> $LFS\n"
+"mkdir -v $LFS/home\n"
+"mount -v -t ext4 /dev/<replaceable>&lt;yyy&gt;</replaceable> $LFS/home</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:41
@@ -1765,6 +1771,8 @@ msgid ""
 "<userinput>chown root:root $LFS\n"
 "chmod 755 $LFS</userinput>"
 msgstr ""
+"<userinput>chown root:root $LFS\n"
+"chmod 755 $LFS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:54
@@ -1807,7 +1815,7 @@ msgstr ""
 #: en/chapter02/mounting.xml:79
 #, no-wrap
 msgid "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
-msgstr ""
+msgstr "<userinput>/sbin/swapon -v /dev/<replaceable>&lt;zzz&gt;</replaceable></userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:81
@@ -2126,6 +2134,9 @@ msgid ""
 "  md5sum -c md5sums\n"
 "popd</userinput>"
 msgstr ""
+"<userinput>pushd $LFS/sources\n"
+"  md5sum -c md5sums\n"
+"popd</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:128
@@ -2149,7 +2160,7 @@ msgstr ""
 #: en/chapter03/introduction.xml:139
 #, no-wrap
 msgid "<userinput>chown root:root $LFS/sources/*</userinput>"
-msgstr ""
+msgstr "<userinput>chown root:root $LFS/sources/*</userinput>"
 
 #. type: Content of the kernel-directory entity
 #: en/chapter03/packages.xml:6
@@ -4403,6 +4414,8 @@ msgid ""
 "<userinput>groupadd &lfs-groupname;\n"
 "useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 msgstr ""
+"<userinput>groupadd &lfs-groupname;\n"
+"useradd -s /bin/bash -g &lfs-groupname; -m -k /dev/null &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><variablelist><title>
 #: en/chapter04/addinguser.xml:27
@@ -4487,7 +4500,7 @@ msgstr ""
 #: en/chapter04/addinguser.xml:77
 #, no-wrap
 msgid "<userinput>passwd &lfs-username;</userinput>"
-msgstr ""
+msgstr "<userinput>passwd &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:79
@@ -4509,6 +4522,10 @@ msgid ""
 "  x86_64) chown -v &lfs-username; $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput>chown -v &lfs-username; $LFS/{usr{,/*},var,etc,tools}\n"
+"case $(uname -m) in\n"
+"  x86_64) chown -v &lfs-username; $LFS/lib64 ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter04/addinguser.xml:88
@@ -4537,7 +4554,7 @@ msgstr ""
 #: en/chapter04/addinguser.xml:97
 #, no-wrap
 msgid "<userinput>su - &lfs-username;</userinput>"
-msgstr ""
+msgstr "<userinput>su - &lfs-username;</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:99
@@ -4601,6 +4618,15 @@ msgid ""
 "  x86_64) mkdir -pv $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput>mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}\n"
+"\n"
+"for i in bin lib sbin; do\n"
+"  ln -sv usr/$i $LFS/$i\n"
+"done\n"
+"\n"
+"case $(uname -m) in\n"
+"  x86_64) mkdir -pv $LFS/lib64 ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/creatingminlayout.xml:34
@@ -4621,7 +4647,7 @@ msgstr ""
 #: en/chapter04/creatingminlayout.xml:40
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/tools</userinput>"
-msgstr ""
+msgstr "<userinput>mkdir -pv $LFS/tools</userinput>"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter04/creatingminlayout.xml:44
@@ -4989,7 +5015,7 @@ msgstr ""
 #: en/chapter04/settingenviron.xml:209
 #, no-wrap
 msgid "<userinput>make -j32</userinput>"
-msgstr ""
+msgstr "<userinput>make -j32</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/settingenviron.xml:212
@@ -5003,7 +5029,7 @@ msgstr ""
 #: en/chapter04/settingenviron.xml:217
 #, no-wrap
 msgid "<userinput>export MAKEFLAGS=-j32</userinput>"
-msgstr ""
+msgstr "<userinput>export MAKEFLAGS=-j32</userinput>"
 
 #. type: Content of: <sect1><important><para>
 #: en/chapter04/settingenviron.xml:221
@@ -5034,6 +5060,9 @@ msgid ""
 "<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt;&gt; ~/.bashrc &lt;&lt; \"EOF\"\n"
+"<literal>export MAKEFLAGS=-j<replaceable>$(nproc)</replaceable></literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/settingenviron.xml:240
@@ -5056,7 +5085,7 @@ msgstr ""
 #: en/chapter04/settingenviron.xml:248
 #, no-wrap
 msgid "<userinput>source ~/.bash_profile</userinput>"
-msgstr ""
+msgstr "<userinput>source ~/.bash_profile</userinput>"
 
 #. type: Attribute 'xreflabel' of: <sect1>
 #: en/chapter05/binutils-pass1.xml:8
@@ -5256,6 +5285,8 @@ msgid ""
 "<userinput remap=\"pre\">mkdir -v build\n"
 "cd       build</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">mkdir -v build\n"
+"cd       build</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/binutils-pass1.xml:63
@@ -5285,6 +5316,14 @@ msgid ""
 "             --enable-new-dtags  \\\n"
 "             --enable-default-hash-style=gnu</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=$LFS/tools \\\n"
+"             --with-sysroot=$LFS \\\n"
+"             --target=$LFS_TGT   \\\n"
+"             --disable-nls       \\\n"
+"             --enable-gprofng=no \\\n"
+"             --disable-werror    \\\n"
+"             --enable-new-dtags  \\\n"
+"             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter05/binutils-pass1.xml:83 en/chapter05/gcc-pass1.xml:121
@@ -5474,7 +5513,7 @@ msgstr ""
 #: en/chapter08/zlib.xml:50 en/chapter10/kernel.xml:384
 #, no-wrap
 msgid "<userinput remap=\"make\">make</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:180 en/chapter05/gcc-pass1.xml:212
@@ -5555,7 +5594,7 @@ msgstr ""
 #: en/chapter09/bootscripts.xml:48
 #, no-wrap
 msgid "<userinput remap=\"install\">make install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:189 en/chapter06/binutils-pass2.xml:119
@@ -5651,6 +5690,12 @@ msgid ""
 "tar -xf ../mpc-&mpc-version;.tar.gz\n"
 "mv -v mpc-&mpc-version; mpc</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">tar -xf ../mpfr-&mpfr-version;.tar.xz\n"
+"mv -v mpfr-&mpfr-version; mpfr\n"
+"tar -xf ../gmp-&gmp-version;.tar.xz\n"
+"mv -v gmp-&gmp-version; gmp\n"
+"tar -xf ../mpc-&mpc-version;.tar.gz\n"
+"mv -v mpc-&mpc-version; mpc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/gcc-pass1.xml:65
@@ -5670,6 +5715,12 @@ msgid ""
 " ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"  x86_64)\n"
+"    sed -e '/m64=/s/lib64/lib/' \\\n"
+"        -i.orig gcc/config/i386/t-linux64\n"
+" ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/gcc-pass1.xml:77
@@ -5722,6 +5773,26 @@ msgid ""
 "    --disable-libstdcxx       \\\n"
 "    --enable-languages=c,c++</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure                  \\\n"
+"    --target=$LFS_TGT         \\\n"
+"    --prefix=$LFS/tools       \\\n"
+"    --with-glibc-version=&glibc-version; \\\n"
+"    --with-sysroot=$LFS       \\\n"
+"    --with-newlib             \\\n"
+"    --without-headers         \\\n"
+"    --enable-default-pie      \\\n"
+"    --enable-default-ssp      \\\n"
+"    --disable-nls             \\\n"
+"    --disable-shared          \\\n"
+"    --disable-multilib        \\\n"
+"    --disable-threads         \\\n"
+"    --disable-libatomic       \\\n"
+"    --disable-libgomp         \\\n"
+"    --disable-libquadmath     \\\n"
+"    --disable-libssp          \\\n"
+"    --disable-libvtv          \\\n"
+"    --disable-libstdcxx       \\\n"
+"    --enable-languages=c,c++</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:124
@@ -5874,6 +5945,9 @@ msgid ""
 "cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \\\n"
 "  `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h</userinput>"
 msgstr ""
+"<userinput remap=\"install\">cd ..\n"
+"cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \\\n"
+"  `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/gcc-pass1.xml:244 en/chapter05/libstdc++.xml:134
@@ -5965,6 +6039,13 @@ msgid ""
 "    ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"    i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3\n"
+"    ;;\n"
+"    x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64\n"
+"            ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3\n"
+"    ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/glibc.xml:60
@@ -5988,7 +6069,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:73 en/chapter08/glibc.xml:55
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:75 en/chapter08/glibc.xml:65
@@ -6009,7 +6090,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:85 en/chapter08/glibc.xml:75
 #, no-wrap
 msgid "<userinput remap=\"pre\">echo \"rootsbindir=/usr/sbin\" &gt; configparms</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">echo \"rootsbindir=/usr/sbin\" &gt; configparms</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:87
@@ -6028,6 +6109,13 @@ msgid ""
 "      libc_cv_slibdir=/usr/lib           \\\n"
 "      --enable-kernel=&min-kernel;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure                             \\\n"
+"      --prefix=/usr                      \\\n"
+"      --host=$LFS_TGT                    \\\n"
+"      --build=$(../scripts/config.guess) \\\n"
+"      --disable-nscd                     \\\n"
+"      libc_cv_slibdir=/usr/lib           \\\n"
+"      --enable-kernel=&min-kernel;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:101
@@ -6180,7 +6268,7 @@ msgstr ""
 #: en/chapter06/tar.xml:58 en/chapter06/xz.xml:60
 #, no-wrap
 msgid "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter05/glibc.xml:170
@@ -6214,7 +6302,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:190
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:192
@@ -6231,6 +6319,8 @@ msgid ""
 "<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 msgstr ""
+"<userinput>echo 'int main(){}' | $LFS_TGT-gcc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:199 en/chapter08/gcc.xml:261
@@ -6265,7 +6355,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:215
 #, no-wrap
 msgid "<userinput>grep -E -o \"$LFS/lib.*/S?crt[1in].*succeeded\" dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep -E -o \"$LFS/lib.*/S?crt[1in].*succeeded\" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:217 en/chapter05/glibc.xml:263
@@ -6294,7 +6384,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:226
 #, no-wrap
 msgid "<userinput>grep -B3 \"^ $LFS/usr/include\" dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep -B3 \"^ $LFS/usr/include\" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:228 en/chapter08/gcc.xml:289
@@ -6332,7 +6422,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:240 en/chapter08/gcc.xml:302
 #, no-wrap
 msgid "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
-msgstr ""
+msgstr "<userinput>grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\\n|g'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:242 en/chapter08/gcc.xml:304
@@ -6383,7 +6473,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:261 en/chapter08/gcc.xml:330
 #, no-wrap
 msgid "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep \"/lib.*/libc.so.6 \" dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:265
@@ -6400,7 +6490,7 @@ msgstr "Make sure GCC is using the correct dynamic linker:"
 #: en/chapter05/glibc.xml:269 en/chapter08/gcc.xml:338
 #, no-wrap
 msgid "<userinput>grep found dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep found dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:271 en/chapter08/gcc.xml:340
@@ -6435,7 +6525,7 @@ msgstr ""
 #: en/chapter05/glibc.xml:283 en/chapter08/gcc.xml:353
 #, no-wrap
 msgid "<userinput>rm -v a.out dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>rm -v a.out dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/glibc.xml:285
@@ -6551,6 +6641,14 @@ msgid ""
 "    --disable-libstdcxx-pch    \\\n"
 "    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../libstdc++-v3/configure      \\\n"
+"    --host=$LFS_TGT            \\\n"
+"    --build=$(../config.guess) \\\n"
+"    --prefix=/usr              \\\n"
+"    --disable-multilib         \\\n"
+"    --disable-nls              \\\n"
+"    --disable-libstdcxx-pch    \\\n"
+"    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/libstdc++.xml:76
@@ -6626,7 +6724,7 @@ msgstr ""
 #: en/chapter05/libstdc++.xml:127
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter05/linux-headers.xml:14 en/chapter10/kernel.xml:14
@@ -6697,7 +6795,7 @@ msgstr "Make sure there are no stale files embedded in the package:"
 #: en/chapter05/linux-headers.xml:52 en/chapter10/kernel.xml:82
 #, no-wrap
 msgid "<userinput remap=\"pre\">make mrproper</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">make mrproper</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/linux-headers.xml:54
@@ -6717,6 +6815,9 @@ msgid ""
 "find usr/include -type f ! -name '*.h' -delete\n"
 "</userinput><userinput remap=\"install\">cp -rv usr/include $LFS/usr</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make headers\n"
+"find usr/include -type f ! -name '*.h' -delete\n"
+"</userinput><userinput remap=\"install\">cp -rv usr/include $LFS/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter05/linux-headers.xml:68
@@ -7079,6 +7180,10 @@ msgid ""
 "            --host=$LFS_TGT                    \\\n"
 "            --without-bash-malloc</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                      \\\n"
+"            --build=$(sh support/config.guess) \\\n"
+"            --host=$LFS_TGT                    \\\n"
+"            --without-bash-malloc</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/bash.xml:57
@@ -7105,7 +7210,7 @@ msgstr ""
 #: en/chapter06/bash.xml:80
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv bash $LFS/bin/sh</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sv bash $LFS/bin/sh</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/bash.xml:87
@@ -7160,7 +7265,7 @@ msgstr ""
 #: en/chapter06/binutils-pass2.xml:58
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed '6031s/$add_dir//' -i ltmain.sh</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed '6031s/$add_dir//' -i ltmain.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/binutils-pass2.xml:60 en/chapter06/gcc-pass2.xml:72
@@ -7188,6 +7293,17 @@ msgid ""
 "    --enable-new-dtags         \\\n"
 "    --enable-default-hash-style=gnu</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure                   \\\n"
+"    --prefix=/usr              \\\n"
+"    --build=$(../config.guess) \\\n"
+"    --host=$LFS_TGT            \\\n"
+"    --disable-nls              \\\n"
+"    --enable-shared            \\\n"
+"    --enable-gprofng=no        \\\n"
+"    --disable-werror           \\\n"
+"    --enable-64-bit-bfd        \\\n"
+"    --enable-new-dtags         \\\n"
+"    --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter06/binutils-pass2.xml:80 en/chapter06/gcc-pass2.xml:102
@@ -7233,7 +7349,7 @@ msgstr ""
 #: en/chapter06/binutils-pass2.xml:112
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}</userinput>"
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter06/chapter06.xml:8
@@ -7301,6 +7417,11 @@ msgid ""
 "            --enable-install-program=hostname \\\n"
 "            --enable-no-install-program=kill,uptime</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                     \\\n"
+"            --host=$LFS_TGT                   \\\n"
+"            --build=$(build-aux/config.guess) \\\n"
+"            --enable-install-program=hostname \\\n"
+"            --enable-no-install-program=kill,uptime</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/coreutils.xml:58
@@ -7332,6 +7453,10 @@ msgid ""
 "mv -v $LFS/usr/share/man/man1/chroot.1 $LFS/usr/share/man/man8/chroot.8\n"
 "sed -i 's/\"1\"/\"8\"/'                    $LFS/usr/share/man/man8/chroot.8</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v $LFS/usr/bin/chroot              $LFS/usr/sbin\n"
+"mkdir -pv $LFS/usr/share/man/man8\n"
+"mv -v $LFS/usr/share/man/man1/chroot.1 $LFS/usr/share/man/man8/chroot.8\n"
+"sed -i 's/\"1\"/\"8\"/'                    $LFS/usr/share/man/man8/chroot.8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/coreutils.xml:97
@@ -7395,6 +7520,10 @@ msgid ""
 "            gl_cv_func_strcasecmp_works=y \\\n"
 "            --build=$(./build-aux/config.guess)</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
+"            --host=$LFS_TGT \\\n"
+"            gl_cv_func_strcasecmp_works=y \\\n"
+"            --build=$(./build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/diffutils.xml:58
@@ -7487,6 +7616,14 @@ msgid ""
 "  make\n"
 "popd</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">mkdir build\n"
+"pushd build\n"
+"  ../configure --disable-bzlib      \\\n"
+"               --disable-libseccomp \\\n"
+"               --disable-xzlib      \\\n"
+"               --disable-zlib\n"
+"  make\n"
+"popd</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter06/file.xml:63 en/chapter07/bison.xml:52 en/chapter08/bash.xml:51
@@ -7519,13 +7656,13 @@ msgstr "Prepare File for compilation:"
 #: en/chapter06/file.xml:79
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT --build=$(./config.guess)</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT --build=$(./config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:83
 #, no-wrap
 msgid "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/file.xml:89 en/chapter06/xz.xml:62
@@ -7538,7 +7675,7 @@ msgstr ""
 #: en/chapter06/file.xml:92
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/libmagic.la</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/libmagic.la</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/file.xml:98
@@ -7600,6 +7737,10 @@ msgid ""
 "            --host=$LFS_TGT                 \\\n"
 "            --build=$(build-aux/config.guess)</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                   \\\n"
+"            --localstatedir=/var/lib/locate \\\n"
+"            --host=$LFS_TGT                 \\\n"
+"            --build=$(build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/findutils.xml:66
@@ -7657,7 +7798,7 @@ msgstr ""
 #: en/chapter06/gawk.xml:48 en/chapter08/gawk.xml:45
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's/extras//' Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gawk.xml:50 en/chapter08/gawk.xml:47
@@ -7673,6 +7814,9 @@ msgid ""
 "            --host=$LFS_TGT \\\n"
 "            --build=$(build-aux/config.guess)</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
+"            --host=$LFS_TGT \\\n"
+"            --build=$(build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gawk.xml:69
@@ -7738,6 +7882,12 @@ msgid ""
 "  ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">case $(uname -m) in\n"
+"  x86_64)\n"
+"    sed -e '/m64=/s/lib64/lib/' \\\n"
+"        -i.orig gcc/config/i386/t-linux64\n"
+"  ;;\n"
+"esac</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:66
@@ -7753,6 +7903,8 @@ msgid ""
 "<userinput remap=\"pre\">sed '/thread_header =/s/@.*@/gthr-posix.h/' \\\n"
 "    -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed '/thread_header =/s/@.*@/gthr-posix.h/' \\\n"
+"    -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:77
@@ -7789,6 +7941,24 @@ msgid ""
 "    --enable-languages=c,c++   \\\n"
 "    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure                   \\\n"
+"    --build=$(../config.guess) \\\n"
+"    --host=$LFS_TGT            \\\n"
+"    --target=$LFS_TGT          \\\n"
+"    --prefix=/usr              \\\n"
+"    --with-build-sysroot=$LFS  \\\n"
+"    --enable-default-pie       \\\n"
+"    --enable-default-ssp       \\\n"
+"    --disable-nls              \\\n"
+"    --disable-multilib         \\\n"
+"    --disable-libatomic        \\\n"
+"    --disable-libgomp          \\\n"
+"    --disable-libquadmath      \\\n"
+"    --disable-libsanitizer     \\\n"
+"    --disable-libssp           \\\n"
+"    --disable-libvtv           \\\n"
+"    --enable-languages=c,c++   \\\n"
+"    LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:105
@@ -7868,7 +8038,7 @@ msgstr ""
 #: en/chapter06/gcc-pass2.xml:173
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv gcc $LFS/usr/bin/cc</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sv gcc $LFS/usr/bin/cc</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter06/grep.xml:14 en/chapter08/grep.xml:14
@@ -7922,6 +8092,9 @@ msgid ""
 "            --host=$LFS_TGT \\\n"
 "            --build=$(./build-aux/config.guess)</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr   \\\n"
+"            --host=$LFS_TGT \\\n"
+"            --build=$(./build-aux/config.guess)</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/grep.xml:65
@@ -7978,7 +8151,7 @@ msgstr "Prepare Gzip for compilation:"
 #: en/chapter06/gzip.xml:48
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --host=$LFS_TGT</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gzip.xml:63
@@ -8189,6 +8362,13 @@ msgid ""
 "  install progs/tic $LFS/tools/bin\n"
 "popd</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">mkdir build\n"
+"pushd build\n"
+"  ../configure --prefix=$LFS/tools AWK=gawk\n"
+"  make -C include\n"
+"  make -C progs tic\n"
+"  install progs/tic $LFS/tools/bin\n"
+"popd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/ncurses.xml:59 en/chapter08/ncurses.xml:44
@@ -8212,6 +8392,18 @@ msgid ""
 "            --disable-stripping          \\\n"
 "            AWK=gawk</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
+"            --host=$LFS_TGT              \\\n"
+"            --build=$(./config.guess)    \\\n"
+"            --mandir=/usr/share/man      \\\n"
+"            --with-manpage-format=normal \\\n"
+"            --with-shared                \\\n"
+"            --without-normal             \\\n"
+"            --with-cxx-shared            \\\n"
+"            --without-debug              \\\n"
+"            --without-ada                \\\n"
+"            --disable-stripping          \\\n"
+"            AWK=gawk</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:78
@@ -8318,6 +8510,10 @@ msgid ""
 "sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
 "    -i $LFS/usr/include/curses.h</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make DESTDIR=$LFS install\n"
+"ln -sv libncursesw.so $LFS/usr/lib/libncurses.so\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i $LFS/usr/include/curses.h</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter06/ncurses.xml:159
@@ -8571,12 +8767,17 @@ msgid ""
 "            --disable-static                  \\\n"
 "            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                     \\\n"
+"            --host=$LFS_TGT                   \\\n"
+"            --build=$(build-aux/config.guess) \\\n"
+"            --disable-static                  \\\n"
+"            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/xz.xml:65
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -v $LFS/usr/lib/liblzma.la</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/liblzma.la</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/xz.xml:71
@@ -8636,6 +8837,8 @@ msgid ""
 "<userinput remap=\"configure\">./configure --prefix=/usr \\\n"
 "            --docdir=/usr/share/doc/bison-&bison-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr \\\n"
+"            --docdir=/usr/share/doc/bison-&bison-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/bison.xml:55
@@ -8716,6 +8919,10 @@ msgid ""
 "  x86_64) chown --from &lfs-username; -R root:root $LFS/lib64 ;;\n"
 "esac</userinput>"
 msgstr ""
+"<userinput>chown --from &lfs-username; -R root:root $LFS/{usr,var,etc,tools}\n"
+"case $(uname -m) in\n"
+"  x86_64) chown --from &lfs-username; -R root:root $LFS/lib64 ;;\n"
+"esac</userinput>"
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter07/chapter07.xml:8
@@ -9215,6 +9422,10 @@ msgid ""
 "::1        localhost</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; EOF\n"
+"<literal>127.0.0.1  localhost $(hostname)\n"
+"::1        localhost</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:55
@@ -9245,6 +9456,14 @@ msgid ""
 "nobody:x:65534:65534:Unprivileged User:/dev/null:/usr/bin/false</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/passwd &lt;&lt; \"EOF\"\n"
+"<literal>root:x:0:0:root:/root:/bin/bash\n"
+"bin:x:1:1:bin:/dev/null:/usr/bin/false\n"
+"daemon:x:6:6:Daemon User:/dev/null:/usr/bin/false\n"
+"messagebus:x:18:18:D-Bus Message Daemon User:/run/dbus:/usr/bin/false\n"
+"uuidd:x:80:80:UUID Generation Daemon User:/dev/null:/usr/bin/false\n"
+"nobody:x:65534:65534:Unprivileged User:/dev/null:/usr/bin/false</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/createfiles.xml:72
@@ -9267,6 +9486,22 @@ msgid ""
 "nobody:x:65534:65534:Unprivileged User:/dev/null:/usr/bin/false</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/passwd &lt;&lt; \"EOF\"\n"
+"<literal>root:x:0:0:root:/root:/bin/bash\n"
+"bin:x:1:1:bin:/dev/null:/usr/bin/false\n"
+"daemon:x:6:6:Daemon User:/dev/null:/usr/bin/false\n"
+"messagebus:x:18:18:D-Bus Message Daemon User:/run/dbus:/usr/bin/false\n"
+"systemd-journal-gateway:x:73:73:systemd Journal Gateway:/:/usr/bin/false\n"
+"systemd-journal-remote:x:74:74:systemd Journal Remote:/:/usr/bin/false\n"
+"systemd-journal-upload:x:75:75:systemd Journal Upload:/:/usr/bin/false\n"
+"systemd-network:x:76:76:systemd Network Management:/:/usr/bin/false\n"
+"systemd-resolve:x:77:77:systemd Resolver:/:/usr/bin/false\n"
+"systemd-timesync:x:78:78:systemd Time Synchronization:/:/usr/bin/false\n"
+"systemd-coredump:x:79:79:systemd Core Dumper:/:/usr/bin/false\n"
+"uuidd:x:80:80:UUID Generation Daemon User:/dev/null:/usr/bin/false\n"
+"systemd-oom:x:81:81:systemd Out Of Memory Daemon:/:/usr/bin/false\n"
+"nobody:x:65534:65534:Unprivileged User:/dev/null:/usr/bin/false</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:89
@@ -9314,6 +9549,33 @@ msgid ""
 "nogroup:x:65534:</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/group &lt;&lt; \"EOF\"\n"
+"<literal>root:x:0:\n"
+"bin:x:1:daemon\n"
+"sys:x:2:\n"
+"kmem:x:3:\n"
+"tape:x:4:\n"
+"tty:x:5:\n"
+"daemon:x:6:\n"
+"floppy:x:7:\n"
+"disk:x:8:\n"
+"lp:x:9:\n"
+"dialout:x:10:\n"
+"audio:x:11:\n"
+"video:x:12:\n"
+"utmp:x:13:\n"
+"clock:x:14:\n"
+"cdrom:x:15:\n"
+"adm:x:16:\n"
+"messagebus:x:18:\n"
+"input:x:24:\n"
+"mail:x:34:\n"
+"kvm:x:61:\n"
+"uuidd:x:80:\n"
+"wheel:x:97:\n"
+"users:x:999:\n"
+"nogroup:x:65534:</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/createfiles.xml:123
@@ -9356,6 +9618,42 @@ msgid ""
 "nogroup:x:65534:</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/group &lt;&lt; \"EOF\"\n"
+"<literal>root:x:0:\n"
+"bin:x:1:daemon\n"
+"sys:x:2:\n"
+"kmem:x:3:\n"
+"tape:x:4:\n"
+"tty:x:5:\n"
+"daemon:x:6:\n"
+"floppy:x:7:\n"
+"disk:x:8:\n"
+"lp:x:9:\n"
+"dialout:x:10:\n"
+"audio:x:11:\n"
+"video:x:12:\n"
+"utmp:x:13:\n"
+"clock:x:14:\n"
+"cdrom:x:15:\n"
+"adm:x:16:\n"
+"messagebus:x:18:\n"
+"systemd-journal:x:23:\n"
+"input:x:24:\n"
+"mail:x:34:\n"
+"kvm:x:61:\n"
+"systemd-journal-gateway:x:73:\n"
+"systemd-journal-remote:x:74:\n"
+"systemd-journal-upload:x:75:\n"
+"systemd-network:x:76:\n"
+"systemd-resolve:x:77:\n"
+"systemd-timesync:x:78:\n"
+"systemd-coredump:x:79:\n"
+"uuidd:x:80:\n"
+"systemd-oom:x:81:\n"
+"wheel:x:97:\n"
+"users:x:999:\n"
+"nogroup:x:65534:</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:160
@@ -9406,6 +9704,9 @@ msgid ""
 "echo \"tester:x:101:\" &gt;&gt; /etc/group\n"
 "install -o tester -d /home/tester</userinput>"
 msgstr ""
+"<userinput>echo \"tester:x:101:101::/home/tester:/bin/bash\" &gt;&gt; /etc/passwd\n"
+"echo \"tester:x:101:\" &gt;&gt; /etc/group\n"
+"install -o tester -d /home/tester</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:198
@@ -9420,7 +9721,7 @@ msgstr ""
 #: en/chapter07/createfiles.xml:204 en/chapter08/bash.xml:112
 #, no-wrap
 msgid "<userinput>exec /usr/bin/bash --login</userinput>"
-msgstr ""
+msgstr "<userinput>exec /usr/bin/bash --login</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:206
@@ -9441,6 +9742,10 @@ msgid ""
 "chmod -v 664  /var/log/lastlog\n"
 "chmod -v 600  /var/log/btmp</userinput>"
 msgstr ""
+"<userinput>touch /var/log/{btmp,lastlog,faillog,wtmp}\n"
+"chgrp -v utmp /var/log/lastlog\n"
+"chmod -v 664  /var/log/lastlog\n"
+"chmod -v 600  /var/log/btmp</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/createfiles.xml:218
@@ -9501,7 +9806,7 @@ msgstr ""
 #: en/chapter07/creatingdirs.xml:22
 #, no-wrap
 msgid "<userinput>mkdir -pv /{boot,home,mnt,opt,srv}</userinput>"
-msgstr ""
+msgstr "<userinput>mkdir -pv /{boot,home,mnt,opt,srv}</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/creatingdirs.xml:24
@@ -9661,7 +9966,7 @@ msgstr "Prepare Gettext for compilation:"
 #: en/chapter07/gettext.xml:51
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --disable-shared</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --disable-shared</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter07/gettext.xml:54 en/chapter07/python.xml:61
@@ -9688,7 +9993,7 @@ msgstr ""
 #: en/chapter07/gettext.xml:73
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:80
@@ -9777,7 +10082,7 @@ msgstr ""
 #: en/chapter07/kernfs.xml:27
 #, no-wrap
 msgid "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
-msgstr ""
+msgstr "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/kernfs.xml:30
@@ -9816,7 +10121,7 @@ msgstr ""
 #: en/chapter07/kernfs.xml:57
 #, no-wrap
 msgid "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
-msgstr ""
+msgstr "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/kernfs.xml:62
@@ -9839,6 +10144,10 @@ msgid ""
 "mount -vt sysfs sysfs $LFS/sys\n"
 "mount -vt tmpfs tmpfs $LFS/run</userinput>"
 msgstr ""
+"<userinput>mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts\n"
+"mount -vt proc proc $LFS/proc\n"
+"mount -vt sysfs sysfs $LFS/sys\n"
+"mount -vt tmpfs tmpfs $LFS/run</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter07/kernfs.xml:75
@@ -9903,6 +10212,11 @@ msgid ""
 "  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
 "fi</userinput>"
 msgstr ""
+"<userinput>if [ -h $LFS/dev/shm ]; then\n"
+"  install -v -d -m 1777 $LFS$(realpath /dev/shm)\n"
+"else\n"
+"  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm\n"
+"fi</userinput>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter07/perl.xml:14 en/chapter08/perl.xml:14
@@ -9966,6 +10280,16 @@ msgid ""
 "             -D vendorlib=/usr/lib/perl5/&perl-version-min;/vendor_perl \\\n"
 "             -D vendorarch=/usr/lib/perl5/&perl-version-min;/vendor_perl</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">sh Configure -des                                         \\\n"
+"             -D prefix=/usr                               \\\n"
+"             -D vendorprefix=/usr                         \\\n"
+"             -D useshrplib                                \\\n"
+"             -D privlib=/usr/lib/perl5/&perl-version-min;/core_perl     \\\n"
+"             -D archlib=/usr/lib/perl5/&perl-version-min;/core_perl     \\\n"
+"             -D sitelib=/usr/lib/perl5/&perl-version-min;/site_perl     \\\n"
+"             -D sitearch=/usr/lib/perl5/&perl-version-min;/site_perl    \\\n"
+"             -D vendorlib=/usr/lib/perl5/&perl-version-min;/vendor_perl \\\n"
+"             -D vendorarch=/usr/lib/perl5/&perl-version-min;/vendor_perl</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter07/perl.xml:60
@@ -10101,6 +10425,10 @@ msgid ""
 "            --without-ensurepip \\\n"
 "            --without-static-libpython</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr       \\\n"
+"            --enable-shared     \\\n"
+"            --without-ensurepip \\\n"
+"            --without-static-libpython</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/python.xml:66
@@ -10202,7 +10530,7 @@ msgstr "Prepare Texinfo for compilation:"
 #: en/chapter08/texinfo.xml:51 en/chapter08/vim.xml:59 en/chapter08/zlib.xml:46
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/texinfo.xml:63
@@ -10269,7 +10597,7 @@ msgstr ""
 #: en/chapter07/util-linux.xml:50
 #, no-wrap
 msgid "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:52 en/chapter08/util-linux.xml:45
@@ -10295,6 +10623,20 @@ msgid ""
 "            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --libdir=/usr/lib     \\\n"
+"            --runstatedir=/run    \\\n"
+"            --disable-chfn-chsh   \\\n"
+"            --disable-login       \\\n"
+"            --disable-nologin     \\\n"
+"            --disable-su          \\\n"
+"            --disable-setpriv     \\\n"
+"            --disable-runuser     \\\n"
+"            --disable-pylibmount  \\\n"
+"            --disable-static      \\\n"
+"            --disable-liblastlog2 \\\n"
+"            --without-python      \\\n"
+"            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:73
@@ -10481,6 +10823,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/acl-&acl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/acl.xml:55
@@ -10508,7 +10853,7 @@ msgstr ""
 #: en/chapter08/zstd.xml:57
 #, no-wrap
 msgid "<userinput remap=\"test\">make check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/acl.xml:60
@@ -10702,6 +11047,10 @@ msgid ""
 "            --sysconfdir=/etc \\\n"
 "            --docdir=/usr/share/doc/attr-&attr-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
+"            --disable-static  \\\n"
+"            --sysconfdir=/etc \\\n"
+"            --docdir=/usr/share/doc/attr-&attr-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/attr.xml:55
@@ -11090,7 +11439,7 @@ msgstr "Prepare Automake for compilation:"
 #: en/chapter08/automake.xml:50
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/automake-&automake-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/automake-&automake-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/automake.xml:56
@@ -11104,7 +11453,7 @@ msgstr ""
 #: en/chapter08/automake.xml:60
 #, no-wrap
 msgid "<userinput remap=\"test\">make <replaceable>-j$(($(nproc)&gt;4?$(nproc):4))</replaceable> check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make <replaceable>-j$(($(nproc)&gt;4?$(nproc):4))</replaceable> check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/automake.xml:62
@@ -11231,6 +11580,10 @@ msgid ""
 "            --with-installed-readline \\\n"
 "            --docdir=/usr/share/doc/bash-&bash-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr             \\\n"
+"            --without-bash-malloc     \\\n"
+"            --with-installed-readline \\\n"
+"            --docdir=/usr/share/doc/bash-&bash-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bash.xml:54
@@ -11263,7 +11616,7 @@ msgstr ""
 #: en/chapter08/bash.xml:74
 #, no-wrap
 msgid "<userinput remap=\"test\">chown -R tester .</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">chown -R tester .</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bash.xml:76
@@ -11287,6 +11640,13 @@ msgid ""
 "exit $value\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput remap=\"test\">LC_ALL=C.UTF-8 su -s /usr/bin/expect tester &lt;&lt; \"EOF\"\n"
+"set timeout -1\n"
+"spawn make tests\n"
+"expect eof\n"
+"lassign [wait] _ _ _ value\n"
+"exit $value\n"
+"EOF</userinput>"
 
 #.  Some host distros set core file size hard limit < 1000, then the
 #.          test "ulimit -c -S 1000" attempts to set soft limit >
@@ -11438,7 +11798,7 @@ msgstr "Prepare Bc for compilation:"
 #: en/chapter08/bc.xml:46
 #, no-wrap
 msgid "<userinput remap=\"configure\">CC='gcc -std=c99' ./configure --prefix=/usr -G -O3 -r</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">CC='gcc -std=c99' ./configure --prefix=/usr -G -O3 -r</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:52
@@ -11494,7 +11854,7 @@ msgstr ""
 #: en/chapter08/libcap.xml:79 en/chapter08/xml-parser.xml:54
 #, no-wrap
 msgid "<userinput remap=\"test\">make test</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make test</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bc.xml:98
@@ -11580,6 +11940,16 @@ msgid ""
 "             --with-system-zlib  \\\n"
 "             --enable-default-hash-style=gnu</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
+"             --sysconfdir=/etc   \\\n"
+"             --enable-ld=default \\\n"
+"             --enable-plugins    \\\n"
+"             --enable-shared     \\\n"
+"             --disable-werror    \\\n"
+"             --enable-64-bit-bfd \\\n"
+"             --enable-new-dtags  \\\n"
+"             --with-system-zlib  \\\n"
+"             --enable-default-hash-style=gnu</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/binutils.xml:64 en/chapter08/gcc.xml:92 en/chapter08/tcl.xml:62
@@ -11623,7 +11993,7 @@ msgstr ""
 #: en/chapter08/binutils.xml:93
 #, no-wrap
 msgid "<userinput remap=\"make\">make tooldir=/usr</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make tooldir=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/binutils.xml:96 en/chapter08/bzip2.xml:64
@@ -11667,7 +12037,7 @@ msgstr ""
 #: en/chapter08/binutils.xml:124
 #, no-wrap
 msgid "<userinput remap=\"test\">make -k check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make -k check</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:126
@@ -11678,7 +12048,7 @@ msgstr "For a list of failed tests, run:"
 #: en/chapter08/binutils.xml:128
 #, no-wrap
 msgid "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">grep '^FAIL:' $(find -name '*.log')</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:130
@@ -11689,7 +12059,7 @@ msgstr ""
 #: en/chapter08/binutils.xml:134
 #, no-wrap
 msgid "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:136
@@ -11703,6 +12073,8 @@ msgid ""
 "<userinput remap=\"install\">rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \\\n"
 "        /usr/share/doc/gprofng/</userinput>"
 msgstr ""
+"<userinput remap=\"install\">rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \\\n"
+"        /usr/share/doc/gprofng/</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/binutils.xml:144
@@ -12152,7 +12524,7 @@ msgstr ""
 #: en/chapter08/bison.xml:45
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/bison-&bison-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/bison-&bison-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bison.xml:62
@@ -12283,7 +12655,7 @@ msgstr ""
 #: en/chapter08/bzip2.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:50
@@ -12295,7 +12667,7 @@ msgstr ""
 #: en/chapter08/bzip2.xml:52
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:54
@@ -12306,7 +12678,7 @@ msgstr ""
 #: en/chapter08/bzip2.xml:56
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:58
@@ -12320,6 +12692,8 @@ msgid ""
 "<userinput remap=\"make\">make -f Makefile-libbz2_so\n"
 "make clean</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make -f Makefile-libbz2_so\n"
+"make clean</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bzip2.xml:67
@@ -12349,7 +12723,7 @@ msgstr ""
 #: en/chapter08/bzip2.xml:85
 #, no-wrap
 msgid "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:87
@@ -12363,6 +12737,8 @@ msgid ""
 "<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
 "ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">cp -av libbz2.so.* /usr/lib\n"
+"ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:92
@@ -12379,7 +12755,7 @@ msgstr ""
 #: en/chapter08/bzip2.xml:99
 #, no-wrap
 msgid "<userinput>ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
-msgstr ""
+msgstr "<userinput>ln -sfv libbz2.so.&bzip2-version; /usr/lib/libbz2.so.1</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/bzip2.xml:102
@@ -12409,6 +12785,10 @@ msgid ""
 "  ln -sfv bzip2 $i\n"
 "done</userinput>"
 msgstr ""
+"<userinput remap=\"install\">cp -v bzip2-shared /usr/bin/bzip2\n"
+"for i in /usr/bin/{bzcat,bunzip2}; do\n"
+"  ln -sfv bzip2 $i\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:121 en/chapter08/zlib.xml:60
@@ -12419,7 +12799,7 @@ msgstr "Remove a useless static library:"
 #: en/chapter08/bzip2.xml:123
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -fv /usr/lib/libbz2.a</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libbz2.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bzip2.xml:128
@@ -12654,7 +13034,7 @@ msgstr ""
 #: en/chapter08/cleanup.xml:15
 #, no-wrap
 msgid "<userinput>rm -rf /tmp/{*,.*}</userinput>"
-msgstr ""
+msgstr "<userinput>rm -rf /tmp/{*,.*}</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/cleanup.xml:17
@@ -12670,7 +13050,7 @@ msgstr ""
 #: en/chapter08/cleanup.xml:24
 #, no-wrap
 msgid "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
-msgstr ""
+msgstr "<userinput>find /usr/lib /usr/libexec -name \\*.la -delete</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/cleanup.xml:26
@@ -12692,7 +13072,7 @@ msgstr ""
 #: en/chapter08/cleanup.xml:34
 #, no-wrap
 msgid "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
-msgstr ""
+msgstr "<userinput>find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/cleanup.xml:36
@@ -12736,7 +13116,7 @@ msgstr ""
 #: en/chapter08/coreutils.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&coreutils-i18n-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&coreutils-i18n-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/coreutils.xml:51
@@ -12760,6 +13140,10 @@ msgid ""
 "FORCE_UNSAFE_CONFIGURE=1 ./configure \\\n"
 "            --prefix=/usr</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">autoreconf -fv\n"
+"automake -af\n"
+"FORCE_UNSAFE_CONFIGURE=1 ./configure \\\n"
+"            --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/coreutils.xml:73
@@ -12817,7 +13201,7 @@ msgstr ""
 #: en/chapter08/coreutils.xml:128
 #, no-wrap
 msgid "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make NON_ROOT_USERNAME=tester check-root</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:130
@@ -12833,7 +13217,7 @@ msgstr ""
 #: en/chapter08/coreutils.xml:136
 #, no-wrap
 msgid "<userinput remap=\"test\">groupadd -g 102 dummy -U tester</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">groupadd -g 102 dummy -U tester</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:138
@@ -12846,7 +13230,7 @@ msgstr ""
 #: en/chapter08/coreutils.xml:141
 #, no-wrap
 msgid "<userinput remap=\"test\">chown -R tester . </userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">chown -R tester . </userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:147
@@ -12865,6 +13249,8 @@ msgid ""
 "<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
 "   &lt; /dev/null</userinput>"
 msgstr ""
+"<userinput remap=\"test\">su tester -c \"PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check\" \\\n"
+"   &lt; /dev/null</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:157
@@ -12875,7 +13261,7 @@ msgstr "Remove the temporary group:"
 #: en/chapter08/coreutils.xml:159
 #, no-wrap
 msgid "<userinput remap=\"test\">groupdel dummy</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">groupdel dummy</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:165
@@ -12890,6 +13276,9 @@ msgid ""
 "mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8\n"
 "sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mv -v /usr/bin/chroot /usr/sbin\n"
+"mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8\n"
+"sed -i 's/\"1\"/\"8\"/' /usr/share/man/man8/chroot.8</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/coreutils.xml:174
@@ -14658,6 +15047,10 @@ msgid ""
 "\n"
 "meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">mkdir build\n"
+"cd    build\n"
+"\n"
+"meson setup --prefix=/usr --buildtype=release --wrap-mode=nofallback ..</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/dbus.xml:57 en/chapter08/systemd.xml:77
@@ -14682,13 +15075,13 @@ msgstr ""
 #: en/chapter08/systemd.xml:217
 #, no-wrap
 msgid "<userinput remap=\"make\">ninja</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:77
 #, no-wrap
 msgid "<userinput remap=\"test\">ninja test</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dbus.xml:79
@@ -14704,7 +15097,7 @@ msgstr ""
 #: en/chapter08/systemd.xml:242
 #, no-wrap
 msgid "<userinput remap=\"install\">ninja install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ninja install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dbus.xml:88
@@ -14717,7 +15110,7 @@ msgstr ""
 #: en/chapter08/dbus.xml:91
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dbus.xml:96
@@ -14970,6 +15363,9 @@ msgid ""
 "makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi\n"
 "makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=/usr\n"
+"makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi\n"
+"makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dejagnu.xml:63
@@ -14979,6 +15375,9 @@ msgid ""
 "install -v -dm755  /usr/share/doc/dejagnu-&dejagnu-version;\n"
 "install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-&dejagnu-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"install -v -dm755  /usr/share/doc/dejagnu-&dejagnu-version;\n"
+"install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-&dejagnu-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dejagnu.xml:71
@@ -15190,6 +15589,13 @@ msgid ""
 "             --disable-uuidd     \\\n"
 "             --disable-fsck</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=/usr       \\\n"
+"             --sysconfdir=/etc   \\\n"
+"             --enable-elf-shlibs \\\n"
+"             --disable-libblkid  \\\n"
+"             --disable-libuuid   \\\n"
+"             --disable-uuidd     \\\n"
+"             --disable-fsck</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/e2fsprogs.xml:67
@@ -15235,7 +15641,7 @@ msgstr "Remove useless static libraries:"
 #: en/chapter08/e2fsprogs.xml:123
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:125
@@ -15253,6 +15659,8 @@ msgid ""
 "<userinput remap=\"install\">gunzip -v /usr/share/info/libext2fs.info.gz\n"
 "install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info</userinput>"
 msgstr ""
+"<userinput remap=\"install\">gunzip -v /usr/share/info/libext2fs.info.gz\n"
+"install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:134
@@ -15269,6 +15677,9 @@ msgid ""
 "install -v -m644 doc/com_err.info /usr/share/info\n"
 "install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info</userinput>"
 msgstr ""
+"<userinput remap=\"install\">makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo\n"
+"install -v -m644 doc/com_err.info /usr/share/info\n"
+"install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:143
@@ -15307,7 +15718,7 @@ msgstr ""
 #: en/chapter08/e2fsprogs.xml:162
 #, no-wrap
 msgid "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
-msgstr ""
+msgstr "<userinput>sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:165
@@ -15966,6 +16377,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/expat-&expat-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/expat-&expat-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expat.xml:62 en/chapter08/gawk.xml:85
@@ -15978,7 +16392,7 @@ msgstr ""
 #: en/chapter08/expat.xml:64
 #, no-wrap
 msgid "<userinput remap=\"install\">install -v -m644 doc/*.{html,css} /usr/share/doc/expat-&expat-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{html,css} /usr/share/doc/expat-&expat-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expat.xml:69
@@ -16090,7 +16504,7 @@ msgstr ""
 #: en/chapter08/expect.xml:55
 #, no-wrap
 msgid "<userinput remap=\"test\">python3 -c 'from pty import spawn; spawn([\"echo\", \"ok\"])'</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">python3 -c 'from pty import spawn; spawn([\"echo\", \"ok\"])'</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:57
@@ -16117,7 +16531,7 @@ msgstr ""
 #: en/chapter08/expect.xml:72
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&expect-gcc15-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&expect-gcc15-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:74
@@ -16135,6 +16549,12 @@ msgid ""
 "            --mandir=/usr/share/man \\\n"
 "            --with-tclinclude=/usr/include</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+"            --with-tcl=/usr/lib     \\\n"
+"            --enable-shared         \\\n"
+"            --disable-rpath         \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --with-tclinclude=/usr/include</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expect.xml:87
@@ -16172,6 +16592,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "ln -svf expect&expect-version;/libexpect&expect-version;.so /usr/lib</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"ln -svf expect&expect-version;/libexpect&expect-version;.so /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expect.xml:121
@@ -16310,7 +16732,7 @@ msgstr "&findutils-fin-du;"
 #: en/chapter08/findutils.xml:56
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir=/var/lib/locate</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/findutils.xml:69
@@ -16333,6 +16755,8 @@ msgid ""
 "<userinput remap=\"test\">chown -R tester .\n"
 "su tester -c \"PATH=$PATH make check\"</userinput>"
 msgstr ""
+"<userinput remap=\"test\">chown -R tester .\n"
+"su tester -c \"PATH=$PATH make check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/findutils.xml:95
@@ -16474,6 +16898,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/flex-&flex-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/flex-&flex-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/flex.xml:72
@@ -16492,6 +16919,8 @@ msgid ""
 "<userinput remap=\"install\">ln -sv flex   /usr/bin/lex\n"
 "ln -sv flex.1 /usr/share/man/man1/lex.1</userinput>"
 msgstr ""
+"<userinput remap=\"install\">ln -sv flex   /usr/bin/lex\n"
+"ln -sv flex.1 /usr/share/man/man1/lex.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flex.xml:85
@@ -16632,13 +17061,13 @@ msgstr "Installation of Flit-Core"
 #: en/chapter08/wheel.xml:45
 #, no-wrap
 msgid "<userinput remap=\"make\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/flit-core.xml:49
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist flit_core</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist flit_core</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/flit-core.xml:52
@@ -16750,6 +17179,8 @@ msgid ""
 "<userinput remap=\"install\">rm -f /usr/bin/gawk-&gawk-version;\n"
 "make install</userinput>"
 msgstr ""
+"<userinput remap=\"install\">rm -f /usr/bin/gawk-&gawk-version;\n"
+"make install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/gawk.xml:66
@@ -16781,13 +17212,13 @@ msgstr ""
 #: en/chapter08/gawk.xml:83
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv gawk.1 /usr/share/man/man1/awk.1</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sv gawk.1 /usr/share/man/man1/awk.1</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gawk.xml:87
 #, no-wrap
 msgid "<userinput remap=\"install\">install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-&gawk-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-&gawk-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gawk.xml:92
@@ -16904,7 +17335,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:46
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/char [*]q/const &amp;/' libgomp/affinity-fmt.c</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's/char [*]q/const &amp;/' libgomp/affinity-fmt.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:48
@@ -16928,6 +17359,16 @@ msgid ""
 "             --disable-fixincludes    \\\n"
 "             --with-system-zlib</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=/usr            \\\n"
+"             LD=ld                    \\\n"
+"             --enable-languages=c,c++ \\\n"
+"             --enable-default-pie     \\\n"
+"             --enable-default-ssp     \\\n"
+"             --enable-host-pie        \\\n"
+"             --disable-multilib       \\\n"
+"             --disable-bootstrap      \\\n"
+"             --disable-fixincludes    \\\n"
+"             --with-system-zlib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:76
@@ -17051,7 +17492,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:181
 #, no-wrap
 msgid "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:183
@@ -17062,7 +17503,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:185
 #, no-wrap
 msgid "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:187
@@ -17076,6 +17517,8 @@ msgid ""
 "<userinput remap=\"test\">chown -R tester .\n"
 "su tester -c \"PATH=$PATH make -k check\"</userinput>"
 msgstr ""
+"<userinput remap=\"test\">chown -R tester .\n"
+"su tester -c \"PATH=$PATH make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:192
@@ -17086,7 +17529,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:194
 #, no-wrap
 msgid "<userinput remap=\"test\">../contrib/test_summary</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">../contrib/test_summary</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:196
@@ -17152,6 +17595,8 @@ msgid ""
 "<userinput remap=\"install\">chown -v -R root:root \\\n"
 "    /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include{,-fixed}</userinput>"
 msgstr ""
+"<userinput remap=\"install\">chown -v -R root:root \\\n"
+"    /usr/lib/gcc/$(gcc -dumpmachine)/&gcc-version;/include{,-fixed}</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:235
@@ -17165,7 +17610,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:239
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -svr /usr/bin/cpp /usr/lib</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -svr /usr/bin/cpp /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:241
@@ -17179,7 +17624,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:246
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv gcc.1 /usr/share/man/man1/cc.1</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sv gcc.1 /usr/share/man/man1/cc.1</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:248
@@ -17195,6 +17640,8 @@ msgid ""
 "<userinput remap=\"install\">ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/&gcc-version;/liblto_plugin.so \\\n"
 "        /usr/lib/bfd-plugins/</userinput>"
 msgstr ""
+"<userinput remap=\"install\">ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/&gcc-version;/liblto_plugin.so \\\n"
+"        /usr/lib/bfd-plugins/</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:254
@@ -17211,12 +17658,14 @@ msgid ""
 "<userinput>echo 'int main(){}' | cc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
 "readelf -l a.out | grep ': /lib'</userinput>"
 msgstr ""
+"<userinput>echo 'int main(){}' | cc -x c - -v -Wl,--verbose &amp;&gt; dummy.log\n"
+"readelf -l a.out | grep ': /lib'</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:269
 #, no-wrap
 msgid "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:273
@@ -17245,7 +17694,7 @@ msgstr ""
 #: en/chapter08/gcc.xml:287
 #, no-wrap
 msgid "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
-msgstr ""
+msgstr "<userinput>grep -B4 '^ /usr/include' dummy.log</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:291
@@ -17330,6 +17779,8 @@ msgid ""
 "<userinput remap=\"install\">mkdir -pv /usr/share/gdb/auto-load/usr/lib\n"
 "mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib</userinput>"
 msgstr ""
+"<userinput remap=\"install\">mkdir -pv /usr/share/gdb/auto-load/usr/lib\n"
+"mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gcc.xml:363
@@ -17892,6 +18343,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --enable-libgdbm-compat</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --enable-libgdbm-compat</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gdbm.xml:61
@@ -18021,6 +18475,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/gettext-&gettext-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/gettext-&gettext-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gettext.xml:78
@@ -18029,6 +18486,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "chmod -v 0755 /usr/lib/preloadable_libintl.so</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"chmod -v 0755 /usr/lib/preloadable_libintl.so</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gettext.xml:84
@@ -18573,6 +19032,12 @@ msgid ""
 "             --enable-stack-protector=strong \\\n"
 "             --enable-kernel=&min-kernel;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">../configure --prefix=/usr                   \\\n"
+"             --disable-werror                \\\n"
+"             --disable-nscd                  \\\n"
+"             libc_cv_slibdir=/usr/lib        \\\n"
+"             --enable-stack-protector=strong \\\n"
+"             --enable-kernel=&min-kernel;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:92
@@ -18656,7 +19121,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:190
 #, no-wrap
 msgid "<userinput remap=\"test\">grep \"Timed out\" $(find -name \\*.out)</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">grep \"Timed out\" $(find -name \\*.out)</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:192
@@ -18689,7 +19154,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:215
 #, no-wrap
 msgid "<userinput remap=\"install\">touch /etc/ld.so.conf</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">touch /etc/ld.so.conf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:218
@@ -18702,7 +19167,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:221
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/glibc.xml:225
@@ -18743,7 +19208,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:273
 #, no-wrap
 msgid "<userinput>rm -f /usr/sbin/nscd</userinput>"
-msgstr ""
+msgstr "<userinput>rm -f /usr/sbin/nscd</userinput>"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:276
@@ -18756,7 +19221,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:281
 #, no-wrap
 msgid "<userinput>systemctl disable --now nscd</userinput>"
-msgstr ""
+msgstr "<userinput>systemctl disable --now nscd</userinput>"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:286
@@ -18790,6 +19255,8 @@ msgid ""
 "<userinput>make DESTDIR=$PWD/dest install\n"
 "install -vm755 dest/usr/lib/*.so.* /usr/lib</userinput>"
 msgstr ""
+"<userinput>make DESTDIR=$PWD/dest install\n"
+"install -vm755 dest/usr/lib/*.so.* /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/glibc.xml:324
@@ -18829,6 +19296,11 @@ msgid ""
 "rm -rfv $DIR/include-fixed/*\n"
 "unset DIR</userinput>"
 msgstr ""
+"<userinput>DIR=$(dirname $(gcc -print-libgcc-file-name))\n"
+"[ -e $DIR/include/limits.h ]    || mv $DIR/include{-fixed,}/limits.h\n"
+"[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h\n"
+"rm -rfv $DIR/include-fixed/*\n"
+"unset DIR</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:357
@@ -18841,7 +19313,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:360
 #, no-wrap
 msgid "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:374
@@ -18903,6 +19375,40 @@ msgid ""
 "localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS\n"
 "localedef -i zh_TW -f UTF-8 zh_TW.UTF-8</userinput>"
 msgstr ""
+"<userinput remap=\"locale-test\">localedef -i C -f UTF-8 C.UTF-8\n"
+"localedef -i cs_CZ -f UTF-8 cs_CZ.UTF-8\n"
+"localedef -i de_DE -f ISO-8859-1 de_DE\n"
+"localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro\n"
+"localedef -i de_DE -f UTF-8 de_DE.UTF-8\n"
+"localedef -i el_GR -f ISO-8859-7 el_GR\n"
+"localedef -i en_GB -f ISO-8859-1 en_GB\n"
+"localedef -i en_GB -f UTF-8 en_GB.UTF-8\n"
+"localedef -i en_HK -f ISO-8859-1 en_HK\n"
+"localedef -i en_PH -f ISO-8859-1 en_PH\n"
+"localedef -i en_US -f ISO-8859-1 en_US\n"
+"localedef -i en_US -f UTF-8 en_US.UTF-8\n"
+"localedef -i es_ES -f ISO-8859-15 es_ES@euro\n"
+"localedef -i es_MX -f ISO-8859-1 es_MX\n"
+"localedef -i fa_IR -f UTF-8 fa_IR\n"
+"localedef -i fr_FR -f ISO-8859-1 fr_FR\n"
+"localedef -i fr_FR@euro -f ISO-8859-15 fr_FR@euro\n"
+"localedef -i fr_FR -f UTF-8 fr_FR.UTF-8\n"
+"localedef -i is_IS -f ISO-8859-1 is_IS\n"
+"localedef -i is_IS -f UTF-8 is_IS.UTF-8\n"
+"localedef -i it_IT -f ISO-8859-1 it_IT\n"
+"localedef -i it_IT -f ISO-8859-15 it_IT@euro\n"
+"localedef -i it_IT -f UTF-8 it_IT.UTF-8\n"
+"localedef -i ja_JP -f EUC-JP ja_JP\n"
+"localedef -i ja_JP -f UTF-8 ja_JP.UTF-8\n"
+"localedef -i nl_NL@euro -f ISO-8859-15 nl_NL@euro\n"
+"localedef -i ru_RU -f KOI8-R ru_RU.KOI8-R\n"
+"localedef -i ru_RU -f UTF-8 ru_RU.UTF-8\n"
+"localedef -i se_NO -f UTF-8 se_NO.UTF-8\n"
+"localedef -i ta_IN -f UTF-8 ta_IN.UTF-8\n"
+"localedef -i tr_TR -f UTF-8 tr_TR.UTF-8\n"
+"localedef -i zh_CN -f GB18030 zh_CN.GB18030\n"
+"localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS\n"
+"localedef -i zh_TW -f UTF-8 zh_TW.UTF-8</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:425
@@ -18924,7 +19430,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:433
 #, no-wrap
 msgid "<userinput remap=\"locale-full\">make localedata/install-locales</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"locale-full\">make localedata/install-locales</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/glibc.xml:435
@@ -18995,6 +19501,23 @@ msgid ""
 "# End /etc/nsswitch.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/nsswitch.conf\n"
+"\n"
+"passwd: files\n"
+"group: files\n"
+"shadow: files\n"
+"\n"
+"hosts: files dns\n"
+"networks: files\n"
+"\n"
+"protocols: files\n"
+"services: files\n"
+"ethers: files\n"
+"rpc: files\n"
+"\n"
+"# End /etc/nsswitch.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter08/glibc.xml:482
@@ -19018,6 +19541,23 @@ msgid ""
 "# End /etc/nsswitch.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/nsswitch.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/nsswitch.conf\n"
+"\n"
+"passwd: files systemd\n"
+"group: files systemd\n"
+"shadow: files systemd\n"
+"\n"
+"hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns\n"
+"networks: files\n"
+"\n"
+"protocols: files\n"
+"services: files\n"
+"ethers: files\n"
+"rpc: files\n"
+"\n"
+"# End /etc/nsswitch.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/glibc.xml:503
@@ -19049,6 +19589,21 @@ msgid ""
 "zic -d $ZONEINFO -p America/New_York\n"
 "unset ZONEINFO tz</userinput>"
 msgstr ""
+"<userinput>tar -xf ../../tzdata&tzdata-version;.tar.gz\n"
+"\n"
+"ZONEINFO=/usr/share/zoneinfo\n"
+"mkdir -pv $ZONEINFO/{posix,right}\n"
+"\n"
+"for tz in etcetera southamerica northamerica europe africa antarctica  \\\n"
+"          asia australasia backward; do\n"
+"    zic -L /dev/null   -d $ZONEINFO       ${tz}\n"
+"    zic -L /dev/null   -d $ZONEINFO/posix ${tz}\n"
+"    zic -L leapseconds -d $ZONEINFO/right ${tz}\n"
+"done\n"
+"\n"
+"cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO\n"
+"zic -d $ZONEINFO -p America/New_York\n"
+"unset ZONEINFO tz</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><title>
 #: en/chapter08/glibc.xml:523
@@ -19111,7 +19666,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:565
 #, no-wrap
 msgid "<userinput>tzselect</userinput>"
-msgstr ""
+msgstr "<userinput>tzselect</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/glibc.xml:567
@@ -19133,7 +19688,7 @@ msgstr ""
 #: en/chapter08/glibc.xml:578
 #, no-wrap
 msgid "<userinput>ln -sfv /usr/share/zoneinfo/<replaceable>&lt;xxx&gt;</replaceable> /etc/localtime</userinput>"
-msgstr ""
+msgstr "<userinput>ln -sfv /usr/share/zoneinfo/<replaceable>&lt;xxx&gt;</replaceable> /etc/localtime</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/glibc.xml:580
@@ -19187,6 +19742,12 @@ msgid ""
 "</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/ld.so.conf\n"
+"/usr/local/lib\n"
+"/opt/lib\n"
+"</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/glibc.xml:615
@@ -19208,6 +19769,12 @@ msgid ""
 "EOF\n"
 "mkdir -pv /etc/ld.so.conf.d</userinput>"
 msgstr ""
+"<userinput>cat &gt;&gt; /etc/ld.so.conf &lt;&lt; \"EOF\"\n"
+"<literal># Add an include directory\n"
+"include /etc/ld.so.conf.d/*.conf\n"
+"</literal>\n"
+"EOF\n"
+"mkdir -pv /etc/ld.so.conf.d</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/glibc.xml:631
@@ -19959,7 +20526,7 @@ msgstr "Installation of GMP"
 #: en/chapter08/gmp.xml:50
 #, no-wrap
 msgid "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
-msgstr ""
+msgstr "<userinput><parameter>ABI=32</parameter> ./configure ...</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/gmp.xml:45
@@ -19990,7 +20557,7 @@ msgstr ""
 #: en/chapter08/gmp.xml:67
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configure</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:69
@@ -20006,6 +20573,10 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/gmp-&gmp-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --enable-cxx     \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/gmp-&gmp-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gmp.xml:80
@@ -20041,6 +20612,8 @@ msgid ""
 "<userinput remap=\"make\">make\n"
 "make html</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make\n"
+"make html</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/gmp.xml:102
@@ -20053,7 +20626,7 @@ msgstr ""
 #: en/chapter08/gmp.xml:108
 #, no-wrap
 msgid "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make check 2>&amp;1 | tee gmp-check-log</userinput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: en/chapter08/gmp.xml:110
@@ -20077,7 +20650,7 @@ msgstr ""
 #: en/chapter08/gmp.xml:123
 #, no-wrap
 msgid "<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:125 en/chapter08/mpc.xml:60 en/chapter08/mpfr.xml:65
@@ -20092,6 +20665,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "make install-html</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"make install-html</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gmp.xml:133
@@ -20191,7 +20766,7 @@ msgstr "Prepare Gperf for compilation:"
 #: en/chapter08/gperf.xml:45
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/gperf-&gperf-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/share/doc/gperf-&gperf-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gperf.xml:62
@@ -20246,7 +20821,7 @@ msgstr ""
 #: en/chapter08/grep.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i \"s/echo/#echo/\" src/egrep.sh</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i \"s/echo/#echo/\" src/egrep.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/grep.xml:69
@@ -20377,7 +20952,7 @@ msgstr "Prepare Groff for compilation:"
 #: en/chapter08/groff.xml:54
 #, no-wrap
 msgid "<userinput remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</replaceable> ./configure --prefix=/usr</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</replaceable> ./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/groff.xml:71
@@ -21239,7 +21814,7 @@ msgstr ""
 #: en/chapter08/grub.xml:58
 #, no-wrap
 msgid "<userinput remap='pre'>unset {C,CPP,CXX,LD}FLAGS</userinput>"
-msgstr ""
+msgstr "<userinput remap='pre'>unset {C,CPP,CXX,LD}FLAGS</userinput>"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter08/grub.xml:60
@@ -21258,7 +21833,7 @@ msgstr "First fix a bug introduced in grub-2.14:"
 #: en/chapter08/grub.xml:70
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed 's/--image-base/--nonexist-linker-option/' -i configure</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed 's/--image-base/--nonexist-linker-option/' -i configure</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:72
@@ -21274,6 +21849,10 @@ msgid ""
 "            --disable-efiemu  \\\n"
 "            --disable-werror</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
+"            --sysconfdir=/etc \\\n"
+"            --disable-efiemu  \\\n"
+"            --disable-werror</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:85
@@ -22019,7 +22598,7 @@ msgstr ""
 #: en/chapter08/iana-etc.xml:46
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -v services protocols /etc</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -v services protocols /etc</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iana-etc.xml:51
@@ -22126,7 +22705,7 @@ msgstr ""
 #: en/chapter08/inetutils.xml:45
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i 's/def HAVE_TERMCAP_TGETENT/ 1/' telnet/telnet.c</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i 's/def HAVE_TERMCAP_TGETENT/ 1/' telnet/telnet.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:47
@@ -22148,6 +22727,16 @@ msgid ""
 "            --disable-rsh        \\\n"
 "            --disable-servers</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --bindir=/usr/bin    \\\n"
+"            --localstatedir=/var \\\n"
+"            --disable-logger     \\\n"
+"            --disable-whois      \\\n"
+"            --disable-rcp        \\\n"
+"            --disable-rexec      \\\n"
+"            --disable-rlogin     \\\n"
+"            --disable-rsh        \\\n"
+"            --disable-servers</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:64
@@ -22212,7 +22801,7 @@ msgstr ""
 #: en/chapter08/inetutils.xml:130
 #, no-wrap
 msgid "<userinput remap=\"install\">mv -v /usr/{,s}bin/ifconfig</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">mv -v /usr/{,s}bin/ifconfig</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/inetutils.xml:135
@@ -22765,12 +23354,14 @@ msgid ""
 "<userinput remap=\"pre\">sed -i /ARPD/d Makefile\n"
 "rm -fv man/man8/arpd.8</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i /ARPD/d Makefile\n"
+"rm -fv man/man8/arpd.8</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/iproute2.xml:61
 #, no-wrap
 msgid "<userinput remap=\"make\">make NETNS_RUN_DIR=/run/netns</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make NETNS_RUN_DIR=/run/netns</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/iproute2.xml:63
@@ -22781,13 +23372,13 @@ msgstr ""
 #: en/chapter08/iproute2.xml:76
 #, no-wrap
 msgid "<userinput remap=\"install\">make SBINDIR=/usr/sbin install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make SBINDIR=/usr/sbin install</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/iproute2.xml:80
 #, no-wrap
 msgid "<userinput remap=\"install\">install -vDm644 COPYING README* -t /usr/share/doc/iproute2-&iproute2-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">install -vDm644 COPYING README* -t /usr/share/doc/iproute2-&iproute2-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iproute2.xml:85
@@ -23187,7 +23778,7 @@ msgstr "Installation of Jinja2"
 #: en/chapter08/jinja2.xml:49
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist Jinja2</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/jinja2.xml:54
@@ -23259,7 +23850,7 @@ msgstr ""
 #: en/chapter08/kbd.xml:48
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&kbd-backspace-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&kbd-backspace-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:50
@@ -23288,6 +23879,8 @@ msgid ""
 "<userinput remap=\"pre\">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure\n"
 "sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure\n"
+"sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:61
@@ -23298,7 +23891,7 @@ msgstr "Prepare Kbd for compilation:"
 #: en/chapter08/kbd.xml:63
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --disable-vlock</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kbd.xml:69
@@ -23325,7 +23918,7 @@ msgstr ""
 #: en/chapter08/kbd.xml:100
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -R -v docs/doc -T /usr/share/doc/kbd-&kbd-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -R -v docs/doc -T /usr/share/doc/kbd-&kbd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/kbd.xml:105
@@ -23805,6 +24398,12 @@ msgid ""
 "            --buildtype=release \\\n"
 "            -D manpages=false</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">mkdir -p build\n"
+"cd       build\n"
+"\n"
+"meson setup --prefix=/usr ..    \\\n"
+"            --buildtype=release \\\n"
+"            -D manpages=false</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kmod.xml:58
@@ -24029,7 +24628,7 @@ msgstr "Prepare Less for compilation:"
 #: en/chapter08/less.xml:45
 #, no-wrap
 msgid "<userinput remap=\"configure\">./configure --prefix=/usr --sysconfdir=/etc</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --sysconfdir=/etc</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/less.xml:51
@@ -24169,13 +24768,13 @@ msgstr "Prevent static libraries from being installed:"
 #: en/chapter08/libcap.xml:57
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/install -m.*STA/d' libcap/Makefile</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i '/install -m.*STA/d' libcap/Makefile</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libcap.xml:61
 #, no-wrap
 msgid "<userinput remap=\"make\">make prefix=/usr lib=lib</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make prefix=/usr lib=lib</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/libcap.xml:64 en/chapter08/readline.xml:96
@@ -24199,7 +24798,7 @@ msgstr ""
 #: en/chapter08/libcap.xml:83
 #, no-wrap
 msgid "<userinput remap=\"install\">make prefix=/usr lib=lib install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make prefix=/usr lib=lib install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libcap.xml:88
@@ -24374,6 +24973,9 @@ msgid ""
 "            --disable-debuginfod \\\n"
 "            --enable-libdebuginfod=dummy</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --disable-debuginfod \\\n"
+"            --enable-libdebuginfod=dummy</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:53
@@ -24387,6 +24989,8 @@ msgid ""
 "<userinput remap=\"make\">make -C lib\n"
 "make -C libelf</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make -C lib\n"
+"make -C libelf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:66
@@ -24406,6 +25010,9 @@ msgid ""
 "install -vm644 config/libelf.pc /usr/lib/pkgconfig\n"
 "rm /usr/lib/libelf.a</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make -C libelf install\n"
+"install -vm644 config/libelf.pc /usr/lib/pkgconfig\n"
+"rm /usr/lib/libelf.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libelf.xml:77
@@ -24523,6 +25130,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --with-gcc-arch=native</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --with-gcc-arch=native</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libffi.xml:74
@@ -24705,7 +25315,7 @@ msgstr "Remove a static library only useful for the test suite:"
 #: en/chapter08/libtool.xml:66
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -fv /usr/lib/libltdl.a</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libltdl.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libtool.xml:72
@@ -24826,7 +25436,7 @@ msgstr "Installation of Libxcrypt"
 #: en/chapter08/libxcrypt.xml:46
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/strchr/s/const//' lib/crypt-{sm3,gost}-yescrypt.c</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i '/strchr/s/const//' lib/crypt-{sm3,gost}-yescrypt.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libxcrypt.xml:48
@@ -24843,6 +25453,11 @@ msgid ""
 "            --disable-static             \\\n"
 "            --disable-failure-tokens</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                \\\n"
+"            --enable-hashes=strong,glibc \\\n"
+"            --enable-obsolete-api=no     \\\n"
+"            --disable-static             \\\n"
+"            --disable-failure-tokens</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libxcrypt.xml:60
@@ -24906,6 +25521,14 @@ msgid ""
 "make\n"
 "cp -av --remove-destination .libs/libcrypt.so.1* /usr/lib</userinput>"
 msgstr ""
+"<userinput>make distclean\n"
+"./configure --prefix=/usr                \\\n"
+"            --enable-hashes=strong,glibc \\\n"
+"            --enable-obsolete-api=glibc  \\\n"
+"            --disable-static             \\\n"
+"            --disable-failure-tokens\n"
+"make\n"
+"cp -av --remove-destination .libs/libcrypt.so.1* /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libxcrypt.xml:123
@@ -24983,7 +25606,7 @@ msgstr "Installation of Lz4"
 #: en/chapter08/lz4.xml:48
 #, no-wrap
 msgid "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make BUILD_STATIC=no PREFIX=/usr</userinput>"
 
 #.  This needs to be done at -j1 because otherwise test files do not
 #.          get generated correctly. 
@@ -24991,13 +25614,13 @@ msgstr ""
 #: en/chapter08/lz4.xml:55
 #, no-wrap
 msgid "<userinput remap=\"test\">make -j1 check</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make -j1 check</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/lz4.xml:59
 #, no-wrap
 msgid "<userinput remap=\"install\">make BUILD_STATIC=no PREFIX=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make BUILD_STATIC=no PREFIX=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/lz4.xml:64
@@ -25237,6 +25860,14 @@ msgid ""
 "            --with-vgrind=/usr/bin/vgrind         \\\n"
 "            --with-grap=/usr/bin/grap</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                         \\\n"
+"            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
+"            --sysconfdir=/etc                     \\\n"
+"            --disable-setuid                      \\\n"
+"            --enable-cache-owner=bin              \\\n"
+"            --with-browser=/usr/bin/lynx          \\\n"
+"            --with-vgrind=/usr/bin/vgrind         \\\n"
+"            --with-grap=/usr/bin/grap</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-db.xml:55
@@ -25253,6 +25884,16 @@ msgid ""
 "            --with-systemdtmpfilesdir=            \\\n"
 "            --with-systemdsystemunitdir=</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                         \\\n"
+"            --docdir=/usr/share/doc/man-db-&man-db-version; \\\n"
+"            --sysconfdir=/etc                     \\\n"
+"            --disable-setuid                      \\\n"
+"            --enable-cache-owner=bin              \\\n"
+"            --with-browser=/usr/bin/lynx          \\\n"
+"            --with-vgrind=/usr/bin/vgrind         \\\n"
+"            --with-grap=/usr/bin/grap             \\\n"
+"            --with-systemdtmpfilesdir=            \\\n"
+"            --with-systemdsystemunitdir=</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:70
@@ -25889,7 +26530,7 @@ msgstr ""
 #: en/chapter08/man-pages.xml:47
 #, no-wrap
 msgid "<userinput remap=\"pre\">rm -v man3/crypt*</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">rm -v man3/crypt*</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-pages.xml:49
@@ -25900,7 +26541,7 @@ msgstr ""
 #: en/chapter08/man-pages.xml:51
 #, no-wrap
 msgid "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/man-pages.xml:54
@@ -26022,7 +26663,7 @@ msgstr ""
 #: en/chapter08/markupsafe.xml:51
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist Markupsafe</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist Markupsafe</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/markupsafe.xml:56
@@ -26102,6 +26743,9 @@ msgid ""
 "install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson\n"
 "install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson</userinput>"
 msgstr ""
+"<userinput remap=\"install\">pip3 install --no-index --find-links dist meson\n"
+"install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson\n"
+"install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/meson.xml:56
@@ -26212,6 +26856,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/mpc-&mpc-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/mpc-&mpc-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/mpc.xml:69
@@ -26301,6 +26948,10 @@ msgid ""
 "            --enable-thread-safe \\\n"
 "            --docdir=/usr/share/doc/mpfr-&mpfr-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr        \\\n"
+"            --disable-static     \\\n"
+"            --enable-thread-safe \\\n"
+"            --docdir=/usr/share/doc/mpfr-&mpfr-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/mpfr.xml:57
@@ -26374,6 +27025,14 @@ msgid ""
 "            --enable-pc-files       \\\n"
 "            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr           \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --with-shared           \\\n"
+"            --without-debug         \\\n"
+"            --without-normal        \\\n"
+"            --with-cxx-shared       \\\n"
+"            --enable-pc-files       \\\n"
+"            --with-pkg-config-libdir=/usr/lib/pkgconfig</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:69
@@ -26426,6 +27085,10 @@ msgid ""
 "    -i dest/usr/include/curses.h\n"
 "cp --remove-destination -av dest/* /</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make DESTDIR=$PWD/dest install\n"
+"sed -e 's/^#if.*XOPEN.*$/#if 1/' \\\n"
+"    -i dest/usr/include/curses.h\n"
+"cp --remove-destination -av dest/* /</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:145
@@ -26446,6 +27109,10 @@ msgid ""
 "    ln -sfv ${lib}w.pc    /usr/lib/pkgconfig/${lib}.pc\n"
 "done</userinput>"
 msgstr ""
+"<userinput remap=\"install\">for lib in ncurses form panel menu ; do\n"
+"    ln -sfv lib${lib}w.so /usr/lib/lib${lib}.so\n"
+"    ln -sfv ${lib}w.pc    /usr/lib/pkgconfig/${lib}.pc\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:157
@@ -26458,7 +27125,7 @@ msgstr ""
 #: en/chapter08/ncurses.xml:161
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sfv libncursesw.so /usr/lib/libcurses.so</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sfv libncursesw.so /usr/lib/libcurses.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:163
@@ -26469,7 +27136,7 @@ msgstr ""
 #: en/chapter08/ncurses.xml:165
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -v -R doc -T /usr/share/doc/ncurses-&ncurses-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -v -R doc -T /usr/share/doc/ncurses-&ncurses-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/ncurses.xml:169
@@ -26496,6 +27163,15 @@ msgid ""
 "make sources libs\n"
 "cp -av lib/lib*.so.5* /usr/lib</userinput>"
 msgstr ""
+"<userinput>make distclean\n"
+"./configure --prefix=/usr    \\\n"
+"            --with-shared    \\\n"
+"            --without-normal \\\n"
+"            --without-debug  \\\n"
+"            --without-cxx-binding \\\n"
+"            --with-abi-version=5\n"
+"make sources libs\n"
+"cp -av lib/lib*.so.5* /usr/lib</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/ncurses.xml:191
@@ -26872,6 +27548,12 @@ msgid ""
 "  if ( j > 0 ) return j;\\\n"
 "' src/ninja.cc</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i '/int Guess/a \\\n"
+"  int   j = 0;\\\n"
+"  char* jobs = getenv( \"NINJAJOBS\" );\\\n"
+"  if ( jobs != NULL ) j = atoi( jobs );\\\n"
+"  if ( j > 0 ) return j;\\\n"
+"' src/ninja.cc</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ninja.xml:68
@@ -26882,7 +27564,7 @@ msgstr ""
 #: en/chapter08/ninja.xml:70
 #, no-wrap
 msgid "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbose</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbose</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/ninja.xml:73
@@ -26928,6 +27610,9 @@ msgid ""
 "install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja\n"
 "install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -vm755 ninja /usr/bin/\n"
+"install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja\n"
+"install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/ninja.xml:113
@@ -27011,12 +27696,17 @@ msgid ""
 "         shared                \\\n"
 "         zlib-dynamic</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./config --prefix=/usr         \\\n"
+"         --openssldir=/etc/ssl \\\n"
+"         --libdir=lib          \\\n"
+"         shared                \\\n"
+"         zlib-dynamic</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:66
 #, no-wrap
 msgid "<userinput remap=\"test\">HARNESS_JOBS=<replaceable>$(nproc)</replaceable> make test</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">HARNESS_JOBS=<replaceable>$(nproc)</replaceable> make test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:68
@@ -27037,6 +27727,8 @@ msgid ""
 "<userinput remap=\"install\">sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile\n"
 "make MANSUFFIX=ssl install</userinput>"
 msgstr ""
+"<userinput remap=\"install\">sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile\n"
+"make MANSUFFIX=ssl install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:81
@@ -27049,7 +27741,7 @@ msgstr ""
 #: en/chapter08/openssl.xml:84
 #, no-wrap
 msgid "<userinput remap=\"install\">mv -v /usr/share/doc/openssl /usr/share/doc/openssl-&openssl-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">mv -v /usr/share/doc/openssl /usr/share/doc/openssl-&openssl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:86
@@ -27060,7 +27752,7 @@ msgstr ""
 #: en/chapter08/openssl.xml:88
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -vfr doc/* /usr/share/doc/openssl-&openssl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/openssl.xml:92
@@ -27246,7 +27938,7 @@ msgstr ""
 #: en/chapter08/packaging.xml:54
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist packaging</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist packaging</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/packaging.xml:59
@@ -27370,6 +28062,16 @@ msgid ""
 "            --enable-pcre2test-libreadline      \\\n"
 "            --disable-static</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                       \\\n"
+"            --docdir=/usr/share/doc/pcre2-&pcre2-version; \\\n"
+"            --enable-unicode                    \\\n"
+"            --enable-jit                        \\\n"
+"            --enable-pcre2-16                   \\\n"
+"            --enable-pcre2-32                   \\\n"
+"            --enable-pcre2grep-libz             \\\n"
+"            --enable-pcre2grep-libbz2           \\\n"
+"            --enable-pcre2test-libreadline      \\\n"
+"            --disable-static</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:61
@@ -27524,6 +28226,8 @@ msgid ""
 "<userinput remap=\"pre\">export BUILD_ZLIB=False\n"
 "export BUILD_BZIP2=0</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">export BUILD_ZLIB=False\n"
+"export BUILD_BZIP2=0</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/perl.xml:53
@@ -27553,6 +28257,20 @@ msgid ""
 "             -D useshrplib                                 \\\n"
 "             -D usethreads</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">sh Configure -des                                          \\\n"
+"             -D prefix=/usr                                \\\n"
+"             -D vendorprefix=/usr                          \\\n"
+"             -D privlib=/usr/lib/perl5/&perl-version-min;/core_perl      \\\n"
+"             -D archlib=/usr/lib/perl5/&perl-version-min;/core_perl      \\\n"
+"             -D sitelib=/usr/lib/perl5/&perl-version-min;/site_perl      \\\n"
+"             -D sitearch=/usr/lib/perl5/&perl-version-min;/site_perl     \\\n"
+"             -D vendorlib=/usr/lib/perl5/&perl-version-min;/vendor_perl  \\\n"
+"             -D vendorarch=/usr/lib/perl5/&perl-version-min;/vendor_perl \\\n"
+"             -D man1dir=/usr/share/man/man1                \\\n"
+"             -D man3dir=/usr/share/man/man3                \\\n"
+"             -D pager=\"/usr/bin/less -isR\"                 \\\n"
+"             -D useshrplib                                 \\\n"
+"             -D usethreads</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/perl.xml:74
@@ -27599,7 +28317,7 @@ msgstr ""
 #: en/chapter08/perl.xml:109
 #, no-wrap
 msgid "<userinput remap=\"test\">TEST_JOBS=$(nproc) make test_harness</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">TEST_JOBS=$(nproc) make test_harness</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/perl.xml:111
@@ -27613,6 +28331,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "unset BUILD_ZLIB BUILD_BZIP2</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"unset BUILD_ZLIB BUILD_BZIP2</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/perl.xml:119
@@ -28191,6 +28911,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/pkgconf-&pkgconf-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/pkgconf-&pkgconf-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgconf.xml:61
@@ -28205,6 +28928,8 @@ msgid ""
 "<userinput remap=\"install\">ln -sv pkgconf   /usr/bin/pkg-config\n"
 "ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1</userinput>"
 msgstr ""
+"<userinput remap=\"install\">ln -sv pkgconf   /usr/bin/pkg-config\n"
+"ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgconf.xml:70
@@ -28453,7 +29178,7 @@ msgstr ""
 #: en/chapter08/pkgmgt.xml:143
 #, no-wrap
 msgid "<userinput>grep -l '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps | tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
-msgstr ""
+msgstr "<userinput>grep -l '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps | tr -cd 0-9\\\\n | xargs -r ps u</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:146
@@ -28592,6 +29317,9 @@ msgid ""
 "make\n"
 "make install</userinput>"
 msgstr ""
+"<userinput>./configure --prefix=/usr/pkg/libfoo/1.1\n"
+"make\n"
+"make install</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:251
@@ -28613,6 +29341,9 @@ msgid ""
 "make\n"
 "make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput>"
 msgstr ""
+"<userinput>./configure --prefix=/usr\n"
+"make\n"
+"make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:264
@@ -28864,6 +29595,11 @@ msgid ""
 "            --disable-kill                          \\\n"
 "            --enable-watch8bit</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+"            --disable-static                        \\\n"
+"            --disable-kill                          \\\n"
+"            --enable-watch8bit</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/procps.xml:51
@@ -28876,6 +29612,12 @@ msgid ""
 "            --enable-watch8bit                      \\\n"
 "            --with-systemd</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr                           \\\n"
+"            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \\\n"
+"            --disable-static                        \\\n"
+"            --disable-kill                          \\\n"
+"            --enable-watch8bit                      \\\n"
+"            --with-systemd</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/procps.xml:62
@@ -29407,6 +30149,11 @@ msgid ""
 "            --enable-optimizations \\\n"
 "            --without-static-libpython</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr          \\\n"
+"            --enable-shared        \\\n"
+"            --with-system-expat    \\\n"
+"            --enable-optimizations \\\n"
+"            --without-static-libpython</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/python.xml:64
@@ -29444,7 +30191,7 @@ msgstr ""
 #: en/chapter08/python.xml:92
 #, no-wrap
 msgid "<userinput remap=\"test\">make test TESTOPTS=\"--timeout 120\"</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">make test TESTOPTS=\"--timeout 120\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:94
@@ -29505,6 +30252,12 @@ msgid ""
 "EOF\n"
 "</userinput>"
 msgstr ""
+"<userinput remap=\"install\">cat &gt; /etc/pip.conf &lt;&lt; EOF\n"
+"<literal>[global]\n"
+"root-user-action = ignore\n"
+"disable-pip-version-check = true</literal>\n"
+"EOF\n"
+"</userinput>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/python.xml:146
@@ -29546,6 +30299,13 @@ msgid ""
 "    -C /usr/share/doc/python-&python-version;/html \\\n"
 "    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -v -dm755 /usr/share/doc/python-&python-version;/html\n"
+"\n"
+"tar --strip-components=1  \\\n"
+"    --no-same-owner       \\\n"
+"    --no-same-permissions \\\n"
+"    -C /usr/share/doc/python-&python-version;/html \\\n"
+"    -xvf ../python-&python-version;-docs-html.tar.bz2</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/python.xml:178
@@ -29723,6 +30483,8 @@ msgid ""
 "<userinput remap=\"pre\">sed -i '/MV.*old/d' Makefile.in\n"
 "sed -i '/{OLDSUFF}/c:' support/shlib-install</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i '/MV.*old/d' Makefile.in\n"
+"sed -i '/{OLDSUFF}/c:' support/shlib-install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:52
@@ -29741,7 +30503,7 @@ msgstr ""
 #: en/chapter08/readline.xml:57
 #, no-wrap
 msgid "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
-msgstr ""
+msgstr "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:60
@@ -29759,6 +30521,11 @@ msgid ""
 "    -e '288i\\   result = -1;' \\\n"
 "    -i.orig input.c</userinput>"
 msgstr ""
+"<userinput>sed -e '270a\\\n"
+"     else\\\n"
+"       chars_avail = 1;'      \\\n"
+"    -e '288i\\   result = -1;' \\\n"
+"    -i.orig input.c</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:69
@@ -29774,6 +30541,10 @@ msgid ""
 "            --with-curses    \\\n"
 "            --docdir=/usr/share/doc/readline-&readline-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --with-curses    \\\n"
+"            --docdir=/usr/share/doc/readline-&readline-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/readline.xml:80
@@ -29792,7 +30563,7 @@ msgstr ""
 #: en/chapter08/readline.xml:93
 #, no-wrap
 msgid "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/readline.xml:99
@@ -29812,7 +30583,7 @@ msgstr ""
 #: en/chapter08/readline.xml:118
 #, no-wrap
 msgid "<userinput remap=\"install\">install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-&readline-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-&readline-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/readline.xml:123
@@ -29886,6 +30657,9 @@ msgid ""
 "install -d -m755           /usr/share/doc/sed-&sed-version;\n"
 "install -m644 doc/sed.html /usr/share/doc/sed-&sed-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"install -d -m755           /usr/share/doc/sed-&sed-version;\n"
+"install -m644 doc/sed.html /usr/share/doc/sed-&sed-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sed.xml:66
@@ -29961,7 +30735,7 @@ msgstr "Installation of Setuptools"
 #: en/chapter08/setuptools.xml:49
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist setuptools</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist setuptools</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/setuptools.xml:53
@@ -30062,6 +30836,10 @@ msgid ""
 "find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
 "find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -i 's/groups$(EXEEXT) //' src/Makefile.in\n"
+"find man -name Makefile.in -exec sed -i 's/groups\\.1 / /'   {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/getspnam\\.3 / /' {} \\;\n"
+"find man -name Makefile.in -exec sed -i 's/passwd\\.5 / /'   {} \\;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:73
@@ -30097,6 +30875,10 @@ msgid ""
 "    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \\\n"
 "    -i etc/login.defs</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:' \\\n"
+"    -e 's:/var/spool/mail:/var/mail:'                   \\\n"
+"    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \\\n"
+"    -i etc/login.defs</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:99
@@ -30115,6 +30897,13 @@ msgid ""
 "            --disable-logind    \\\n"
 "            --with-group-name-max-length=32</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">touch /usr/bin/passwd\n"
+"./configure --sysconfdir=/etc   \\\n"
+"            --disable-static    \\\n"
+"            --with-{b,yes}crypt \\\n"
+"            --without-libbsd    \\\n"
+"            --disable-logind    \\\n"
+"            --with-group-name-max-length=32</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/shadow.xml:110
@@ -30198,6 +30987,8 @@ msgid ""
 "<userinput remap=\"install\">make exec_prefix=/usr install\n"
 "make -C man install-man</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make exec_prefix=/usr install\n"
+"make -C man install-man</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/shadow.xml:203
@@ -30236,7 +31027,7 @@ msgstr ""
 #: en/chapter08/shadow.xml:221
 #, no-wrap
 msgid "<userinput>pwconv</userinput>"
-msgstr ""
+msgstr "<userinput>pwconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:223
@@ -30247,7 +31038,7 @@ msgstr ""
 #: en/chapter08/shadow.xml:225
 #, no-wrap
 msgid "<userinput>grpconv</userinput>"
-msgstr ""
+msgstr "<userinput>grpconv</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:227
@@ -30291,6 +31082,8 @@ msgid ""
 "<userinput>mkdir -p /etc/default\n"
 "useradd -D --gid 999</userinput>"
 msgstr ""
+"<userinput>mkdir -p /etc/default\n"
+"useradd -D --gid 999</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/shadow.xml:248
@@ -30339,7 +31132,7 @@ msgstr ""
 #: en/chapter08/shadow.xml:282
 #, no-wrap
 msgid "<userinput>sed -i '/MAIL/s/yes/no/' /etc/default/useradd</userinput>"
-msgstr ""
+msgstr "<userinput>sed -i '/MAIL/s/yes/no/' /etc/default/useradd</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/shadow.xml:291
@@ -30356,7 +31149,7 @@ msgstr ""
 #: en/chapter08/shadow.xml:296
 #, no-wrap
 msgid "<userinput>passwd root</userinput>"
-msgstr ""
+msgstr "<userinput>passwd root</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/shadow.xml:301
@@ -30997,7 +31790,7 @@ msgstr ""
 #: en/chapter08/sqlite.xml:47
 #, no-wrap
 msgid "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.xz</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:49
@@ -31016,6 +31809,13 @@ msgid ""
 "                      -D SQLITE_ENABLE_DBSTAT_VTAB=1     \\\n"
 "                      -D SQLITE_SECURE_DELETE=1\"</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr     \\\n"
+"            --disable-static  \\\n"
+"            --enable-fts{4,5} \\\n"
+"            CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 \\\n"
+"                      -D SQLITE_ENABLE_UNLOCK_NOTIFY=1   \\\n"
+"                      -D SQLITE_ENABLE_DBSTAT_VTAB=1     \\\n"
+"                      -D SQLITE_SECURE_DELETE=1\"</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/sqlite.xml:62
@@ -31049,7 +31849,7 @@ msgstr ""
 #: en/chapter08/sqlite.xml:84
 #, no-wrap
 msgid "<userinput remap=\"make\">make LDFLAGS.rpath=\"\"</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make LDFLAGS.rpath=\"\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:86
@@ -31067,6 +31867,8 @@ msgid ""
 "<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
 "cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -v -m755 -d /usr/share/doc/sqlite-&sqlite-short-version;\n"
+"cp -v -R sqlite-doc-&sqlite-doc-version;/* /usr/share/doc/sqlite-&sqlite-short-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sqlite.xml:106
@@ -31381,6 +32183,12 @@ msgid ""
 "            --disable-static   \\\n"
 "            --docdir=/usr/share/doc/sysklogd-&sysklogd-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr      \\\n"
+"            --sysconfdir=/etc  \\\n"
+"            --runstatedir=/run \\\n"
+"            --without-logger   \\\n"
+"            --disable-static   \\\n"
+"            --docdir=/usr/share/doc/sysklogd-&sysklogd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysklogd.xml:66
@@ -31420,6 +32228,22 @@ msgid ""
 "# End /etc/syslog.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/syslog.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/syslog.conf\n"
+"\n"
+"auth,authpriv.* -/var/log/auth.log\n"
+"*.*;auth,authpriv.none -/var/log/sys.log\n"
+"daemon.* -/var/log/daemon.log\n"
+"kern.* -/var/log/kern.log\n"
+"mail.* -/var/log/mail.log\n"
+"user.* -/var/log/user.log\n"
+"*.emerg *\n"
+"\n"
+"# Do not open any internet ports.\n"
+"secure_mode 2\n"
+"\n"
+"# End /etc/syslog.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysklogd.xml:100
@@ -31509,6 +32333,9 @@ msgid ""
 "    -e 's/GROUP=\"sgx\", //'               \\\n"
 "    -i rules.d/50-udev-default.rules.in</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -e 's/GROUP=\"render\"/GROUP=\"video\"/' \\\n"
+"    -e 's/GROUP=\"sgx\", //'               \\\n"
+"    -i rules.d/50-udev-default.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:52
@@ -31541,6 +32368,27 @@ msgid ""
 "      -D ukify=disabled       \\\n"
 "      -D docdir=/usr/share/doc/systemd-&systemd-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">mkdir -p build\n"
+"cd       build\n"
+"\n"
+"meson setup ..                \\\n"
+"      --prefix=/usr           \\\n"
+"      --buildtype=release     \\\n"
+"      -D default-dnssec=no    \\\n"
+"      -D firstboot=false      \\\n"
+"      -D install-tests=false  \\\n"
+"      -D ldconfig=false       \\\n"
+"      -D sysusers=false       \\\n"
+"      -D rpmmacrosdir=no      \\\n"
+"      -D homed=disabled       \\\n"
+"      -D man=disabled         \\\n"
+"      -D mode=release         \\\n"
+"      -D pamconfdir=no        \\\n"
+"      -D dev-kvm-mode=0660    \\\n"
+"      -D nobody-group=nogroup \\\n"
+"      -D sysupdate=disabled   \\\n"
+"      -D ukify=disabled       \\\n"
+"      -D docdir=/usr/share/doc/systemd-&systemd-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:80 en/chapter08/udev.xml:87
@@ -31748,6 +32596,8 @@ msgid ""
 "<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
 "unshare -m ninja test</userinput>"
 msgstr ""
+"<userinput remap=\"test\">echo 'NAME=\"Linux From Scratch\"' &gt; /etc/os-release\n"
+"unshare -m ninja test</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:232
@@ -31775,6 +32625,9 @@ msgid ""
 "    --no-same-owner --strip-components=1     \\\n"
 "    -C /usr/share/man</userinput>"
 msgstr ""
+"<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz \\\n"
+"    --no-same-owner --strip-components=1     \\\n"
+"    -C /usr/share/man</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:252
@@ -31787,7 +32640,7 @@ msgstr ""
 #: en/chapter08/systemd.xml:255
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemd-machine-id-setup</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"adjust\">systemd-machine-id-setup</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:257
@@ -31798,7 +32651,7 @@ msgstr ""
 #: en/chapter08/systemd.xml:259
 #, no-wrap
 msgid "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/systemd.xml:273
@@ -32842,7 +33695,7 @@ msgstr ""
 #: en/chapter08/sysvinit.xml:73
 #, no-wrap
 msgid "<userinput remap=\"pre\">patch -Np1 -i ../&sysvinit-consolidated-patch;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&sysvinit-consolidated-patch;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysvinit.xml:88
@@ -32989,6 +33842,8 @@ msgid ""
 "<userinput remap=\"configure\">FORCE_UNSAFE_CONFIGURE=1  \\\n"
 "./configure --prefix=/usr</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">FORCE_UNSAFE_CONFIGURE=1  \\\n"
+"./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tar.xml:57
@@ -33016,6 +33871,8 @@ msgid ""
 "<userinput remap=\"install\">make install\n"
 "make -C doc install-html docdir=/usr/share/doc/tar-&tar-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install\n"
+"make -C doc install-html docdir=/usr/share/doc/tar-&tar-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/tar.xml:89
@@ -33127,6 +33984,11 @@ msgid ""
 "            --mandir=/usr/share/man \\\n"
 "            --disable-rpath</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">SRCDIR=$(pwd)\n"
+"cd unix\n"
+"./configure --prefix=/usr           \\\n"
+"            --mandir=/usr/share/man \\\n"
+"            --disable-rpath</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/tcl.xml:65
@@ -33165,6 +34027,24 @@ msgid ""
 "\n"
 "unset SRCDIR</userinput>"
 msgstr ""
+"<userinput remap=\"make\">make\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix|/usr/lib|\" \\\n"
+"    -e \"s|$SRCDIR|/usr/include|\"  \\\n"
+"    -i tclConfig.sh\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix/pkgs/tdbc&tdbc-ver;|/usr/lib/tdbc&tdbc-ver;|\" \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;/generic|/usr/include|\"     \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;/library|/usr/lib/tcl8.6|\"  \\\n"
+"    -e \"s|$SRCDIR/pkgs/tdbc&tdbc-ver;|/usr/include|\"             \\\n"
+"    -i pkgs/tdbc&tdbc-ver;/tdbcConfig.sh\n"
+"\n"
+"sed -e \"s|$SRCDIR/unix/pkgs/itcl&itcl-ver;|/usr/lib/itcl&itcl-ver;|\" \\\n"
+"    -e \"s|$SRCDIR/pkgs/itcl&itcl-ver;/generic|/usr/include|\"    \\\n"
+"    -e \"s|$SRCDIR/pkgs/itcl&itcl-ver;|/usr/include|\"            \\\n"
+"    -i pkgs/itcl&itcl-ver;/itclConfig.sh\n"
+"\n"
+"unset SRCDIR</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:97
@@ -33180,7 +34060,7 @@ msgstr ""
 #: en/chapter08/tcl.xml:105
 #, no-wrap
 msgid "<userinput remap=\"test\">LC_ALL=C.UTF-8 make test</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"test\">LC_ALL=C.UTF-8 make test</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:109
@@ -33189,6 +34069,8 @@ msgid ""
 "<userinput remap=\"install\">make install \n"
 "chmod 644 /usr/lib/libtclstub&tcl-major-version;.a</userinput>"
 msgstr ""
+"<userinput remap=\"install\">make install \n"
+"chmod 644 /usr/lib/libtclstub&tcl-major-version;.a</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:112
@@ -33203,7 +34085,7 @@ msgstr ""
 #: en/chapter08/tcl.xml:115
 #, no-wrap
 msgid "<userinput remap=\"install\">chmod -v u+w /usr/lib/libtcl&tcl-major-version;.so</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">chmod -v u+w /usr/lib/libtcl&tcl-major-version;.so</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:117
@@ -33214,7 +34096,7 @@ msgstr ""
 #: en/chapter08/tcl.xml:119
 #, no-wrap
 msgid "<userinput remap=\"install\">make install-private-headers</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make install-private-headers</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:121
@@ -33225,7 +34107,7 @@ msgstr ""
 #: en/chapter08/tcl.xml:123
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; /usr/bin/tclsh</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; /usr/bin/tclsh</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:125
@@ -33236,7 +34118,7 @@ msgstr "Rename a man page that conflicts with a Perl man page:"
 #: en/chapter08/tcl.xml:127
 #, no-wrap
 msgid "<userinput remap=\"install\">mv -v /usr/share/man/man3/{Thread,Tcl_Thread}.3</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">mv -v /usr/share/man/man3/{Thread,Tcl_Thread}.3</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:129
@@ -33253,6 +34135,10 @@ msgid ""
 "mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
 "cp -v -r  ./html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
 msgstr ""
+"<userinput remap=\"install\">cd ..\n"
+"tar -xf ../tcl&tcl-version;-html.tar.gz --strip-components=1\n"
+"mkdir -v -p /usr/share/doc/tcl-&tcl-version;\n"
+"cp -v -r  ./html/* /usr/share/doc/tcl-&tcl-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/tcl.xml:140
@@ -33358,7 +34244,7 @@ msgstr ""
 #: en/chapter08/texinfo.xml:47
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed 's/! $output_file eq/$output_file ne/' -i tp/Texinfo/Convert/*.pm</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed 's/! $output_file eq/$output_file ne/' -i tp/Texinfo/Convert/*.pm</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/texinfo.xml:82
@@ -33370,7 +34256,7 @@ msgstr ""
 #: en/chapter08/texinfo.xml:86
 #, no-wrap
 msgid "<userinput remap=\"install\">make TEXMF=/usr/share/texmf install-tex</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make TEXMF=/usr/share/texmf install-tex</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/texinfo.xml:92
@@ -33407,6 +34293,12 @@ msgid ""
 "  done\n"
 "popd</userinput>"
 msgstr ""
+"<userinput>pushd /usr/share/info\n"
+"  rm -v dir\n"
+"  for f in *\n"
+"    do install-info $f dir 2&gt;/dev/null\n"
+"  done\n"
+"popd</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/texinfo.xml:119
@@ -33629,7 +34521,7 @@ msgstr "Remove one udev rule requiring a full Systemd installation:"
 #: en/chapter08/udev.xml:57
 #, no-wrap
 msgid "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:63
@@ -33647,6 +34539,8 @@ msgid ""
 "<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
 "    -i src/libsystemd/sd-network/network-util.h</userinput>"
 msgstr ""
+"<userinput remap=\"pre\">sed -e '/NETWORK_DIRS/s/systemd/udev/' \\\n"
+"    -i src/libsystemd/sd-network/network-util.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:69
@@ -33669,6 +34563,17 @@ msgid ""
 "      -D logind=false           \\\n"
 "      -D vconsole=false</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">mkdir -p build\n"
+"cd       build\n"
+"\n"
+"meson setup ..                  \\\n"
+"      --prefix=/usr             \\\n"
+"      --buildtype=release       \\\n"
+"      -D mode=release           \\\n"
+"      -D dev-kvm-mode=0660      \\\n"
+"      -D link-udev-shared=false \\\n"
+"      -D logind=false           \\\n"
+"      -D vconsole=false</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/udev.xml:113
@@ -33711,6 +34616,8 @@ msgid ""
 "<userinput remap=\"make\">export udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
 "                      awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 msgstr ""
+"<userinput remap=\"make\">export udev_helpers=$(grep \"'name' :\" ../src/udev/meson.build | \\\n"
+"                      awk '{print $3}' | tr -d \",'\" | grep -v 'udevadm')</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:140
@@ -33726,6 +34633,10 @@ msgid ""
 "      $(realpath libudev.so --relative-to .)                         \\\n"
 "      $udev_helpers</userinput>"
 msgstr ""
+"<userinput remap=\"make\">ninja udevadm systemd-hwdb                                           \\\n"
+"      $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \\\n"
+"      $(realpath libudev.so --relative-to .)                         \\\n"
+"      $udev_helpers</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/udev.xml:149
@@ -33748,6 +34659,22 @@ msgid ""
 "install -vm755 $udev_helpers                       /usr/lib/udev\n"
 "install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 msgstr ""
+"<userinput remap=\"install\">install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}\n"
+"install -vm755 -d /usr/{lib,share}/pkgconfig\n"
+"install -vm755 udevadm                             /usr/bin/\n"
+"install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb\n"
+"ln      -svfn  ../bin/udevadm                      /usr/sbin/udevd\n"
+"cp      -av    libudev.so{,*[0-9]}                 /usr/lib/\n"
+"install -vm644 ../src/libudev/libudev.h            /usr/include/\n"
+"install -vm644 src/libudev/*.pc                    /usr/lib/pkgconfig/\n"
+"install -vm644 src/udev/*.pc                       /usr/share/pkgconfig/\n"
+"install -vm644 ../src/udev/udev.conf               /etc/udev/\n"
+"install -vm644 rules.d/* ../rules.d/README         /usr/lib/udev/rules.d/\n"
+"install -vm644 $(find ../rules.d/*.rules \\\n"
+"                      -not -name '*power-switch*') /usr/lib/udev/rules.d/\n"
+"install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/\n"
+"install -vm755 $udev_helpers                       /usr/lib/udev\n"
+"install -vm644 ../network/99-default.link          /usr/lib/udev/network</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:166
@@ -33762,6 +34689,8 @@ msgid ""
 "<userinput remap=\"install\">tar -xvf ../../&udev-lfs-version;.tar.xz\n"
 "make -f &udev-lfs-version;/Makefile.lfs install</userinput>"
 msgstr ""
+"<userinput remap=\"install\">tar -xvf ../../&udev-lfs-version;.tar.xz\n"
+"make -f &udev-lfs-version;/Makefile.lfs install</userinput>"
 
 #.  Please make sure systemd man pages tarball has a common leading
 #.          component in the path.  
@@ -33788,6 +34717,24 @@ msgid ""
 "\n"
 "rm /usr/share/man/man*/systemd*</userinput>"
 msgstr ""
+"<userinput remap=\"install\">tar -xf ../../systemd-man-pages-&systemd-man-version;.tar.xz                          \\\n"
+"    --no-same-owner --strip-components=1                              \\\n"
+"    -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \\\n"
+"                                  '*/systemd.link.5'                  \\\n"
+"                                  '*/systemd-'{hwdb,udevd.service}.8\n"
+"\n"
+"sed 's|systemd/network|udev/network|'                                 \\\n"
+"    /usr/share/man/man5/systemd.link.5                                \\\n"
+"  > /usr/share/man/man5/udev.link.5\n"
+"\n"
+"sed 's/systemd\\(\\\\\\?-\\)/udev\\1/' /usr/share/man/man8/systemd-hwdb.8   \\\n"
+"                               > /usr/share/man/man8/udev-hwdb.8\n"
+"\n"
+"sed 's|lib.*udevd|sbin/udevd|'                                        \\\n"
+"    /usr/share/man/man8/systemd-udevd.service.8                       \\\n"
+"  > /usr/share/man/man8/udevd.8\n"
+"\n"
+"rm /usr/share/man/man*/systemd*</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:195
@@ -33800,7 +34747,7 @@ msgstr ""
 #: en/chapter08/udev.xml:199
 #, no-wrap
 msgid "<userinput remap=\"install\">unset udev_helpers</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">unset udev_helpers</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/udev.xml:204
@@ -33957,6 +34904,24 @@ msgid ""
 "            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --bindir=/usr/bin     \\\n"
+"            --libdir=/usr/lib     \\\n"
+"            --runstatedir=/run    \\\n"
+"            --sbindir=/usr/sbin   \\\n"
+"            --disable-chfn-chsh   \\\n"
+"            --disable-login       \\\n"
+"            --disable-nologin     \\\n"
+"            --disable-su          \\\n"
+"            --disable-setpriv     \\\n"
+"            --disable-runuser     \\\n"
+"            --disable-pylibmount  \\\n"
+"            --disable-liblastlog2 \\\n"
+"            --disable-static      \\\n"
+"            --without-python      \\\n"
+"            --without-systemd     \\\n"
+"            --without-systemdsystemunitdir        \\\n"
+"            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/util-linux.xml:66
@@ -33979,6 +34944,22 @@ msgid ""
 "            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
 "            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --bindir=/usr/bin     \\\n"
+"            --libdir=/usr/lib     \\\n"
+"            --runstatedir=/run    \\\n"
+"            --sbindir=/usr/sbin   \\\n"
+"            --disable-chfn-chsh   \\\n"
+"            --disable-login       \\\n"
+"            --disable-nologin     \\\n"
+"            --disable-su          \\\n"
+"            --disable-setpriv     \\\n"
+"            --disable-runuser     \\\n"
+"            --disable-pylibmount  \\\n"
+"            --disable-liblastlog2 \\\n"
+"            --disable-static      \\\n"
+"            --without-python      \\\n"
+"            ADJTIME_PATH=/var/lib/hwclock/adjtime \\\n"
+"            --docdir=/usr/share/doc/util-linux-&util-linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/util-linux.xml:83
@@ -34011,7 +34992,7 @@ msgstr ""
 #: en/chapter08/util-linux.xml:108
 #, no-wrap
 msgid "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
-msgstr ""
+msgstr "<userinput>bash tests/run.sh --srcdir=$PWD --builddir=$PWD</userinput>"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/util-linux.xml:111
@@ -34021,6 +35002,9 @@ msgid ""
 "chown -R tester .\n"
 "su tester -c \"make -k check\"</userinput>"
 msgstr ""
+"<userinput remap=\"test\">touch /etc/fstab\n"
+"chown -R tester .\n"
+"su tester -c \"make -k check\"</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/util-linux.xml:116
@@ -35917,7 +36901,7 @@ msgstr ""
 #: en/chapter08/vim.xml:55
 #, no-wrap
 msgid "<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' &gt;&gt; src/feature.h</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' &gt;&gt; src/feature.h</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:57
@@ -35940,6 +36924,8 @@ msgid ""
 "<userinput remap=\"test\">chown -R tester .\n"
 "sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak</userinput>"
 msgstr ""
+"<userinput remap=\"test\">chown -R tester .\n"
+"sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:73
@@ -35954,6 +36940,8 @@ msgid ""
 "<userinput remap=\"test\">su tester -c \"TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test\" \\\n"
 "   &amp;> vim-test.log</userinput>"
 msgstr ""
+"<userinput remap=\"test\">su tester -c \"TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test\" \\\n"
+"   &amp;> vim-test.log</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:79
@@ -35991,6 +36979,10 @@ msgid ""
 "    ln -sv vim.1 $(dirname $L)/vi.1\n"
 "done</userinput>"
 msgstr ""
+"<userinput remap=\"install\">ln -sv vim /usr/bin/vi\n"
+"for L in  /usr/share/man/{,*/}man1/vim.1; do\n"
+"    ln -sv vim.1 $(dirname $L)/vi.1\n"
+"done</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:105
@@ -36006,7 +36998,7 @@ msgstr ""
 #: en/chapter08/vim.xml:111
 #, no-wrap
 msgid "<userinput remap=\"install\">ln -sv ../&vim-docdir;/doc /usr/share/doc/vim-&vim-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">ln -sv ../&vim-docdir;/doc /usr/share/doc/vim-&vim-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:113
@@ -36064,6 +37056,23 @@ msgid ""
 "\" End /etc/vimrc</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/vimrc &lt;&lt; \"EOF\"\n"
+"<literal>\" Begin /etc/vimrc\n"
+"\n"
+"\" Ensure defaults are set before customizing settings, not after\n"
+"source $VIMRUNTIME/defaults.vim\n"
+"let skip_defaults_vim=1\n"
+"\n"
+"set nocompatible\n"
+"set backspace=2\n"
+"set mouse=\n"
+"syntax on\n"
+"if (&amp;term == \"xterm\") || (&amp;term == \"putty\")\n"
+"  set background=dark\n"
+"endif\n"
+"\n"
+"\" End /etc/vimrc</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:157
@@ -36348,7 +37357,7 @@ msgstr ""
 #: en/chapter08/wheel.xml:49
 #, no-wrap
 msgid "<userinput remap=\"install\">pip3 install --no-index --find-links dist wheel</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist wheel</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/wheel.xml:54
@@ -36424,7 +37433,7 @@ msgstr "Prepare XML::Parser for compilation:"
 #: en/chapter08/xml-parser.xml:46
 #, no-wrap
 msgid "<userinput remap=\"configure\">perl Makefile.PL</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"configure\">perl Makefile.PL</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/xml-parser.xml:63
@@ -36484,6 +37493,9 @@ msgid ""
 "            --disable-static \\\n"
 "            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 msgstr ""
+"<userinput remap=\"configure\">./configure --prefix=/usr    \\\n"
+"            --disable-static \\\n"
+"            --docdir=/usr/share/doc/xz-&xz-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/xz.xml:68
@@ -36924,7 +37936,7 @@ msgstr "Prepare Zlib for compilation:"
 #: en/chapter08/zlib.xml:62
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zlib.xml:67
@@ -37004,7 +38016,7 @@ msgstr "Installation of Zstd"
 #: en/chapter08/zstd.xml:47
 #, no-wrap
 msgid "<userinput remap=\"make\">make prefix=/usr</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"make\">make prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/zstd.xml:50
@@ -37018,7 +38030,7 @@ msgstr ""
 #: en/chapter08/zstd.xml:61
 #, no-wrap
 msgid "<userinput remap=\"install\">make prefix=/usr install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zstd.xml:63
@@ -37029,7 +38041,7 @@ msgstr "Remove the static library:"
 #: en/chapter08/zstd.xml:64
 #, no-wrap
 msgid "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zstd.xml:69
@@ -37614,6 +38626,11 @@ msgid ""
 "LOCAL</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/adjtime &lt;&lt; \"EOF\"\n"
+"<literal>0.0 0 0.0\n"
+"0\n"
+"LOCAL</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:45
@@ -37635,7 +38652,7 @@ msgstr ""
 #: en/chapter09/clock.xml:53
 #, no-wrap
 msgid "<userinput>timedatectl set-local-rtc 1</userinput>"
-msgstr ""
+msgstr "<userinput>timedatectl set-local-rtc 1</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:55
@@ -37655,7 +38672,7 @@ msgstr ""
 #: en/chapter09/clock.xml:60
 #, no-wrap
 msgid "<userinput>timedatectl set-time YYYY-MM-DD HH:MM:SS</userinput>"
-msgstr ""
+msgstr "<userinput>timedatectl set-time YYYY-MM-DD HH:MM:SS</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:62
@@ -37671,7 +38688,7 @@ msgstr ""
 #: en/chapter09/clock.xml:66
 #, no-wrap
 msgid "<userinput>timedatectl set-timezone TIMEZONE</userinput>"
-msgstr ""
+msgstr "<userinput>timedatectl set-timezone TIMEZONE</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:68
@@ -37682,7 +38699,7 @@ msgstr ""
 #: en/chapter09/clock.xml:70
 #, no-wrap
 msgid "<userinput>timedatectl list-timezones</userinput>"
-msgstr ""
+msgstr "<userinput>timedatectl list-timezones</userinput>"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter09/clock.xml:72
@@ -37725,7 +38742,7 @@ msgstr ""
 #: en/chapter09/clock.xml:93
 #, no-wrap
 msgid "<userinput>systemctl disable systemd-timesyncd</userinput>"
-msgstr ""
+msgstr "<userinput>systemctl disable systemd-timesyncd</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/clock.xml:95
@@ -37852,7 +38869,7 @@ msgstr ""
 #: en/chapter09/consoled.xml:94
 #, no-wrap
 msgid "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
-msgstr ""
+msgstr "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconsole.conf</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:96
@@ -37871,6 +38888,10 @@ msgid ""
 "FONT=Lat2-Terminus16</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/vconsole.conf &lt;&lt; \"EOF\"\n"
+"<literal>KEYMAP=de-latin1\n"
+"FONT=Lat2-Terminus16</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:105
@@ -37883,7 +38904,7 @@ msgstr ""
 #: en/chapter09/consoled.xml:108
 #, no-wrap
 msgid "<userinput>localectl set-keymap MAP</userinput>"
-msgstr ""
+msgstr "<userinput>localectl set-keymap MAP</userinput>"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter09/consoled.xml:110 en/chapter09/locale.xml:192
@@ -38014,6 +39035,14 @@ msgid ""
 "# End /etc/shells</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/shells &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/shells\n"
+"\n"
+"/bin/sh\n"
+"/bin/bash\n"
+"\n"
+"# End /etc/shells</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/inputrc.xml:11
@@ -38110,6 +39139,49 @@ msgid ""
 "# End /etc/inputrc</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/inputrc &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/inputrc\n"
+"# Modified by Chris Lynn &lt;roryo@roryo.dynup.net&gt;\n"
+"\n"
+"# Allow the command prompt to wrap to the next line\n"
+"set horizontal-scroll-mode Off\n"
+"\n"
+"# Enable 8-bit input\n"
+"set meta-flag On\n"
+"set input-meta On\n"
+"\n"
+"# Turns off 8th bit stripping\n"
+"set convert-meta Off\n"
+"\n"
+"# Keep the 8th bit for display\n"
+"set output-meta On\n"
+"\n"
+"# none, visible or audible\n"
+"set bell-style none\n"
+"\n"
+"# All of the following map the escape sequence of the value\n"
+"# contained in the 1st argument to the readline specific functions\n"
+"\"\\eOd\": backward-word\n"
+"\"\\eOc\": forward-word\n"
+"\n"
+"# for linux console\n"
+"\"\\e[1~\": beginning-of-line\n"
+"\"\\e[4~\": end-of-line\n"
+"\"\\e[5~\": beginning-of-history\n"
+"\"\\e[6~\": end-of-history\n"
+"\"\\e[3~\": delete-char\n"
+"\"\\e[2~\": quoted-insert\n"
+"\n"
+"# for xterm\n"
+"\"\\eOH\": beginning-of-line\n"
+"\"\\eOF\": end-of-line\n"
+"\n"
+"# for Konsole\n"
+"\"\\e[H\": beginning-of-line\n"
+"\"\\e[F\": end-of-line\n"
+"\n"
+"# End /etc/inputrc</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/introduction.xml:13
@@ -38226,51 +39298,53 @@ msgid ""
 "This chapter discusses configuration files and systemd services.  First, the "
 "general configuration files needed to set up networking are presented."
 msgstr ""
+"이 장은 설정 파일과 systemd 서비스에 대해 설명합니다. 첫째, 네트워크를 구축하"
+"는 데 필요한 일반적인 설정 파일을 제시합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:19
 msgid "<xref linkend=\"ch-config-network\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-network\" role=\".\"/>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:22
 msgid "<xref linkend=\"ch-config-hostname\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-hostname\" role=\".\"/>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:25
 msgid "<xref linkend=\"ch-config-hosts\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-hosts\" role=\".\"/>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/introductiond.xml:29
 msgid "Second, issues that affect the proper setup of devices are discussed."
-msgstr ""
+msgstr "둘째, 장치를 올바르게 설정하는 데 영향을 미치는 문제들을 다룹니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:34
 msgid "<xref linkend=\"ch-config-udev\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-udev\" role=\".\"/>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:37
 msgid "<xref linkend=\"ch-config-symlinks\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-symlinks\" role=\".\"/>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/introductiond.xml:41
 msgid "Third, configuring the system clock and keyboard layout is shown."
-msgstr ""
+msgstr "셋째, 시스템 시계 및 키보드 레이아웃을 설정하는 방법을 보여줍니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:45
 msgid "<xref linkend=\"ch-config-clock\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-clock\" role=\".\"/>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:48
 msgid "<xref linkend=\"ch-config-console\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-console\" role=\".\"/>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/introductiond.xml:52
@@ -38278,26 +39352,28 @@ msgid ""
 "Fourth, a brief introduction to the scripts and configuration files used "
 "when the user logs into the system is presented."
 msgstr ""
+"넷째, 사용자가 시스템에 로그인할 때 사용되는 스크립트와 설정 파일들에 대한 간"
+"단한 소개를 제시합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:57
 msgid "<xref linkend=\"ch-config-locale\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-locale\" role=\".\"/>"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:60
 msgid "<xref linkend=\"ch-config-inputrc\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-inputrc\" role=\".\"/>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/introductiond.xml:64
 msgid "And finally, configuring the behavior of systemd is discussed."
-msgstr ""
+msgstr "마지막으로, systemd의 동작을 설정하는 방법에 대해 설명합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter09/introductiond.xml:68
 msgid "<xref linkend=\"ch-config-systemd-custom\" role=\".\"/>"
-msgstr ""
+msgstr "<xref linkend=\"ch-config-systemd-custom\" role=\".\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/locale.xml:11
@@ -38604,6 +39680,28 @@ msgid ""
 "# End /etc/profile</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C.UTF-8\n"
+"else\n"
+"  source /etc/locale.conf\n"
+"\n"
+"  for i in $(locale); do\n"
+"    key=${i%=*}\n"
+"    if [[ -v $key ]]; then\n"
+"      export $key\n"
+"    fi\n"
+"  done\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/locale.xml:161
@@ -38625,6 +39723,21 @@ msgid ""
 "# End /etc/profile</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/profile &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/profile\n"
+"\n"
+"for i in $(locale); do\n"
+"  unset ${i%=*}\n"
+"done\n"
+"\n"
+"if [[ \"$TERM\" = linux ]]; then\n"
+"  export LANG=C.UTF-8\n"
+"else\n"
+"  export LANG=<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\n"
+"fi\n"
+"\n"
+"# End /etc/profile</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:177
@@ -38641,7 +39754,7 @@ msgstr ""
 #: en/chapter09/locale.xml:181
 #, no-wrap
 msgid "<userinput>localectl set-locale LANG=\"<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\"</userinput>"
-msgstr ""
+msgstr "<userinput>localectl set-locale LANG=\"<replaceable>&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;</replaceable>\"</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/locale.xml:183
@@ -38757,6 +39870,16 @@ msgid ""
 "BROADCAST=<replaceable>192.168.1.255</replaceable></literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cd /etc/sysconfig/\n"
+"cat &gt; ifconfig.<replaceable>eth0</replaceable> &lt;&lt; \"EOF\"\n"
+"<literal>ONBOOT=<replaceable>yes</replaceable>\n"
+"IFACE=<replaceable>eth0</replaceable>\n"
+"SERVICE=<replaceable>ipv4-static</replaceable>\n"
+"IP=<replaceable>192.168.1.2</replaceable>\n"
+"GATEWAY=<replaceable>192.168.1.1</replaceable>\n"
+"PREFIX=<replaceable>24</replaceable>\n"
+"BROADCAST=<replaceable>192.168.1.255</replaceable></literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:62
@@ -38855,6 +39978,15 @@ msgid ""
 "# End /etc/resolv.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/resolv.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/resolv.conf\n"
+"\n"
+"domain <replaceable>&lt;Your Domain Name&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your primary nameserver&gt;</replaceable>\n"
+"nameserver <replaceable>&lt;IP address of your secondary nameserver&gt;</replaceable>\n"
+"\n"
+"# End /etc/resolv.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/network.xml:124 en/chapter09/networkd.xml:255
@@ -38909,7 +40041,7 @@ msgstr ""
 #: en/chapter09/network.xml:155 en/chapter09/networkd.xml:292
 #, no-wrap
 msgid "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
-msgstr ""
+msgstr "<userinput>echo \"<replaceable>&lt;lfs&gt;</replaceable>\" &gt; /etc/hostname</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:157
@@ -39024,6 +40156,18 @@ msgid ""
 "# End /etc/hosts</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/hosts\n"
+"\n"
+"127.0.0.1 localhost.localdomain localhost\n"
+"127.0.1.1 <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable>\n"
+"<replaceable>&lt;192.168.1.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>&lt;HOSTNAME&gt;</replaceable> <replaceable>[alias1] [alias2 ...]</replaceable>\n"
+"::1       localhost ip6-localhost ip6-loopback\n"
+"ff02::1   ip6-allnodes\n"
+"ff02::2   ip6-allrouters\n"
+"\n"
+"# End /etc/hosts</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:229
@@ -39069,7 +40213,7 @@ msgstr ""
 #: en/chapter09/networkd.xml:38
 #, no-wrap
 msgid "<userinput>systemctl disable systemd-networkd-wait-online</userinput>"
-msgstr ""
+msgstr "<userinput>systemctl disable systemd-networkd-wait-online</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:41
@@ -39135,7 +40279,7 @@ msgstr ""
 #: en/chapter09/networkd.xml:96
 #, no-wrap
 msgid "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinput>"
-msgstr ""
+msgstr "<userinput>ln -s /dev/null /etc/systemd/network/99-default.link</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter09/networkd.xml:94
@@ -39168,6 +40312,14 @@ msgid ""
 "Name=ether0</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-ether0.link &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"# Change the MAC address as appropriate for your network device\n"
+"MACAddress=12:34:45:78:90:AB\n"
+"\n"
+"[Link]\n"
+"Name=ether0</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter09/networkd.xml:120
@@ -39212,6 +40364,16 @@ msgid ""
 "Domains=<replaceable>&lt;Your Domain Name&gt;</replaceable></literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-static.network &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"Name=<replaceable>&lt;network-device-name&gt;</replaceable>\n"
+"\n"
+"[Network]\n"
+"Address=192.168.0.2/24\n"
+"Gateway=192.168.0.1\n"
+"DNS=192.168.0.1\n"
+"Domains=<replaceable>&lt;Your Domain Name&gt;</replaceable></literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/networkd.xml:152
@@ -39247,6 +40409,16 @@ msgid ""
 "UseDomains=true</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/systemd/network/10-eth-dhcp.network &lt;&lt; \"EOF\"\n"
+"<literal>[Match]\n"
+"Name=&lt;network-device-name&gt;\n"
+"\n"
+"[Network]\n"
+"DHCP=ipv4\n"
+"\n"
+"[DHCPv4]\n"
+"UseDomains=true</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:186
@@ -39283,7 +40455,7 @@ msgstr ""
 #: en/chapter09/networkd.xml:206
 #, no-wrap
 msgid "<userinput>systemctl disable systemd-resolved</userinput>"
-msgstr ""
+msgstr "<userinput>systemctl disable systemd-resolved</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/networkd.xml:208
@@ -39388,6 +40560,16 @@ msgid ""
 "# End /etc/hosts</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/hosts &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/hosts\n"
+"\n"
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> <replaceable>&lt;FQDN&gt;</replaceable> <replaceable>[alias1] [alias2] ...</replaceable>\n"
+"::1       ip6-localhost ip6-loopback\n"
+"ff02::1   ip6-allnodes\n"
+"ff02::2   ip6-allrouters\n"
+"\n"
+"# End /etc/hosts</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:365
@@ -39483,7 +40665,7 @@ msgstr ""
 #: en/chapter09/symlinks.xml:52
 #, no-wrap
 msgid "<userinput>bash /usr/lib/udev/init-net-rules.sh</userinput>"
-msgstr ""
+msgstr "<userinput>bash /usr/lib/udev/init-net-rules.sh</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/symlinks.xml:54
@@ -39496,7 +40678,7 @@ msgstr ""
 #: en/chapter09/symlinks.xml:58
 #, no-wrap
 msgid "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
-msgstr ""
+msgstr "<userinput>cat /etc/udev/rules.d/70-persistent-net.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/symlinks.xml:60
@@ -39604,6 +40786,9 @@ msgid ""
 "       /usr/lib/udev/network/99-default.link \\\n"
 "     > /etc/udev/network/99-default.link</userinput>"
 msgstr ""
+"<userinput>sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \\\n"
+"       /usr/lib/udev/network/99-default.link \\\n"
+"     > /etc/udev/network/99-default.link</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/symlinks.xml:134
@@ -39709,6 +40894,8 @@ msgid ""
 "<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules <replaceable>mode</replaceable>\"/' \\\n"
 "    -i /etc/udev/rules.d/83-cdrom-symlinks.rules</userinput>"
 msgstr ""
+"<userinput>sed -e 's/\"write_cd_rules\"/\"write_cd_rules <replaceable>mode</replaceable>\"/' \\\n"
+"    -i /etc/udev/rules.d/83-cdrom-symlinks.rules</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:201
@@ -39790,6 +40977,13 @@ msgid ""
 "</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/udev/rules.d/83-duplicate_devs.rules &lt;&lt; \"EOF\"\n"
+"<literal>\n"
+"# Persistent symlinks for webcam and tuner\n"
+"KERNEL==\"video*\", ATTRS{idProduct}==\"1910\", ATTRS{idVendor}==\"0d81\", SYMLINK+=\"webcam\"\n"
+"KERNEL==\"video*\", ATTRS{device}==\"0x036f\",  ATTRS{vendor}==\"0x109e\", SYMLINK+=\"tvtuner\"\n"
+"</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:259
@@ -39851,6 +41045,12 @@ msgid ""
 "TTYVTDisallocate=no</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>mkdir -pv /etc/systemd/system/getty@tty1.service.d\n"
+"\n"
+"cat &gt; /etc/systemd/system/getty@tty1.service.d/noclear.conf &lt;&lt; EOF\n"
+"<literal>[Service]\n"
+"TTYVTDisallocate=no</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:44
@@ -39877,7 +41077,7 @@ msgstr ""
 #: en/chapter09/systemd-custom.xml:57
 #, no-wrap
 msgid "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
-msgstr ""
+msgstr "<userinput>ln -sfv /dev/null /etc/systemd/system/tmp.mount</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:59
@@ -39961,6 +41161,8 @@ msgid ""
 "<userinput>mkdir -p /etc/tmpfiles.d\n"
 "cp /usr/lib/tmpfiles.d/tmp.conf /etc/tmpfiles.d</userinput>"
 msgstr ""
+"<userinput>mkdir -p /etc/tmpfiles.d\n"
+"cp /usr/lib/tmpfiles.d/tmp.conf /etc/tmpfiles.d</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:114
@@ -39995,6 +41197,13 @@ msgid ""
 "RestartSec=30</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>mkdir -pv /etc/systemd/system/foobar.service.d\n"
+"\n"
+"cat > /etc/systemd/system/foobar.service.d/foobar.conf &lt;&lt; EOF\n"
+"<literal>[Service]\n"
+"Restart=always\n"
+"RestartSec=30</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:139
@@ -40173,6 +41382,12 @@ msgid ""
 "MaxUse=5G</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>mkdir -pv /etc/systemd/coredump.conf.d\n"
+"\n"
+"cat &gt; /etc/systemd/coredump.conf.d/maxuse.conf &lt;&lt; EOF\n"
+"<literal>[Coredump]\n"
+"MaxUse=5G</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:256
@@ -40820,6 +42035,35 @@ msgid ""
 "# End /etc/inittab</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/inittab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/inittab\n"
+"\n"
+"id:3:initdefault:\n"
+"\n"
+"si::sysinit:/etc/rc.d/init.d/rc S\n"
+"\n"
+"l0:0:wait:/etc/rc.d/init.d/rc 0\n"
+"l1:S1:wait:/etc/rc.d/init.d/rc 1\n"
+"l2:2:wait:/etc/rc.d/init.d/rc 2\n"
+"l3:3:wait:/etc/rc.d/init.d/rc 3\n"
+"l4:4:wait:/etc/rc.d/init.d/rc 4\n"
+"l5:5:wait:/etc/rc.d/init.d/rc 5\n"
+"l6:6:wait:/etc/rc.d/init.d/rc 6\n"
+"\n"
+"ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now\n"
+"\n"
+"su:S06:once:/sbin/sulogin\n"
+"s1:1:respawn:/sbin/sulogin\n"
+"\n"
+"1:2345:respawn:/sbin/agetty --noclear tty1 9600\n"
+"2:2345:respawn:/sbin/agetty tty2 9600\n"
+"3:2345:respawn:/sbin/agetty tty3 9600\n"
+"4:2345:respawn:/sbin/agetty tty4 9600\n"
+"5:2345:respawn:/sbin/agetty tty5 9600\n"
+"6:2345:respawn:/sbin/agetty tty6 9600\n"
+"\n"
+"# End /etc/inittab</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/usage.xml:108
@@ -41076,6 +42320,17 @@ msgid ""
 "# End /etc/sysconfig/clock</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/clock &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/clock\n"
+"\n"
+"UTC=1\n"
+"\n"
+"# Set this to any options you might need to give to hwclock,\n"
+"# such as machine hardware clock type for Alphas.\n"
+"CLOCKPARAMS=\n"
+"\n"
+"# End /etc/sysconfig/clock</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/usage.xml:311
@@ -41250,6 +42505,14 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"FONT=\"Lat2-Terminus16\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:471
@@ -41271,6 +42534,14 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"KEYMAP=\"pl2\"\n"
+"FONT=\"lat2a-16 -m 8859-2\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:484
@@ -41294,6 +42565,16 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"KEYMAP=\"de-latin1\"\n"
+"KEYMAP_CORRECTIONS=\"euro2\"\n"
+"FONT=\"lat0-16 -m 8859-15\"\n"
+"UNICODE=\"1\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:501
@@ -41318,6 +42599,15 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"bg_bds-utf8\"\n"
+"FONT=\"LatArCyrHeb-16\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:517
@@ -41344,6 +42634,15 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"bg_bds-utf8\"\n"
+"FONT=\"cyr-sun16\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:536
@@ -41368,6 +42667,17 @@ msgid ""
 "# End /etc/sysconfig/console</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/sysconfig/console &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/sysconfig/console\n"
+"\n"
+"UNICODE=\"1\"\n"
+"KEYMAP=\"de-latin1\"\n"
+"KEYMAP_CORRECTIONS=\"euro2\"\n"
+"LEGACY_CHARSET=\"iso-8859-15\"\n"
+"FONT=\"LatArCyrHeb-16 -m 8859-15\"\n"
+"\n"
+"# End /etc/sysconfig/console</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/usage.xml:553
@@ -41640,6 +42950,24 @@ msgid ""
 "# End /etc/fstab</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# file system  mount-point    type     options             dump  fsck\n"
+"#                                                                order\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /              <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap           swap     pri=1               0     0\n"
+"proc           /proc          proc     nosuid,noexec,nodev 0     0\n"
+"sysfs          /sys           sysfs    nosuid,noexec,nodev 0     0\n"
+"devpts         /dev/pts       devpts   gid=5,mode=620      0     0\n"
+"tmpfs          /run           tmpfs    defaults            0     0\n"
+"devtmpfs       /dev           devtmpfs mode=0755,nosuid    0     0\n"
+"tmpfs          /dev/shm       tmpfs    nosuid,nodev        0     0\n"
+"cgroup2        /sys/fs/cgroup cgroup2  nosuid,noexec,nodev 0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter10/fstab.xml:41
@@ -41657,6 +42985,17 @@ msgid ""
 "# End /etc/fstab</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/fstab &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/fstab\n"
+"\n"
+"# file system  mount-point  type     options             dump  fsck\n"
+"#                                                              order\n"
+"\n"
+"/dev/<replaceable>&lt;xxx&gt;</replaceable>     /            <replaceable>&lt;fff&gt;</replaceable>    defaults            1     1\n"
+"/dev/<replaceable>&lt;yyy&gt;</replaceable>     swap         swap     pri=1               0     0\n"
+"\n"
+"# End /etc/fstab</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter10/fstab.xml:53
@@ -41780,6 +43119,9 @@ msgid ""
 "grub-mkrescue --output=grub-img.iso\n"
 "xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
 msgstr ""
+"<userinput>cd /tmp\n"
+"grub-mkrescue --output=grub-img.iso\n"
+"xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/grub.xml:54
@@ -41872,7 +43214,7 @@ msgstr ""
 #: en/chapter10/grub.xml:112
 #, no-wrap
 msgid "<userinput>grub-install /dev/sda</userinput>"
-msgstr ""
+msgstr "<userinput>grub-install /dev/sda</userinput>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/grub.xml:115
@@ -41913,6 +43255,20 @@ msgid ""
 "}</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /boot/grub/grub.cfg &lt;&lt; \"EOF\"\n"
+"<literal># Begin /boot/grub/grub.cfg\n"
+"set default=0\n"
+"set timeout=5\n"
+"\n"
+"insmod part_gpt\n"
+"insmod ext2\n"
+"set root=(hd0,2)\n"
+"set gfxpayload=1024x768x32\n"
+"\n"
+"menuentry \"GNU/Linux, Linux &linux-version;-lfs-&version;\" {\n"
+"        linux   /boot/vmlinuz-&linux-version;-lfs-&version; root=/dev/sda2 ro\n"
+"}</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:146
@@ -42120,7 +43476,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:92
 #, no-wrap
 msgid "<userinput>make menuconfig</userinput>"
-msgstr ""
+msgstr "<userinput>make menuconfig</userinput>"
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter10/kernel.xml:95
@@ -42487,7 +43843,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:398
 #, no-wrap
 msgid "<userinput remap=\"install\">make modules_install</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">make modules_install</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:400
@@ -42512,7 +43868,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:413
 #, no-wrap
 msgid "<userinput>mount /boot</userinput>"
-msgstr ""
+msgstr "<userinput>mount /boot</userinput>"
 
 #. type: Content of: <sect1><sect2><caution><para>
 #: en/chapter10/kernel.xml:415
@@ -42535,7 +43891,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:425
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -iv arch/x86/boot/bzImage /boot/vmlinuz-&linux-version;-lfs-&version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:427
@@ -42556,7 +43912,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:433
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -iv System.map /boot/System.map-&linux-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -iv System.map /boot/System.map-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:435
@@ -42571,7 +43927,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:441
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -iv .config /boot/config-&linux-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -iv .config /boot/config-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:443
@@ -42582,7 +43938,7 @@ msgstr ""
 #: en/chapter10/kernel.xml:445
 #, no-wrap
 msgid "<userinput remap=\"install\">cp -r Documentation -T /usr/share/doc/linux-&linux-version;</userinput>"
-msgstr ""
+msgstr "<userinput remap=\"install\">cp -r Documentation -T /usr/share/doc/linux-&linux-version;</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:447
@@ -42696,6 +44052,15 @@ msgid ""
 "# End /etc/modprobe.d/usb.conf</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>install -v -m755 -d /etc/modprobe.d\n"
+"cat &gt; /etc/modprobe.d/usb.conf &lt;&lt; \"EOF\"\n"
+"<literal># Begin /etc/modprobe.d/usb.conf\n"
+"\n"
+"install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true\n"
+"install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true\n"
+"\n"
+"# End /etc/modprobe.d/usb.conf</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/kernel.xml:534
@@ -43295,7 +44660,7 @@ msgstr ""
 #: en/chapter11/reboot.xml:107
 #, no-wrap
 msgid "<userinput>logout</userinput>"
-msgstr ""
+msgstr "<userinput>logout</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/reboot.xml:110
@@ -43417,7 +44782,7 @@ msgstr ""
 #: en/chapter11/theend.xml:34
 #, no-wrap
 msgid "<userinput>echo &version; &gt; /etc/lfs-release</userinput>"
-msgstr ""
+msgstr "<userinput>echo &version; &gt; /etc/lfs-release</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/theend.xml:36
@@ -43444,6 +44809,12 @@ msgid ""
 "DISTRIB_DESCRIPTION=\"Linux From Scratch\"\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/lsb-release &lt;&lt; \"EOF\"\n"
+"DISTRIB_ID=\"Linux From Scratch\"\n"
+"DISTRIB_RELEASE=\"&version;\"\n"
+"DISTRIB_CODENAME=\"&lt;your name here&gt;\"\n"
+"DISTRIB_DESCRIPTION=\"Linux From Scratch\"\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/theend.xml:51
@@ -43466,6 +44837,15 @@ msgid ""
 "RELEASE_TYPE=\"&os-release-type;\"\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; /etc/os-release &lt;&lt; \"EOF\"\n"
+"NAME=\"Linux From Scratch\"\n"
+"VERSION=\"&version;\"\n"
+"ID=lfs\n"
+"PRETTY_NAME=\"Linux From Scratch &version;\"\n"
+"VERSION_CODENAME=\"&lt;your name here&gt;\"\n"
+"HOME_URL=\"&lfs-root;lfs/\"\n"
+"RELEASE_TYPE=\"&os-release-type;\"\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/theend.xml:65
@@ -44464,7 +45844,7 @@ msgstr ""
 #: en/prologue/typography.xml:18
 #, no-wrap
 msgid "<userinput>./configure --prefix=/usr</userinput>"
-msgstr ""
+msgstr "<userinput>./configure --prefix=/usr</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:20
@@ -44488,6 +45868,8 @@ msgid ""
 "<userinput>CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\\n"
 "  --prefix=/tools --disable-nls --disable-werror</userinput>"
 msgstr ""
+"<userinput>CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\\n"
+"  --prefix=/tools --disable-nls --disable-werror</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:30
@@ -44564,6 +45946,11 @@ msgid ""
 "......</literal>\n"
 "EOF</userinput>"
 msgstr ""
+"<userinput>cat &gt; $LFS/etc/group &lt;&lt; \"EOF\"\n"
+"<literal>root:x:0:\n"
+"bin:x:1:\n"
+"......</literal>\n"
+"EOF</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:65
