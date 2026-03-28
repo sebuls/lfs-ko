@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-29 01:09+0900\n"
-"PO-Revision-Date: 2026-03-29 01:09+0900\n"
+"POT-Creation-Date: 2026-03-29 05:37+0900\n"
+"PO-Revision-Date: 2026-03-29 05:36+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -39047,7 +39047,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/inputrc.xml:11
 msgid "Creating the /etc/inputrc File"
-msgstr ""
+msgstr "/etc/inputrc 파일 생성"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: en/chapter09/inputrc.xml:14 en/chapter11/reboot.xml:93
@@ -42913,7 +42913,7 @@ msgstr "LFS 시스템 부팅가능하게 만들기"
 #. type: Content of: <sect1><title>
 #: en/chapter10/fstab.xml:11
 msgid "Creating the /etc/fstab File"
-msgstr ""
+msgstr "/etc/fstab 파일 생성"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: en/chapter10/fstab.xml:14 en/chapter11/reboot.xml:91
@@ -42928,6 +42928,10 @@ msgid ""
 "and which must be checked (for integrity errors) prior to mounting. Create a "
 "new file systems table like this:"
 msgstr ""
+"<filename>/etc/fstab</filename> 파일은 몇몇 프로그램에서 파일 시스템을 기본적"
+"으로 어디에 마운트할지, 어떤 순서로 마운트할지, 그리고 마운트하기 전에 어떤 "
+"파일 시스템의 무결성 오류를 점검해야 할지 결정하는 데 사용됩니다. 다음과 같"
+"이 새로운 파일 시스템 테이블을 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter10/fstab.xml:22
@@ -43009,12 +43013,12 @@ msgid ""
 "class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
 "this file, see <ulink role='man' url='&man;fstab.5'>fstab(5)</ulink>."
 msgstr ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
-"replaceable>, and <replaceable>&lt;fff&gt;</replaceable> with the values "
-"appropriate for the system, for example, <filename class=\"partition\">sda2</"
-"filename>, <filename class=\"partition\">sda5</filename>, and <systemitem "
-"class=\"filesystem\">ext4</systemitem>. For details on the six fields in "
-"this file, see <ulink role='man' url='&man;fstab.5'>fstab(5)</ulink>."
+"<replaceable>&lt;xxx&gt;</replaceable>, <replaceable>&lt;yyy&gt;</"
+"replaceable> 및 <replaceable>&lt;fff&gt;</replaceable>를 <filename "
+"class=\"partition\">sda2</filename>, <filename class=\"partition\">sda5</"
+"filename> 및 <systemitem class=\"filesystem\">ext4</systemitem>와 같이 시스템"
+"에 적합한 값으로 바꾸십시오. 이 파일의 6개 필드에 대한 상세는 <ulink "
+"role='man' url='&man;fstab.5'>fstab(5)</ulink> 참조하십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter10/fstab.xml:61
@@ -43036,6 +43040,20 @@ msgid ""
 "USB flash drives, a ru_RU.KOI8-R user would need the following in the "
 "options portion of its mount line in <filename>/etc/fstab</filename>:"
 msgstr ""
+"MS-DOS나 Windows 계열의 파일 시스템(예: vfat, ntfs, smbfs, cifs, iso9660, "
+"udf)은 파일 이름에 포함된 비 ASCII 문자를 올바르게 해석하기 위해 utf8이라는 "
+"특별한 옵션이 필요합니다. UTF-8 아닌 로캘의 경우, <option>iocharset</option> "
+"값을 로캘의 문자 집합과 동일하게 설정하되, 커널이 이해할 수 있는 방식으로 조"
+"정해야 합니다. 이는 커널 설정 시 File systems -&gt; Native Language Support "
+"항목 아래에 있는 관련 문자 집합 정의가 커널에 컴파일되어 있거나 모듈로 빌드되"
+"어 있어야 작동합니다. 하지만 로캘의 문자 집합이 UTF-8인 경우, 대응하는 옵션"
+"인 <option>iocharset=utf8</option>을 사용하면 파일 시스템이 대소문자를 구분하"
+"게 됩니다. 이를 해결하기 위해 UTF-8 로캘에서는 <option>iocharset=utf8</"
+"option> 대신 특별한 옵션인 <option>utf8</option>을 사용하십시오. vfat 및 "
+"smbfs 파일 시스템에는 <quote>codepage</quote> 옵션도 필요합니다. 이 옵션은 해"
+"당 국가의 MS-DOS에서 사용되는 코드페이지 번호로 설정해야 합니다. 예를 들어, "
+"USB 플래시 드라이브를 마운트하기 위해 ru_RU.KOI8-R 로캘 사용자는 <filename>/"
+"etc/fstab</filename> 마운트 옵션 부분에 필요 한 내용:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter10/fstab.xml:79
@@ -43046,7 +43064,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/chapter10/fstab.xml:81
 msgid "The corresponding options fragment for ru_RU.UTF-8 users is:"
-msgstr ""
+msgstr "ru_RU.UTF-8 사용자에 대응하는 옵션 부분:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter10/fstab.xml:83
@@ -43062,6 +43080,10 @@ msgid ""
 "and the <option>utf8</option> option tells the kernel to convert the file "
 "names using UTF-8 so they can be interpreted in the UTF-8 locale."
 msgstr ""
+"<option>iocharset</option>을 사용하는 것이 <literal>iso8859-1</literal>의 기"
+"본값(파일 시스템의 대소문자 구분을 유지하지 않음)이며, <option>utf8</option> "
+"옵션은 커널에 UTF-8을 사용하여 파일 이름을 변환하도록 지시하여 UTF-8 로캘에"
+"서 파일 이름이 올바르게 해석될 수 있게 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter10/fstab.xml:102
@@ -43076,6 +43098,14 @@ msgid ""
 "There is no way to specify these settings for the ntfs filesystem at kernel "
 "compilation time."
 msgstr ""
+"일부 파일 시스템에 대해서는 커널 설정 중에 기본 코드페이지와 iocharset 값을 "
+"지정하는 것도 가능합니다. 관련 매개변수의 이름은 <quote>Default NLS Option</"
+"quote> (<option>CONFIG_NLS_DEFAULT</option>), <quote>Default Remote NLS "
+"Option</quote> (<option>CONFIG_SMB_NLS_DEFAULT</option>), <quote>Default "
+"codepage for FAT</quote> (<option>CONFIG_FAT_DEFAULT_CODEPAGE</option>) 및 "
+"<quote>Default iocharset for FAT</quote> "
+"(<option>CONFIG_FAT_DEFAULT_IOCHARSET</option>). ntfs 파일 시스템에는 커널 컴"
+"파일 시점에 이러한 설정을 지정할 방법이 없습니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter10/grub.xml:17
