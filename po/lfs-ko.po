@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-28 07:54+0900\n"
-"PO-Revision-Date: 2026-03-28 07:53+0900\n"
+"POT-Creation-Date: 2026-03-29 01:09+0900\n"
+"PO-Revision-Date: 2026-03-29 01:09+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6742,13 +6742,13 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter05/linux-headers.xml:17
 msgid "Linux-&linux-version; API Headers"
-msgstr "Linux-&linux-version; API Headers"
+msgstr "리눅스-&linux-version; API 헤더"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter05/linux-headers.xml:20 en/chapter10/kernel.xml:20
 #: en/appendices/dependencies.xml:268 en/appendices/dependencies.xml:1857
 msgid "Linux"
-msgstr "Linux"
+msgstr "리눅스"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: en/chapter05/linux-headers.xml:21
@@ -6827,7 +6827,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter05/linux-headers.xml:71
 msgid "Installed headers"
-msgstr "Installed headers"
+msgstr "헤더 설치"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter05/linux-headers.xml:72 en/chapter08/acl.xml:76
@@ -8750,7 +8750,7 @@ msgstr "&xz-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/xz.xml:44 en/chapter08/xz.xml:45
 msgid "Installation of Xz"
-msgstr "Installation of Xz"
+msgstr "Xz 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/xz.xml:46
@@ -10582,7 +10582,7 @@ msgstr "&util-linux-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/util-linux.xml:42 en/chapter08/util-linux.xml:43
 msgid "Installation of Util-linux"
-msgstr "Installation of Util-linux"
+msgstr "Util-linux 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:44
@@ -12097,7 +12097,7 @@ msgstr ""
 #: en/chapter08/util-linux.xml:142 en/chapter08/xz.xml:72
 #: en/chapter08/zlib.xml:70
 msgid "Installed libraries"
-msgstr "Installed libraries"
+msgstr "ㄹ"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:152
@@ -22609,7 +22609,7 @@ msgstr ""
 #: en/chapter08/iana-etc.xml:54 en/chapter08/man-pages.xml:84
 #: en/chapter10/kernel.xml:537
 msgid "Installed files"
-msgstr "Installed files"
+msgstr "설치된 파일"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iana-etc.xml:57
@@ -34503,7 +34503,7 @@ msgstr "&udev-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/udev.xml:41
 msgid "Installation of Udev"
-msgstr "Installation of Udev"
+msgstr "Udev 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/udev.xml:43
@@ -36888,7 +36888,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/vim.xml:50
 msgid "Installation of Vim"
-msgstr "Installation of Vim"
+msgstr "Vim 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:52
@@ -37341,7 +37341,7 @@ msgstr "&wheel-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/wheel.xml:41
 msgid "Installation of Wheel"
-msgstr "Installation of Wheel"
+msgstr "Wheel 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/wheel.xml:43
@@ -37422,7 +37422,7 @@ msgstr "&xml-parser-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/xml-parser.xml:42
 msgid "Installation of XML::Parser"
-msgstr "Installation of XML::Parser"
+msgstr "XML::Parser 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xml-parser.xml:44
@@ -37925,7 +37925,7 @@ msgstr "&zlib-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zlib.xml:42
 msgid "Installation of Zlib"
-msgstr "Installation of Zlib"
+msgstr "Zlib 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zlib.xml:44
@@ -38010,7 +38010,7 @@ msgstr "&zstd-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zstd.xml:43
 msgid "Installation of Zstd"
-msgstr "Installation of Zstd"
+msgstr "Zstd 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zstd.xml:47
@@ -42252,6 +42252,8 @@ msgid ""
 "For information on kernel module loading and udev, see <xref "
 "linkend=\"module-loading\" role='.'/>"
 msgstr ""
+"For information on kernel module loading and udev, see <xref "
+"linkend=\"module-loading\" role='.'/>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/usage.xml:267
@@ -43389,7 +43391,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter10/kernel.xml:17
 msgid "Linux-&linux-version;"
-msgstr "Linux-&linux-version;"
+msgstr "리눅스-&linux-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:26
@@ -43409,7 +43411,7 @@ msgstr "&linux-knl-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/kernel.xml:41
 msgid "Installation of the kernel"
-msgstr "Installation of the kernel"
+msgstr "커널 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:43
@@ -43433,6 +43435,14 @@ msgid ""
 "command line when you reboot later in <xref linkend=\"ch-finish-reboot\" "
 "role='.'/> At this point optimization and customization is not a goal."
 msgstr ""
+"리눅스 커널을 처음으로 빌드하는 것은 LFS에서 가장 도전적인 과제 중 하나입니"
+"다. 이를 성공적으로 수행하는 것은 대상 시스템의 특정 하드웨어와 사용자의 구체"
+"적인 필요 사항에 의존합니다. 커널에는 거의 1만2천개에 달하는 설정 항목이 있지"
+"만, 대부분의 컴퓨터에는 그중 약 3분의 1 정도만 필요합니다. LFS 편집자들은 이 "
+"과정에 익숙하지 않은 사용자라면 아래의 절차를 상당히 엄격하게 따를 것을 권장"
+"합니다. 목표는 나중에 <xref linkend=\"ch-finish-reboot\" role='.'/> 에서 재부"
+"팅했을 때 명령줄(CLI)로 로그인할 수 있는 수준의 초기 시스템을 구축하는 것입니"
+"다. 이 시점에서는 최적화나 사용자 정의(커스터마이징)가 목표가 아닙니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter10/kernel.xml:64
@@ -43443,6 +43453,11 @@ msgid ""
 "nutshell/\"/>.  These references are a bit dated, but still give a "
 "reasonable overview of the process."
 msgstr ""
+"커널 설정에 관한 일반적인 정보는 <ulink url=\"&hints-root;kernel-"
+"configuration.txt\"/> 참조하십시오. 커널 설정 및 빌드에 대한 추가 정보는 "
+"<ulink url=\"&anduin-sources;/kernel-nutshell/\"/>에서 찾을 수 있습니다. 이 "
+"참고 자료들은 다소 오래되었지만, 여전히 과정에 대한 합리적인 개요를 제공합니"
+"다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter10/kernel.xml:73
@@ -43563,6 +43578,8 @@ msgid ""
 "While \"The IPv6 Protocol\" is not strictly required, it is highly "
 "recommended by the systemd developers."
 msgstr ""
+"\"IPv6 프로토콜\"이 엄밀하게 필수적인 것은 아니지만, systemd 개발자는 이 기능"
+"을 사용할 것을 강력히 권장합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:175
@@ -43582,6 +43599,10 @@ msgid ""
 "role='bold'>even if you'll use the UEFI bootloader from the host distro</"
 "emphasis>."
 msgstr ""
+"호스트 하드웨어가 UEFI를 사용하고 있으며 이를 통해 LFS 시스템을 부팅하려는 경"
+"우, <emphasis role='bold'>비록 호스트 배포판의 UEFI 부트로더를 사용하더라도</"
+"emphasis> <ulink url=\"&blfs-book;postlfs/grub-setup.html#uefi-kernel\"> "
+"BLFS 페이지</ulink>에 따라 일부 커널 설정을 조정해야 합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter10/kernel.xml:190
@@ -43863,6 +43884,11 @@ msgid ""
 "details), then issue the following command as the &root; user in the "
 "<emphasis>chroot environment</emphasis>:"
 msgstr ""
+"만약 LFS 시스템을 위해 별도의 &boot-dir; 파티션을 사용하기로 결정했다면(아마"
+"도 호스트 배포판과 &boot-dir; 파티션을 공유하는 경우일 것입니다), 아래에서 복"
+"사하는 파일들은 그곳으로 가야 합니다. 이렇게 하는 가장 쉬운 방법은 먼저 "
+"&fstab;에 &boot-dir;에 대한 항목을 생성한 후(자세한 내용은 이전 섹션 참조), "
+"<emphasis>chroot 환경</emphasis>에서 &root; 사용자로 다음 명령 실행:"
 
 #. type: Content of: <sect1><sect2><caution><screen>
 #: en/chapter10/kernel.xml:413
@@ -43876,6 +43902,8 @@ msgid ""
 "The path to the device node is omitted in the command because "
 "<command>mount</command> can read it from &fstab;."
 msgstr ""
+"명령어에서 장치 노드의 경로는 생략되었는데, 왜냐면 <command>mount</command> "
+"명령어가 &fstab;에서 관련 정보를 읽어올 수 있기 때문입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:419
@@ -44007,6 +44035,11 @@ msgid ""
 "problems for packages you may wish to build once your base LFS system is "
 "complete."
 msgstr ""
+"일부 커널 문서에서는 <filename class=\"symlink\">/usr/src/linux</filename>에"
+"서 커널 소스 디렉터리를 가리키는 심볼릭 링크를 생성할 것을 권장합니다. 이는 "
+"2.6 시리즈 이전의 커널에만 해당되는 사항이며, 기본 LFS 시스템이 완성된 후 빌"
+"드하려는 패키지들에 문제를 일으킬 수 있으므로 LFS 시스템에서는 이 링크를 생성"
+"하지 <emphasis>마십시오</emphasis>."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/kernel.xml:503
@@ -46379,7 +46412,7 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:379
 msgid "Linux Kernel"
-msgstr "Linux Kernel"
+msgstr "리눅스 커널"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:381
@@ -49506,7 +49539,7 @@ msgstr ""
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/dependencies.xml:1902
 msgid "Linux API Headers"
-msgstr "Linux API Headers"
+msgstr "리눅스 API 헤더"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1907
