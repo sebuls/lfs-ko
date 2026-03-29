@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-29 19:59+0900\n"
-"PO-Revision-Date: 2026-03-29 19:58+0900\n"
+"POT-Creation-Date: 2026-03-29 20:19+0900\n"
+"PO-Revision-Date: 2026-03-29 20:18+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -38569,12 +38569,12 @@ msgstr "시스템 설정"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/clock.xml:11 en/chapter09/usage.xml:261
 msgid "Configuring the System Clock"
-msgstr ""
+msgstr "시스템 시계 설정"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter09/clock.xml:14
 msgid "clock"
-msgstr ""
+msgstr "clock"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:17
@@ -38582,6 +38582,8 @@ msgid ""
 "This section discusses how to configure the <command>systemd-timedated</"
 "command> system service, which configures the system clock and timezone."
 msgstr ""
+"이 섹션에서는 시스템 시계와 시간대를 설정하는 <command>systemd-timedated</"
+"command> 시스템 서비스를 구성하는 방법을 설명합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:21
@@ -38597,6 +38599,15 @@ msgid ""
 "in the MST timezone, which is also known as GMT -0700, add seven hours to "
 "the local time."
 msgstr ""
+"하드웨어 시계가 UTC로 설정되어 있는지 아닌지 기억 안 나면, "
+"<userinput>hwclock --localtime --show</userinput> 명령을 실행하여 확인하십시"
+"오. 이 명령은 하드웨어 시계에 기록된 현재 시간을 표시합니다. 이 시간이 현재 "
+"손목시계가 가리키는 시간과 일치한다면 하드웨어 시계는 로컬 시간(현지 시간)으"
+"로 설정된 것입니다. 만약 <command>hwclock</command> 출력 결과가 로컬 시간이 "
+"아니라면, UTC 시간으로 설정되어 있을 가능성이 큽니다. <command>hwclock</"
+"command>이 보여주는 시간에 해당 시간대의 적절한 시간만큼을 더하거나 빼서 이"
+"를 확인하십시오. 예를 들어, 현재 GMT -0700으로도 알려진 MST 시간대에 있다면, "
+"로컬 시간에 7시간을 더하십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:32
@@ -38708,11 +38719,14 @@ msgid ""
 "the chroot environment.  It can only be used after the LFS system is booted "
 "with systemd."
 msgstr ""
+"<command>timedatectl</command> 명령은 chroot 환경에서는 작동하지 않으니 주의"
+"하십시오. 이 명령어는 LFS 시스템을 systemd로 부팅한 후에만 사용할 수 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/clock.xml:77
 msgid "Network Time Synchronization"
-msgstr "Network Time Synchronization"
+msgstr "네트워크 시간 동기화"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/clock.xml:79
