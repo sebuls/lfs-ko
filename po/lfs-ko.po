@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-29 05:37+0900\n"
-"PO-Revision-Date: 2026-03-29 05:36+0900\n"
+"POT-Creation-Date: 2026-03-29 19:59+0900\n"
+"PO-Revision-Date: 2026-03-29 19:58+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -15684,7 +15684,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:143
 msgid "Configuring E2fsprogs"
-msgstr ""
+msgstr "E2fsprogs 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:146
@@ -19448,7 +19448,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/glibc.xml:444
 msgid "Configuring Glibc"
-msgstr ""
+msgstr "Glibc 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter08/glibc.xml:447
@@ -19702,7 +19702,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/glibc.xml:586
 msgid "Configuring the Dynamic Loader"
-msgstr ""
+msgstr "동적 로더 설정"
 
 #. type: Content of: <sect1><sect2><sect3><indexterm><primary>
 #: en/chapter08/glibc.xml:589
@@ -30993,7 +30993,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/shadow.xml:203
 msgid "Configuring Shadow"
-msgstr ""
+msgstr "Shadow 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><secondary>
 #: en/chapter08/shadow.xml:207 en/chapter08/sysklogd.xml:70
@@ -32193,7 +32193,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysklogd.xml:66
 msgid "Configuring Sysklogd"
-msgstr ""
+msgstr "Sysklogd 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter08/sysklogd.xml:74
@@ -38762,7 +38762,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/consoled.xml:11 en/chapter09/usage.xml:323
 msgid "Configuring the Linux Console"
-msgstr ""
+msgstr "리눅스 콘솔 설정하기"
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:18
@@ -38771,6 +38771,8 @@ msgid ""
 "command> system service, which configures the virtual console font and "
 "console keymap."
 msgstr ""
+"이 섹션은 가상 콘솔 글꼴과 콘솔 키맵을 설정하는 <command>systemd-vconsole-"
+"setup</command> 시스템 서비스를 구성하는 방법을 설명합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:22
@@ -38784,6 +38786,14 @@ msgid ""
 "class=\"directory\">/usr/share/consolefonts</filename> directory for valid "
 "screen fonts."
 msgstr ""
+"<command>systemd-vconsole-setup</command> 서비스는 설정 정보를 얻기 위해 "
+"<filename>/etc/vconsole.conf</filename> 파일을 읽습니다. 어떤 키맵과 화면 글"
+"꼴을 사용할지 결정하십시오. 다양한 언어별 HOWTO 문서도 도움이 될 수 있으니 "
+"<ulink url=\"https://tldp.org/HOWTO/HOWTO-INDEX/other-lang.html\"/> 참조하십"
+"시오. 유효한 콘솔 키맵 목록을 보려면 <command>localectl list-keymaps</"
+"command>의 출력을 확인하십시오. 유효한 화면 글꼴은 <filename "
+"class=\"directory\">/usr/share/consolefonts</filename> 디렉터리에서 찾을 수 "
+"있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:32
@@ -38791,6 +38801,8 @@ msgid ""
 "The <filename>/etc/vconsole.conf</filename> file should contain lines of the "
 "form: <envar>VARIABLE=value</envar>. The following variables are recognized:"
 msgstr ""
+"<filename>/etc/vconsole.conf</filename> 파일은 <envar>VARIABLE=value</envar> "
+"형식의 행을 포함해야 합니다. 다음 변수들이 인식됩니다:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:38 en/chapter09/usage.xml:364
@@ -38862,6 +38874,17 @@ msgid ""
 "of them, for example <filename>Lat2-Terminus16.psfu.gz</filename> as the "
 "default console font:"
 msgstr ""
+"우리는 <xref role='.' linkend='ch-config-locale'/>에서 리눅스 콘솔의 대화형 "
+"세션을 위한 로캘로 <literal>C.UTF-8</literal>을 사용할 것입니다. "
+"<application>Kbd</application> 패키지에서 제공하는 콘솔 글꼴 중 "
+"<literal>C.UTF-8</literal> 로캘의 프로그램 메시지에 포함된 모든 문자의 글리프"
+"를 포함하고 있는 것은 <filename class='directory'>/usr/share/consolefonts</"
+"filename> 디렉터리 내의 <filename>LatArCyrHeb*.psfu.gz</filename>, "
+"<filename>LatGrkCyr*.psfu.gz</filename>, <filename>Lat2-Terminus16.psfu.gz</"
+"filename> 및 <filename>pancyrillic.f16.psfu.gz</filename>(함께 제공되는 다른 "
+"콘솔 글꼴들은 유니코드 왼쪽/오른쪽 따옴표나 유니코드 영어 대시와 같은 일부 문"
+"자의 글리프가 부족합니다). 따라서 이들 중 하나, 예를 들어 <filename>Lat2-"
+"Terminus16.psfu.gz</filename>를 기본 콘솔 글꼴로 설정:"
 
 #.  We are using "nodump" for general settings, but not examples.  This
 #.        is ironic, but needed for the compatibility with jhalfs!  
@@ -38874,7 +38897,7 @@ msgstr "<userinput>echo <literal>FONT=Lat2-Terminus16</literal> &gt; /etc/vconso
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:96
 msgid "An example for a German keyboard and console is given below:"
-msgstr ""
+msgstr "독일어 키보드와 콘솔을 위한 예:"
 
 #.  This is what is used by jhalfs for creating the vconsole.conf file.
 #.      Whenever you want to change the following, please inform the jhalfs
@@ -38899,6 +38922,8 @@ msgid ""
 "You can change KEYMAP value at runtime by using the <command>localectl</"
 "command> utility:"
 msgstr ""
+"<command>localectl</command> 유틸리티를 사용하여 실행 중에 KEYMAP 값을 변경 "
+"가능:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/consoled.xml:108
@@ -38937,6 +38962,9 @@ msgid ""
 "To list possible values for <command>localectl set-x11-keymap</command> "
 "parameters, run <command>localectl</command> with parameters listed below:"
 msgstr ""
+"<command>localectl set-x11-keymap</command> 매개변수에 사용할 수 있는 값의 목"
+"록을 보려면, 아래에 나열된 매개변수와 함께 <command>localectl</command>를 실"
+"행:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:127
@@ -38984,6 +39012,8 @@ msgid ""
 "Using any of the parameters listed above requires the XKeyboard-Config "
 "package from BLFS."
 msgstr ""
+"위에서 나열한 매개변수 중 어느 것이라도 사용하려면 BLFS의 XKeyboard-Config 패"
+"키지가 필요합니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/etcshells.xml:8 en/chapter09/etcshells.xml:11
@@ -41985,7 +42015,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/usage.xml:62
 msgid "Configuring SysVinit"
-msgstr ""
+msgstr "SysVinit 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter09/usage.xml:70
@@ -42490,6 +42520,18 @@ msgid ""
 "one of them, for example <filename>Lat2-Terminus16.psfu.gz</filename> as the "
 "default console font:"
 msgstr ""
+"우리는 <xref role=',' linkend='ch-config-locale'/>에서 리눅스 콘솔의 대화형 "
+"세션을 위한 로캘로 <literal>C.UTF-8</literal>을 사용할 것이므로, "
+"<literal>UNICODE</literal>를 <literal>1</literal>로 설정해야 합니다. 그리고 "
+"<application>Kbd</application> 패키지에서 제공하는 콘솔 글꼴 중 "
+"<literal>C.UTF-8</literal> 로캘의 프로그램 메시지에 포함된 모든 문자의 글리프"
+"를 포함하고 있는 것은 <filename class='directory'>/usr/share/consolefonts</"
+"filename> 디렉터리 내의 <filename>LatArCyrHeb*.psfu.gz</filename>, "
+"<filename>LatGrkCyr*.psfu.gz</filename>, <filename>Lat2-Terminus16.psfu.gz</"
+"filename>, 그리고 <filename>pancyrillic.f16.psfu.gz</filename>입니다(함께 제"
+"공되는 다른 콘솔 글꼴들은 유니코드 왼쪽/오른쪽 따옴표나 유니코드 영어 대시와 "
+"같은 일부 문자의 글리프가 부족합니다). 따라서 이들 중 하나, 예를 들어 "
+"<filename>Lat2-Terminus16.psfu.gz</filename>를 기본 콘솔 글꼴로 설정:"
 
 #.  We are using 'nodump' for the generic setting, but not for an
 #.            example (see below).  This is deliberate to keep the
@@ -44074,7 +44116,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/kernel.xml:503
 msgid "Configuring Linux Module Load Order"
-msgstr ""
+msgstr "리눅스 모듈 로드 순서 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter10/kernel.xml:506
