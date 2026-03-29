@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-29 20:19+0900\n"
-"PO-Revision-Date: 2026-03-29 20:18+0900\n"
+"POT-Creation-Date: 2026-03-30 04:51+0900\n"
+"PO-Revision-Date: 2026-03-30 04:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -41042,7 +41042,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/systemd-custom.xml:11
 msgid "Systemd Usage and Configuration"
-msgstr "Systemd Usage and Configuration"
+msgstr "Systemd 사용 및 구성"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter09/systemd-custom.xml:14
@@ -41052,7 +41052,7 @@ msgstr "Systemd Customization"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:18
 msgid "Basic Configuration"
-msgstr "Basic Configuration"
+msgstr "기본 구성"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:20
@@ -41064,11 +41064,17 @@ msgid ""
 "See the <ulink role='man' url='&man;systemd-system.conf.5'>systemd-"
 "system.conf(5)</ulink> manual page for details on each configuration option."
 msgstr ""
+"<filename>/etc/systemd/system.conf</filename> 파일은 기본 systemd 동작을 제어"
+"하기 위한 일련의 옵션들을 포함하고 있습니다. 기본 파일은 모든 항목이 주석 처"
+"리되어 있으며 기본 설정값이 표시되어 있습니다. 이 파일은 로그 레벨이나 일부 "
+"기본적인 로깅 설정을 변경할 수 있는 곳입니다. 각 설정 옵션에 대한 자세한 내용"
+"은 <ulink role='man' url='&man;systemd-system.conf.5'>systemd-"
+"system.conf(5)</ulink> 매뉴얼 페이지 보십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:31
 msgid "Disabling Screen Clearing at Boot Time"
-msgstr ""
+msgstr "부팅 시 화면 비우기 비활성화"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:33
@@ -41077,6 +41083,8 @@ msgid ""
 "boot sequence. If desired, this behavior may be changed by running the "
 "following command:"
 msgstr ""
+"systemd의 일반적인 동작은 부팅 시퀀스가 끝날 때 화면을 비우는 것입니다. 이 동"
+"작을 바꾸려면:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/systemd-custom.xml:37
@@ -41107,7 +41115,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:51
 msgid "Disabling tmpfs for /tmp"
-msgstr ""
+msgstr "/tmp에 대한 tmpfs 비활성화"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:53
@@ -41116,6 +41124,8 @@ msgid ""
 "tmpfs. If this is not desired, it can be overridden by executing the "
 "following command:"
 msgstr ""
+"기본적으로, <filename class=\"directory\">/tmp</filename>는 tmpfs로 생성됩니"
+"다. 이것을 원치 않으면, 다음 명령을 실행하여 이 동작을 재정의:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/systemd-custom.xml:57
@@ -41130,6 +41140,8 @@ msgid ""
 "tmp</filename> is desired, specify that partition in a <filename>/etc/fstab</"
 "filename> entry."
 msgstr ""
+"또는, <filename class=\"directory\">/tmp</filename>를 위한 별도의 파티션을 원"
+"한다면, <filename>/etc/fstab</filename> 항목에 해당 파티션을 명시하십시오."
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter09/systemd-custom.xml:65
@@ -41139,11 +41151,15 @@ msgid ""
 "file system (/) from being remounted r/w and make the system unusable when "
 "booted."
 msgstr ""
+"별도의 파티션이 <filename class=\"directory\">/tmp</filename> 디렉터리로 쓰인"
+"다면 위에서 언급한 심볼릭 링크를 만들지 마십시오. 이는 루트 파일 시스템(/)이 "
+"읽기/쓰기(r/w) 모드로 다시 마운트되는 것을 방지하여, 부팅 시 시스템을 사용할 "
+"수 없는 상태로 만들 수 있습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:75
 msgid "Configuring Automatic File Creation and Deletion"
-msgstr ""
+msgstr "자동 파일 생성 및 삭제 구성"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:77
@@ -41219,7 +41235,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:125
 msgid "Overriding Default Services Behavior"
-msgstr ""
+msgstr "기본 서비스 동작 재정의하기"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:127
@@ -41228,6 +41244,9 @@ msgid ""
 "configuration file in <filename class=\"directory\">/etc/systemd/system</"
 "filename>. For example:"
 msgstr ""
+"유닛의 매개변수는 <filename class=\"directory\">/etc/systemd/system</"
+"filename> 디렉터리에 디렉터리와 설정 파일을 생성하여 재정의할 수 있습니다. 예"
+"를 들면:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/systemd-custom.xml:131
@@ -41261,7 +41280,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:148
 msgid "Debugging the Boot Sequence"
-msgstr ""
+msgstr "부팅 과정 디버깅"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:150
@@ -41272,11 +41291,11 @@ msgid ""
 "control state, and obtain status of unit files. Here are some examples of "
 "frequently used commands:"
 msgstr ""
-"Rather than plain shell scripts used in SysVinit or BSD style init systems, "
-"systemd uses a unified format for different types of startup files (or "
-"units). The command <command>systemctl</command> is used to enable, disable, "
-"control state, and obtain status of unit files. Here are some examples of "
-"frequently used commands:"
+"SysVinit 또는 BSD 스타일의 초기화 시스템에서 사용되는 일반적인 셸 스크립트 대"
+"신, systemd는 다양한 유형의 시작 파일(또는 유닛)에 대해 통일된 형식을 사용합"
+"니다. 유닛 파일을 활성화, 비활성화하고 상태를 제어하며 정보를 얻기 위해 "
+"<command>systemctl</command> 명령이 쓰입니다. 자주 사용되는 명령의 몇 가지 예"
+"시:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:158
@@ -41327,7 +41346,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:183
 msgid "Working with the Systemd Journal"
-msgstr ""
+msgstr "Systemd 저널 작업"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:185
@@ -41340,6 +41359,12 @@ msgid ""
 "<command>journalctl</command> is provided.  Here are some examples of "
 "frequently used commands:"
 msgstr ""
+"Systemd 로 부팅된 시스템에서의 로깅은 일반적인 유닉스 syslog 데몬이 아니라 "
+"(기본적으로) systemd-journald 가 처리합니다. 원한다면 일반적인 syslog 데몬을 "
+"추가하여 두 가지가 나란히 작동하도록 할 수도 있습니다. systemd-journald 프로"
+"그램은 저널 항목을 일반 텍스트 로그 파일이 아닌 이진(binary) 형식으로 저장합"
+"니다. 이 파일을 분석하는 것을 돕기 위해 <command>journalctl</command> 명령이 "
+"제공됩니다. 자주 쓰이는 명령 몇 가지 예:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:195
@@ -41372,7 +41397,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:217
 msgid "Working with Core Dumps"
-msgstr ""
+msgstr "코어 덤프(Core Dumps) 작업"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:219
@@ -41385,6 +41410,13 @@ msgid ""
 "<command>coredumpctl</command> tool is provided.  Here are some examples of "
 "frequently used commands:"
 msgstr ""
+"코어 덤프는 충돌이 발생한 프로그램을 디버깅하는 데 유용하며, 특히 데몬 프로세"
+"스가 충돌했을 때 더욱 그렇습니다. systemd 로 부팅된 시스템에서 코어 덤프 처리"
+"는 <command>systemd-coredump</command>가 맡습니다. 이 서비스는 저널에 코어 덤"
+"프 기록을 남기고, 코어 덤프 파일 자체는 <filename class=\"directory\">/var/"
+"lib/systemd/coredump</filename> 디렉터리에 저장합니다. 코어 덤프를 추출하고 "
+"처리하기 위해 <command>coredumpctl</command> 도구가 제공됩니다. 자주 사용되"
+"는 명령 몇 가지 예시:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:230
@@ -41392,6 +41424,7 @@ msgid ""
 "<command>coredumpctl -r</command>: lists all core dumps in reverse "
 "chronological order."
 msgstr ""
+"<command>coredumpctl -r</command>: 모든 코어 덤프를 역순(최신순)으로 나열."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:234
@@ -41414,6 +41447,9 @@ msgid ""
 "dumps can be limited by creating a configuration file in <filename "
 "class=\"directory\">/etc/systemd/coredump.conf.d</filename>.  For example:"
 msgstr ""
+"코어 덤프는 디스크 공간을 많이 쓸 수 있습니다. 코어 덤프가 사용하는 최대 디스"
+"크 공간은 <filename class=\"directory\">/etc/systemd/coredump.conf.d</"
+"filename> 디렉터리에 설정 파일을 생성하여 제한할 수 있습니다. 예를 들면:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/systemd-custom.xml:249
@@ -41441,11 +41477,16 @@ msgid ""
 "and <ulink role='man' url='&man;coredump.conf.d.5'>coredump.conf.d(5)</"
 "ulink> manual pages for more information."
 msgstr ""
+"더 자세한 정보는 <ulink role='man' url='&man;systemd-coredump.8'>systemd-"
+"coredump(8)</ulink>, <ulink role='man' "
+"url='&man;coredumpctl.1'>coredumpctl(1)</ulink>, 그리고 <ulink role='man' "
+"url='&man;coredump.conf.d.5'>coredump.conf.d(5)</ulink> 매뉴얼 페이지 보십시"
+"오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:264
 msgid "Long Running Processes"
-msgstr ""
+msgstr "오래 돌아가는 프로세스"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:266
@@ -41459,6 +41500,14 @@ msgid ""
 "command>) to remain active after ending your user session.  There are three "
 "ways to enable lingering processes to remain after a user session is ended."
 msgstr ""
+"Systemd-230 부터는 사용자가 nohup을 사용하거나 프로세스가 "
+"<function>daemon()</function> 또는 <function>setsid()</function> 함수를 사용"
+"하더라도, 사용자 세션이 끝나면 모든 사용자 프로세스가 죽습니다. 이는 과거의 "
+"관대한 환경에서 더 제한적인 환경으로 의도적으로 변경된 사항입니다. 이러한 새"
+"로운 동작 방식은 사용자 세션을 마친 후에도 <command>screen</command> 또는 "
+"<command>tmux</command> 처럼 장시간 실행되는 프로그램이 활성 상태로 유지되어"
+"야 하는 경우 문제를 일으킬 수 있습니다. 사용자 세션이 끝난 후에도 프로세스가 "
+"계속 남아 있도록 설정하는 세 가지 방법이 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:279
