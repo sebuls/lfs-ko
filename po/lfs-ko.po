@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-30 04:51+0900\n"
-"PO-Revision-Date: 2026-03-30 04:51+0900\n"
+"POT-Creation-Date: 2026-03-30 21:13+0900\n"
+"PO-Revision-Date: 2026-03-30 21:12+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -39849,7 +39849,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/network.xml:11 en/chapter09/networkd.xml:11
 msgid "General Network Configuration"
-msgstr "General Network Configuration"
+msgstr "일반 네크워크 설정"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/network.xml:18
@@ -40226,7 +40226,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/chapter09/networkd.xml:17
 msgid "This section only applies if a network card is to be configured."
-msgstr ""
+msgstr "이 섹션은 네트워크 카드를 설정해야 하는 경우에만 적용됩니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/networkd.xml:21
@@ -40243,6 +40243,11 @@ msgid ""
 "<filename>/etc/resolv.conf</filename> file. Both services are enabled by "
 "default."
 msgstr ""
+"209 버전부터 systemd는 기본적인 네트워크 설정에 사용할 수 있는 "
+"<command>systemd-networkd</command> 네트워크 설정 데몬을 함께 제공합니다. 또"
+"한, 213 버전부터는 정적인 <filename>/etc/resolv.conf</filename> 파일 대신 "
+"<command>systemd-resolved</command>를 통해 DNS 이름 해석을 처리할 수 있습니"
+"다. 두 서비스 모두 기본적으로 활성화되어 있습니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter09/networkd.xml:32
@@ -40252,6 +40257,10 @@ msgid ""
 "you want to use another utility like NetworkManager for network "
 "configuration), disable a service to prevent an error message during boot:"
 msgstr ""
+"만약 네트워크 설정에 <command>systemd-networkd</command>를 사용하지 않을 것이"
+"라면(예를 들어, 시스템이 네트워크에 연결되지 않았거나 NetworkManager와 같은 "
+"다른 유틸리티를 사용하려는 경우), 부팅 중에 오류 메시지 발생을 막기 위해 다"
+"음 서비스 비활성화:"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: en/chapter09/networkd.xml:38
@@ -40277,6 +40286,20 @@ msgid ""
 "ulink>, and <ulink role='man' "
 "url='&man;systemd.network.5'>systemd.network(5)</ulink> manual pages."
 msgstr ""
+"<command>systemd-networkd</command>(및 <command>systemd-resolved</command>)"
+"를 위한 설정 파일은 <filename class=\"directory\">/usr/lib/systemd/network</"
+"filename> 또는 <filename class=\"directory\">/etc/systemd/network</filename> "
+"디렉터리에 놓을 수 있습니다. <filename class=\"directory\">/etc/systemd/"
+"network</filename>에 있는 파일은 <filename class=\"directory\">/usr/lib/"
+"systemd/network</filename>에 있는 파일보다 우선순위가 높습니다. 설정 파일에"
+"는 <filename class=\"extension\">.link</filename>, <filename "
+"class=\"extension\">.netdev</filename>, 그리고 <filename "
+"class=\"extension\">.network</filename> 파일의 세 가지 유형이 있습니다. 이 설"
+"정 파일들에 대한 자세한 설명과 예시 내용은 <ulink role='man' "
+"url='&man;systemd.link.5'>systemd.link(5)</ulink>, <ulink role='man' "
+"url='&man;systemd.netdev.5'>systemd.netdev(5)</ulink>, 그리고 <ulink "
+"role='man' url='&man;systemd.network.5'>systemd.network(5)</ulink> 매뉴얼 페"
+"이지를 참조하십시오."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/networkd.xml:60
@@ -40291,6 +40314,10 @@ msgid ""
 "is, you can always run <command>ip link</command> after you have booted your "
 "system."
 msgstr ""
+"Udev는 일반적으로 enp2s1 같은 물리적 시스템 특성에 기반하여 네트워크 카드 인"
+"터페이스 이름을 할당합니다. 인터페이스 이름이 무엇인지 확실하지 않으면, 시스"
+"템을 부팅한 후 언제든지 <command>ip link</command>를 실행하여 확인할 수 있습"
+"니다."
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/networkd.xml:70
@@ -40303,6 +40330,12 @@ msgid ""
 "running those commands on the host distro, <emphasis>even though you are in "
 "the chroot environment</emphasis>."
 msgstr ""
+"인터페이스 이름은 시스템에서 실행 중인 udev 데몬의 구현 및 설정에 의존합집니"
+"다. LFS를 위한 udev 데몬(<xref linkend=\"ch-system-systemd\"/>에서 설치된 "
+"<command>systemd-udevd</command>)은 LFS 시스템이 부팅되지 않으면 실행되지 않"
+"습니다. <emphasis>따라서 chroot 환경에 있더라도</emphasis> 호스트 배포판에서 "
+"해당 명령을 실행하여 LFS 시스템에서 사용될 인터페이스 이름을 결정하는 것은 믿"
+"을 수 없습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/networkd.xml:81
@@ -40311,6 +40344,9 @@ msgid ""
 "connection.  For example, the classic interface name for a wired connection "
 "is eth0.  A wireless connection will usually have the name wifi0 or wlan0."
 msgstr ""
+"대부분의 시스템에는 각 연결 유형마다 하나의 네트워크 인터페이스만 있습니다. "
+"예를 들어, 유선 연결의 전형적인 인터페이스 이름은 eth0입니다. 무선 연결은 보"
+"통 wifi0 또는 wlan0 이라는 이름을 갖게 됩니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/networkd.xml:88
