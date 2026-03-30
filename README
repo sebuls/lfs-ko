@@ -1,4 +1,8 @@
-LFS Book README
+LFS Book Korean translation README
+
+1. Translate .po file
+2. po4a --force po4a.conf
+3. make
 
 This document is meant to instruct the user on how to convert the book's XML
 source to other formats (e.g. HTML, PDF, PS and TXT).  First, if you have not
