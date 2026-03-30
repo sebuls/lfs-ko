@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-31 03:21+0900\n"
-"PO-Revision-Date: 2026-03-31 03:20+0900\n"
+"POT-Creation-Date: 2026-03-31 05:55+0900\n"
+"PO-Revision-Date: 2026-03-31 05:55+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -39032,7 +39032,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/etcshells.xml:8 en/chapter09/etcshells.xml:11
 msgid "Creating the /etc/shells File"
-msgstr ""
+msgstr "파일 /etc/shells File 생성"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter09/etcshells.xml:14
@@ -39047,6 +39047,10 @@ msgid ""
 "For each shell a single line should be present, consisting of the shell's "
 "path relative to the root of the directory structure (/)."
 msgstr ""
+"<filename>shells</filename> 파일은 시스템에 있는 로그인 셸의 목록을 담고 있습"
+"니다. 응용프로그램은 이 파일을 사용하여 어떤 셸이 유효한지 판단합니다. 각 셸"
+"에 대해 한 줄씩 존재해야 하며, 해당 셸의 경로는 루트 디렉터리 구조(/)를 기준"
+"으로 하는 절대 경로로 구성됩니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/etcshells.xml:23
@@ -39056,6 +39060,9 @@ msgid ""
 "If the command name is not listed, the user will be denied the ability to "
 "change shells."
 msgstr ""
+"예를 들어, <command>chsh</command> 는 일반 사용자가 자기 계정에 대한 로그인 "
+"셸을 변경할 수 있는지 판단하기 위해 이 파일을 참조합니다. 만약 명령 이름이 목"
+"록에 없으면, 사용자는 셸을 변경할 수 있는 권한을 거부당합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/etcshells.xml:28
@@ -39065,6 +39072,10 @@ msgid ""
 "shells</filename>, or FTP daemons which traditionally disallow access to "
 "users with shells not included in this file."
 msgstr ""
+"<application>GDM</application>과 같은 응용 프로그램은 <filename>/etc/shells</"
+"filename>를 찾을 수 없으면 페이스 브라우저(사용자 목록)를 채우지 않으며, 전통"
+"적으로 FTP 데몬은 이 파일에 포함되지 않은 셸을 사용하는 사용자의 접속을 허용"
+"하지 않으므로 이 파일은 필수입니다."
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/etcshells.xml:34
