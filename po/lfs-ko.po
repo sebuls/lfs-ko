@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-03-31 05:55+0900\n"
-"PO-Revision-Date: 2026-03-31 05:55+0900\n"
+"POT-Creation-Date: 2026-04-13 04:29+0900\n"
+"PO-Revision-Date: 2026-04-13 04:29+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -29001,7 +29001,7 @@ msgstr "libpkgconf"
 #. type: Content of: <sect1><title>
 #: en/chapter08/pkgmgt.xml:11
 msgid "Package Management"
-msgstr ""
+msgstr "패키지 관리"
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/pkgmgt.xml:13
@@ -29032,7 +29032,7 @@ msgstr ""
 #: en/chapter08/pkgmgt.xml:25
 msgid ""
 "Some reasons why no package manager is mentioned in LFS or BLFS include:"
-msgstr ""
+msgstr "LFS나 BLFS에서 패키지 관리자가 언급되지 않는 몇 가지 까닭:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:30
@@ -29106,6 +29106,17 @@ msgid ""
 "no correlation between the package version and the version number(s) in the "
 "library name."
 msgstr ""
+"공유 라이브러리의 이름은 ELF 동적 섹션의 <constant>DT_SONAME</constant> 항목"
+"에 기록된 문자열입니다. 이 이름은 <command>readelf -d "
+"<replaceable>&lt;library file&gt;</replaceable> | grep SONAME</command> 명령"
+"으로 확인할 수 있습니다. 대부분의 경우 이름 뒤에 <literal>.so."
+"<replaceable>&lt;a version number&gt;</replaceable></literal>가 붙지만, 버전"
+"을 나타내기 위해 여러 숫자가 포함되거나(<filename>libbz2.so.1.0</filename> "
+"등), <filename class='extension'>.so</filename> 접미사 앞에 버전 번호가 포함"
+"되는 경우(<filename>libbfd-&binutils-version;</filename> 등), 혹은 버전 번호"
+"가 전혀 포함되지 않는 경우(예: <filename>libmemusage.so</filename>)도 있습니"
+"다. 일반적으로 패키지 버전과 라이브러리 이름 안의 버전 번호 사이에는 상관관계"
+"가 없습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:71
@@ -29217,7 +29228,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:179
 msgid "Package Management Techniques"
-msgstr ""
+msgstr "패키지 관리 기술"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgmgt.xml:181
@@ -29230,7 +29241,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:186
 msgid "It is All in My Head!"
-msgstr ""
+msgstr "모든 것은 내 머릿속에 있습니다!"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:188
@@ -29241,11 +29252,15 @@ msgid ""
 "management because they plan on rebuilding the entire system whenever a "
 "package is changed."
 msgstr ""
+"예, 이것은 패키지 관리 기법입니다. 어떤 사람들은 패키지에 대해 매우 잘 알고 "
+"있고, 각 패키지에 의해 어떤 파일들이 설치되는지 꿰뚫고 있기 때문에 패키지 관"
+"리자가 필요하지 않습니다. 또한, 패키지가 변경될 때마다 전체 시스템을 다시 빌"
+"드할 계획을 가진 사용자들에게도 패키지 관리는 필요하지 않을 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:197
 msgid "Install in Separate Directories"
-msgstr ""
+msgstr "별도 디렉터리에 설치"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:199
@@ -29477,7 +29492,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:356
 msgid "Deploying LFS on Multiple Systems"
-msgstr ""
+msgstr "여러 시스템에 LFS 배포하기"
 
 #.  D. Bryant created LFS 11.2 in October 2022; 900MB is (roughly) the size of his rsync archive. 
 #. type: Content of: <sect1><sect2><para>
@@ -29499,6 +29514,20 @@ msgid ""
 "sysconfig/rc.site</filename>, <filename>/etc/sysconfig/network</filename>, "
 "and <filename>/etc/sysconfig/ifconfig.eth0</filename>.  </phrase>"
 msgstr ""
+"LFS 시스템의 장점 중 하나는 디스크 시스템상에서의 파일 위치에 의존하는 파일"
+"이 없다는 것입니다. 기본 시스템과 동일한 아키텍처를 가진 다른 컴퓨터로 LFS 빌"
+"드를 복제하는 것은, 루트 디렉터리를 포함하는 LFS 파티션(기본 LFS 빌드의 경우 "
+"압축을 풀었을 때 약 900MB)에서 <command>tar</command>를 사용하고, 그 파일을 "
+"네트워크 전송이나 CD-ROM / USB 스틱을 통해 새 시스템으로 복사한 후 압축을 푸"
+"는 것만큼이나 간단합니다. 그 후 몇 가지 설정 파일을 변경해야 합니다. 업데이트"
+"가 필요할 수 있는 설정 파일: <filename>/etc/hosts</filename>, <filename>/etc/"
+"fstab</filename>, <filename>/etc/passwd</filename>, <filename>/etc/group</"
+"filename>, <phrase revision=\"systemd\"> <filename>/etc/shadow</filename>, 그"
+"리고 <filename>/etc/ld.so.conf</filename>입니다. </phrase> <phrase "
+"revision=\"sysv\"> <filename>/etc/shadow</filename>, <filename>/etc/"
+"ld.so.conf</filename>, <filename>/etc/sysconfig/rc.site</filename>, "
+"<filename>/etc/sysconfig/network</filename>, 그리고 <filename>/etc/sysconfig/"
+"ifconfig.eth0</filename>. </phrase>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgmgt.xml:384
@@ -29506,6 +29535,8 @@ msgid ""
 "A custom kernel may be needed for the new system, depending on differences "
 "in system hardware and the original kernel configuration."
 msgstr ""
+"새 시스템의 하드웨어 차이와 기존 커널 설정에 따라, 새 시스템을 위한 맞춤형 커"
+"널이 필요할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/pkgmgt.xml:388
@@ -29517,6 +29548,12 @@ msgid ""
 "and the system(s) where you'll deploy the LFS system.  Otherwise you'll get "
 "<computeroutput>Illegal Instruction</computeroutput> errors running LFS."
 msgstr ""
+"LFS 시스템을 다른 CPU를 사용하는 시스템에 배포하려면, <xref linkend='ch-"
+"system-gmp'/> 및 <xref linkend='ch-system-libffi'/>를 빌드할 때 호스트 시스템"
+"과 배포 대상 시스템 모두에 적합한 라이브러리를 생성하기 위해 아키텍처별 최적"
+"화 옵션을 재정의하라는 지침을 반드시 따라야 합니다. 그렇지 않으면 LFS를 실행"
+"할 때 <computeroutput>Illegal Instruction</computeroutput> 오류가 발생할 것입"
+"니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/pkgmgt.xml:396
@@ -29529,6 +29566,13 @@ msgid ""
 "recompile MPFR and maybe other packages using GMP if you want to "
 "<quote>convert</quote> a complete LFS system to be used for a different CPU."
 msgstr ""
+"GMP 빌드 시스템은 GMP를 빌드하는 데 사용된 아키텍처별 최적화 옵션을 "
+"<filename>gmp.h</filename>에 저장하고, GMP를 사용하는 일부 패키지의 빌드 시스"
+"템은 헤더에서 이 옵션을 읽어 패키지 자체를 빌드할 때 사용할 수 있습니다. 적어"
+"도 MPFR 빌드 시스템이 그렇게 하는 것으로 알려져 있습니다. 따라서 전체 LFS 시"
+"스템을 다른 CPU에서 사용하도록 <quote>convert</quote>하려면, 단순히 GMP를 다"
+"시 빌드하는 것만으로는 충분하지 않습니다: MPFR과 GMP를 사용하는 다른 패키지들"
+"도 다시 컴파일해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgmgt.xml:405
@@ -31915,7 +31959,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/stripping.xml:11
 msgid "Stripping"
-msgstr "Stripping"
+msgstr "Strip 하기"
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/stripping.xml:13
@@ -31926,6 +31970,10 @@ msgid ""
 "unnecessary symbol table entries, from binaries and libraries. This causes "
 "no real inconvenience for a typical Linux user."
 msgstr ""
+"이 섹션은 선택사항입니다. 대상 사용자가 프로그래머가 아니고 시스템 소프트웨어"
+"를 디버깅할 계획이 없다면, 바이너리와 라이브러리에서 디버깅 심볼과 일부 불필"
+"요한 심볼 테이블 항목을 제거함으로써 시스템 크기를 약 2GB 정도 줄일 수 있습니"
+"다. 이것은 일반적인 리눅스 사용자에게 실질적인 불편은 없습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/stripping.xml:20
@@ -31935,6 +31983,10 @@ msgid ""
 "system unusable. So before running the <command>strip</command> commands, it "
 "is a good idea to make a backup of the LFS system in its current state."
 msgstr ""
+"아래에서 언급하는 명령을 사용하는 대부분의 사람들은 어떠한 어려움도 겪지 않습"
+"니다. 그러나, 실수하기 쉽고, 그로 인해 새 시스템을 못 쓰게 만들 수 있습니다. "
+"따라서, <command>strip</command> 명령들을 실행하기 전에, 현재 상태의 LFS 시스"
+"템을 백업해 두는 것이 좋습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/stripping.xml:26
@@ -31945,6 +31997,10 @@ msgid ""
 "libraries) or dynamic linker (for dynamically linked binaries and shared "
 "libraries)."
 msgstr ""
+"<command>strip</command> 명령에 <parameter>--strip-unneeded</parameter> 옵션"
+"을 함께 쓰면 바이너리 또는 라이브러리에서 디버그 심볼을 모두 제거합니다. 또"
+"한 링커(정적 라이브러리)나 동적 링커(동적 링크된 바이너리 및 공유 라이브러리)"
+"에 필요하지 않은 모든 심볼 테이블 항목을 제거합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/stripping.xml:32
@@ -31955,6 +32011,11 @@ msgid ""
 "url='&blfs-book;/general/valgrind.html'>valgrind</ulink> or <ulink "
 "url='&blfs-book;/general/gdb.html'>gdb</ulink> later, in BLFS."
 msgstr ""
+"선택된 라이브러리의 디버깅 심볼은 <application>Zstd</application> 로 압축되"
+"어 별도 파일로 보존됩니다. 이 디버깅 정보는 나중에 BLFS에서 <ulink "
+"url='&blfs-book;/general/valgrind.html'>valgrind</ulink> 또는 <ulink "
+"url='&blfs-book;/general/gdb.html'>gdb</ulink> 써서 회귀 테스트(regression "
+"tests)를 실행할 때 필요합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/stripping.xml:39
@@ -31969,6 +32030,15 @@ msgid ""
 "(The related entry in <xref linkend=\"pkgmgmt-upgrade-issues\"/> gives the "
 "rationale for using the <command>install</command> command here.)"
 msgstr ""
+"<command>strip</command> 명령은 처리 중인 바이너리나 라이브러리 파일을 덮어쓴"
+"다는 점 유의하십시오. 이로 인해 해당 파일의 코드나 데이터를 사용 중인 프로세"
+"스가 충돌을 일으킬 수 있습니다. 만약 <command>strip</command>을 실행 중인 프"
+"로세스가 영향을 받는다면, 스트립 중인 바이너리나 라이브러리가 파괴될 수 있으"
+"며, 이는 시스템을 완전히 못쓰게 만들 수 있습니다. 이 문제를 피하기 위해 일부 "
+"라이브러리와 바이너리를 <filename class=\"directory\">/tmp</filename> 디렉터"
+"리로 복사하여 그곳에서 strip 한 다음, <command>install</command> 명령을 사용"
+"하여 다시 설치합니다. (이와 관련된 <xref linkend=\"pkgmgmt-upgrade-issues\"/>"
+"의 항목은 여기서 <command>install</command> 명령을 사용하는 근거를 제공.)"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter08/stripping.xml:49
@@ -31978,6 +32048,10 @@ msgid ""
 "for the current architecture, excluding anything ending with <literal>g</"
 "literal>, in case the commands below have already been run."
 msgstr ""
+"64비트 시스템에서 ELF 로더의 이름은 ld-linux-x86-64.so.2이며, 32비트 시스템에"
+"서는 ld-linux.so.2입니다. 아래 구조는 현재 아키텍처에 맞는 올바른 이름을 선택"
+"하며, 아래 명령이 이미 실행되었을 경우를 대비하여 <literal>g</literal>로 끝나"
+"는 것은 모두 제외합니다."
 
 #. type: Content of: <sect1><important><para>
 #: en/chapter08/stripping.xml:57
@@ -31989,6 +32063,10 @@ msgid ""
 "role='bold'>Failing to do so may render the system completely unusable.</"
 "emphasis>"
 msgstr ""
+"책에서 명시한 버전과 다른 버전 패키지가 있다면(보안 권고를 따랐거나 개인적인 "
+"선호), <envar>save_usrlib</envar> 또는 <envar>online_usrlib</envar>에 정의된 "
+"라이브러리 파일 이름을 업데이트해야 할 수도 있습니다. <emphasis role='bold'>"
+"시스템을 완전히 못 쓰게 될 수도 있습니다.</emphasis>"
 
 #.  also of interest are libgfortan, libgo, libgomp, and libobjc from GCC 
 #. <screen>
@@ -32120,6 +32198,9 @@ msgid ""
 "is not recognized. These warnings can be safely ignored. They indicate that "
 "those files are scripts, not binaries."
 msgstr ""
+"많은 수의 파일이 오류로 표시될 것입니다. 왜냐면 형식을 인식할 수 없으므로. "
+"이 경고는 안전하게 무시해도 됩니다. 이는 해당 파일이 스크립트임을 나타냅니다."
+"바이너리가 아니라."
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/sysklogd.xml:14
