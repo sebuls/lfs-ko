@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-13 04:29+0900\n"
-"PO-Revision-Date: 2026-04-13 04:29+0900\n"
+"POT-Creation-Date: 2026-04-14 04:03+0900\n"
+"PO-Revision-Date: 2026-04-14 04:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -13028,7 +13028,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/chapter08/cleanup.xml:13
 msgid "Finally, clean up some extra files left over from running tests:"
-msgstr ""
+msgstr "마지막으로, 테스트 실행 후 남겨진 몇몇 추가 파일을 깨끗이 청소:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter08/cleanup.xml:15
@@ -13045,6 +13045,11 @@ msgid ""
 "libraries in LFS are expected to be loaded by libltdl, and it's known that "
 "some .la files can break BLFS package builds.  Remove those files now:"
 msgstr ""
+"또한 /usr/lib 및 /usr/libexec 디렉터리에는 파일 확장자가 .la인 파일이 여럿 있"
+"습니다. 이것은 \"libtool archive\" 파일입니다. 현대적인 리눅스 시스템에서 "
+"libtool .la 파일은 오직 libltdl에서만 쓸만합니다. LFS의 어떤 라이브러리도 "
+"libltdl에 의해 로드될 것으로 예상되지 않으며, 일부 .la 파일은 BLFS 패키지 빌"
+"드를 망칠 수 있는 것으로 알려져 있습니다. 이제 그 파일을 삭제:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter08/cleanup.xml:24
@@ -13059,6 +13064,9 @@ msgid ""
 "book;introduction/la-files.html\">BLFS section \"About Libtool Archive (.la) "
 "files\"</ulink>."
 msgstr ""
+"LibTool 아카이브 파일에 대한 더 자세한 정보는 <ulink url=\"&blfs-"
+"book;introduction/la-files.html\">BLFS 섹션 \"About Libtool Archive (.la) "
+"files\"</ulink> 참조하십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/cleanup.xml:30
@@ -13067,6 +13075,9 @@ msgid ""
 "linkend=\"chapter-chroot-temporary-tools\"/> is still partially installed "
 "and not needed anymore. Remove it with:"
 msgstr ""
+"<xref linkend=\"chapter-temporary-tools\"/> 및 <xref linkend=\"chapter-"
+"chroot-temporary-tools\"/>에서 빌드한 컴파일러가 아직도 부분적으로 설치되어 "
+"있으며 더 이상 필요하지 않습니다. 삭제:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter08/cleanup.xml:34
@@ -13080,6 +13091,8 @@ msgid ""
 "Finally, remove the temporary 'tester' user account created at the beginning "
 "of the previous chapter."
 msgstr ""
+"마지막으로, 이전 장의 시작 부분에서 생성했던 임시 'tester' 사용자 계정을 제"
+"거:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter08/cleanup.xml:39
