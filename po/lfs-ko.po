@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-14 04:03+0900\n"
-"PO-Revision-Date: 2026-04-14 04:03+0900\n"
+"POT-Creation-Date: 2026-04-15 02:13+0900\n"
+"PO-Revision-Date: 2026-04-15 02:13+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -40789,12 +40789,12 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/symlinks.xml:11
 msgid "Managing Devices"
-msgstr "Managing Devices"
+msgstr "장치 관리"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/symlinks.xml:15
 msgid "Network Devices"
-msgstr "Network Devices"
+msgstr "네트워크 장치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:17
@@ -41108,7 +41108,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/symlinks.xml:220
 msgid "Dealing with Duplicate Devices"
-msgstr ""
+msgstr "중복 장치 다루기"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:222
@@ -41125,6 +41125,16 @@ msgid ""
 "> and sound card configuration can be found in <ulink url=\"&blfs-"
 "book;postlfs/devices.html\">BLFS</ulink>."
 msgstr ""
+"<xref linkend=\"ch-config-udev\" role=','/>에서 설명했듯이, <filename "
+"class=\"directory\">/dev</filename> 디렉터리에 똑같은 기능을 가진 장치들이 나"
+"타나는 순서는 본질적으로 무작위입니다. 예를 들어, USB 웹캠과 TV 튜너를 사용한"
+"다면, 어떤 때는 <filename>/dev/video0</filename>이 카메라를 가리키고 "
+"<filename>/dev/video1</filename>이 튜너를 가리키지만, 재부팅 후에 그 순서가 "
+"바뀌기도 합니다. 사운드 카드와 네트워크 카드를 제외한 모든 부류의 하드웨어는 "
+"고정된 심볼릭 링크(persistent symlinks)를 생성하는 udev 규칙을 만들어 이 문제"
+"를 해결할 수 있습니다. 네트워크 카드의 경우는 <xref linkend=\"ch-config-"
+"network\" role=','/>에서 별도로 다루며, 사운드 카드 설정은 <ulink "
+"url=\"&blfs-book;postlfs/devices.html\">BLFS</ulink>에서 확인할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:236
@@ -41138,6 +41148,13 @@ msgid ""
 "that identify the device uniquely (usually, vendor and product IDs and/or "
 "serial numbers work):"
 msgstr ""
+"이 문제가 발생할 가능성이 있는 각 장치에 대해(현재 사용 중인 리눅스 배포판에"
+"서 문제가 발생하지 않더라도), <filename class=\"directory\">/sys/class</"
+"filename> 또는 <filename class=\"directory\">/sys/block</filename> 아래의 해"
+"당 디렉터리를 찾으십시오. 비디오 장치에 대해서, <filename "
+"class=\"directory\">/sys/class/video4linux/video<replaceable>X</"
+"replaceable></filename>가 될 수 있습니다. 장치를 고유하게 식별할 수 있는 속성"
+"을 찾으시오(대개 제조사 및 제품 ID 그리고/또는 일련번호):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/symlinks.xml:247
@@ -41148,7 +41165,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/symlinks.xml:249
 msgid "Then write rules that create the symlinks, e.g.:"
-msgstr ""
+msgstr "그런 다음 심볼릭 링크를 생성하는 규칙을 작성하십시오. 예시:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/symlinks.xml:251
@@ -41179,6 +41196,10 @@ msgid ""
 "<filename>/dev/tvtuner</filename> and <filename>/dev/webcam</filename> that "
 "always point to the correct device."
 msgstr ""
+"그 결과 <filename>/dev/video0</filename> 및 <filename>/dev/video1</filename> "
+"장치는 여전히 튜너와 웹캠을 무작위로 가리키게 되며(따라서 절대로 직접 사용해"
+"서는 안 됩니다), 대신 항상 올바른 장치를 가리키는 <filename>/dev/tvtuner</"
+"filename> 및 <filename>/dev/webcam</filename> 심볼릭 링크가 있습니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/systemd-custom.xml:11
