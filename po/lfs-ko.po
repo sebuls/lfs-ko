@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-15 02:13+0900\n"
-"PO-Revision-Date: 2026-04-15 02:13+0900\n"
+"POT-Creation-Date: 2026-04-17 01:40+0900\n"
+"PO-Revision-Date: 2026-04-17 01:40+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5562,7 +5562,7 @@ msgstr "<userinput remap=\"make\">make</userinput>"
 #: en/chapter08/xz.xml:61 en/chapter08/zlib.xml:56 en/chapter08/zstd.xml:59
 #: en/chapter09/bootscripts.xml:46
 msgid "Install the package:"
-msgstr ""
+msgstr "패키지 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/binutils-pass1.xml:182 en/chapter05/gcc-pass1.xml:214
@@ -6244,7 +6244,7 @@ msgstr ""
 #: en/chapter08/xml-parser.xml:48 en/chapter08/xz.xml:53
 #: en/chapter08/zlib.xml:48 en/chapter08/zstd.xml:45
 msgid "Compile the package:"
-msgstr ""
+msgstr "패키지 컴파일:"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter05/glibc.xml:160
@@ -9973,7 +9973,7 @@ msgstr "<userinput remap=\"configure\">./configure --disable-shared</userinput>"
 #: en/chapter08/gdbm.xml:58 en/chapter08/kbd.xml:66 en/chapter08/libffi.xml:71
 #: en/chapter08/procps.xml:59 en/chapter08/tar.xml:52
 msgid "The meaning of the configure option:"
-msgstr ""
+msgstr "Configure 옵션의 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/gettext.xml:59
@@ -10410,6 +10410,9 @@ msgid ""
 "prefix. The one to extract from is <filename>Python-&python-version;.tar.xz</"
 "filename> (notice the uppercase first letter)."
 msgstr ""
+"이름이 <quote>python</quote> 접두사로 시작하는 패키지 파일이 2개 있습니다. 압"
+"축을 풀 파일은 <filename>Python-&python-version;.tar.xz</filename>입니다 (첫 "
+"글자가 대문자임에 유의)."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/python.xml:53 en/chapter08/python.xml:52
@@ -10468,6 +10471,13 @@ msgid ""
 "not needed now and they will be built in <xref linkend=\"chapter-building-"
 "system\"/>."
 msgstr ""
+"일부 Python 3 모듈은 의존성 패키지가 아직 안 설치되었기 때문에 지금은 빌드할 "
+"수 없습니다. <filename>ssl</filename> 모듈의 경우, <computeroutput>Python "
+"requires a OpenSSL 1.1.1 or newer</computeroutput>라는 메시지가 출력됩니다. "
+"이 메시지는 무시해야 합니다. 그저 최상위 수준의 <command>make</command> 명령"
+"이 실패하지 않았는지만 확인하십시오. 선택 사항인 모듈들은 지금 당장 필요하지 "
+"않으며, 나중에 <xref linkend=\"chapter-building-system\"/>에서 빌드될 것입니"
+"다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/python.xml:113
@@ -11210,7 +11220,7 @@ msgstr "Prepare Autoconf for compilation:"
 #: en/chapter08/xml-parser.xml:52 en/chapter08/xz.xml:57
 #: en/chapter08/zlib.xml:52 en/chapter08/zstd.xml:55
 msgid "To test the results, issue:"
-msgstr ""
+msgstr "결과 테스트 하려면:"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/autoconf.xml:66
@@ -23835,6 +23845,8 @@ msgid ""
 "The Kbd package contains key-table files, console fonts, and keyboard "
 "utilities."
 msgstr ""
+"Kbd 패키지에는 key-table files, console fonts, 및 keyboard 유틸리티가 들어있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/kbd.xml:34
@@ -23858,6 +23870,8 @@ msgid ""
 "keymaps in the Kbd package. The following patch fixes this issue for i386 "
 "keymaps:"
 msgstr ""
+"백스페이스와 딜리트 키의 동작은 Kbd 패키지의 키맵 사이에서 일관되지 않습니"
+"다. 다음 패치는 i386 키맵에서 이 문제를 해결:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:48
@@ -23871,6 +23885,8 @@ msgid ""
 "After patching, the backspace key generates the character with code 127, and "
 "the delete key generates a well-known escape sequence."
 msgstr ""
+"패치를 적용하고 나면, 백스페이스 키는 코드 127에 해당하는 문자를 생성하며, 딜"
+"리트 키는 잘 알려진 이스케이프 시퀀스를 생성합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:53
@@ -23880,10 +23896,9 @@ msgid ""
 "<command>setfont</command> sizes the console appropriately) together with "
 "its manpage."
 msgstr ""
-"Remove the redundant <command>resizecons</command> program (it requires the "
-"defunct svgalib to provide the video mode files - for normal use "
-"<command>setfont</command> sizes the console appropriately) together with "
-"its manpage."
+"중복 <command>resizecons</command> 프로그램(비디오 모드 파일을 제공하기 위해 "
+"지금은 사라진 svgalib를 필요로 합니다. 일반적인 용도로는 <command>setfont</"
+"command>가 콘솔 크기를 적절하게 조정합니다)과 해당 매뉴얼 페이지를 삭제."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:58
@@ -23898,7 +23913,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:61
 msgid "Prepare Kbd for compilation:"
-msgstr "Prepare Kbd for compilation:"
+msgstr "컴파일을 위해 Kbd 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:63
@@ -23926,6 +23941,10 @@ msgid ""
 "ISO-8859-5 encoding, and the CP1251 keymap is normally used. Users of such "
 "languages have to download working keymaps separately."
 msgstr ""
+"일부 언어(예: 벨라루스어)의 경우, 기본 <quote>by</quote> 키맵이 ISO-8859-5 인"
+"코딩을 사용한다고 가정하고 실제로는 CP1251 키맵이 주로 사용되기 때문에 Kbd 패"
+"키지에서 유용한 키맵을 제공하지 않습니다. 이러한 언어 사용자는 작동하는 키맵"
+"을 별도로 다운로드해야 합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/kbd.xml:100
@@ -23948,6 +23967,11 @@ msgid ""
 "psfxtable), psfxtable, setfont, setkeycodes, setleds, setmetamode, setvtrgb, "
 "showconsolefont, showkey, unicode_start, and unicode_stop"
 msgstr ""
+"chvt, deallocvt, dumpkeys, fgconsole, getkeycodes, kbdinfo, kbd_mode, "
+"kbdrate, loadkeys, loadunimap, mapscrn, openvt, psfaddtable (link to "
+"psfxtable), psfgettable (link to psfxtable), psfstriptable (link to "
+"psfxtable), psfxtable, setfont, setkeycodes, setleds, setmetamode, setvtrgb, "
+"showconsolefont, showkey, unicode_start, 및 unicode_stop"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/kbd.xml:118
@@ -23956,7 +23980,7 @@ msgid ""
 "share/doc/kbd-&kbd-version;, and /usr/share/unimaps"
 msgstr ""
 "/usr/share/consolefonts, /usr/share/consoletrans, /usr/share/keymaps, /usr/"
-"share/doc/kbd-&kbd-version;, and /usr/share/unimaps"
+"share/doc/kbd-&kbd-version; 및 /usr/share/unimaps"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kbd.xml:129
@@ -29073,7 +29097,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:46
 msgid "Upgrade Issues"
-msgstr ""
+msgstr "업그레이드 이슈"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgmgt.xml:48
@@ -31841,7 +31865,7 @@ msgstr "Installation of Sqlite"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:45
 msgid "Unpack the documentation:"
-msgstr ""
+msgstr "문서 압축풀기:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/sqlite.xml:47
@@ -48219,7 +48243,7 @@ msgstr "<emphasis role=\"bold\">TFTP</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:469
 msgid "Trivial File Transfer Protocol"
-msgstr ""
+msgstr "Trivial File Transfer Protocol"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:474
