@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-17 01:40+0900\n"
-"PO-Revision-Date: 2026-04-17 01:40+0900\n"
+"POT-Creation-Date: 2026-04-18 04:43+0900\n"
+"PO-Revision-Date: 2026-04-18 04:43+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -36978,7 +36978,7 @@ msgstr "Vim"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:26
 msgid "The Vim package contains a powerful text editor."
-msgstr ""
+msgstr "Vim 패키지에는 강력한 텍스트 편집기가 들어있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/vim.xml:33
@@ -37002,6 +37002,8 @@ msgid ""
 "refer to <ulink url=\"&blfs-book;postlfs/editors.html\"/> for suggested "
 "installation instructions."
 msgstr ""
+"다른 에디터(Emacs, Joe 또는 Nano 등)를 좋아한다면, <ulink url=\"&blfs-"
+"book;postlfs/editors.html\"/>에서 제안하는 설치 지침을 참조하십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/vim.xml:50
@@ -37014,6 +37016,8 @@ msgid ""
 "First, change the default location of the <filename>vimrc</filename> "
 "configuration file to <filename class=\"directory\">/etc</filename>:"
 msgstr ""
+"먼저, <filename>vimrc</filename> 설정 파일의 기본 위치를 <filename "
+"class=\"directory\">/etc</filename> 디렉터리로 바꿈:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:55
@@ -37024,7 +37028,7 @@ msgstr "<userinput remap=\"pre\">echo '#define SYS_VIMRC_FILE \"/etc/vimrc\"' &g
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:57
 msgid "Prepare Vim for compilation:"
-msgstr "Prepare Vim for compilation:"
+msgstr "컴파일 위해 Vim 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:65
@@ -37034,6 +37038,10 @@ msgid ""
 "exclude one file containing tests requiring <command>curl</command> or "
 "<command>wget</command>:"
 msgstr ""
+"테스트를 준비하려면, <systemitem class=\"username\">tester</systemitem> 사용"
+"자가 소스 트리(source tree)에 쓸 수 있는 권한이 있는지 확인하고, "
+"<command>curl</command>이나 <command>wget</command>이 필요한 테스트들이 포함"
+"된 파일 하나를 제외:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:70
@@ -37050,6 +37058,8 @@ msgstr ""
 msgid ""
 "Now run the tests as user <systemitem class=\"username\">tester</systemitem>:"
 msgstr ""
+"이제 <systemitem class=\"username\">tester</systemitem> 사용자로 테스트를 실"
+"행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:76
@@ -37071,6 +37081,12 @@ msgid ""
 "log file as shown above.  A successful test will result in the words "
 "<computeroutput>ALL DONE</computeroutput> in the log file at completion."
 msgstr ""
+"테스트 스위트 화면에 대량의 바이너리 데이터를 출력합니다. 이는 현재 터미널 설"
+"정에 문제를 일으킬 수 있습니다(특히 테스트 제품군의 몇 가지 전제를 충족하기 "
+"위해 우리가 <envar>TERM</envar> 환경변수를 재설정하고 있는 동안에는 더욱 그러"
+"함). 위에서 보여준 것처럼 출력을 로그 파일로 리다이렉션하면 이 문제를 피할 "
+"수 있습니다. 테스트가 성공하면 완료 시 로그 파일에 <computeroutput>ALL DONE</"
+"computeroutput> 문구가 나옵니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:87
@@ -37078,6 +37094,8 @@ msgid ""
 "Two tests, Test_client_server_stopinsert() and Test_popup_setbuf(), are "
 "known to fail on some systems."
 msgstr ""
+"두 테스트 Test_client_server_stopinsert() 및 Test_popup_setbuf()는 일부 시스"
+"템에서 실패하는 것으로 알려져 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/vim.xml:94
@@ -37087,6 +37105,10 @@ msgid ""
 "enter <command>vi</command>, create a symlink for both the binary and the "
 "man page in the provided languages:"
 msgstr ""
+"많은 사용자가 습관적으로 <command>vi</command>를 <command>vim</command> 대신 "
+"입력합니다. 사용자가 평소 습관대로 <command>vi</command>를 입력했을 때도 "
+"<command>vim</command>이 실행될 수 있도록, 제공된 언어별로 바이너리와 매뉴얼 "
+"페이지 모두에 대한 심볼릭 링크를 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:100
@@ -37111,6 +37133,10 @@ msgid ""
 "share/doc/vim-&vim-version;</filename>, making it consistent with the "
 "location of documentation for other packages:"
 msgstr ""
+"기본적으로 Vim 문서는 <filename class=\"directory\">/usr/share/vim</filename>"
+"에 설치됩니다. 다음 심볼릭 링크를 쓰면 <filename class=\"directory\">/usr/"
+"share/doc/vim-&vim-version;</filename>을 통해 문서에 접근할 수 있으며, 이는 "
+"다른 패키지들의 문서 위치와 일관성을 유지:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:111
@@ -37128,6 +37154,11 @@ msgid ""
 "Vim installation page in the BLFS book at <ulink url=\"&blfs-book;postlfs/"
 "vim.html\"/>."
 msgstr ""
+"만약 LFS 시스템에 X 윈도우 시스템을 설치할 예정이라면, X 설치 후에 Vim을 다"
+"시 컴파일해야 할 수도 있습니다. Vim은 X와 몇 가지 추가 라이브러리 설치를 필요"
+"로 하는 GUI 버전 에디터를 제공합니다. 이 과정에 대한 자세한 정보는 Vim 문서"
+"와 <ulink url=\"&blfs-book;postlfs/vim.html\"/> 에 있는 BLFS 책의 Vim 설치 페"
+"이지를 참조하십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/vim.xml:124
@@ -37233,6 +37264,12 @@ msgid ""
 "character encoding from <filename class='directory'>runtime/spell</filename> "
 "into <filename class='directory'> /usr/share/&vim-docdir;/spell/</filename>."
 msgstr ""
+"기본적으로 Vim은 영어 맞춤법 검사 파일만 설치합니다. 좋아하는 언어의 맞춤법 "
+"검사 파일을 설치하려면, 해당 언어와 문자 인코딩에 맞는 <filename "
+"class='extension'>.spl</filename> 파일과 (선택 사항으로) <filename "
+"class='extension'>.sug</filename> 파일을 <filename class='directory'>runtime/"
+"spell</filename>에서 <filename class='directory'>/usr/share/&vim-docdir;/"
+"spell/</filename> 디렉터리로 복사하십시오."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/vim.xml:186
@@ -37240,6 +37277,8 @@ msgid ""
 "To use these spell-checking files, some configuration in <filename>/etc/"
 "vimrc</filename> is needed, e.g.:"
 msgstr ""
+"이 맞춤법 검사 파일들을 사용하려면 <filename>/etc/vimrc</filename>에 몇 가지 "
+"설정이 필요합니다. 예를 들면:"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: en/chapter08/vim.xml:189
@@ -37248,12 +37287,14 @@ msgid ""
 "<literal>set spelllang=en,ru\n"
 "set spell</literal>"
 msgstr ""
+"<literal>set spelllang=en,ru\n"
+"set spell</literal>"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/vim.xml:192
 msgid ""
 "For more information, see <filename>runtime/spell/README.txt</filename>."
-msgstr ""
+msgstr "더 많은 정보는 <filename>runtime/spell/README.txt</filename> 참조."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/vim.xml:199
