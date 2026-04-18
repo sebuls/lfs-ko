@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-18 04:43+0900\n"
-"PO-Revision-Date: 2026-04-18 04:43+0900\n"
+"POT-Creation-Date: 2026-04-18 16:44+0900\n"
+"PO-Revision-Date: 2026-04-18 16:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -24988,7 +24988,7 @@ msgstr "&elfutils-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libelf.xml:42
 msgid "Installation of Libelf"
-msgstr "Installation of Libelf"
+msgstr "Libelf 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:44
@@ -24996,11 +24996,13 @@ msgid ""
 "Libelf is part of the elfutils-&elfutils-version; package. Use the elfutils-"
 "&elfutils-version;.tar.bz2 file as the source tarball."
 msgstr ""
+"Libelf는 elfutils-&elfutils-version; 패키지의 일부입니다. 소스 타르볼"
+"(tarball)로는 elfutils-&elfutils-version;.tar.bz2 파일을 사용하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:47
 msgid "Prepare Libelf for compilation:"
-msgstr "Prepare Libelf for compilation:"
+msgstr "컴파일 위한 Libelf 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libelf.xml:49
@@ -25017,7 +25019,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:53
 msgid "Compile only Libelf:"
-msgstr ""
+msgstr "LibElf만 컴파일:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libelf.xml:55
@@ -25032,7 +25034,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:66
 msgid "The test suite fails to build with glibc-2.43 or newer."
-msgstr ""
+msgstr "테스트 스위트가 glibc-2.43 또는 그 이상의 버전에서는 빌드 안 됨:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libelf.xml:68
@@ -25054,7 +25056,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libelf.xml:77
 msgid "Contents of Libelf"
-msgstr ""
+msgstr "LibElf 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libelf.xml:85
@@ -25074,7 +25076,7 @@ msgstr "<filename class=\"libraryfile\">libelf.so</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libelf.xml:102
 msgid "Contains API functions to handle ELF object files"
-msgstr ""
+msgstr "ELF 오브젝트 파일을 처리하기 위한 API 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libelf.xml:104
@@ -25093,6 +25095,8 @@ msgid ""
 "<productname>libffi</productname> <productnumber>&libffi-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>libffi</productname> <productnumber>&libffi-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/libffi.xml:17
@@ -25191,7 +25195,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libffi.xml:103
 msgid "Contents of Libffi"
-msgstr ""
+msgstr "Libffi 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libffi.xml:109
