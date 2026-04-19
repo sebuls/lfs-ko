@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-19 05:33+0900\n"
-"PO-Revision-Date: 2026-04-19 05:33+0900\n"
+"POT-Creation-Date: 2026-04-19 17:11+0900\n"
+"PO-Revision-Date: 2026-04-19 17:11+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5109,7 +5109,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter05/binutils-pass1.xml:17
 msgid "Binutils-&binutils-version; - Pass 1"
-msgstr ""
+msgstr "Binutils-&binutils-version; - 단계 1"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter05/binutils-pass1.xml:20 en/chapter06/binutils-pass2.xml:20
@@ -5257,6 +5257,9 @@ msgid ""
 "generalinstructions\"/>.  Understanding the notes labeled important can save "
 "you a lot of problems later."
 msgstr ""
+"<xref linkend=\"ch-tools-generalinstructions\"/> 섹션에 있는 노트들을 다시 "
+"한 번 읽어보십시오. important 라고 표시된 노트를 이해하면 나중에 발생할 수 있"
+"는 많은 문제들을 막을 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:51
@@ -5265,6 +5268,9 @@ msgid ""
 "Glibc and GCC perform various tests on the available linker and assembler to "
 "determine which of their own features to enable."
 msgstr ""
+"Binutils를 가장 먼저 컴파일하는 것이 중요한데, 왜냐면 Glibc 및 GCC 모두 사용 "
+"가능한 링커와 어셈블리에 대해 다양한 테스트를 수행하여 자신의 기능 중 어떤 것"
+"을 활성화할지 결정하기 때문."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:56 en/chapter08/binutils.xml:44
@@ -5272,6 +5278,7 @@ msgid ""
 "The Binutils documentation recommends building Binutils in a dedicated build "
 "directory:"
 msgstr ""
+"Binutils 문서는 Binutils를 별도의 전용 빌드 디렉터리에서 빌드할 것을 권장:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/binutils-pass1.xml:59 en/chapter05/gcc-pass1.xml:95
@@ -5297,6 +5304,11 @@ msgid ""
 "commands in a <command>time</command> command like this: <userinput>time "
 "{ ../configure ... &amp;&amp; make &amp;&amp; make install; }</userinput>."
 msgstr ""
+"책의 나머지 부분에 나열된 SBU 값이 쓸만하려면, 설정을 시작할 때부터 첫 번째 "
+"설치를 마칠 때까지 이 패키지를 빌드하는 데 걸리는 시간을 측정하십시오. 이를 "
+"쉽게 수행하려면 다음과 같이 명령들을 <command>time</command> 명령으로 감싸십"
+"시오: <userinput>time { ../configure ... &amp;&amp; make &amp;&amp; make "
+"install; }</userinput> 처럼."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:71
@@ -5469,7 +5481,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/binutils-pass1.xml:176
 msgid "Continue with compiling the package:"
-msgstr ""
+msgstr "패키지 컴파일 계속:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/binutils-pass1.xml:178 en/chapter05/gcc-pass1.xml:210
@@ -5601,7 +5613,7 @@ msgstr "<userinput remap=\"install\">make install</userinput>"
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-binutils\" "
 "role=\".\"/>"
-msgstr ""
+msgstr "패키지 상세는 <xref linkend=\"contents-binutils\" role=\".\"/>"
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter05/chapter05.xml:8
@@ -11958,6 +11970,8 @@ msgid ""
 "The Binutils package contains a linker, an assembler, and other tools for "
 "handling object files."
 msgstr ""
+"Binutils 패키지에는 링커, 어셈블러 및 오브젝트 파일을 처리하기 위한 기타 도구"
+"가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:34
