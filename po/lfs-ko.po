@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-19 17:11+0900\n"
-"PO-Revision-Date: 2026-04-19 17:11+0900\n"
+"POT-Creation-Date: 2026-04-20 05:17+0900\n"
+"PO-Revision-Date: 2026-04-20 04:22+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5109,7 +5109,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter05/binutils-pass1.xml:17
 msgid "Binutils-&binutils-version; - Pass 1"
-msgstr "Binutils-&binutils-version; - 단계 1"
+msgstr "Binutils-&binutils-version; - 패스 1"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter05/binutils-pass1.xml:20 en/chapter06/binutils-pass2.xml:20
@@ -5647,7 +5647,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter05/gcc-pass1.xml:17
 msgid "GCC-&gcc-version; - Pass 1"
-msgstr "GCC-&gcc-version; - 단계 1"
+msgstr "GCC-&gcc-version; - 패스 1"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/chapter05/gcc-pass1.xml:20 en/chapter05/libstdc++.xml:20
@@ -9399,7 +9399,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter07/createfiles.xml:11
 msgid "Creating Essential Files and Symlinks"
-msgstr "필수 파일들과 심볼릭 링크 생성:"
+msgstr "필수 파일들과 심볼릭 링크 생성"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter07/createfiles.xml:14
@@ -16654,7 +16654,7 @@ msgstr ""
 #: en/chapter08/groff.xml:56 en/chapter08/jinja2.xml:43
 #: en/chapter08/setuptools.xml:43 en/chapter08/tcl.xml:76
 msgid "Build the package:"
-msgstr ""
+msgstr "패키지 빌드:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expect.xml:115
@@ -30837,7 +30837,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/setuptools.xml:17
 msgid "Setuptools-&setuptools-version;"
-msgstr ""
+msgstr "Setuptools-&setuptools-version;"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter08/setuptools.xml:20 en/appendices/dependencies.xml:2832
@@ -30850,16 +30850,18 @@ msgid ""
 "Setuptools is a tool used to download, build, install, upgrade, and "
 "uninstall Python packages."
 msgstr ""
+"Setuptools는 파이썬 패키지를 다운로드, 빌드, 설치, 업그레이드 및 제거하는 데 "
+"사용하는 도구입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/setuptools.xml:33
 msgid "&setuptools-fin-sbu;"
-msgstr ""
+msgstr "&setuptools-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/setuptools.xml:34
 msgid "&setuptools-fin-du;"
-msgstr ""
+msgstr "&setuptools-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/setuptools.xml:41
@@ -30875,7 +30877,7 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist s
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/setuptools.xml:53
 msgid "Contents of Setuptools"
-msgstr ""
+msgstr "Setuptools 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/setuptools.xml:60
