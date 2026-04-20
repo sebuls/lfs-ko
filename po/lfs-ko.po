@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-20 05:17+0900\n"
-"PO-Revision-Date: 2026-04-20 04:22+0900\n"
+"POT-Creation-Date: 2026-04-21 03:58+0900\n"
+"PO-Revision-Date: 2026-04-21 03:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5623,7 +5623,7 @@ msgstr "제5장"
 #. type: Content of: <chapter><title>
 #: en/chapter05/chapter05.xml:12
 msgid "Compiling a Cross-Toolchain"
-msgstr "크로스 툴제인 컴파일"
+msgstr "크로스 툴체인 컴파일"
 
 #. type: Attribute 'xreflabel' of: <sect1>
 #: en/chapter05/gcc-pass1.xml:8
@@ -27756,6 +27756,9 @@ msgid ""
 "other packages, such as OpenSSH, email applications, and web browsers (for "
 "accessing HTTPS sites)."
 msgstr ""
+"OpenSSL 패키지에는 암호화와 관련된 관리 도구 및 라이브러리가 들어 있습니다. "
+"이는 다른 패키지에 암호화 기능을 제공하는 데 쓸만합니다. OpenSSH, 이메일 애플"
+"리케이션, 웹 브라우저(HTTPS 사이트 접속용)등. "
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/openssl.xml:36
@@ -27775,7 +27778,7 @@ msgstr "Installation of OpenSSL"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:52
 msgid "Prepare OpenSSL for compilation:"
-msgstr "Prepare OpenSSL for compilation:"
+msgstr "컴파일 위한 OpenSSL 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:54
@@ -27810,6 +27813,13 @@ msgid ""
 "option> if the CPU supports AES-NI)  enabled.  If it fails, it can safely be "
 "ignored."
 msgstr ""
+"한 테스트, 30-test_afalg.t 는 호스트 커널에 "
+"<option>CONFIG_CRYPTO_USER_API_SKCIPHER</option> 옵션이 활성화 안 되었거나, "
+"CBC를 사용하는 AES 구현을 제공하는 옵션(예를 들어, CPU가 AES-NI를 지원하는 경"
+"우 <option>CONFIG_CRYPTO_AES</option> 및 <option>CONFIG_CRYPTO_CBC</option> "
+"조합 또는 <option>CONFIG_CRYPTO_AES_NI_INTEL</option>)이 하나도 활성화되어 있"
+"지 않으면, 실패하는 것으로 알려져 있습니다. 만약 실패하면 안전하게 무시해도 "
+"됩니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:78
@@ -27826,7 +27836,7 @@ msgstr ""
 msgid ""
 "Add the version to the documentation directory name, to be consistent with "
 "other packages:"
-msgstr ""
+msgstr "버전을 디렉터리 이름에 추가하여 다른 패키지와 일관성 유지:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:84
@@ -27837,7 +27847,7 @@ msgstr "<userinput remap=\"install\">mv -v /usr/share/doc/openssl /usr/share/doc
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:86
 msgid "If desired, install some additional documentation:"
-msgstr ""
+msgstr "필요하면, 추가 문서 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/openssl.xml:88
@@ -27857,6 +27867,13 @@ msgid ""
 "class=\"libraryfile\">libssl.so</filename> <emphasis>when upgrading to a "
 "version with the same MAJOR version number</emphasis>."
 msgstr ""
+"취약점을 수정한 새 버전이 발표되면 OpenSSL을 업데이트해야 합니다. OpenSSL "
+"3.0.0 부터 버전 명명 규칙은 MAJOR.MINOR.PATCH 형식을 따릅니다. 동일한 MAJOR "
+"버전 번호에 대해서는 API/ABI 호환성이 보장됩니다. LFS는 공유 라이브러리만 설"
+"치하므로, 동일한 MAJOR 버전 번호를 가진 버전으로 업그레이드할 때 <filename "
+"class=\"libraryfile\">libcrypto.so</filename> 또는 <filename "
+"class=\"libraryfile\">libssl.so</filename> 에 링크된 패키지를 다시 컴파일할 "
+"필요가 없습니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/openssl.xml:105
@@ -27865,11 +27882,14 @@ msgid ""
 "and restarted. Read the related entries in <xref linkend='pkgmgmt-upgrade-"
 "issues'/> for details."
 msgstr ""
+"하지만, 해당 라이브러리에 연결되어 실행 중인 모든 프로그램을 멈추었다 다시 시"
+"작해야 합니다. 자세한 내용은 <xref linkend='pkgmgmt-upgrade-issues'/>에 있는 "
+"관련 항목을 읽으십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/openssl.xml:115
 msgid "Contents of OpenSSL"
-msgstr ""
+msgstr "OpenSSL 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/openssl.xml:124
@@ -27879,7 +27899,7 @@ msgstr "c_rehash and openssl"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/openssl.xml:127
 msgid "libcrypto.so and libssl.so"
-msgstr ""
+msgstr "libcrypto.so 및 libssl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/openssl.xml:130
