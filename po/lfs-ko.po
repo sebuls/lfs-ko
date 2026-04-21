@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-21 03:58+0900\n"
-"PO-Revision-Date: 2026-04-21 03:57+0900\n"
+"POT-Creation-Date: 2026-04-21 23:26+0900\n"
+"PO-Revision-Date: 2026-04-21 23:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -20989,6 +20989,8 @@ msgid ""
 "The Groff package contains programs for processing and formatting text and "
 "images."
 msgstr ""
+"Groff 패키지에는 텍스트 및 이미지를 처리하고 서식을 맞추는 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/groff.xml:34
@@ -21003,7 +21005,7 @@ msgstr "&groff-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/groff.xml:42
 msgid "Installation of Groff"
-msgstr "Installation of Groff"
+msgstr "Groff 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/groff.xml:44
@@ -21015,11 +21017,17 @@ msgid ""
 "compilation, it can be overridden later by echoing either <quote>A4</quote> "
 "or <quote>letter</quote> to the <filename>/etc/papersize</filename> file."
 msgstr ""
+"Groff는 환경 변수 <envar>PAGE</envar>에 기본 용지 크기가 설정되어 있을 것으"
+"로 예상합니다. 미국 사용자에게는 <parameter>PAGE=letter</parameter>가 적절합"
+"니다. 그 외의 지역에서는 <parameter>PAGE=A4</parameter>가 더 적합할 수 있습니"
+"다. 기본 용지 크기는 컴파일 중에 설정되지만, 나중에 <filename>/etc/"
+"papersize</filename> 파일에 <quote>A4</quote>나 <quote>letter</quote>를 기록"
+"(echo)하여 설정을 바꿀 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/groff.xml:52
 msgid "Prepare Groff for compilation:"
-msgstr "Prepare Groff for compilation:"
+msgstr "컴파일 위한 Groff 준비"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/groff.xml:54
@@ -21030,7 +21038,7 @@ msgstr "<userinput remap=\"configure\">PAGE=<replaceable>&lt;paper_size&gt;</rep
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/groff.xml:71
 msgid "Contents of Groff"
-msgstr ""
+msgstr "Groff 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/groff.xml:78
@@ -21047,14 +21055,14 @@ msgstr ""
 "gropdf, grops, grotty, hpftodit, indxbib, lkbib, lookbib, mmroff, neqn, "
 "nroff, pdfmom, pdfroff, pfbtops, pic, pic2graph, post-grohtml, preconv, pre-"
 "grohtml, refer, roff2dvi, roff2html, roff2pdf, roff2ps, roff2text, roff2x, "
-"soelim, tbl, tfmtodit, and troff"
+"soelim, tbl, tfmtodit, 및 troff"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/groff.xml:85
 msgid ""
 "/usr/lib/groff and /usr/share/doc/groff-&groff-version;, /usr/share/groff"
 msgstr ""
-"/usr/lib/groff and /usr/share/doc/groff-&groff-version;, /usr/share/groff"
+"/usr/lib/groff 및 /usr/share/doc/groff-&groff-version;, /usr/share/groff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/groff.xml:96
