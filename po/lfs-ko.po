@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-22 21:22+0900\n"
-"PO-Revision-Date: 2026-04-22 21:21+0900\n"
+"POT-Creation-Date: 2026-04-23 04:18+0900\n"
+"PO-Revision-Date: 2026-04-23 04:18+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -23073,6 +23073,8 @@ msgid ""
 "<productname>intltool</productname> <productnumber>&intltool-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>intltool</productname> <productnumber>&intltool-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/intltool.xml:17
@@ -23091,6 +23093,8 @@ msgid ""
 "The Intltool is an internationalization tool used for extracting "
 "translatable strings from source files."
 msgstr ""
+"Intltool은 소스 파일에서 번역 가능한 문자열을 추출하는 데 사용하는 국제화 도"
+"구입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/intltool.xml:34
@@ -23105,12 +23109,12 @@ msgstr "&intltool-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/intltool.xml:42
 msgid "Installation of Intltool"
-msgstr "Installation of Intltool"
+msgstr "Intltool 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/intltool.xml:44
 msgid "First fix a warning that is caused by perl-5.22 and later:"
-msgstr ""
+msgstr "먼저 perl-5.22 및 그 이후 버전에서 발생하는 경고를 수정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/intltool.xml:46
@@ -23125,11 +23129,14 @@ msgid ""
 "What it does is add a backslash before the right brace character in the "
 "sequence '\\${' resulting in '\\$\\{'."
 msgstr ""
+"위의 정규 표현식은 역슬래시가 많아 생소해 보일 수 있습니다. 이 식이 하는 일"
+"은 '\\${' 오른쪽 중괄호 문자 앞에 역슬래시를 추가하여 '\\$\\{' 결과가 나오게 "
+"하는 것입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/intltool.xml:52
 msgid "Prepare Intltool for compilation:"
-msgstr "Prepare Intltool for compilation:"
+msgstr "컴파일용 Intltool 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/intltool.xml:66
@@ -23144,7 +23151,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/intltool.xml:72
 msgid "Contents of Intltool"
-msgstr ""
+msgstr "Intltool 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/intltool.xml:79
@@ -23152,7 +23159,7 @@ msgid ""
 "intltool-extract, intltool-merge, intltool-prepare, intltool-update, and "
 "intltoolize"
 msgstr ""
-"intltool-extract, intltool-merge, intltool-prepare, intltool-update, and "
+"intltool-extract, intltool-merge, intltool-prepare, intltool-update, 및 "
 "intltoolize"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -23168,7 +23175,7 @@ msgstr "<command>intltoolize</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:94
 msgid "Prepares a package to use intltool"
-msgstr "Prepares a package to use intltool"
+msgstr "intltool 쓰기 위한 패키지 준비"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:96
