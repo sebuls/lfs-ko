@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-22 03:25+0900\n"
-"PO-Revision-Date: 2026-04-22 03:24+0900\n"
+"POT-Creation-Date: 2026-04-22 21:22+0900\n"
+"PO-Revision-Date: 2026-04-22 21:21+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4425,7 +4425,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:30
 msgid "<parameter>-s /bin/bash</parameter>"
-msgstr ""
+msgstr "<parameter>-s /bin/bash</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:32
@@ -4433,6 +4433,8 @@ msgid ""
 "This makes <command>bash</command> the default shell for user <systemitem "
 "class=\"username\">lfs</systemitem>."
 msgstr ""
+"이것은 <command>bash</command>를 <systemitem class=\"username\">lfs</"
+"systemitem> 사용자의 기본 셸로 합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:38
@@ -4782,7 +4784,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><title>
 #: en/chapter04/settingenviron.xml:55
 msgid "The meaning of the settings in <filename>.bashrc</filename>"
-msgstr ""
+msgstr "<filename>.bashrc</filename> 설정의 뜻"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:58
@@ -4986,6 +4988,9 @@ msgid ""
 ">), you may safely restore <filename>/etc/bash.bashrc</filename> (if "
 "desired)."
 msgstr ""
+"<systemitem class=\"username\">lfs</systemitem> 사용자가 더 이상 필요 없게 되"
+"면(<xref linkend=\"chapter-chroot-temporary-tools\"/>의 시작 부분), 원한다면 "
+"<filename>/etc/bash.bashrc</filename>를 안전하게 복구해도 됩니다."
 
 #. type: Content of: <sect1><important><para>
 #: en/chapter04/settingenviron.xml:189
@@ -7215,7 +7220,7 @@ msgstr "Installation of Bash"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/bash.xml:46 en/chapter08/bash.xml:43
 msgid "Prepare Bash for compilation:"
-msgstr "Prepare Bash for compilation:"
+msgstr "컴파일용 Bash 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/bash.xml:48
@@ -7249,8 +7254,7 @@ msgstr ""
 #: en/chapter06/bash.xml:77
 msgid ""
 "Make a link for the programs that use <command>sh</command> for a shell:"
-msgstr ""
-"Make a link for the programs that use <command>sh</command> for a shell:"
+msgstr "<command>sh</command>를 셸로 사용하는 프로그램들을 위해 링크를 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/bash.xml:80
@@ -11620,7 +11624,7 @@ msgstr "automake-&am-minor-version;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bash.xml:26
 msgid "The Bash package contains the Bourne-Again Shell."
-msgstr ""
+msgstr "Bash 패키지에는 Bourne-Again Shell 이 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bash.xml:33
