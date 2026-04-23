@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-23 04:18+0900\n"
-"PO-Revision-Date: 2026-04-23 04:18+0900\n"
+"POT-Creation-Date: 2026-04-24 03:18+0900\n"
+"PO-Revision-Date: 2026-04-24 03:17+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6622,16 +6622,18 @@ msgid ""
 "<productname>gcc-libstdc++</productname> <productnumber>&gcc-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>gcc-libstdc++</productname> <productnumber>&gcc-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter05/libstdc++.xml:17
 msgid "Libstdc++ from GCC-&gcc-version;"
-msgstr "Libstdc++ from GCC-&gcc-version;"
+msgstr "GCC-&gcc-version; 에서부터 Libstdc++"
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: en/chapter05/libstdc++.xml:21
 msgid "tools, libstdc++ pass 1"
-msgstr "tools, libstdc++ pass 1"
+msgstr "tools, libstdc++ 패스 1"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:27
@@ -6641,10 +6643,10 @@ msgid ""
 "we built <xref linkend=\"ch-tools-gcc-pass1\"/> because Libstdc++ depends on "
 "Glibc, which was not yet available in the target directory."
 msgstr ""
-"Libstdc++ is the standard C++ library. It is needed to compile C++ code "
-"(part of GCC is written in C++), but we had to defer its installation when "
-"we built <xref linkend=\"ch-tools-gcc-pass1\"/> because Libstdc++ depends on "
-"Glibc, which was not yet available in the target directory."
+"Libstdc++는 표준 C++ 라이브러리입니다. C++ 코드를 컴파일하는 데 꼭 필요하지만"
+"(GCC의 일부는 C++로 썼다), <xref linkend=\"ch-tools-gcc-pass1\"/> 을 빌드할 "
+"때는 설치를 미루어야 했습니다. Libstdc++ 가 Glibc에 의존하는데, 그것은 대상 "
+"디렉터리에 Glibc가 아직 안 되기 때문입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter05/libstdc++.xml:40
@@ -6659,7 +6661,7 @@ msgstr "&libstdcpp-tmpp1-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter05/libstdc++.xml:48
 msgid "Installation of Target Libstdc++"
-msgstr "Installation of Target Libstdc++"
+msgstr "Target Libstdc++ 설치"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/libstdc++.xml:51
@@ -6668,16 +6670,19 @@ msgid ""
 "first unpack the GCC tarball and change to the <filename>gcc-&gcc-version;</"
 "filename> directory."
 msgstr ""
+"<application>Libstdc++</application> 는 GCC 소스의 일부입니다. 먼저 GCC 타르"
+"볼(tarball)의 압축을 풀고 <filename>gcc-&gcc-version;</filename> 디렉터리로 "
+"이동하십쇼."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:56
 msgid "Create a separate build directory for Libstdc++ and enter it:"
-msgstr ""
+msgstr "Libstdc++를 위한 별도의 빌드 디렉터리를 만들고 그 안으로 이동:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:61
 msgid "Prepare Libstdc++ for compilation:"
-msgstr "Prepare Libstdc++ for compilation:"
+msgstr "컴파일 위한 Libstdc++ 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/libstdc++.xml:63
@@ -6704,7 +6709,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/libstdc++.xml:76
 msgid "<parameter>--host=...</parameter>"
-msgstr ""
+msgstr "<parameter>--host=...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/libstdc++.xml:78
@@ -6767,9 +6772,7 @@ msgstr "라이브러리 설치:"
 msgid ""
 "Remove the libtool archive files because they are harmful for cross-"
 "compilation:"
-msgstr ""
-"Remove the libtool archive files because they are harmful for cross-"
-"compilation:"
+msgstr "크로스 컴파일에 해가 되는 libtool 아카이브 파일을 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/libstdc++.xml:127
