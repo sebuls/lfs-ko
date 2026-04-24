@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-25 02:01+0900\n"
-"PO-Revision-Date: 2026-04-25 02:00+0900\n"
+"POT-Creation-Date: 2026-04-25 03:27+0900\n"
+"PO-Revision-Date: 2026-04-25 03:27+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -3529,7 +3529,7 @@ msgstr "MD5 sum: <literal>&perl-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:657
 msgid "Pkgconf (&pkgconf-version;) - <token>&pkgconf-size;</token>:"
-msgstr ""
+msgstr "Pkgconf (&pkgconf-version;) - <token>&pkgconf-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:659
@@ -29010,6 +29010,8 @@ msgid ""
 "<productname>pkgconf</productname> <productnumber>&pkgconf-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>pkgconf</productname> <productnumber>&pkgconf-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/pkgconf.xml:17
@@ -29029,6 +29031,9 @@ msgid ""
 "passing the include path and/or library paths to build tools during the "
 "configure and make phases of package installations."
 msgstr ""
+"Pkgconf 패키지는 pkg-config의 후계자이며, 패키지 설치의 configure 및 make 단"
+"계에서 빌드 도구에 인클루드 경로 및 라이브러리 경로를 전달하는 도구를 포함합"
+"니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/pkgconf.xml:36
@@ -29066,7 +29071,7 @@ msgstr ""
 #: en/chapter08/pkgconf.xml:61
 msgid ""
 "To maintain compatibility with the original Pkg-config create two symlinks:"
-msgstr ""
+msgstr "기존 Pkg-config와의 호환성을 유지하기 위해 심볼릭 링크 2개 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/pkgconf.xml:64
@@ -29081,7 +29086,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgconf.xml:70
 msgid "Contents of Pkgconf"
-msgstr ""
+msgstr "Pkgconf 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/pkgconf.xml:78
