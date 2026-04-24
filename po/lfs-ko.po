@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-25 03:27+0900\n"
-"PO-Revision-Date: 2026-04-25 03:27+0900\n"
+"POT-Creation-Date: 2026-04-25 08:18+0900\n"
+"PO-Revision-Date: 2026-04-25 08:17+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -37666,6 +37666,8 @@ msgid ""
 "<productname>xml-parser</productname> <productnumber>&xml-parser-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>xml-parser</productname> <productnumber>&xml-parser-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/xml-parser.xml:17
@@ -37684,6 +37686,7 @@ msgid ""
 "The XML::Parser module is a Perl interface to James Clark's XML parser, "
 "Expat."
 msgstr ""
+"XML::Parser 모듈은 James Clark의 XML 파서 Expat에 대한 Perl 인터페이스입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/xml-parser.xml:34
@@ -37714,12 +37717,12 @@ msgstr "<userinput remap=\"configure\">perl Makefile.PL</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/xml-parser.xml:63
 msgid "Contents of XML::Parser"
-msgstr ""
+msgstr "XML::Parser 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/xml-parser.xml:66
 msgid "Installed module"
-msgstr ""
+msgstr "설치된 모듈"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/xml-parser.xml:69
@@ -46690,6 +46693,8 @@ msgid ""
 "This package yields a relatively small XML parsing library.  It is required "
 "by the XML::Parser Perl module."
 msgstr ""
+"이 패키지는 상대적으로 작은 크기의 XML 파싱 라이브러리를 생성합니다. 이 라이"
+"브러리는 XML::Parser Perl 모듈을 빌드하는 데 필수적입니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:150
