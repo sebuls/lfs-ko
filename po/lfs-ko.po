@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-24 03:18+0900\n"
-"PO-Revision-Date: 2026-04-24 03:17+0900\n"
+"POT-Creation-Date: 2026-04-25 02:01+0900\n"
+"PO-Revision-Date: 2026-04-25 02:00+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -16952,6 +16952,8 @@ msgid ""
 "The Flex package contains a utility for generating programs that recognize "
 "patterns in text."
 msgstr ""
+"Flex 패키지에는 텍스트 내의 패턴을 인식하는 프로그램을 생성하는 유틸리티가 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/flex.xml:34
@@ -16994,6 +16996,11 @@ msgid ""
 "filename> in <command>lex</command> emulation mode, and also create the man "
 "page of <command>lex</command> as a symlink:"
 msgstr ""
+"일부 프로그램은 아직 <command>flex</command>를 인식 못하고 그 전신인 "
+"<command>lex</command>를 실행하려고 시도합니다. 이러한 프로그램들을 지원하기 "
+"위해, <filename>flex</filename> 를 <filename>lex</filename> 에뮬레이션 모드"
+"로 실행하는 <filename>lex</filename> 이름의 심볼릭 링크를 생성하고, "
+"<filename>lex</filename> 매뉴얼 페이지도 심볼릭 링크로 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/flex.xml:79
@@ -17008,7 +17015,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flex.xml:85
 msgid "Contents of Flex"
-msgstr ""
+msgstr "Flex 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/flex.xml:93
