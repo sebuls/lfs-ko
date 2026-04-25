@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-25 08:18+0900\n"
-"PO-Revision-Date: 2026-04-25 08:17+0900\n"
+"POT-Creation-Date: 2026-04-26 05:07+0900\n"
+"PO-Revision-Date: 2026-04-26 05:07+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -17423,7 +17423,7 @@ msgstr "&gcc-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:44 en/chapter08/libxcrypt.xml:44
 msgid "First, make a fix required by glibc-2.43 and later:"
-msgstr ""
+msgstr "먼저, glibc-2.43 및 그 이후 버전에서 요구하는 수정 사항을 적용:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:46
@@ -25525,6 +25525,8 @@ msgid ""
 "<productname>libxcrypt</productname> <productnumber>&libxcrypt-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>libxcrypt</productname> <productnumber>&libxcrypt-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/libxcrypt.xml:17
@@ -25543,6 +25545,8 @@ msgid ""
 "The Libxcrypt package contains a modern library for one-way hashing of "
 "passwords."
 msgstr ""
+"Libxcrypt 패키지에는 비밀번호의 단방향 해싱을 위한 현대적인 라이브러리가 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libxcrypt.xml:34
@@ -25568,7 +25572,7 @@ msgstr "<userinput remap=\"pre\">sed -i '/strchr/s/const//' lib/crypt-{sm3,gost}
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libxcrypt.xml:48
 msgid "Prepare Libxcrypt for compilation:"
-msgstr "Prepare Libxcrypt for compilation:"
+msgstr "컴파일용 Libxcrypt준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libxcrypt.xml:50
@@ -25634,6 +25638,12 @@ msgid ""
 "some binary-only application or to be compliant with LSB, build the package "
 "again with the following commands:"
 msgstr ""
+"위의 지침은 소스로부터 컴파일하여 설치된 그 어떤 패키지도 실행 시에 해당 기능"
+"들을 연결(link)하지 않기 때문에, 더 이상 사용되지 않는(obsolete) API 함수들"
+"을 비활성화했습니다. 그러나, 이 함수를 연결하는 유일하게 알려진 바이너리 전용"
+"(binary-only) 애플리케이션들은 ABI 버전 1을 요구합니다. 만약 특정 바이너리 전"
+"용 애플리케이션 때문이나 LSB(Linux Standard Base) 준수를 위해 이러한 함수들"
+"이 반드시 필요하다면, 다음 명령들을 사용하여 패키지를 다시 빌드:"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: en/chapter08/libxcrypt.xml:110
@@ -25660,7 +25670,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libxcrypt.xml:123
 msgid "Contents of Libxcrypt"
-msgstr ""
+msgstr "Libxcrypt 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libxcrypt.xml:129
@@ -28422,7 +28432,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/perl.xml:74
 msgid "The meaning of the new Configure options:"
-msgstr ""
+msgstr "새 configure 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:77
@@ -30319,6 +30329,9 @@ msgid ""
 "programs, and developing entire applications. Python is an interpreted "
 "computer language."
 msgstr ""
+"Python 3 패키지에는 파이썬 개발 환경이 들어 있습니다. 이는 개체 지향 프로그래"
+"밍, 스크립트 작성, 대규모 프로그램의 프로토타이핑, 그리고 전체 애플리케이션 "
+"개발에 유용합니다. 파이썬은 인터프리터 컴퓨터 언어입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/python.xml:36
@@ -30354,7 +30367,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/python.xml:64
 msgid "<parameter>--with-system-expat</parameter>"
-msgstr ""
+msgstr "<parameter>--with-system-expat</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/python.xml:66
@@ -30465,6 +30478,12 @@ msgid ""
 "command> as a non-&root; user may seem to work, but it will cause the "
 "installed module to be inaccessible by other users."
 msgstr ""
+"LFS와 BLFS에서는 일반적으로 <command>pip3</command> 명령을 사용하여 파이썬 모"
+"듈을 빌드하고 설치합니다. 두 책에 나오는 <command>pip3 install</command> 명령"
+"은 반드시 &root; 사용자로 실행해야 합니다(파이썬 가상 환경을 사용하는 경우는 "
+"제외). 일반 사용자로 <command>pip3 install</command> 실행하면 겉으로는 설치"
+"가 잘 된 것처럼 보일 수 있지만, 설치된 모듈을 다른 사용자가 사용할 수 없게 되"
+"는 원인이 됩니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/python.xml:156
@@ -30477,6 +30496,12 @@ msgid ""
 "the same version for some reason, insert <parameter>--force-reinstall --no-"
 "deps</parameter> into the command line."
 msgstr ""
+"<command>pip3 install</command>은 이미 설치된 모듈을 자동으로 다시 설치하지 "
+"않습니다. 모듈을 업그레이드할 때(예를 들어 meson-0.61.3에서 meson-0.62.0으"
+"로) <command>pip3 install</command> 명령을 사용하려면, 명령줄에 <parameter>--"
+"upgrade</parameter> 옵션을 추가하십시오. 만약 어떤 이유로 모듈을 다운그레이드"
+"하거나 동일한 버전을 다시 설치해야만 한다면, 명령줄에 <parameter>--force-"
+"reinstall --no-deps</parameter> 추가하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:167
@@ -30982,6 +31007,8 @@ msgstr "Shadow"
 msgid ""
 "The Shadow package contains programs for handling passwords in a secure way."
 msgstr ""
+"Shadow 패키지에는 비밀번호를 안전한 방식으로 처리하기 위한 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/shadow.xml:34
@@ -31005,6 +31032,9 @@ msgid ""
 "book;postlfs/shadow.html'>the BLFS instructions</ulink> instead of this page "
 "to build, rebuild, upgrade shadow."
 msgstr ""
+"Linux-PAM을 설치했다면, Shadow 패키지를 빌드, 재빌드 또는 업그레이드할 때 이 "
+"페이지 대신 <ulink url='&blfs-book;postlfs/shadow.html'>BLFS 지침</ulink>을 "
+"따라야 합니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/shadow.xml:54
@@ -31015,6 +31045,12 @@ msgid ""
 "shadow with the PAM support</ulink>.  Finally <ulink url='&blfs-book;postlfs/"
 "libpwquality.html'>install libpwquality and configure PAM to use it</ulink>."
 msgstr ""
+"강력한 비밀번호 사용을 강제하고 싶다면, <ulink url='&blfs-book;postlfs/linux-"
+"pam.html'> Linux-PAM을 설치하고 설정</ulink>하십시오. 그다음 PAM 지원 기능을 "
+"포함하여 <ulink url='&blfs-book;postlfs/shadow.html'>Shadow를 설치하고 설정</"
+"ulink>하십시오. <ulink url='&blfs-book;postlfs/"
+"libpwquality.html'>libpwquality를 설치하고 이를 사용하도록 PAM을 설정</ulink>"
+"하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:63
@@ -31024,6 +31060,10 @@ msgid ""
 "installation of manual pages that were already installed in <xref "
 "linkend=\"ch-system-man-pages\"/>:"
 msgstr ""
+"<command>groups</command> 프로그램과 그 매뉴얼 페이지 설치를 비활성화하십시"
+"오. Coreutils에서 더 나은 버전을 제공하기 때문입니다. 또한, <xref "
+"linkend=\"ch-system-man-pages\"/>에서 이미 설치된 매뉴얼 페이지중복 설치 방"
+"지:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:68
@@ -31053,6 +31093,15 @@ msgid ""
 "they are simply symlinks to their counterparts in <filename "
 "class=\"directory\">/usr</filename>."
 msgstr ""
+"기본 <emphasis>crypt</emphasis> 방식 대신 훨씬 더 안전하고 8자보다 긴 비밀번"
+"호를 허용하는 <emphasis>YESCRYPT</emphasis> 비밀번호 암호화 방식을 사용하세"
+"요. 또한, Shadow가 기본적으로 사용하는 사용자 메일함의 구식 위치인 <filename "
+"class=\"directory\">/var/spool/mail</filename> 디렉터리를 현재 사용되는 "
+"<filename class=\"directory\">/var/mail</filename> 위치로 바꾸어야 합니다. 그"
+"리고 <filename class=\"directory\">/bin</filename> 및 <filename "
+"class=\"directory\">/sbin</filename>은 단순히 <filename class=\"directory\">/"
+"usr</filename> 내의 해당 디렉터리들에 대한 심볼릭 링크일 뿐이므로, "
+"<envar>PATH</envar>에서 빼세요."
 
 #.  known example: SPIRV-LLVM-Translator 
 #. type: Content of: <sect1><sect2><warning><para>
@@ -31063,6 +31112,10 @@ msgid ""
 "cause some BLFS packages fail to build, so don't do that in the "
 "<filename>.bashrc</filename> file or anywhere else."
 msgstr ""
+"<envar>PATH</envar> 변수에 <filename class=\"directory\">/bin</filename> 및 "
+"<filename class=\"directory\">/sbin</filename>을 포함하는 것은 일부 BLFS 패키"
+"지의 빌드 실패를 야기할 수 있으므로, .<filename>.bashrc</filename> 파일 또는 "
+"다른 어느 곳에서도 그렇게 설정하지 마세요."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:94
