@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-26 22:12+0900\n"
-"PO-Revision-Date: 2026-04-26 22:12+0900\n"
+"POT-Creation-Date: 2026-04-27 04:37+0900\n"
+"PO-Revision-Date: 2026-04-27 04:36+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -10619,6 +10619,8 @@ msgid ""
 "<productname>util-linux</productname> <productnumber>&util-linux-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>util-linux</productname> <productnumber>&util-linux-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter07/util-linux.xml:17 en/chapter08/util-linux.xml:17
@@ -10635,7 +10637,7 @@ msgstr "Util-linux"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:27
 msgid "The Util-linux package contains miscellaneous utility programs."
-msgstr ""
+msgstr "Util-linux 패키지에는 다양한 기타 유틸리티 프로그램이 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter07/util-linux.xml:34
@@ -10670,7 +10672,7 @@ msgstr "<userinput remap=\"pre\">mkdir -pv /var/lib/hwclock</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:52 en/chapter08/util-linux.xml:45
 msgid "Prepare Util-linux for compilation:"
-msgstr "Prepare Util-linux for compilation:"
+msgstr "컴파일 용 Util-linux 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/util-linux.xml:54
@@ -10934,7 +10936,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/acl.xml:71
 msgid "Contents of Acl"
-msgstr ""
+msgstr "Acl 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/acl.xml:74 en/chapter08/attr.xml:71
@@ -11130,7 +11132,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/attr.xml:68
 msgid "Contents of Attr"
-msgstr ""
+msgstr "Attr 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/attr.xml:76
@@ -11283,7 +11285,7 @@ msgstr "결과 테스트 하려면:"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/autoconf.xml:66
 msgid "Contents of Autoconf"
-msgstr ""
+msgstr "Autoconf 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/autoconf.xml:70 en/chapter08/bash.xml:121
@@ -11535,7 +11537,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/automake.xml:73
 msgid "Contents of Automake"
-msgstr ""
+msgstr "Automake 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/automake.xml:80
@@ -11744,7 +11746,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bash.xml:117
 msgid "Contents of Bash"
-msgstr ""
+msgstr "Bash 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bash.xml:124
@@ -11927,7 +11929,7 @@ msgstr "<userinput remap=\"test\">make test</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bc.xml:98
 msgid "Contents of Bc"
-msgstr ""
+msgstr "Bc 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bc.xml:104
@@ -12149,7 +12151,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/binutils.xml:144
 msgid "Contents of Binutils"
-msgstr ""
+msgstr "Binutils 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/binutils.xml:148 en/chapter08/bzip2.xml:132
@@ -12599,7 +12601,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/s
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bison.xml:62
 msgid "Contents of Bison"
-msgstr ""
+msgstr "Bison 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bison.xml:70
@@ -12874,7 +12876,7 @@ msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libbz2.a</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bzip2.xml:128
 msgid "Contents of Bzip2"
-msgstr ""
+msgstr "Bzip2 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bzip2.xml:136
@@ -13366,7 +13368,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/coreutils.xml:174
 msgid "Contents of Coreutils"
-msgstr ""
+msgstr "Coreutils 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/coreutils.xml:182
@@ -15198,7 +15200,7 @@ msgstr "<userinput remap=\"install\">ln -sfv /etc/machine-id /var/lib/dbus</user
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dbus.xml:96
 msgid "Contents of D-Bus"
-msgstr ""
+msgstr "D-Bus 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/dbus.xml:104
@@ -15465,7 +15467,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dejagnu.xml:71
 msgid "Contents of DejaGNU"
-msgstr ""
+msgstr "DejaGNU 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/dejagnu.xml:74 en/chapter08/expat.xml:72
@@ -15532,7 +15534,7 @@ msgstr "&diffutils-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/diffutils.xml:64
 msgid "Contents of Diffutils"
-msgstr ""
+msgstr "Diffutils 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/diffutils.xml:70
@@ -15815,7 +15817,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:171
 msgid "Contents of E2fsprogs"
-msgstr ""
+msgstr "E2fsprogs 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/e2fsprogs.xml:179
@@ -16480,7 +16482,7 @@ msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{html,css} /usr/shar
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expat.xml:69
 msgid "Contents of Expat"
-msgstr ""
+msgstr "Expat 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/expat.xml:77 en/chapter08/expat.xml:94
@@ -16681,7 +16683,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expect.xml:121
 msgid "Contents of Expect"
-msgstr ""
+msgstr "Expect 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/expect.xml:128 en/chapter08/expect.xml:144
@@ -16742,7 +16744,7 @@ msgstr "&file-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/file.xml:64
 msgid "Contents of File"
-msgstr ""
+msgstr "File 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/file.xml:71 en/chapter08/file.xml:88
@@ -16844,7 +16846,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/findutils.xml:95
 msgid "Contents of Findutils"
-msgstr ""
+msgstr "Findutils 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/findutils.xml:102
@@ -17236,7 +17238,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flit-core.xml:108
 msgid "Contents of Flit-Core"
-msgstr ""
+msgstr "Flit-Core 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/flit-core.xml:115
@@ -17879,7 +17881,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gcc.xml:363
 msgid "Contents of GCC"
-msgstr ""
+msgstr "GCC 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gcc.xml:371
@@ -18456,7 +18458,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gdbm.xml:89
 msgid "Contents of GDBM"
-msgstr ""
+msgstr "GDBM 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gdbm.xml:96
@@ -18586,7 +18588,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gettext.xml:84
 msgid "Contents of Gettext"
-msgstr ""
+msgstr "Gettext 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gettext.xml:92
@@ -19873,7 +19875,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/glibc.xml:631
 msgid "Contents of Glibc"
-msgstr ""
+msgstr "Glibc 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/glibc.xml:639
@@ -20765,7 +20767,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gmp.xml:133
 msgid "Contents of GMP"
-msgstr ""
+msgstr "GMP 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gmp.xml:140
@@ -20865,7 +20867,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --docdir=/usr/s
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gperf.xml:62
 msgid "Contents of Gperf"
-msgstr ""
+msgstr "Gperf 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gperf.xml:69 en/chapter08/gperf.xml:84
@@ -20920,7 +20922,7 @@ msgstr "<userinput remap=\"pre\">sed -i \"s/echo/#echo/\" src/egrep.sh</userinpu
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/grep.xml:69
 msgid "Contents of Grep"
-msgstr ""
+msgstr "Grep 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/grep.xml:75
@@ -21993,7 +21995,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/grub.xml:118
 msgid "Contents of GRUB"
-msgstr ""
+msgstr "GRUB 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/grub.xml:126
@@ -35163,6 +35165,9 @@ msgid ""
 "The Util-linux package contains miscellaneous utility programs.  Among them "
 "are utilities for handling file systems, consoles, partitions, and messages."
 msgstr ""
+"Util-linux 패키지에는 다양한 기타 유틸리티 프로그램이 들어 있습니다. 그중에"
+"는 파일 시스템, 콘솔, 파티션, 그리고 메시지를 처리하기 위한 유틸리티가 들어 "
+"있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/util-linux.xml:35
@@ -35261,6 +35266,9 @@ msgid ""
 "components that either require packages not in LFS, or are inconsistent with "
 "programs installed by other packages."
 msgstr ""
+"--disable 및 --without 옵션들은 LFS에 포함되지 않은 패키지를 필요로 하거나, "
+"다른 패키지에 의해 설치된 프로그램과 일치하지 않는 구성 요소를 빌드할 때 발생"
+"하는 경고를 막습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/util-linux.xml:96
@@ -35268,6 +35276,8 @@ msgid ""
 "If desired, create a dummy <filename>/etc/fstab</filename> file to satisfy "
 "two tests and run the test suite as a non-&root; user:"
 msgstr ""
+"원하면, 두 가지 테스트를 통족시키기 위해 더미 /etc/fstab 파일을 생성하고, "
+"&root; 아닌 사용자로 테스트 스위트 실행:"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter08/util-linux.xml:100
@@ -35280,6 +35290,12 @@ msgid ""
 "installed.  If desired, this test can be run by booting into the completed "
 "LFS system and running:"
 msgstr ""
+"<systemitem class=\"username\">root</systemitem> 사용자로 테스트 스위트를 실"
+"행하는 것은 시스템에 해로울 수 있습니다. 테스트를 실행하려면 현재 실행 중인 "
+"시스템에서 커널의 CONFIG_SCSI_DEBUG 옵션을 사용할 수 있어야 하며, 반드시 모듈"
+"로 빌드되어 있어야 합니다. 이를 커널에 포함하여 빌드하면 부팅 안 됩니다. 완전"
+"한 테스트 범위를 확보하려면 다른 BLFS 패키지가 설치되어 있어야 합니다. 원하신"
+"다면, 완성된 LFS 시스템으로 부팅한 후 다음 명령을 실행하여 이 테스트를 수행."
 
 #. type: Content of: <sect1><sect2><warning><screen>
 #: en/chapter08/util-linux.xml:108
@@ -35310,11 +35326,19 @@ msgid ""
 "SSE3) enabled. In addition, the lsfd: inotify test will fail if the kernel "
 "option <option>CONFIG_NETLINK_DIAG</option> is not enabled."
 msgstr ""
+"호스트 커널에 <option>CONFIG_CRYPTO_USER_API_HASH</option> 옵션이 활성화 안 "
+"되었거나, SHA256 구현을 제공하는 옵션(예를 들어 "
+"<option>CONFIG_CRYPTO_SHA256</option>, 또는 "
+"<option>CONFIG_CRYPTO_SHA256_SSSE3</option> 지원하는 경우 "
+"<option>CONFIG_CRYPTO_SHA256_SSSE3</option>) 중 어느 하나라도 활성화되어 있"
+"지 않으면 <emphasis>hardlink</emphasis> 테스트는 실패할 것입니다. 추가로, 커"
+"널 옵션 <option>CONFIG_NETLINK_DIAG</option> 가 활성화 안 되면 lsfd: inotify "
+"테스트가 실패할 것입니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/util-linux.xml:138
 msgid "Contents of Util-linux"
-msgstr ""
+msgstr "Util-linux 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/util-linux.xml:146
@@ -35348,13 +35372,12 @@ msgstr ""
 "rtcwake, script, scriptlive, scriptreplay, setarch, setsid, setterm, sfdisk, "
 "sulogin, swaplabel, swapoff, swapon, switch_root, taskset, uclampset, ul, "
 "umount, uname26 (link to setarch), unshare, utmpdump, uuidd, uuidgen, "
-"uuidparse, wall, wdctl, whereis, wipefs, x86_64 (link to setarch), and "
-"zramctl"
+"uuidparse, wall, wdctl, whereis, wipefs, x86_64 (link to setarch), 및 zramctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/util-linux.xml:160
 msgid "libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, and libuuid.so"
-msgstr "libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, and libuuid.so"
+msgstr "libblkid.so, libfdisk.so, libmount.so, libsmartcols.so, 및 libuuid.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/util-linux.xml:162
@@ -38278,7 +38301,7 @@ msgstr "<userinput remap=\"install\">rm -fv /usr/lib/libz.a</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zlib.xml:67
 msgid "Contents of Zlib"
-msgstr ""
+msgstr "Zlib 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/zlib.xml:73
@@ -38383,7 +38406,7 @@ msgstr "<userinput remap=\"install\">rm -v /usr/lib/libzstd.a</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/zstd.xml:69
 msgid "Contents of Zstd"
-msgstr ""
+msgstr "Zstd 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/zstd.xml:76
