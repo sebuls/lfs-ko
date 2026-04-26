@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-26 05:07+0900\n"
-"PO-Revision-Date: 2026-04-26 05:07+0900\n"
+"POT-Creation-Date: 2026-04-26 22:12+0900\n"
+"PO-Revision-Date: 2026-04-26 22:12+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -3309,7 +3309,7 @@ msgstr "MD5 sum: <literal>&man-pages-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:558
 msgid "MarkupSafe (&markupsafe-version;) - <token>&markupsafe-size;</token>:"
-msgstr ""
+msgstr "MarkupSafe (&markupsafe-version;) - <token>&markupsafe-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:560
@@ -26742,7 +26742,7 @@ msgstr "man pages"
 #: en/chapter08/markupsafe.xml:14
 #, no-wrap
 msgid "&markupsafe-url;"
-msgstr ""
+msgstr "&markupsafe-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter08/markupsafe.xml:12
@@ -26750,17 +26750,19 @@ msgid ""
 "<productname>markupsafe</productname> <productnumber>&markupsafe-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>markupsafe</productname> <productnumber>&markupsafe-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/markupsafe.xml:17
 msgid "MarkupSafe-&markupsafe-version;"
-msgstr ""
+msgstr "MarkupSafe-&markupsafe-version;"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter08/markupsafe.xml:20 en/prologue/why.xml:400
 #: en/appendices/dependencies.xml:2142
 msgid "MarkupSafe"
-msgstr ""
+msgstr "MarkupSafe"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/markupsafe.xml:26
@@ -26768,16 +26770,17 @@ msgid ""
 "MarkupSafe is a Python module that implements an XML/HTML/XHTML Markup safe "
 "string."
 msgstr ""
+"MarkupSafe는 XML/HTML/XHTML 마크업 보안 문자열을 구현하는 파이썬 모듈입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/markupsafe.xml:33
 msgid "&markupsafe-fin-sbu;"
-msgstr ""
+msgstr "&markupsafe-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/markupsafe.xml:34
 msgid "&markupsafe-fin-du;"
-msgstr ""
+msgstr "&markupsafe-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/markupsafe.xml:41
@@ -26787,14 +26790,14 @@ msgstr "Installation of MarkupSafe"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/markupsafe.xml:43
 msgid "Compile MarkupSafe with the following command:"
-msgstr ""
+msgstr "다음 명령어로 MarkupSafe를 컴파일:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/markupsafe.xml:47 en/chapter08/readline.xml:110
 #: en/chapter08/shadow.xml:193 en/chapter08/sqlite.xml:92
 #: en/chapter08/sysklogd.xml:57 en/chapter08/sysvinit.xml:79
 msgid "This package does not come with a test suite."
-msgstr ""
+msgstr "이 패키지는 테스트 스위트를 제공하지 않습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/markupsafe.xml:51
@@ -26805,7 +26808,7 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist M
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/markupsafe.xml:56
 msgid "Contents of MarkupSafe"
-msgstr ""
+msgstr "MarkupSafe 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/markupsafe.xml:63
@@ -26828,6 +26831,8 @@ msgid ""
 "<productname>meson</productname> <productnumber>&meson-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>meson</productname> <productnumber>&meson-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/meson.xml:17
