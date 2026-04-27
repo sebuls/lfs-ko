@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-27 04:37+0900\n"
-"PO-Revision-Date: 2026-04-27 04:36+0900\n"
+"POT-Creation-Date: 2026-04-28 03:25+0900\n"
+"PO-Revision-Date: 2026-04-28 03:24+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8110,6 +8110,8 @@ msgid ""
 "<productname>grep</productname> <productnumber>&grep-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>grep</productname> <productnumber>&grep-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter06/grep.xml:17 en/chapter08/grep.xml:17
@@ -8160,6 +8162,7 @@ msgid ""
 "Details on this package are located in <xref linkend=\"contents-grep\" "
 "role=\".\"/>"
 msgstr ""
+"이 패키지에 대한 자세한 내용은 <xref linkend=\"contents-grep\" role=\".\"/>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter06/gzip.xml:14 en/chapter08/gzip.xml:14
@@ -12964,7 +12967,7 @@ msgstr "<command>bzegrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:192
 msgid "Runs <command>egrep</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>egrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:194
@@ -20895,6 +20898,8 @@ msgid ""
 "The Grep package contains programs for searching through the contents of "
 "files."
 msgstr ""
+"Grep 패키지에는 파일 내용 속에서 검색을 수행하기 위한 프로그램이 들어 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/grep.xml:33
@@ -22543,7 +22548,7 @@ msgstr "<command>zegrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:152
 msgid "Runs <command>egrep</command> on gzipped files"
-msgstr ""
+msgstr "gzip으로 압축된 파일들에 대해 <command>egrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:154
@@ -28337,7 +28342,7 @@ msgstr "<command>pcre2grep</command>"
 #: en/chapter08/pcre.xml:163
 msgid ""
 "is a version of grep that understands Perl compatible regular expressions"
-msgstr ""
+msgstr "grep의 한 버전이며 Perl 호환 정규 표현식(PCRE)을 이해"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pcre.xml:166
@@ -28512,6 +28517,11 @@ msgid ""
 "pod2text, pod2usage, podchecker, podselect, prove, ptar, ptardiff, ptargrep, "
 "shasum, splain, xsubpp, and zipdetails"
 msgstr ""
+"corelist, cpan, enc2xs, encguess, h2ph, h2xs, instmodsh, json_pp, libnetcfg, "
+"perl, perl&perl-version; (hard link to perl), perlbug, perldoc, perlivp, "
+"perlthanks (hard link to perlbug), piconv, pl2pm, pod2html, pod2man, "
+"pod2text, pod2usage, podchecker, podselect, prove, ptar, ptardiff, ptargrep, "
+"shasum, splain, xsubpp, 및 zipdetails"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/perl.xml:133
@@ -37937,7 +37947,7 @@ msgstr "<command>lzegrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:148
 msgid "Runs <command>egrep</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA로 압축된 파일들에 대해 <command>egrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:150
@@ -38157,7 +38167,7 @@ msgstr "<command>xzegrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:298
 msgid "Runs <command>egrep</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ로 압축된 파일들에 대해 <command>egrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:300
