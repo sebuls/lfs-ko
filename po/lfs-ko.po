@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-28 03:36+0900\n"
-"PO-Revision-Date: 2026-04-28 03:35+0900\n"
+"POT-Creation-Date: 2026-04-28 06:47+0900\n"
+"PO-Revision-Date: 2026-04-28 06:47+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8869,7 +8869,7 @@ msgstr ""
 #: en/chapter07/bison.xml:20 en/chapter08/bison.xml:20 en/prologue/why.xml:82
 #: en/appendices/dependencies.xml:323
 msgid "Bison"
-msgstr ""
+msgstr "Bison"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter07/bison.xml:36
@@ -23424,6 +23424,8 @@ msgid ""
 "<productname>iproute2</productname> <productnumber>&iproute2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>iproute2</productname> <productnumber>&iproute2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/iproute2.xml:17
@@ -23441,6 +23443,8 @@ msgid ""
 "The IPRoute2 package contains programs for basic and advanced IPV4-based "
 "networking."
 msgstr ""
+"IPRoute2 패키지에는 기본 및 고급 IPv4 기반 네트워킹을 위한 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iproute2.xml:34
@@ -23465,6 +23469,10 @@ msgid ""
 "However, a directory and a man page for <command>arpd</command> will still "
 "be installed. Prevent this by running the commands shown below."
 msgstr ""
+"이 패키지에 들어간 <command>arpd</command> 프로그램은 Berkeley DB에 의존하기 "
+"때문에 빌드되지 않을 것입니다. 그건 LFS에 설치되어 있지 않았습니다. 그러나, "
+"<command>arpd</command> 용 디렉터리와 매뉴얼 페이지는 여전히 설치됩니다. 이"
+"를 막기 위해 아래 명령어 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/iproute2.xml:50
@@ -23502,7 +23510,7 @@ msgstr "<userinput remap=\"install\">install -vDm644 COPYING README* -t /usr/sha
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iproute2.xml:85
 msgid "Contents of IPRoute2"
-msgstr ""
+msgstr "IPRoute2 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iproute2.xml:92
@@ -23510,13 +23518,15 @@ msgid ""
 "bridge, ctstat (link to lnstat), genl, ifstat, ip, lnstat, nstat, routel, "
 "rtacct, rtmon, rtpr, rtstat (link to lnstat), ss, and tc"
 msgstr ""
+"bridge, ctstat (link to lnstat), genl, ifstat, ip, lnstat, nstat, routel, "
+"rtacct, rtmon, rtpr, rtstat (link to lnstat), ss, 및 tc"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iproute2.xml:95
 msgid ""
 "/etc/iproute2, /usr/lib/tc, and /usr/share/doc/iproute2-&iproute2-version;"
 msgstr ""
-"/etc/iproute2, /usr/lib/tc, and /usr/share/doc/iproute2-&iproute2-version;"
+"/etc/iproute2, /usr/lib/tc, 및 /usr/share/doc/iproute2-&iproute2-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/iproute2.xml:106
@@ -49723,7 +49733,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:793
 msgid "Binutils, IProute2, Kbd, Kmod, and Man-DB"
-msgstr ""
+msgstr "Binutils, IProute2, Kbd, Kmod, 및 Man-DB"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/dependencies.xml:805
@@ -50388,6 +50398,8 @@ msgid ""
 "Binutils, <phrase revision='systemd'>D-Bus, </phrase> E2fsprogs, IProute2, "
 "Kmod, Man-DB, Procps-ng, Python, &systemd-udev;, and Util-linux"
 msgstr ""
+"Binutils, <phrase revision='systemd'>D-Bus, </phrase> E2fsprogs, IProute2, "
+"Kmod, Man-DB, Procps-ng, Python, &systemd-udev; 및 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2629
