@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-28 03:25+0900\n"
-"PO-Revision-Date: 2026-04-28 03:24+0900\n"
+"POT-Creation-Date: 2026-04-28 03:36+0900\n"
+"PO-Revision-Date: 2026-04-28 03:35+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8137,12 +8137,12 @@ msgstr "&grep-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/grep.xml:44 en/chapter08/grep.xml:41
 msgid "Installation of Grep"
-msgstr "Installation of Grep"
+msgstr "Grep 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/grep.xml:46 en/chapter08/grep.xml:50
 msgid "Prepare Grep for compilation:"
-msgstr "Prepare Grep for compilation:"
+msgstr "컴파일 위해Grep 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/grep.xml:48 en/chapter06/sed.xml:48
@@ -20917,6 +20917,8 @@ msgid ""
 "First, remove a warning about using egrep and fgrep that makes tests on some "
 "packages fail:"
 msgstr ""
+"먼저, 일부 패키지의 테스트를 실패하게 만드는 egrep 및 fgrep 사용에 관한 경고"
+"를 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/grep.xml:48
@@ -20945,8 +20947,9 @@ msgid ""
 "Prints lines matching an extended regular expression.  It is obsolete, use "
 "<command>grep -E</command> instead"
 msgstr ""
-"Prints lines matching an extended regular expression.  It is obsolete, use "
-"<command>grep -E</command> instead"
+"확장 정규 표현식(extended regular expression)과 일치하는 줄을 프린트. 이 명령"
+"어는 더 이상 사용되지 않으므로(obsolete), 그 대신 <command>grep -E</command> "
+"사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:90
@@ -20964,8 +20967,8 @@ msgid ""
 "Prints lines matching a list of fixed strings.  It is obsolete, use "
 "<command>grep -F</command> instead"
 msgstr ""
-"Prints lines matching a list of fixed strings.  It is obsolete, use "
-"<command>grep -F</command> instead"
+"고정 문자열 목록과 일치하는 줄을 프린트. 이 명령어는 더 이상 사용되지 않으므"
+"로(obsolete), 그 대신 <command>grep -F</command> 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:101
@@ -20980,7 +20983,7 @@ msgstr "<command>grep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grep.xml:109
 msgid "Prints lines matching a basic regular expression"
-msgstr "Prints lines matching a basic regular expression"
+msgstr "기본 정규 표현식(basic regular expression)과 일치하는 줄을 프린트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grep.xml:111
@@ -21055,7 +21058,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/groff.xml:52
 msgid "Prepare Groff for compilation:"
-msgstr "컴파일 위한 Groff 준비"
+msgstr "컴파일 위한 Groff 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/groff.xml:54
@@ -21947,7 +21950,7 @@ msgstr "<userinput remap=\"pre\">sed 's/--image-base/--nonexist-linker-option/' 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:72
 msgid "Prepare GRUB for compilation:"
-msgstr "Prepare GRUB for compilation:"
+msgstr "컴파일 위한 GRUB준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/grub.xml:74
