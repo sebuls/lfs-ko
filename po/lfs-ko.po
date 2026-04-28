@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-28 06:47+0900\n"
-"PO-Revision-Date: 2026-04-28 06:47+0900\n"
+"POT-Creation-Date: 2026-04-29 03:40+0900\n"
+"PO-Revision-Date: 2026-04-29 03:39+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7364,7 +7364,7 @@ msgstr ""
 #: en/chapter08/libxcrypt.xml:57 en/chapter08/ncurses.xml:57
 #: en/chapter08/pcre.xml:58
 msgid "The meaning of the new configure options:"
-msgstr ""
+msgstr "새로운 설정 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/binutils-pass2.xml:83 en/chapter07/python.xml:64
@@ -7682,7 +7682,7 @@ msgstr ""
 #: en/chapter06/file.xml:63 en/chapter07/bison.xml:52 en/chapter08/bash.xml:51
 #: en/chapter08/readline.xml:77
 msgid "The meaning of the new configure option:"
-msgstr ""
+msgstr "새로운 설정 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/file.xml:66 en/chapter07/util-linux.xml:94
@@ -12029,7 +12029,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/binutils.xml:64 en/chapter08/gcc.xml:92 en/chapter08/tcl.xml:62
 msgid "The meaning of the new configure parameters:"
-msgstr ""
+msgstr "새로운 설정 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:67
@@ -17484,6 +17484,17 @@ msgid ""
 "the support can only be built with an existing Ada or D compiler "
 "installation and we cannot enable the support here."
 msgstr ""
+"여기서는 빌드 시간을 절약하기 위해 C와 C++만 활성화합니다. LFS 및 BLFS의 어"
+"떤 패키지도 다른 언어를 컴파일하기 위해 GCC를 필요로 하지 않습니다. 만약 하"
+"나 이상의 다른 언어로 프로그램을 컴파일하고 싶다면, --enable-languages 옵션 "
+"값에 Cobol을 위한 <literal>cobol</literal>(32비트 LFS 시스템에서는 GCC 빌드"
+"를 실패하게 하므로 주의하세요), Fortran을 위한 <literal>fortran</literal>, Go"
+"를 위한 <literal>go</literal>, Objective C를 위한 <literal>objc</literal>, "
+"Objective C++를 위한 <literal>obj-c++</literal>, 그리고/또는 Modula 2를 위한 "
+"<literal>m2</literal>를 추가하세요. GCC는 Ada와 D도 지원하지만, Ada나 D를 지"
+"원하기 위한 코드가 Ada 또는 D 자체로 작성되어 있습니다. 따라서 해당 지원은 기"
+"존에 설치된 Ada 또는 D 컴파일러가 있어야만 빌드할 수 있으므로 여기서는 활성화"
+"할 수 없습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gcc.xml:95
@@ -17574,6 +17585,10 @@ msgid ""
 "to the <command>make -k check</command> command below, where x is the number "
 "of CPU cores on your system."
 msgstr ""
+"이 섹션에서는 GCC 테스트 스위트가 중요하게 다뤄지지만, 실행하는 데 오랜 시간"
+"이 걸립니다. 처음 빌드하는 사용자라면 테스트 스위트를 실행해 볼 것을 권장합니"
+"다. 아래의 <command>make -k check</command> 명령어에 -jx를 추가하면 테스트 실"
+"행 시간을 크게 줄일 수 있으며, 여기서 x는 우리 시스템의 CPU 코어 수입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:172
@@ -27163,6 +27178,8 @@ msgid ""
 "The Ncurses package contains libraries for terminal-independent handling of "
 "character screens."
 msgstr ""
+"Ncurses 패키지에는 터미널 독립적 문자 화면을 처리할 수 있는 라이브러리가 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/ncurses.xml:34
@@ -27310,6 +27327,12 @@ msgid ""
 "have such libraries because of some binary-only application or to be "
 "compliant with LSB, build the package again with the following commands:"
 msgstr ""
+"소스 컴파일을 통해 설치된 패키지 중 런타임에 이와 링크되는 패키지가 없으므"
+"로, 위의 지침은 비 와이드 캐릭터(non-wide-character) Ncurses 라이브러리를 생"
+"성하지 않습니다. 그러나, 비 와이드 캐릭터 Ncurses 라이브러리와 링크되는 유일"
+"하게 알려진 바이너리 전용 애플리케이션은 버전 5가 필요합니다. 만약 특정 바이"
+"너리 전용 애플리케이션 때문이거나 LSB 준수를 위해 이러한 라이브러리가 반드시 "
+"필요하다면, 다음 명령어들을 사용하여 패키지를 다시 빌드:"
 
 #. type: Content of: <sect1><sect2><note><screen>
 #: en/chapter08/ncurses.xml:177
@@ -27338,7 +27361,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/ncurses.xml:191
 msgid "Contents of Ncurses"
-msgstr ""
+msgstr "Ncurses 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/ncurses.xml:200
@@ -31189,7 +31212,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/shadow.xml:110
 msgid "The meaning of the new configuration options:"
-msgstr ""
+msgstr "새로운 설정 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:113
