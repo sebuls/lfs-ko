@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-29 03:40+0900\n"
-"PO-Revision-Date: 2026-04-29 03:39+0900\n"
+"POT-Creation-Date: 2026-04-30 02:19+0900\n"
+"PO-Revision-Date: 2026-04-30 02:18+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -21904,7 +21904,7 @@ msgstr "GRUB"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:26
 msgid "The GRUB package contains the GRand Unified Bootloader."
-msgstr ""
+msgstr "GRUB 패키지에는 GRand Unified Bootloader 가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/grub.xml:33
@@ -21931,11 +21931,17 @@ msgid ""
 "BLFS GRUB for UEFI package without conflict (the BLFS page provides "
 "instructions for both cases)."
 msgstr ""
+"만약 시스템이 UEFI를 지원하고 UEFI 방식으로 LFS를 부팅하고자 한다면, <ulink "
+"url=\"&blfs-book;postlfs/grub-efi.html\">the BLFS 페이지</ulink> 지침에 따라 "
+"UEFI 지원 기능(및 관련 의존성 패키지)을 포함하여 GRUB을 설치해야 합니다. 이 "
+"패키지 설치를 건너뛰거나, 혹은 이 패키지와 UEFI용 BLFS GRUB 패키지를 충돌 없"
+"이 함께 설치할 수도 있습니다(BLFS 페이지에서 두 경우 모두에 대한 지침을 제"
+"공)."
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter08/grub.xml:56
 msgid "Unset any environment variables which may affect the build:"
-msgstr ""
+msgstr "빌드에 영향을 줄 수 있는 모든 환경 변수 설정을 해제:"
 
 #. type: Content of: <sect1><sect2><warning><screen>
 #: en/chapter08/grub.xml:58
@@ -21950,11 +21956,14 @@ msgid ""
 "This package is a bootloader. The low-level operations in the source code "
 "may be broken by aggressive optimization."
 msgstr ""
+"사용자 정의 컴파일 플래그로 이 패키지를 <quote>튜닝</quote> 시도하지 마세요. "
+"이 패키지는 부트로더입니다. 소스 코드의 저수준 작업(low-level operations)은 "
+"과도한 최적화에 의해 깨질 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:68
 msgid "First fix a bug introduced in grub-2.14:"
-msgstr "First fix a bug introduced in grub-2.14:"
+msgstr "우선 grub-2.14에서 나온 버그 수정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/grub.xml:70
@@ -22007,6 +22016,9 @@ msgid ""
 "depend on packages that are not available in the limited LFS environment. To "
 "run the tests anyway, run <command>make check</command>."
 msgstr ""
+"이 패키지의 테스트 스위트는 권장하지 않습니다. 대부분의 테스트는 제한된 LFS "
+"환경에서는 사용할 수 없는 패키지들에 의존하기 때문입니다. 그럼에도 불구하고 "
+"테스트를 실행하려면 <command>make check</command> 실행."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grub.xml:112
@@ -22014,6 +22026,8 @@ msgid ""
 "Making your LFS system bootable with GRUB will be discussed in <xref "
 "linkend=\"ch-bootable-grub\" role='.'/>"
 msgstr ""
+"LFS 시스템을 GRUB으로 부팅 가능하게 만드는 방법 토론 <xref linkend=\"ch-"
+"bootable-grub\" role='.'/>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/grub.xml:118
@@ -22030,6 +22044,12 @@ msgid ""
 "grub-render-label, grub-script-check, grub-set-default, grub-sparc64-setup, "
 "and grub-syslinux2cfg"
 msgstr ""
+"grub-bios-setup, grub-editenv, grub-file, grub-fstest, grub-glue-efi, grub-"
+"install, grub-kbdcomp, grub-macbless, grub-menulst2cfg, grub-mkconfig, grub-"
+"mkimage, grub-mklayout, grub-mknetdir, grub-mkpasswd-pbkdf2, grub-mkrelpath, "
+"grub-mkrescue, grub-mkstandalone, grub-ofpathname, grub-probe, grub-reboot, "
+"grub-render-label, grub-script-check, grub-set-default, grub-sparc64-setup "
+"및 grub-syslinux2cfg"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/grub.xml:135
@@ -22037,6 +22057,8 @@ msgid ""
 "/usr/lib/grub, /etc/grub.d, /usr/share/grub, and /boot/grub (when grub-"
 "install is first run)"
 msgstr ""
+"/usr/lib/grub, /etc/grub.d, /usr/share/grub, 및 /boot/grub 디렉터리(grub-"
+"install이 처음 실행될 때)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/grub.xml:146
@@ -22046,7 +22068,7 @@ msgstr "<command>grub-bios-setup</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:148
 msgid "Is a helper program for <command>grub-install</command>"
-msgstr ""
+msgstr "<command>grub-install</command> 위한 보조 프로그램"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:150
@@ -22061,7 +22083,7 @@ msgstr "<command>grub-editenv</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:158
 msgid "Is a tool to edit the environment block"
-msgstr ""
+msgstr "syslinux 설정 파일을 grub.cfg 형식으로 변환."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:160
@@ -22123,7 +22145,7 @@ msgstr "<command>grub-install</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:198
 msgid "Installs GRUB on your drive"
-msgstr ""
+msgstr "장치에 GRUB 설치"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:200
@@ -22416,7 +22438,7 @@ msgstr "<command>grub-syslinux2cfg</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:393
 msgid "Transforms a syslinux config file into grub.cfg format"
-msgstr ""
+msgstr "syslinux 설정 파일을 grub.cfg 형식으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:395
