@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 03:50+0900\n"
-"PO-Revision-Date: 2026-05-01 03:50+0900\n"
+"POT-Creation-Date: 2026-05-01 07:43+0900\n"
+"PO-Revision-Date: 2026-05-01 07:43+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6884,7 +6884,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter05/linux-headers.xml:71
 msgid "Installed headers"
-msgstr "헤더 설치"
+msgstr "설치된 헤더"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter05/linux-headers.xml:72 en/chapter08/acl.xml:76
@@ -10973,7 +10973,7 @@ msgstr "Acl 내용"
 #: en/chapter08/util-linux.xml:141 en/chapter08/vim.xml:202
 #: en/chapter08/xz.xml:71 en/chapter08/zstd.xml:72
 msgid "Installed programs"
-msgstr ""
+msgstr "설치된 프로그램"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/acl.xml:75 en/chapter08/attr.xml:72 en/chapter08/bison.xml:66
@@ -10986,7 +10986,7 @@ msgstr ""
 #: en/chapter08/tcl.xml:144 en/chapter08/texinfo.xml:123
 #: en/chapter08/zstd.xml:73
 msgid "Installed library"
-msgstr ""
+msgstr "설치된 라이브러리"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/acl.xml:79
@@ -11307,7 +11307,7 @@ msgstr "Autoconf 내용"
 #: en/chapter08/setuptools.xml:56 en/chapter08/tar.xml:93
 #: en/chapter08/vim.xml:203
 msgid "Installed directory"
-msgstr "Installed directory"
+msgstr "설치된 디렉터리"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/autoconf.xml:73
@@ -12175,7 +12175,7 @@ msgstr "Binutils 내용"
 #: en/chapter08/util-linux.xml:142 en/chapter08/xz.xml:72
 #: en/chapter08/zlib.xml:70
 msgid "Installed libraries"
-msgstr "ㄹ"
+msgstr "설치된 라이브러리"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:152
@@ -15177,7 +15177,7 @@ msgstr ""
 #: en/chapter08/dbus.xml:57 en/chapter08/systemd.xml:77
 #: en/chapter08/udev.xml:84
 msgid "The meaning of the meson options:"
-msgstr ""
+msgstr "meson 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/dbus.xml:61
@@ -15190,6 +15190,8 @@ msgid ""
 "This switch prevents meson from attempting to download a copy of the Glib "
 "package for the tests."
 msgstr ""
+"이 스위치는 meson이 테스트를 위해 Glib 패키지의 복사본을 다운로드 시도하는 것"
+"을 막습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:73 en/chapter08/kmod.xml:70
@@ -15511,7 +15513,7 @@ msgstr "DejaGNU 내용"
 #: en/chapter08/make.xml:70 en/chapter08/patch.xml:67 en/chapter08/sed.xml:69
 #: en/chapter08/sysklogd.xml:103 en/chapter08/wheel.xml:57
 msgid "Installed program"
-msgstr ""
+msgstr "설치된 프로그램"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/dejagnu.xml:77
@@ -22118,7 +22120,7 @@ msgstr "<command>grub-editenv</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:158
 msgid "Is a tool to edit the environment block"
-msgstr "syslinux 설정 파일을 grub.cfg 형식으로 변환."
+msgstr "Syslinux 설정 파일을 grub.cfg 형식으로 변환."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:160
@@ -26944,6 +26946,8 @@ msgid ""
 "Meson is an open source build system designed to be both extremely fast and "
 "as user friendly as possible."
 msgstr ""
+"Meson은 매우 빠르고 가능한 한 사용자 친화적으로 설계된 오픈 소스 빌드 시스템"
+"입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/meson.xml:33
@@ -26958,17 +26962,17 @@ msgstr "&meson-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/meson.xml:41
 msgid "Installation of Meson"
-msgstr "Installation of Meson"
+msgstr "Meson 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/meson.xml:43
 msgid "Compile Meson with the following command:"
-msgstr ""
+msgstr "다음 명령으로 Meson을 컴파일:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/meson.xml:47
 msgid "The test suite requires some packages outside the scope of LFS."
-msgstr ""
+msgstr "테스트 스위트는 LFS 범위를 벗어나는 일부 패키지를 필요로 합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/meson.xml:51
@@ -26985,7 +26989,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/meson.xml:56
 msgid "The meaning of the install parameters:"
-msgstr ""
+msgstr "설치 파라메터의 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/meson.xml:61
@@ -27002,11 +27006,12 @@ msgid ""
 "Installs wheels from the <filename class='directory'>dist</filename> "
 "directory."
 msgstr ""
+"<filename class='directory'>dist</filename> 디렉터리에서 wheel을 설치합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/meson.xml:78
 msgid "Contents of Meson"
-msgstr ""
+msgstr "Meson 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/meson.xml:85 en/chapter08/meson.xml:103
@@ -27030,7 +27035,7 @@ msgstr "<command>meson</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/meson.xml:101
 msgid "A high productivity build system"
-msgstr ""
+msgstr "생산성 높은 빌드 시스템"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/mpc.xml:14
@@ -27044,6 +27049,8 @@ msgid ""
 "<productname>mpc</productname> <productnumber>&mpc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>mpc</productname> <productnumber>&mpc-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/mpc.xml:17
@@ -32277,7 +32284,7 @@ msgid ""
 "is a terminal-based front-end to the SQLite library that can evaluate "
 "queries interactively and display the results"
 msgstr ""
-"SQLite 라이브러리를 위한 터미널 기반 프론트엔드로, 대화형으로 쿼리를 평가하"
+"sqLite 라이브러리를 위한 터미널 기반 프론트엔드로, 대화형으로 쿼리를 평가하"
 "고 결과를 표시 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -38654,7 +38661,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter09/bootscripts.xml:55
 msgid "Installed scripts"
-msgstr ""
+msgstr "설치된 스크립트"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter09/bootscripts.xml:59
@@ -48351,7 +48358,7 @@ msgstr "<emphasis role=\"bold\">IDE</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:245
 msgid "Integrated Drive Electronics"
-msgstr ""
+msgstr "Integrated Drive Electronics"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:250
@@ -48411,7 +48418,7 @@ msgstr "<emphasis role=\"bold\">ISO</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:287
 msgid "International Organization for Standardization"
-msgstr ""
+msgstr "International Organization for Standardization"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:292
