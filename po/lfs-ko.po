@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 02:04+0900\n"
-"PO-Revision-Date: 2026-05-01 02:04+0900\n"
+"POT-Creation-Date: 2026-05-01 03:50+0900\n"
+"PO-Revision-Date: 2026-05-01 03:50+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4439,7 +4439,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:38
 msgid "<parameter>-g lfs</parameter>"
-msgstr ""
+msgstr "<parameter>-g lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:40
@@ -4451,7 +4451,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:46
 msgid "<parameter>-m</parameter>"
-msgstr ""
+msgstr "<parameter>-m</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:48
@@ -4463,7 +4463,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:54
 msgid "<parameter>-k /dev/null</parameter>"
-msgstr ""
+msgstr "<parameter>-k /dev/null</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:56
@@ -4476,7 +4476,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:63
 msgid "<parameter>lfs</parameter>"
-msgstr ""
+msgstr "<parameter>lfs</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:65
@@ -4789,7 +4789,7 @@ msgstr "<filename>.bashrc</filename> 설정의 뜻"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:58
 msgid "<parameter>set +h</parameter>"
-msgstr ""
+msgstr "<parameter>set +h</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:60
@@ -4821,7 +4821,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:77
 msgid "<parameter>umask 022</parameter>"
-msgstr ""
+msgstr "<parameter>umask 022</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:79
@@ -4883,7 +4883,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:114
 msgid "<parameter>PATH=/usr/bin</parameter>"
-msgstr ""
+msgstr "<parameter>PATH=/usr/bin</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:116
@@ -4900,7 +4900,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:128
 msgid "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
-msgstr ""
+msgstr "<parameter>if [ ! -L /bin ]; then PATH=/bin:$PATH; fi</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:130
@@ -4912,7 +4912,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:136
 msgid "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
-msgstr ""
+msgstr "<parameter>PATH=$LFS/tools/bin:$PATH</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:138
@@ -4928,7 +4928,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:148
 msgid "<parameter>CONFIG_SITE=$LFS/usr/share/config.site</parameter>"
-msgstr ""
+msgstr "<parameter>CONFIG_SITE=$LFS/usr/share/config.site</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:150
@@ -4943,7 +4943,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:160
 msgid "<parameter>export ...</parameter>"
-msgstr ""
+msgstr "<parameter>export ...</parameter>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/settingenviron.xml:162
@@ -5378,7 +5378,7 @@ msgstr "</note>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:96
 msgid "<parameter>--prefix=$LFS/tools</parameter>"
-msgstr ""
+msgstr "<parameter>--prefix=$LFS/tools</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/binutils-pass1.xml:98
@@ -5390,7 +5390,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:105
 msgid "<parameter>--with-sysroot=$LFS</parameter>"
-msgstr ""
+msgstr "<parameter>--with-sysroot=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/binutils-pass1.xml:107
@@ -5833,7 +5833,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:124
 msgid "<parameter>--with-glibc-version=&glibc-version;</parameter>"
-msgstr ""
+msgstr "<parameter>--with-glibc-version=&glibc-version;</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/gcc-pass1.xml:126
@@ -5847,7 +5847,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:135
 msgid "<parameter>--with-newlib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-newlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/gcc-pass1.xml:137
@@ -5860,7 +5860,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:144
 msgid "<parameter>--without-headers</parameter>"
-msgstr ""
+msgstr "<parameter>--without-headers</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/gcc-pass1.xml:146
@@ -6173,6 +6173,7 @@ msgstr ""
 msgid ""
 "<parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter>"
 msgstr ""
+"<parameter>--host=$LFS_TGT, --build=$(../scripts/config.guess)</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/glibc.xml:103
@@ -6197,7 +6198,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:119 en/chapter08/glibc.xml:128
 msgid "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
-msgstr ""
+msgstr "<parameter>libc_cv_slibdir=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/glibc.xml:121
@@ -6329,7 +6330,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:173
 msgid "<parameter>DESTDIR=$LFS</parameter>"
-msgstr ""
+msgstr "<parameter>DESTDIR=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/glibc.xml:175
@@ -6738,6 +6739,8 @@ msgid ""
 "<parameter>--with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</"
 "parameter>"
 msgstr ""
+"<parameter>--with-gxx-include-dir=/tools/$LFS_TGT/include/c++/&gcc-version;</"
+"parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/libstdc++.xml:95
@@ -7242,7 +7245,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/bash.xml:57
 msgid "<parameter>--without-bash-malloc</parameter>"
-msgstr ""
+msgstr "<parameter>--without-bash-malloc</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/bash.xml:59
@@ -7581,7 +7584,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/diffutils.xml:58
 msgid "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
-msgstr ""
+msgstr "<parameter>gl_cv_func_strcasecmp_works=y</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/diffutils.xml:60
@@ -8021,7 +8024,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:105
 msgid "<parameter>--with-build-sysroot=$LFS</parameter>"
-msgstr ""
+msgstr "<parameter>--with-build-sysroot=$LFS</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/gcc-pass2.xml:107
@@ -8037,7 +8040,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:118
 msgid "<parameter>--target=$LFS_TGT</parameter>"
-msgstr ""
+msgstr "<parameter>--target=$LFS_TGT</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/gcc-pass2.xml:120
@@ -8055,7 +8058,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:134
 msgid "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
-msgstr ""
+msgstr "<parameter>LDFLAGS_FOR_TARGET=...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/gcc-pass2.xml:136
@@ -8206,7 +8209,7 @@ msgstr "Installation of Gzip"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gzip.xml:46 en/chapter08/gzip.xml:44
 msgid "Prepare Gzip for compilation:"
-msgstr "Prepare Gzip for compilation:"
+msgstr "컴파일 위한 Gzip 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gzip.xml:48
@@ -8469,7 +8472,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:78
 msgid "<parameter>--with-manpage-format=normal</parameter>"
-msgstr ""
+msgstr "<parameter>--with-manpage-format=normal</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:80
@@ -8481,7 +8484,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:87 en/chapter08/ncurses.xml:60
 msgid "<parameter>--with-shared</parameter>"
-msgstr ""
+msgstr "<parameter>--with-shared</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:89 en/chapter08/ncurses.xml:62
@@ -8491,7 +8494,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:94 en/chapter08/ncurses.xml:67
 msgid "<parameter>--without-normal</parameter>"
-msgstr ""
+msgstr "<parameter>--without-normal</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:96
@@ -8501,7 +8504,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:102 en/chapter08/ncurses.xml:75
 msgid "<parameter>--without-debug</parameter>"
-msgstr ""
+msgstr "<parameter>--without-debug</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:104
@@ -8511,7 +8514,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:110 en/chapter08/ncurses.xml:83
 msgid "<parameter>--with-cxx-shared</parameter>"
-msgstr ""
+msgstr "<parameter>--with-cxx-shared</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:112 en/chapter08/ncurses.xml:85
@@ -8523,7 +8526,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:118
 msgid "<parameter>--without-ada</parameter>"
-msgstr ""
+msgstr "<parameter>--without-ada</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:120
@@ -10218,7 +10221,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/kernfs.xml:78
 msgid "<parameter>gid=5</parameter>"
-msgstr ""
+msgstr "<parameter>gid=5</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/kernfs.xml:80
@@ -10233,7 +10236,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/kernfs.xml:89
 msgid "<parameter>mode=0620</parameter>"
-msgstr ""
+msgstr "<parameter>mode=0620</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/kernfs.xml:91
@@ -10360,7 +10363,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:63
 msgid "<parameter>-des</parameter>"
-msgstr ""
+msgstr "<parameter>-des</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/perl.xml:65
@@ -10372,7 +10375,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:72
 msgid "<parameter>-D vendorprefix=/usr</parameter>"
-msgstr ""
+msgstr "<parameter>-D vendorprefix=/usr</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/perl.xml:74
@@ -10384,7 +10387,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:80
 msgid "<parameter>-D useshrplib</parameter>"
-msgstr ""
+msgstr "<parameter>-D useshrplib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/perl.xml:82
@@ -10396,7 +10399,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:89
 msgid "<parameter>-D privlib,-D archlib,-D sitelib,...</parameter>"
-msgstr ""
+msgstr "<parameter>-D privlib,-D archlib,-D sitelib,...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/perl.xml:91
@@ -10502,7 +10505,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/python.xml:71
 msgid "<parameter>--without-ensurepip</parameter>"
-msgstr ""
+msgstr "<parameter>--without-ensurepip</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/python.xml:73
@@ -10514,7 +10517,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/python.xml:79
 msgid "<parameter>--without-static-libpython</parameter>"
-msgstr ""
+msgstr "<parameter>--without-static-libpython</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/python.xml:81
@@ -10714,7 +10717,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:73
 msgid "<parameter>ADJTIME_PATH=/var/lib/hwclock/adjtime</parameter>"
-msgstr ""
+msgstr "<parameter>ADJTIME_PATH=/var/lib/hwclock/adjtime</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/util-linux.xml:75
@@ -10729,7 +10732,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:84
 msgid "<parameter>--libdir=/usr/lib</parameter>"
-msgstr ""
+msgstr "<parameter>--libdir=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/util-linux.xml:86
@@ -10749,7 +10752,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:102
 msgid "<parameter>--without-python</parameter>"
-msgstr ""
+msgstr "<parameter>--without-python</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/util-linux.xml:104
@@ -10761,7 +10764,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:110
 msgid "<parameter>runstatedir=/run</parameter>"
-msgstr ""
+msgstr "<parameter>runstatedir=/run</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/util-linux.xml:112
@@ -11661,7 +11664,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bash.xml:54
 msgid "<parameter>--with-installed-readline</parameter>"
-msgstr ""
+msgstr "<parameter>--with-installed-readline</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bash.xml:56
@@ -11876,7 +11879,7 @@ msgstr "<userinput remap=\"configure\">CC='gcc -std=c99' ./configure --prefix=/u
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:52
 msgid "<parameter>CC='gcc -std=c99'</parameter>"
-msgstr ""
+msgstr "<parameter>CC='gcc -std=c99'</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:54
@@ -11886,7 +11889,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:59
 msgid "<parameter>-G</parameter>"
-msgstr ""
+msgstr "<parameter>-G</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:61
@@ -11898,7 +11901,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:67
 msgid "<parameter>-O3</parameter>"
-msgstr ""
+msgstr "<parameter>-O3</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:69
@@ -11908,7 +11911,7 @@ msgstr "Specify the optimization to use."
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:74
 msgid "<parameter>-r</parameter>"
-msgstr ""
+msgstr "<parameter>-r</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:76
@@ -12056,7 +12059,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:82 en/chapter08/gcc.xml:131
 msgid "<parameter>--with-system-zlib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-system-zlib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:84
@@ -12079,7 +12082,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:99
 msgid "<parameter>tooldir=/usr</parameter>"
-msgstr ""
+msgstr "<parameter>tooldir=/usr</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:101
@@ -15179,7 +15182,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/dbus.xml:61
 msgid "<parameter>--wrap-mode=nofallback</parameter>"
-msgstr ""
+msgstr "<parameter>--wrap-mode=nofallback</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/dbus.xml:64
@@ -16677,7 +16680,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expect.xml:87
 msgid "<parameter>--with-tcl=/usr/lib</parameter>"
-msgstr ""
+msgstr "<parameter>--with-tcl=/usr/lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/expect.xml:89
@@ -16689,7 +16692,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expect.xml:96
 msgid "<parameter>--with-tclinclude=/usr/include</parameter>"
-msgstr ""
+msgstr "<parameter>--with-tclinclude=/usr/include</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/expect.xml:98
@@ -16855,7 +16858,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --localstatedir
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/findutils.xml:69
 msgid "<parameter>--localstatedir</parameter>"
-msgstr ""
+msgstr "<parameter>--localstatedir</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/findutils.xml:71
@@ -17212,7 +17215,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:62 en/chapter08/meson.xml:59
 msgid "<parameter>-w dist</parameter>"
-msgstr ""
+msgstr "<parameter>-w dist</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:64
@@ -17224,7 +17227,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:70
 msgid "<parameter>--no-cache-dir</parameter>"
-msgstr ""
+msgstr "<parameter>--no-cache-dir</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:72
@@ -17246,6 +17249,8 @@ msgid ""
 "<parameter>--no-build-isolation</parameter>, <parameter>--no-deps</"
 "parameter>, and <parameter>--no-index</parameter>"
 msgstr ""
+"<parameter>--no-build-isolation</parameter>, <parameter>--no-deps</"
+"parameter>, and <parameter>--no-index</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:90
@@ -17259,7 +17264,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:98 en/chapter08/meson.xml:67
 msgid "<parameter>--find-links dist</parameter>"
-msgstr ""
+msgstr "<parameter>--find-links dist</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:100
@@ -17529,7 +17534,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gcc.xml:95
 msgid "<parameter>LD=ld</parameter>"
-msgstr ""
+msgstr "<parameter>LD=ld</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:97
@@ -19757,7 +19762,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:526
 msgid "<parameter>zic -L /dev/null ...</parameter>"
-msgstr ""
+msgstr "<parameter>zic -L /dev/null ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:528
@@ -19776,7 +19781,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:542
 msgid "<parameter>zic -L leapseconds ...</parameter>"
-msgstr ""
+msgstr "<parameter>zic -L leapseconds ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:544
@@ -19790,7 +19795,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:552
 msgid "<parameter>zic ... -p ...</parameter>"
-msgstr ""
+msgstr "<parameter>zic ... -p ...</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:554
@@ -22480,6 +22485,7 @@ msgstr "grub-syslinux2cfg"
 msgid ""
 "The Gzip package contains programs for compressing and decompressing files."
 msgstr ""
+"Gzip 패키지에는 파일 압축 및 압축 해제를 위한 프로그램이 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gzip.xml:34
@@ -22494,7 +22500,7 @@ msgstr "&gzip-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gzip.xml:63
 msgid "Contents of Gzip"
-msgstr ""
+msgstr "Gzip 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gzip.xml:69
@@ -22513,7 +22519,7 @@ msgstr "<command>gunzip</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:82
 msgid "Decompresses gzipped files"
-msgstr ""
+msgstr "gzipped files 풀기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:84
@@ -22528,7 +22534,7 @@ msgstr "<command>gzexe</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:92
 msgid "Creates self-decompressing executable files"
-msgstr ""
+msgstr "자체 압축 해제 실행 파일 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:94
@@ -24618,7 +24624,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kmod.xml:58
 msgid "<parameter>-D manpages=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D manpages=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kmod.xml:61
@@ -24843,7 +24849,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr --sysconfdir=/e
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/less.xml:51
 msgid "<parameter>--sysconfdir=/etc</parameter>"
-msgstr ""
+msgstr "<parameter>--sysconfdir=/etc</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/less.xml:53
@@ -24994,7 +25000,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libcap.xml:67
 msgid "<parameter>lib=lib</parameter>"
-msgstr ""
+msgstr "<parameter>lib=lib</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libcap.xml:69
@@ -25351,7 +25357,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libffi.xml:74
 msgid "<parameter>--with-gcc-arch=native</parameter>"
-msgstr ""
+msgstr "<parameter>--with-gcc-arch=native</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libffi.xml:76
@@ -26146,7 +26152,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:86
 msgid "<parameter>--with-...</parameter>"
-msgstr ""
+msgstr "<parameter>--with-...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/man-db.xml:88
@@ -26164,7 +26170,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:101
 msgid "<parameter>--with-systemd...</parameter>"
-msgstr ""
+msgstr "<parameter>--with-systemd...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/man-db.xml:103
@@ -26775,7 +26781,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-pages.xml:58
 msgid "<parameter>-R</parameter>"
-msgstr ""
+msgstr "<parameter>-R</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/man-pages.xml:60
@@ -26789,7 +26795,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-pages.xml:69
 msgid "<parameter>GIT=false</parameter>"
-msgstr ""
+msgstr "<parameter>GIT=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/man-pages.xml:71
@@ -27821,7 +27827,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ninja.xml:84
 msgid "<parameter>--verbose</parameter>"
-msgstr ""
+msgstr "<parameter>--verbose</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ninja.xml:86
@@ -28543,7 +28549,7 @@ msgstr "새 configure 옵션 뜻:"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:77
 msgid "<parameter>-D pager=\"/usr/bin/less -isR\"</parameter>"
-msgstr ""
+msgstr "<parameter>-D pager=\"/usr/bin/less -isR\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:79
@@ -28558,6 +28564,8 @@ msgid ""
 "<parameter>-D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3</"
 "parameter>"
 msgstr ""
+"<parameter>-D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3</"
+"parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:88
@@ -28569,7 +28577,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:95
 msgid "<parameter>-D usethreads</parameter>"
-msgstr ""
+msgstr "<parameter>-D usethreads</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:97
@@ -29951,7 +29959,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/procps.xml:70
 msgid "<parameter>--enable-watch8bit</parameter>"
-msgstr ""
+msgstr "<parameter>--enable-watch8bit</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:72
@@ -30881,7 +30889,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/readline.xml:80
 msgid "<parameter>--with-curses</parameter>"
-msgstr ""
+msgstr "<parameter>--with-curses</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/readline.xml:82
@@ -30900,7 +30908,7 @@ msgstr "<userinput remap=\"make\">make SHLIB_LIBS=\"-lncursesw\"</userinput>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/readline.xml:99
 msgid "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
-msgstr ""
+msgstr "<parameter>SHLIB_LIBS=\"-lncursesw\"</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/readline.xml:101
@@ -31288,7 +31296,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:123
 msgid "<parameter>--with-{b,yes}crypt</parameter>"
-msgstr ""
+msgstr "<parameter>--with-{b,yes}crypt</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/shadow.xml:125
@@ -31304,7 +31312,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:137
 msgid "<parameter>--with-group-name-max-length=32</parameter>"
-msgstr ""
+msgstr "<parameter>--with-group-name-max-length=32</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/shadow.xml:139
@@ -31333,7 +31341,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:180
 msgid "<parameter>--without-libbsd</parameter>"
-msgstr ""
+msgstr "<parameter>--without-libbsd</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/shadow.xml:182
@@ -31455,7 +31463,7 @@ msgstr "<filename>/etc/default/useradd</filename> parameter explanations"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:251
 msgid "<parameter>GROUP=999</parameter>"
-msgstr ""
+msgstr "<parameter>GROUP=999</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/shadow.xml:253
@@ -31478,7 +31486,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:273
 msgid "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
-msgstr ""
+msgstr "<parameter>CREATE_MAIL_SPOOL=yes</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/shadow.xml:275
@@ -32201,6 +32209,7 @@ msgstr ""
 msgid ""
 "<parameter>CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 ...</parameter>"
 msgstr ""
+"<parameter>CPPFLAGS=\"-D SQLITE_ENABLE_COLUMN_METADATA=1 ...</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/sqlite.xml:72
@@ -32813,7 +32822,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:89
 msgid "<parameter>-D default-dnssec=no</parameter>"
-msgstr ""
+msgstr "<parameter>-D default-dnssec=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:91
@@ -32823,7 +32832,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:96
 msgid "<parameter>-D firstboot=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D firstboot=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:98
@@ -32836,7 +32845,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:106
 msgid "<parameter>-D install-tests=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D install-tests=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:108
@@ -32846,7 +32855,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:113
 msgid "<parameter>-D ldconfig=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D ldconfig=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:115
@@ -32860,7 +32869,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:123
 msgid "<parameter>-D sysusers=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D sysusers=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:125
@@ -32875,7 +32884,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:135
 msgid "<parameter>-D rpmmacrosdir=no</parameter>"
-msgstr ""
+msgstr "<parameter>-D rpmmacrosdir=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:137
@@ -32887,7 +32896,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:143
 msgid "<parameter>-D homed=disabled</parameter>"
-msgstr ""
+msgstr "<parameter>-D homed=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:145
@@ -32901,7 +32910,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:151
 msgid "<parameter>-D man=disabled</parameter>"
-msgstr ""
+msgstr "<parameter>-D man=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:153
@@ -32915,7 +32924,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:160 en/chapter08/udev.xml:96
 msgid "<parameter>-D mode=release</parameter>"
-msgstr ""
+msgstr "<parameter>-D mode=release</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:162 en/chapter08/udev.xml:98
@@ -32925,7 +32934,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:168
 msgid "<parameter>-D pamconfdir=no</parameter>"
-msgstr ""
+msgstr "<parameter>-D pamconfdir=no</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:170
@@ -32937,7 +32946,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:176 en/chapter08/udev.xml:104
 msgid "<parameter>-D dev-kvm-mode=0660</parameter>"
-msgstr ""
+msgstr "<parameter>-D dev-kvm-mode=0660</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:178 en/chapter08/udev.xml:106
@@ -32950,7 +32959,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:185
 msgid "<parameter>-D nobody-group=nogroup</parameter>"
-msgstr ""
+msgstr "<parameter>-D nobody-group=nogroup</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:187
@@ -32962,7 +32971,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:193
 msgid "<parameter>-D sysupdate=disabled</parameter>"
-msgstr ""
+msgstr "<parameter>-D sysupdate=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:195
@@ -32976,7 +32985,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:204
 msgid "<parameter>-D ukify=disabled</parameter>"
-msgstr ""
+msgstr "<parameter>-D ukify=disabled</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:206
@@ -34669,7 +34678,7 @@ msgstr "<userinput remap=\"install\">make TEXMF=/usr/share/texmf install-tex</us
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/texinfo.xml:92
 msgid "<parameter>TEXMF=/usr/share/texmf</parameter>"
-msgstr ""
+msgstr "<parameter>TEXMF=/usr/share/texmf</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/texinfo.xml:94
@@ -34986,7 +34995,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/udev.xml:113
 msgid "<parameter>-D link-udev-shared=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D link-udev-shared=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/udev.xml:115
@@ -35000,7 +35009,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/udev.xml:124
 msgid "<parameter>-D logind=false -D vconsole=false</parameter>"
-msgstr ""
+msgstr "<parameter>-D logind=false -D vconsole=false</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/udev.xml:126
@@ -42819,7 +42828,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter09/usage.xml:185
 msgid "<parameter>start</parameter>"
-msgstr ""
+msgstr "<parameter>start</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter09/usage.xml:187
@@ -42829,7 +42838,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter09/usage.xml:192
 msgid "<parameter>stop</parameter>"
-msgstr ""
+msgstr "<parameter>stop</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter09/usage.xml:194
@@ -42839,7 +42848,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter09/usage.xml:199
 msgid "<parameter>restart</parameter>"
-msgstr ""
+msgstr "<parameter>restart</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter09/usage.xml:201
@@ -42849,7 +42858,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter09/usage.xml:206
 msgid "<parameter>reload</parameter>"
-msgstr ""
+msgstr "<parameter>reload</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter09/usage.xml:208
@@ -42862,7 +42871,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter09/usage.xml:215
 msgid "<parameter>status</parameter>"
-msgstr ""
+msgstr "<parameter>status</parameter>"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><listitem><para>
 #: en/chapter09/usage.xml:217
@@ -44209,7 +44218,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:98
 msgid "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
-msgstr ""
+msgstr "<parameter>LANG=&lt;host_LANG_value&gt; LC_ALL=</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:100
@@ -44322,6 +44331,7 @@ msgstr ""
 msgid ""
 "<parameter>Randomize the address of the kernel image (KASLR)</parameter>"
 msgstr ""
+"<parameter>Randomize the address of the kernel image (KASLR)</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:195
@@ -44376,7 +44386,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:239
 msgid "<parameter>Strong Stack Protector</parameter>"
-msgstr ""
+msgstr "<parameter>Strong Stack Protector</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:241
@@ -44389,7 +44399,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:249
 msgid "<parameter>Support for uevent helper</parameter>"
-msgstr ""
+msgstr "<parameter>Support for uevent helper</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:251
@@ -44400,7 +44410,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:257
 msgid "<parameter>Maintain a devtmpfs</parameter>"
-msgstr ""
+msgstr "<parameter>Maintain a devtmpfs</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:259
@@ -44414,7 +44424,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:267
 msgid "<parameter>Automount devtmpfs at /dev</parameter>"
-msgstr ""
+msgstr "<parameter>Automount devtmpfs at /dev</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:269
@@ -44511,7 +44521,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:357
 msgid "<parameter>Support x2apic</parameter>"
-msgstr ""
+msgstr "<parameter>Support x2apic</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:359
@@ -45180,6 +45190,55 @@ msgid ""
 "#mountbind home\n"
 "EOF</command>"
 msgstr ""
+"<command>cat &gt; ~/mount-virt.sh &lt;&lt; \"EOF\"\n"
+"#!/bin/bash\n"
+"\n"
+"function mountbind\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount --bind /$1 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"function mounttype\n"
+"{\n"
+"   if ! mountpoint $LFS/$1 >/dev/null; then\n"
+"     $SUDO mount -t $2 $3 $4 $5 $LFS/$1\n"
+"     echo $LFS/$1 mounted\n"
+"   else\n"
+"     echo $LFS/$1 already mounted\n"
+"   fi\n"
+"}\n"
+"\n"
+"if [ $EUID -ne 0 ]; then\n"
+"  SUDO=sudo\n"
+"else\n"
+"  SUDO=\"\"\n"
+"fi\n"
+"\n"
+"if [ x$LFS == x ]; then\n"
+"  echo \"LFS not set\"\n"
+"  exit 1\n"
+"fi\n"
+"\n"
+"mountbind dev\n"
+"mounttype dev/pts devpts devpts -o gid=5,mode=620\n"
+"mounttype proc    proc   proc\n"
+"mounttype sys     sysfs  sysfs\n"
+"mounttype run     tmpfs  run\n"
+"if [ -h $LFS/dev/shm ]; then\n"
+"  install -v -d -m 1777 $LFS$(realpath /dev/shm)\n"
+"else\n"
+"  mounttype dev/shm tmpfs tmpfs -o nosuid,nodev\n"
+"fi \n"
+"\n"
+"#mountbind usr/src\n"
+"#mountbind boot\n"
+"#mountbind home\n"
+"EOF</command>"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:144
@@ -46553,6 +46612,8 @@ msgid ""
 "<command>/usr/bin/python</command> (LSB requires Python2 but LFS and BLFS "
 "only provide Python3)"
 msgstr ""
+"<command>/usr/bin/python</command> (LSB는 Python2 필요, 그러나 LFS 및 BLFS "
+"는 Python3만 제공)"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:220
@@ -51366,6 +51427,8 @@ msgid ""
 "<command>/usr/bin/awk</command> is a symbolic link to <command>gawk</"
 "command>."
 msgstr ""
+"<command>/usr/bin/awk</command> 는 심볼릭 링크 <command>gawk</command>를 가리"
+"킴."
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:85
@@ -51373,6 +51436,8 @@ msgid ""
 "<command>/usr/bin/yacc</command> is a symbolic link to <command>bison</"
 "command>, or to a small script that executes bison."
 msgstr ""
+"<command>/usr/bin/yacc</command>는 심볼릭 링크 <command>bison</command> 가리"
+"킴, 또는 bison 실행하는 작은 스크립트."
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
 #: en/part3intro/generalinstructions.xml:93
