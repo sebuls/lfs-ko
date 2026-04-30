@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 00:32+0900\n"
-"PO-Revision-Date: 2026-05-01 00:32+0900\n"
+"POT-Creation-Date: 2026-05-01 02:04+0900\n"
+"PO-Revision-Date: 2026-05-01 02:04+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -28265,6 +28265,8 @@ msgid ""
 "<productname>pcre2</productname> <productnumber>&pcre2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>pcre2</productname> <productnumber>&pcre2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/pcre.xml:17
@@ -28283,6 +28285,8 @@ msgid ""
 "The pcre2 package contains a new generation of the Perl Compatible Regular "
 "Expression libraries."
 msgstr ""
+"pcre2 패키지에는 차세대 Perl Compatible Regular Expression library 가 들어있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/pcre.xml:34
@@ -28333,7 +28337,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:61
 msgid "<parameter>--enable-unicode</parameter>"
-msgstr ""
+msgstr "<parameter>--enable-unicode</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pcre.xml:64
@@ -28341,6 +28345,8 @@ msgid ""
 "This option enables Unicode support and includes the functions for handling "
 "UTF-8/16/32 character strings in the library."
 msgstr ""
+"이 옵션은 유니코드 지원을 활성화하며, 라이브러리 내에서 UTF-8/16/32 문자열을 "
+"처리하기 위한 함수를 포함합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:71
@@ -28409,7 +28415,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pcre.xml:143
 msgid "Contents of Pcre2"
-msgstr ""
+msgstr "Pcre2 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/pcre.xml:150
@@ -28445,7 +28451,7 @@ msgstr "<command>pcre2test</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pcre.xml:174
 msgid "can test a Perl compatible regular expression"
-msgstr ""
+msgstr "Perl compatible regular expression 테스트 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pcre.xml:176
