@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-30 21:02+0900\n"
-"PO-Revision-Date: 2026-04-30 21:02+0900\n"
+"POT-Creation-Date: 2026-05-01 00:32+0900\n"
+"PO-Revision-Date: 2026-05-01 00:32+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -32104,6 +32104,8 @@ msgid ""
 "<productname>sqlite</productname> <productnumber>&sqlite-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>sqlite</productname> <productnumber>&sqlite-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/sqlite.xml:17
@@ -32121,6 +32123,9 @@ msgid ""
 "The Sqlite package is a software library that implements a self-contained, "
 "serverless, zero-configuration, transactional SQL database engine."
 msgstr ""
+"SQLite 패키지는 자체 포함(self-contained), 서버리스(serverless), 제로 설정"
+"(zero-configuration), 트랜잭션 SQL 데이터베이스 엔진을 구현하는 소프트웨어 라"
+"이브러리입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/sqlite.xml:35
@@ -32151,7 +32156,7 @@ msgstr "<userinput remap=\"pre\">tar -xf ../sqlite-doc-&sqlite-doc-version;.tar.
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:49
 msgid "Prepare Sqlite for compilation with:"
-msgstr "Prepare Sqlite for compilation with:"
+msgstr "컴파일 위한 sqlite 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/sqlite.xml:51
@@ -32229,7 +32234,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sqlite.xml:106
 msgid "Contents of Sqlite"
-msgstr ""
+msgstr "Sqlite 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/sqlite.xml:114 en/chapter08/sqlite.xml:131
@@ -32257,6 +32262,8 @@ msgid ""
 "is a terminal-based front-end to the SQLite library that can evaluate "
 "queries interactively and display the results"
 msgstr ""
+"SQLite 라이브러리를 위한 터미널 기반 프론트엔드로, 대화형으로 쿼리를 평가하"
+"고 결과를 표시 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/sqlite.xml:137
@@ -32266,7 +32273,7 @@ msgstr "<filename class=\"libraryfile\">libsqlite3.so</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/sqlite.xml:139
 msgid "contains the SQLite API functions"
-msgstr ""
+msgstr "SQLite API 함수 포함"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/stripping.xml:11
@@ -32526,6 +32533,8 @@ msgid ""
 "<productname>sysklogd</productname> <productnumber>&sysklogd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>sysklogd</productname> <productnumber>&sysklogd-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/sysklogd.xml:17
@@ -50465,7 +50474,7 @@ msgstr "&bdb;"
 msgid ""
 "Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Sed, and Sqlite"
 msgstr ""
-"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Sed, and Sqlite"
+"Bash, Binutils, Coreutils, Gawk, GCC, Glibc, Grep, Make, Sed, 및 Sqlite"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2608
