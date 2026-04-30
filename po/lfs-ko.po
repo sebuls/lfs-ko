@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-04-30 02:19+0900\n"
-"PO-Revision-Date: 2026-04-30 02:18+0900\n"
+"POT-Creation-Date: 2026-04-30 21:02+0900\n"
+"PO-Revision-Date: 2026-04-30 21:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -12686,6 +12686,8 @@ msgid ""
 "<productname>bzip2</productname> <productnumber>&bzip2-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>bzip2</productname> <productnumber>&bzip2-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/bzip2.xml:17
@@ -12705,6 +12707,9 @@ msgid ""
 "Compressing text files with <command>bzip2</command> yields a much better "
 "compression percentage than with the traditional <command>gzip</command>."
 msgstr ""
+"Bzip2 패키지는 파일 압축 및 해제를 위한 프로그램들을 포함하고 있습니다. "
+"<command>bzip2</command>를 사용하여 텍스트 파일을 압축하면 전통적인 "
+"<command>gzip</command> 보다 훨씬 더 나은 압축률을 얻을 수 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bzip2.xml:36
@@ -12724,7 +12729,7 @@ msgstr "Installation of Bzip2"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:46
 msgid "Apply a patch that will install the documentation for this package:"
-msgstr ""
+msgstr "이 패키지의 문서를 설치하는 패치를 적용:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:48
@@ -12736,7 +12741,7 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&bzip2-docs-patch;</userinput>
 #: en/chapter08/bzip2.xml:50
 msgid ""
 "The following command ensures installation of symbolic links are relative:"
-msgstr ""
+msgstr "다음 명령은 심볼릭 링크의 설치가 상대 경로가 되도록 보장:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:52
@@ -12747,7 +12752,7 @@ msgstr "<userinput remap=\"pre\">sed -i 's@\\(ln -s -f \\)$(PREFIX)/bin/@\\1@' M
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:54
 msgid "Ensure the man pages are installed into the correct location:"
-msgstr ""
+msgstr "매뉴얼 페이지가 올바른 위치에 설치되도록 보장:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:56
@@ -12773,7 +12778,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bzip2.xml:67
 msgid "<parameter>-f Makefile-libbz2_so</parameter>"
-msgstr ""
+msgstr "<parameter>-f Makefile-libbz2_so</parameter>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:69
@@ -12783,16 +12788,20 @@ msgid ""
 "file, which creates a dynamic <filename class=\"libraryfile\">libbz2.so</"
 "filename> library and links the Bzip2 utilities against it."
 msgstr ""
+"이 작업은 Bzip2가 다른 <filename>Makefile</filename> 파일(이 경우에는 "
+"<filename>Makefile-libbz2_so</filename> 파일)을 사용하여 빌드되도록 하며, 이"
+"는 동적 <filename class=\"libraryfile\">libbz2.so</filename> 라이브러리를 생"
+"성하고 Bzip2 유틸리티를 그 라이브러리에 링크합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:79
 msgid "Compile and test the package:"
-msgstr ""
+msgstr "패키지 컴파일 및 테스트:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:83
 msgid "Install the programs:"
-msgstr ""
+msgstr "프로그램 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:85
@@ -12803,7 +12812,7 @@ msgstr "<userinput remap=\"install\">make PREFIX=/usr install</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:87
 msgid "Install the shared library:"
-msgstr ""
+msgstr "공유 라이브러리 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:89
@@ -12825,6 +12834,11 @@ msgid ""
 "class='libraryfile'>libbz2.so.1</filename> that some other distros are "
 "using. Create a compatibility symlink for them:"
 msgstr ""
+"공유 라이브러리의 이름은 표준화되어 있지 않으며 배포판마다 다릅니다. 위의 지"
+"침은 <filename class='libraryfile'>libbz2.so.1.0</filename> 설치했지만, 예를 "
+"들어 Kbd와 같은 일부 애플리케이션은 다른 배포판들이 사용하는 다른 이름 "
+"<filename class='libraryfile'>libbz2.so.1</filename>을 기대합니다. 이들을 위"
+"해 호환 심볼릭 링크 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:99
@@ -12842,6 +12856,12 @@ msgid ""
 "<quote>hide</quote> the difference via a symlink.  Read <xref "
 "linkend='pkgmgmt-upgrade-issues'/> for details about library names."
 msgstr ""
+"심볼릭 링크 접근 방식은 여기에서만 유효한데, 이는 라이브러리 이름의 차이가 실"
+"제 ABI 불일치가 아니라 배포판 유지관리자들의 서로 다른 미적 관점의 결과이기 "
+"때문입니다. 일반적으로 라이브러리 이름의 차이는 ABI 불일치를 나타낼 가능성이 "
+"매우 높으며, 심볼릭 링크를 통해 그 차이를 <quote>숨기는</quote> 것은 유효하"
+"지 않을 가능성이 매우 큽니다. 라이브러리 이름에 관한 자세한 내용은 <xref "
+"linkend='pkgmgmt-upgrade-issues'/> 읽어보세요."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:112
@@ -12850,6 +12870,9 @@ msgid ""
 "class=\"directory\">/usr/bin</filename> directory, and replace two copies of "
 "<command>bzip2</command> with symlinks:"
 msgstr ""
+"공유 <command>bzip2</command> 바이너리를 <filename class=\"directory\">/usr/"
+"bin</filename> 디렉터리에 설치하고, <command>bzip2</command> 두 복사본을 심볼"
+"릭 링크로 교체:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:116
@@ -12888,6 +12911,9 @@ msgid ""
 "bzdiff, bzegrep (link to bzgrep), bzfgrep (link to bzgrep), bzgrep, bzip2, "
 "bzip2recover, bzless (link to bzmore), and bzmore"
 msgstr ""
+"bunzip2 (bzip2로의 링크), bzcat (bzip2로의 링크), bzcmp (bzdiff로의 링크), "
+"bzdiff, bzegrep (bzgrep로의 링크), bzfgrep (bzgrep로의 링크), bzgrep, bzip2, "
+"bzip2recover, bzless (bzmore로의 링크), 및 bzmore"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bzip2.xml:139
@@ -12907,7 +12933,7 @@ msgstr "<command>bunzip2</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:152
 msgid "Decompresses bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들을 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:154
@@ -12922,7 +12948,7 @@ msgstr "<command>bzcat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:162 en/chapter08/xz.xml:118 en/chapter08/xz.xml:258
 msgid "Decompresses to standard output"
-msgstr ""
+msgstr "표준 출력으로 압축 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:164
@@ -12937,7 +12963,7 @@ msgstr "<command>bzcmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:172
 msgid "Runs <command>cmp</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>cmp</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:174
@@ -12952,7 +12978,7 @@ msgstr "<command>bzdiff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:182
 msgid "Runs <command>diff</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>diff</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:184
@@ -12982,7 +13008,7 @@ msgstr "<command>bzfgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:202
 msgid "Runs <command>fgrep</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>fgrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:204
@@ -12997,7 +13023,7 @@ msgstr "<command>bzgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:212
 msgid "Runs <command>grep</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>grep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:214
@@ -13017,6 +13043,10 @@ msgid ""
 "achieved by more conventional compressors using <quote>Lempel-Ziv</quote> "
 "algorithms, like <command>gzip</command>"
 msgstr ""
+"Burrows-Wheeler 블록 정렬 텍스트 압축 알고리즘과 허프만 코딩(Huffman coding)"
+"을 사용하여 파일을 압축합니다. 이 압축률은 <command>gzip</command> 같이 "
+"<quote>Lempel-Ziv</quote> 알고리즘을 사용하는 일반적인 압축기들이 달성하는 것"
+"보다 더 우수"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:227
@@ -13031,7 +13061,7 @@ msgstr "<command>bzip2recover</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:235
 msgid "Tries to recover data from damaged bzipped files"
-msgstr ""
+msgstr "손상된 bzip2 파일에서 데이터를 복구하려고 시도"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:237
@@ -13046,7 +13076,7 @@ msgstr "<command>bzless</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:245
 msgid "Runs <command>less</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>less</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:247
@@ -13061,7 +13091,7 @@ msgstr "<command>bzmore</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bzip2.xml:255
 msgid "Runs <command>more</command> on bzipped files"
-msgstr ""
+msgstr "bzip2로 압축된 파일들에 대해 <command>more</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:257
