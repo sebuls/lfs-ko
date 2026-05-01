@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 19:29+0900\n"
-"PO-Revision-Date: 2026-05-01 19:29+0900\n"
+"POT-Creation-Date: 2026-05-02 05:21+0900\n"
+"PO-Revision-Date: 2026-05-02 05:21+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1293,6 +1293,8 @@ msgid ""
 "<emphasis role=\"strong\">Bison-2.7</emphasis> (/usr/bin/yacc should be a "
 "link to bison or a small script that executes bison)"
 msgstr ""
+"<emphasis role=\"strong\">Bison-2.7</emphasis> (/usr/bin/yacc는 bison 링크 또"
+"는 bison을 실행하는 작은 스크립트여야 합니다)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:60
@@ -1451,7 +1453,7 @@ msgstr "<emphasis role=\"strong\">Texinfo-5.0</emphasis>"
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:159
 msgid "<emphasis role=\"strong\">Xz-5.0.0</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Xz-5.0.0</emphasis>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter02/hostreqs.xml:165
@@ -8858,7 +8860,7 @@ msgstr ""
 #: en/chapter07/bison.xml:14 en/chapter08/bison.xml:14
 #, no-wrap
 msgid "&bison-url;"
-msgstr ""
+msgstr "&bison-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter07/bison.xml:12 en/chapter08/bison.xml:12
@@ -8870,7 +8872,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter07/bison.xml:17 en/chapter08/bison.xml:17
 msgid "Bison-&bison-version;"
-msgstr ""
+msgstr "Bison-&bison-version;"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter07/bison.xml:20 en/chapter08/bison.xml:20 en/prologue/why.xml:82
@@ -8881,22 +8883,22 @@ msgstr "Bison"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter07/bison.xml:36
 msgid "&bison-tmp-sbu;"
-msgstr ""
+msgstr "&bison-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter07/bison.xml:37
 msgid "&bison-tmp-du;"
-msgstr ""
+msgstr "&bison-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/bison.xml:44 en/chapter08/bison.xml:41
 msgid "Installation of Bison"
-msgstr "Installation of Bison"
+msgstr "Bison 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/bison.xml:46 en/chapter08/bison.xml:43
 msgid "Prepare Bison for compilation:"
-msgstr "Prepare Bison for compilation:"
+msgstr "컴파일 위한 Bison 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/bison.xml:48
@@ -12590,17 +12592,17 @@ msgstr "libsframe"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bison.xml:26
 msgid "The Bison package contains a parser generator."
-msgstr ""
+msgstr "Bison 패키지는 구문 분석기 생성기를 포함합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bison.xml:33
 msgid "&bison-fin-sbu;"
-msgstr ""
+msgstr "&bison-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bison.xml:34
 msgid "&bison-fin-du;"
-msgstr ""
+msgstr "&bison-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bison.xml:45
@@ -12616,7 +12618,7 @@ msgstr "Bison 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bison.xml:70
 msgid "bison and yacc"
-msgstr ""
+msgstr "bison 및 yacc"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bison.xml:71
@@ -12639,6 +12641,8 @@ msgid ""
 "Generates, from a series of rules, a program for analyzing the structure of "
 "text files; Bison is a replacement for Yacc (Yet Another Compiler Compiler)"
 msgstr ""
+"일련의 규칙으로부터 텍스트 파일의 구조를 분석하는 프로그램을 생성. Bison은 "
+"Yacc(Yet Another Compiler Compiler)의 대체입니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bison.xml:88
@@ -12657,6 +12661,9 @@ msgid ""
 "<command>yacc</command> instead of <command>bison</command>; it calls "
 "<command>bison</command> with the <parameter>-y</parameter> option"
 msgstr ""
+"<command>bison</command> 대신 여전히 <command>yacc</command> 호출하는 프로그"
+"램들을 위한 <command>bison</command> 래퍼. 이 래퍼는 <command>bison</command>"
+"을 <parameter>-y</parameter> 옵션과 함께 호출"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bison.xml:101
@@ -12675,6 +12682,9 @@ msgid ""
 "<function>yyerror</function> and <function>main</function> functions; this "
 "library is normally not very useful, but POSIX requires it"
 msgstr ""
+"Yacc 라이브러리에는 Yacc 호환 <function>yyerror</function> and "
+"<function>main</function> 함수 구현이 들어있습니다. 이 라이브러리는 대개 큰 "
+"도움이 안 되지만, POSIX에서 이를 요구합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bison.xml:113
