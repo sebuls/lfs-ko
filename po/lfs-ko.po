@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 07:43+0900\n"
-"PO-Revision-Date: 2026-05-01 07:43+0900\n"
+"POT-Creation-Date: 2026-05-01 17:29+0900\n"
+"PO-Revision-Date: 2026-05-01 17:19+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -38482,9 +38482,9 @@ msgid ""
 "ratios. It offers a very wide range of compression / speed trade-offs, while "
 "being backed by a very fast decoder."
 msgstr ""
-"Zstandard is a real-time compression algorithm, providing high compression "
-"ratios. It offers a very wide range of compression / speed trade-offs, while "
-"being backed by a very fast decoder."
+"Zstandard는 실시간 압축 알고리즘이며 높은 압축률을 제공합니다. 매우 빠른 디코"
+"더를 지원함과 동시에, 압축률과 속도 사이에서 매우 넓은 범위의 절충안을 제공합"
+"니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/zstd.xml:35
