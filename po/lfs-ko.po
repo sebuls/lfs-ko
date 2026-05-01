@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 17:38+0900\n"
-"PO-Revision-Date: 2026-05-01 17:38+0900\n"
+"POT-Creation-Date: 2026-05-01 19:29+0900\n"
+"PO-Revision-Date: 2026-05-01 19:29+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7316,6 +7316,10 @@ msgid ""
 "mistakenly linked against libraries from the host distro.  Work around this "
 "issue:"
 msgstr ""
+"Binutils 빌드 시스템은 내부 정적 라이브러리와 링크하기 위해 함께 제공된 "
+"libtool 복사본에 의존하지만, 패키지에 포함된 libiberty 및 zlib 복사본은 "
+"libtool을 안 씁니다. 이러한 불일치로 인해 생성된 바이너리가 호스트 배포판의 "
+"라이브러리와 잘못 링크되는 문제가 생길 수 있습니다. 이 문제 해결:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/binutils-pass2.xml:58
@@ -12065,7 +12069,7 @@ msgstr "<parameter>--with-system-zlib</parameter>"
 #: en/chapter08/binutils.xml:84
 msgid ""
 "Use the installed zlib library instead of building the included version."
-msgstr ""
+msgstr "포함된 버전을 빌드하는 대신 설치된 zlib 라이브러리를 사용합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/binutils.xml:93
@@ -12894,7 +12898,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:121 en/chapter08/zlib.xml:60
 msgid "Remove a useless static library:"
-msgstr "Remove a useless static library:"
+msgstr "쓸모없는 정적 라이브러리 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:123
@@ -17585,6 +17589,8 @@ msgid ""
 "This switch tells GCC to link to the system installed copy of the Zlib "
 "library, rather than its own internal copy."
 msgstr ""
+"이 스위치는 GCC가 자체 내부 복사본이 아닌 시스템에 설치된 Zlib 라이브러리 복"
+"사본에 링크하도록 지시합니다."
 
 #. type: Attribute 'xreflabel' of: <sect1><sect2><note><anchor>
 #: en/chapter08/gcc.xml:140
@@ -28494,6 +28500,9 @@ msgid ""
 "build.  Issue the following command so that Perl will use the libraries "
 "installed on the system:"
 msgstr ""
+"이 버전의 Perl은 Compress::Raw::Zlib 및 Compress::Raw::BZip2 모듈을 빌드합니"
+"다. 기본적으로 Perl은 빌드를 위해 소스의 내부 복사본을 사용합니다. Perl이 시"
+"스템에 설치된 라이브러리를 사용하도록 다음 명령을 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/perl.xml:50
@@ -38382,6 +38391,8 @@ msgid ""
 "<productname>zlib</productname> <productnumber>&zlib-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>zlib</productname> <productnumber>&zlib-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/zlib.xml:17
@@ -38400,6 +38411,8 @@ msgid ""
 "The Zlib package contains compression and decompression routines used by "
 "some programs."
 msgstr ""
+"Zlib 패키지에는 일부 프로그램에서 사용하는 압축 및 압축 해제 루틴이 들어 있습"
+"니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/zlib.xml:34
@@ -38419,7 +38432,7 @@ msgstr "Zlib 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zlib.xml:44
 msgid "Prepare Zlib for compilation:"
-msgstr "Prepare Zlib for compilation:"
+msgstr "컴파일 위한 Zlib 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zlib.xml:62
@@ -38445,7 +38458,7 @@ msgstr "<filename class=\"libraryfile\">libz</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/zlib.xml:85
 msgid "Contains compression and decompression functions used by some programs"
-msgstr ""
+msgstr "일부 프로그램에서 사용하는 압축 및 압축 해제 기능을 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/zlib.xml:88
@@ -38464,6 +38477,8 @@ msgid ""
 "<productname>zstd</productname> <productnumber>&zstd-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>zstd</productname> <productnumber>&zstd-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/zstd.xml:17
@@ -50246,7 +50261,7 @@ msgstr "Bash, Binutils, Bzip2, Coreutils, GCC, Glibc, Make, Xz, Zlib, and Zstd"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1674
 msgid "Bzip2, Glibc, Xz, Zlib, and Zstd"
-msgstr ""
+msgstr "Bzip2, Glibc, Xz, Zlib, 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1688
@@ -50467,7 +50482,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2384
 msgid "Binutils, Coreutils, GCC, Make, and Perl"
-msgstr ""
+msgstr "Binutils, Coreutils, GCC, Make, 및 Perl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2391
@@ -50601,6 +50616,7 @@ msgstr ""
 msgid ""
 "Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, and Zlib"
 msgstr ""
+"Bzip2, Expat, Gdbm, Glibc, Libffi, Libxcrypt, Ncurses, OpenSSL, 및 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2730
@@ -50693,7 +50709,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2959
 msgid "Binutils, Coreutils, GCC, Glibc, Make, and Patch"
-msgstr ""
+msgstr "Binutils, Coreutils, GCC, Glibc, Make, 및 Patch"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2997
@@ -50763,7 +50779,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3097
 msgid "Binutils, Coreutils, GCC, Glibc, Make, and Sed"
-msgstr ""
+msgstr "Binutils, Coreutils, GCC, Glibc, Make, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3135
@@ -50913,7 +50929,7 @@ msgstr "File, Kmod, Libelf, Perl, 및 Util-linux"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3549
 msgid "Binutils, Coreutils, GCC, Glibc, Gzip, Lz4, Make, Xz, and Zlib"
-msgstr ""
+msgstr "Binutils, Coreutils, GCC, Glibc, Gzip, Lz4, Make, Xz, 및 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3570
