@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-01 17:29+0900\n"
-"PO-Revision-Date: 2026-05-01 17:19+0900\n"
+"POT-Creation-Date: 2026-05-01 17:38+0900\n"
+"PO-Revision-Date: 2026-05-01 17:38+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -38514,6 +38514,9 @@ msgid ""
 "are expected and only 'FAIL' is an actual test failure. There should be no "
 "test failures."
 msgstr ""
+"테스트 출력 결과에서 'failed' 라고 표시되는 부분이 여러 곳 있습니다. 이는 예"
+"상된 결과이며, 오직 'FAIL'만이 실제 테스트 실패를 나타냅니다. 테스트 실패는 "
+"없어야 합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zstd.xml:61
@@ -38524,7 +38527,7 @@ msgstr "<userinput remap=\"install\">make prefix=/usr install</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/zstd.xml:63
 msgid "Remove the static library:"
-msgstr "Remove the static library:"
+msgstr "정적 라이브러리 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/zstd.xml:64
@@ -38543,8 +38546,8 @@ msgid ""
 "zstd, zstdcat (link to zstd), zstdgrep, zstdless, zstdmt (link to zstd), and "
 "unzstd (link to zstd)"
 msgstr ""
-"zstd, zstdcat (link to zstd), zstdgrep, zstdless, zstdmt (link to zstd), and "
-"unzstd (link to zstd)"
+"zstd, zstdcat (zstd 향한 링크), zstdgrep, zstdless, zstdmt (zstd 향한 링크), "
+"및 unzstd (zstd 향한 링크)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/zstd.xml:84
