@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-02 21:00+0900\n"
-"PO-Revision-Date: 2026-05-02 21:00+0900\n"
+"POT-Creation-Date: 2026-05-03 04:06+0900\n"
+"PO-Revision-Date: 2026-05-03 04:06+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -2701,7 +2701,7 @@ msgstr "MD5 sum: <literal>&gettext-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:259
 msgid "Glibc (&glibc-version;) - <token>&glibc-size;</token>:"
-msgstr ""
+msgstr "Glibc (&glibc-version;) - <token>&glibc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:261
@@ -6135,7 +6135,7 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&glibc-fhs-patch;</userinput>"
 msgid ""
 "The Glibc documentation recommends building Glibc in a dedicated build "
 "directory:"
-msgstr ""
+msgstr "Glibc 문서는 전용 빌드 디렉터리에서 Glibc를 빌드할 것을 권장:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:81
@@ -6144,6 +6144,8 @@ msgid ""
 "utilities are installed into <filename class=\"directory\">/usr/sbin</"
 "filename>:"
 msgstr ""
+"<command>ldconfig</command> 및 <command>sln</command> 유틸리티가 <filename "
+"class=\"directory\">/usr/sbin</filename> 디렉터리에 설치되었는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:85 en/chapter08/glibc.xml:75
@@ -6154,7 +6156,7 @@ msgstr "<userinput remap=\"pre\">echo \"rootsbindir=/usr/sbin\" &gt; configparms
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:87
 msgid "Next, prepare Glibc for compilation:"
-msgstr ""
+msgstr "다음, 컴파일을 위해 Glibc를 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:89
@@ -6190,6 +6192,9 @@ msgid ""
 "configures itself to be cross-compiled, using the cross-linker and cross-"
 "compiler in <filename class=\"directory\">$LFS/tools</filename>."
 msgstr ""
+"이 스위치가 결합된 효과로, Glibc의 빌드 시스템은 <filename "
+"class=\"directory\">$LFS/tools</filename> 디렉터리에 있는 크로스 링커와 크로"
+"스 컴파일러를 써서 크로스 컴파일되도록 스스로를 구성합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:110 en/chapter08/glibc.xml:98
@@ -6202,6 +6207,9 @@ msgid ""
 "This tells Glibc to compile the library with support for &min-kernel; and "
 "later Linux kernels.  Workarounds for older kernels are not enabled."
 msgstr ""
+"이는 Glibc가 &min-kernel; 및 그 이후의 리눅스 커널을 지원하도록 라이브러리를 "
+"컴파일하게 합니다. 이전 커널을 위한 임시 해결책(Workarounds)은 활성화 안 됩니"
+"다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:119 en/chapter08/glibc.xml:128
@@ -19251,6 +19259,9 @@ msgid ""
 "closing files, reading and writing files, string handling, pattern matching, "
 "arithmetic, and so on."
 msgstr ""
+"Glibc 패키지에는 주 C 라이브러리가 들어있습니다. 이 라이브러리는 기본적인 루"
+"틴들을 제공합니다. 메모리 할당, 디렉터리 검색, 파일 열기 및 닫기, 파일 읽기 "
+"및 쓰기, 문자열 처리, 패턴 매칭, 산술 연산 등."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/glibc.xml:36
@@ -19270,6 +19281,9 @@ msgid ""
 "data. Apply the following patch to make such programs store their runtime "
 "data in the FHS-compliant locations:"
 msgstr ""
+"일부 Glibc 프로그램은 FHS를 준수하지 않는 <filename class=\"directory\">/var/"
+"db</filename>디렉터리를 씁니다. 런타임 데이터를 저장하기 위해. 이러한 프로그"
+"램들이 런타임 데이터를 FHS를 준수하는 위치에 저장하도록 다음 패치를 적용:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:71
@@ -19344,6 +19358,8 @@ msgid ""
 "In this section, the test suite for Glibc is considered critical.  Do not "
 "skip it under any circumstance."
 msgstr ""
+"이 섹션에서 Glibc 테스트 스위트는 매우 중요한 것으로 간주됩니다. 어떤 상황에"
+"서도 이를 건너뛰지 마십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:146
@@ -19362,6 +19378,9 @@ msgid ""
 "ignored. This is a list of the most common issues seen for recent versions "
 "of LFS:"
 msgstr ""
+"일부 테스트 실패가 날 수 있습니다. Glibc 테스트 스위트는 어느 정도 호스트 시"
+"스템에 의존적입니다. 6천개 넘는 테스트 중 몇 가지 실패는 일반적으로 무시할 "
+"수 있습니다. 최신 버전의 LFS에서 가장 흔히 발생하는 문제 목록:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:169
@@ -19439,6 +19458,9 @@ msgid ""
 "Glibc-&glibc-version;) on a running LFS system, you need to take some extra "
 "precautions to avoid breaking the system:"
 msgstr ""
+"실행 중인 LFS 시스템에서 Glibc를 새 마이너 버전(예를 들어, Glibc-2.36에서 "
+"Glibc-&glibc-version; 으로)으로 업그레이드하는 경우, 시스템이 망가지는 것을 "
+"피하기 위해 몇 가지 추가적인 예방 조치:"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:241
@@ -19447,6 +19469,9 @@ msgid ""
 "Rebuild LFS if you are running such an old LFS system but you need a newer "
 "Glibc."
 msgstr ""
+"11.0 미만 LFS 시스템에서 Glibc를 업그레이드하는 것은 지원 안 합니다. 이처럼 "
+"오래된 LFS 시스템을 사용 중이지만 더 새로운 Glibc가 필요하면 LFS를 다시 빌드"
+"하십시오."
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:250
@@ -19459,6 +19484,13 @@ msgid ""
 "filename> (replacing <filename class='libraryfile'>libcrypt.so.1</filename> "
 "from the prior Glibc installation)</emphasis>."
 msgstr ""
+"12.0 미만 LFS 시스템에서 업그레이드하는 경우, <xref role='.' linkend='ch-"
+"system-libxcrypt'/> 따라 <application>Libxcrypt</application> 설치하십시오. "
+"일반적인 <application>Libxcrypt</application> 설치 외에도, <emphasis "
+"role='bold'>반드시 Libxcrypt 섹션의 참고 사항에 따라 <filename "
+"class='libraryfile'>libcrypt.so.1*</filename> 설치해야 합니다(이전 Glibc 설치"
+"본의 <filename class='libraryfile'>libcrypt.so.1</filename> 대체하게 됩니다)."
+"</emphasis>"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:269
@@ -19529,6 +19561,9 @@ msgid ""
 "deviation may render the system completely unusable.  YOU ARE WARNED.</"
 "emphasis>"
 msgstr ""
+"위에 제시된 단계들을 엄격히 따르십시오. 자신이 무엇을 하고 있는지 완전히 이해"
+"하고 있지 않다면. <emphasis role='bold'>예상치 못한 어떠한 일탈도 시스템을 완"
+"전히 사용할 수 없는 상태로 만들 수 있습니다. 경고합니다.</emphasis>"
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/glibc.xml:331
@@ -19538,6 +19573,10 @@ msgid ""
 "and the commands to install the locales.  Once they are finished, reboot the "
 "system immediately."
 msgstr ""
+"그 다음 <command>make install</command> 명령, <filename>/usr/bin/ldd</"
+"filename> 에 대한 <command>sed</command> 명령, 그리고 로캘(locales) 설치 명령"
+"을 계속해서 실행하십시오. 이 과정들이 모두 끝나면 즉시 시스템을 재부팅하십시"
+"오."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/glibc.xml:339
@@ -19548,6 +19587,10 @@ msgid ""
 "location and remove the stale <quote>fixed</quote> copies of the Glibc "
 "headers:"
 msgstr ""
+"시스템이 성공적으로 재부팅되었을 때, 만약 <parameter>--disable-fixincludes</"
+"parameter> 옵션 없이 GCC를 빌드한 12.0 미만 LFS 시스템을 운영 중이라면, GCC "
+"헤더 두 개를 더 나은 위치로 옮기고 유효하지 않은 기존 Glibc 헤더의 <quote>고"
+"친</quote> 복사본 제거:"
 
 #. type: Content of: <sect1><sect2><important><screen>
 #: en/chapter08/glibc.xml:346
@@ -19703,10 +19746,10 @@ msgid ""
 "for installing libidn2 are in the <ulink url=\"&blfs-book;general/"
 "libidn2.html\">BLFS libidn2 page</ulink>."
 msgstr ""
-"Glibc now uses libidn2 when resolving internationalized domain names.  This "
-"is a run time dependency.  If this capability is needed, the instructions "
-"for installing libidn2 are in the <ulink url=\"&blfs-book;general/"
-"libidn2.html\">BLFS libidn2 page</ulink>."
+"Glibc는 이제 국제화 도메인 네임(IDN)을 해석할 때 libidn2를 사용합니다. 이는 "
+"실행 시점 의존성(run time dependency)입니다. 이 기능이 필요한 경우, libidn2 "
+"설치 지침은 <ulink url=\"&blfs-book;general/libidn2.html\">BLFS libidn2 "
+"page</ulink>."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/glibc.xml:444
@@ -46190,7 +46233,7 @@ msgstr ""
 #. type: Content of: <bookinfo><legalnotice><para>
 #: en/prologue/bookinfo.xml:45
 msgid "This book is licensed under a <xref linkend=\"CC\"/>."
-msgstr ""
+msgstr "이 책은 <xref linkend=\"CC\"/>.에 따라 라이선스가 부여되었습니다."
 
 #. type: Content of: <bookinfo><legalnotice><para>
 #: en/prologue/bookinfo.xml:46
@@ -46198,6 +46241,8 @@ msgid ""
 "Computer instructions may be extracted from the book under the <xref "
 "linkend=\"MIT\"/>."
 msgstr ""
+"이 책의 컴퓨터 명령어들은 <xref linkend=\"MIT\"/> 에 따라 추출하여 사용할 수 "
+"있습니다."
 
 #. type: Content of: <bookinfo><legalnotice><para>
 #: en/prologue/bookinfo.xml:49
