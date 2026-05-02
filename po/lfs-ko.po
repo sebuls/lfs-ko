@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-02 17:45+0900\n"
-"PO-Revision-Date: 2026-05-02 17:45+0900\n"
+"POT-Creation-Date: 2026-05-02 21:00+0900\n"
+"PO-Revision-Date: 2026-05-02 21:00+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11730,6 +11730,8 @@ msgid ""
 "Skip down to <quote>Install the package</quote> if not running the test "
 "suite."
 msgstr ""
+"테스트 스위트를 실행하지 않는다면 <quote>Install the package</quote>로 건너뛰"
+"십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bash.xml:72
@@ -13276,6 +13278,8 @@ msgid ""
 "The Coreutils package contains the basic utility programs needed by every "
 "operating system."
 msgstr ""
+"Coreutils 패키지에는 모든 운영 체제에 필요한 기본 유틸리티 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/coreutils.xml:34
@@ -13294,6 +13298,9 @@ msgid ""
 "correctly even in multibyte locales. The following patch fixes this non-"
 "compliance and other internationalization-related bugs."
 msgstr ""
+"POSIX는 Coreutils의 프로그램들이 멀티바이트 로캘에서도 문자 경계를 올바르게 "
+"인식할 것을 요구합니다. 다음 패치는 이러한 표준 미준수 사항과 기타 국제화 관"
+"련 버그들을 고칩니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:48
@@ -13308,6 +13315,8 @@ msgid ""
 "Coreutils maintainers, please check first to see if those bugs are "
 "reproducible without this patch."
 msgstr ""
+"이 패치에서 많은 버그가 발견되었습니다. Coreutils 유지관리자에게 새로운 버그"
+"를 보고할 때는, 먼저 해당 버그가 이 패치 없이도 재현되는지 확인 바랍니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:65
@@ -13379,6 +13388,8 @@ msgid ""
 "Now the test suite is ready to be run. First, run the tests that are meant "
 "to be run as user <systemitem class=\"username\">root</systemitem>:"
 msgstr ""
+"이제 테스트 스위트를 실행할 준비가 되었습니다. 먼저, <systemitem "
+"class=\"username\">root</systemitem> 사용자로 실행해야 하는 테스트들을 수행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:128
@@ -13395,6 +13406,10 @@ msgid ""
 "skipped, add a temporary group and make the user <systemitem "
 "class=\"username\">tester</systemitem> a part of it:"
 msgstr ""
+"<systemitem class=\"username\">tester</systemitem> 사용자로 나머지 테스트를 "
+"실행하겠습니다. 특정 테스트들은 사용자가 둘 이상의 그룹에 속해 있을 것을 요구"
+"합니다. 이러한 테스트들이 건너뛰어지지 않도록, 임시 그룹을 추가하고 "
+"<systemitem class=\"username\">tester</systemitem> 사용자를 해당 그룹에 포함:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:136
@@ -13424,6 +13439,11 @@ msgid ""
 "PTY from host distro, and the device node for such a PTY cannot be accessed "
 "from the LFS chroot environment):"
 msgstr ""
+"이제 테스트를 실행하십시오 (표준 입력으로 <filename>/dev/null</filename> 사용"
+"하십시오. 안 그러면 그래픽 터미널이나 SSH, GNU Screen 세션에서 LFS를 빌드할 "
+"때 두 가지 테스트가 실패할 수 있습니다. 이는 표준 입력이 호스트 배포판의 PTY"
+"에 연결되어 있고, LFS chroot 환경에서는 해당 PTY의 장치 노드에 접근할 수 없"
+"기 때문):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:154
@@ -13449,7 +13469,7 @@ msgstr "<userinput remap=\"test\">groupdel dummy</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:165
 msgid "Move programs to the locations specified by the FHS:"
-msgstr ""
+msgstr "프로그램을 FHS에 명시된 위치로 이동:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/coreutils.xml:167
@@ -13482,6 +13502,16 @@ msgid ""
 "touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink, users, "
 "vdir, wc, who, whoami, and yes"
 msgstr ""
+"[, b2sum, base32, base64, basename, basenc, cat, chcon, chgrp, chmod, chown, "
+"chroot, cksum, comm, cp, csplit, cut, date, dd, df, dir, dircolors, dirname, "
+"du, echo, env, expand, expr, factor, false, fmt, fold, groups, head, hostid, "
+"id, install, join, link, ln, logname, ls, md5sum, mkdir, mkfifo, mknod, "
+"mktemp, mv, nice, nl, nohup, nproc, numfmt, od, paste, pathchk, pinky, pr, "
+"printenv, printf, ptx, pwd, readlink, realpath, rm, rmdir, runcon, seq, "
+"sha1sum, sha224sum, sha256sum, sha384sum, sha512sum, shred, shuf, sleep, "
+"sort, split, stat, stdbuf, stty, sum, sync, tac, tail, tee, test, timeout, "
+"touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink, users, "
+"vdir, wc, who, whoami, 및 yes"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/coreutils.xml:193
