@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-04 22:04+0900\n"
-"PO-Revision-Date: 2026-05-04 22:03+0900\n"
+"POT-Creation-Date: 2026-05-05 03:37+0900\n"
+"PO-Revision-Date: 2026-05-05 03:36+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -16040,7 +16040,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:226
 msgid "compile_et"
-msgstr ""
+msgstr "compile_et"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/e2fsprogs.xml:232
@@ -27941,7 +27941,7 @@ msgstr "Ninja"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ninja.xml:26
 msgid "Ninja is a small build system with a focus on speed."
-msgstr ""
+msgstr "Ninja는 속도에 중점을 둔 작은 빌드 시스템입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/ninja.xml:33
@@ -27956,7 +27956,7 @@ msgstr "&ninja-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/ninja.xml:41
 msgid "Installation of Ninja"
-msgstr "Installation of Ninja"
+msgstr "Ninja 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ninja.xml:43
@@ -27969,6 +27969,12 @@ msgid ""
 "packages embed the execution of <command>ninja</command>, and do not pass "
 "the -j parameter on to it."
 msgstr ""
+"<command>ninja</command> 실행하면 일반적으로 가능한 최대 개수의 프로세스를 병"
+"렬로 활용합니다. 기본값은 시스템의 코어 수에 2를 더한 값입니다. 이는 CPU를 과"
+"열시키거나 시스템 메모리를 부족하게 만들 수 있습니다. 명령줄에서 "
+"<command>ninja</command> 호출할 때 -jN 매개변수를 전달하면 병렬 프로세스 수"
+"를 제한할 수 있습니다. 일부 패키지는 <command>ninja</command> 실행을 내장하"
+"고 있으며, -j 매개변수를 전달 안 합니다."
 
 #. type: Content of: <sect1><sect2><para><screen>
 #: en/chapter08/ninja.xml:54
@@ -27985,6 +27991,10 @@ msgid ""
 "<placeholder type=\"screen\" id=\"0\"/> will limit <command>ninja</command> "
 "to four parallel processes."
 msgstr ""
+"아래 <emphasis>optional</emphasis> 절차를 사용하면 사용자가 환경 변수인 "
+"NINJAJOBS를 통해 병렬 프로세스 수를 제한할 수 있습니다. <emphasis "
+"role=\"bold\">예를 들어</emphasis>, <placeholder type=\"screen\" id=\"0\"/> "
+"설정하면 <command>ninja</command>를 병렬 프로세스 4개로 제한합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ninja.xml:58
@@ -28014,7 +28024,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ninja.xml:68
 msgid "Build Ninja with:"
-msgstr ""
+msgstr "Ninja 빌드:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ninja.xml:70
@@ -28073,7 +28083,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/ninja.xml:113
 msgid "Contents of Ninja"
-msgstr ""
+msgstr "Ninja 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ninja.xml:119 en/chapter08/ninja.xml:132
@@ -28140,7 +28150,7 @@ msgstr "&openssl-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/openssl.xml:44
 msgid "Installation of OpenSSL"
-msgstr "Installation of OpenSSL"
+msgstr "OpenSSL 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/openssl.xml:52
@@ -38048,6 +38058,8 @@ msgid ""
 "Wheel is a Python library that is the reference implementation of the Python "
 "wheel packaging standard."
 msgstr ""
+"Wheel은 파이썬 휠(wheel) 패키징 표준 참조 구현(reference implementation)인 파"
+"이썬 라이브러리입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/wheel.xml:33
@@ -38067,12 +38079,12 @@ msgstr "Wheel 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/wheel.xml:43
 msgid "Compile Wheel with the following command:"
-msgstr ""
+msgstr "다음 명령을 사용하여 Wheel을 컴파일:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/wheel.xml:47
 msgid "Install Wheel with the following command:"
-msgstr ""
+msgstr "아래 명령으로 Wheel 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/wheel.xml:49
@@ -38091,13 +38103,13 @@ msgid ""
 "/usr/lib/python&python-minor;/site-packages/wheel and /usr/lib/python&python-"
 "minor;/site-packages/wheel-&wheel-version;.dist-info"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/wheel and /usr/lib/python&python-"
+"/usr/lib/python&python-minor;/site-packages/wheel 및 /usr/lib/python&python-"
 "minor;/site-packages/wheel-&wheel-version;.dist-info"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/wheel.xml:78
 msgid "is a utility to unpack, pack, or convert wheel archives"
-msgstr ""
+msgstr "wheel 아카이브를 풀기, 묶기, 또는 변환하는 유틸리티"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/xml-parser.xml:14
