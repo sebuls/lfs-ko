@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-04 02:12+0900\n"
-"PO-Revision-Date: 2026-05-04 02:11+0900\n"
+"POT-Creation-Date: 2026-05-04 22:04+0900\n"
+"PO-Revision-Date: 2026-05-04 22:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -21062,7 +21062,8 @@ msgstr "Gperf"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gperf.xml:26
 msgid "Gperf generates a perfect hash function from a key set."
-msgstr "Gperf generates a perfect hash function from a key set."
+msgstr ""
+"Gperf는 키 집합으로부터 퍼펙트 해시 함수(perfect hash function)를 생성합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gperf.xml:33
@@ -21082,7 +21083,7 @@ msgstr "Installation of Gperf"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gperf.xml:43
 msgid "Prepare Gperf for compilation:"
-msgstr "Prepare Gperf for compilation:"
+msgstr "컴파일 위한 Gperf 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gperf.xml:45
@@ -21113,7 +21114,7 @@ msgstr "<command>gperf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gperf.xml:82
 msgid "Generates a perfect hash from a key set"
-msgstr ""
+msgstr "키 집합으로부터 퍼펙트 해시(perfect hash)를 생성"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/grep.xml:26
@@ -50397,7 +50398,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:985
 msgid "Acl, Bash, Gcc, and Glibc"
-msgstr "Acl, Bash, Gcc, and Glibc"
+msgstr "Acl, Bash, Gcc 및 Glibc"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:992
@@ -51107,13 +51108,13 @@ msgid ""
 "Zstd"
 msgstr ""
 "Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
-"Jinja2, Libxcrypt, Lz4, Meson, OpenSSL, Pcre2, Pkgconf, Sed, Util-linux, and "
+"Jinja2, Libxcrypt, Lz4, Meson, OpenSSL, Pcre2, Pkgconf, Sed, Util-linux 및 "
 "Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3006
 msgid "Acl, Glibc, Libxcrypt, OpenSSL, Util-linux, Xz, Zlib, and Zstd"
-msgstr "Acl, Glibc, Libxcrypt, OpenSSL, Util-linux, Xz, Zlib, and Zstd"
+msgstr "Acl, Glibc, Libxcrypt, OpenSSL, Util-linux, Xz, Zlib 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3021
@@ -51214,12 +51215,12 @@ msgid ""
 "Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
 msgstr ""
 "Acl, Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Gperf, Grep, "
-"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
+"Jinja2, Libcap, Libxcrypt, Meson, OpenSSL, Pkgconf, Sed, Util-linux 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3262
 msgid "Acl, Glibc, Libcap, OpenSSL, and Util-linux"
-msgstr "Acl, Glibc, Libcap, OpenSSL, and Util-linux"
+msgstr "Acl, Glibc, Libcap, OpenSSL 및 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3293
