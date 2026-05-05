@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-05 03:37+0900\n"
-"PO-Revision-Date: 2026-05-05 03:36+0900\n"
+"POT-Creation-Date: 2026-05-05 17:32+0900\n"
+"PO-Revision-Date: 2026-05-05 17:32+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8395,7 +8395,7 @@ msgstr "Installation of Make"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/make.xml:45 en/chapter08/make.xml:44
 msgid "Prepare Make for compilation:"
-msgstr "Prepare Make for compilation:"
+msgstr "컴파일 위해 Make 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/make.xml:64
@@ -19454,6 +19454,8 @@ msgid ""
 "Fix the Makefile to skip an outdated sanity check that fails with a modern "
 "Glibc configuration:"
 msgstr ""
+"현대적인 Glibc 구성에서 실패하는 오래된 건전성 검사(sanity check)를 건너뛰도"
+"록 Makefile을 고치기:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:221
@@ -22497,7 +22499,7 @@ msgstr "<command>grub-mkrelpath</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:292
 msgid "Makes a system pathname relative to its root"
-msgstr ""
+msgstr "시스템 경로명을 해당 루트(root)에 대한 상대 경로로 만들기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:294
@@ -26191,6 +26193,8 @@ msgid ""
 "The Make package contains a program for controlling the generation of "
 "executables and other non-source files of a package from source files."
 msgstr ""
+"Make 패키지에는 소스 파일로부터 패키지의 실행 파일 및 기타 비소스(non-"
+"source) 파일 생성을 제어하는 프로그램이 들어있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/make.xml:34
@@ -26205,7 +26209,7 @@ msgstr "&make-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/make.xml:67
 msgid "Contents of Make"
-msgstr ""
+msgstr "Make 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/make.xml:73 en/chapter08/make.xml:88
@@ -26223,8 +26227,8 @@ msgid ""
 "Automatically determines which pieces of a package need to be (re)compiled "
 "and then issues the relevant commands"
 msgstr ""
-"Automatically determines which pieces of a package need to be (re)compiled "
-"and then issues the relevant commands"
+"패키지의 어느 부분이 (재)컴파일되어야 하는지 자동으로 결정한 후 관련 명령을 "
+"실행"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/man-db.xml:14
@@ -26713,7 +26717,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-db.xml:303
 msgid "Contents of Man-DB"
-msgstr ""
+msgstr "Man-DB 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-db.xml:311
