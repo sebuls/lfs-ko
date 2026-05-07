@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-07 21:30+0900\n"
-"PO-Revision-Date: 2026-05-07 21:30+0900\n"
+"POT-Creation-Date: 2026-05-08 03:16+0900\n"
+"PO-Revision-Date: 2026-05-08 03:15+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8809,12 +8809,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/tar.xml:44 en/chapter08/tar.xml:44
 msgid "Installation of Tar"
-msgstr "Installation of Tar"
+msgstr "Tar 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/tar.xml:46 en/chapter08/tar.xml:46
 msgid "Prepare Tar for compilation:"
-msgstr "Prepare Tar for compilation:"
+msgstr "컴파일 위한 Tar 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/tar.xml:65
@@ -12291,7 +12291,7 @@ msgstr "<command>ar</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:181
 msgid "Creates, modifies, and extracts from archives"
-msgstr ""
+msgstr "아카이브 생성, 변형 및 아카이브로부터 파일을 추출"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:183
@@ -34505,6 +34505,9 @@ msgid ""
 "previously created archives to extract files, to store additional files, or "
 "to update or list files which were already stored."
 msgstr ""
+"Tar 패키지는 tar 아카이브를 생성할 뿐 아니라 다양한 방식의 아카이브 조작을 수"
+"행하는 기능을 제공합니다. Tar를 사용하여 이전에 생성된 아카이브에서 파일을 추"
+"출, 추가 파일 저장, 이미 저장된 파일을 업데이트 또는 나열할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/tar.xml:36
@@ -34535,6 +34538,11 @@ msgid ""
 "user, but as it is being run on a system that has only been partially built, "
 "overriding it is OK."
 msgstr ""
+"이 설정은 <function>mknod</function> 테스트가 <systemitem "
+"class=\"username\">root</systemitem> 계정으로 실행되도록 강제합니다. 일반적으"
+"로 <systemitem class=\"username\">root</systemitem> 사용자로 이 테스트를 실행"
+"하는 것은 위험한 것으로 간주되지만, 현재는 부분적으로만 빌드된 시스템에서 실"
+"행 중이므로 이를 무시(overriding)해도 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tar.xml:75
@@ -34544,6 +34552,10 @@ msgid ""
 "support extended attributes or security labels on the filesystem used for "
 "building LFS."
 msgstr ""
+"하나의 테스트 capabilities: binary store/restore는 LFS에 selinux가 없으므로, "
+"실행하면 실패하는 것으로 알려져 있습니다. 그러나, LFS를 빌드하는 데 사용 중"
+"인 파일 시스템에서 호스트 커널이 확장 속성(extended attributes)이나 보안 레이"
+"블을 지원하지 않는다면 해당 테스트는 건너뛰게 됩니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tar.xml:82
@@ -34581,6 +34593,8 @@ msgid ""
 "Creates, extracts files from, and lists the contents of archives, also known "
 "as tarballs"
 msgstr ""
+"흔히 tarball 이라고도 불리는 아카이브를 생성, 아카이브에서 파일을 추출, 그 내"
+"용을 나열합니다."
 
 #. type: Content of the tdbc-ver entity
 #: en/chapter08/tcl.xml:6
