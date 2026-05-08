@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-08 03:16+0900\n"
-"PO-Revision-Date: 2026-05-08 03:15+0900\n"
+"POT-Creation-Date: 2026-05-09 02:27+0900\n"
+"PO-Revision-Date: 2026-05-09 02:27+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -15233,13 +15233,13 @@ msgid ""
 "framework, which can be used by any two applications to communicate directly "
 "(without going through the message bus daemon)."
 msgstr ""
-"D-Bus is a message bus system, a simple way for applications to talk to one "
-"another. D-Bus supplies both a system daemon (for events such as \"new "
-"hardware device added\" or \"printer queue changed\") and a per-user-login-"
-"session daemon (for general IPC needs among user applications). Also, the "
-"message bus is built on top of a general one-to-one message passing "
-"framework, which can be used by any two applications to communicate directly "
-"(without going through the message bus daemon)."
+"D-Bus는 애플리케이션들이 서로 대화할 수 있는 간단한 방법인 메시지 버스 시스템"
+"입니다. D-Bus는 시스템 데몬(\"새 하드웨어 장치 추가\" 또는 \"프린터 대기열 변"
+"경\"과 같은 이벤트용)과 사용자 로그인 세션당 데몬(사용자 애플리케이션 간의 일"
+"반적인 IPC 요구사항용)을 모두 제공합니다. 또한, 메시지 버스는 일반적인 일대"
+"일 메시지 전달 프레임워크를 기반으로 빌드되어 있으며, 이 프레임워크는 메시지 "
+"버스 데몬을 안 거치고 임의의 두 애플리케이션이 직접 통신하는 데 사용될 수 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/dbus.xml:39
@@ -15259,7 +15259,7 @@ msgstr "Installation of D-Bus"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dbus.xml:49
 msgid "Prepare D-Bus for compilation:"
-msgstr "Prepare D-Bus for compilation:"
+msgstr "컴파일 위한 D-Bus 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:51
@@ -15316,6 +15316,9 @@ msgid ""
 "can be found in <ulink url=\"&blfs-book;general/dbus.html\">the BLFS book</"
 "ulink>."
 msgstr ""
+"많은 테스트가 비활성화되어 있습니다. 왜냐면, LFS에 포함되지 않은 추가 패키지"
+"를 필요로 하기 때문. 포괄적인 테스트 세트를 실행하기 위한 지침은 <ulink "
+"url=\"&blfs-book;general/dbus.html\">BLFS book</ulink>에 있습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:86 en/chapter08/kmod.xml:78
@@ -15330,6 +15333,8 @@ msgid ""
 "Create a symlink so that D-Bus and systemd can use the same "
 "<filename>machine-id</filename> file:"
 msgstr ""
+"D-Bus와 systemd가 같은 <filename>machine-id</filename> 파일을 사용할 수 있도"
+"록 심볼릭 링크 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dbus.xml:91
@@ -15350,7 +15355,7 @@ msgid ""
 "dbus-uuidgen"
 msgstr ""
 "dbus-cleanup-sockets, dbus-daemon, dbus-launch, dbus-monitor, dbus-run-"
-"session, dbus-send, dbus-test-tool, dbus-update-activation-environment, and "
+"session, dbus-send, dbus-test-tool, dbus-update-activation-environment, 및 "
 "dbus-uuidgen"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -15375,7 +15380,7 @@ msgstr "<command>dbus-cleanup-sockets</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/dbus.xml:122
 msgid "is used to remove leftover sockets in a directory"
-msgstr ""
+msgstr "디렉터리에 남아 있는 소켓을 제거하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/dbus.xml:124
@@ -15514,7 +15519,7 @@ msgstr "<filename class=\"libraryfile\">libdbus-1</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/dbus.xml:218
 msgid "Contains API functions used to communicate with the D-Bus message bus"
-msgstr ""
+msgstr "D-Bus 메시지 버스와 통신하는 데 사용되는 API 함수를 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/dbus.xml:221
@@ -47380,6 +47385,8 @@ msgid ""
 "This package contains programs to implement a message bus system, a simple "
 "way for applications to talk to one another."
 msgstr ""
+"이 패키지에는 메시지 버스 시스템을 구현하는 프로그램이 들어 있습니다. 애플리"
+"케이션이 서로 대화할 수 있는 간단한 방법입니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:121
