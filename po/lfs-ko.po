@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-10 03:36+0900\n"
-"PO-Revision-Date: 2026-05-10 03:35+0900\n"
+"POT-Creation-Date: 2026-05-11 02:03+0900\n"
+"PO-Revision-Date: 2026-05-11 02:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6076,7 +6076,7 @@ msgstr "&glibc-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter05/glibc.xml:44 en/chapter08/glibc.xml:44
 msgid "Installation of Glibc"
-msgstr "Installation of Glibc"
+msgstr "Glibc 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:46
@@ -6341,7 +6341,7 @@ msgstr "<userinput remap=\"install\">make DESTDIR=$LFS install</userinput>"
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter05/glibc.xml:170
 msgid "The meaning of the <command>make install</command> option:"
-msgstr ""
+msgstr "<command>make install</command> 옵션의 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/glibc.xml:173
@@ -6850,7 +6850,7 @@ msgstr "&linux-headers-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter05/linux-headers.xml:43
 msgid "Installation of Linux API Headers"
-msgstr "Installation of Linux API Headers"
+msgstr "Linux API 헤더 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/linux-headers.xml:45
@@ -7588,7 +7588,7 @@ msgstr "&diffutils-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/diffutils.xml:44 en/chapter08/diffutils.xml:42
 msgid "Installation of Diffutils"
-msgstr "Installation of Diffutils"
+msgstr "Diffutils 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/diffutils.xml:46 en/chapter08/diffutils.xml:44
@@ -7678,7 +7678,7 @@ msgstr "&file-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/file.xml:44 en/chapter08/file.xml:42
 msgid "Installation of File"
-msgstr "Installation of File"
+msgstr "File 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/file.xml:47
@@ -7809,7 +7809,7 @@ msgstr "&findutils-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/findutils.xml:44 en/chapter08/findutils.xml:46
 msgid "Installation of Findutils"
-msgstr "Installation of Findutils"
+msgstr "Findutils 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/findutils.xml:46 en/chapter08/findutils.xml:48
@@ -7948,7 +7948,7 @@ msgstr "&gcc-tmpp2-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/gcc-pass2.xml:44 en/chapter08/gcc.xml:42
 msgid "Installation of GCC"
-msgstr "Installation of GCC"
+msgstr "GCC 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:46
@@ -8238,7 +8238,7 @@ msgstr "&gzip-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/gzip.xml:44 en/chapter08/gzip.xml:42
 msgid "Installation of Gzip"
-msgstr "Installation of Gzip"
+msgstr "Gzip 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gzip.xml:46 en/chapter08/gzip.xml:44
@@ -8337,7 +8337,7 @@ msgstr "&m4-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/m4.xml:44 en/chapter08/m4.xml:41
 msgid "Installation of M4"
-msgstr "Installation of M4"
+msgstr "M4 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/m4.xml:46 en/chapter08/m4.xml:43
@@ -8390,7 +8390,7 @@ msgstr "&make-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/make.xml:43 en/chapter08/make.xml:42
 msgid "Installation of Make"
-msgstr "Installation of Make"
+msgstr "Make 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/make.xml:45 en/chapter08/make.xml:44
@@ -8443,7 +8443,7 @@ msgstr "&ncurses-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/ncurses.xml:44 en/chapter08/ncurses.xml:42
 msgid "Installation of Ncurses"
-msgstr "Installation of Ncurses"
+msgstr "Ncurses 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/ncurses.xml:46
@@ -8703,7 +8703,7 @@ msgstr "&patch-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/patch.xml:44 en/chapter08/patch.xml:43
 msgid "Installation of Patch"
-msgstr "Installation of Patch"
+msgstr "Patch 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/patch.xml:46 en/chapter08/patch.xml:45
@@ -8756,7 +8756,7 @@ msgstr "&sed-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/sed.xml:44 en/chapter08/sed.xml:41
 msgid "Installation of Sed"
-msgstr "Installation of Sed"
+msgstr "Sed 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/sed.xml:46 en/chapter08/sed.xml:43
@@ -10064,7 +10064,7 @@ msgstr "&gettext-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/gettext.xml:44 en/chapter08/gettext.xml:44
 msgid "Installation of Gettext"
-msgstr "Installation of Gettext"
+msgstr "Gettext 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:46
@@ -10376,7 +10376,7 @@ msgstr "&perl-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/perl.xml:44 en/chapter08/perl.xml:42
 msgid "Installation of Perl"
-msgstr "Installation of Perl"
+msgstr "Perl 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/perl.xml:46
@@ -10521,7 +10521,7 @@ msgstr "&python-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/python.xml:44
 msgid "Installation of Python"
-msgstr "Installation of Python"
+msgstr "Python 설치"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter07/python.xml:47
@@ -10645,12 +10645,12 @@ msgstr "&texinfo-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/texinfo.xml:44 en/chapter08/texinfo.xml:42
 msgid "Installation of Texinfo"
-msgstr "Installation of Texinfo"
+msgstr "Texinfo 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/texinfo.xml:46 en/chapter08/texinfo.xml:49
 msgid "Prepare Texinfo for compilation:"
-msgstr "Prepare Texinfo for compilation:"
+msgstr "컴파일 위해 Texinfo 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/texinfo.xml:48 en/chapter08/autoconf.xml:46
@@ -10669,7 +10669,7 @@ msgstr "<userinput remap=\"configure\">./configure --prefix=/usr</userinput>"
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-texinfo\" "
 "role=\".\"/>"
-msgstr ""
+msgstr "이 패키지 상세는 <xref linkend=\"contents-texinfo\" role=\".\"/> 에"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter07/util-linux.xml:14 en/chapter08/util-linux.xml:14
@@ -12154,7 +12154,7 @@ msgstr "<userinput remap=\"make\">make tooldir=/usr</userinput>"
 #: en/chapter08/binutils.xml:96 en/chapter08/bzip2.xml:64
 #: en/chapter08/texinfo.xml:89
 msgid "The meaning of the make parameter:"
-msgstr ""
+msgstr "make parameter 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:99
@@ -15269,7 +15269,7 @@ msgstr "&dbus-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dbus.xml:47
 msgid "Installation of D-Bus"
-msgstr "Installation of D-Bus"
+msgstr "D-Bus 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dbus.xml:49
@@ -15589,7 +15589,7 @@ msgstr "&dejagnu-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/dejagnu.xml:43
 msgid "Installation of DejaGNU"
-msgstr "Installation of DejaGNU"
+msgstr "DejaGNU 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dejagnu.xml:45
@@ -15812,7 +15812,7 @@ msgstr "&e2fsprogs-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:45
 msgid "Installation of E2fsprogs"
-msgstr "Installation of E2fsprogs"
+msgstr "E2fsprogs 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:47
@@ -16613,7 +16613,7 @@ msgstr "&expat-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expat.xml:42
 msgid "Installation of Expat"
-msgstr "Installation of Expat"
+msgstr "Expat 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expat.xml:44
@@ -16744,7 +16744,7 @@ msgstr "&expect-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/expect.xml:49
 msgid "Installation of Expect"
-msgstr "Installation of Expect"
+msgstr "Expect 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:51
@@ -17140,7 +17140,7 @@ msgstr "&flex-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flex.xml:42
 msgid "Installation of Flex"
-msgstr "Installation of Flex"
+msgstr "Flex 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/flex.xml:54
@@ -17318,7 +17318,7 @@ msgstr "&flit-core-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flit-core.xml:41
 msgid "Installation of Flit-Core"
-msgstr "Installation of Flit-Core"
+msgstr "Flit-Core 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/flit-core.xml:45 en/chapter08/jinja2.xml:45
@@ -18629,7 +18629,7 @@ msgstr "&gdbm-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gdbm.xml:45
 msgid "Installation of GDBM"
-msgstr "Installation of GDBM"
+msgstr "GDBM 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gdbm.xml:51
@@ -20862,7 +20862,7 @@ msgstr "&gmp-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gmp.xml:42
 msgid "Installation of GMP"
-msgstr "Installation of GMP"
+msgstr "GMP 설치"
 
 #. type: Content of: <sect1><sect2><note><para><screen>
 #: en/chapter08/gmp.xml:50
@@ -21102,7 +21102,7 @@ msgstr "&gperf-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/gperf.xml:41
 msgid "Installation of Gperf"
-msgstr "Installation of Gperf"
+msgstr "Gperf 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gperf.xml:43
@@ -22156,7 +22156,7 @@ msgstr "&grub-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/grub.xml:41
 msgid "Installation of GRUB"
-msgstr "Installation of GRUB"
+msgstr "GRUB 설치"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/grub.xml:45
@@ -22976,7 +22976,7 @@ msgstr "&iana-etc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iana-etc.xml:42
 msgid "Installation of Iana-Etc"
-msgstr "Installation of Iana-Etc"
+msgstr "Iana-Etc 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/iana-etc.xml:44
@@ -23085,7 +23085,7 @@ msgstr "&inetutils-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/inetutils.xml:41
 msgid "Installation of Inetutils"
-msgstr "Installation of Inetutils"
+msgstr "Inetutils 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:43
@@ -23738,7 +23738,7 @@ msgstr "&iproute2-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iproute2.xml:42
 msgid "Installation of IPRoute2"
-msgstr "Installation of IPRoute2"
+msgstr "IPRoute2 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/iproute2.xml:44
@@ -24182,7 +24182,7 @@ msgstr "&jinja2-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/jinja2.xml:41
 msgid "Installation of Jinja2"
-msgstr "Installation of Jinja2"
+msgstr "Jinja2 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/jinja2.xml:49
@@ -24250,7 +24250,7 @@ msgstr "&kbd-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/kbd.xml:42
 msgid "Installation of Kbd"
-msgstr "Installation of Kbd"
+msgstr "Kbd 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kbd.xml:44
@@ -24810,7 +24810,7 @@ msgstr "&kmod-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/kmod.xml:42
 msgid "Installation of Kmod"
-msgstr "Installation of Kmod"
+msgstr "Kmod 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kmod.xml:44
@@ -25057,7 +25057,7 @@ msgstr "&less-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/less.xml:41
 msgid "Installation of Less"
-msgstr "Installation of Less"
+msgstr "Less 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/less.xml:43
@@ -25190,7 +25190,7 @@ msgstr "&libcap-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libcap.xml:44
 msgid "Installation of Libcap"
-msgstr "Installation of Libcap"
+msgstr "Libcap 설치"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/libcap.xml:48
@@ -25221,7 +25221,7 @@ msgstr "<userinput remap=\"make\">make prefix=/usr lib=lib</userinput>"
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/libcap.xml:64 en/chapter08/readline.xml:96
 msgid "The meaning of the make option:"
-msgstr ""
+msgstr "make option 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libcap.xml:67
@@ -25549,7 +25549,7 @@ msgstr "&libffi-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libffi.xml:48
 msgid "Installation of Libffi"
-msgstr "Installation of Libffi"
+msgstr "Libffi 설치"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/libffi.xml:51
@@ -25667,7 +25667,7 @@ msgstr "&libpipeline-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libpipeline.xml:42
 msgid "Installation of Libpipeline"
-msgstr "Installation of Libpipeline"
+msgstr "Libpipeline 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libpipeline.xml:44
@@ -25757,7 +25757,7 @@ msgstr "&libtool-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libtool.xml:43
 msgid "Installation of Libtool"
-msgstr "Installation of Libtool"
+msgstr "Libtool 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libtool.xml:45
@@ -25892,7 +25892,7 @@ msgstr "&libxcrypt-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libxcrypt.xml:42
 msgid "Installation of Libxcrypt"
-msgstr "Installation of Libxcrypt"
+msgstr "Libxcrypt 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libxcrypt.xml:46
@@ -26070,7 +26070,7 @@ msgstr "&lz4-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/lz4.xml:44
 msgid "Installation of Lz4"
-msgstr "Installation of Lz4"
+msgstr "Lz4 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/lz4.xml:48
@@ -26314,7 +26314,7 @@ msgstr "&man-db-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-db.xml:42
 msgid "Installation of Man-DB"
-msgstr "Installation of Man-DB"
+msgstr "Man-DB 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-db.xml:44
@@ -26989,7 +26989,7 @@ msgstr "&man-pages-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-pages.xml:41
 msgid "Installation of Man-pages"
-msgstr "Installation of Man-pages"
+msgstr "Man-pages 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-pages.xml:43
@@ -27124,7 +27124,7 @@ msgstr "&markupsafe-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/markupsafe.xml:41
 msgid "Installation of MarkupSafe"
-msgstr "Installation of MarkupSafe"
+msgstr "MarkupSafe 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/markupsafe.xml:43
@@ -27327,7 +27327,7 @@ msgstr "&mpc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/mpc.xml:43
 msgid "Installation of MPC"
-msgstr "Installation of MPC"
+msgstr "MPC 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpc.xml:45
@@ -27420,7 +27420,7 @@ msgstr "&mpfr-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/mpfr.xml:42
 msgid "Installation of MPFR"
-msgstr "Installation of MPFR"
+msgstr "MPFR 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpfr.xml:44
@@ -28077,7 +28077,7 @@ msgstr "<userinput remap=\"configure\">python3 configure.py --bootstrap --verbos
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/ninja.xml:73
 msgid "The meaning of the build option:"
-msgstr ""
+msgstr "build option 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ninja.xml:76
@@ -28459,7 +28459,7 @@ msgstr "&packaging-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/packaging.xml:46
 msgid "Installation of Packaging"
-msgstr "Installation of Packaging"
+msgstr "Packaging 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/packaging.xml:48
@@ -28581,7 +28581,7 @@ msgstr "&pcre2-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pcre.xml:42
 msgid "Installation of Pcre2"
-msgstr "Installation of Pcre2"
+msgstr "Pcre2 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pcre.xml:44
@@ -29454,7 +29454,7 @@ msgstr "&pkgconf-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgconf.xml:45
 msgid "Installation of Pkgconf"
-msgstr "Installation of Pkgconf"
+msgstr "Pkgconf 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/pkgconf.xml:47
@@ -30182,7 +30182,7 @@ msgstr "&procps-ng-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/procps.xml:41
 msgid "Installation of Procps-ng"
-msgstr "Installation of Procps-ng"
+msgstr "Procps-ng 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:43
@@ -30586,7 +30586,7 @@ msgstr "&psmisc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/psmisc.xml:42
 msgid "Installation of Psmisc"
-msgstr "Installation of Psmisc"
+msgstr "Psmisc 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/psmisc.xml:44
@@ -30746,7 +30746,7 @@ msgstr "&python-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/python.xml:44
 msgid "Installation of Python 3"
-msgstr "Installation of Python 3"
+msgstr "Python 3 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/python.xml:54
@@ -31084,7 +31084,7 @@ msgstr "&readline-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/readline.xml:42
 msgid "Installation of Readline"
-msgstr "Installation of Readline"
+msgstr "Readline 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:44
@@ -34947,6 +34947,8 @@ msgid ""
 "The Texinfo package contains programs for reading, writing, and converting "
 "info pages."
 msgstr ""
+"Texinfo 패키지에는 info 페이지를 읽고, 쓰고, 변환하는 프로그램이 들어 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/texinfo.xml:34
@@ -34961,7 +34963,7 @@ msgstr "&texinfo-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/texinfo.xml:45
 msgid "Fix a code pattern that causes Perl-5.42 or later to display a warning:"
-msgstr ""
+msgstr "Perl-5.42 이상에서 경고가 표시되는 코드 패턴을 수정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/texinfo.xml:47
@@ -34972,7 +34974,7 @@ msgstr "<userinput remap=\"pre\">sed 's/! $output_file eq/$output_file ne/' -i t
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/texinfo.xml:82
 msgid "Optionally, install the components belonging in a TeX installation:"
-msgstr ""
+msgstr "선택사항으로, TeX 설치 디렉터리에 속하는 구성 요소 설치:"
 
 #.  FIXME: doesn't the TeX installation in BLFS overwrite files there? 
 #. type: Content of: <sect1><sect2><screen>
@@ -35004,6 +35006,12 @@ msgid ""
 "file ever needs to be recreated, the following optional commands will "
 "accomplish the task:"
 msgstr ""
+"Info 문서 시스템은 메뉴 항목 목록을 보관하기 위해 일반 텍스트 파일을 사용합니"
+"다. 이 파일은 <filename>/usr/share/info/dir</filename>에 있습니다. 불행히도 "
+"여러 패키지의 Makefile에서 가끔 발생하는 문제로 인해, 시스템에 설치된 info 페"
+"이지와 동기화가 안 맞을 때가 있습니다. 만약 <filename>/usr/share/info/dir</"
+"filename> 파일을 다시 생성해야 한다면, 다음의 선택적 명령어들을 통해 작업을 "
+"수행."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/texinfo.xml:109
@@ -35035,12 +35043,13 @@ msgid ""
 "texi2any, texi2dvi, texi2pdf, and texindex"
 msgstr ""
 "info, install-info, makeinfo (link to texi2any), pdftexi2dvi, pod2texi, "
-"texi2any, texi2dvi, texi2pdf, and texindex"
+"texi2any, texi2dvi, texi2pdf, 및 texindex"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/texinfo.xml:129
 msgid "MiscXS.so, Parsetexi.so, and XSParagraph.so (all in /usr/lib/texinfo)"
 msgstr ""
+"MiscXS.so, Parsetexi.so, 및 XSParagraph.so (모두 /usr/lib/texinfo 안에)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/texinfo.xml:131
@@ -35125,7 +35134,7 @@ msgstr "<command>pod2texi</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/texinfo.xml:189
 msgid "Converts Pod to Texinfo format"
-msgstr ""
+msgstr "Pod 를 Texinfo 형식으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/texinfo.xml:191
@@ -38969,7 +38978,7 @@ msgstr "&lfs-bootscripts-cfg-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/bootscripts.xml:44
 msgid "Installation of LFS-Bootscripts"
-msgstr "Installation of LFS-Bootscripts"
+msgstr "LFS-Bootscripts 설치"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/bootscripts.xml:53
