@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-12 02:15+0900\n"
-"PO-Revision-Date: 2026-05-12 02:15+0900\n"
+"POT-Creation-Date: 2026-05-12 23:29+0900\n"
+"PO-Revision-Date: 2026-05-12 23:28+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -18622,6 +18622,11 @@ msgid ""
 "searching and retrieving the data by its key and deleting a key along with "
 "its data."
 msgstr ""
+"GDBM 패키지에는 GNU 데이터베이스 관리자(GNU Database Manager)가 들어 있습니"
+"다. 이는 확장 가능한 해싱(extensible hashing)을 사용하고 표준 UNIX dbm과 유사"
+"하게 작동하는 데이터베이스 함수 라이브러리입니다. 이 라이브러리는 키/데이터 "
+"쌍을 저장하고, 키를 통해 데이터를 검색 및 추출하며, 키와 해당 데이터를 함께 "
+"삭제하는 기본 기능(primitives)을 제공합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gdbm.xml:37
@@ -18641,7 +18646,7 @@ msgstr "GDBM 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gdbm.xml:51
 msgid "Prepare GDBM for compilation:"
-msgstr "Prepare GDBM for compilation:"
+msgstr "컴파일 위해 GDBM 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gdbm.xml:53
@@ -18675,12 +18680,12 @@ msgstr "GDBM 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gdbm.xml:96
 msgid "gdbm_dump, gdbm_load, and gdbmtool"
-msgstr "gdbm_dump, gdbm_load, and gdbmtool"
+msgstr "gdbm_dump, gdbm_load, 및 gdbmtool"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gdbm.xml:97
 msgid "libgdbm.so and libgdbm_compat.so"
-msgstr "libgdbm.so and libgdbm_compat.so"
+msgstr "libgdbm.so 및 libgdbm_compat.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gdbm.xml:107
@@ -18690,7 +18695,7 @@ msgstr "<command>gdbm_dump</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gdbm.xml:109
 msgid "Dumps a GDBM database to a file"
-msgstr ""
+msgstr "GDBM 데이터베이스를 파일로 덤프"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gdbm.xml:111
@@ -18750,7 +18755,7 @@ msgstr "<filename class=\"libraryfile\">libgdbm_compat</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gdbm.xml:149
 msgid "Compatibility library containing older DBM functions"
-msgstr ""
+msgstr "옛 DBM 함수들을 포함하고 있는 호환성 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gdbm.xml:151
