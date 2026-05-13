@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-12 23:29+0900\n"
-"PO-Revision-Date: 2026-05-12 23:28+0900\n"
+"POT-Creation-Date: 2026-05-14 04:34+0900\n"
+"PO-Revision-Date: 2026-05-14 04:34+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -17345,7 +17345,7 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist f
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/flit-core.xml:52
 msgid "The meaning of the pip3 configuration options and commands:"
-msgstr ""
+msgstr "pip3 설정 옵션 및 명령어 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:55 en/chapter08/wheel.xml:75
@@ -17355,7 +17355,7 @@ msgstr "<command>wheel</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:57
 msgid "This command builds the wheel archive for this package."
-msgstr ""
+msgstr "이 명령은 이 패키지를 위한 wheel 아카이브를 빌드합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:62 en/chapter08/meson.xml:59
@@ -17368,6 +17368,8 @@ msgid ""
 "Instructs pip to put the created wheel into the <filename "
 "class='directory'>dist</filename> directory."
 msgstr ""
+"생성된 wheel 파일을 <filename class='directory'>dist</filename> 디렉터리에 넣"
+"도록 pip에 지시합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:70
@@ -17380,8 +17382,8 @@ msgid ""
 "Prevents pip from copying the created wheel into the <filename "
 "class='directory'>/root/.cache/pip</filename> directory."
 msgstr ""
-"Prevents pip from copying the created wheel into the <filename "
-"class='directory'>/root/.cache/pip</filename> directory."
+"생성된 wheel 파일을 <filename class='directory'>/root/.cache/pip</filename> "
+"디렉터리에 복사하지 않도록 pip에 설정합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flit-core.xml:81
@@ -17405,6 +17407,9 @@ msgid ""
 "fetch any files in the first place; these options add some safety in case of "
 "user error."
 msgstr ""
+"이 옵션들은 온라인 패키지 저장소(PyPI)에서 파일을 가져오는 것을 막습니다. 패"
+"키지들이 바른 순서로 설치된다면, 애초에 pip가 파일을 가져올 필요가 없습니다. "
+"이 옵션들은 사용자 오류에 대비하여 약간의 안전장치를 추가하는 역할을 합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/flit-core.xml:98 en/chapter08/meson.xml:67
@@ -17417,6 +17422,8 @@ msgid ""
 "Instructs pip to search for wheel archives in the <filename "
 "class='directory'>dist</filename> directory."
 msgstr ""
+"생성된 wheel 아카이브를 <filename class='directory'>dist</filename>  디렉터리"
+"에서 찾도록 pip에 지시합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/flit-core.xml:108
