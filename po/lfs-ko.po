@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-14 04:34+0900\n"
-"PO-Revision-Date: 2026-05-14 04:34+0900\n"
+"POT-Creation-Date: 2026-05-14 21:54+0900\n"
+"PO-Revision-Date: 2026-05-14 21:53+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5077,8 +5077,8 @@ msgid ""
 "Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
 "you want to use if you don't want to use all the logical cores."
 msgstr ""
-"Replace <replaceable>$(nproc)</replaceable> with the number of logical cores "
-"you want to use if you don't want to use all the logical cores."
+"모든 논리 코어를 사용하고 싶지 않다면, <replaceable>$(nproc)</replaceable> "
+"을 사용하고자 하는 논리 코어 수로 바꾸십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/settingenviron.xml:244
@@ -11552,6 +11552,8 @@ msgid ""
 "<productname>automake</productname> <productnumber>&automake-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>automake</productname> <productnumber>&automake-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/automake.xml:17
@@ -11570,6 +11572,8 @@ msgid ""
 "The Automake package contains programs for generating Makefiles for use with "
 "Autoconf."
 msgstr ""
+"Automake 패키지에는 Autoconf와 함께 사용할 Makefiles를 생성하는 프로그램이 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/automake.xml:34
@@ -11589,7 +11593,7 @@ msgstr "Installation of Automake"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/automake.xml:48
 msgid "Prepare Automake for compilation:"
-msgstr "Prepare Automake for compilation:"
+msgstr "컴파일 위한 Automake 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/automake.xml:50
@@ -11604,6 +11608,8 @@ msgid ""
 "logical cores, due to internal delays in individual tests.  To test the "
 "results, issue:"
 msgstr ""
+"개별 테스트의 내부 지연 때문에, 논리 코어 수가 적은 시스템에서도 병렬 작업 4"
+"개 사용하면 테스트 속도가 빨라집니다. 결과를 테스트하려면 실행할 것:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/automake.xml:60
@@ -11617,8 +11623,8 @@ msgid ""
 "Replace <replaceable>$((...))</replaceable> with the number of logical cores "
 "you want to use if you don't want to use all."
 msgstr ""
-"Replace <replaceable>$((...))</replaceable> with the number of logical cores "
-"you want to use if you don't want to use all."
+"모든 코어를 사용하고 싶지 않다면, <replaceable>$((...))</replaceable> 부분을 "
+"사용하고자 하는 논리 코어 수로 바꾸십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/automake.xml:73
