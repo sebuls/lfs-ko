@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-14 21:54+0900\n"
-"PO-Revision-Date: 2026-05-14 21:53+0900\n"
+"POT-Creation-Date: 2026-05-15 03:18+0900\n"
+"PO-Revision-Date: 2026-05-15 03:18+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -19973,7 +19973,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><variablelist><title>
 #: en/chapter08/glibc.xml:523
 msgid "The meaning of the zic commands:"
-msgstr ""
+msgstr "명령 뜻:"
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:526
@@ -27023,9 +27023,8 @@ msgid ""
 "<application>Libxcrypt</application> will provide a better version of these "
 "man pages:"
 msgstr ""
-"Remove two man pages for password hashing functions.  "
-"<application>Libxcrypt</application> will provide a better version of these "
-"man pages:"
+"패스워드 해싱 함수에 대한 man 페이지 2개를 제거합니다. "
+"<application>Libxcrypt</application>는 이 man 페이지의 더 나은 버전을 제공:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-pages.xml:47
@@ -27036,7 +27035,7 @@ msgstr "<userinput remap=\"pre\">rm -v man3/crypt*</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-pages.xml:49
 msgid "Install Man-pages by running:"
-msgstr ""
+msgstr "Man-pages 설치하려면 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-pages.xml:51
@@ -27047,7 +27046,7 @@ msgstr "<userinput remap=\"install\">make -R GIT=false prefix=/usr install</user
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/man-pages.xml:54
 msgid "The meaning of the options:"
-msgstr ""
+msgstr "옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-pages.xml:58
@@ -27078,7 +27077,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-pages.xml:81
 msgid "Contents of Man-pages"
-msgstr ""
+msgstr "Man-page 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-pages.xml:87
