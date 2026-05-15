@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-15 03:18+0900\n"
-"PO-Revision-Date: 2026-05-15 03:18+0900\n"
+"POT-Creation-Date: 2026-05-16 06:37+0900\n"
+"PO-Revision-Date: 2026-05-16 06:37+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -12011,7 +12011,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:86
 msgid "To test bc, run:"
-msgstr ""
+msgstr "bc 테스트하려면 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bc.xml:88 en/chapter08/expect.xml:111
@@ -12234,7 +12234,7 @@ msgstr "<userinput remap=\"install\">make tooldir=/usr install</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:136
 msgid "Remove useless static libraries and other files:"
-msgstr "Remove useless static libraries and other files:"
+msgstr "불필요한 정적 라이브러리 및 기타 파일 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/binutils.xml:138
@@ -15811,6 +15811,10 @@ msgid ""
 "<systemitem class=\"filesystem\">ext3</systemitem> and <systemitem "
 "class=\"filesystem\">ext4</systemitem> journaling file systems."
 msgstr ""
+"E2fsprogs 패키지에는 <systemitem class=\"filesystem\">ext2</systemitem> 파일 "
+"시스템을 다루기 위한 유틸리티가 들어 있습니다. 또한 <systemitem "
+"class=\"filesystem\">ext3</systemitem> and <systemitem "
+"class=\"filesystem\">ext4</systemitem> 저널링 파일 시스템도 지원합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/e2fsprogs.xml:37
@@ -15833,11 +15837,13 @@ msgid ""
 "The E2fsprogs documentation recommends that the package be built in a "
 "subdirectory of the source tree:"
 msgstr ""
+"E2fsprogs 문서에서는 소스 트리(source tree)의 서브디렉터리에서 패키지를 빌드"
+"하도록 권장:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:53
 msgid "Prepare E2fsprogs for compilation:"
-msgstr "Prepare E2fsprogs for compilation:"
+msgstr "컴파일 위해 E2fsprogs 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:55
@@ -15883,7 +15889,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:92
 msgid "To run the tests, issue:"
-msgstr ""
+msgstr "테스트하기 위기 위해 실행:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:98
@@ -15897,7 +15903,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/e2fsprogs.xml:121
 msgid "Remove useless static libraries:"
-msgstr "Remove useless static libraries:"
+msgstr "불필요한 정적 라이브러리 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:123
@@ -15913,6 +15919,10 @@ msgid ""
 "file. Unzip this file and then update the system <filename>dir</filename> "
 "file using the following commands:"
 msgstr ""
+"이 패키지는 gzip으로 압축된 <filename class=\"extension\">.info</filename> 파"
+"일을 설치하지만, 시스템 전역 <filename>dir</filename> 파일은 업데이트 안 합니"
+"다. 다음 명령어 사용하여 이 파일의 압축을 풀고 시스템 <filename>dir</"
+"filename> 파일을 업데이트:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:131
@@ -15929,7 +15939,7 @@ msgstr ""
 msgid ""
 "If desired, create and install some additional documentation by issuing the "
 "following commands:"
-msgstr ""
+msgstr "바란다면, 다음 명령어들을 실행하여 몇 가지 추가 문서를 생성하고 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:137
@@ -15966,15 +15976,14 @@ msgid ""
 "feature from the default <systemitem class='filesystem'>ext4</systemitem> "
 "feature list with the command:"
 msgstr ""
-"<filename>/etc/mke2fs.conf</filename> contains the default value of various "
-"command line options of <command>mke2fs</command>.  You may edit the file to "
-"make the default values suitable for your needs.  For example, some "
-"utilities (not in LFS or BLFS) cannot recognize a <systemitem "
-"class='filesystem'>ext4</systemitem> file system with "
-"<literal>metadata_csum_seed</literal> feature enabled.  <emphasis "
-"role='bold'>If</emphasis> you need such a utility, you may remove the "
-"feature from the default <systemitem class='filesystem'>ext4</systemitem> "
-"feature list with the command:"
+"<filename>/etc/mke2fs.conf</filename> 파일에는 <command>mke2fs</command>의 다"
+"양한 명령줄 옵션에 대한 기본값이 들어 있습니다. 이 파일을 편집하여 기본값을 "
+"요구 사항에 맞게 적절히 변경할 수 있습니다. 예를 들어, (LFS나 BLFS에 포함되"
+"지 않은) 일부 유틸리티는 metadata_csum_seed 기능이 활성화된 <systemitem "
+"class='filesystem'>ext4</systemitem> 파일 시스템을 인식하지 못할 수 있습니"
+"다. <emphasis role='bold'> 이러한 유틸리티가 필요하다면</emphasis>, 다음 명령"
+"어를 사용하여 기본 <systemitem class='filesystem'>ext4</systemitem>기능 목록"
+"에서 해당 기능을 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/e2fsprogs.xml:162
@@ -15988,8 +15997,8 @@ msgid ""
 "Read the man page <ulink role='man' url='&man;mke2fs.conf.5'>mke2fs.conf(5)</"
 "ulink> for details."
 msgstr ""
-"Read the man page <ulink role='man' url='&man;mke2fs.conf.5'>mke2fs.conf(5)</"
-"ulink> for details."
+"자세한 것은 <ulink role='man' url='&man;mke2fs.conf.5'>mke2fs.conf(5)</"
+"ulink> 읽으세요."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/e2fsprogs.xml:171
@@ -16009,7 +16018,7 @@ msgstr ""
 "e2image, e2label, e2mmpstatus, e2scrub, e2scrub_all, e2undo, e4crypt, "
 "e4defrag, filefrag, fsck.ext2, fsck.ext3, fsck.ext4, logsave, lsattr, "
 "mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mklost+found, resize2fs, "
-"and tune2fs"
+"및 tune2fs"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/e2fsprogs.xml:185
@@ -16240,9 +16249,9 @@ msgid ""
 "systemitem> file system found on a device. [This can be used to undo a "
 "failed operation by an E2fsprogs program.]"
 msgstr ""
-"Replays the undo log for an <systemitem class=\"filesystem\">ext{234}</"
-"systemitem> file system found on a device. [This can be used to undo a "
-"failed operation by an E2fsprogs program.]"
+"장치에서 발견된 <systemitem class=\"filesystem\">ext{234}</systemitem> 파일 "
+"시스템 실행 취소(undo) 로그를 재실행(replay)합니다. [이는 E2fsprogs 프로그램"
+"의 실패한 작업을 실행 취소하는 데 사용할 수 있습니다.]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:339
@@ -16650,7 +16659,7 @@ msgstr ""
 #: en/chapter08/iproute2.xml:78 en/chapter08/kbd.xml:98
 #: en/chapter08/readline.xml:116 en/chapter08/sqlite.xml:98
 msgid "If desired, install the documentation:"
-msgstr ""
+msgstr "바란다면, 문서 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expat.xml:64
@@ -22987,6 +22996,7 @@ msgstr "Iana-Etc"
 #: en/chapter08/iana-etc.xml:26
 msgid "The Iana-Etc package provides data for network services and protocols."
 msgstr ""
+"Iana-Etc 패키지는 네트워크 서비스와 프로토콜에 대한 데이터를 제공합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iana-etc.xml:34
@@ -23006,7 +23016,7 @@ msgstr "Iana-Etc 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/iana-etc.xml:44
 msgid "For this package, we only need to copy the files into place:"
-msgstr ""
+msgstr "이 패키지에 대해, 필요한 건 파일들을 제자리에 복사:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/iana-etc.xml:46
@@ -23017,7 +23027,7 @@ msgstr "<userinput remap=\"install\">cp -v services protocols /etc</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/iana-etc.xml:51
 msgid "Contents of Iana-Etc"
-msgstr ""
+msgstr "Iana-Etc 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter08/iana-etc.xml:54 en/chapter08/man-pages.xml:84
@@ -23028,7 +23038,7 @@ msgstr "설치된 파일"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/iana-etc.xml:57
 msgid "/etc/protocols and /etc/services"
-msgstr "/etc/protocols and /etc/services"
+msgstr "/etc/protocols 및 /etc/services"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/iana-etc.xml:67
@@ -23041,6 +23051,7 @@ msgid ""
 "Describes the various DARPA Internet protocols that are available from the "
 "TCP/IP subsystem"
 msgstr ""
+"TCP/IP 하위 시스템에서 사용할 수 있는 다양한 DARPA 인터넷 프로토콜을 설명"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/iana-etc.xml:72
@@ -23058,8 +23069,8 @@ msgid ""
 "Provides a mapping between friendly textual names for internet services, and "
 "their underlying assigned port numbers and protocol types"
 msgstr ""
-"Provides a mapping between friendly textual names for internet services, and "
-"their underlying assigned port numbers and protocol types"
+"인터넷 서비스의 친숙한 텍스트 이름과, 그에 대응하는 기본 할당 포트 번호 및 프"
+"로토콜 유형 간의 매핑 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/iana-etc.xml:84
@@ -50244,7 +50255,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:424
 msgid "Diffutils, E2fsprogs, Findutils, Shadow, and Util-linux"
-msgstr "Diffutils, E2fsprogs, Findutils, Shadow, and Util-linux"
+msgstr "Diffutils, E2fsprogs, Findutils, Shadow, 및 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:431
@@ -51165,7 +51176,7 @@ msgstr "Diffutils and Gawk"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2820
 msgid "E2fsprogs, File, Libtool, and Shadow"
-msgstr "E2fsprogs, File, Libtool, and Shadow"
+msgstr "E2fsprogs, File, Libtool 및 Shadow"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2837
@@ -51234,7 +51245,7 @@ msgstr "Acl, Glibc, Libxcrypt, OpenSSL, Util-linux, Xz, Zlib 및 Zstd"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3021
 msgid "D-Bus, E2fsprogs, Man-DB, Procps-ng, and Util-linux"
-msgstr ""
+msgstr "D-Bus, E2fsprogs, Man-DB, Procps-ng, 및 Util-linux"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3029
