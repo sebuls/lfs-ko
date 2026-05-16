@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-16 21:47+0900\n"
-"PO-Revision-Date: 2026-05-16 21:47+0900\n"
+"POT-Creation-Date: 2026-05-17 00:42+0900\n"
+"PO-Revision-Date: 2026-05-17 00:41+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5357,7 +5357,7 @@ msgstr ""
 #: en/chapter08/kmod.xml:54 en/chapter08/less.xml:48 en/chapter08/man-db.xml:67
 #: en/chapter08/python.xml:61 en/chapter08/sqlite.xml:59
 msgid "The meaning of the configure options:"
-msgstr ""
+msgstr "configure 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><note>
 #: en/chapter05/binutils-pass1.xml:85
@@ -10414,7 +10414,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter07/perl.xml:60
 msgid "The meaning of the Configure options:"
-msgstr ""
+msgstr "Configure 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:63
@@ -23106,7 +23106,7 @@ msgstr "Inetutils"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:26
 msgid "The Inetutils package contains programs for basic networking."
-msgstr ""
+msgstr "Inetutils 패키지에는 기본 네트워킹을 위한 프로그램이 들어있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/inetutils.xml:33
@@ -23126,7 +23126,7 @@ msgstr "Inetutils 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:43
 msgid "First, make the package build with gcc-14.1 or later:"
-msgstr ""
+msgstr "먼저, 패키지가 gcc-14.1 또는 그 이후 버전에서 빌드되도록 설정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/inetutils.xml:45
@@ -23137,7 +23137,7 @@ msgstr "<userinput remap=\"pre\">sed -i 's/def HAVE_TERMCAP_TGETENT/ 1/' telnet/
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:47
 msgid "Prepare Inetutils for compilation:"
-msgstr "Prepare Inetutils for compilation:"
+msgstr "컴파일 위한 Inetutils 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/inetutils.xml:49
@@ -23222,7 +23222,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:128
 msgid "Move a program to the proper location:"
-msgstr ""
+msgstr "프로그램을 적절한 위치로 옮김:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/inetutils.xml:130
@@ -23233,7 +23233,7 @@ msgstr "<userinput remap=\"install\">mv -v /usr/{,s}bin/ifconfig</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/inetutils.xml:135
 msgid "Contents of Inetutils"
-msgstr ""
+msgstr "Inetutils 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/inetutils.xml:141
@@ -23241,6 +23241,8 @@ msgid ""
 "dnsdomainname, ftp, ifconfig, hostname, ping, ping6, talk, telnet, tftp, and "
 "traceroute"
 msgstr ""
+"dnsdomainname, ftp, ifconfig, hostname, ping, ping6, talk, telnet, tftp, 및 "
+"traceroute"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:152
@@ -23390,6 +23392,8 @@ msgid ""
 "another host on a network, showing all the intermediate hops (gateways) "
 "along the way"
 msgstr ""
+"작업 중인 호스트에서 네트워크상의 다른 호스트로 패킷이 이동하는 경로를 추적하"
+"여, 그 과정에 거치는 모든 중간 홉(게이트웨이)을 보여주기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:249
