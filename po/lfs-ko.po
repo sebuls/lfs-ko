@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-16 06:37+0900\n"
-"PO-Revision-Date: 2026-05-16 06:37+0900\n"
+"POT-Creation-Date: 2026-05-16 17:38+0900\n"
+"PO-Revision-Date: 2026-05-16 17:37+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -28533,6 +28533,9 @@ msgid ""
 "applying a <quote>patch</quote> file typically created by the <command>diff</"
 "command> program."
 msgstr ""
+"Patch 패키지에는 일반적으로 <command>diff</command> 프로그램으로 생성된 "
+"<quote>patch</quote> 파일을 적용하여 파일을 수정하거나 생성하는 프로그램이 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/patch.xml:35
@@ -28547,7 +28550,7 @@ msgstr "&patch-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/patch.xml:64
 msgid "Contents of Patch"
-msgstr ""
+msgstr "Patch 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/patch.xml:70 en/chapter08/patch.xml:87
@@ -28567,6 +28570,9 @@ msgid ""
 "applying these differences to the original files, <command>patch</command> "
 "creates the patched versions.)"
 msgstr ""
+"패치 파일에 따라 파일을 변경합니다. (패치 파일은 보통 <command>diff</"
+"command> 프로그램으로 생성된 차이점 목록입니다. 원래 파일들에 이러한 차이점들"
+"을 적용함으로써, <command>patch</command>는 패치된 버전을 생성합니다.)"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/pcre.xml:14
