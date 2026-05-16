@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-17 00:42+0900\n"
-"PO-Revision-Date: 2026-05-17 00:41+0900\n"
+"POT-Creation-Date: 2026-05-17 06:35+0900\n"
+"PO-Revision-Date: 2026-05-17 06:35+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7958,6 +7958,8 @@ msgid ""
 "As in the first build of GCC, the GMP, MPFR, and MPC packages are required. "
 "Unpack the tarballs and move them into the required directories:"
 msgstr ""
+"GCC의 첫 번째 빌드와 마찬가지로 GMP, MPFR, MPC 패키지가 필요합니다. 타볼"
+"(tarball)의 압축을 풀고 필요한 디렉터리로 이동:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:56
@@ -20882,6 +20884,8 @@ msgid ""
 "The GMP package contains math libraries. These have useful functions for "
 "arbitrary precision arithmetic."
 msgstr ""
+"GMP 패키지에는 수학 라이브러리가 들어있습니다. 여기에는 임의 정밀도 산술"
+"(arbitrary precision arithmetic)을 위한 유용한 함수가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gmp.xml:34
@@ -20913,6 +20917,11 @@ msgid ""
 "to configure for 64-bits and fail.  Avoid this by invoking the configure "
 "command below with <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"32비트 x86용으로 빌드하고 있지만 64비트 코드를 실행할 수 있는 CPU를 가지고 있"
+"고 <emphasis>그리고</emphasis> 환경 변수에 <envar>CFLAGS</envar> 지정한 경"
+"우, configure 스크립트는 64비트용으로 구성을 시도하다가 실패하게 됩니다. 아"
+"래 <placeholder type=\"screen\" id=\"0\"/> 같이 configure 명령을 호출하여 이"
+"를 방지"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/gmp.xml:54
@@ -20923,11 +20932,15 @@ msgid ""
 "<option>--host=none-linux-gnu</option> option to the <command>configure</"
 "command> command."
 msgstr ""
+"GMP의 기본 설정은 호스트 프로세서에 최적화된 라이브러리를 생성합니다. 호스트 "
+"CPU보다 성능이 낮은 프로세서에 적합한 라이브러리를 원한다면, "
+"<command>configure</command> 명령 뒤에 <option>--host=none-linux-gnu</"
+"option> 옵션을 추가하여 일반(generic) 라이브러리를 생성할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:65
 msgid "First, make an adjustment for compatibility with gcc-15 and later:"
-msgstr ""
+msgstr "먼저, gcc-15 이후 버전과의 호환성을 위해 조정을 수행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:67
@@ -20938,7 +20951,7 @@ msgstr "<userinput remap=\"pre\">sed -i '/long long t1;/,+1s/()/(...)/' configur
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:69
 msgid "Prepare GMP for compilation:"
-msgstr "Prepare GMP for compilation:"
+msgstr "컴파일 위해 GMP 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:71
@@ -21016,6 +21029,12 @@ msgid ""
 "instruction</computeroutput>.  In this case, gmp should be reconfigured with "
 "the option <option>--host=none-linux-gnu</option> and rebuilt."
 msgstr ""
+"gmp의 코드는 코드가 빌드되는 프로세서에 매우 고도로 최적화되어 있습니다. 가"
+"끔 프로세서를 감지하는 코드가 시스템의 성능을 잘못 식별하여, 테스트나 gmp 라"
+"이브러리를 사용하는 다른 애플리케이션에서 <computeroutput>Illegal "
+"instruction</computeroutput> 메시지와 함께 오류가 발생할 수 있습니다. 이 경"
+"우 gmp를 <option>--host=none-linux-gnu</option> 옵션과 함께 재설정"
+"(reconfigure)하고 재빌드해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gmp.xml:120
@@ -21023,6 +21042,8 @@ msgid ""
 "Ensure that at least 199 tests in the test suite passed.  Check the results "
 "by issuing the following command:"
 msgstr ""
+"테스트 스위트에서 적어도 199개의 테스트 통과했는지 확인하십시오. 결과 점검하"
+"려면 실행할 명령어:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:123
@@ -21034,7 +21055,7 @@ msgstr "<userinput remap=\"test\">awk '/# PASS:/{total+=$3} ; END{print total}' 
 #: en/chapter08/gmp.xml:125 en/chapter08/mpc.xml:60 en/chapter08/mpfr.xml:65
 #: en/chapter08/sed.xml:57
 msgid "Install the package and its documentation:"
-msgstr ""
+msgstr "패키지와 해당 문서를 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:127 en/chapter08/mpc.xml:62 en/chapter08/mpfr.xml:67
