@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-17 06:35+0900\n"
-"PO-Revision-Date: 2026-05-17 06:35+0900\n"
+"POT-Creation-Date: 2026-05-17 20:45+0900\n"
+"PO-Revision-Date: 2026-05-17 20:45+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6923,7 +6923,7 @@ msgstr "설치된 헤더"
 #: en/chapter08/xz.xml:73 en/chapter09/bootscripts.xml:56
 #: en/chapter10/kernel.xml:538
 msgid "Installed directories"
-msgstr "Installed directories"
+msgstr "설치된 디렉터리"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter05/linux-headers.xml:75
@@ -10080,7 +10080,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:49 en/chapter08/gettext.xml:46
 msgid "Prepare Gettext for compilation:"
-msgstr "Prepare Gettext for compilation:"
+msgstr "컴파일 위해Gettext 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/gettext.xml:51
@@ -18793,6 +18793,9 @@ msgid ""
 "localization. These allow programs to be compiled with NLS (Native Language "
 "Support), enabling them to output messages in the user's native language."
 msgstr ""
+"Gettext 패키지에는 국제화 및 지역화를 위한 유틸리티가 들어 있습니다. 이를 통"
+"해 프로그램이 NLS(기본 언어 지원)를 포함하여 컴파일될 수 있으며, 사용자의 모"
+"국어로 메시지를 출력할 수 있게 합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gettext.xml:36
@@ -18849,7 +18852,7 @@ msgid ""
 "libtextstyle.so, and preloadable_libintl.so"
 msgstr ""
 "libasprintf.so, libgettextlib.so, libgettextpo.so, libgettextsrc.so, "
-"libtextstyle.so, and preloadable_libintl.so"
+"libtextstyle.so, 및 preloadable_libintl.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gettext.xml:98
@@ -30339,7 +30342,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:86 en/chapter08/psmisc.xml:52
 msgid "To run the test suite, run:"
-msgstr ""
+msgstr "테스트 스위트 실행하려면, 아래 실행:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:91
@@ -30661,6 +30664,8 @@ msgid ""
 "The Psmisc package contains programs for displaying information about "
 "running processes."
 msgstr ""
+"Psmisc 패키지에는 실행 중인 프로세스 정보를 표시하는 프로그램이 들어 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/psmisc.xml:34
@@ -30685,7 +30690,7 @@ msgstr "Prepare Psmisc for compilation:"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/psmisc.xml:63
 msgid "Contents of Psmisc"
-msgstr ""
+msgstr "Psmisc 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/psmisc.xml:69
@@ -30693,7 +30698,7 @@ msgid ""
 "fuser, killall, peekfd, prtstat, pslog, pstree, and pstree.x11 (link to "
 "pstree)"
 msgstr ""
-"fuser, killall, peekfd, prtstat, pslog, pstree, and pstree.x11 (pstree 링크)"
+"fuser, killall, peekfd, prtstat, pslog, pstree 및 pstree.x11 (pstree 링크)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/psmisc.xml:79
@@ -30706,8 +30711,7 @@ msgid ""
 "Reports the Process IDs (PIDs) of processes that use the given files or file "
 "systems"
 msgstr ""
-"Reports the Process IDs (PIDs) of processes that use the given files or file "
-"systems"
+"지정된 파일이나 파일 시스템을 사용하는 프로세스의 프로세스 ID(PID)를 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:84
@@ -30725,8 +30729,8 @@ msgid ""
 "Kills processes by name; it sends a signal to all processes running any of "
 "the given commands"
 msgstr ""
-"Kills processes by name; it sends a signal to all processes running any of "
-"the given commands"
+"이름으로 프로세스를 종료합니다. 지정된 명령 중 하나라도 실행 중인 모든 프로세"
+"스에 시그널을 보냄"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:95
@@ -30804,6 +30808,7 @@ msgid ""
 "Same as <command>pstree</command>, except that it waits for confirmation "
 "before exiting"
 msgstr ""
+"<command>pstree</command>와 같음, 단, 종료하기 전에 확인을 기다린다는 점 제외"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:147
@@ -50148,7 +50153,7 @@ msgid ""
 "and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Perl, Sed, "
-"and Texinfo"
+"및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:109
@@ -50199,7 +50204,7 @@ msgid ""
 "Gettext, Gzip, Libtool, and Tar"
 msgstr ""
 "Binutils, Bison, Bzip2, DejaGNU, Diffutils, Expect, Findutils, Flex, GCC, "
-"Gettext, Gzip, Libtool, and Tar"
+"Gettext, Gzip, Libtool, 및 Tar"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:206
@@ -50265,7 +50270,7 @@ msgid ""
 "Perl, and Sed"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, M4, Make, "
-"Perl, and Sed"
+"Perl, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:343
@@ -50360,7 +50365,7 @@ msgid ""
 "Bash, Binutils, Coreutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, and "
 "Texinfo"
 msgstr ""
-"Bash, Binutils, Coreutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, and "
+"Bash, Binutils, Coreutils, Gawk, GCC, Gettext, Glibc, Grep, Make, Sed, 및 "
 "Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
@@ -50438,7 +50443,7 @@ msgstr ""
 msgid ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, and Texinfo"
 msgstr ""
-"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, and Texinfo"
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:740 en/appendices/dependencies.xml:1272
@@ -50458,7 +50463,7 @@ msgid ""
 "and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, M4, Make, Patch, Sed, "
-"and Texinfo"
+"및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:779
@@ -50512,7 +50517,7 @@ msgid ""
 "Patch, Readline, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, Grep, Make, MPFR, "
-"Patch, Readline, Sed, and Texinfo"
+"Patch, Readline, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:860
@@ -50531,7 +50536,7 @@ msgid ""
 "GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, and Zstd"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, Findutils, Gawk, GCC, Gettext, Glibc, "
-"GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, and Zstd"
+"GMP, Grep, M4, Make, MPC, MPFR, Patch, Perl, Sed, Tar, Texinfo, 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:902
@@ -50599,7 +50604,7 @@ msgid ""
 "Linux API Headers, Make, Perl, Python, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Diffutils, Gawk, GCC, Gettext, Grep, Gzip, "
-"Linux API Headers, Make, Perl, Python, Sed, and Texinfo"
+"Linux API Headers, Make, Perl, Python, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1064
@@ -50638,7 +50643,7 @@ msgid ""
 "Patch, Pcre2, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, Make, "
-"Patch, Pcre2, Sed, and Texinfo"
+"Patch, Pcre2, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1182
@@ -50668,12 +50673,12 @@ msgid ""
 "Make, Ncurses, Sed, Texinfo, and Xz"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Diffutils, GCC, Gettext, Glibc, Grep, "
-"Make, Ncurses, Sed, Texinfo, and Xz"
+"Make, Ncurses, Sed, Texinfo, 및 Xz"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1233
 msgid "Bash, GCC, Gettext, Glibc, Xz, and Sed"
-msgstr "Bash, GCC, Gettext, Glibc, Xz, and Sed"
+msgstr "Bash, GCC, Gettext, Glibc, Xz, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1264 en/appendices/dependencies.xml:1984
@@ -50759,7 +50764,7 @@ msgid ""
 "Patch, and Sed"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, "
-"Patch, and Sed"
+"Patch, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1510
@@ -50778,7 +50783,7 @@ msgid ""
 "OpenSSL, Pkgconf, Sed, Xz, Zlib, and Zstd"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Flex, GCC, Gettext, Glibc, Gzip, Make, "
-"OpenSSL, Pkgconf, Sed, Xz, Zlib, and Zstd"
+"OpenSSL, Pkgconf, Sed, Xz, Zlib, 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1551
@@ -50939,7 +50944,7 @@ msgid ""
 msgstr ""
 "Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext, Glibc, Grep, "
 "Groff, Gzip, Less, Libpipeline, Make, Pkgconf, Sed, <phrase "
-"revision='systemd'>Systemd, </phrase>and Xz"
+"revision='systemd'>Systemd, </phrase> 및 Xz"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2075
@@ -51164,7 +51169,7 @@ msgstr ""
 msgid ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed"
 msgstr ""
-"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, and Sed"
+"Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2713
@@ -51173,7 +51178,7 @@ msgid ""
 "Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
 msgstr ""
 "Bash, Binutils, Coreutils, Expat, GCC, Gdbm, Gettext, Glibc, Grep, Libffi, "
-"Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, and Zstd"
+"Libxcrypt, Make, Ncurses, OpenSSL, Pkgconf, Sed, Util-linux, 및 Zstd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2722
@@ -51381,7 +51386,7 @@ msgid ""
 "and Sed"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Gettext, Glibc, Grep, Make, Ncurses, Patch, "
-"and Sed"
+"및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3253
@@ -51404,7 +51409,7 @@ msgid ""
 "Glibc, Grep, Make, Ncurses, Pkgconf, Sed, &systemd-udev;, and Zlib"
 msgstr ""
 "Bash, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC, Gettext, "
-"Glibc, Grep, Make, Ncurses, Pkgconf, Sed, &systemd-udev;, and Zlib"
+"Glibc, Grep, Make, Ncurses, Pkgconf, Sed, &systemd-udev;, 및 Zlib"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3302
