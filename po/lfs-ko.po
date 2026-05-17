@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-17 20:45+0900\n"
-"PO-Revision-Date: 2026-05-17 20:45+0900\n"
+"POT-Creation-Date: 2026-05-18 03:14+0900\n"
+"PO-Revision-Date: 2026-05-18 03:12+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8871,7 +8871,7 @@ msgstr "Xz 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/xz.xml:46
 msgid "Prepare Xz for compilation:"
-msgstr "Prepare Xz for compilation:"
+msgstr "컴파일하려면 Xz 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/xz.xml:48
@@ -38368,6 +38368,11 @@ msgid ""
 "compression percentage than with the traditional <command>gzip</command> or "
 "<command>bzip2</command> commands."
 msgstr ""
+"Xz 패키지에는 파일 압축 및 압축 해제를 위한 프로그램이 들어있습니다. 이 패키"
+"지는 lzma 및 더 최신인 xz 압축 형식에 대한 기능을 제공합니다. <command>xz</"
+"command> 로 텍스트 파일을 압축하면 기존의 <command>gzip</command> 또는 "
+"<command>bzip2</command> 명령을 사용할 때보다 더 나은 압축률을 얻을 수 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/xz.xml:37
@@ -38382,7 +38387,7 @@ msgstr "&xz-fin-du;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xz.xml:47
 msgid "Prepare Xz for compilation with:"
-msgstr "Prepare Xz for compilation with:"
+msgstr "컴파일하려면 Xz 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/xz.xml:49
@@ -38399,7 +38404,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/xz.xml:68
 msgid "Contents of Xz"
-msgstr ""
+msgstr "Xz 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/xz.xml:77
@@ -38774,6 +38779,8 @@ msgid ""
 "The library implementing lossless, block-sorting data compression, using the "
 "Lempel-Ziv-Markov chain algorithm"
 msgstr ""
+"Lempel-Ziv-Markov chain algorithm을 사용, 무손실 블록 정렬 데이터 압축을 구현"
+"하는 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:351
