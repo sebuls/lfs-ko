@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-18 03:14+0900\n"
-"PO-Revision-Date: 2026-05-18 03:12+0900\n"
+"POT-Creation-Date: 2026-05-18 04:59+0900\n"
+"PO-Revision-Date: 2026-05-18 04:59+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8765,7 +8765,7 @@ msgstr "Sed 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/sed.xml:46 en/chapter08/sed.xml:43
 msgid "Prepare Sed for compilation:"
-msgstr "Prepare Sed for compilation:"
+msgstr "컴파일 위해 Sed 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/sed.xml:65
@@ -20994,7 +20994,7 @@ msgstr ""
 #: en/chapter08/gmp.xml:96 en/chapter08/mpc.xml:51 en/chapter08/mpfr.xml:51
 #: en/chapter08/sed.xml:47
 msgid "Compile the package and generate the HTML documentation:"
-msgstr "Package 컴파일 및 HTML 문서 생성:"
+msgstr "패키지 컴파일 및 HTML 문서 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gmp.xml:98 en/chapter08/mpc.xml:53 en/chapter08/mpfr.xml:53
@@ -24408,7 +24408,7 @@ msgstr "<userinput remap=\"install\">cp -R -v docs/doc -T /usr/share/doc/kbd-&kb
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/kbd.xml:105
 msgid "Contents of Kbd"
-msgstr ""
+msgstr "Kbd 내용"
 
 #. resizecons,
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -31354,7 +31354,7 @@ msgstr "libreadline"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sed.xml:26
 msgid "The Sed package contains a stream editor."
-msgstr ""
+msgstr "Sed 페키지에는 Stream EDitor가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/sed.xml:33
@@ -31381,7 +31381,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sed.xml:66
 msgid "Contents of Sed"
-msgstr ""
+msgstr "Sed 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/sed.xml:73 en/chapter08/sed.xml:88
@@ -31401,7 +31401,7 @@ msgstr "<command>sed</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/sed.xml:86
 msgid "Filters and transforms text files in a single pass"
-msgstr ""
+msgstr "단 한 번의 패스로 텍스트 파일을 필터링 및 변환"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/setuptools.xml:14
@@ -49947,8 +49947,8 @@ msgid ""
 "Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, "
 "and Texinfo"
 msgstr ""
-"Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, "
-"and Texinfo"
+"Attr, Bash, Binutils, Coreutils, GCC, Gettext, Grep, M4, Make, Perl, Sed, 및 "
+"Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><segtitle>
 #: en/appendices/dependencies.xml:53 en/appendices/dependencies.xml:93
