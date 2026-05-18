@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-18 21:56+0900\n"
-"PO-Revision-Date: 2026-05-18 21:56+0900\n"
+"POT-Creation-Date: 2026-05-19 04:34+0900\n"
+"PO-Revision-Date: 2026-05-19 04:34+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30264,6 +30264,7 @@ msgstr "Procps-ng"
 #: en/chapter08/procps.xml:26
 msgid "The Procps-ng package contains programs for monitoring processes."
 msgstr ""
+"Procps-ng 패키지에는 프로세스를 모니터링하기 위한 프로그램이 들어있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/procps.xml:33
@@ -30283,7 +30284,7 @@ msgstr "Procps-ng 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:43
 msgid "Prepare Procps-ng for compilation:"
-msgstr "Prepare Procps-ng for compilation:"
+msgstr "컴파일용 Procps-ng 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/procps.xml:45
@@ -30330,6 +30331,8 @@ msgid ""
 "This switch disables building the <command>kill</command> command; it will "
 "be installed from the Util-linux package."
 msgstr ""
+"이 스위치는 <command>kill</command> 명령어의 빌드를 비활성화합니다. 이 명령어"
+"는 Util-linux 패키지에서 설치될 것입니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/procps.xml:70
@@ -30342,6 +30345,8 @@ msgid ""
 "This switch enables the ncursesw support for the <command>watch</command> "
 "command, so it can handle 8-bit characters."
 msgstr ""
+"이 스위치는 <command>watch</command> 명령어의 ncursesw 지원을 활성화하여 8비"
+"트 문자를 처리할 수 있도록 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/procps.xml:86 en/chapter08/psmisc.xml:52
@@ -30355,6 +30360,9 @@ msgid ""
 "literal> is known to fail if the host kernel is not built with "
 "<literal>CONFIG_BSD_PROCESS_ACCT</literal> enabled."
 msgstr ""
+"<literal>ps with output flag bsdtime,cputime,etime,etimes</literal> 이름의 테"
+"스트는 호스트 커널이 <literal>CONFIG_BSD_PROCESS_ACCT</literal>가 활성화된 상"
+"태로 빌드되지 않으면 실패하는 것으로 알려져 있습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/procps.xml:103
@@ -30368,7 +30376,7 @@ msgid ""
 "uptime, vmstat, w, and watch"
 msgstr ""
 "free, pgrep, pidof, pkill, pmap, ps, pwdx, slabtop, sysctl, tload, top, "
-"uptime, vmstat, w, and watch"
+"uptime, vmstat, w, 및 watch"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/procps.xml:113
@@ -30391,8 +30399,8 @@ msgid ""
 "Reports the amount of free and used memory (both physical and swap memory) "
 "in the system"
 msgstr ""
-"Reports the amount of free and used memory (both physical and swap memory) "
-"in the system"
+"시스템의 여유 메모리와 사용 중인 메모리(물리 메모리와 스왑 메모리 모두)의 양"
+"을 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:129
@@ -30407,7 +30415,7 @@ msgstr "<command>pgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:137
 msgid "Looks up processes based on their name and other attributes"
-msgstr ""
+msgstr "이름 및 기타 속성을 기반으로 프로세스를 찾기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:139
@@ -30422,7 +30430,7 @@ msgstr "<command>pidof</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/procps.xml:147
 msgid "Reports the PIDs of the given programs"
-msgstr "Reports the PIDs of the given programs"
+msgstr "주어진 프로그램의 PID를 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/procps.xml:149
