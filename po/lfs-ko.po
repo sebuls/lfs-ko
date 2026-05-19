@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-19 04:34+0900\n"
-"PO-Revision-Date: 2026-05-19 04:34+0900\n"
+"POT-Creation-Date: 2026-05-19 22:24+0900\n"
+"PO-Revision-Date: 2026-05-19 22:24+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -26386,6 +26386,8 @@ msgstr "Man-DB"
 #: en/chapter08/man-db.xml:26
 msgid "The Man-DB package contains programs for finding and viewing man pages."
 msgstr ""
+"Man-DB 패키지에는 매뉴얼 페이지(man page)를 찾고 보기 위한 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-db.xml:34
@@ -26405,7 +26407,7 @@ msgstr "Man-DB 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-db.xml:44
 msgid "Prepare Man-DB for compilation:"
-msgstr "Prepare Man-DB for compilation:"
+msgstr "컴파일 위한 Man-DB 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/man-db.xml:46
@@ -26496,6 +26498,13 @@ msgid ""
 "pages. They are not part of LFS or BLFS, but you should be able to install "
 "them yourself after finishing LFS if you wish to do so."
 msgstr ""
+"이 세 개 매개변수는 일부 기본 프로그램을 설정하는 데 사용됩니다. "
+"<command>lynx</command>는 텍스트 기반 웹 브라우저이며(설치 방법은 BLFS 참"
+"조), <command>vgrind</command>는 프로그램 소스를 Groff 입력으로 변환하고, "
+"<command>grap</command>은 Groff 문서에서 그래프를 조판하는 데 유용합니다. "
+"<command>vgrind</command> 및 <command>grap</command> 프로그램은 보통 매뉴얼 "
+"페이지를 보는 데 필요하지 않습니다. 이 프로그램들은 LFS나 BLFS에 안 들어가지"
+"만, 원하는 경우 LFS를 마친 후 직접 설치할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:101
@@ -26511,7 +26520,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-db.xml:125
 msgid "Non-English Manual Pages in LFS"
-msgstr "Non-English Manual Pages in LFS"
+msgstr "LFS안에 있는 영어 아닌 매뉴얼 페이지"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-db.xml:127
@@ -26521,6 +26530,10 @@ msgid ""
 "filename> will be encoded with.  In addition to this, Man-DB correctly "
 "determines if manual pages installed in that directory are UTF-8 encoded."
 msgstr ""
+"다음 표는 Man-DB가 <filename class=\"directory\">/usr/share/man/&lt;ll&gt;</"
+"filename> 디렉터리 아래에 설치된 매뉴얼 페이지의 인코딩으로 가정하는 문자 집"
+"합(character set)을 보여줍니다. 이와 더불어, Man-DB는 해당 디렉터리에 설치된 "
+"매뉴얼 페이지가 UTF-8로 인코딩되었는지 여부를 정확하게 판별합니다."
 
 #. type: Content of: <sect1><sect2><table><title>
 #: en/chapter08/man-db.xml:135
@@ -26836,7 +26849,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/man-db.xml:297
 msgid "Manual pages in languages not in the list are not supported."
-msgstr ""
+msgstr "이 목록에 없는 언어로 된 매뉴얼 페이지는 지원 안 합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-db.xml:303
