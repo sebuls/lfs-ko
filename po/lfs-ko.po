@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-19 22:24+0900\n"
-"PO-Revision-Date: 2026-05-19 22:24+0900\n"
+"POT-Creation-Date: 2026-05-20 03:53+0900\n"
+"PO-Revision-Date: 2026-05-20 03:52+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7816,7 +7816,7 @@ msgstr "Findutils 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/findutils.xml:46 en/chapter08/findutils.xml:48
 msgid "Prepare Findutils for compilation:"
-msgstr "Prepare Findutils for compilation:"
+msgstr "컴파일 위해 Findutils 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/findutils.xml:48
@@ -16987,6 +16987,12 @@ msgid ""
 "<command>xargs</command> program, which can be used to run a specified "
 "command on each file selected by a search."
 msgstr ""
+"Findutils 패키지에는 파일을 찾는 프로그램이 들어 있습니다. 디렉터리 트리 내"
+"의 모든 파일을 검색하는 프로그램과, 데이터베이스를 생성·유지·검색하는 프로그"
+"램이 제공됩니다(일반적으로 재귀적인 find보다 빠르지만, 데이터베이스가 최근에 "
+"업데이트되지 않았다면 신뢰하기 어려움). 또한 Findutils는 <command>xargs</"
+"command> 프로그램도 제공하며 이는 검색을 통해 선택된 각 파일에 대해 지정된 명"
+"령어를 실행하는 데 사용할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/findutils.xml:38
@@ -17023,6 +17029,9 @@ msgid ""
 "class=\"directory\">/var/lib/locate</filename>, which is the FHS-compliant "
 "location."
 msgstr ""
+"이 옵션은 <command>locate</command> 데이터베이스를 <filename "
+"class=\"directory\">/var/lib/locate</filename> 디렉터리로 옮기는데, 이는 "
+"FHS(Filesystem Hierarchy Standard)를 준수합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/findutils.xml:85 en/chapter08/gawk.xml:57
@@ -17043,7 +17052,7 @@ msgstr "Findutils 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/findutils.xml:102
 msgid "find, locate, updatedb, and xargs"
-msgstr ""
+msgstr "find, locate, updatedb, 및 xargs"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/findutils.xml:103
@@ -17059,7 +17068,7 @@ msgstr "<command>find</command>"
 #: en/chapter08/findutils.xml:116
 msgid ""
 "Searches given directory trees for files matching the specified criteria"
-msgstr ""
+msgstr "지정된 기준과 일치하는 파일을 찾기 위해 주어진 디렉터리 트리를 검색"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/findutils.xml:119
@@ -17077,6 +17086,8 @@ msgid ""
 "Searches through a database of file names and reports the names that contain "
 "a given string or match a given pattern"
 msgstr ""
+"파일 이름 데이터베이스를 검색하여 지정된 문자열을 포함하거나 지정된 패턴과 일"
+"치하는 이름을 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/findutils.xml:130
@@ -17095,6 +17106,9 @@ msgid ""
 "system (including other file systems that are currently mounted, unless told "
 "not to) and puts every file name it finds into the database"
 msgstr ""
+"<command>locate</command> 데이터베이스를 업데이트. 이 프로그램은 전체 파일 시"
+"스템을 스캔하고(제외하도록 설정하지 않는 한, 현재 마운트된 다른 파일 시스템"
+"도 포함), 찾아낸 모든 파일 이름을 데이터베이스에 넣음"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/findutils.xml:143
@@ -17109,7 +17123,7 @@ msgstr "<command>xargs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/findutils.xml:151
 msgid "Can be used to apply a given command to a list of files"
-msgstr ""
+msgstr "지정된 명령어를 파일 목록에 적용하는 데 사용 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/findutils.xml:153
