@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-22 03:02+0900\n"
-"PO-Revision-Date: 2026-05-22 03:02+0900\n"
+"POT-Creation-Date: 2026-05-22 05:44+0900\n"
+"PO-Revision-Date: 2026-05-22 05:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -16625,6 +16625,8 @@ msgstr "Expat"
 #: en/chapter08/expat.xml:26
 msgid "The Expat package contains a stream oriented C library for parsing XML."
 msgstr ""
+"Expat 패키지에는 XML을 파싱하기 위한 스트림 지향(stream-oriented) C 라이브러"
+"리가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/expat.xml:34
@@ -16644,7 +16646,7 @@ msgstr "Expat 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expat.xml:44
 msgid "Prepare Expat for compilation:"
-msgstr "Prepare Expat for compilation:"
+msgstr "컴파일 위한 Expat 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expat.xml:46
@@ -16702,6 +16704,8 @@ msgid ""
 "Is a non-validating utility to check whether or not XML documents are well "
 "formed"
 msgstr ""
+"비유효성 검증(non-validating) 유틸리티. XML 문서가 형식이 올바르게 구성되었는"
+"지(well-formed) 여부를 검사"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expat.xml:100
@@ -16711,7 +16715,7 @@ msgstr "<filename class=\"libraryfile\">libexpat</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/expat.xml:102
 msgid "Contains API functions for parsing XML"
-msgstr ""
+msgstr "XML을 파싱하기 위한 API 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/expat.xml:104
