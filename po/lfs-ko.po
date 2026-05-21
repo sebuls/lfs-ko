@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-21 21:39+0900\n"
-"PO-Revision-Date: 2026-05-21 21:38+0900\n"
+"POT-Creation-Date: 2026-05-22 03:02+0900\n"
+"PO-Revision-Date: 2026-05-22 03:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -25122,7 +25122,7 @@ msgstr "Less"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/less.xml:26
 msgid "The Less package contains a text file viewer."
-msgstr ""
+msgstr "Less 패키지에는 파일 뷰어가 들어있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/less.xml:33
@@ -25142,7 +25142,7 @@ msgstr "Less 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/less.xml:43
 msgid "Prepare Less for compilation:"
-msgstr "Prepare Less for compilation:"
+msgstr "컴파일 위해 Less 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/less.xml:45
@@ -25161,16 +25161,18 @@ msgid ""
 "This option tells the programs created by the package to look in <filename "
 "class=\"directory\">/etc</filename> for the configuration files."
 msgstr ""
+"이 옵션은 패키지가 생성한 프로그램이 <filename class=\"directory\">/etc</"
+"filename> 디렉터리에서 설정 파일을 찾도록 지시합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/less.xml:76
 msgid "Contents of Less"
-msgstr ""
+msgstr "Less 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/less.xml:82
 msgid "less, lessecho, and lesskey"
-msgstr "less, lessecho, and lesskey"
+msgstr "less, lessecho 및 lesskey"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/less.xml:92
@@ -25183,6 +25185,8 @@ msgid ""
 "A file viewer or pager; it displays the contents of the given file, letting "
 "the user scroll, find strings, and jump to marks"
 msgstr ""
+"파일 뷰어 또는 페이저. 지정된 파일의 내용을 표시하여 사용자가 스크롤, 문자열 "
+"찾기, 및 마크로 점프"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/less.xml:97
@@ -25200,8 +25204,8 @@ msgid ""
 "Needed to expand meta-characters, such as <emphasis>*</emphasis> and "
 "<emphasis>?</emphasis>, in filenames on Unix systems"
 msgstr ""
-"Needed to expand meta-characters, such as <emphasis>*</emphasis> and "
-"<emphasis>?</emphasis>, in filenames on Unix systems"
+"유닉스(Unix) 시스템의 파일 이름에서 <emphasis>*</emphasis> 및 <emphasis>?</"
+"emphasis> 같은 메타 문자(meta-character)를 확장하는 데 필요"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/less.xml:108
@@ -25216,7 +25220,7 @@ msgstr "<command>lesskey</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/less.xml:116
 msgid "Used to specify the key bindings for <command>less</command>"
-msgstr ""
+msgstr "<command>less</command> 키 바인딩(key bindings)을 지정하는 데 쓰임"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/less.xml:118
