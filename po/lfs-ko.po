@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-21 02:47+0900\n"
-"PO-Revision-Date: 2026-05-21 02:47+0900\n"
+"POT-Creation-Date: 2026-05-21 21:39+0900\n"
+"PO-Revision-Date: 2026-05-21 21:38+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7595,7 +7595,7 @@ msgstr "Diffutils 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/diffutils.xml:46 en/chapter08/diffutils.xml:44
 msgid "Prepare Diffutils for compilation:"
-msgstr "Prepare Diffutils for compilation:"
+msgstr "컴파일 위한 Diffutils 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/diffutils.xml:48
@@ -15697,6 +15697,8 @@ msgid ""
 "The Diffutils package contains programs that show the differences between "
 "files or directories."
 msgstr ""
+"Diffutils 패키지에는 파일이나 디렉터리 간의 차이점을 보여주는 프로그램이 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/diffutils.xml:34
@@ -15716,7 +15718,7 @@ msgstr "Diffutils 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/diffutils.xml:70
 msgid "cmp, diff, diff3, and sdiff"
-msgstr ""
+msgstr "cmp, diff, diff3, 및 sdiff"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/diffutils.xml:80
@@ -15726,7 +15728,7 @@ msgstr "<command>cmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/diffutils.xml:82
 msgid "Compares two files and reports any differences byte by byte"
-msgstr ""
+msgstr "두 파일을 비교하여 바이트 단위로 차이점을 알려줌"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/diffutils.xml:84
@@ -15742,7 +15744,7 @@ msgstr "<command>diff</command>"
 #: en/chapter08/diffutils.xml:92
 msgid ""
 "Compares two files or directories and reports which lines in the files differ"
-msgstr ""
+msgstr "두 파일이나 디렉터리를 비교하여 파일에서 서로 다른 줄을 알려줌"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/diffutils.xml:95
@@ -15757,7 +15759,7 @@ msgstr "<command>diff3</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/diffutils.xml:103
 msgid "Compares three files line by line"
-msgstr ""
+msgstr "세 파일은 줄 마다 비교"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/diffutils.xml:105
@@ -15772,7 +15774,7 @@ msgstr "<command>sdiff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/diffutils.xml:113
 msgid "Merges two files and interactively outputs the results"
-msgstr ""
+msgstr "두 파일을 병합하고 대화형으로 결과를 출력"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/diffutils.xml:115
