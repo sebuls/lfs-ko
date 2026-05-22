@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-22 05:44+0900\n"
-"PO-Revision-Date: 2026-05-22 05:44+0900\n"
+"POT-Creation-Date: 2026-05-23 02:55+0900\n"
+"PO-Revision-Date: 2026-05-23 02:54+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6989,7 +6989,7 @@ msgstr ""
 #: en/chapter08/zlib.xml:78 en/chapter08/zstd.xml:89
 #: en/chapter09/bootscripts.xml:69 en/chapter10/kernel.xml:549
 msgid "Short Descriptions"
-msgstr ""
+msgstr "짧은 설명"
 
 #. type: Content of: <appendix><variablelist>
 #: en/chapter05/linux-headers.xml:89 en/chapter08/acl.xml:87
@@ -25264,6 +25264,9 @@ msgid ""
 "capabilities available in Linux kernels. These capabilities partition the "
 "all-powerful root privilege into a set of distinct privileges."
 msgstr ""
+"Libcap 패키지는 리눅스 커널에서 사용할 수 있는 POSIX 1003.1e 기능"
+"(capabilities)에 대한 사용자 공간(userspace) 인터페이스를 구현합니다. 이 기능"
+"들은 전능한 루트(root) 권한을 여러 고유한 권한으로 분할합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libcap.xml:36
@@ -25288,11 +25291,15 @@ msgid ""
 "command> before running the commands below.  Be sure to unset <envar>GOLANG</"
 "envar> after installation is complete."
 msgstr ""
+"기존 시스템에서 이 패키지를 업데이트하고 Go 컴파일러가 설치되어 있다면, 아래 "
+"명령어를 실행하기 전에 <command>export GOLANG=no</command> 사용하여 빌드 오류"
+"를 막으십시오. 설치가 완료된 후에는 반드시 <envar>GOLANG</envar> 환경 변수를 "
+"해제(unset)해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libcap.xml:55
 msgid "Prevent static libraries from being installed:"
-msgstr "Prevent static libraries from being installed:"
+msgstr "정적 라이브러리(static libraries)가 설치되는 것을 막기:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libcap.xml:57
@@ -25323,6 +25330,9 @@ msgid ""
 "rather than <filename>/usr/lib64</filename> on x86_64. It has no effect on "
 "x86."
 msgstr ""
+"이 매개변수는 x86_64 아키텍처에서 라이브러리 디렉터리를 <filename>/usr/"
+"lib64</filename> 대신 <filename>/usr/lib</filename>로 설정합니다. x86 아키텍"
+"처에는 영향이 없습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libcap.xml:83
@@ -25333,17 +25343,17 @@ msgstr "<userinput remap=\"install\">make prefix=/usr lib=lib install</userinput
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/libcap.xml:88
 msgid "Contents of Libcap"
-msgstr ""
+msgstr "Libcap 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libcap.xml:95
 msgid "capsh, getcap, getpcaps, and setcap"
-msgstr "capsh, getcap, getpcaps, and setcap"
+msgstr "capsh, getcap, getpcaps, 및 setcap"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libcap.xml:96
 msgid "libcap.so and libpsx.so"
-msgstr "libcap.so and libpsx.so"
+msgstr "libcap.so 및 libpsx.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libcap.xml:106
@@ -25414,7 +25424,7 @@ msgstr "<filename class=\"libraryfile\">libcap</filename>"
 #: en/chapter08/libcap.xml:148
 msgid ""
 "Contains the library functions for manipulating POSIX 1003.1e capabilities"
-msgstr ""
+msgstr "POSIX 1003.1e 기능(capabilities)을 조작하기 위한 라이브러리 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libcap.xml:151
@@ -25432,6 +25442,8 @@ msgid ""
 "Contains functions to support POSIX semantics for syscalls associated with "
 "the pthread library"
 msgstr ""
+"pthread 라이브러리와 관련된 시스템 호출(syscalls)에 대한 POSIX 시맨틱"
+"(semantics, 의미론)을 지원하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libcap.xml:162
