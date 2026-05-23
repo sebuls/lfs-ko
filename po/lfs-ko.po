@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-23 20:52+0900\n"
-"PO-Revision-Date: 2026-05-23 20:52+0900\n"
+"POT-Creation-Date: 2026-05-24 03:37+0900\n"
+"PO-Revision-Date: 2026-05-24 03:37+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46793,6 +46793,12 @@ msgid ""
 "would be perfect for me. So I set out to create my own Linux system that "
 "would fully conform to my personal preferences."
 msgstr ""
+"나는 여러 배포판을 시도해 보았지만 그중 하나를 결정할 수 없었습니다. 그 자체"
+"만으로도 모두 훌륭한 시스템이었습니다. 더 이상 옳고 그름의 문제가 아니었습니"
+"다. 그것은 개인적 취향의 문제가 되어 있었습니다. 선택할 수 있는 조합이 너무"
+"나 많았기에, 나에게 완벽한 단 하나의 시스템은 존재하지 않을 것이라는 점이 분"
+"명해졌습니다. 그래서 나는 나의 개인적 선호에 완전히 맞는 나만의 리눅스 시스템"
+"을 구축하기 시작했습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/foreword.xml:36
@@ -46803,6 +46809,11 @@ msgid ""
 "their perceived weaknesses. At first, the idea was rather daunting. I "
 "remained committed to the idea that such a system could be built."
 msgstr ""
+"시스템을 진정으로 나만의 것으로 만들기 위해, 나는 미리 컴파일된 바이너리 패키"
+"지를 사용하는 대신 모든 것을 소스 코드로부터 컴파일하기로 결심했습니다. 이 "
+"<quote>완벽한</quote> 리눅스 시스템은 여러 시스템의 단점이라고 생각되는 부분"
+"들은 제외하고 장점들만 결합한 시스템이 될 것입니다. 처음에는 이 생각이 막막했"
+"습니다. 나는 그러한 시스템이 빌드될 수 있다는 믿음이 있았습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/foreword.xml:43
@@ -46814,6 +46825,13 @@ msgid ""
 "have put together such a system myself. The only thing better would have "
 "been to create each piece of software myself. This was the next best thing."
 msgstr ""
+"순환 의존성(circular dependencies)과 컴파일 타임 오류(compile-time errors) 같"
+"은 문제들을 해결한 끝에, 나는 마침내 직접 자체 빌드한 리눅스 시스템을 완성했"
+"습니다. 그 시스템은 당시 시중에 나와 있던 다른 어떤 리눅스 시스템처럼 완벽하"
+"게 동작했고 충분히 사용할 수 있었습니다. 그러나, 그것은 나만의 창조물이었습니"
+"다. 그러한 시스템을 스스로 조립해 냈다는 것은 매우 만족스러운 일이었습니다. "
+"이보다 더 좋은 유일한 방법은 모든 소프트웨어를 직접 만드는 것뿐이었습니다. "
+"(그것이 불가능한 상황에서) 이것은 그다음으로 가장 좋은 선택이었습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/foreword.xml:51
@@ -46826,6 +46844,12 @@ msgid ""
 "their (existing) Linux skills. Out of this broadened interest, the "
 "<emphasis>Linux From Scratch Project</emphasis> was born."
 msgstr ""
+"내 목표와 경험을 리눅스 커뮤니티의 다른 구성원들과 공유하면서, 이 아이디어에 "
+"대한 지속적인 관심이 존재한다는 점이 분명해졌습니다. 이처럼 자체 빌드한 리눅"
+"스 시스템은 사용자의 특정 요구사항을 충족할 뿐만 아니라, 프로그래머와 시스템 "
+"관리자가 기존의 리눅스 기술을 향상시킬 수 있는 이상적인 학습 기회를 제공한다"
+"는 사실이 곧바로 명백해졌습니다. 이러한 광범위한 관심 속에서, 마침내 "
+"<emphasis>Linux From Scratch Project</emphasis> 프로젝트가 태어났습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/foreword.xml:59
@@ -46838,6 +46862,12 @@ msgid ""
 "remain in control; we just lend a helping hand to get you started on your "
 "own journey."
 msgstr ""
+"이 Linux From Scratch 책은 해당 프로젝트의 중심 핵심입니다. 이 책은 여러분이 "
+"자신만의 시스템을 설계하고 빌드하는 데 필요한 배경지식과 지침을 제공합니다. "
+"비록 이 책이 올바르게 작동하는 시스템을 만들어낼 수 있는 템플릿을 제공하지"
+"만, 여러분은 자신의 스타일에 맞게 지침을 자유롭게 바꿀 수 있으며, 이는 이 프"
+"로젝트의 매우 중요한 부분입니다. 제어권은 여러분에게 있습니다. 우리는 단지 여"
+"러분이 자신만의 여정을 시작할 수 있도록 작은 도움의 손길을 빌려줄 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/foreword.xml:67
@@ -46846,6 +46876,9 @@ msgid ""
 "Scratch system and enjoy the numerous benefits of having a system that is "
 "truly your own."
 msgstr ""
+"나는 여러분이 자신만의 Linux From Scratch 시스템을 빌드하는 동안 정말 멋진 시"
+"간을 보내기를, 그리고 진정으로 나만의 것이 된 시스템이 주는 많은 이점을 마음"
+"껏 즐기기 바랍니다."
 
 #. type: Content of: <sect1><literallayout>
 #: en/prologue/foreword.xml:71
