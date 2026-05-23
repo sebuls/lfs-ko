@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-23 09:00+0900\n"
-"PO-Revision-Date: 2026-05-23 09:00+0900\n"
+"POT-Creation-Date: 2026-05-23 20:52+0900\n"
+"PO-Revision-Date: 2026-05-23 20:52+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -31234,6 +31234,8 @@ msgid ""
 "The Readline package is a set of libraries that offer command-line editing "
 "and history capabilities."
 msgstr ""
+"Readline 패키지는 라이브러리 모음이며 명령줄 편집(command-line editing) 및 히"
+"스토리(history) 기능을 제공합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/readline.xml:34
@@ -31258,10 +31260,10 @@ msgid ""
 "it can trigger a linking bug in <command>ldconfig</command>. This can be "
 "avoided by issuing the following two seds:"
 msgstr ""
-"Reinstalling Readline will cause the old libraries to be moved to "
-"&lt;libraryname&gt;.old. While this is normally not a problem, in some cases "
-"it can trigger a linking bug in <command>ldconfig</command>. This can be "
-"avoided by issuing the following two seds:"
+"Readline을 재설치하면 기존 라이브러리가 &lt;libraryname&gt;.old로 이동합니"
+"다. 이는 보통 문제가 되지 않지만, 일부 상황에서는 <command>ldconfig</command>"
+"에서 링크 버그가 날 수 있습니다. 이를 막으려면 아래의 두 개의 sed 명령어를 실"
+"행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:49
@@ -31281,10 +31283,9 @@ msgid ""
 "location, and rpath may sometimes cause unwanted effects or even security "
 "issues:"
 msgstr ""
-"Prevent hard coding library search paths (rpath) into the shared libraries.  "
-"This package does not need rpath for an installation into the standard "
-"location, and rpath may sometimes cause unwanted effects or even security "
-"issues:"
+"공유 라이브러리에 라이브러리 검색 경로(rpath)가 하드 코딩되는 것을 막으십시"
+"오. 이 패키지는 표준 위치에 설치할 때 rpath가 안 필요하며, rpath는 때때로 원"
+"치 않는 부작용이나 심지어 보안 문제를 일으킬 수 있습니다:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:57
@@ -31297,6 +31298,8 @@ msgstr "<userinput>sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf</userinput>"
 msgid ""
 "Fix a problem identified upstream specifically for this version of readline:"
 msgstr ""
+"이 버전의 readline을 위해 업스트림(upstream)에서 공식적으로 확인된 문제를 고"
+"치기:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:63
@@ -31345,6 +31348,9 @@ msgid ""
 "the curses library, not a separate termcap library. This will generate the "
 "correct <filename>readline.pc</filename> file."
 msgstr ""
+"이 옵션은 별도의 termcap 라이브러리가 아니라 curses 라이브러리에서 termcap 라"
+"이브러리 함수들을 찾을 수 있음을 Readline에 알려줍니다. 이것은 올바른 "
+"<filename>readline.pc</filename> 파일을 만듭니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:93
@@ -31365,6 +31371,9 @@ msgid ""
 "<quote>Shared Libraries</quote> section in the package's <filename>README</"
 "filename> file."
 msgstr ""
+"이 옵션은 Readline이 <filename class=\"libraryfile\">libncursesw</filename> "
+"라이브러리와 링크되도록 강제합니다. 자세한 내용은 패키지의 <filename>README</"
+"filename> 파일에 있는 <quote>Shared Libraries</quote> 섹션을 보십시오."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:118
@@ -31375,17 +31384,17 @@ msgstr "<userinput remap=\"install\">install -v -m644 doc/*.{ps,pdf,html,dvi} /u
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/readline.xml:123
 msgid "Contents of Readline"
-msgstr ""
+msgstr "Readline 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/readline.xml:130
 msgid "libhistory.so and libreadline.so"
-msgstr "libhistory.so and libreadline.so"
+msgstr "libhistory.so 및 libreadline.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/readline.xml:131
 msgid "/usr/include/readline and /usr/share/doc/readline-&readline-version;"
-msgstr "/usr/include/readline and /usr/share/doc/readline-&readline-version;"
+msgstr "/usr/include/readline 및 /usr/share/doc/readline-&readline-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/readline.xml:142
@@ -31395,7 +31404,9 @@ msgstr "<filename class=\"libraryfile\">libhistory</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/readline.xml:144
 msgid "Provides a consistent user interface for recalling lines of history"
-msgstr "Provides a consistent user interface for recalling lines of history"
+msgstr ""
+"이전 기록(history)의 줄들을 다시 불러올 수 있도록 일관된 사용자 인터페이스를 "
+"제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/readline.xml:147
@@ -31413,8 +31424,8 @@ msgid ""
 "Provides a set of commands for manipulating text entered in an interactive "
 "session of a program"
 msgstr ""
-"Provides a set of commands for manipulating text entered in an interactive "
-"session of a program"
+"프로그램의 대화형 세션(interactive session)에서 입력된 텍스트를 다룰 수 있는 "
+"일련의 명령어 세트 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/readline.xml:158
@@ -50779,7 +50790,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1349
 msgid "GCC, Glibc, Ncurses, and Readline"
-msgstr ""
+msgstr "GCC, Glibc, Ncurses, 및 Readline"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1380
@@ -50821,18 +50832,18 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1464
 msgid "MarkupSafe, Python, Setuptools, and Wheel"
-msgstr ""
+msgstr "MarkupSafe, Python, Setuptools, 및 Wheel"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1471
 msgid "MarkupSafe and Python"
-msgstr ""
+msgstr "MarkupSafe 및 Python"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1485 en/appendices/dependencies.xml:1565
 #: en/appendices/dependencies.xml:2206
 msgid "&systemd-udev;"
-msgstr ""
+msgstr "&systemd-udev;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1502
