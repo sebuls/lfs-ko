@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-23 02:55+0900\n"
-"PO-Revision-Date: 2026-05-23 02:54+0900\n"
+"POT-Creation-Date: 2026-05-23 09:00+0900\n"
+"PO-Revision-Date: 2026-05-23 09:00+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -27546,7 +27546,7 @@ msgstr "MPFR"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpfr.xml:26
 msgid "The MPFR package contains functions for multiple precision math."
-msgstr ""
+msgstr "MPFR 패키지에는 다중 정밀도 수학을 위한 함수가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/mpfr.xml:34
@@ -27566,7 +27566,7 @@ msgstr "MPFR 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpfr.xml:44
 msgid "Prepare MPFR for compilation:"
-msgstr "Prepare MPFR for compilation:"
+msgstr "컴파일 위해 MPFR 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/mpfr.xml:46
@@ -27588,16 +27588,18 @@ msgid ""
 "The test suite for MPFR in this section is considered critical.  Do not skip "
 "it under any circumstances."
 msgstr ""
+"이 섹션의 MPFR 테스트 스위트는 매우 중요한 것으로 간주됩니다. 어떠한 상황에서"
+"도 이를 건너뛰지 마십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpfr.xml:61
 msgid "Test the results and ensure that all 198 tests passed:"
-msgstr ""
+msgstr "결과를 테스트하고 198개 테스트 모두 통과했는지 확인:"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/mpfr.xml:74
 msgid "Contents of MPFR"
-msgstr ""
+msgstr "MPFR 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/mpfr.xml:81
@@ -27617,7 +27619,7 @@ msgstr "<filename class=\"libraryfile\">libmpfr</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/mpfr.xml:94
 msgid "Contains multiple-precision math functions"
-msgstr ""
+msgstr "다중 정밀도(가변 정밀도) 수학 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/mpfr.xml:96
