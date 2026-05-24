@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-24 20:08+0900\n"
-"PO-Revision-Date: 2026-05-24 20:06+0900\n"
+"POT-Creation-Date: 2026-05-25 04:03+0900\n"
+"PO-Revision-Date: 2026-05-25 03:58+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46465,6 +46465,9 @@ msgid ""
 "is minimal.  For example, in a test build of LFS-9.1 on a Core i7-4790 CPU "
 "based system, using 4 cores, the following statistics were measured:"
 msgstr ""
+"32비트 시스템과 비교했을 때, 64비트 시스템에서 빌드하여 얻는 이점은 작습니"
+"다. 예를 들어, 4코어를 사용하는 Core i7-4790 CPU 기반 시스템에서 LFS-9.1을 테"
+"스트 빌드한 결과 다음과 같은 통계가 측정:"
 
 #. type: Content of: <sect1><screen>
 #: en/prologue/architecture.xml:28
@@ -46488,6 +46491,11 @@ msgid ""
 "to run; if you plan to use LFS as a desktop, the LFS authors recommend "
 "building a 64-bit system."
 msgstr ""
+"보는 바와 같이, 같은 하드웨어에서 64비트 빌드는 32비트 빌드보다 겨우 3% 더 빠"
+"를 뿐입니다(그리고 크기는 22% 더 큼). 만약 LFS를 LAMP 서버나 방화벽으로 사용"
+"할 계획이라면 32비트 CPU로도 충분할 수 있습니다. 반면, BLFS의 몇몇 패키지들"
+"은 이제 빌드하거나 실행하는 데 4 GB 이상의 RAM이 필요합니다. LFS를 데스크톱으"
+"로 사용할 계획이라면 LFS 저자들은 64비트 시스템을 빌드할 것을 권장합니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/architecture.xml:39
@@ -46502,6 +46510,15 @@ msgid ""
 "<ulink url=\"https://www.linuxfromscratch.org/~thomas/multilib/index.html\"/"
 ">. But that's an advanced topic."
 msgstr ""
+"LFS를 통해 만들어지는 기본 64비트 빌드는 <quote>pure</quote>  64비트 시스템입"
+"니다. 즉, 64비트 실행 파일만 지원합니다. <quote>multi-lib</quote> 시스템을 빌"
+"드하려면 많은 애플리케이션을 32비트 시스템용으로 한번, 64비트 시스템용으로 "
+"또 한번, 총 두 번 컴파일해야 합니다. 이는 기본 리눅스 시스템에 필요한 최소한"
+"의 지침만을 제공한다는 교육적 목표에 어긋나기 때문에 LFS에서는 직접적으로 지"
+"원하지 않습니다. 일부 LFS/BLFS 편집자들이 LFS의 멀티립 포크(fork) 버전을 관리"
+"하고 있으며, 이는 <ulink url=\"https://www.linuxfromscratch.org/~thomas/"
+"multilib/index.html\"/>에서 확인하실 수 있습니다. 그러나, 그것은 고급 주제입"
+"니다."
 
 #. type: Content of: <sect1><title>
 #: en/prologue/audience.xml:11
