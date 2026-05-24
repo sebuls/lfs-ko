@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-24 03:37+0900\n"
-"PO-Revision-Date: 2026-05-24 03:37+0900\n"
+"POT-Creation-Date: 2026-05-24 20:08+0900\n"
+"PO-Revision-Date: 2026-05-24 20:06+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46530,6 +46530,12 @@ msgid ""
 "on each other. One of the best things this learning experience can provide "
 "is the ability to customize a Linux system to suit your own unique needs."
 msgstr ""
+"이 프로젝트가 존재하는 한 가지 중요한 이유는 여러분이 리눅스 시스템의 내부 구"
+"조를 속속들이(from the inside out) 배우도록 돕는 것입니다. LFS 시스템을 빌드"
+"하는 것은 리눅스가 어떻게 작동하는지, 그리고 각 요소들이 어떻게 함께 맞물려 "
+"돌아가고 서로 의존하는지를 명확하게 보여줍니다. 이러한 학습 경험이 줄 수 있"
+"는 가장 멋진 부분 중 하나는, 여러분만의 고유한 요구사항에 맞게 리눅스 시스템"
+"을 맞춤 설정하는 일을 기를 수 있다는 점입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/audience.xml:24
@@ -46539,6 +46545,10 @@ msgid ""
 "the driver's seat. <emphasis>You</emphasis> dictate every aspect of your "
 "system."
 msgstr ""
+"LFS의 또 다른 핵심 이점은 다른 누군가가 구현해 놓은 리눅스 방식에 의존하지 않"
+"고, 시스템에 대한 온전한 제어권을 가질 수 있다는 점입니다. LFS를 사용하면 여"
+"러분이 운전석에 앉게 됩니다. <emphasis>그대</emphasis>가 시스템의 모든 요소"
+"를 좌우합니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/audience.xml:29
@@ -46551,13 +46561,14 @@ msgid ""
 "size, if nothing else. Think about bootable CDs, USB sticks, and embedded "
 "systems. Those are areas where LFS can be beneficial."
 msgstr ""
-"LFS allows you to create very compact Linux systems. With other "
-"distributions you are often forced to install a great many programs you "
-"neither use nor understand. These programs waste resources. You may argue "
-"that with today's hard drives and CPUs, wasted resources are no longer a "
-"consideration. Sometimes, however, you are still constrained by the system's "
-"size, if nothing else. Think about bootable CDs, USB sticks, and embedded "
-"systems. Those are areas where LFS can be beneficial."
+"LFS를 사용하면 매우 조밀하고 압축된(compact) 리눅스 시스템을 구축할 수 있습니"
+"다. 다른 배포판을 사용할 때는 사용하지도 않고 이해하지도 못하는 수많은 프로그"
+"램을 어쩔 수 없이 설치해야 하는 경우가 많습니다. 이러한 프로그램들은 자원을 "
+"낭비합니다. 오늘날의 하드 드라이브와 CPU 성능을 감안하면 자원 낭비는 더 이상 "
+"고려 대상이 아니라고 반박할지도 모릅니다. 그러나, 때로는 다른 것은 아니더라"
+"도 시스템 크기 자체에 제약을 받는 경우가 여전히 존재합니다. 부팅 가능한 CD, "
+"USB 메모리, 그리고 임베디드 시스템을 생각해 보십시오. 이런 것이 바로 LFS가 유"
+"용하게 쓰일 수 있는 영역입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/audience.xml:38
@@ -46569,6 +46580,9 @@ msgid ""
 "you examine the patch and implement it yourself, you have no guarantee that "
 "the new binary package was built correctly and adequately fixes the problem."
 msgstr ""
+"LFS의 또 다른 핵심 이점은 다른 누군가가 구현해 놓은 리눅스 방식에 의존하지 않"
+"고, 시스템에 대한 온전한 제어권을 가질 수 있다는 점입니다. LFS를 사용하면 여"
+"러분이 운전석에 앉게 됩니다. 여러분이 시스템의 모든 요소를 좌우합니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/audience.xml:46
@@ -46577,6 +46591,10 @@ msgid ""
 "level system. If you do not wish to build your own Linux system from "
 "scratch, you may nevertheless benefit from the information in this book."
 msgstr ""
+"Linux From Scratch의 목표는 완벽하고 완전하게 사용할 수 있는 기초 단계"
+"(foundation-level)의 시스템을 빌드하는 것입니다. 비록 여러분이 처음부터 자신"
+"만의 리눅스 시스템을 직접 빌드하고 싶지 않더라도, 이 책에 담긴 정보로부터 충"
+"분히 도움을 받을 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/audience.xml:51
@@ -46586,6 +46604,9 @@ msgid ""
 "continue your LFS experience, you will discover the power that information "
 "and knowledge can bring."
 msgstr ""
+"여러분만의 LFS 시스템을 빌드해야 하는 좋은 이유들은 여기에 모두 나열하기에 너"
+"무나 많습니다. 결국, 배움이야말로 단연코 가장 중요한 이유입니다. LFS 경험을 "
+"쌓아갈수록, 정보와 지식이 가져다주는 강력한 힘을 스스로 발견하게 될 것입니다."
 
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/prologue/bookinfo.xml:9 en/appendices/acronymlist.xml:315
