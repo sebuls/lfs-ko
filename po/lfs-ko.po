@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-25 16:43+0900\n"
-"PO-Revision-Date: 2026-05-25 16:42+0900\n"
+"POT-Creation-Date: 2026-05-25 21:12+0900\n"
+"PO-Revision-Date: 2026-05-25 21:11+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -414,6 +414,9 @@ msgid ""
 "initial tool chain, (binutils, gcc, and glibc) using cross-compilation "
 "techniques to isolate the new tools from the host system."
 msgstr ""
+"<xref linkend=\"chapter-cross-tools\"/>은 새 도구들을 호스트 시스템으로부터 "
+"격리하기 위해 교차 컴파일 기술을 사용하여 초기 툴체인(binutils, gcc, glibc)"
+"을 설치하는 과정을 설명합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/how.xml:51
@@ -431,6 +434,9 @@ msgid ""
 "environment, where we use the new tools to build all the rest of the tools "
 "needed to create the LFS system."
 msgstr ""
+"<xref linkend=\"chapter-chroot-temporary-tools\"/> 에서는 \"chroot\" 환경으"
+"로 진입하며, 여기에서 우리는 새 도구들을 사용하여 LFS 시스템을 구축하는 데 필"
+"요한 나머지 모든 도구를 빌드합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/how.xml:58
@@ -439,6 +445,9 @@ msgid ""
 "excessive. A full technical explanation as to why this is done is provided "
 "in <xref linkend=\"ch-tools-toolchaintechnotes\"/>."
 msgstr ""
+"새로운 시스템을 호스트 배포판으로부터 격리하려는 이러한 노력이 과도해 보일 수"
+"도 있습니다. 왜 이렇게 해야 하는지에 대한 자세한 기술적 설명은 <xref "
+"linkend=\"ch-tools-toolchaintechnotes\"/>에서 제공합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/how.xml:62
@@ -469,6 +478,9 @@ msgid ""
 "be clarified, and everything will fall into place as you commence your LFS "
 "adventure."
 msgstr ""
+"이것이 전체 프로세스의 핵심 요약입니다. 각 단계에 대한 자세한 정보는 다음 장"
+"에서 소개합니다. 지금 복잡해 보이는 항목들도 여러분이 LFS 모험을 시작하면 명"
+"확해질 것이며, 모든 조각이 제자리를 찾게 될 것입니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter01/resources.xml:11
@@ -46957,6 +46969,9 @@ msgid ""
 "Part I explains a few important notes on how to proceed with the LFS "
 "installation.  This section also provides meta-information about the book."
 msgstr ""
+"제1부는 LFS 설치를 어떻게 진행해야 하는지에 대한 몇 가지 중요한 참고 사항을 "
+"설명합니다. 또한, 이 섹션에서는 책에 대한 메타 정보(meta-information)도 함께 "
+"제공합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/prologue/organization.xml:24
@@ -46969,6 +46984,8 @@ msgid ""
 "Part II describes how to prepare for the building process&mdash;making a "
 "partition, downloading the packages, and compiling temporary tools."
 msgstr ""
+"제2부는 파티션 생성, 패키지 다운로드, 임시 도구 컴파일 등 빌드 프로세스를 준"
+"비하는 방법을 설명합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/prologue/organization.xml:32
@@ -46981,6 +46998,8 @@ msgid ""
 "Part III provides instructions for building the tools needed for "
 "constructing the final LFS system."
 msgstr ""
+"제3부는 최종 LFS 시스템을 구축하는 데 필요한 도구들을 빌드하기 위한 지침을 제"
+"공합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/prologue/organization.xml:39
@@ -46998,6 +47017,12 @@ msgid ""
 "listing all of the programs, libraries, and important files that have been "
 "installed."
 msgstr ""
+"제4부는 모든 패키지를 하나씩 컴파일하고 설치하며, 부트 스크립트를 설정하고, "
+"커널을 설치하는 등 LFS 시스템을 빌드하는 과정을 독자에게 안내합니다. 이렇게 "
+"만들어진 리눅스 시스템은 사용자의 기호에 맞게 시스템을 확장할 수 있도록 다른 "
+"소프트웨어들을 빌드할 수 있는 단단한 기반이 됩니다. 이 책의 끝에는 설치된 모"
+"든 프로그램, 라이브러리, 그리고 중요한 파일들을 한눈에 볼 수 있도록 편리하게 "
+"정리된 참조 목록이 있습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/prologue/organization.xml:51
@@ -47012,6 +47037,9 @@ msgid ""
 "licenses for the distribution of the book, and a comprehensive index of "
 "packages, programs, libraries, and scripts."
 msgstr ""
+"제5부는 두문자어(acronyms) 및 용어사전, 감사의 글, 패키지 의존성, LFS 부트 스"
+"크립트 목록, 책의 배포를 위한 라이선스, 그리고 패키지,프로그램,라이브러리 및 "
+"스크립트의 종합 인덱스(색인)를 포함하여 책 자체에 대한 정보를 제공합니다."
 
 #. type: Content of: <preface><title>
 #: en/prologue/preface.xml:12
