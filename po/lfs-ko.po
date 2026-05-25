@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-25 21:12+0900\n"
-"PO-Revision-Date: 2026-05-25 21:11+0900\n"
+"POT-Creation-Date: 2026-05-26 03:30+0900\n"
+"PO-Revision-Date: 2026-05-26 03:29+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -47078,11 +47078,18 @@ msgid ""
 "such basic knowledge will likely go unanswered (or you will simply be "
 "referred to the LFS essential pre-reading list)."
 msgstr ""
+"LFS 책은 사용자가 <emphasis>적어도</emphasis> 이 정도의 기본 역량을 갖추고 있"
+"다고 가정하기 때문에, 다양한 LFS 지원 포럼에서 이러한 부분에 대해 많은 도움"
+"을 받기는 어렵습니다. 이러한 기초 지식에 대한 질문은 대답을 얻지 못할 가능성"
+"이 높으며, (또는 단순히 LFS 필수 사전 읽기 목록을 참고하라는 안내만 받게 될 "
+"것입니다.)"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/prerequisites.xml:28
 msgid "Before building an LFS system, we urge you to read these articles:"
 msgstr ""
+"LFS 시스템을 빌드하기 전에, 우리는 여러분이 다음 문서들을 반드시 읽어보시기"
+"를 강력히 권장."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/prerequisites.xml:32
@@ -47099,6 +47106,10 @@ msgid ""
 "ago, it still provides a good summary of the basic techniques used to build "
 "and install software."
 msgstr ""
+"이 문서는 리눅스 환경에서 <quote>일반적인(generic)</quote>유닉스 소프트웨어 "
+"패키지를 빌드하고 설치하는 방법을 다룬 종합 가이드입니다. 비록 작성된 지는 "
+"꽤 오래되었지만, 소프트웨어를 빌드하고 설치하는 데 사용되는 기본적인 기술들"
+"을 여전히 잘 요약하여 제공합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/prerequisites.xml:42
@@ -47113,6 +47124,8 @@ msgid ""
 "This guide provides a good summary of the basic skills and techniques needed "
 "to build software from source code."
 msgstr ""
+"이 가이드는 소스 코드로부터 소프트웨어를 빌드하는 데 필요한 기본적인 기술과 "
+"기법들을 잘 요약하여 제공합니다."
 
 #. type: Content of: <sect1><title>
 #: en/prologue/standards.xml:11
