@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-25 04:03+0900\n"
-"PO-Revision-Date: 2026-05-25 03:58+0900\n"
+"POT-Creation-Date: 2026-05-25 16:43+0900\n"
+"PO-Revision-Date: 2026-05-25 16:42+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11939,6 +11939,8 @@ msgstr "Bc"
 msgid ""
 "The Bc package contains an arbitrary precision numeric processing language."
 msgstr ""
+"Bc 패키지에는 임의 정밀도(arbitrary precision) 산술 연산 처리 언어가 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bc.xml:34
@@ -11958,7 +11960,7 @@ msgstr "Installation of Bc"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:44
 msgid "Prepare Bc for compilation:"
-msgstr "Prepare Bc for compilation:"
+msgstr "컴파일 위해 Bc 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bc.xml:46
@@ -11974,7 +11976,7 @@ msgstr "<parameter>CC='gcc -std=c99'</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:54
 msgid "This parameter specifies the compiler and C standard to use."
-msgstr ""
+msgstr "이 매개변수(parameter)는 사용할 컴파일러와 C 표준 규격을 지정합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:59
@@ -11987,6 +11989,8 @@ msgid ""
 "Omit parts of the test suite that won't work until the bc program has been "
 "installed."
 msgstr ""
+"bc 프로그램이 설치되야 정상적으로 작동할 테스트 스위트(test suite)의 일부 항"
+"목들을 제외합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:67
@@ -11996,7 +12000,7 @@ msgstr "<parameter>-O3</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:69
 msgid "Specify the optimization to use."
-msgstr "Specify the optimization to use."
+msgstr "사용할 최적화 단계를 지정."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:74
@@ -12009,6 +12013,8 @@ msgid ""
 "Enable the use of <application>Readline</application> to improve the line "
 "editing feature of bc."
 msgstr ""
+"<application>Readline</application> 사용을 활성화하여 bc의 행 편집(line "
+"editing) 기능 향상"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:86
@@ -12030,7 +12036,7 @@ msgstr "Bc 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bc.xml:104
 msgid "bc and dc"
-msgstr "bc and dc"
+msgstr "bc 및 dc"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bc.xml:114
@@ -12040,7 +12046,7 @@ msgstr "<command>bc</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:116
 msgid "A command line calculator"
-msgstr ""
+msgstr "명령행 계산기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bc.xml:118
@@ -12055,7 +12061,7 @@ msgstr "<command>dc</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/bc.xml:126
 msgid "A reverse-polish command line calculator"
-msgstr ""
+msgstr "역폴란드식(Reverse-Polish) 명령 계산기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bc.xml:128
@@ -12074,7 +12080,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/binutils.xml:17
 msgid "Binutils-&binutils-version;"
-msgstr ""
+msgstr "Binutils-&binutils-version;"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/binutils.xml:26
