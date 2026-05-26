@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-26 21:39+0900\n"
-"PO-Revision-Date: 2026-05-26 21:39+0900\n"
+"POT-Creation-Date: 2026-05-27 02:51+0900\n"
+"PO-Revision-Date: 2026-05-27 02:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1866,7 +1866,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter02/stages.xml:11
 msgid "Building LFS in Stages"
-msgstr "LFS in 스테이지 빌드"
+msgstr "단계별 LFS 빌드"
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/stages.xml:13
@@ -1877,11 +1877,11 @@ msgid ""
 "certain procedures must be repeated after a reboot when resuming LFS at "
 "different points."
 msgstr ""
-"LFS is designed to be built in one session.  That is, the instructions "
-"assume that the system will not be shut down during the process.  This does "
-"not mean that the system has to be built in one sitting.  The issue is that "
-"certain procedures must be repeated after a reboot when resuming LFS at "
-"different points."
+"LFS는 단 한 번의 세션 동안 빌드되도록 설계되었습니다. 즉, 이 안내서는 빌드 과"
+"정 중에 시스템이 종료되지 않는다는 것을 가정합니다. 그렇다고 해서 이 시스템"
+"을 한 자리에서 다 빌드해야 한다는 뜻은 아닙니다. 문제는 다른 시점에서 LFS 빌"
+"드를 재개할 때, 시스템을 재부팅하고 나면 특정 절차들을 반드시 다시 반복해야 "
+"한다는 겁니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/stages.xml:21
@@ -1894,6 +1894,7 @@ msgid ""
 "These chapters run commands on the host system.  When restarting, be certain "
 "of one thing:"
 msgstr ""
+"이 장들은 호스트 시스템에서 명령어를 실행합니다. 다시 시작할 때, 할 것 하나:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:28
@@ -1902,9 +1903,9 @@ msgid ""
 "user after Section 2.4 must have the LFS environment variable set "
 "<emphasis>FOR THE ROOT USER</emphasis>."
 msgstr ""
-"Procedures performed as the <systemitem class=\"username\">root</systemitem> "
-"user after Section 2.4 must have the LFS environment variable set "
-"<emphasis>FOR THE ROOT USER</emphasis>."
+"2.4절 이후에 <systemitem class=\"username\">root</systemitem> 사용자로 수행하"
+"는 절차는 <emphasis>ROOT 사용자에 대해</emphasis> LFS 환경 변수가 반드시 설정"
+"되어 있어야 합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/stages.xml:37
@@ -1914,7 +1915,7 @@ msgstr "제5&ndash;6장"
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:41 en/chapter02/stages.xml:67
 msgid "The /mnt/lfs partition must be mounted."
-msgstr ""
+msgstr "/mnt/lfs 파티션은 반드시 마운트되어 있어야 합니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:45
@@ -1925,6 +1926,10 @@ msgid ""
 "that, you are at risk of installing packages to the host, and potentially "
 "rendering it unusable."
 msgstr ""
+"이 두 장은 <emphasis>반드시</emphasis> <systemitem class=\"username\">lfs</"
+"systemitem> 사용자로 수행해야 합니다. 이 장들의 작업을 수행하기 전에 반드시 "
+"su - lfs 명령을 내려야 합니다. 안 그러면, 호스트 시스템에 패키지를 설치하게 "
+"되어, 잠재적으로 호스트 시스템을 못 쓰게 만들 수 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:53
@@ -1934,6 +1939,10 @@ msgid ""
 "ensure the previously expanded tarball has been removed, then re-extract the "
 "package, and complete all the instructions in that section."
 msgstr ""
+"<xref linkend='ch-tools-generalinstructions'/> 절차는 매우 중요합니다. 패키지"
+"가 올바르게 설치되었는지 조금이라도 의심이 간다면, 이전에 압축을 풀었던 타르"
+"볼(tarball)이 제거되었는지 확인한 후, 패키지 압축을 다시 풀고 해당 섹션의 모"
+"든 안내 지침을 완료하십시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/stages.xml:63
@@ -1948,6 +1957,9 @@ msgid ""
 "<systemitem class=\"username\">root</systemitem> user, with the LFS "
 "environment variable set for the &root; user."
 msgstr ""
+"<quote>가상 커널 파일 시스템 준비</quote>부터 <quote>Chroot 환경 진입</quote>"
+"까지 몇 작업은 &root; 사용자에 대해 LFS 환경 변수가 설정된 상태에서, 반드시 "
+"<systemitem class=\"username\">root</systemitem> 사용자로 수행해야 합니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:79
@@ -1956,6 +1968,9 @@ msgid ""
 "<systemitem class=\"username\">root</systemitem>. The LFS variable is not "
 "used after the chroot environment has been entered."
 msgstr ""
+"chroot 환경에 진입할 때, <systemitem class=\"username\">root</systemitem> 사"
+"용자에 대한 LFS 환경 변수가 반드시 설정되어 있어야 합니다. LFS 변수는 chroot "
+"환경에 진입한 이후에는 안 쓰입니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/stages.xml:85
@@ -1966,6 +1981,11 @@ msgid ""
 "linkend='ch-tools-bindmount'/> and <xref linkend='ch-tools-kernfsmount' "
 "role='.'/>"
 msgstr ""
+"가상 파일 시스템이 반드시 마운트되어 있어야 합니다. 이것은 호스트의 가상 터미"
+"널로 전환한 다음 <systemitem class=\"username\">root</systemitem> 사용자로 "
+"<xref linkend='ch-tools-bindmount'/> 및 <xref linkend='ch-tools-kernfsmount' "
+"role='.'/>에 있는 명령어들을 실행함으로써, chroot 환경에 진입하기 전 또는 진"
+"입한 후에 수행할 수 있습니다."
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter03/chapter03.xml:8
