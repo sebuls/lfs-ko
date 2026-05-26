@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-26 03:30+0900\n"
-"PO-Revision-Date: 2026-05-26 03:29+0900\n"
+"POT-Creation-Date: 2026-05-26 21:39+0900\n"
+"PO-Revision-Date: 2026-05-26 21:39+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -97,6 +97,12 @@ msgid ""
 "give you some guidance for troubleshooting: <ulink url=\"&hints-"
 "root;errors.txt\"/>."
 msgstr ""
+"이 책의 내용을 진행하는 동안 문제나 의문이 발생하면, 우선 <ulink url=\"&faq-"
+"root;#generalfaq\"/>에 있는 FAQ 페이지를 확인 바랍니다. 많은 질문에 대한 답변"
+"이 이미 그곳에 있습니다. 만약 해당 페이지에서 질문에 대한 답을 찾지 못하면, "
+"문제의 원인을 직접 찾아보십시오. 다음 힌트 문서에서 문제 해결(트러블슈팅)을 "
+"위한 몇 가지 지침을 얻으실 수 있습니다: <ulink url=\"&hints-"
+"root;errors.txt\"/>."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/askforhelp.xml:42
@@ -104,6 +110,8 @@ msgid ""
 "If you cannot find your problem listed in the FAQ, search the mailing lists "
 "at <ulink url=\"&lfs-root;search.html\"/>."
 msgstr ""
+"FAQ에서 발생한 문제를 못 찾으면, <ulink url=\"&lfs-root;search.html\"/>에서 "
+"메일링 리스트를 검색하십시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/askforhelp.xml:45
@@ -271,7 +279,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/askforhelp.xml:132
 msgid "In this case, many people would just include the bottom section:"
-msgstr ""
+msgstr "이 경우, 많은 사람이 그냥 맨 아래 섹션만 포함합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter01/askforhelp.xml:135
@@ -288,6 +296,10 @@ msgid ""
 "it includes the command that was executed and all the associated error "
 "messages."
 msgstr ""
+"이것만으로는 문제를 진단하기에 정보가 부족합니다. 무언가 잘못되었다는 사실만 "
+"기록되어 있을 뿐, 무엇이 잘못되었는지는 기록되지 않기 때문입니다. 위의 예시처"
+"럼 해당 섹션 전체를 저장해야 합니다. 그곳에 실행된 명령과 이와 관련된 모든 오"
+"류 메시지가 들어 있기 때문입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/askforhelp.xml:143
@@ -297,6 +309,10 @@ msgid ""
 "Read this document, and follow the hints. Doing so will increase the "
 "likelihood of getting the help you need."
 msgstr ""
+"인터넷에서 도움을 요청하는 방법에 대한 훌륭한 글이 <ulink url=\"http://"
+"catb.org/~esr/faqs/smart-questions.html\"/>에 있습니다. 이 문서를 읽고 힌트"
+"를 따르시기 바랍니다. 그렇게 하면 우리에게 필요한 도움을 받을 가능성이 높아"
+"질 것입니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter01/changelog.xml:11
