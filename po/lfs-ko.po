@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-27 06:36+0900\n"
-"PO-Revision-Date: 2026-05-27 06:36+0900\n"
+"POT-Creation-Date: 2026-05-28 03:23+0900\n"
+"PO-Revision-Date: 2026-05-28 03:22+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -833,6 +833,14 @@ msgid ""
 "extended, and recycle the free data segments created when files are deleted. "
 "It may also provide support for data redundancy, and for error recovery."
 msgstr ""
+"파티션은 파티션 테이블에 설정된 경계로 구분되는, 디스크 드라이브 상의 일련의 "
+"섹터 범위일 뿐입니다. 운영체제가 파일을 저장하기 위해 파티션을 사용하려면, 먼"
+"저 파티션이 파일 시스템을 포함하도록 포맷되어야 합니다. 이 파일 시스템은 전형"
+"적으로 레이블, 디렉터리 블록, 데이터 블록, 그리고 필요에 따라 특정 파일을 찾"
+"아내기 위한 인덱싱 구조로 구성됩니다. 또한, 파일 시스템은 운영체제가 파티션 "
+"내의 빈 공간을 추적하고, 새 파일이 생성되거나 기존 파일이 확장될 때 필요한 섹"
+"터를 예약하며, 파일이 삭제될 때 생기는 빈 데이터 세그먼트를 재활용할 수 있도"
+"록 돕습니다. 데이터 중복성 및 오류 복구를 위한 기능도 제공할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:23
@@ -842,10 +850,9 @@ msgid ""
 "complex; it depends on the characteristics of the files and the size of the "
 "partition.  For example:"
 msgstr ""
-"LFS can use any file system recognized by the Linux kernel, but the most "
-"common types are ext3 and ext4.  The choice of the right file system can be "
-"complex; it depends on the characteristics of the files and the size of the "
-"partition.  For example:"
+"LFS는 리눅스 커널이 인식하는 모든 파일 시스템을 사용할 수 있지만, 가장 흔한 "
+"유형은 ext3와 ext4입니다. 바른 파일 시스템을 선택하는 일은 복잡할 수 있으며, "
+"이는 파일의 특성과 파티션의 크기에 따라 달라집니다. 예를 들어:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter02/creatingfilesystem.xml:30
@@ -856,7 +863,7 @@ msgstr "ext2"
 #: en/chapter02/creatingfilesystem.xml:31
 msgid ""
 "is suitable for small partitions that are updated infrequently such as /boot."
-msgstr ""
+msgstr "/boot 처럼 업데이트가 자주 발생하지 않는 작은 파티션에 적합."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter02/creatingfilesystem.xml:36
@@ -870,6 +877,9 @@ msgid ""
 "partition's status in the case of an unclean shutdown.  It is commonly used "
 "as a general purpose file system."
 msgstr ""
+"비정상적인 종료가 발생했을 때 파티션의 상태 복구를 돕는 저널(journal) 기능이 "
+"들어간 ext2의 업그레이드 버전. 이는 일반적으로 범용 파일 시스템으로 널리 쓰"
+"임."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter02/creatingfilesystem.xml:44
@@ -883,6 +893,8 @@ msgid ""
 "several new capabilities including nano-second timestamps, creation and use "
 "of very large files (up to 16 TB), and speed improvements."
 msgstr ""
+"ext 파일 시스템 제품군의 최신 버전. 나노초 단위의 타임스탬프, 매우 큰 파일(최"
+"대 16TB)의 생성 및 사용, 속도 향상을 포함한 몇 가지 새로운 기능을 제공."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:53
@@ -892,6 +904,10 @@ msgid ""
 "others, can be found at <ulink url=\"https://en.wikipedia.org/wiki/"
 "Comparison_of_file_systems\"/>."
 msgstr ""
+"FAT32, NTFS, JFS, XFS를 포함한 다른 파일 시스템들은 특수한 목적으로 쓸만합니"
+"다. 이러한 파일 시스템들과 그 외 다양한 파일 시스템에 대한 더 자세한 정보는 "
+"<ulink url=\"https://en.wikipedia.org/wiki/Comparison_of_file_systems\"/> 에 "
+"있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:58
@@ -900,9 +916,9 @@ msgid ""
 "<systemitem class=\"filesystem\">ext4</systemitem> file system on the LFS "
 "partition, issue the following command:"
 msgstr ""
-"LFS assumes that the root file system (/) is of type ext4. To create an "
-"<systemitem class=\"filesystem\">ext4</systemitem> file system on the LFS "
-"partition, issue the following command:"
+"LFS는 루트 파일 시스템(/)이 ext4 유형이라고 가정합니다. LFS 파티션에 "
+"<systemitem class=\"filesystem\">ext4</systemitem> 파일 시스템을 생성하려면 "
+"실행할 명령:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/creatingfilesystem.xml:62
@@ -916,8 +932,7 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
 "partition."
 msgstr ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable> with the name of the LFS "
-"partition."
+"<replaceable>&lt;xxx&gt;</replaceable> 를 LFS 파티션의 이름으로 바꾸시오."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/creatingfilesystem.xml:67
@@ -927,6 +942,9 @@ msgid ""
 "class=\"filesystem\"> swap</systemitem> partition was created, it will need "
 "to be initialized with this command:"
 msgstr ""
+"기존 <systemitem class=\"filesystem\">swap </systemitem> 파티션을 사용하고 있"
+"다면 포맷할 필요가 없습니다. 새 <systemitem class=\"filesystem\"> swap</"
+"systemitem> 파티션을 생성했다면 다음 명령어로 초기화:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/creatingfilesystem.xml:72
@@ -940,8 +958,8 @@ msgid ""
 "Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
 "<systemitem class=\"filesystem\">swap</systemitem> partition."
 msgstr ""
-"Replace <replaceable>&lt;yyy&gt;</replaceable> with the name of the "
-"<systemitem class=\"filesystem\">swap</systemitem> partition."
+"<replaceable>&lt;yyy&gt;</replaceable> 를 <systemitem "
+"class=\"filesystem\">swap</systemitem> 파티션 이름으로 바꿈."
 
 #. type: Content of: <sect1><title>
 #: en/chapter02/creatingpartition.xml:11
