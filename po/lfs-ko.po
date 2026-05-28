@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-28 03:23+0900\n"
-"PO-Revision-Date: 2026-05-28 03:22+0900\n"
+"POT-Creation-Date: 2026-05-29 02:13+0900\n"
+"PO-Revision-Date: 2026-05-29 02:13+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1784,6 +1784,9 @@ msgid ""
 "mounted at the directory specified by the <envar>LFS</envar> environment "
 "variable described in the previous section."
 msgstr ""
+"이제 파일 시스템이 생성되었으므로, 호스트 시스템이 여기에 접근할 수 있도록 파"
+"티션을 마운트해야 합니다. 이 책에서는 이전 섹션에서 설명한 <envar>LFS</"
+"envar> 환경변수로 지정된 디렉터리에 파일 시스템이 마운트된다고 가정합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:19
@@ -1794,12 +1797,16 @@ msgid ""
 "of the partition and the associated file system as if they were one and the "
 "same."
 msgstr ""
+"엄밀히 말하면, <quote>파티션을 마운트</quote> 할 수 없습니다. 마운트하는 것"
+"은 해당 파티션에 내장된 <emphasis>파일 시스템</emphasis> 입니다. 그러나 한 파"
+"티션에 하나보다 많은 파일 시스템이 포함될 수는 없으므로, 사람들은 흔히 파티션"
+"과 그에 연결된 파일 시스템을 마치 동일한 것처럼 말 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:24
 msgid ""
 "Create the mount point and mount the LFS file system with these commands:"
-msgstr ""
+msgstr "마운트 지점을 생성하고 LFS 파일 시스템을 마운트:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/mounting.xml:26
@@ -1818,6 +1825,9 @@ msgid ""
 "class=\"directory\">/</filename> and another for <filename "
 "class=\"directory\">/home</filename>), mount them like this:"
 msgstr ""
+"만약 LFS를 위해 여러 개의 파티션을 사용한다면(예: 하나는 <filename "
+"class=\"directory\">/</filename>용, 다른 하나는 <filename "
+"class=\"directory\">/home</filename>용), 다음과 같이 마운트:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/mounting.xml:36
@@ -1839,8 +1849,8 @@ msgid ""
 "Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
 "replaceable> with the appropriate partition names."
 msgstr ""
-"Replace <replaceable>&lt;xxx&gt;</replaceable> and <replaceable>&lt;yyy&gt;</"
-"replaceable> with the appropriate partition names."
+"<replaceable>&lt;xxx&gt;</replaceable> 및 <replaceable>&lt;yyy&gt;</"
+"replaceable>를 적절한 파티션 이름으로 대체하세요."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:45
@@ -1851,6 +1861,10 @@ msgid ""
 "host distro has been configured to use a different default for "
 "<command>mkfs</command>:"
 msgstr ""
+"호스트 배포판이 <command>mkfs</command>에 대해 다른 기본값을 사용하도록 설정"
+"되어 있을 경우를 대비하여, <filename class='directory'>$LFS</filename> 디렉터"
+"리(즉, LFS 시스템을 위해 새로 생성된 파일 시스템의 루트 디렉터리)의 소유자와 "
+"권한 모드를 각각 &root;와 <literal>755</literal>로 설정:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/mounting.xml:51
@@ -1872,6 +1886,11 @@ msgid ""
 "option> and/or <option>nodev</option> are set, the partition must be "
 "remounted."
 msgstr ""
+"이 새 파티션이 너무 제한적인 권한(예: <option>nosuid</option> 또는 "
+"<option>nodev</option> 옵션 등)으로 마운트되지 않았는지 확인하십시오. 매개변"
+"수 없이 <command>mount</command> 명령을 실행하여 마운트된 LFS 파티션에 어떤 "
+"옵션이 설정되어 있는지 확인하세요. 만약 <option>nosuid</option> 또는 "
+"<option>nodev</option>가 설정되어 있다면, 파티션을 다시 마운트해야 합니다."
 
 #. type: Content of: <sect1><warning><para><screen>
 #: en/chapter02/mounting.xml:68
@@ -1890,6 +1909,12 @@ msgid ""
 "<placeholder type=\"screen\" id=\"0\"/> If you use additional optional "
 "partitions, be sure to add them also."
 msgstr ""
+"위의 지침은 LFS 과정 동안 컴퓨터를 재시작 안 한다고 가정합니다. 시스템을 종료"
+"하면, 빌드 과정을 다시 시작할 때마다 LFS 파티션을 매번 다시 마운트하거나, 재"
+"부팅 시 자동으로 마운트되도록 호스트 시스템의 &fstab; 파일을 수정해야 합니"
+"다. 예를 들어, &fstab; 파일에 다음 줄을 추가할 수 있습니다: <placeholder "
+"type=\"screen\" id=\"0\"/> 만약 선택 사항인 추가 파티션을 사용한다면, 해당 파"
+"티션도 반드시 더해야 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter02/mounting.xml:75
@@ -1898,6 +1923,9 @@ msgid ""
 "partition, ensure that it is enabled using the <command>swapon</command> "
 "command:"
 msgstr ""
+"<systemitem class=\"filesystem\">swap</systemitem> 파티션을 사용 중이면, "
+"<command>swapon</command> 명령을 사용하여 해당 파티션이 활성화되어 있는지 확"
+"인:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter02/mounting.xml:79
@@ -1919,7 +1947,7 @@ msgstr ""
 msgid ""
 "Now that the new LFS partition is open for business, it's time to download "
 "the packages."
-msgstr ""
+msgstr "이제 새로운 LFS 파티션이 준비되었으니, 패키지를 다운로드할 때입니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter02/stages.xml:11
