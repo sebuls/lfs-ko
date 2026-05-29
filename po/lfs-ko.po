@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-29 02:13+0900\n"
-"PO-Revision-Date: 2026-05-29 02:13+0900\n"
+"POT-Creation-Date: 2026-05-30 03:33+0900\n"
+"PO-Revision-Date: 2026-05-30 03:32+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -2135,6 +2135,11 @@ msgid ""
 "this search is unsuccessful, try one of the alternative means of downloading "
 "at <ulink url=\"&lfs-root;lfs/mirrors.html#files\"/>."
 msgstr ""
+"다운로드 위치가 늘 접속 가능한 건 아닙니다. 이 책이 출판된 이후 다운로드 위치"
+"가 변경되었다면, 구글(<ulink url=\"https://www.google.com/\"/>)이 대부분의 패"
+"키지를 찾는 데 유용한 검색 엔진입니다. 만약 이 검색이 못 찾는다면, <ulink "
+"url=\"&lfs-root;lfs/mirrors.html#files\"/> 에 있는 다른 다운로드 방법 중 하나"
+"를 시도하십시오."
 
 #. type: Content of: <sect1><important><para>
 #: en/chapter03/introduction.xml:42
@@ -2165,6 +2170,12 @@ msgid ""
 "choose to use the wget list described below, that file also can be modified "
 "to use your desired mirror."
 msgstr ""
+"<uri>ftpmirror.gnu.org</uri> URL은 실제로 <uri>ftp.gnu.org</uri> 사이트의 미"
+"러 서버 중 하나로 리디렉트됩니다. <uri>ftpmirror.gnu.org</uri>를 사용하는 대"
+"신 미러 서버를 수동으로 직접 선택할 수도 있습니다. 미러 서버 목록은 <ulink "
+"url=\"https://www.gnu.org/prep/ftp.en.html\"/>에서 확인하실 수 있습니다. 아래"
+"에서 설명하는 wget 목록을 사용하기로 한다면, 해당 파일을 수정하여 원하는 미"
+"러 서버를 사용하도록 바꿀 수도 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:63
@@ -2177,6 +2188,12 @@ msgid ""
 "directory, the required elements will be located on the LFS partition and "
 "will be available during all stages of the building process."
 msgstr ""
+"다운로드한 패키지와 패치들은 전체 빌드 과정 동안 편리하게 사용할 수 있는 곳"
+"에 저장되어야 합니다. 소스 압축을 풀고 빌드할 작업 디렉터리도 필요합니다. "
+"<filename class=\"directory\">$LFS/sources</filename> 디렉터리를 타볼"
+"(tarball)과 패치를 저장하는 장소이자 작업 디렉터리로 모두 사용할 수 있습니"
+"다. 이 디렉터리를 사용하면 필요한 요소가 LFS 파티션에 위치하게 되므로 빌드 프"
+"로세스의 모든 단계에서 사용할 수 있을 겁니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:72
@@ -2184,6 +2201,8 @@ msgid ""
 "To create this directory, execute the following command, as user <systemitem "
 "class=\"username\">root</systemitem>, before starting the download session:"
 msgstr ""
+"이 디렉터리를 생성하려면 다운로드 세션을 시작하기 전에 <systemitem "
+"class=\"username\">root</systemitem> 사용자로 실행할 명령:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter03/introduction.xml:76
@@ -2199,10 +2218,10 @@ msgid ""
 "of a file can delete the file within a sticky directory. The following "
 "command will enable the write and sticky modes:"
 msgstr ""
-"Make this directory writable and sticky. <quote>Sticky</quote> means that "
-"even if multiple users have write permission on a directory, only the owner "
-"of a file can delete the file within a sticky directory. The following "
-"command will enable the write and sticky modes:"
+"이 디렉터리를 쓰기 가능하고 스티키(sticky) 상태가 되도록 설정하십시오. "
+"<quote>Sticky</quote>는 여러 사용자가 디렉터리에 대한 쓰기 권한을 가지고 있더"
+"라도, 스티키 디렉터리 내에서는 오직 파일의 소유자만이 해당 파일을 삭제할 수 "
+"있음을 뜻합니다. 다음 명령으로 쓰기 및 스티키 모드를 활성화:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter03/introduction.xml:84
@@ -2215,7 +2234,7 @@ msgstr "<userinput>chmod -v a+wt $LFS/sources</userinput>"
 msgid ""
 "There are several ways to obtain all the necessary packages and patches to "
 "build LFS:"
-msgstr ""
+msgstr "LFS를 빌드하는 데 필요한 모든 패키지와 패치를 가져오는 여러 방법:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter03/introduction.xml:91
@@ -2223,6 +2242,8 @@ msgid ""
 "The files can be downloaded individually as described in the next two "
 "sections."
 msgstr ""
+"파일들은 다음 두 섹션에서 설명하는 대로 각각 개별적으로 다운로드할 수 있습니"
+"다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter03/introduction.xml:95
@@ -2231,6 +2252,9 @@ msgid ""
 "downloaded from one of the mirror sites listed at <ulink url=\"https://"
 "www.linuxfromscratch.org/mirrors.html#files\"/>."
 msgstr ""
+"이 책의 안정 버전(stable version)의 경우, <ulink url=\"https://"
+"www.linuxfromscratch.org/mirrors.html#files\"/> 에 나열된 미러 사이트 중 하나"
+"에서 필요한 모든 파일이 담긴 타볼(tarball)을 다운로드가능."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter03/introduction.xml:100
@@ -2238,6 +2262,8 @@ msgid ""
 "The files can be downloaded using <command>wget</command> and a wget-list as "
 "described below."
 msgstr ""
+"<command>wget</command>과 wget-list를 사용하여 이 파일들을 아래 설명에 따라 "
+"다운로드할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:105
@@ -2246,12 +2272,14 @@ msgid ""
 "list;\">&wget-list;</ulink> as an input to the <command>wget</command> "
 "command, use:"
 msgstr ""
+"<command>wget</command> 명령 입력값으로 <ulink url=\"../&wget-list;\">&wget-"
+"list;</ulink>를 사용하여 모든 패키지와 패치를 다운로드하려면 다음 명령 사용:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter03/introduction.xml:109
 #, no-wrap
 msgid "<userinput>wget --input-file=&wget-list; --continue --directory-prefix=$LFS/sources</userinput>"
-msgstr ""
+msgstr "<userinput>wget --input-file=&wget-list; --continue --directory-prefix=$LFS/sources</userinput>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:119
@@ -2261,6 +2289,10 @@ msgid ""
 "correct packages are available before proceeding.  Place that file in "
 "<filename class=\"directory\">$LFS/sources</filename> and run:"
 msgstr ""
+"또한, LFS-7.0부터는, 진행하기 전에 모든 패키지가 올바르게 구비되어 있는지 확"
+"인하는 데 사용할 수 있는 별도 파일 <ulink url=\"../md5sums\">md5sums</ulink>"
+"가 제공됩니다. 해당 파일을 <filename class=\"directory\">$LFS/sources</"
+"filename> 디렉터리에 넣고 다음 명령을 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter03/introduction.xml:124
@@ -2280,6 +2312,8 @@ msgid ""
 "This check can be used after retrieving the needed files with any of the "
 "methods listed above."
 msgstr ""
+"이 확인은 위에서 나열한 방법 중 어떤 것을 사용하든 필요한 파일들을 가져온 다"
+"음 사용할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/introduction.xml:131
@@ -2291,6 +2325,12 @@ msgid ""
 "you won't assign the same UID for your user in the LFS system, change the "
 "owners of these files to &root; now to avoid this issue:"
 msgstr ""
+"만약 패키지와 패치를 &root; 아닌 일반 사용자로 다운로드하면, 이 파일들의 소유"
+"권은 해당 사용자가 가지게 됩니다. 파일 시스템은 UID로 소유자를 기록하는데, 호"
+"스트 배포판의 일반 사용자 UID는 LFS에 할당 안 되어 있습니다. 그래서, 최종 "
+"LFS 시스템에서는 이 파일들의 소유자가 이름 없는 UID로 남게 됩니다. 만약 LFS "
+"시스템에서 해당 사용자에게 동일한 UID를 할당할 게 아니라면, 지금 파일들의 소"
+"유자를 &root;로 변경하여 이 문제를 막기:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter03/introduction.xml:139
