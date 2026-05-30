@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-30 15:59+0900\n"
-"PO-Revision-Date: 2026-05-30 15:58+0900\n"
+"POT-Creation-Date: 2026-05-30 18:30+0900\n"
+"PO-Revision-Date: 2026-05-30 18:29+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4304,6 +4304,10 @@ msgid ""
 "easier to work with. The following patches will be needed to build an LFS "
 "system:"
 msgstr ""
+"패키지 외에도 몇 패치가 또 필요합니다. 이 패치는 패키지 유지관리자가 수정해"
+"야 할 오류들을 바로잡아 줍니다. 또한 패치를 통해 패키지를 더 쉽게 다룰 수 있"
+"도록 조금 수정하기도 합니다. LFS 시스템을 빌드하려면 다음 패치들이 필요합니"
+"다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:47
@@ -4415,6 +4419,11 @@ msgid ""
 "to peruse the patches database located at <ulink url=\"&lfs-root;patches/"
 "downloads/\"/> and acquire any additional patches to suit your system needs."
 msgstr ""
+"위에서 언급한 필수 패치 외에도 LFS 커뮤니티에서 만든 여러 선택적 패치가 존재"
+"합니다. 이 선택적 패치는 사소한 문제를 해결하거나 기본적으로 활성화되어 있지 "
+"않은 기능을 활성화해 줍니다. <ulink url=\"&lfs-root;patches/downloads/\"/> "
+"에 있는 패치 데이터베이스를 편하게 둘러보시고, 우리 시스템 요구사항에 맞는 추"
+"가 패치를 구해보십시오."
 
 #. type: Content of: <sect1><title>
 #: en/chapter04/aboutsbus.xml:11
