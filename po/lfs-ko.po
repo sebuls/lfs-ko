@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-30 18:30+0900\n"
-"PO-Revision-Date: 2026-05-30 18:29+0900\n"
+"POT-Creation-Date: 2026-05-31 03:56+0900\n"
+"PO-Revision-Date: 2026-05-31 03:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4440,6 +4440,12 @@ msgid ""
 "systems, but could take days on slower systems! Instead of providing actual "
 "times, the Standard Build Unit (SBU) measure will be used instead."
 msgstr ""
+"각 패키지를 컴파일하고 설치하는 데 대략 시간이 얼마나 걸리는지 미리 알고 싶어"
+"하는 사람이 많습니다. Linux From Scratch는 매우 다양한 시스템에서 빌드될 수 "
+"있으므로, 절대적인 시간 추정치를 제공하는 것은 불가능합니다. 가장 큰 패키지 "
+"gcc는 가장 빠른 시스템에서는 약 5분이 걸리지만, 느린 시스템에서는 며칠이 걸"
+"릴 수도 있습니다! 따라서 실제 시간을 제공하는 대신, 표준 빌드 단위(SBU, "
+"Standard Build Unit) 측정을 사용합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/aboutsbus.xml:22
@@ -4450,6 +4456,11 @@ msgid ""
 "or SBU. All other compile times will be expressed in terms of this unit of "
 "time."
 msgstr ""
+"SBU 측정 방식은 다음과 같이 작동합니다. 가장 먼저 컴파일할 패키지는 <xref "
+"linkend=\"chapter-cross-tools\"/> 안에 있는 binutils 입니다. 코어 하나를 사용"
+"하여 이 패키지를 컴파일하는 데 걸리는 시간을 우리는 표준 빌드 단위(SBU, "
+"Standard Build Unit)라고 부를 것입니다. 다른 모든 컴파일 시간은 이 시간 단위"
+"를 기준으로 표시됩니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/aboutsbus.xml:28
@@ -4512,6 +4523,11 @@ msgid ""
 "interleaved.  If you run into a problem with a build step, revert to a "
 "single processor build to properly analyze the error messages."
 msgstr ""
+"이런 방식으로 여러 프로세서를 사용하면 책에 안내된 SBU 단위의 편차가 평소보"
+"다 훨씬 더 커집니다. 어떤 경우에는 make 단계가 그냥 실패도 합니다. 또한 서로 "
+"다른 프로세스에서 출력되는 줄이 한데 뒤섞이기 때문에 빌드 과정의 출력을 분석"
+"하기도 더 어려워집니다. 빌드 단계에서 문제가 발생하면, 에러 메시지를 올바르"
+"게 분석할 수 있도록 단일 프로세서 빌드로 되돌려 실행해 보십시오."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter04/aboutsbus.xml:77
@@ -4521,6 +4537,10 @@ msgid ""
 "cores (-j4). The times in Chapter 8 also include the time to run the "
 "regression tests for the package unless specified otherwise."
 msgstr ""
+"여기에 표시된 모든 패키지의 소요 시간은(코어 하나를 기준으로 하는 <xref "
+"linkend='ch-tools-binutils-pass1'/> 제외) 코어 4개(-j4)를 사용하는 것을 기준"
+"으로 합니다. 또한 별도의 명시가 없는 한, 제8장 소요 시간에는 패키지의 회귀 테"
+"스트(regression tests)를 실행하는 시간도 들어갑니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter04/abouttestsuites.xml:11
@@ -4804,6 +4824,12 @@ msgid ""
 "location. We do this so those temporary programs will be overwritten when "
 "the final versions are built in <xref linkend=\"chapter-building-system\"/>."
 msgstr ""
+"이 섹션에서는 최종 Linux 시스템을 구성할 조각들로 LFS 파일 시스템을 채우기 시"
+"작합니다. 첫 번째 단계는 제한된 디렉터리 계층 구조를 생성하는 것입니다. 이를 "
+"통해 에서 컴파일된 프로그램들(그리고 <xref linkend=\"chapter-cross-tools\"/> "
+"안의 glibc 및 libstdc++)이 최종 위치에 설치될 수 있습니다. 이렇게 하는 이유"
+"는 최종 버전이 <xref linkend=\"chapter-building-system\"/>에서 빌드될 때, 해"
+"당 임시 프로그램들이 덮어씌워지도록 하기 위함입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/creatingminlayout.xml:21
@@ -4811,6 +4837,8 @@ msgid ""
 "Create the required directory layout by issuing the following commands as "
 "<systemitem class=\"username\">root</systemitem>:"
 msgstr ""
+"<systemitem class=\"username\">root</systemitem> 계정으로 다음 명령어들을 실"
+"행하여 필요한 디렉터리 구조를 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/creatingminlayout.xml:24
@@ -4845,11 +4873,11 @@ msgid ""
 "installed in a special directory, to separate it from the other programs. "
 "Still acting as &root;, create that directory with this command:"
 msgstr ""
-"Programs in <xref linkend=\"chapter-temporary-tools\"/> will be compiled "
-"with a cross-compiler (more details can be found in section <xref "
-"linkend=\"ch-tools-toolchaintechnotes\"/>). This cross-compiler will be "
-"installed in a special directory, to separate it from the other programs. "
-"Still acting as &root;, create that directory with this command:"
+"<xref linkend=\"chapter-temporary-tools\"/>에 있는 프로그램들은 크로스 컴파일"
+"러로 컴파일됩니다(자세한 내용은<xref linkend=\"ch-tools-toolchaintechnotes\"/"
+"> 참고). 이 크로스 컴파일러는 다른 프로그램들과 격리하기 위해 별도의 디렉터리"
+"에 설치됩니다. 여전히 &root; 계정 상태에서, 다음 명령어로 해당 디렉터리를 생"
+"성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/creatingminlayout.xml:40
@@ -4868,6 +4896,12 @@ msgid ""
 "after finishing LFS), it may break your system.  You should always be sure "
 "this directory does not exist."
 msgstr ""
+"LFS 편집자들은 <filename class=\"directory\">/usr/lib64</filename> 디렉터리"
+"를 사용하지 않기로 신중하게 결정했습니다. 툴체인이 이 디렉터리를 사용하지 않"
+"도록 여러 조치를 취합니다. (지침을 따르는 과정에서 실수를 했거나, LFS를 마친 "
+"후 이 디렉터리를 생성하는 바이너리 패키지를 설치하여) 어떤 이유로든 이 디렉터"
+"리가 나타나면 시스템이 망가질 수 있습니다. 따라서 이 디렉터리가 존재하지 않"
+"는 것을 항상 확인해야 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/introduction.xml:13
