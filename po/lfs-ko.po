@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-05-31 21:39+0900\n"
-"PO-Revision-Date: 2026-05-31 21:39+0900\n"
+"POT-Creation-Date: 2026-06-01 04:20+0900\n"
+"PO-Revision-Date: 2026-06-01 04:20+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -52729,6 +52729,8 @@ msgid ""
 "is the machine where we build programs. Note that this machine is also "
 "referred to as the <quote>host.</quote>"
 msgstr ""
+"프로그램을 빌드하는 머신. 이 머신은 <quote>host.</quote> 라고도 하는 점에 주"
+"의."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:73
@@ -52741,6 +52743,8 @@ msgid ""
 "is the machine/system where the built programs will run. Note that this use "
 "of <quote>host</quote> is not the same as in other sections."
 msgstr ""
+" 빌드된 프로그램이 실행될 머신/시스템. 여기서 사용된 <quote>host</quote> 뜻"
+"은 다른 섹션에서와는 똑같지 않다는 점에 유의."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:79
@@ -52753,6 +52757,8 @@ msgid ""
 "is only used for compilers. It is the machine the compiler produces code "
 "for. It may be different from both the build and the host."
 msgstr ""
+"컴파일러에서만 사용됩니다. 이는 컴파일러가 코드를 생성해 주는 대상 머신입니"
+"다. Target(타깃)은 빌드 및 호스트 머신 모두와 다를 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:87
@@ -52894,6 +52900,10 @@ msgid ""
 "cpu-vendor-kernel-os, referred to as the system triplet.  Since the vendor "
 "field is often irrelevant, autoconf lets you omit it."
 msgstr ""
+"이 책에 나오는 크로스 컴파일(cross-compiled)된 모든 패키지는 autoconf 기반 빌"
+"드 시스템을 사용합니다. autoconf 기반 빌드 시스템은 시스템 유형을 cpu-vendor-"
+"kernel-os 형태로 받아들이며, 이를 시스템 system triplet이라 부릅니다. 공급업"
+"체(vendor) 필드는 대개 관련이 없으므로, autoconf는 이를 생략해도 됩니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/part3intro/toolchaintechnotes.xml:165
@@ -52908,6 +52918,15 @@ msgid ""
 "though they are both running on the same type of CPU (ARM64) and using the "
 "same kernel (Linux)."
 msgstr ""
+"기민한 독자라면 왜 네 개의 구성 요소로 이루어진 이름을 <quote>triplet</quote>"
+"이라 부르는지 의아해할 수 있습니다. 커널(kernel) 필드와 운영체제(os) 필드는 "
+"원래 하나의 <quote>system</quote> 필드로 시작되었습니다. 이러한 세 필드 형태"
+"는 오늘날에도 일부 시스템(예: <literal>x86_64-unknown-freebsd</literal>)에서"
+"는 여전히 유효합니다. 그러나 두 시스템이 똑같은 커널을 공유하더라도, 똑같은 "
+"triplet으로 설명하기에는 서로 너무 다를 수 있습니다. 예를 들어, 모바일 폰에"
+"서 실행되는 안드로이드는 똑같은 유형의 CPU(ARM64)에서 실행되고 같은 커널"
+"(Linux)을 사용하지만, ARM64 서버에서 실행되는 우분투(Ubuntu)와는 완전 다릅니"
+"다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/part3intro/toolchaintechnotes.xml:177
@@ -53269,3 +53288,8 @@ msgid ""
 "linkend=\"chapter-building-system\"/>, final versions of all the packages "
 "needed for a fully functional system are built, tested, and installed."
 msgstr ""
+"<xref linkend=\"chapter-chroot-temporary-tools\"/>에서 chroot 환경에 진입하"
+"면, 툴체인의 올바른 작동에 필요한 프로그램들의 임시 설치가 수행됩니다. 이 시"
+"점부터 핵심 툴체인은 자체 포함(self-contained) 및 자체 호스팅(self-hosted)됩"
+"니다. <xref linkend=\"chapter-building-system\"/> 에서는 완전히 기능하는 시스"
+"템에 필요한 모든 패키지의 최종 버전이 빌드되고, 테스트되며, 설치됩니다."
