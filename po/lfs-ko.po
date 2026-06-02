@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-02 02:35+0900\n"
-"PO-Revision-Date: 2026-06-02 02:35+0900\n"
+"POT-Creation-Date: 2026-06-03 03:41+0900\n"
+"PO-Revision-Date: 2026-06-03 03:41+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11211,6 +11211,9 @@ msgid ""
 "are used to define fine-grained discretionary access rights for files and "
 "directories."
 msgstr ""
+"Acl 패키지에는 접근 제어 목록(Access Control Lists)을 관리하는 유틸리티가 들"
+"어 있습니다. 파일과 디렉터리에 대한 세부적인 선택적 접근 권한을 정의할 때 쓰"
+"입니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/acl.xml:35
@@ -11225,12 +11228,12 @@ msgstr "&acl-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/acl.xml:43
 msgid "Installation of Acl"
-msgstr "Installation of Acl"
+msgstr "Acl 설치하기"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/acl.xml:45
 msgid "Prepare Acl for compilation:"
-msgstr "Prepare Acl for compilation:"
+msgstr "컴파일 위한 Acl 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/acl.xml:47
@@ -11250,6 +11253,8 @@ msgid ""
 "The Acl tests must be run on a filesystem that supports access controls.  To "
 "test the results, issue:"
 msgstr ""
+"Acl 테스트는 접근 제어를 지원하는 파일 시스템에서 실행되어야 합니다. 결과를 "
+"테스트하려면 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/acl.xml:58 en/chapter08/attr.xml:59
@@ -11279,6 +11284,9 @@ msgid ""
 "<application>Coreutils</application> is not built with the <application>Acl</"
 "application> support yet."
 msgstr ""
+"<filename>test/cp.test</filename> 이름의 테스트 하나는 실패하는 것으로 알려"
+"져 있는데, 이는 <application>Coreutils</application>가 아직 "
+"<application>Acl</application> 지원을 포함하여 빌드되지 않았기 때문입니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/acl.xml:71
@@ -11332,7 +11340,7 @@ msgstr "설치된 라이브러리"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/acl.xml:79
 msgid "chacl, getfacl, and setfacl"
-msgstr "chacl, getfacl, and setfacl"
+msgstr "chacl, getfacl, 및 setfacl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/acl.xml:80
@@ -11342,7 +11350,7 @@ msgstr "libacl.so"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/acl.xml:81
 msgid "/usr/include/acl and /usr/share/doc/acl-&acl-version;"
-msgstr "/usr/include/acl and /usr/share/doc/acl-&acl-version;"
+msgstr "/usr/include/acl 및 /usr/share/doc/acl-&acl-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/acl.xml:91
@@ -11352,7 +11360,7 @@ msgstr "<command>chacl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/acl.xml:93
 msgid "Changes the access control list of a file or directory"
-msgstr ""
+msgstr "파일 또는 디렉터리의 접근 제어 목록을 변경"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/acl.xml:96
@@ -11367,7 +11375,7 @@ msgstr "<command>getfacl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/acl.xml:104
 msgid "Gets file access control lists"
-msgstr ""
+msgstr "파일 접근 제어 목록을 얻기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/acl.xml:106
@@ -11382,7 +11390,7 @@ msgstr "<command>setfacl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/acl.xml:114
 msgid "Sets file access control lists"
-msgstr "Sets file access control lists"
+msgstr "파일 접근 제어 목록을 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/acl.xml:116
@@ -11398,6 +11406,7 @@ msgstr "<filename class=\"libraryfile\">libacl</filename>"
 #: en/chapter08/acl.xml:124
 msgid "Contains the library functions for manipulating Access Control Lists"
 msgstr ""
+"접근 제어 목록(Access Control Lists)을 조작하기 위한 라이브러리 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/acl.xml:126
@@ -11453,7 +11462,7 @@ msgstr "Installation of Attr"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/attr.xml:44
 msgid "Prepare Attr for compilation:"
-msgstr "Prepare Attr for compilation:"
+msgstr "컴파일 위한 Attr 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/attr.xml:46
@@ -36833,7 +36842,7 @@ msgstr "<command>ionice</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:555
 msgid "Gets or sets the io scheduling class and priority for a program"
-msgstr ""
+msgstr "파일 접근 제어 목록을 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:557

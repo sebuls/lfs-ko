@@ -1,8 +1,8 @@
 <![ %sysv; [
-<!ENTITY version           "v13.0-111-wip">
+<!ENTITY version           "v13.0-112-wip">
 ]]>
 <![ %systemd; [
-<!ENTITY version          "v13.0-111-systemd-wip">
+<!ENTITY version          "v13.0-112-systemd-wip">
 ]]>
-<!ENTITY releasedate       "2026. 5. 31.">
+<!ENTITY releasedate       "2026. 6. 1.">
 <!ENTITY copyrightdate     "1999-2026">
