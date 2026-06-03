@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-03 03:41+0900\n"
-"PO-Revision-Date: 2026-06-03 03:41+0900\n"
+"POT-Creation-Date: 2026-06-03 12:32+0900\n"
+"PO-Revision-Date: 2026-06-03 12:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -26135,6 +26135,9 @@ msgid ""
 "makes the use of shared libraries simpler with a consistent, portable "
 "interface."
 msgstr ""
+"Libtool 패키지에는 GNU 범용 라이브러리 지원 스크립트가 들어 있습니다. 이 패키"
+"지는 일관되고 이식성 있는 인터페이스를 제공하여 공유 라이브러리를 더 쉽게 사"
+"용할 수 있도록 해줍니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libtool.xml:35
@@ -26154,12 +26157,12 @@ msgstr "Libtool 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libtool.xml:45
 msgid "Prepare Libtool for compilation:"
-msgstr "Prepare Libtool for compilation:"
+msgstr "컴파일위해Libtool준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/libtool.xml:64
 msgid "Remove a static library only useful for the test suite:"
-msgstr "Remove a static library only useful for the test suite:"
+msgstr "테스트 제품군에만 유용한 정적 라이브러리를 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/libtool.xml:66
@@ -26175,7 +26178,7 @@ msgstr "Libtool 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libtool.xml:80
 msgid "libtool and libtoolize"
-msgstr "libtool and libtoolize"
+msgstr "libtool 및 libtoolize"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libtool.xml:81
@@ -26185,7 +26188,7 @@ msgstr "libltdl.so"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/libtool.xml:82
 msgid "/usr/include/libltdl and /usr/share/libtool"
-msgstr "/usr/include/libltdl and /usr/share/libtool"
+msgstr "/usr/include/libltdl 및 /usr/share/libtool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/libtool.xml:92
@@ -26212,9 +26215,7 @@ msgstr "<command>libtoolize</command>"
 msgid ""
 "Provides a standard way to add <command>libtool</command> support to a "
 "package"
-msgstr ""
-"Provides a standard way to add <command>libtool</command> support to a "
-"package"
+msgstr "패키지에 <command>libtool</command> 지원을 추가하는 표준 방법을 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libtool.xml:107
@@ -26229,7 +26230,7 @@ msgstr "<filename class=\"libraryfile\">libltdl</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libtool.xml:115
 msgid "Hides the various difficulties of opening dynamically loaded libraries"
-msgstr ""
+msgstr "동적으로 로드된 라이브러리를 열 때 발생하는 다양한 어려움을 숨김"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libtool.xml:117
