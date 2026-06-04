@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-03 12:32+0900\n"
-"PO-Revision-Date: 2026-06-03 12:31+0900\n"
+"POT-Creation-Date: 2026-06-05 03:44+0900\n"
+"PO-Revision-Date: 2026-06-05 03:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11595,6 +11595,8 @@ msgid ""
 "The Autoconf package contains programs for producing shell scripts that can "
 "automatically configure source code."
 msgstr ""
+"Autoconf 패키지에는 소스 코드를 자동으로 구성할 수 있는 셸 스크립트를 생성하"
+"는 프로그램이 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/autoconf.xml:34
@@ -11609,12 +11611,12 @@ msgstr "&autoconf-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/autoconf.xml:42
 msgid "Installation of Autoconf"
-msgstr "Installation of Autoconf"
+msgstr "Autoconf 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/autoconf.xml:44
 msgid "Prepare Autoconf for compilation:"
-msgstr "Prepare Autoconf for compilation:"
+msgstr "컴파일 위해 Autoconf 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/autoconf.xml:52 en/chapter08/bison.xml:51
@@ -11664,7 +11666,7 @@ msgstr "설치된 디렉터리"
 msgid ""
 "autoconf, autoheader, autom4te, autoreconf, autoscan, autoupdate, and ifnames"
 msgstr ""
-"autoconf, autoheader, autom4te, autoreconf, autoscan, autoupdate, and ifnames"
+"autoconf, autoheader, autom4te, autoreconf, autoscan, autoupdate, 및 ifnames"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/autoconf.xml:75
@@ -11684,10 +11686,9 @@ msgid ""
 "scripts it produces are independent&mdash;running them does not require the "
 "<command>autoconf</command> program"
 msgstr ""
-"Produces shell scripts that automatically configure software source code "
-"packages to adapt to many kinds of Unix-like systems; the configuration "
-"scripts it produces are independent&mdash;running them does not require the "
-"<command>autoconf</command> program"
+"많은 종류의 유닉스 계열 시스템에 맞게 소프트웨어 소스 코드 패키지를 자동으로 "
+"구성하는 셸 스크립트를 생성. 이 프로그램이 생성하는 구성 스크립트는 독립적 "
+"&mdash; 이를 실행할 때 <command>autoconf</command> 프로그램은 필요 안 함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/autoconf.xml:92
@@ -11765,6 +11766,10 @@ msgid ""
 "filename> file that serves as a preliminary <filename>configure.in</"
 "filename> file for the package"
 msgstr ""
+"소프트웨어 패키지용 <filename>configure.in</filename> 파일을 생성하도록 돕습"
+"니다. 이 프로그램은 디렉터리 트리 내의 소스 파일들을 조사하여 일반적인 이식"
+"성 문제를 찾고, 해당 패키지의 예비 <filename>configure.in</filename>파일 역할"
+"을 하는 <filename>configure.scan</filename> 파일을 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/autoconf.xml:143
@@ -50653,7 +50658,7 @@ msgstr "<ulink url=\"&blfs-book;postlfs/emacs.html\">Emacs</ulink>"
 msgid ""
 "Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, and Texinfo"
 msgstr ""
-"Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, and Texinfo"
+"Autoconf, Bash, Coreutils, Gettext, Grep, M4, Make, Perl, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:174
@@ -50767,7 +50772,7 @@ msgid ""
 "Grep, Libcap, Make, OpenSSL, Patch, Perl, Sed, and Texinfo"
 msgstr ""
 "Autoconf, Automake, Bash, Binutils, Coreutils, GCC, Gettext, Glibc, GMP, "
-"Grep, Libcap, Make, OpenSSL, Patch, Perl, Sed, and Texinfo"
+"Grep, Libcap, Make, OpenSSL, Patch, Perl, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:424
@@ -51175,7 +51180,7 @@ msgstr "Bash, Gawk, Glibc, Make, Perl, Sed, and XML::Parser"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1387
 msgid "Autoconf, Automake, Bash, Glibc, Grep, Perl, and Sed"
-msgstr "Autoconf, Automake, Bash, Glibc, Grep, Perl, and Sed"
+msgstr "Autoconf, Automake, Bash, Glibc, Grep, Perl, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1419
@@ -51326,12 +51331,12 @@ msgid ""
 "and Sed"
 msgstr ""
 "Autoconf, Automake, Bash, Binutils, Coreutils, File, GCC, Glibc, Grep, Make, "
-"and Sed"
+"및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1799
 msgid "Autoconf, Automake, and Findutils"
-msgstr "Autoconf, Automake, and Findutils"
+msgstr "Autoconf, Automake, 및 Findutils"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1823
@@ -51830,7 +51835,7 @@ msgstr "Acl, Attr, Bzip2, Glibc, Gzip, and Xz"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3150
 msgid "Autoconf, Diffutils, Findutils, Gawk, and Gzip"
-msgstr "Autoconf, Diffutils, Findutils, Gawk, and Gzip"
+msgstr "Autoconf, Diffutils, Findutils, Gawk, 및 Gzip"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3175
