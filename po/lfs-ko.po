@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-05 03:44+0900\n"
-"PO-Revision-Date: 2026-06-05 03:44+0900\n"
+"POT-Creation-Date: 2026-06-05 23:46+0900\n"
+"PO-Revision-Date: 2026-06-05 23:45+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -38276,6 +38276,14 @@ msgid ""
 "overrides must come after this setting. Create a default <command>vim</"
 "command> configuration file by running the following:"
 msgstr ""
+"기본적으로 <command>vim</command>은 vi 호환 안 함(vi-incompatible) 모드로 실"
+"행됩니다. 이는 과거에 다른 편집기를 사용했던 사용자들에게 생소할 수 있습니"
+"다. 아래에는 새로운 동작이 사용되고 있다는 점을 강조하기 위해 "
+"<quote>nocompatible</quote> 설정이 포함되어 있습니다. 또한 "
+"<quote>compatible</quote> 모드로 변경하려는 사람들에게 이 설정이 설정 파일의 "
+"가장 첫 번째에 위치해야 함을 상기시켜 줍니다. 호환 모드 설정은 다른 설정들을 "
+"변경하므로, 다른 설정을 덮어쓰는 항목들은 반드시 이 설정 뒤에 와야 하기 때문"
+"입니다. 다음을 실행하여 기본 <command>vim</command> 설정 파일을 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:139
@@ -38341,6 +38349,7 @@ msgid ""
 "Documentation for other available options can be obtained by running the "
 "following command:"
 msgstr ""
+"사용 가능한 다른 옵션에 대한 문서화 자료를 얻으려면 다음 명령어를 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/vim.xml:174
@@ -38401,6 +38410,8 @@ msgid ""
 "ex (link to vim), rview (link to vim), rvim (link to vim), vi (link to vim), "
 "view (link to vim), vim, vimdiff (link to vim), vimtutor, and xxd"
 msgstr ""
+"ex (link to vim), rview (link to vim), rvim (link to vim), vi (link to vim), "
+"view (link to vim), vim, vimdiff (link to vim), vimtutor, 및 xxd"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/vim.xml:209
@@ -38544,6 +38555,8 @@ msgid ""
 "Creates a hex dump of the given file; it can also perform the inverse "
 "operation, so it can be used for binary patching"
 msgstr ""
+"주어진 파일의 헥스 덤프(Hex dump)를 생성합니다. 역방향 작업도 수행할 수 있으"
+"므로 바이너리 패치 작업에도 사용 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/vim.xml:311
