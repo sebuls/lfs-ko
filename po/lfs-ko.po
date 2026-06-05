@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-05 23:46+0900\n"
-"PO-Revision-Date: 2026-06-05 23:45+0900\n"
+"POT-Creation-Date: 2026-06-06 04:45+0900\n"
+"PO-Revision-Date: 2026-06-06 04:45+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9269,15 +9269,13 @@ msgid ""
 "files under <filename class=\"directory\">$LFS</filename>, thus exposing "
 "these files to possible malicious manipulation."
 msgstr ""
-"Currently, the whole directory hierarchy in <filename "
-"class=\"directory\">$LFS</filename> is owned by the user <systemitem "
-"class=\"username\">lfs</systemitem>, a user that exists only on the host "
-"system. If the directories and files under <filename "
-"class=\"directory\">$LFS</filename> are kept as they are, they will be owned "
-"by a user ID without a corresponding account. This is dangerous because a "
-"user account created later could get this same user ID and would own all the "
-"files under <filename class=\"directory\">$LFS</filename>, thus exposing "
-"these files to possible malicious manipulation."
+"현재 <filename class=\"directory\">$LFS</filename>안의 모든 디렉터리 계층 구"
+"조는 호스트 시스템에만 존재하는 사용자인 <systemitem class=\"username\">lfs</"
+"systemitem>가 소유합니다. 만약 <filename class=\"directory\">$LFS</filename> "
+"아래의 디렉터리와 파일들을 있는 그대로 유지한다면, 이들은 일치하는 계정이 없"
+"는 사용자 ID의 소유가 됩니다. 이는 위험한데, 왜냐면 나중에 생성된 사용자 계정"
+"이 이와 동일한 사용자 ID를 할당받아 $LFS 아래의 모든 파일을 소유하게 될 수 있"
+"으며, 결과적으로 이러한 파일들이 악의적인 조작에 노출될 수 있기 때문입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/changingowner.xml:31
@@ -9286,6 +9284,9 @@ msgid ""
 "class=\"directory\">$LFS/*</filename> directories to user <systemitem "
 "class=\"username\">root</systemitem> by running the following command:"
 msgstr ""
+"이 문제를 해결하려면 다음 명령어를 실행하여 <filename "
+"class=\"directory\">$LFS/*</filename>디렉터리의 소유권을 <systemitem "
+"class=\"username\">root</systemitem> 사용자로 변경:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/changingowner.xml:36
@@ -9365,6 +9366,12 @@ msgid ""
 "<envar>TESTSUITEFLAGS</envar> environment variable instead. We set that here "
 "as well for running these test suites with multiple cores."
 msgstr ""
+"사용 가능한 모든 논리 코어를 사용하고 싶지 않다면, 이번 장과 다음 장에서 패키"
+"지를 빌드할 때 사용하려는 논리 코어 수로 <replaceable>$(nproc)</replaceable>"
+"를 대체하세요. &ch-final;에 있는 일부 패키지(특히 Autoconf, Libtool, Tar)의 "
+"테스트 제품군은 <envar>MAKEFLAGS</envar> 영향을 받지 않고, 대신 "
+"<envar>TESTSUITEFLAGS</envar> 환경 변수를 사용합니다. 우리는 이러한 테스트 제"
+"품군을 여러 코어로 실행하기 위해 여기에서 해당 변수도 함께 설정합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:40
@@ -9379,6 +9386,14 @@ msgid ""
 "other variables are desired, such as <envar>CFLAGS</envar> or "
 "<envar>CXXFLAGS</envar>, this is a good place to set them."
 msgstr ""
+"<command>env</command> 명령어에 지정된 <parameter>-i</parameter> 옵션은 "
+"chroot 환경의 모든 변수를 지웁니다. 그 후 <envar>HOME</envar>, <envar>TERM</"
+"envar>, <envar>PS1</envar>, and <envar>PATH</envar> 변수만 다시 설정됩니다. "
+"<parameter>TERM=$TERM</parameter> 구축은 chroot 내부의 TERM 변수를 chroot 외"
+"부와 동일한 값으로 설정합니다. 이 변수는 <command>vim</command> 및 "
+"<command>less</command> 같은 프로그램들이 올바르게 작동하는 데 필요합니다. 만"
+"약 <envar>CFLAGS</envar> 또는 <envar>CXXFLAGS</envar> 같은 다른 변수들을 설정"
+"하고 싶다면, 여기가 해당 변수들을 설정하기 좋은 위치입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:51
@@ -9397,6 +9412,9 @@ msgid ""
 "the <envar>PATH</envar>. This means that the cross toolchain will no longer "
 "be used."
 msgstr ""
+"<filename class=\"directory\">/tools/bin</filename> 디렉터리 <envar>PATH</"
+"envar>에 없다는 점에 유의하세요. 이는 크로스 툴체인이 더 이상 사용되지 않음"
+"을  뜻합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:62
@@ -9417,6 +9435,12 @@ msgid ""
 "tools-kernfsmount\"/> and enter chroot again before continuing with the "
 "installation."
 msgstr ""
+"이 장의 나머지 부분과 다음 장 전체에 걸쳐 모든 명령어는 반드시 chroot 환경 내"
+"부에서 실행해야 합니다. 만약 어떤 이유로든(예를 들어 시스템 재부팅 등) 이 환"
+"경을 벗어나게 된다면, 설치를 계속 진행하기 전에 <xref linkend=\"ch-tools-"
+"bindmount\"/> 및 <xref linkend=\"ch-tools-kernfsmount\"/> 에 설명된 대로 가"
+"상 커널 파일 시스템이 마운트되었는지 확인하고 chroot 환경에 다시 진입해야 합"
+"니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter07/cleanup.xml:11
