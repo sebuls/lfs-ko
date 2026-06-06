@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-06 04:45+0900\n"
-"PO-Revision-Date: 2026-06-06 04:45+0900\n"
+"POT-Creation-Date: 2026-06-06 18:07+0900\n"
+"PO-Revision-Date: 2026-06-06 18:06+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46036,12 +46036,12 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter11/afterlfs.xml:11
 msgid "Getting Started After LFS"
-msgstr ""
+msgstr "LFS 다음 시작하기"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter11/afterlfs.xml:14
 msgid "Deciding what to do next"
-msgstr ""
+msgstr "다음에 무엇을 할지 결정하기"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter11/afterlfs.xml:17
@@ -46052,6 +46052,11 @@ msgid ""
 "not mutually exclusive. The applications needed for each category can be "
 "combined onto a single system, but let's look at them separately for now."
 msgstr ""
+"이제 LFS 빌드를 완료했고 부팅 가능한 시스템을 준비했다. 그럼 이제 뭐 하지? 다"
+"음 단계는 이 시스템을 어떻게 사용할지 결정하는 것이다. 일반적으로, 고려할 수 "
+"있는 큰 범주는 워크스테이션(Workstation)과 서버(Server) 두 가지다. 사실 이 "
+"두 범주가 서로 배타적인 것은 아니다. 각 범주에 필요한 애플리케이션들을 하나"
+"의 시스템에 모두 조합할 수도 있지만, 우선은 따로 나누어 살펴보자."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter11/afterlfs.xml:26
@@ -46062,6 +46067,11 @@ msgid ""
 "mariadb.html\">MariaDB</ulink>.  However other services are possible. The "
 "operating system embedded in a single use device falls into this category."
 msgstr ""
+"서버는 단순한 범주다. 일반적으로 <ulink url=\"&blfs-book;server/"
+"apache.html\">Apache HTTP Server</ulink>같은 웹 서버나 <ulink url=\"&blfs-"
+"book;server/mariadb.html\">MariaDB</ulink> 같은 데이터베이스 서버로 구성된"
+"다. 그러나 다른 서비스도 가능하다. 단일 목적으로 사용하는 임베디드 기기의 운"
+"영체제도 이 범주에 속한다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter11/afterlfs.xml:36
@@ -46079,6 +46089,18 @@ msgid ""
 "These applications require many (several hundred depending on desired "
 "capabilities) more packages of support applications and libraries."
 msgstr ""
+"반면, 워크스테이션은 훨씬 더 복잡하다. 일반적으로 기본 <ulink url=\"&blfs-"
+"book;x/installing.html\">graphical environment</ulink>을 바탕으로 <ulink "
+"url=\"&blfs-book;lxde/lxde.html\">LXDE</ulink>, <ulink url=\"&blfs-book;xfce/"
+"xfce.html\">XFCE</ulink>, <ulink url=\"&blfs-book;kde/kde.html\">KDE</"
+"ulink>, or <ulink url=\"&blfs-book;gnome/gnome.html\">Gnome</ulink> 같은 그래"
+"픽 사용자 환경이 필요하며,  <ulink url=\"&blfs-book;xsoft/"
+"firefox.html\">Firefox web browser</ulink>, <ulink url=\"&blfs-book;xsoft/"
+"thunderbird.html\">Thunderbird email client</ulink>, or <ulink url=\"&blfs-"
+"book;xsoft/libreoffice.html\">LibreOffice office suite</ulink> 같은 여러 그래"
+"픽 기반 애플리케이션이 요구된다. 이러한 애플리케이션을 구동하려면 원하는 기능"
+"에 따라 수백 개에 달하는 추가 지원 애플리케이션과 라이브러리 패키지를 빌드해"
+"야 한다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter11/afterlfs.xml:55
@@ -46091,6 +46113,12 @@ msgid ""
 "wireless_tools.html\">wireless_tools</ulink>, are normally only useful for a "
 "laptop system."
 msgstr ""
+"위의 내용 외에도, 모든 종류의 시스템을 관리하기 위한 시스템 관리용 애플리케이"
+"션 세트가 존재한다. 이 애플리케이션들은 모두 BLFS 책에 포함되어 있다. 모든 환"
+"경에서 모든 패키지가 필요한 것은 아니다. 예를 들어 <ulink url=\"&blfs-"
+"book;basicnet/dhcpcd.html\">dhcpcd</ulink>는 보통 서버 환경에는 적절하지 않으"
+"며, <ulink url=\"&blfs-book;basicnet/wireless_tools.html\">wireless_tools</"
+"ulink>는 대개 노트북 시스템에서만 유용하다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter11/afterlfs.xml:67
@@ -46347,6 +46375,10 @@ msgid ""
 "copying commands from the browser with the left mouse button, switching "
 "consoles, and pasting into the other console."
 msgstr ""
+"이 시점에서 서로 다른 가상 콘솔 2개에 로그인하여, 한 콘솔에서는 links나 lynx "
+"브라우저를 실행하고 다른 콘솔에서는 bash 셸을 실행할 수 있다. 그런 다음 GPM"
+"을 이용하면 브라우저 콘솔에서 마우스 왼쪽 버튼으로 명령어를 복사한 뒤, 콘솔"
+"을 전환하여 다른 콘솔에 그대로 붙여넣을 수 있다."
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter11/afterlfs.xml:251
@@ -46360,6 +46392,13 @@ msgid ""
 "combination, where <keycap>Fx</keycap> is usually <keycap>F1</keycap> but "
 "may be <keycap>F7</keycap>."
 msgstr ""
+"참고로, X 윈도우 인스턴스에서도 <keycombo> <keycap>Ctrl</keycap> "
+"<keycap>Alt</keycap> <keycap>Fx</keycap> </keycombo>  키 조합을 사용하여 가"
+"상 콘솔로 전환할 수 있지만, 그래픽 인터페이스와 가상 콘솔 간에는 마우스 복사 "
+"작업이 작동하지 않는다. <keycombo> <keycap>Ctrl</keycap> <keycap>Alt</"
+"keycap> <keycap>Fx</keycap> </keycombo>을 사용하면 다시 X 윈도우 화면으로 돌"
+"아올 수 있으며, 여기서 <keycap>Fx</keycap>는 보통 <keycap>F1</keycap>이지만 "
+"<keycap>F7</keycap>일 수도 있다."
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter11/chapter11.xml:8
