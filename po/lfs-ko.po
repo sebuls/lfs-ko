@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-06 18:07+0900\n"
-"PO-Revision-Date: 2026-06-06 18:06+0900\n"
+"POT-Creation-Date: 2026-06-07 20:42+0900\n"
+"PO-Revision-Date: 2026-06-07 20:41+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -474,6 +474,10 @@ msgid ""
 "waiting for package compilations to complete, you can continue using your "
 "computer as usual."
 msgstr ""
+"<xref linkend=\"chapter-building-system\"/>에서는 본격적인 LFS 시스템을 빌드"
+"합니다. chroot 환경이 제공하는 또 다른 장점은 LFS가 빌드되는 동안에도 호스트 "
+"시스템을 계속 사용할 수 있다는 점입니다. 패키지 컴파일이 완료되기를 기다리는 "
+"동안에도 평소처럼 컴퓨터를 계속 사용할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/how.xml:68
@@ -485,6 +489,11 @@ msgid ""
 "this book.  After the steps in this chapter have been implemented, the "
 "computer is ready to boot into the new LFS system."
 msgstr ""
+"설치를 마치기 위해 <xref linkend=\"chapter-config\"/>에서 기본 시스템 설정을 "
+"진행하고, 커널과 부트 로더를 <xref linkend=\"chapter-bootable\"/>에서 생성합"
+"니다. <xref linkend=\"chapter-finalizing\"/>에는 이 책 이후로도 LFS 경험을 계"
+"속 이어가는 데 도움이 되는 정보가 들어 있습니다. 이 장 단계를 모두 수행하고 "
+"나면, 새로운 LFS 시스템으로 부팅할 준비가 완료됩니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter01/how.xml:75
@@ -540,6 +549,11 @@ msgid ""
 "would be to search the mailing lists at <ulink url=\"&lfs-root;search.html\"/"
 ">."
 msgstr ""
+"<systemitem class='domainname'>linuxfromscratch.org</systemitem> 서버는 LFS "
+"프로젝트 개발에 사용되는 여러 메일링 리스트를 호스팅합니다. 이 리스트에는 주"
+"요 개발 및 지원 리스트 등이 들어갑니다. FAQ 페이지에서 문제에 대한 답을 찾을 "
+"수 없다면, 다음 단계로 <ulink url=\"&lfs-root;search.html\"/>에서 메일링 리스"
+"트를 검색해 보는 것이 좋을 겁니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/resources.xml:33
@@ -547,6 +561,8 @@ msgid ""
 "For information on the different lists, how to subscribe, archive locations, "
 "and additional information, visit <ulink url=\"&lfs-root;mail.html\"/>."
 msgstr ""
+"다양한 메일링 리스트에 대한 정보, 구독 방법, 아카이브 위치 및 기타 추가 정보"
+"는 <ulink url=\"&lfs-root;mail.html\"/>."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:55
@@ -581,6 +597,10 @@ msgid ""
 "the LFS website at <ulink url=\"&lfs-root;mirrors.html\"/> for a list of "
 "current mirrors."
 msgstr ""
+"LFS 프로젝트는 웹사이트 접근과 필요한 패키지 다운로드를 더 편리하게 할 수 있"
+"도록 전 세계에 여러 미러 서버를 두고 있습니다. 현재 이용 가능한 미러 리스트"
+"는 <ulink url=\"&lfs-root;mirrors.html\"/>에서 LFS 웹사이트를 방문하여 확인하"
+"세요."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:87
@@ -593,6 +613,7 @@ msgid ""
 "Please direct all your questions and comments to one of the LFS mailing "
 "lists (see above)."
 msgstr ""
+"질문 및 의견은 모두 LFS 메일링 리스트 중 하나로 보내주십시오.(아래 보세요)"
 
 #. type: Content of: <sect1><title>
 #: en/chapter01/whatsnew.xml:12
@@ -33483,6 +33504,8 @@ msgid ""
 "The systemd package contains programs for controlling the startup, running, "
 "and shutdown of the system."
 msgstr ""
+"systemd 패키지에는 시스템의 시작, 실행 및 종료를 제어하는 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:34
@@ -33506,9 +33529,9 @@ msgid ""
 "systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
 "default udev rules:"
 msgstr ""
-"Remove two unneeded groups, <systemitem class=\"groupname\">render</"
-"systemitem> and <systemitem class=\"groupname\">sgx</systemitem>, from the "
-"default udev rules:"
+"기본 udev 규칙에서 필요하지 않은 두 그룹인 <systemitem "
+"class=\"groupname\">render</systemitem> 및 <systemitem "
+"class=\"groupname\">sgx</systemitem> 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:48 en/chapter08/udev.xml:51
@@ -33525,7 +33548,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:52
 msgid "Prepare systemd for compilation:"
-msgstr "Prepare systemd for compilation:"
+msgstr "컴파일 위한 systemd 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:54
@@ -33773,6 +33796,12 @@ msgid ""
 "mount namespace (so the mount point is only visible for the test suite and "
 "it gets cleaned up automatically after the test suite finishes):"
 msgstr ""
+"한 테스트는 <filename class='directory'>/tmp</filename> 디렉터리에 마운트 지"
+"점을 생성하는데, 이는 테스트 스위트를 실행한 후에 쉽게 정리할 수 없습니다. 그"
+"리고 몇몇 테스트는 기본적인 <filename>/etc/os-release</filename> 파일이 필요"
+"합니다. 결과를 테스트하려면, 이 파일을 생성하고 별도의 마운트 네임스페이스에"
+"서 테스트 스위트를 실행합니다(이렇게 하면 마운트 지점이 테스트 스위트에만 보"
+"이고, 테스트 스위트가 종료된 후 자동으로 정리됩니다):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:227
@@ -33794,6 +33823,12 @@ msgid ""
 "congestion with a large parallel job number, but it would pass if running "
 "alone with <command>meson test test-copy</command>."
 msgstr ""
+"<literal>systemd:core / test-namespace</literal> 이름의 테스트 하나는 LFS "
+"chroot 환경에서 실패하는 것으로 알려져 있습니다. 다른 몇몇 테스트들은 다양한 "
+"커널 설정 옵션에 의존하기 때문에 실패할 수도 있습니다. "
+"<literal>systemd:test / test-copy</literal> 이름의 테스트는 많은 수의 병렬 작"
+"업으로 인한 I/O 혼잡 때문에 제한 시간을 초과할 수 있지만, <command>meson "
+"test test-copy</command> 사용해 단독으로 실행하면 통과합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:244 en/chapter08/udev.xml:172
@@ -33841,7 +33876,7 @@ msgstr "<userinput remap=\"adjust\">systemctl preset-all</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/systemd.xml:273
 msgid "Contents of systemd"
-msgstr ""
+msgstr "systemd 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:281
@@ -33862,6 +33897,21 @@ msgid ""
 "tty-ask-password-agent, systemd-vpick, systemd-umount (symlink to systemd-"
 "mount), timedatectl, udevadm, userdbctl, and varlinkctl"
 msgstr ""
+"bootctl, busctl, coredumpctl, halt (symlink to systemctl), hostnamectl, "
+"init, journalctl, kernel-install, localectl, loginctl, machinectl, mount.ddi "
+"(symlink to systemd-dissect), networkctl, oomctl, portablectl, poweroff "
+"(symlink to systemctl), reboot (symlink to systemctl), resolvconf (symlink "
+"to resolvectl), resolvectl, run0 (symlink to systemd-run), runlevel (symlink "
+"to systemctl), shutdown (symlink to systemctl), systemctl, systemd-ac-power, "
+"systemd-analyze, systemd-ask-password, systemd-cat, systemd-cgls, systemd-"
+"cgtop, systemd-confext (symlink to systemd-sysext), systemd-creds, systemd-"
+"delta, systemd-detect-virt, systemd-dissect, systemd-escape, systemd-hwdb, "
+"systemd-id128, systemd-inhibit, systemd-machine-id-setup, systemd-mount, "
+"systemd-notify, systemd-nspawn, systemd-path, systemd-pty-forward, systemd-"
+"repart, systemd-resolve (symlink to resolvectl), systemd-run, systemd-socket-"
+"activate, systemd-stdio-bridge, systemd-sysext, systemd-tmpfiles, systemd-"
+"tty-ask-password-agent, systemd-vpick, systemd-umount (symlink to systemd-"
+"mount), timedatectl, udevadm, userdbctl, 및 varlinkctl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:301
@@ -33872,7 +33922,7 @@ msgid ""
 msgstr ""
 "libnss_myhostname.so.2, libnss_mymachines.so.2, libnss_resolve.so.2, "
 "libnss_systemd.so.2, libsystemd.so, libsystemd-shared-&systemd-version;.so "
-"(in /usr/lib/systemd), and libudev.so"
+"(in /usr/lib/systemd), 및 libudev.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:305
@@ -33891,7 +33941,7 @@ msgstr ""
 "environment.d, /usr/lib/kernel, /usr/lib/modprobe.d, /usr/lib/modules-"
 "load.d, /usr/lib/systemd, /usr/lib/udev, /usr/lib/sysctl.d, /usr/lib/"
 "systemd, /usr/lib/tmpfiles.d, /usr/share/doc/systemd-&systemd-version;, /usr/"
-"share/factory, /usr/share/systemd, /var/lib/systemd, and /var/log/journal"
+"share/factory, /usr/share/systemd, /var/lib/systemd, 및 /var/log/journal"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:322
@@ -34816,7 +34866,7 @@ msgstr "<filename class=\"libraryfile\">libudev</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:951
 msgid "Is a library to access Udev device information"
-msgstr ""
+msgstr "Udev 장치 정보에 접근하기 위한 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:953 en/chapter08/udev.xml:290
@@ -34855,6 +34905,8 @@ msgid ""
 "The SysVinit package contains programs for controlling the startup, running, "
 "and shutdown of the system."
 msgstr ""
+"SysVinit 패키지에는 시스템의 시작, 실행 및 종료를 제어하는 프로그램이 들어 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/sysvinit.xml:34
@@ -46696,6 +46748,8 @@ msgid ""
 "Thank you for reading this LFS book. We hope that you have found this book "
 "helpful and have learned more about the system creation process."
 msgstr ""
+"이 LFS 책을 읽어줘서 고맙다. 우리는 이 책이 도움이 되었기 바라며, 시스템 구"
+"축 과정에 대해 더 많이 배웠기를 바란다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/whatnow.xml:17
@@ -46704,11 +46758,13 @@ msgid ""
 "</quote> To answer that question, we have compiled a list of resources for "
 "you."
 msgstr ""
+"이제 LFS 시스템을 설치했으니, <quote>다음에는 뭐?</quote> 의문이 들 수 있다. "
+"그 질문에 답하기 위해, 우리는 참고할 만한 리소스 목록을 정리해 두었다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:24
 msgid "Maintenance"
-msgstr "Maintenance"
+msgstr "유지관리"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:26
@@ -46718,6 +46774,9 @@ msgid ""
 "reports.  There are several online resources that track such reports, some "
 "of which are shown below:"
 msgstr ""
+"모든 소프트웨어에 대한 버그와 보안 공지는 정기적으로 보고된다. LFS 시스템은 "
+"소스로부터 컴파일되므로, 이러한 보고를 계속해서 파악하는 것은 그대의 몫이다. "
+"이러한 보고를 추적하는 여러 온라인 리소스가 있으며, 그중 일부는 아래에:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:34
@@ -46758,6 +46817,8 @@ msgid ""
 "volunteers in the LFS community. The hints are available at <ulink "
 "url=\"&hints-root;\"/>."
 msgstr ""
+"LFS 힌트는 LFS 커뮤니티의 자원봉사자가 낸 교육용 문서 모음이다. 이 힌트들은 "
+"<ulink url=\"&hints-root;\"/>에서 확인할 수 있다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:69
@@ -46772,6 +46833,9 @@ msgid ""
 "contribute to the project, and more. See <xref linkend=\"ch-intro-"
 "maillists\"/> for more information."
 msgstr ""
+"도움이 필요하거나, 최신 개발 현황을 파악하고 싶거나, 프로젝트에 기여하고 싶"
+"은 경우 등 필요에 따라 구독할 수 있는 여러 LFS 메일링 리스트가 존재한다. 자세"
+"한 내용은 <xref linkend=\"ch-intro-maillists\"/>."
 
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/chapter11/whatnow.xml:79 en/appendices/acronymlist.xml:462
@@ -50377,6 +50441,8 @@ msgid ""
 "<phrase revision='systemd'>Systemd</phrase><phrase revision='sysv'>Udev</"
 "phrase>"
 msgstr ""
+"<phrase revision='systemd'>Systemd</phrase><phrase revision='sysv'>Udev</"
+"phrase>"
 
 #. type: Content of the bdb entity
 #: en/appendices/dependencies.xml:8
