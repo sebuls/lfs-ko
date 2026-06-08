@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-08 02:07+0900\n"
-"PO-Revision-Date: 2026-06-08 02:06+0900\n"
+"POT-Creation-Date: 2026-06-08 22:26+0900\n"
+"PO-Revision-Date: 2026-06-08 22:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6632,6 +6632,12 @@ msgid ""
 "environment is correctly set, and that you are not &root;, before running "
 "the following command."
 msgstr ""
+"만약 <envar>LFS</envar>가 제대로 설정되지 않았고, 권장 사항을 무시한 채 "
+"<systemitem class=\"username\">root</systemitem> 계정으로 빌드하고 있다면, 다"
+"음 명령은 새로 빌드된 Glibc를 호스트 시스템에 설치하게 되며, 이는 거의 확실하"
+"게 호스트 시스템을 사용할 수 없는 상태로 만듭니다. 그러므로 다음 명령을 실행"
+"하기 전에 환경 변수가 올바르게 설정되었는지, 그리고 &root; 계정이 아닌지 다"
+"시 확인하십시오."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:167 en/chapter05/libstdc++.xml:122
@@ -6891,6 +6897,10 @@ msgid ""
 "where the problem is and correct it.  Any issues should be resolved before "
 "continuing with the process."
 msgstr ""
+"출력이 위에서 보여준 것과 다르게 나타나거나 전혀 출력되지 않는다면, 무언가 심"
+"각한 문제가 발생한 것입니다. 어디서 문제가 발생했는지 찾아내어 바로잡을 수 있"
+"도록 단계를 조사하고 되짚어보십시오. 과정을 계속 진행하기 전에 모든 문제가 해"
+"결되어야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:281 en/chapter08/gcc.xml:351
@@ -6912,6 +6922,10 @@ msgid ""
 "something has gone wrong with the preceding Binutils, GCC, or Glibc "
 "installations."
 msgstr ""
+"다음 장에서 패키지들을 빌드하는 것은 툴체인이 제대로 빌드되었는지 확인하는 추"
+"가적인 검사 역할을 할 것입니다. 일부 패키지, 특히 Binutils-pass2나 GCC-pass2"
+"가 빌드에 실패한다면, 이는 이전에 진행된 Binutils, GCC 또는 Glibc 설치에 무언"
+"가 문제가 발생했음을 나타내는 신호입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:302
@@ -6940,6 +6954,10 @@ msgid ""
 "other hand, are installed into their final place, since they pertain to the "
 "system we want to build."
 msgstr ""
+"이 장에서 컴파일된 프로그램들은 다음 장에서 설치될 파일들과 분리하여 유지하"
+"기 위해 <filename class=\"directory\">$LFS/tools</filename> 디렉터리 아래에 "
+"설치됩니다. 반면에, 라이브러리는 우리가 구축하고자 하는 시스템에 속하기 때문"
+"에 최종 위치에 설치됩니다."
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter05/libstdc++.xml:12
@@ -7144,6 +7162,8 @@ msgid ""
 "The Linux API Headers (in linux-&linux-version;.tar.xz) expose the kernel's "
 "API for use by Glibc."
 msgstr ""
+"Linux API 헤더(linux-&linux-version;.tar.xz 안의 파일들)는 Glibc에서 사용할 "
+"수 있도록 커널의 API를 노출합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter05/linux-headers.xml:35
@@ -7168,6 +7188,10 @@ msgid ""
 "sanitizing various C header files that are shipped in the Linux kernel "
 "source tarball."
 msgstr ""
+"Linux 커널은 시스템의 C 라이브러리(LFS에서는 Glibc)가 사용할 수 있도록 응용 "
+"프로그램 프로그래밍 인터페이스(API)를 노출해야 합니다. 이 작업은 Linux 커널 "
+"소스 타르볼(tarball)에 포함되어 제공되는 다양한 C 헤더 파일을 정제"
+"(sanitizing)하는 방식으로 이루어집니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/linux-headers.xml:50
@@ -7189,6 +7213,11 @@ msgid ""
 "available. The headers are first placed in <filename class=\"directory\">./"
 "usr</filename>, then copied to the needed location."
 msgstr ""
+"이제 소스에서 사용자가 볼 수 있는 커널 헤더를 추출합니다. 권장되는 make 타깃"
+"인 <quote>headers_install</quote>은 <application>rsync</application>가 필요하"
+"지만, 현재 사용할 수 없을지도 모르기 때문에 사용할 수 없습니다. 헤더들은 먼"
+"저 <filename class=\"directory\">./usr</filename> 디렉터리에 배치된 다음, 필"
+"요한 위치로 복사됩니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/linux-headers.xml:61
@@ -7255,7 +7284,7 @@ msgid ""
 msgstr ""
 "/usr/include/asm, /usr/include/asm-generic, /usr/include/drm, /usr/include/"
 "linux, /usr/include/misc, /usr/include/mtd, /usr/include/rdma, /usr/include/"
-"scsi, /usr/include/sound, /usr/include/video, and /usr/include/xen"
+"scsi, /usr/include/sound, /usr/include/video, 및 /usr/include/xen"
 
 #. type: Content of: <sect1><sect2><variablelist><bridgehead>
 #: en/chapter05/linux-headers.xml:88 en/chapter08/acl.xml:86
@@ -8765,6 +8794,10 @@ msgid ""
 "class=\"directory\">$LFS/tools</filename>, so that it is found in the "
 "<envar>PATH</envar> when needed:"
 msgstr ""
+"먼저 빌드 호스트에서 <command>tic</command> 프로그램을 빌드하기 위해 다음 명"
+"령들을 실행합니다. 이 프로그램은 필요할 때 <envar>PATH</envar>에서 찾을 수 있"
+"도록 <filename class=\"directory\">$LFS/tools</filename> 디렉터리에 설치합니"
+"다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/ncurses.xml:51
