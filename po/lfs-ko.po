@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-08 22:26+0900\n"
-"PO-Revision-Date: 2026-06-08 22:26+0900\n"
+"POT-Creation-Date: 2026-06-09 04:09+0900\n"
+"PO-Revision-Date: 2026-06-09 04:09+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -45089,6 +45089,10 @@ msgid ""
 "system, and installing the GRUB boot loader so that the LFS system can be "
 "selected for booting at startup."
 msgstr ""
+"이제 LFS 시스템을 부팅 가능하게 만들 시간입니다. 이 장에서는 <filename>/etc/"
+"fstab</filename> 파일을 생성하고, 새로운 LFS 시스템을 위한 커널을 빌드하며, "
+"부팅 시 LFS 시스템을 선택할 수 있도록 GRUB 부트 로더를 설치하는 과정을 다룹니"
+"다."
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter10/kernel.xml:12
@@ -45107,7 +45111,7 @@ msgstr "리눅스-&linux-version;"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:26
 msgid "The Linux package contains the Linux kernel."
-msgstr ""
+msgstr "리눅스 페키지에는 리눅스 커널이 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter10/kernel.xml:33
@@ -45132,6 +45136,9 @@ msgid ""
 "source tree for alternative methods to the way this book configures the "
 "kernel."
 msgstr ""
+"커널을 빌드하는 과정은 설정, 컴파일, 설치의 몇 가지 단계로 이루어집니다. 이 "
+"책에서 커널을 설정하는 방법 외에 다른 대안적인 방법을 알아보려면 커널 소스 트"
+"리에 있는 <filename>README</filename> 파일을 읽어보십시오."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter10/kernel.xml:50
@@ -45177,6 +45184,10 @@ msgid ""
 "www.linuxfromscratch.org/mail.html\">lfs-support</ulink> mailing list.  Note "
 "that subscribing is required in order for the list to avoid spam."
 msgstr ""
+"다른 모든 방법이 실패하면, <ulink url=\"https://www.linuxfromscratch.org/"
+"mail.html\">lfs-support</ulink> 메일링 리스트에 도움을 요청할 수 있습니다. 스"
+"팸을 방지하기 위해 해당 메일링 리스트에 가입(구독)해야 할 수도 있다는 점에 유"
+"의."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:80
@@ -45702,6 +45713,9 @@ msgid ""
 "not necessary to remove the kernel source tree after the newly built kernel "
 "is installed."
 msgstr ""
+"많은 경우, 나중에 BLFS에서 설치할 패키지들을 위해 커널 설정을 업데이트해야 "
+"할 수 있습니다. 다른 패키지들과 달리, 새로 빌드된 커널을 설치한 후에 커널 소"
+"스 트리를 제거할 필요 없습니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:465
@@ -45711,6 +45725,10 @@ msgid ""
 "filename> directory to ensure all files are owned by user <emphasis>root</"
 "emphasis>."
 msgstr ""
+"커널 소스 트리를 계속 유지할 예정이라면, 모든 파일의 소유자가 "
+"<emphasis>root</emphasis> 사용자로 설정되도록 <filename "
+"class=\"directory\">linux-&linux-version;</filename> 디렉터리에서 "
+"<command>chown -R 0:0</command> 명령을 실행하십시오."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:470
@@ -45728,6 +45746,17 @@ msgid ""
 "correctly skip other <filename class='extension'>.o</filename> files if they "
 "are not purged."
 msgstr ""
+"유지해 둔 커널 소스 트리에서 설정을 업데이트하고 커널을 다시 빌드하려는 경"
+"우, 보통 <command>make mrproper</command> 명령은 실행하지 <emphasis "
+"role='bold'>않아야</emphasis> 합니다. 이 명령은 이전 빌드에서 생성된 "
+"<filename>.config</filename>파일과 모든 <filename class='extension'>.o</"
+"filename>파일을 지워버리기 때문입니다. <filename class='directory'>/boot</"
+"filename> 디렉터리에 있는 사본으로부터 <filename>.config</filename>를 복구하"
+"는 것은 쉽지만, 모든 <filename class='extension'>.o</filename> 파일을 지우는 "
+"것은 여전히 낭비입니다. 간단한 설정 변경의 경우 대개 몇 개의 <filename "
+"class='extension'>.o</filename> 파일만 다시 빌드하면 되는데, 커널 빌드 시스템"
+"은 이 파일들이 지워지지 않았다면 나머지 <filename class='extension'>.o</"
+"filename> 파일들은 올바르게 건너뛰고 넘어가기 때문입니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:485
@@ -45736,6 +45765,9 @@ msgid ""
 "clean</command> to purge all the <filename class='extension'>.o</filename> "
 "files from the previous build, or the new build may fail."
 msgstr ""
+"반면, GCC를 업그레이드했다면, 이전 빌드에서 생성된 모든<filename "
+"class='extension'>.o</filename> 파일을 지우기 위해 <command>make clean</"
+"command>을 실행해야 합니다. 안 그러면 새 빌드가 실패할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter10/kernel.xml:492
