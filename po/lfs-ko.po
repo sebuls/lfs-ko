@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-09 21:35+0900\n"
-"PO-Revision-Date: 2026-06-09 21:34+0900\n"
+"POT-Creation-Date: 2026-06-10 03:06+0900\n"
+"PO-Revision-Date: 2026-06-10 03:05+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6971,7 +6971,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter05/libstdc++.xml:17
 msgid "Libstdc++ from GCC-&gcc-version;"
-msgstr "GCC-&gcc-version; 에서부터 Libstdc++"
+msgstr "GCC-&gcc-version; 에서부터 Libstdc++."
 
 #. type: Content of: <sect1><indexterm><secondary>
 #: en/chapter05/libstdc++.xml:21
@@ -7824,7 +7824,7 @@ msgstr "Coreutils 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/coreutils.xml:46
 msgid "Prepare Coreutils for compilation:"
-msgstr "Prepare Coreutils for compilation:"
+msgstr "컴파일 위한 Coreutils 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/coreutils.xml:48
@@ -7864,6 +7864,8 @@ msgid ""
 "necessary in this temporary environment, we must do so because some programs "
 "hardcode executable locations:"
 msgstr ""
+"프로그램들을 최종 예상 위치로 이동합니다. 이 임시 환경에서는 이 작업이 필요하"
+"지 않지만, 일부 프로그램은 실행 파일 위치를 하드코딩하므로 이렇게 해야 함:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/coreutils.xml:87
@@ -9241,7 +9243,7 @@ msgstr "<userinput remap=\"install\">rm -v $LFS/usr/lib/liblzma.la</userinput>"
 msgid ""
 "Details on this package are located in <xref linkend=\"contents-xz\" role=\"."
 "\"/>"
-msgstr ""
+msgstr "이 패키지 상세는 <xref linkend=\"contents-xz\" role=\".\"/>"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter07/bison.xml:14 en/chapter08/bison.xml:14
@@ -13967,7 +13969,7 @@ msgstr "<command>[</command>"
 msgid ""
 "Is an actual command, /usr/bin/[; it is a synonym for the <command>test</"
 "command> command"
-msgstr ""
+msgstr "실제 명령어, /usr/bin/[ 입니다. <command>test</command> 동의어"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:209
@@ -14054,7 +14056,7 @@ msgstr "<command>cat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:269
 msgid "Concatenates files to standard output"
-msgstr ""
+msgstr "파일들을 표준 출력으로 연결"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:271
@@ -14103,6 +14105,8 @@ msgid ""
 "either a symbolic representation of the changes to be made, or an octal "
 "number representing the new permissions"
 msgstr ""
+"각 파일의 권한을 지정된 모드로 바꿉니다. 모드는 바꿀 내용을 기호로 나타내거"
+"나, 새 권한을 나타내는 8진수"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:303
@@ -14343,9 +14347,8 @@ msgid ""
 "the given directories (including all subdirectories) or by each of the given "
 "files"
 msgstr ""
-"Reports the amount of disk space used by the current directory, by each of "
-"the given directories (including all subdirectories) or by each of the given "
-"files"
+"현재 디렉터리, 지정된 각 디렉터리(모든 하위 디렉터리 포함) 또는 지정된 각 파"
+"일이 사용하는 디스크 공간의 양을 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:459
@@ -15332,7 +15335,7 @@ msgstr "<command>test</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1108
 msgid "Compares values and checks file types"
-msgstr ""
+msgstr "값을 비교하고 파일 형식을 확인"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1110
@@ -15431,6 +15434,8 @@ msgid ""
 "Performs a topological sort; it writes a completely ordered list according "
 "to the partial ordering in a given file"
 msgstr ""
+"위상 정렬(topological sort)을 수행. 지정된 파일에 있는 부분 순서(partial "
+"ordering)에 따라 완전히 정렬된 목록을 기록"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1175
@@ -15615,7 +15620,7 @@ msgstr "<filename class=\"libraryfile\">libstdbuf</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/coreutils.xml:1297
 msgid "Library used by <command>stdbuf</command>"
-msgstr "Library used by <command>stdbuf</command>"
+msgstr "<command>stdbuf</command> 가 사용하는 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1299
