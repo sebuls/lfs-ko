@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-11 20:46+0900\n"
-"PO-Revision-Date: 2026-06-11 20:46+0900\n"
+"POT-Creation-Date: 2026-06-12 01:25+0900\n"
+"PO-Revision-Date: 2026-06-12 01:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -10601,7 +10601,7 @@ msgstr "<userinput>mkdir -pv $LFS/{dev,proc,sys,run}</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/kernfs.xml:30
 msgid "Mounting and Populating /dev"
-msgstr "Mounting and Populating /dev"
+msgstr "/dev Mounting 및 Populating"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:32
@@ -10618,6 +10618,17 @@ msgid ""
 "simply mount a &devtmpfs; at <filename class='directory'>$LFS/dev</filename> "
 "and rely on the kernel to populate it."
 msgstr ""
+"LFS 시스템이 정상 부팅되는 동안, 커널은 자동으로 <filename "
+"class=\"directory\">/dev</filename> 디렉터리에 <systemitem "
+"class=\"filesystem\">devtmpfs</systemitem> 파일 시스템을 마운트합니다. 커널"
+"은 부팅 과정 중이거나 장치가 처음 감지 또는 액세스될 때 이 가상 파일 시스템"
+"에 장치 노드를 생성합니다. udev 데몬은 배포판 유지 관리자와 시스템 관리자의 "
+"작업을 수월하게 만들기 위해, 커널이 생성한 장치 노드의 소유권이나 권한을 변경"
+"할 수 있으며 새로운 장치 노드나 심볼릭 링크를 생성할 수도 있습니다. (자세한 "
+"내용은 <xref linkend='ch-config-udev-device-node-creation'/> 참조.) 호스트 커"
+"널이 &devtmpfs; 지원한다면, 우리는 단순히 <filename class='directory'>$LFS/"
+"dev</filename>에 &devtmpfs;를 마운트하고 커널이 그 내부를 채우도록 맡길 수 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:46
@@ -10630,6 +10641,14 @@ msgid ""
 "bind mount is a special type of mount that makes a directory subtree or a "
 "file visible at some other location. Use the following command to do this."
 msgstr ""
+"그러나, 일부 호스트 커널은 &devtmpfs; 지원이 부족합니다. 이러한 호스트 배포판"
+"들은 <filename class=\"directory\">/dev</filename> 디렉터리의 내용을 생성하"
+"기 위해 다른 방법들을 사용합니다. 따라서 호스트 종류와 관계없이 <filename "
+"class=\"directory\">$LFS/dev</filename> 디렉터리를 채울 수 있는 유일한 방법"
+"은 호스트 시스템의 <filename class=\"directory\">/dev</filename> 디렉터리를 "
+"바인드 마운트(bind mount)하는 것입니다. 바인드 마운트는 특정 디렉터리 하위 트"
+"리나 파일을 다른 위치에서 볼 수 있도록 만드는 특별한 형태의 마운트입니다. 이"
+"를 수행하려면 다음 명령어를 사용하십시오."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/kernfs.xml:57
