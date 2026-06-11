@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-10 21:46+0900\n"
-"PO-Revision-Date: 2026-06-10 21:46+0900\n"
+"POT-Creation-Date: 2026-06-11 20:46+0900\n"
+"PO-Revision-Date: 2026-06-11 20:46+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -8042,6 +8042,9 @@ msgid ""
 "Run the following commands to make a temporary copy of the <command>file</"
 "command> command:"
 msgstr ""
+"빌드 호스트의 <command>file</command> 명령은 시그니처 파일을 생성하기 위해 우"
+"리가 빌드하고 있는 버전과 동일해야 합니다. 다음 명령들을 실행하여 "
+"<command>file</command> 명령의 임시 복사본을 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:53
@@ -8086,11 +8089,15 @@ msgid ""
 "files do not.  These options prevent using these unneeded capabilities from "
 "the host."
 msgstr ""
+"설정 스크립트는 해당 라이브러리 파일이 존재할 경우 호스트 배포판의 일부 패키"
+"지를 사용하려고 시도합니다. 만약 라이브러리 파일은 존재하지만 그에 대응하는 "
+"헤더 파일이 없다면 컴파일 실패할 수 있습니다. 이 옵션들은 호스트의 이러한 불"
+"필요한 기능을 사용하지 않도록 막습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/file.xml:77 en/chapter08/file.xml:44
 msgid "Prepare File for compilation:"
-msgstr "Prepare File for compilation:"
+msgstr "컴파일 위한 File준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:79
@@ -8108,8 +8115,7 @@ msgstr "<userinput remap=\"make\">make FILE_COMPILE=$(pwd)/build/src/file</useri
 #: en/chapter06/file.xml:89 en/chapter06/xz.xml:62
 msgid ""
 "Remove the libtool archive file because it is harmful for cross compilation:"
-msgstr ""
-"Remove the libtool archive file because it is harmful for cross compilation:"
+msgstr "크로스 컴파일에 유해하므로 libtool 아카이브 파일을 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/file.xml:92
@@ -17350,6 +17356,8 @@ msgid ""
 "The File package contains a utility for determining the type of a given file "
 "or files."
 msgstr ""
+"File 패키지에는 주어진 파일 또는 파일들의 유형을 결정하기 위한 유틸리티가 들"
+"어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/file.xml:34
