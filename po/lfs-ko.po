@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-12 01:25+0900\n"
-"PO-Revision-Date: 2026-06-12 01:25+0900\n"
+"POT-Creation-Date: 2026-06-12 22:05+0900\n"
+"PO-Revision-Date: 2026-06-12 22:05+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9507,6 +9507,11 @@ msgid ""
 "(<filename class=\"directory\">/</filename>) directory set to <filename "
 "class='directory'>$LFS</filename>."
 msgstr ""
+"모든 작업이 LFS 파일 시스템으로 제한되므로, 이제부터는 <envar>LFS</envar> 변"
+"수를 사용할 필요가 없습니다. <command>chroot</command> 명령어가 루트"
+"(<filename class=\"directory\">/</filename>) 디렉터리를 <filename "
+"class='directory'>$LFS</filename>로 설정한 상태에서 Bash 셸을 실행하기 때문입"
+"니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/chroot.xml:58
@@ -9526,6 +9531,9 @@ msgid ""
 "have no name!</computeroutput> This is normal because the <filename>/etc/"
 "passwd</filename> file has not been created yet."
 msgstr ""
+"또한 <command>bash</command> 프롬프트에 <computeroutput>I have no name!</"
+"computeroutput>이라고 표시되는 것에 주의하세요. 이는 <filename>/etc/passwd</"
+"filename> 파일이 아직 생성되지 않았기 때문에 발생하는 정상적인 현상입니다."
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter07/chroot.xml:67
@@ -10308,6 +10316,8 @@ msgid ""
 "Create some root-level directories that are not in the limited set required "
 "in the previous chapters by issuing the following command:"
 msgstr ""
+"다음 명령어를 실행하여 이전 장들에서 필요했던 제한된 세트 외에, 추가적인 루"
+"트 수준 디렉터리들을 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/creatingdirs.xml:22
@@ -10371,11 +10381,10 @@ msgid ""
 "class=\"username\">root</systemitem>, and another to the directories for "
 "temporary files."
 msgstr ""
-"Directories are, by default, created with permission mode 755, but this is "
-"not desirable everywhere. In the commands above, two changes are "
-"made&mdash;one to the home directory of user <systemitem "
-"class=\"username\">root</systemitem>, and another to the directories for "
-"temporary files."
+"디렉터리는 기본적으로 권한 모드 755로 생성되지만, 모든 곳에 이 설정이 바람직"
+"한 것은 아닙니다. 위의 명령어에서는 두 가지 변경 사항이 적용되었습니다. 하나"
+"는 <systemitem class=\"username\">root</systemitem> 사용자의 홈 디렉터리에 대"
+"한 것이고, 다른 하나는 임시 파일용 디렉터리들에 대한 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter07/creatingdirs.xml:51
@@ -10389,6 +10398,13 @@ msgid ""
 "by the so-called <quote>sticky bit,</quote> the highest bit (1) in the 1777 "
 "bit mask."
 msgstr ""
+"첫 번째 권한 변경은 일반 사용자가 자신의 홈 디렉터리에 설정하는 것과 마찬가지"
+"로, 아무나 <filename class=\"directory\">/root</filename> 디렉터리에 들어올 "
+"수 없도록 보장합니다. 두 번째 권한 변경은 모든 사용자가 <filename "
+"class=\"directory\">/tmp</filename> 및 <filename class=\"directory\">/var/"
+"tmp</filename> 디렉터리에 쓰기를 할 수 있도록 하되, 그곳에서 다른 사용자의 파"
+"일을 삭제할 수는 없도록 보장합니다. 후자는 1777 비트 마스크의 가장 높은 비트"
+"(1)인 이른바 <quote>sticky bit,</quote>에 의해 금지됩니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/creatingdirs.xml:61
