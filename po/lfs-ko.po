@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-13 15:26+0900\n"
-"PO-Revision-Date: 2026-06-13 15:26+0900\n"
+"POT-Creation-Date: 2026-06-13 21:26+0900\n"
+"PO-Revision-Date: 2026-06-13 21:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6743,7 +6743,7 @@ msgstr "<userinput>grep -E -o \"$LFS/lib.*/S?crt[1in].*succeeded\" dummy.log</us
 #: en/chapter05/glibc.xml:217 en/chapter05/glibc.xml:263
 #: en/chapter08/gcc.xml:271 en/chapter08/gcc.xml:332
 msgid "The output of the last command should be:"
-msgstr ""
+msgstr "마지막 명령의 출력:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:219
@@ -6812,8 +6812,8 @@ msgid ""
 "References to paths that have components with '-linux-gnu' should be "
 "ignored, but otherwise the output of the last command should be:"
 msgstr ""
-"References to paths that have components with '-linux-gnu' should be "
-"ignored, but otherwise the output of the last command should be:"
+"'-linux-gnu'를 갖는 경로에 대한 참조는 무시해야 하지만, 그렇지 않으면 마지막 "
+"명령의 출력은:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:245
@@ -6849,7 +6849,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:259 en/chapter08/gcc.xml:328
 msgid "Next make sure that we're using the correct libc:"
-msgstr ""
+msgstr "다음으로 우리가 올바른 libc를 사용하고 있는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:261 en/chapter08/gcc.xml:330
@@ -6866,7 +6866,7 @@ msgstr "<computeroutput>attempt to open /mnt/lfs/usr/lib/libc.so.6 succeeded</co
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:267 en/chapter08/gcc.xml:336
 msgid "Make sure GCC is using the correct dynamic linker:"
-msgstr "Make sure GCC is using the correct dynamic linker:"
+msgstr "GCC가 올바른 동적 링커를 사용하고 있는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:269 en/chapter08/gcc.xml:338
@@ -6880,6 +6880,8 @@ msgid ""
 "The output of the last command should be (allowing for platform-specific "
 "differences in dynamic linker name):"
 msgstr ""
+"마지막 명령의 출력은 다음과 같아야 합니다 (동적 링커 이름의 플랫폼별 차이 감"
+"안):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:274
@@ -6905,7 +6907,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:281 en/chapter08/gcc.xml:351
 msgid "Once everything is working correctly, clean up the test files:"
-msgstr ""
+msgstr "모든 것이 올바르게 작동하면, 테스트 파일을 정리:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:283 en/chapter08/gcc.xml:353
@@ -18188,6 +18190,8 @@ msgid ""
 "If building on x86_64, change the default directory name for 64-bit "
 "libraries to <quote>lib</quote>:"
 msgstr ""
+"x86_64 환경에서 빌드하면, 64비트 라이브러리의 기본 디렉터리 이름을 "
+"<quote>lib</quote> 로 변경:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:65
@@ -18313,6 +18317,13 @@ msgid ""
 "attacks based on fixed addresses of sensitive code or data in the "
 "executables."
 msgstr ""
+"PIE(position-independent executables, 위치 독립 실행 파일)는 메모리의 어느 위"
+"치에나 로드될 수 있는 바이너리 프로그램입니다. PIE를 사용하지 않으면 "
+"ASLR(Address Space Layout Randomization, 주소 공간 배치 난독화) 보안 기능을 "
+"공유 라이브러리에는 적용할 수 있지만, 실행 파일 자체에는 적용할 수 없습니다. "
+"PIE를 활성화하면 공유 라이브러리뿐만 아니라 실행 파일에도 ASLR을 적용할 수 있"
+"으며, 실행 파일 내의 민감한 코드나 데이터의 고정된 주소를 기반으로 하는 일부 "
+"공격을 완화할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/gcc.xml:151
@@ -18323,6 +18334,10 @@ msgid ""
 "(existing in the program or shared libraries, or injected by the attacker "
 "somehow)."
 msgstr ""
+"SSP(Stack Smashing Protection, 스택 스매싱 보호)는 매개변수 스택 깨짐을 방지"
+"하는 기술입니다. 스택 깨짐이 생기면 일례로 서브루틴의 복귀 주소가 변조되어, "
+"제어권이 공격자에 의해 주입되었거나 프로그램 및 공유 라이브러리에 이미 존재하"
+"는 위험한 코드로 넘어갈 수 있습니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/gcc.xml:165
@@ -18602,6 +18617,8 @@ msgid ""
 "A 32-bit system may use a few other directories. For example, here is the "
 "output from an i686 machine:"
 msgstr ""
+"32비트 시스템은 몇 개의 다른 디렉터리를 사용할 수도 있습니다. 예를 들어, 다음"
+"은 i686 머신 출력:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:319
@@ -18640,7 +18657,7 @@ msgstr "<computeroutput>found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.s
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:355
 msgid "Finally, move a misplaced file:"
-msgstr ""
+msgstr "마지막으로, 놓친 파일 이동:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:357
@@ -18664,7 +18681,7 @@ msgid ""
 "dump, gcov-tool, and lto-dump"
 msgstr ""
 "c++, cc (link to gcc), cpp, g++, gcc, gcc-ar, gcc-nm, gcc-ranlib, gcov, gcov-"
-"dump, gcov-tool, and lto-dump"
+"dump, gcov-tool, 및 lto-dump"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gcc.xml:375
@@ -18679,7 +18696,7 @@ msgstr ""
 "libgcc_s.so, libgcov.a, libgomp.{a,so}, libhwasan.{a,so}, libitm.{a,so}, "
 "liblsan.{a,so}, liblto_plugin.so, libquadmath.{a,so}, libssp.{a,so}, "
 "libssp_nonshared.a, libstdc++.{a,so}, libstdc++exp.a, libstdc++fs.a, libsupc+"
-"+.a, libtsan.{a,so}, and libubsan.{a,so}"
+"+.a, libtsan.{a,so}, 및 libubsan.{a,so}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/gcc.xml:382
@@ -28368,7 +28385,7 @@ msgid ""
 "/usr/share/tabset, /usr/share/terminfo, and /usr/share/doc/ncurses-&ncurses-"
 "version;"
 msgstr ""
-"/usr/share/tabset, /usr/share/terminfo, and /usr/share/doc/ncurses-&ncurses-"
+"/usr/share/tabset, /usr/share/terminfo, 및 /usr/share/doc/ncurses-&ncurses-"
 "version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -35785,7 +35802,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/texinfo.xml:131
 msgid "/usr/share/texinfo and /usr/lib/texinfo"
-msgstr "/usr/share/texinfo and /usr/lib/texinfo"
+msgstr "/usr/share/texinfo 및 /usr/lib/texinfo"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/texinfo.xml:141
@@ -39978,7 +39995,7 @@ msgstr "rc"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter09/bootscripts.xml:221
 msgid "Reboots the system"
-msgstr "Reboots the system"
+msgstr "시스템 리부트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/bootscripts.xml:229
