@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-13 21:26+0900\n"
-"PO-Revision-Date: 2026-06-13 21:26+0900\n"
+"POT-Creation-Date: 2026-06-14 03:34+0900\n"
+"PO-Revision-Date: 2026-06-14 03:33+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -2611,7 +2611,7 @@ msgstr "MD5 합: <literal>&bzip2-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:115
 msgid "Coreutils (&coreutils-version;) - <token>&coreutils-size;</token>:"
-msgstr ""
+msgstr "Coreutils (&coreutils-version;) - <token>&coreutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:117
@@ -2711,7 +2711,7 @@ msgstr "MD5 sum: <literal>&e2fsprogs-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:160
 msgid "Elfutils (&elfutils-version;) - <token>&elfutils-size;</token>:"
-msgstr ""
+msgstr "Elfutils (&elfutils-version;) - <token>&elfutils-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:162
@@ -2751,7 +2751,7 @@ msgstr "MD5 sum: <literal>&expat-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:178
 msgid "Expect (&expect-version;) - <token>&expect-size;</token>:"
-msgstr ""
+msgstr "Expect (&expect-version;) - <token>&expect-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:180
@@ -2911,7 +2911,7 @@ msgstr "MD5 sum: <literal>&gdbm-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:250
 msgid "Gettext (&gettext-version;) - <token>&gettext-size;</token>:"
-msgstr ""
+msgstr "Gettext (&gettext-version;) - <token>&gettext-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:252
@@ -3031,7 +3031,7 @@ msgstr "MD5 sum: <literal>&grep-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:309
 msgid "Groff (&groff-version;) - <token>&groff-size;</token>:"
-msgstr ""
+msgstr "Groff (&groff-version;) - <token>&groff-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:311
@@ -3171,7 +3171,7 @@ msgstr "MD5 sum: <literal>&iproute2-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:372
 msgid "Jinja2 (&jinja2-version;) - <token>&jinja2-size;</token>:"
-msgstr ""
+msgstr "Jinja2 (&jinja2-version;) - <token>&jinja2-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:374
@@ -3427,12 +3427,12 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para><itemizedlist><listitem><para>
 #: en/chapter03/packages.xml:486
 msgid "<ulink url='&kernel-directory;/linux-&linux-majmin-version;.tar.xz'/>"
-msgstr ""
+msgstr "<ulink url='&kernel-directory;/linux-&linux-majmin-version;.tar.xz'/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para><itemizedlist><listitem><para>
 #: en/chapter03/packages.xml:491
 msgid "<ulink url='&kernel-directory;/patch-&linux-version;.xz'/>"
-msgstr ""
+msgstr "<ulink url='&kernel-directory;/patch-&linux-version;.xz'/>"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><note><para>
 #: en/chapter03/packages.xml:496
@@ -3455,7 +3455,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:513
 msgid "Lz4 (&lz4-version;) - <token>&lz4-size;</token>:"
-msgstr ""
+msgstr "Lz4 (&lz4-version;) - <token>&lz4-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:515
@@ -3655,7 +3655,7 @@ msgstr "MD5 sum: <literal>&ncurses-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:603
 msgid "Ninja (&ninja-version;) - <token>&ninja-size;</token>:"
-msgstr ""
+msgstr "Ninja (&ninja-version;) - <token>&ninja-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:605
@@ -3974,6 +3974,7 @@ msgstr "MD5 sum: <literal>&sqlite-md5;</literal>"
 msgid ""
 "Sqlite Documentation (&sqlite-version;) - <token>&sqlite-doc-size;</token>:"
 msgstr ""
+"Sqlite Documentation (&sqlite-version;) - <token>&sqlite-doc-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:749
@@ -4060,7 +4061,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:795
 msgid "SysVinit (&sysvinit-version;) - <token>&sysvinit-size;</token>:"
-msgstr ""
+msgstr "SysVinit (&sysvinit-version;) - <token>&sysvinit-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:797
@@ -4080,7 +4081,7 @@ msgstr "MD5 sum: <literal>&sysvinit-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:804
 msgid "Tar (&tar-version;) - <token>&tar-size;</token>:"
-msgstr ""
+msgstr "Tar (&tar-version;) - <token>&tar-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:806
@@ -4100,7 +4101,7 @@ msgstr "MD5 sum: <literal>&tar-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:813
 msgid "Tcl (&tcl-version;) - <token>&tcl-size;</token>:"
-msgstr ""
+msgstr "Tcl (&tcl-version;) - <token>&tcl-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:815
@@ -4120,7 +4121,7 @@ msgstr "MD5 sum: <literal>&tcl-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:822
 msgid "Tcl Documentation (&tcl-version;) - <token>&tcl-docs-size;</token>:"
-msgstr ""
+msgstr "Tcl Documentation (&tcl-version;) - <token>&tcl-docs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:824
@@ -4176,6 +4177,7 @@ msgstr "MD5 sum: <literal>&tzdata-md5;</literal>"
 #: en/chapter03/packages.xml:848
 msgid "Udev-lfs Tarball (&udev-lfs-version;) - <token>&udev-lfs-size;</token>:"
 msgstr ""
+"Udev-lfs Tarball (&udev-lfs-version;) - <token>&udev-lfs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:850
@@ -4237,7 +4239,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:894
 msgid "Wheel (&wheel-version;) - <token>&wheel-size;</token>:"
-msgstr ""
+msgstr "Wheel (&wheel-version;) - <token>&wheel-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:896
@@ -4777,7 +4779,7 @@ msgstr "<parameter>lfs</parameter>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:65
 msgid "This is the name of the new user."
-msgstr ""
+msgstr "이것은새 사용자 이름."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:71
@@ -11032,7 +11034,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/python.xml:53 en/chapter08/python.xml:52
 msgid "Prepare Python for compilation:"
-msgstr "Prepare Python for compilation:"
+msgstr "컴파일 위한 Python 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/python.xml:55
@@ -11051,7 +11053,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/python.xml:66
 msgid "This switch prevents installation of static libraries."
-msgstr ""
+msgstr "이 스위치는 정적 라이브러리 설치를 막는다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/python.xml:71
@@ -11064,6 +11066,8 @@ msgid ""
 "This switch disables the Python package installer, which is not needed at "
 "this stage."
 msgstr ""
+"이 스위치는 파이썬 패키지 인스톨러를 불가능하게 하며, 이 스테이지에는 필요치 "
+"않다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/python.xml:79
@@ -11073,7 +11077,7 @@ msgstr "<parameter>--without-static-libpython</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/python.xml:81
 msgid "This switch prevents building a large, but unneeded, static library."
-msgstr ""
+msgstr "이 스위치는 크지만 불필요한 정적 라이브러리 빌드를 막는다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter07/python.xml:93
@@ -11086,8 +11090,8 @@ msgid ""
 "not needed now and they will be built in <xref linkend=\"chapter-building-"
 "system\"/>."
 msgstr ""
-"일부 Python 3 모듈은 의존성 패키지가 아직 안 설치되었기 때문에 지금은 빌드할 "
-"수 없습니다. <filename>ssl</filename> 모듈의 경우, <computeroutput>Python "
+"일부 Python 3 모듈은 의존성 패키지가 아직 설치 안 되었기 때문에 지금은 빌드"
+"할 수 없습니다. <filename>ssl</filename> 모듈의 경우, <computeroutput>Python "
 "requires a OpenSSL 1.1.1 or newer</computeroutput>라는 메시지가 출력됩니다. "
 "이 메시지는 무시해야 합니다. 그저 최상위 수준의 <command>make</command> 명령"
 "이 실패하지 않았는지만 확인하십시오. 선택 사항인 모듈들은 지금 당장 필요하지 "
@@ -22937,7 +22941,7 @@ msgstr "<command>grub-editenv</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/grub.xml:158
 msgid "Is a tool to edit the environment block"
-msgstr "Syslinux 설정 파일을 grub.cfg 형식으로 변환."
+msgstr "Syslinux 설정 파일을 grub.cfg 형식으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/grub.xml:160
@@ -31341,8 +31345,8 @@ msgid ""
 "Kills processes by name; it sends a signal to all processes running any of "
 "the given commands"
 msgstr ""
-"이름으로 프로세스를 종료합니다. 지정된 명령 중 하나라도 실행 중인 모든 프로세"
-"스에 시그널을 보냄"
+"프로세스를 이름으로 종료. 지정된 명령 중 하나라도 실행 중인 모든 프로세스에 "
+"시그널을 보냄"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/psmisc.xml:95
@@ -31656,17 +31660,17 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/python.xml:195
 msgid "Contents of Python 3"
-msgstr ""
+msgstr "파이썬 3 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/python.xml:204
 msgid "idle3, pip3, pydoc3, python3, and python3-config"
-msgstr "idle3, pip3, pydoc3, python3, and python3-config"
+msgstr "idle3, pip3, pydoc3, python3, 및 python3-config"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/python.xml:207
 msgid "libpython&python-minor;.so and libpython3.so"
-msgstr "libpython&python-minor;.so and libpython3.so"
+msgstr "libpython&python-minor;.so 및 libpython3.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/python.xml:210
@@ -31674,7 +31678,7 @@ msgid ""
 "/usr/include/python&python-minor;, /usr/lib/python3, and /usr/share/doc/"
 "python-&python-version;"
 msgstr ""
-"/usr/include/python&python-minor;, /usr/lib/python3, and /usr/share/doc/"
+"/usr/include/python&python-minor;, /usr/lib/python3, 및 /usr/share/doc/"
 "python-&python-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
@@ -31689,6 +31693,10 @@ msgid ""
 "editor. For this script to run, you must have installed <application>Tk</"
 "application> before Python, so that the Tkinter Python module is built."
 msgstr ""
+"<application>Python</application>을 인식하는 GUI 에디터를 여는 래퍼 스크립"
+"트. 이 스크립트가 실행되려면,  파이썬을 설치하기 전에 <application>Tk</"
+"application>를 먼저 설치해서 Tkinter 파이썬 모듈이 빌드될 수 있도록 해야 한"
+"다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/python.xml:247
@@ -31706,6 +31714,8 @@ msgid ""
 "The package installer for Python. You can use pip to install packages from "
 "Python Package Index and other indexes."
 msgstr ""
+"파이썬을 위한 패키지 설치 도구. pip를 사용하여 파이썬 패키지 인덱스(Python "
+"Package Index) 및 기타 인덱스에서 패키지를 설치할 수 있다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/python.xml:260
@@ -31720,7 +31730,7 @@ msgstr "<command>pydoc3</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/python.xml:269
 msgid "is the <application>Python</application> documentation tool"
-msgstr ""
+msgstr "<application>Python</application> 문서 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/python.xml:272
@@ -31738,6 +31748,7 @@ msgid ""
 "is the interpreter for Python, an interpreted, interactive, object-oriented "
 "programming language"
 msgstr ""
+"인터프리터, 즉 대화형 객체 지향 프로그래밍 언어인 Python을 위한 인터프리터"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/python.xml:285
@@ -31862,7 +31873,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/readline.xml:69
 msgid "Prepare Readline for compilation:"
-msgstr "Prepare Readline for compilation:"
+msgstr "컴파일 위한 Readline 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/readline.xml:71
@@ -32528,7 +32539,7 @@ msgstr "<userinput>passwd root</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/shadow.xml:301
 msgid "Contents of Shadow"
-msgstr ""
+msgstr "Shadow 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/shadow.xml:309
@@ -33669,7 +33680,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysklogd.xml:100
 msgid "Contents of Sysklogd"
-msgstr ""
+msgstr "Sysklogd 내용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/sysklogd.xml:106 en/chapter08/sysklogd.xml:123
