@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-13 03:13+0900\n"
-"PO-Revision-Date: 2026-06-13 03:12+0900\n"
+"POT-Creation-Date: 2026-06-13 15:26+0900\n"
+"PO-Revision-Date: 2026-06-13 15:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -10536,6 +10536,7 @@ msgid ""
 "For our temporary set of tools, we only need to install three programs from "
 "Gettext."
 msgstr ""
+"우리 임시 도구 모음을 위해 Gettext에서 세 개의 프로그램만 설치하면 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:49 en/chapter08/gettext.xml:46
@@ -10561,6 +10562,8 @@ msgid ""
 "We do not need to install any of the shared Gettext libraries at this time, "
 "therefore there is no need to build them."
 msgstr ""
+"지금은 공유 Gettext 라이브러리를 설치할 필요가 없으므로, 이를 빌드할 필요 없"
+"습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/gettext.xml:70
@@ -10568,6 +10571,8 @@ msgid ""
 "Install the <command>msgfmt</command>, <command>msgmerge</command>, and "
 "<command>xgettext</command> programs:"
 msgstr ""
+"<command>msgfmt</command>, <command>msgmerge</command>, 및 "
+"<command>xgettext</command> 프로그램 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/gettext.xml:73
@@ -19849,6 +19854,8 @@ msgid ""
 "A library, intended to be used by LD_PRELOAD, that helps <filename "
 "class=\"libraryfile\">libintl</filename> log untranslated messages"
 msgstr ""
+"번역되지 않은 메시지를 <filename class=\"libraryfile\">libintl</filename>이 "
+"로그로 남기도록 돕는, LD_PRELOAD가 사용할 목적의 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gettext.xml:412
@@ -24088,7 +24095,7 @@ msgstr "<command>intltool-extract</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:104
 msgid "Generates header files that can be read by <command>gettext</command>"
-msgstr ""
+msgstr "<command>gettext</command>가 읽을 수 있는 헤더 파일을 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:106
