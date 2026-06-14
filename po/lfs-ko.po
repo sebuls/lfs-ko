@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-14 03:34+0900\n"
-"PO-Revision-Date: 2026-06-14 03:33+0900\n"
+"POT-Creation-Date: 2026-06-14 16:59+0900\n"
+"PO-Revision-Date: 2026-06-14 16:59+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -28241,6 +28241,10 @@ msgid ""
 "</filename> directory.  See the <filename>README</filename> file in that "
 "directory for further details."
 msgstr ""
+"이 패키지에는 테스트 모음(test suite)이 포함되어 있지만, 패키지를 설치한 후"
+"에 실행할 수 있습니다. 테스트는 디렉터리인 <filename "
+"class=\"directory\">test/</filename>에 위치해 있습니다. 자세한 내용은 해당 디"
+"렉터리에 있는 <filename>README</filename>파일을 보십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:129
@@ -28254,6 +28258,14 @@ msgid ""
 "<filename>curses.h</filename> is also edited to ensure the wide-character "
 "ABI to be used as what we've done in <xref linkend='ch-tools-ncurses'/>):"
 msgstr ""
+"이 패키지를 설치하면 <filename class=\"libraryfile\">libncursesw.so.&ncurses-"
+"base-version;</filename> 파일이 그 자리에서(in-place) 덮어쓰기 됩니다. 이 라"
+"이브러리 파일의 코드와 데이터를 사용 중인 셸 프로세스가 충돌할 수 있습니다. "
+"<literal>DESTDIR</literal>을 사용하여 패키지를 설치하고, <command>cp</"
+"command> 명령의 <parameter>--remove-destination</parameter> 옵션을 사용하여 "
+"라이브러리 파일을 올바르게 교체하십시오(우리가 <xref linkend='ch-tools-"
+"ncurses'/> 에서 수행했던 것처럼 와이드 문자 ABI가 사용되도록 헤더 파일 "
+"<filename>curses.h</filename>도 수정됩니다):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ncurses.xml:140
@@ -28278,6 +28290,11 @@ msgid ""
 "class='extension'>.so</filename> links are only safe with "
 "<filename>curses.h</filename> edited to always use the wide-character ABI):"
 msgstr ""
+"여전히 많은 애플리케이션은 링커가 와이드 문자를 지원하지 않는 Ncurses 라이브"
+"러리를 찾을 수 있을 것으로 아직 기대합니다. 심볼릭 링크를 사용하여 이러한 애"
+"플리케이션이 와이드 문자 라이브러리와 링크되도록 속이십시오(참고: <filename "
+"class='extension'>.so</filename> 링크는 <filename>curses.h</filename>가 항상 "
+"와이드 문자 ABI를 사용하도록 수정된 경우에만 안전):"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ncurses.xml:152
@@ -28299,6 +28316,8 @@ msgid ""
 "Finally, make sure that old applications that look for <filename "
 "class=\"libraryfile\">-lcurses</filename> at build time are still buildable:"
 msgstr ""
+"마지막으로, 빌드 타임에 <filename class=\"libraryfile\">-lcurses</filename> "
+"찾는 이전 애플리케이션들이 여전히 빌드될 수 있도록 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ncurses.xml:161
@@ -28309,7 +28328,7 @@ msgstr "<userinput remap=\"install\">ln -sfv libncursesw.so /usr/lib/libcurses.s
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:163
 msgid "If desired, install the Ncurses documentation:"
-msgstr ""
+msgstr "원한다면, Ncurses 문서를 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ncurses.xml:165
@@ -28370,7 +28389,7 @@ msgid ""
 "config, reset (link to tset), tabs, tic, toe, tput, and tset"
 msgstr ""
 "captoinfo (link to tic), clear, infocmp, infotocap (link to tic), ncursesw6-"
-"config, reset (link to tset), tabs, tic, toe, tput, and tset"
+"config, reset (link to tset), tabs, tic, toe, tput, 및 tset"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/ncurses.xml:213
@@ -28381,7 +28400,7 @@ msgid ""
 msgstr ""
 "libcurses.so (symlink), libform.so (symlink), libformw.so, libmenu.so "
 "(symlink), libmenuw.so, libncurses.so (symlink), libncursesw.so, libncurses+"
-"+w.so, libpanel.so (symlink), and libpanelw.so,"
+"+w.so, libpanel.so (symlink), 및 libpanelw.so,"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/ncurses.xml:225
