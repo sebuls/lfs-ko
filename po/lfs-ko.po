@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-14 16:59+0900\n"
-"PO-Revision-Date: 2026-06-14 16:59+0900\n"
+"POT-Creation-Date: 2026-06-15 03:00+0900\n"
+"PO-Revision-Date: 2026-06-15 02:59+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11225,6 +11225,10 @@ msgid ""
 "filename> directory as the location for the <filename>adjtime</filename> "
 "file. Create this directory with:"
 msgstr ""
+"FHS는  <filename class=\"directory\">/var/lib/hwclock</filename>디렉터리를 "
+"<filename class=\"directory\">/etc</filename> 디렉터리 대신 "
+"<filename>adjtime</filename> 파일의 위치로 사용할 것을 권장합니다. 이 디렉터"
+"리를 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/util-linux.xml:50
@@ -37011,7 +37015,7 @@ msgstr "<command>fsck</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:449
 msgid "Is used to check, and optionally repair, file systems"
-msgstr ""
+msgstr "파일 시스템을 점검하고, 선택적으로 복구하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:451
@@ -37090,7 +37094,7 @@ msgstr "<command>getopt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/util-linux.xml:502
 msgid "Parses options in the given command line"
-msgstr ""
+msgstr "주어진 명령줄에서 옵션을 파싱"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:504
@@ -37138,8 +37142,8 @@ msgid ""
 "Reads or sets the system's hardware clock, also called the Real-Time Clock "
 "(RTC) or Basic Input-Output System (BIOS)  clock"
 msgstr ""
-"Reads or sets the system's hardware clock, also called the Real-Time Clock "
-"(RTC) or Basic Input-Output System (BIOS)  clock"
+"시스템의 하드웨어 시계(실시간 시계(RTC, Real-Time Clock) 또는 Basic Input-"
+"Output System, BIOS 시계라고도 함)를 읽거나 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:537
@@ -38177,6 +38181,9 @@ msgid ""
 "past and in the future, with extremely high probability (2<superscript>128</"
 "superscript> UUIDs are possible)"
 msgstr ""
+"새로운 UUID를 생성합니다. 각각의 새로운 UUID는 무작위 숫자이며, 극히 높은 확"
+"률로 과거와 미래의 모든 시스템에서 생성된 모든 UUID 중 유일한 값을 가집니다"
+"(가능한 UUID의 개수는 2<superscript>128</superscript>)."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:1246
