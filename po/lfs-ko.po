@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-15 03:00+0900\n"
-"PO-Revision-Date: 2026-06-15 02:59+0900\n"
+"POT-Creation-Date: 2026-06-16 04:57+0900\n"
+"PO-Revision-Date: 2026-06-16 04:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -27207,12 +27207,12 @@ msgstr "EUC-JP"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:174
 msgid "Spanish (es)"
-msgstr "Spanish (es)"
+msgstr "스페인어 (es)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:176
 msgid "Korean (ko)"
-msgstr "Korean (ko)"
+msgstr "한국어 (ko)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:177
@@ -27222,7 +27222,7 @@ msgstr "EUC-KR"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:180
 msgid "Estonian (et)"
-msgstr "Estonian (et)"
+msgstr "에스토니아어 (et)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:182
@@ -27247,12 +27247,12 @@ msgstr "Latvian (lv)"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:192
 msgid "French (fr)"
-msgstr "French (fr)"
+msgstr "프랑스어 (fr)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:194
 msgid "Macedonian (mk)"
-msgstr "Macedonian (mk)"
+msgstr "마케도니아어 (mk)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:195 en/chapter08/man-db.xml:239
@@ -27287,7 +27287,7 @@ msgstr "인도네시아어 (id)"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:212
 msgid "Greek (el)"
-msgstr "Greek (el)"
+msgstr "그리스어 (el)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:213
@@ -27367,7 +27367,7 @@ msgstr "KOI8-U"
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:254
 msgid "Portuguese (pt)"
-msgstr "Portuguese (pt)"
+msgstr "포르투갈어 (pt)"
 
 #. type: Content of: <sect1><sect2><table><tgroup><tbody><row><entry>
 #: en/chapter08/man-db.xml:256
@@ -49000,6 +49000,7 @@ msgid ""
 "We would like to thank the following people and organizations for their "
 "contributions to the Linux From Scratch Project."
 msgstr ""
+"Linux From Scratch 프로젝트에 기여해 주신 다음 분들과 단체에 감사드립니다."
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:20
@@ -49007,6 +49008,8 @@ msgid ""
 "<ulink url=\"mailto:gerard@linuxfromscratch.org\">Gerard Beekmans</ulink> "
 "&lt;gerard@linuxfromscratch.org&gt; &ndash; LFS Creator"
 msgstr ""
+"<ulink url=\"mailto:gerard@linuxfromscratch.org\">Gerard Beekmans</ulink> "
+"&lt;gerard@linuxfromscratch.org&gt; &ndash; LFS Creator"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:26
@@ -49014,6 +49017,8 @@ msgid ""
 "<ulink url=\"mailto:bdubbs@linuxfromscratch.org\">Bruce Dubbs</ulink> "
 "&lt;bdubbs@linuxfromscratch.org&gt; &ndash; LFS Managing Editor"
 msgstr ""
+"<ulink url=\"mailto:bdubbs@linuxfromscratch.org\">Bruce Dubbs</ulink> "
+"&lt;bdubbs@linuxfromscratch.org&gt; &ndash; LFS Managing Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:32
@@ -49021,6 +49026,8 @@ msgid ""
 "<ulink url=\"mailto:jim@linuxfromscratch.org\">Jim Gifford</ulink> "
 "&lt;jim@linuxfromscratch.org&gt; &ndash; CLFS Project Co-Leader"
 msgstr ""
+"<ulink url=\"mailto:jim@linuxfromscratch.org\">Jim Gifford</ulink> "
+"&lt;jim@linuxfromscratch.org&gt; &ndash; CLFS Project Co-Leader"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:38
@@ -49028,6 +49035,8 @@ msgid ""
 "<ulink url=\"mailto:pierre@linuxfromscratch.org\">Pierre Labastie</ulink> "
 "&lt;pierre@linuxfromscratch.org&gt; &ndash; BLFS Editor and ALFS Lead"
 msgstr ""
+"<ulink url=\"mailto:pierre@linuxfromscratch.org\">Pierre Labastie</ulink> "
+"&lt;pierre@linuxfromscratch.org&gt; &ndash; BLFS Editor and ALFS Lead"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:43
@@ -49035,6 +49044,8 @@ msgid ""
 "<ulink url=\"mailto:dj@linuxfromscratch.org\">DJ Lucas</ulink> "
 "&lt;dj@linuxfromscratch.org&gt; &ndash; LFS and BLFS Editor"
 msgstr ""
+"<ulink url=\"mailto:dj@linuxfromscratch.org\">DJ Lucas</ulink> "
+"&lt;dj@linuxfromscratch.org&gt; &ndash; LFS and BLFS Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:48
@@ -49042,6 +49053,8 @@ msgid ""
 "<ulink url=\"mailto:ken@linuxfromscratch.org\">Ken Moffat</ulink> "
 "&lt;ken@linuxfromscratch.org&gt; &ndash; BLFS Editor"
 msgstr ""
+"<ulink url=\"mailto:ken@linuxfromscratch.org\">Ken Moffat</ulink> "
+"&lt;ken@linuxfromscratch.org&gt; &ndash; BLFS Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:53
@@ -49051,6 +49064,9 @@ msgid ""
 "submitting bug reports, instructions, and their experiences with installing "
 "various packages."
 msgstr ""
+"다양한 LFS 및 BLFS 메일링 리스트에서 제안을 해주고, 책을 테스트하고, 버그 리"
+"포트와 지침을 제출하며, 여러 패키지를 설치한 경험을 공유하여 이 책이 완성될 "
+"수 있도록 도와주신 수많은 분들께도 감사드립니다."
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:61
@@ -49063,6 +49079,8 @@ msgid ""
 "<ulink url=\"mailto:macana@macana-es.com\">Manuel Canales Esparcia</ulink> "
 "&lt;macana@macana-es.com&gt; &ndash; Spanish LFS translation project"
 msgstr ""
+"<ulink url=\"mailto:macana@macana-es.com\">Manuel Canales Esparcia</ulink> "
+"&lt;macana@macana-es.com&gt; &ndash; 스페인어 LFS translation project"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:72
@@ -49071,6 +49089,8 @@ msgid ""
 "&lt;johan@linuxfromscratch.org&gt; &ndash; French LFS translation project "
 "until 2008"
 msgstr ""
+"<ulink url=\"mailto:johan@linuxfromscratch.org\">Johan Lenglet</ulink> "
+"&lt;johan@linuxfromscratch.org&gt; &ndash; 프랑스어 LFS 번역 2008년까지"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:78
@@ -49079,6 +49099,9 @@ msgid ""
 "ulink> &lt;jmengual@linuxfromscratch.org&gt; &ndash; French LFS translation "
 "project 2008-2016"
 msgstr ""
+"<ulink url=\"mailto:jmengual@linuxfromscratch.org\">Jean-Philippe Mengual </"
+"ulink> &lt;jmengual@linuxfromscratch.org&gt; &ndash; 프랑스어 LFS 번역 "
+"2008-2016"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:84
@@ -49087,6 +49110,9 @@ msgid ""
 "ulink> &lt;jlepiller@linuxfromscratch.org&gt; &ndash; French LFS translation "
 "project 2017-present"
 msgstr ""
+"<ulink url=\"mailto:jlepiller@linuxfromscratch.org\">Julien Lepiller </"
+"ulink> &lt;jlepiller@linuxfromscratch.org&gt; &ndash; 프랑스어 LFS 번역 "
+"project 2017-현재"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:90
@@ -49095,6 +49121,9 @@ msgid ""
 "&lt;lizardo@linuxfromscratch.org&gt; &ndash; Portuguese LFS translation "
 "project historical"
 msgstr ""
+"<ulink url=\"mailto:lizardo@linuxfromscratch.org\">Anderson Lizardo</ulink> "
+"&lt;lizardo@linuxfromscratch.org&gt; &ndash; 포르투갈어 LFS 번역 project "
+"historical"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:96
@@ -49103,6 +49132,8 @@ msgid ""
 "&lt;jafesp@gmail.com&gt; &ndash; Portuguese LFS translation project 2022-"
 "present"
 msgstr ""
+"<ulink url=\"mailto:jafesp@gmail.com\">Jamenson Espindula</ulink> "
+"&lt;jafesp@gmail.com&gt; &ndash; 포르투갈어 LFS 번역 프로젝트 2022-현재"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:102
@@ -49110,6 +49141,8 @@ msgid ""
 "<ulink url=\"mailto:tr@erdfunkstelle.de\">Thomas Reitelbach </ulink> "
 "&lt;tr@erdfunkstelle.de&gt; &ndash; German LFS translation project"
 msgstr ""
+"<ulink url=\"mailto:tr@erdfunkstelle.de\">Thomas Reitelbach </ulink> "
+"&lt;tr@erdfunkstelle.de&gt; &ndash; 독일어 LF S번역 프로젝트"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:121
@@ -49127,6 +49160,8 @@ msgid ""
 "<ulink url=\"mailto:scott@osuosl.org\">Scott Kveton</ulink> "
 "&lt;scott@osuosl.org&gt; &ndash; lfs.oregonstate.edu mirror"
 msgstr ""
+"<ulink url=\"mailto:scott@osuosl.org\">Scott Kveton</ulink> "
+"&lt;scott@osuosl.org&gt; &ndash; lfs.oregonstate.edu mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:133
@@ -49134,6 +49169,8 @@ msgid ""
 "<ulink url=\"mailto:lost@l-w.net\">William Astle</ulink> &lt;lost@l-"
 "w.net&gt; &ndash; ca.linuxfromscratch.org mirror"
 msgstr ""
+"<ulink url=\"mailto:lost@l-w.net\">William Astle</ulink> &lt;lost@l-"
+"w.net&gt; &ndash; ca.linuxfromscratch.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:138
@@ -49141,6 +49178,8 @@ msgid ""
 "<ulink url=\"mailto:eujon.sellers@gmail.com\">Eujon Sellers</ulink> "
 "&lt;jpolen@rackspace.com&gt; &ndash; lfs.introspeed.com mirror"
 msgstr ""
+"<ulink url=\"mailto:eujon.sellers@gmail.com\">Eujon Sellers</ulink> "
+"&lt;jpolen@rackspace.com&gt; &ndash; lfs.introspeed.com 미러"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:143
@@ -49148,11 +49187,13 @@ msgid ""
 "<ulink url=\"mailto:justin@knierim.org\">Justin Knierim</ulink> "
 "&lt;tim@idge.net&gt; &ndash; lfs-matrix.net mirror"
 msgstr ""
+"<ulink url=\"mailto:justin@knierim.org\">Justin Knierim</ulink> "
+"&lt;tim@idge.net&gt; &ndash; lfs-matrix.net mirror"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:149
 msgid "South American Mirrors"
-msgstr "South American Mirrors"
+msgstr "남아메리카 미러"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:154
@@ -49161,6 +49202,9 @@ msgid ""
 "ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash; lfsmirror.lfs-es.info "
 "mirror"
 msgstr ""
+"<ulink url=\"mailto:manuel@linuxfromscratch.org\">Manuel Canales Esparcia</"
+"ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash; lfsmirror.lfs-es.info "
+"mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:160
@@ -49168,6 +49212,8 @@ msgid ""
 "<ulink url=\"mailto:lfalcon@thymbra.com\">Luis Falcon</ulink> &lt;Luis "
 "Falcon&gt; &ndash; torredehanoi.org mirror"
 msgstr ""
+"<ulink url=\"mailto:lfalcon@thymbra.com\">Luis Falcon</ulink> &lt;Luis "
+"Falcon&gt; &ndash; torredehanoi.org mirror"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:166
@@ -49180,6 +49226,8 @@ msgid ""
 "<ulink url=\"mailto:guido@primerelay.net\">Guido Passet</ulink> "
 "&lt;guido@primerelay.net&gt; &ndash; nl.linuxfromscratch.org mirror"
 msgstr ""
+"<ulink url=\"mailto:guido@primerelay.net\">Guido Passet</ulink> "
+"&lt;guido@primerelay.net&gt; &ndash; nl.linuxfromscratch.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:176
@@ -49187,6 +49235,8 @@ msgid ""
 "<ulink url=\"mailto:baafie@planet.nl\">Bastiaan Jacques</ulink> "
 "&lt;baafie@planet.nl&gt; &ndash; lfs.pagefault.net mirror"
 msgstr ""
+"<ulink url=\"mailto:baafie@planet.nl\">Bastiaan Jacques</ulink> "
+"&lt;baafie@planet.nl&gt; &ndash; lfs.pagefault.net mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:181
@@ -49194,11 +49244,13 @@ msgid ""
 "<ulink url=\"mailto:sven.cranshoff@lineo.be\">Sven Cranshoff</ulink> "
 "&lt;sven.cranshoff@lineo.be&gt; &ndash; lfs.lineo.be mirror"
 msgstr ""
+"<ulink url=\"mailto:sven.cranshoff@lineo.be\">Sven Cranshoff</ulink> "
+"&lt;sven.cranshoff@lineo.be&gt; &ndash; lfs.lineo.be mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:186
 msgid "Scarlet Belgium &ndash; lfs.scarlet.be mirror"
-msgstr ""
+msgstr "Scarlet Belgium &ndash; lfs.scarlet.be mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:190
@@ -49206,6 +49258,8 @@ msgid ""
 "<ulink url=\"mailto:info@aliensoft.org\">Sebastian Faulborn</ulink> "
 "&lt;info@aliensoft.org&gt; &ndash; lfs.aliensoft.org mirror"
 msgstr ""
+"<ulink url=\"mailto:info@aliensoft.org\">Sebastian Faulborn</ulink> "
+"&lt;info@aliensoft.org&gt; &ndash; lfs.aliensoft.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:195
@@ -49213,6 +49267,8 @@ msgid ""
 "<ulink url=\"mailto:stuart@dontuse.ms\">Stuart Fox</ulink> "
 "&lt;stuart@dontuse.ms&gt; &ndash; lfs.dontuse.ms mirror"
 msgstr ""
+"<ulink url=\"mailto:stuart@dontuse.ms\">Stuart Fox</ulink> "
+"&lt;stuart@dontuse.ms&gt; &ndash; lfs.dontuse.ms mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:200
@@ -49220,6 +49276,8 @@ msgid ""
 "<ulink url=\"mailto:admin@realhost.de\">Ralf Uhlemann</ulink> "
 "&lt;admin@realhost.de&gt; &ndash; lfs.oss-mirror.org mirror"
 msgstr ""
+"<ulink url=\"mailto:admin@realhost.de\">Ralf Uhlemann</ulink> "
+"&lt;admin@realhost.de&gt; &ndash; lfs.oss-mirror.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:205
@@ -49227,6 +49285,8 @@ msgid ""
 "<ulink url=\"mailto:Antonin.Sprinzl@tuwien.ac.at\">Antonin Sprinzl</ulink> "
 "&lt;Antonin.Sprinzl@tuwien.ac.at&gt; &ndash; at.linuxfromscratch.org mirror"
 msgstr ""
+"<ulink url=\"mailto:Antonin.Sprinzl@tuwien.ac.at\">Antonin Sprinzl</ulink> "
+"&lt;Antonin.Sprinzl@tuwien.ac.at&gt; &ndash; at.linuxfromscratch.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:211
@@ -49234,6 +49294,8 @@ msgid ""
 "<ulink url=\"mailto:fredan-lfs@fredan.org\">Fredrik Danerklint</ulink> "
 "&lt;fredan-lfs@fredan.org&gt; &ndash; se.linuxfromscratch.org mirror"
 msgstr ""
+"<ulink url=\"mailto:fredan-lfs@fredan.org\">Fredrik Danerklint</ulink> "
+"&lt;fredan-lfs@fredan.org&gt; &ndash; se.linuxfromscratch.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:217
@@ -49241,6 +49303,8 @@ msgid ""
 "<ulink url=\"mailto:franck@linuxpourtous.com\">Franck</ulink> "
 "&lt;franck@linuxpourtous.com&gt; &ndash; lfs.linuxpourtous.com mirror"
 msgstr ""
+"<ulink url=\"mailto:franck@linuxpourtous.com\">Franck</ulink> "
+"&lt;franck@linuxpourtous.com&gt; &ndash; lfs.linuxpourtous.com mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:222
@@ -49248,6 +49312,8 @@ msgid ""
 "<ulink url=\"mailto:baque@cict.fr\">Philippe Baque</ulink> "
 "&lt;baque@cict.fr&gt; &ndash; lfs.cict.fr mirror"
 msgstr ""
+"<ulink url=\"mailto:baque@cict.fr\">Philippe Baque</ulink> "
+"&lt;baque@cict.fr&gt; &ndash; lfs.cict.fr mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:227
@@ -49255,6 +49321,8 @@ msgid ""
 "<ulink url=\"mailto:gyouja@pilgrims.ru\">Vitaly Chekasin</ulink> "
 "&lt;gyouja@pilgrims.ru&gt; &ndash; lfs.pilgrims.ru mirror"
 msgstr ""
+"<ulink url=\"mailto:gyouja@pilgrims.ru\">Vitaly Chekasin</ulink> "
+"&lt;gyouja@pilgrims.ru&gt; &ndash; lfs.pilgrims.ru mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:232
@@ -49262,6 +49330,8 @@ msgid ""
 "<ulink url=\"mailto:kontakt@wankoo.org\">Benjamin Heil</ulink> "
 "&lt;kontakt@wankoo.org&gt; &ndash; lfs.wankoo.org mirror"
 msgstr ""
+"<ulink url=\"mailto:kontakt@wankoo.org\">Benjamin Heil</ulink> "
+"&lt;kontakt@wankoo.org&gt; &ndash; lfs.wankoo.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:237
@@ -49269,6 +49339,8 @@ msgid ""
 "<ulink url=\"mailto:info@linuxfromscratch.org.ru\">Anton Maisak</ulink> "
 "&lt;info@linuxfromscratch.org.ru&gt; &ndash; linuxfromscratch.org.ru mirror"
 msgstr ""
+"<ulink url=\"mailto:info@linuxfromscratch.org.ru\">Anton Maisak</ulink> "
+"&lt;info@linuxfromscratch.org.ru&gt; &ndash; linuxfromscratch.org.ru mirror"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:243
@@ -49281,6 +49353,8 @@ msgid ""
 "<ulink url=\"mailto:satit@wbac.ac.th\">Satit Phermsawang</ulink> "
 "&lt;satit@wbac.ac.th&gt; &ndash; lfs.phayoune.org mirror"
 msgstr ""
+"<ulink url=\"mailto:satit@wbac.ac.th\">Satit Phermsawang</ulink> "
+"&lt;satit@wbac.ac.th&gt; &ndash; lfs.phayoune.org mirror"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:253
@@ -49288,6 +49362,8 @@ msgid ""
 "<ulink url=\"mailto:info@shizu-net.jp\">Shizunet Co.,Ltd.</ulink> "
 "&lt;info@shizu-net.jp&gt; &ndash; lfs.mirror.shizu-net.jp mirror"
 msgstr ""
+"<ulink url=\"mailto:info@shizu-net.jp\">Shizunet Co.,Ltd.</ulink> "
+"&lt;info@shizu-net.jp&gt; &ndash; lfs.mirror.shizu-net.jp mirror"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:264
@@ -49300,11 +49376,13 @@ msgid ""
 "<ulink url=\"mailto:jason@dstc.edu.au\">Jason Andrade</ulink> "
 "&lt;jason@dstc.edu.au&gt; &ndash; au.linuxfromscratch.org mirror"
 msgstr ""
+"<ulink url=\"mailto:jason@dstc.edu.au\">Jason Andrade</ulink> "
+"&lt;jason@dstc.edu.au&gt; &ndash; au.linuxfromscratch.org mirror"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/acknowledgments.xml:275
 msgid "Former Project Team Members"
-msgstr ""
+msgstr "이전 프로젝트 팀 멤버"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:280
@@ -49312,6 +49390,8 @@ msgid ""
 "<ulink url=\"mailto:theladyskye@linuxfromscratch.org\">Christine Barczak</"
 "ulink> &lt;theladyskye@linuxfromscratch.org&gt; &ndash; LFS Book Editor"
 msgstr ""
+"<ulink url=\"mailto:theladyskye@linuxfromscratch.org\">Christine Barczak</"
+"ulink> &lt;theladyskye@linuxfromscratch.org&gt; &ndash; LFS Book Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:286
@@ -49320,6 +49400,9 @@ msgid ""
 "Editor, HLFS Project Leader, BLFS Editor, Hints and Patches Project "
 "Maintainer"
 msgstr ""
+"Archaic &lt;archaic@linuxfromscratch.org&gt; &ndash; LFS Technical Writer/"
+"Editor, HLFS Project Leader, BLFS Editor, Hints and Patches Project "
+"Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:293
@@ -49328,6 +49411,9 @@ msgid ""
 "&lt;matthew@linuxfromscratch.org&gt; &ndash; LFS Project Leader, LFS "
 "Technical Writer/Editor"
 msgstr ""
+"<ulink url=\"mailto:matthew@linuxfromscratch.org\">Matthew Burgess</ulink> "
+"&lt;matthew@linuxfromscratch.org&gt; &ndash; LFS Project Leader, LFS "
+"Technical Writer/Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:299
@@ -49335,6 +49421,8 @@ msgid ""
 "<ulink url=\"mailto:nathan@linuxfromscratch.org\">Nathan Coulson</ulink> "
 "&lt;nathan@linuxfromscratch.org&gt; &ndash; LFS-Bootscripts Maintainer"
 msgstr ""
+"<ulink url=\"mailto:nathan@linuxfromscratch.org\">Nathan Coulson</ulink> "
+"&lt;nathan@linuxfromscratch.org&gt; &ndash; LFS-Bootscripts Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:305
@@ -49357,6 +49445,8 @@ msgid ""
 "<ulink url=\"mailto:jeroen@linuxfromscratch.org\">Jeroen Coumans</ulink> "
 "&lt;jeroen@linuxfromscratch.org&gt; &ndash; Website Developer, FAQ Maintainer"
 msgstr ""
+"<ulink url=\"mailto:jeroen@linuxfromscratch.org\">Jeroen Coumans</ulink> "
+"&lt;jeroen@linuxfromscratch.org&gt; &ndash; Website Developer, FAQ Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:323
@@ -49365,16 +49455,19 @@ msgid ""
 "ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash; LFS/BLFS/HLFS XML and XSL "
 "Maintainer"
 msgstr ""
+"<ulink url=\"mailto:manuel@linuxfromscratch.org\">Manuel Canales Esparcia</"
+"ulink> &lt;manuel@linuxfromscratch.org&gt; &ndash; LFS/BLFS/HLFS XML and XSL "
+"Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:329
 msgid "Alex Groenewoud &ndash; LFS Technical Writer"
-msgstr ""
+msgstr "Alex Groenewoud &ndash; LFS Technical Writer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:333
 msgid "Marc Heerdink"
-msgstr ""
+msgstr "Marc Heerdink"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:337
@@ -49383,6 +49476,9 @@ msgid ""
 "&lt;jhuntwork@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, LFS "
 "LiveCD Maintainer"
 msgstr ""
+"<ulink url=\"mailto:jhuntwork@linuxfromscratch.org\">Jeremy Huntwork</ulink> "
+"&lt;jhuntwork@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, LFS "
+"LiveCD Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:343
@@ -49390,11 +49486,13 @@ msgid ""
 "<ulink url=\"mailto:bryan@linuxfromscratch.org\">Bryan Kadzban</ulink> "
 "&lt;bryan@linuxfromscratch.org&gt; &ndash; LFS Technical Writer"
 msgstr ""
+"<ulink url=\"mailto:bryan@linuxfromscratch.org\">Bryan Kadzban</ulink> "
+"&lt;bryan@linuxfromscratch.org&gt; &ndash; LFS Technical Writer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:349
 msgid "Mark Hymers"
-msgstr ""
+msgstr "Mark Hymers"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:352
@@ -49407,6 +49505,8 @@ msgid ""
 "<ulink url=\"mailto:nicholas@linuxfromscratch.org\">Nicholas Leippe</ulink> "
 "&lt;nicholas@linuxfromscratch.org&gt; &ndash; Wiki Maintainer"
 msgstr ""
+"<ulink url=\"mailto:nicholas@linuxfromscratch.org\">Nicholas Leippe</ulink> "
+"&lt;nicholas@linuxfromscratch.org&gt; &ndash; Wiki Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:361
@@ -49415,6 +49515,9 @@ msgid ""
 "&lt;lizardo@linuxfromscratch.org&gt; &ndash; Website Backend-Scripts "
 "Maintainer"
 msgstr ""
+"<ulink url=\"mailto:lizardo@linuxfromscratch.org\">Anderson Lizardo</ulink> "
+"&lt;lizardo@linuxfromscratch.org&gt; &ndash; Website Backend-Scripts "
+"Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:367
@@ -49422,6 +49525,8 @@ msgid ""
 "<ulink url=\"mailto:randy@linuxfromscratch.org\">Randy McMurchy</ulink> "
 "&lt;randy@linuxfromscratch.org&gt; &ndash; BLFS Project Leader, LFS Editor"
 msgstr ""
+"<ulink url=\"mailto:randy@linuxfromscratch.org\">Randy McMurchy</ulink> "
+"&lt;randy@linuxfromscratch.org&gt; &ndash; BLFS Project Leader, LFS Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:373
@@ -49429,6 +49534,8 @@ msgid ""
 "<ulink url=\"mailto:dnicholson@linuxfromscratch.org\">Dan Nicholson</ulink> "
 "&lt;dnicholson@linuxfromscratch.org&gt; &ndash; LFS and BLFS Editor"
 msgstr ""
+"<ulink url=\"mailto:dnicholson@linuxfromscratch.org\">Dan Nicholson</ulink> "
+"&lt;dnicholson@linuxfromscratch.org&gt; &ndash; LFS and BLFS Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:379
@@ -49437,6 +49544,9 @@ msgid ""
 "ulink> &lt;alexander@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, "
 "LFS Internationalization Editor, LFS Live CD Maintainer"
 msgstr ""
+"<ulink url=\"mailto:alexander@linuxfromscratch.org\">Alexander E. Patrakov</"
+"ulink> &lt;alexander@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, "
+"LFS Internationalization Editor, LFS Live CD Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:386
@@ -49449,6 +49559,8 @@ msgid ""
 "<ulink url=\"mailto:scot@linuxfromscratch.org\">Scot Mc Pherson</ulink> "
 "&lt;scot@linuxfromscratch.org&gt; &ndash; LFS NNTP Gateway Maintainer"
 msgstr ""
+"<ulink url=\"mailto:scot@linuxfromscratch.org\">Scot Mc Pherson</ulink> "
+"&lt;scot@linuxfromscratch.org&gt; &ndash; LFS NNTP Gateway Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:396
@@ -49456,6 +49568,8 @@ msgid ""
 "<ulink url=\"mailto:renodr@linuxfromscratch.org\">Douglas R. Reno</ulink> "
 "&lt;renodr@linuxfromscratch.org&gt; &ndash; Systemd Editor"
 msgstr ""
+"<ulink url=\"mailto:renodr@linuxfromscratch.org\">Douglas R. Reno</ulink> "
+"&lt;renodr@linuxfromscratch.org&gt; &ndash; Systemd Editor"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:401
@@ -49463,6 +49577,8 @@ msgid ""
 "<ulink url=\"mailto:ryan@linuxfromscratch.org\">Ryan Oliver</ulink> "
 "&lt;ryan@linuxfromscratch.org&gt; &ndash; CLFS Project Co-Leader"
 msgstr ""
+"<ulink url=\"mailto:ryan@linuxfromscratch.org\">Ryan Oliver</ulink> "
+"&lt;ryan@linuxfromscratch.org&gt; &ndash; CLFS Project Co-Leader"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:407
@@ -49471,11 +49587,14 @@ msgid ""
 "&lt;gschafer@zip.com.au&gt; &ndash; LFS Technical Writer and Architect of "
 "the Next Generation 64-bit-enabling Build Method"
 msgstr ""
+"<ulink url=\"mailto:gschafer@zip.com.au\">Greg Schafer</ulink> "
+"&lt;gschafer@zip.com.au&gt; &ndash; LFS Technical Writer and Architect of "
+"the Next Generation 64-bit-enabling Build Method"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:413
 msgid "Jesse Tie-Ten-Quee &ndash; LFS Technical Writer"
-msgstr ""
+msgstr "Jesse Tie-Ten-Quee &ndash; LFS Technical Writer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:417
@@ -49483,6 +49602,8 @@ msgid ""
 "<ulink url=\"mailto:jwrober@linuxfromscratch.org\">James Robertson</ulink> "
 "&lt;jwrober@linuxfromscratch.org&gt; &ndash; Bugzilla Maintainer"
 msgstr ""
+"<ulink url=\"mailto:jwrober@linuxfromscratch.org\">James Robertson</ulink> "
+"&lt;jwrober@linuxfromscratch.org&gt; &ndash; Bugzilla Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:423
@@ -49491,6 +49612,9 @@ msgid ""
 "&lt;tushar@linuxfromscratch.org&gt; &ndash; BLFS Book Editor, Hints and "
 "Patches Project Leader"
 msgstr ""
+"<ulink url=\"mailto:tushar@linuxfromscratch.org\">Tushar Teredesai</ulink> "
+"&lt;tushar@linuxfromscratch.org&gt; &ndash; BLFS Book Editor, Hints and "
+"Patches Project Leader"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:429
@@ -49499,6 +49623,9 @@ msgid ""
 "&lt;jeremy@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, Bugzilla "
 "Maintainer, LFS-Bootscripts Maintainer"
 msgstr ""
+"<ulink url=\"mailto:jeremy@linuxfromscratch.org\">Jeremy Utley</ulink> "
+"&lt;jeremy@linuxfromscratch.org&gt; &ndash; LFS Technical Writer, Bugzilla "
+"Maintainer, LFS-Bootscripts Maintainer"
 
 #. type: Content of: <appendix><itemizedlist><listitem><para>
 #: en/appendices/acknowledgments.xml:435
@@ -49506,6 +49633,8 @@ msgid ""
 "<ulink url=\"mailto:zwinkles@gmail.com\">Zack Winkles</ulink> "
 "&lt;zwinkles@gmail.com&gt; &ndash; LFS Technical Writer"
 msgstr ""
+"<ulink url=\"mailto:zwinkles@gmail.com\">Zack Winkles</ulink> "
+"&lt;zwinkles@gmail.com&gt; &ndash; LFS Technical Writer"
 
 #. type: Attribute 'xreflabel' of: <appendix>
 #: en/appendices/acronymlist.xml:8
@@ -49575,7 +49704,7 @@ msgstr "<emphasis role=\"bold\">BLFS</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:56
 msgid "Beyond Linux From Scratch"
-msgstr ""
+msgstr "Beyond Linux From Scratch"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:61
@@ -49585,7 +49714,7 @@ msgstr "<emphasis role=\"bold\">BSD</emphasis>"
 #. type: Content of: <appendix><variablelist><varlistentry><listitem><para>
 #: en/appendices/acronymlist.xml:63
 msgid "Berkeley Software Distribution"
-msgstr ""
+msgstr "Berkeley Software Distribution"
 
 #. type: Content of: <appendix><variablelist><varlistentry><term>
 #: en/appendices/acronymlist.xml:68
