@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-16 17:51+0900\n"
-"PO-Revision-Date: 2026-06-16 17:51+0900\n"
+"POT-Creation-Date: 2026-06-16 22:40+0900\n"
+"PO-Revision-Date: 2026-06-16 22:39+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -27666,7 +27666,7 @@ msgstr "Man-pages"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/man-pages.xml:26
 msgid "The Man-pages package contains over 2,400 man pages."
-msgstr ""
+msgstr "Man-pages 패키지에는 2,400개가 넘는 매뉴얼 페이지가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-pages.xml:33
@@ -27728,6 +27728,10 @@ msgid ""
 "but currently there is no way to disable them except passing <parameter>-R</"
 "parameter> explicitly via the command line."
 msgstr ""
+"이것은 <command>make</command>가 어떠한 내장 변수도 설정하는 것을 막습니다. "
+"매뉴얼 페이지를 빌드하는 시스템은 내장 변수와 잘 작동하지 않지만, 현재로서는 "
+"명령줄을 통해 <parameter>-R</parameter>을 명시적으로 전달하는 방법 외에는 이"
+"를 비활성화할 방법이 없습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-pages.xml:69
@@ -27740,6 +27744,8 @@ msgid ""
 "This prevents the building system from emitting many <computeroutput>git: "
 "command not found</computeroutput> warnings lines."
 msgstr ""
+"이것은 빌드 시스템이 수많은 <computeroutput>git: command not found</"
+"computeroutput> 경고 줄을 출력하는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-pages.xml:81
@@ -27749,7 +27755,7 @@ msgstr "Man-page 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-pages.xml:87
 msgid "various man pages"
-msgstr "various man pages"
+msgstr "다양한 man 페이지"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-pages.xml:97
@@ -27761,12 +27767,12 @@ msgstr "<filename>man pages</filename>"
 msgid ""
 "Describe C programming language functions, important device files, and "
 "significant configuration files"
-msgstr ""
+msgstr "C 프로그래밍 언어 함수, 중요한 장치 파일, 그리고 주요 설정 파일을 설명"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/man-pages.xml:102
 msgid "man pages"
-msgstr "man pages"
+msgstr "man 페이지"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/markupsafe.xml:14
