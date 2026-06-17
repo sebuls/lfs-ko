@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-17 21:23+0900\n"
-"PO-Revision-Date: 2026-06-17 21:23+0900\n"
+"POT-Creation-Date: 2026-06-18 02:49+0900\n"
+"PO-Revision-Date: 2026-06-18 02:47+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11660,6 +11660,8 @@ msgid ""
 "<productname>attr</productname> <productnumber>&attr-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>attr</productname> <productnumber>&attr-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/attr.xml:17
@@ -11678,6 +11680,8 @@ msgid ""
 "The Attr package contains utilities to administer the extended attributes of "
 "filesystem objects."
 msgstr ""
+"Attr 패키지에는 파일 시스템 객체의 확장 속성(extended attributes)을 관리하는 "
+"유틸리티가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/attr.xml:34
@@ -11692,7 +11696,7 @@ msgstr "&attr-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/attr.xml:42
 msgid "Installation of Attr"
-msgstr "Installation of Attr"
+msgstr "Attr 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/attr.xml:44
@@ -11719,6 +11723,8 @@ msgid ""
 "The tests must be run on a filesystem that supports extended attributes such "
 "as the ext2, ext3, or ext4 filesystems.  To test the results, issue:"
 msgstr ""
+"테스트는 ext2, ext3 또는 ext4 파일 시스템과 같이 확장 속성을 지원하는 파일 시"
+"스템에서 실행해야 합니다. 결과를 테스트하려면 다음을 실행:"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/attr.xml:68
@@ -11728,7 +11734,7 @@ msgstr "Attr 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/attr.xml:76
 msgid "attr, getfattr, and setfattr"
-msgstr "attr, getfattr, and setfattr"
+msgstr "attr, getfattr, 및 setfattr"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/attr.xml:77
@@ -11748,7 +11754,7 @@ msgstr "<command>attr</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/attr.xml:90
 msgid "Extends attributes on filesystem objects"
-msgstr ""
+msgstr "파일 시스템 객체의 속성을 확장"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/attr.xml:92
@@ -11763,7 +11769,7 @@ msgstr "<command>getfattr</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/attr.xml:100
 msgid "Gets the extended attributes of filesystem objects"
-msgstr ""
+msgstr "파일 시스템 객체의 확장 속성을 가져옴"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/attr.xml:102
@@ -11778,7 +11784,7 @@ msgstr "<command>setfattr</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/attr.xml:110
 msgid "Sets the extended attributes of filesystem objects"
-msgstr ""
+msgstr "파일 시스템 객체의 확장 속성을 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/attr.xml:112
@@ -11793,7 +11799,7 @@ msgstr "<filename class=\"libraryfile\">libattr</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/attr.xml:120
 msgid "Contains the library functions for manipulating extended attributes"
-msgstr ""
+msgstr "확장 속성을 조작하기 위한 라이브러리 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/attr.xml:122
