@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-17 03:36+0900\n"
-"PO-Revision-Date: 2026-06-17 03:36+0900\n"
+"POT-Creation-Date: 2026-06-17 21:23+0900\n"
+"PO-Revision-Date: 2026-06-17 21:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -28010,6 +28010,8 @@ msgid ""
 "The MPC package contains a library for the arithmetic of complex numbers "
 "with arbitrarily high precision and correct rounding of the result."
 msgstr ""
+"MPC 패키지에는 임의 높이 정밀도와 결과값의 올바른 반올림을 지원하는 복소수 산"
+"술 연산용 라이브러리가 들어 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/mpc.xml:35
@@ -28029,7 +28031,7 @@ msgstr "MPC 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/mpc.xml:45
 msgid "Prepare MPC for compilation:"
-msgstr "Prepare MPC for compilation:"
+msgstr "컴파일 위한 MPC 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/mpc.xml:47
@@ -28046,7 +28048,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/mpc.xml:69
 msgid "Contents of MPC"
-msgstr ""
+msgstr "MPC 내용"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/mpc.xml:76
@@ -28066,7 +28068,7 @@ msgstr "<filename class=\"libraryfile\">libmpc</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/mpc.xml:89
 msgid "Contains complex math functions"
-msgstr ""
+msgstr "복소 수학 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/mpc.xml:91
