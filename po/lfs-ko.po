@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-18 02:49+0900\n"
-"PO-Revision-Date: 2026-06-18 02:47+0900\n"
+"POT-Creation-Date: 2026-06-19 01:08+0900\n"
+"PO-Revision-Date: 2026-06-19 01:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -47899,6 +47899,10 @@ msgid ""
 "over what packages are desired; you may choose not to install some packages "
 "that are specified by the LSB."
 msgstr ""
+"많은 이들이 이러한 요구 사항에 동의하지 않습니다. LSB의 주된 목적은 독점 소프"
+"트웨어가 호환되는 시스템에 설치되고 실행될 수 있도록 보장하는 것입니다. LFS"
+"는 소스 기반이므로, 사용자는 원하는 패키지를 완전히 제어할 수 있습니다. 따라"
+"서 LSB에서 지정한 일부 패키지를 설치 안 하기로 선택할 수도 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/standards.xml:51
@@ -47909,6 +47913,10 @@ msgid ""
 "Installation instructions for some of these additional packages can be found "
 "in BLFS."
 msgstr ""
+"완전한 시스템을 구축하여 LSB 인증 테스트를 <quote>처음부터(from scratch,)</"
+"quote>통과할 수 있는 것이 가능하지만, LFS 책의 범위를 벗어나는 많은 추가 패키"
+"지 없이는 이를 수행할 수 없습니다. 이러한 추가 패키지 중 일부에 대한 설치 지"
+"침은 BLFS에서 찾을 수 있습니다."
 
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: en/prologue/standards.xml:57
