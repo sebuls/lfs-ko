@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-19 01:08+0900\n"
-"PO-Revision-Date: 2026-06-19 01:08+0900\n"
+"POT-Creation-Date: 2026-06-20 03:56+0900\n"
+"PO-Revision-Date: 2026-06-20 03:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -18378,6 +18378,12 @@ msgid ""
 "stack size soft limit because GCC will automatically set it to an "
 "appropriate value, as long as the value does not exceed the hard limit:"
 msgstr ""
+"GCC는 매우 복잡한 코드 패턴을 컴파일할 때 더 많은 스택 공간이 필요할 수 있습"
+"니다. 스택 제한이 엄격한 호스트 배포판에 대비하여, 스택 크기 하드 제한을 무한"
+"(infinite)로 명시적으로 설정하는 것이 좋습니다. 대부분의 호스트 배포판(및 최"
+"종 LFS 시스템)에서는 기본적으로 하드 제한이 무한으로 설정되어 있지만, 이를 명"
+"시적으로 설정해도 됩니다. 스택 크기 소프트 제한을 변경할 필요는 없는데, 하드 "
+"제한을 넘지 않는 한 GCC가 자동으로 적절한 값으로 설정하기 때문입니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:181
@@ -18388,7 +18394,7 @@ msgstr "<userinput remap=\"test\">ulimit -s -H unlimited</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:183
 msgid "Now remove several known test failures:"
-msgstr ""
+msgstr "이제 알려진 몇 가지 테스트 실패를 제거:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:185
@@ -18399,7 +18405,7 @@ msgstr "<userinput remap=\"test\">sed -e '/cpython/d' -i ../gcc/testsuite/gcc.dg
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:187
 msgid "Test the results as a non-privileged user, but do not stop at errors:"
-msgstr ""
+msgstr "권한이 없는 사용자로 결과를 테스트하되, 오류가 발생해도 멈추지 않기:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:189
@@ -18414,7 +18420,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:192
 msgid "To extract a summary of the test suite results, run:"
-msgstr ""
+msgstr "테스트 모음 결과의 요약을 추출하려면 다음 명령어 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:194
@@ -18428,6 +18434,8 @@ msgid ""
 "To filter out only the summaries, pipe the output through <userinput>grep "
 "-A7 Summ</userinput>."
 msgstr ""
+"요약만 필터링하려면, 출력을 <userinput>grep -A7 Summ</userinput>에 파이프"
+"(pipe)로 전달하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:199
@@ -18442,6 +18450,8 @@ msgstr ""
 #: en/chapter08/gcc.xml:204
 msgid "Four tests related to <filename>pr90579.c</filename> are known to fail."
 msgstr ""
+"<filename>pr90579.c</filename> 관련된 테스트 4개는 실패하는 것으로 알려져 있"
+"습니다,"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:207
@@ -18449,6 +18459,8 @@ msgid ""
 "Five tests related to <filename>analyzer/strchr-1.c</filename> are known to "
 "fail."
 msgstr ""
+"<filename>analyzer/strchr-1.c</filename> 관련된 5개의 테스트는 실패하는 것으"
+"로 알려져 있습니다,"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:211
@@ -18469,6 +18481,9 @@ msgid ""
 "results are vastly different from those at the above URL, it is safe to "
 "continue."
 msgstr ""
+"일부 예상치 못한 실패는 항상 피할 수는 없습니다. 어떤 경우에는 테스트 실패가 "
+"시스템의 특정 하드웨어에 따라 달라지기도 합니다. 테스트 결과가 위 URL의 결과"
+"와 크게 다르지 않다면, 계속 진행해도 안전합니다,"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/gcc.xml:227
@@ -18478,6 +18493,10 @@ msgid ""
 "its content) is incorrect.  Change the ownership to the <systemitem "
 "class=\"username\">root</systemitem> user and group:"
 msgstr ""
+"현재 GCC 빌드 디렉터리의 소유자는 <systemitem class=\"username\"> tester</"
+"systemitem> 이며, 설치된 헤더 디렉터리(및 그 내용물)의 소유권도 올바르지 않습"
+"니다. 소유권을 <systemitem class=\"username\">root</systemitem> 사용자와 그룹"
+"으로 변경하시오,"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:232
@@ -18496,6 +18515,9 @@ msgid ""
 "refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s09.html\">FHS</ulink> for "
 "\"historical\" reasons."
 msgstr ""
+"\"역사적인\" 이유로 <ulink url=\"https://refspecs.linuxfoundation.org/"
+"FHS_3.0/fhs/ch03s09.html\">FHS</ulink>에서 요구하는 심볼릭 링크를 생성하십시"
+"오,"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:239
@@ -18510,6 +18532,9 @@ msgid ""
 "We've already created <command>cc</command> as a symlink in <xref "
 "linkend='ch-tools-gcc-pass2'/>, create its man page as a symlink as well:"
 msgstr ""
+"많은 패키지에서 C 컴파일러를 호출할 때 <command>cc</command> 이름을 사용합니"
+"다. 이미 <xref linkend='ch-tools-gcc-pass2'/>에서 <command>cc</command> 심볼"
+"릭 링크로 생성했으므로, 매뉴얼 페이지 또한 심볼릭 링크로 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:246
@@ -18523,6 +18548,8 @@ msgid ""
 "Add a compatibility symlink to enable building programs with Link Time "
 "Optimization (LTO):"
 msgstr ""
+"링크 타임 최적화(LTO,Link Time Optimization)를 사용하여 프로그램을 빌드할 수 "
+"있도록 호환성 심볼릭 링크를 추가:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:251
@@ -18541,6 +18568,9 @@ msgid ""
 "that compiling and linking will work as expected. We do this by performing "
 "some sanity checks:"
 msgstr ""
+"이제 최종 도구 모음(toolchain)이 준비되었으므로, 컴파일과 링크 작업이 예상대"
+"로 작동하는지 다시 한번 확인하는 것이 중요합니다. 이를 위해 몇 가지 건전성 검"
+"사(sanity checks)를 수행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:258
@@ -18580,6 +18610,11 @@ msgid ""
 "filename> files under the <filename class=\"directory\">/usr/lib</filename> "
 "directory."
 msgstr ""
+"머신 아키텍처에 따라 위의 결과는 약간 다를 수 있습니다. 차이점은 <filename "
+"class=\"directory\">/usr/lib/gcc</filename> 뒤에 오는 디렉터리의 이름일 것입"
+"니다. 여기서 확인해야 할 중요한 점은 <command>gcc</command>가 <filename "
+"class=\"directory\">/usr/lib</filename> 디렉터리 아래에 있는 세 개의 "
+"<filename>crt*.o</filename> 파일을 모두 찾았는지 입니다,"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/gcc.xml:287
@@ -18729,7 +18764,7 @@ msgstr "<command>c++</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:395 en/chapter08/gcc.xml:426
 msgid "The C++ compiler"
-msgstr ""
+msgstr "C++ 컴파일러"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:397
@@ -18744,7 +18779,7 @@ msgstr "<command>cc</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:405 en/chapter08/gcc.xml:436
 msgid "The C compiler"
-msgstr ""
+msgstr "C 컴파일러"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:407
