@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-20 09:19+0900\n"
-"PO-Revision-Date: 2026-06-20 09:15+0900\n"
+"POT-Creation-Date: 2026-06-21 02:03+0900\n"
+"PO-Revision-Date: 2026-06-21 02:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -537,7 +537,7 @@ msgstr "제1장 - 메일링 리스트"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter01/resources.xml:24
 msgid "Mailing Lists"
-msgstr "Mailing Lists"
+msgstr "메일링 링스트"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/resources.xml:26
@@ -47151,7 +47151,7 @@ msgstr ""
 msgid ""
 "This is a list of security vulnerabilities discovered in the LFS book after "
 "it's published."
-msgstr ""
+msgstr "LFS 책이 출판된 이후에 발견된 보안 취약점 목록."
 
 #. type: Content of: <sect1><itemizedlist><listitem><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:41
@@ -47166,11 +47166,13 @@ msgid ""
 "This is a mailing list for discussion of security flaws, concepts, and "
 "practices in the Open Source community."
 msgstr ""
+"오픈 소스 커뮤니티의 보안 결함, 개념 및 관행에 대해 논의하기 위한 메일링 리스"
+"트."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:61
 msgid "LFS Hints"
-msgstr "LFS Hints"
+msgstr "LFS 힌트"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter11/whatnow.xml:63
@@ -47212,6 +47214,9 @@ msgid ""
 "of HOWTOs, guides, and man pages.  It is located at <ulink url=\"https://"
 "tldp.org/\"/>."
 msgstr ""
+"The Linux Documentation Project (TLDP)의 목표는 리눅스 문서와 관련된 모든 문"
+"제에 대해 협력하는 것입니다. TLDP는 방대한 HOWTO, 가이드 및 매뉴얼 페이지를 "
+"제공합니다. <ulink url=\"https://tldp.org/\"/> 에 있습니다."
 
 #. type: Content of: <sect1><title>
 #: en/prologue/architecture.xml:11
