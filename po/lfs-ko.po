@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-22 21:51+0900\n"
-"PO-Revision-Date: 2026-06-22 21:49+0900\n"
+"POT-Creation-Date: 2026-06-23 03:07+0900\n"
+"PO-Revision-Date: 2026-06-23 03:07+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6405,6 +6405,9 @@ msgid ""
 "create a compatibility symbolic link required for proper operation of the "
 "dynamic library loader:"
 msgstr ""
+"먼저, LSB(Linux Standard Base) 준수를 위해 심볼릭 링크를 생성하십시오. 또한, "
+"x86_64 아키텍처의 경우 동적 라이브러리 로더가 올바르게 작동하도록 필요한 호환"
+"성 심볼릭 링크를 추가로 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:50
@@ -6434,6 +6437,9 @@ msgid ""
 "and <ulink role='man' url='&man;ln.1'>ln(1)</ulink> before reporting what "
 "may appear to be an error."
 msgstr ""
+"위의 명령어는 맞습니다. <command>ln</command> 명령어에는 몇 가지 구문 형식이 "
+"있으므로, 오류로 보이는 것을 보고하기 전에 <command>info coreutils ln</"
+"command> 및 <ulink role='man' url='&man;ln.1'>ln(1)</ulink> 을 점검하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:68
@@ -6443,6 +6449,10 @@ msgid ""
 "data. Apply the following patch to make such programs store their runtime "
 "data in the FHS-compliant locations:"
 msgstr ""
+"일부 Glibc 프로그램들은 런타임 데이터를 저장하기 위해 FHS(Filesystem "
+"Hierarchy Standard)를 따르지 않는 <filename class=\"directory\">/var/db</"
+"filename> 디렉터리를 사용합니다. 이러한 프로그램들이 FHS를 준수하는 위치에 런"
+"타임 데이터를 저장하도록 하려면 다음 패치 적용:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:73 en/chapter08/glibc.xml:55
@@ -6589,6 +6599,9 @@ msgid ""
 "<quote>parallel make.</quote> If that occurs, rerun the make command with "
 "the <option>-j1</option> option."
 msgstr ""
+"이 패키지를 <quote>parallel make</quote> 빌드할 때 실패할 수 있다는 보고가 있"
+"습니다. 만약 그런 문제가 발생하면, <option>-j1</option> 옵션을 사용하여 make "
+"명령어를 다시 실행."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:154 en/chapter06/bash.xml:69
@@ -30560,13 +30573,13 @@ msgstr ""
 "class='libraryfile'>libfoo.so.1</filename>이지만, 라이브러리 파일 이름이 "
 "<filename class='libraryfile'>libfoo.so.1.25</filename> 에서 <filename "
 "class='libraryfile'>libfoo.so.1.24</filename>로 바뀐 경우), 이전에 설치된 버"
-"전의 라이브러리 파일(filename class='libraryfile'>libfoo.so.1.25</filename>)"
-"을 제거해야 합니다. 그렇지 않으면, (명령줄에서 직접 실행하거나 특정 패키지를 "
-"설치할 때 호출되는) <command>ldconfig</command> 명령이 버전 번호가 더 큰 이"
-"전 라이브러리 파일이 <quote>더 새로운</quote> 버전인 것처럼 인식하여 "
+"전의 라이브러리 파일(<filename class='libraryfile'>libfoo.so.1.25</filename> "
+"in this case)을 없애야 합니다. 안 그러면, (명령줄에서 직접 실행하거나 특정 패"
+"키지를 설치할 때 호출되는) <command>ldconfig</command> 명령이 버전 번호가 더 "
+"큰 이전 라이브러리 파일이 <quote>더 새로운</quote> 버전인 것처럼 인식하여 "
 "<filename class='libraryfile'>libfoo.so.1</filename> 심볼릭 링크를 해당 파일"
 "로 재설정해 버리기 때문입니다. 이러한 상황은 패키지를 다운그레이드해야 하거"
-"나, 개발자가 라이브러리 파일의 버전 관리 체계를 변경했을 때 발생할 수 있습니"
+"나, 개발자가 라이브러리 파일의 버전 관리 체계를 바꾸었을을 때 생길 수 있습니"
 "다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
