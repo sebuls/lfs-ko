@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-24 03:43+0900\n"
-"PO-Revision-Date: 2026-06-24 03:43+0900\n"
+"POT-Creation-Date: 2026-06-24 19:56+0900\n"
+"PO-Revision-Date: 2026-06-24 19:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -20206,6 +20206,8 @@ msgid ""
 "If upgrading on a LFS system prior to 12.1 (exclusive), remove the "
 "<command>nscd</command> program:"
 msgstr ""
+"12.1 버전 이전의 LFS 시스템에서 업그레이드하면, <command>nscd</command> 프로"
+"그램을 삭제:"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
 #: en/chapter08/glibc.xml:273
@@ -20219,6 +20221,8 @@ msgid ""
 "If this system (prior to LFS 12.1, exclusive) is based on Systemd, it's also "
 "needed to disable and stop the <command>nscd</command> service now:"
 msgstr ""
+"만약 이 시스템(LFS 12.1 이전 버전)이 Systemd 기반이라면, 지금 즉시 "
+"<command>nscd</command> 서비스를 비활성화하고 중지:"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
 #: en/chapter08/glibc.xml:281
@@ -20233,6 +20237,9 @@ msgid ""
 "current version with <command>uname -r</command>)  or if you want to upgrade "
 "it anyway, following <xref linkend='ch-bootable-kernel' role='.'/>"
 msgstr ""
+"커널이 &min-kernel; 보다 이전 버전인 경우(현재 버전은 <command>uname -r</"
+"command> 명령어로 확인) 또는 어쨌든 업그레이드를 원한다면, <xref linkend='ch-"
+"bootable-kernel' role='.'/>를 따라 커널을 업그레이드하고 재부팅"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:295
@@ -20243,6 +20250,11 @@ msgid ""
 "headers'/> (but removing <envar>$LFS</envar> from the <command>cp</command> "
 "command)."
 msgstr ""
+"커널 API 헤더가 &min-kernel; 보다 이전 버전인 경우(현재 버전은 <command>cat /"
+"usr/include/linux/version.h</command> 명령어로 확인) 또는 어쨌든 업그레이드"
+"를 원한다면, <xref linkend='ch-tools-linux-headers'/> 따라(단, <command>cp</"
+"command> 명령어에서 <envar>$LFS</envar>는 제거해야 합니다) 업그레이드하십시"
+"오."
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:313
@@ -20250,6 +20262,8 @@ msgid ""
 "Perform a <envar>DESTDIR</envar> installation and upgrade the Glibc shared "
 "libraries on the system using one single <command>install</command> command:"
 msgstr ""
+"<envar>DESTDIR</envar> 설치를 수행하고 단일 <command>install</command> 명령어"
+"를 사용하여 시스템의 Glibc 공유 라이브러리를 업그레이드:"
 
 #. type: Content of: <sect1><sect2><important><itemizedlist><listitem><screen>
 #: en/chapter08/glibc.xml:318
@@ -20806,7 +20820,7 @@ msgstr ""
 "gencat, getconf, getent, iconv, iconvconfig, ldconfig, ldd, lddlibc4, ld.so "
 "(symlink to ld-linux-x86-64.so.2 or ld-linux.so.2), locale, localedef, "
 "makedb, mtrace, pcprofiledump, pldd, sln, sotruss, sprof, tzselect, xtrace, "
-"zdump, and zic"
+"zdump, 및 zic"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/glibc.xml:645
@@ -20823,7 +20837,7 @@ msgstr ""
 "libm.{a,so}, libmcheck.a, libmemusage.so, libmvec.{a,so}, libnsl.so.1, "
 "libnss_compat.so, libnss_dns.so, libnss_files.so, libnss_hesiod.so, "
 "libpcprofile.so, libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, "
-"libthread_db.so, and libutil.{a,so.1}"
+"libthread_db.so, 및 libutil.{a,so.1}"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/glibc.xml:654
