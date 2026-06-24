@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-24 19:56+0900\n"
-"PO-Revision-Date: 2026-06-24 19:56+0900\n"
+"POT-Creation-Date: 2026-06-25 02:13+0900\n"
+"PO-Revision-Date: 2026-06-25 02:13+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30411,6 +30411,8 @@ msgid ""
 "Dealing with package management takes the focus away from the goals of these "
 "books&mdash;teaching how a Linux system is built."
 msgstr ""
+"패키지 관리를 다루는 것은 이 책들의 목표, 즉 리눅스 시스템이 어떻게 빌드되는"
+"지를 가르치는 것에서 멀어집니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:35
@@ -30419,6 +30421,8 @@ msgid ""
 "strengths and drawbacks.  Finding one solution that satisfies all audiences "
 "is difficult."
 msgstr ""
+"패키지 관리에는 여러 가지 해결책이 있으며, 각각 장단점이 있습니다. 하나의 해"
+"결책을 찾아 모든 사용자를 만족시키는 건 어렵습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter08/pkgmgt.xml:41
@@ -30427,6 +30431,8 @@ msgid ""
 "<ulink url=\"&hints-root;\">Hints Project</ulink> and see if one of them "
 "fits your needs."
 msgstr ""
+"패키지 관리에 관해 작성된 몇 가지 힌트가 있습니다. <ulink url=\"&hints-root;"
+"\">Hints Project</ulink> 방문하고 본인의 필요에 맞는 것이 있는지 보십쇼."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:46
@@ -30607,6 +30613,12 @@ msgid ""
 "which processes are using the old versions of those libraries (replace "
 "<replaceable>libfoo</replaceable> with the name of the library):"
 msgstr ""
+"공유 라이브러리가 포함된 패키지가 업데이트되고, 라이브러리 이름은 바뀌지 않았"
+"지만 심각한 문제(특히 보안 취약점)가 해결되었다면, 해당 라이브러리에 연결된 "
+"모든 실행 중인 프로그램을 다시 시작해야 합니다. 업데이트가 완료된 후 "
+"<systemitem class=\"username\">root</systemitem> 권한으로 다음 명령어를 실행"
+"하면, 어떤 프로세스가 해당 라이브러리의 이전 버전을 사용 중인지 확인할 수 있"
+"습니다(<replaceable>libfoo</replaceable>를 라이브러리 이름으로 교체)."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
 #: en/chapter08/pkgmgt.xml:143
@@ -30622,6 +30634,10 @@ msgid ""
 "command> service, then logout, login again, and run the preceding command "
 "again to confirm that nothing is still using the deleted libraries."
 msgstr ""
+"<application>OpenSSH</application> 를시스템 접속에 사용 중이고 이것이 업데이"
+"트된 라이브러리에 연결되어 있다면, <command>sshd</command> 서비스를 다시 시작"
+"한 다음, 로그아웃하고, 다시 로그인하고, 앞서 언급한 명령어를 다시 실행하여, "
+"삭제된 라이브러리를 여전히 사용 중인 프로세스가 없는지 확인하십시오."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:154
@@ -30631,6 +30647,10 @@ msgid ""
 "<command>systemctl daemon-reexec</command> as the <systemitem "
 "class='username'>root</systemitem> user."
 msgstr ""
+"(PID 1로 실행 중인) <command>systemd</command> 데몬이 업데이트된 라이브러리"
+"에 연결되어 있다면, <command>systemctl daemon-reexec</command> 명령어를 "
+"<systemitem class='username'>root</systemitem> 사용자로 실행하여 재부팅 없이 "
+"데몬을 다시 시작할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/pkgmgt.xml:161
@@ -30647,6 +30667,17 @@ msgid ""
 "exists; this causes a crash. So it's safer to save your work and close "
 "unneeded running processes before updating a package."
 msgstr ""
+"실행 파일 또는 공유 라이브러리를 덮어쓰면, 해당 프로그램이나 라이브러리의 코"
+"드 또는 데이터를 사용하는 프로세스가 깨질 수 있습니다. 프로세스 깨짐 없이 프"
+"로그램이나 공유 라이브러리를 업데이트하는 올바른 방법은 먼저 기존 파일을 없애"
+"고 새 버전을 설치하는 것입니다. <application>coreutils</application>에서 제공"
+"하는 <command>install</command> 명령어는 이미 이러한 방식을 구현하고 있으며, "
+"대부분의 패키지는 바이너리 파일과 라이브러리를 설치할 때 이 명령어를 사용합니"
+"다. 따라서 대부분의 경우 이 문제로 어려움을 겪지는 않을 것입니다. 그러나, 일"
+"부 패키지(특히 BLFS의 SpiderMonkey)의 설치 과정은 파일이 존재할 경우 단순히 "
+"덮어쓰기를 수행하며, 이로 인해 깨짐이 생깁니다. 그래서 패키지를 업데이트하기 "
+"전에 작업 내용을 저장하고 불필요하게 실행 중인 프로세스를 종료하는 것이 더 안"
+"전합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:179
@@ -30660,6 +30691,8 @@ msgid ""
 "decision on a package manager, do some research on the various techniques, "
 "particularly the drawbacks of each particular scheme."
 msgstr ""
+"다음은 몇 가지 일반적인 패키지 관리 기법입니다. 패키지 관리자를 결정하기 전"
+"에, 다양한 기법들, 특히 각 방식의 단점에 대해 충분히 조사하기 바랍니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:186
@@ -31003,6 +31036,8 @@ msgid ""
 "Finally, the new system has to be made bootable via <xref linkend=\"ch-"
 "bootable-grub\"/>."
 msgstr ""
+"마지막으로, 새 시스템이 부팅 가능하도록 만들어야 합니다. <xref linkend=\"ch-"
+"bootable-grub\"/> 통해."
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/procps.xml:14
