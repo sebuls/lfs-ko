@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-25 21:59+0900\n"
-"PO-Revision-Date: 2026-06-25 21:59+0900\n"
+"POT-Creation-Date: 2026-06-26 03:57+0900\n"
+"PO-Revision-Date: 2026-06-26 03:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -48353,6 +48353,9 @@ msgid ""
 "noted in the surrounding text. It is also used in the explanation sections "
 "to identify which of the commands is being referenced."
 msgstr ""
+"이 텍스트 형식은 주변 텍스트에서 별도로 언급하지 않는 한, 보이는 그대로 정확"
+"하게 입력하도록 설계되었습니다. 또한, 설명 섹션에서 어떤 명령어가 참조되고 있"
+"는지 식별하는 용도로도 쓰입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:24
@@ -48360,6 +48363,8 @@ msgid ""
 "In some cases, a logical line is extended to two or more physical lines with "
 "a backslash at the end of the line."
 msgstr ""
+"어떤 경우에는 백슬래시를 줄 끝에 사용하여 논리적 한 줄을 두 개 이상의 물리적 "
+"줄로 확장합니다."
 
 #. type: Content of: <sect1><screen>
 #: en/prologue/typography.xml:27
@@ -48378,6 +48383,9 @@ msgid ""
 "whitespace characters like spaces or tab characters will create incorrect "
 "results."
 msgstr ""
+"세벌 님, 백슬래시 바로 뒤에는 반드시 줄 바꿈이 와야 한다는 점을 유의해 주세"
+"요. 공백이나 탭 문자와 같은 다른 공백 문자가 포함되면 올바르지 않은 결과가 생"
+"깁니다."
 
 #. type: Content of: <sect1><screen>
 #: en/prologue/typography.xml:34
@@ -48392,6 +48400,9 @@ msgid ""
 "result of commands issued.  If you are reading the book in the HTML format "
 "(instead of PDF), the text should be blue."
 msgstr ""
+"이 텍스트 형식(고정 폭 텍스트)은 주로 실행한 명령어의 결과로 나타나는 화면 출"
+"력을 보여줍니다. 만약 PDF가 아닌 HTML 형식으로 이 책을 읽고 있다면, 그 텍스트"
+"는 파란색일 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:40
@@ -48482,7 +48493,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:78
 msgid "This format is used to encapsulate text that is optional."
-msgstr ""
+msgstr "이 형식은 선택적인 텍스트를 감싸는 데 쓰입니다."
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:80
@@ -48511,6 +48522,22 @@ msgid ""
 "in HTML from <ulink url='https://man.archlinux.org/'>Arch Linux manual "
 "pages</ulink>."
 msgstr ""
+"이 형식은 특정 매뉴얼(man) 페이지를 참조하는 데 쓰입니다. 괄호 안의 숫자는 매"
+"뉴얼 내의 특정 섹션을 나타냅니다. 예를 들어, <command>passwd</command>는 매뉴"
+"얼 페이지를 두 개 갖고 있습니다. LFS 설치 지침에 따라, 이 두 매뉴얼 페이지는 "
+"<filename>/usr/share/man/man1/passwd.1</filename> 및 <filename>/usr/share/"
+"man/man5/passwd.5</filename>에 놓입니다. 책에서 <ulink role='man' url='&man;/"
+"passwd.5'>passwd(5)</ulink> 쓸 때는 구체적으로 <filename>/usr/share/man/man5/"
+"passwd.5</filename>를 가리키는 것입니다. <command>man passwd</command>는 "
+"<quote>passwd</quote>와 일치하는 첫 번째 매뉴얼 페이지인 <filename>/usr/"
+"share/man/man1/passwd.1</filename> 이 출력됩니다. 이 예제의 경우, 지정된 페이"
+"지를 읽으려면 <command>man 5 passwd</command>를 실행해야 합니다. 대부분의 매"
+"뉴얼 페이지는 서로 다른 섹션에 중복된 페이지 이름을 가지고 있지 않다는 점을 "
+"참고하세요. 따라서 일반적으로 <command>man <replaceable>&lt;program name&gt;"
+"</replaceable></command> 만으로도 충분합니다. LFS 책에서 이러한 매뉴얼 페이"
+"지 참조는 하이퍼링크로 되어 있어, 해당 참조를 클릭하면 <ulink url='https://"
+"man.archlinux.org/'>Arch Linux manual page</ulink>에서 HTML로 렌더링된 매뉴"
+"얼 페이지가 열립니다."
 
 #. type: Content of: <sect1><title>
 #: en/prologue/why.xml:11
