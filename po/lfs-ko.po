@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-26 22:29+0900\n"
-"PO-Revision-Date: 2026-06-26 22:28+0900\n"
+"POT-Creation-Date: 2026-06-27 02:39+0900\n"
+"PO-Revision-Date: 2026-06-27 02:38+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7603,7 +7603,7 @@ msgstr "&bash-tmp-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/bash.xml:44 en/chapter08/bash.xml:41
 msgid "Installation of Bash"
-msgstr "Installation of Bash"
+msgstr "Bash 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/bash.xml:46 en/chapter08/bash.xml:43
@@ -12138,7 +12138,7 @@ msgstr "&automake-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/automake.xml:42
 msgid "Installation of Automake"
-msgstr "Installation of Automake"
+msgstr "Automake 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/automake.xml:48
@@ -12503,7 +12503,7 @@ msgstr "&bc-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bc.xml:42
 msgid "Installation of Bc"
-msgstr "Installation of Bc"
+msgstr "Bc 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:44
@@ -18045,7 +18045,7 @@ msgid ""
 "/usr/lib/python&python-minor;/site-packages/flit_core and /usr/lib/"
 "python&python-minor;/site-packages/flit_core-&flit-core-version;.dist-info"
 msgstr ""
-"/usr/lib/python&python-minor;/site-packages/flit_core and /usr/lib/"
+"/usr/lib/python&python-minor;/site-packages/flit_core 및 /usr/lib/"
 "python&python-minor;/site-packages/flit_core-&flit-core-version;.dist-info"
 
 #. type: Content of: <sect1><sect2><para>
@@ -28859,6 +28859,8 @@ msgid ""
 "If desired, make <command>ninja</command> recognize the environment variable "
 "NINJAJOBS by running the stream editor:"
 msgstr ""
+"원한다면, 스트림 편집기(stream editor)를 실행하여 <command>ninja</command>가 "
+"환경 변수 NINJAJOBS를 인식하도록 설정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ninja.xml:61
@@ -28924,6 +28926,10 @@ msgid ""
 "of this package is already tested by rebuilding itself (with the "
 "<parameter>--bootstrap</parameter> option) anyway."
 msgstr ""
+"패키지 테스트는 chroot 환경에서 실행할 수 없습니다. 해당 테스트에는 <ulink "
+"url=\"&blfs-book;general/cmake.html\">cmake</ulink>가 필요합니다. 그러나, 이 "
+"패키지의 기본적인 기능은 어차피 <parameter>--bootstrap</parameter> 옵션을 사"
+"용하여 스스로를 다시 빌드하는 과정에서 이미 테스트됩니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/ninja.xml:106
@@ -28955,7 +28961,7 @@ msgstr "<command>ninja</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ninja.xml:130
 msgid "is the Ninja build system"
-msgstr ""
+msgstr "Ninja 빌드 시스템"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/openssl.xml:14
@@ -32297,7 +32303,7 @@ msgstr "&setuptools-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/setuptools.xml:41
 msgid "Installation of Setuptools"
-msgstr "Installation of Setuptools"
+msgstr "Setuptools 설치"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/setuptools.xml:49
@@ -32320,7 +32326,7 @@ msgid ""
 msgstr ""
 "/usr/lib/python&python-minor;/site-packages/_distutils_hack, /usr/lib/"
 "python&python-minor;/site-packages/pkg_resources, /usr/lib/python&python-"
-"minor;/site-packages/setuptools, and /usr/lib/python&python-minor;/site-"
+"minor;/site-packages/setuptools, 및 /usr/lib/python&python-minor;/site-"
 "packages/setuptools-&setuptools-version;.dist-info"
 
 #. type: Content of: <sect1><sect1info><address>
@@ -33389,7 +33395,7 @@ msgstr "&sqlite-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sqlite.xml:43
 msgid "Installation of Sqlite"
-msgstr "Installation of Sqlite"
+msgstr "Sqlite 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sqlite.xml:45
@@ -33817,7 +33823,7 @@ msgstr "&sysklogd-fin-du;"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysklogd.xml:42
 msgid "Installation of Sysklogd"
-msgstr "Installation of Sysklogd"
+msgstr "Sysklogd 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sysklogd.xml:44
@@ -33968,7 +33974,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/systemd.xml:41
 msgid "Installation of systemd"
-msgstr "Installation of systemd"
+msgstr "systemd 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:43 en/chapter08/udev.xml:46
@@ -35369,7 +35375,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysvinit.xml:42
 msgid "Installation of SysVinit"
-msgstr "Installation of SysVinit"
+msgstr "SysVinit 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/sysvinit.xml:70
@@ -48451,7 +48457,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:54
 msgid "<ulink url=\"&lfs-root;\"/>"
-msgstr ""
+msgstr "<ulink url=\"&lfs-root;\"/>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:56
@@ -51854,6 +51860,9 @@ msgid ""
 "gcc.gnu.org/wiki/GNAT\">GNAT</ulink>, and <ulink url=\"https://repo.or.cz/"
 "isl.git\">ISL</ulink>"
 msgstr ""
+"<ulink url=\"https://www.gdcproject.org/\">GDC</ulink>, <ulink url=\"https://"
+"gcc.gnu.org/wiki/GNAT\">GNAT</ulink>, 및 <ulink url=\"https://repo.or.cz/"
+"isl.git\">ISL</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:938
@@ -51964,6 +51973,8 @@ msgid ""
 "<ulink url=\"&blfs-book;pst/gs.html\">ghostscript</ulink> and <ulink "
 "url=\"&blfs-book;general/uchardet.html\">Uchardet</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;pst/gs.html\">ghostscript</ulink> 및 <ulink "
+"url=\"&blfs-book;general/uchardet.html\">Uchardet</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1225
@@ -52073,7 +52084,7 @@ msgstr "Bash, Coreutils, and Glibc"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1532 en/appendices/dependencies.xml:1655
 msgid "<ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
-msgstr ""
+msgstr "<ulink url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1543
@@ -52199,6 +52210,9 @@ msgid ""
 "book;general/llvm.html\">LLVM</ulink> (with Clang), and <ulink url=\"&blfs-"
 "book;general/rust-bindgen.html\">Rust-bindgen</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;general/cpio.html\">cpio</ulink>, <ulink url=\"&blfs-"
+"book;general/llvm.html\">LLVM</ulink> (with Clang), 및 <ulink url=\"&blfs-"
+"book;general/rust-bindgen.html\">Rust-bindgen</ulink>"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/appendices/dependencies.xml:1902
@@ -52336,7 +52350,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2355
 msgid "<ulink url=\"&blfs-book;general/cmake.html\">cmake</ulink>"
-msgstr ""
+msgstr "<ulink url=\"&blfs-book;general/cmake.html\">cmake</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2370
@@ -52346,6 +52360,10 @@ msgid ""
 "book;postlfs/emacs.html\">Emacs</ulink>, and <ulink url=\"https://re2c.org/"
 "\">re2c</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;general/asciidoc.html\">Asciidoc</ulink>, <ulink "
+"url=\"&blfs-book;general/doxygen.html\">Doxygen</ulink>, <ulink url=\"&blfs-"
+"book;postlfs/emacs.html\">Emacs</ulink>, 및 <ulink url=\"https://re2c.org/"
+"\">re2c</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2384
@@ -52386,7 +52404,7 @@ msgstr "Attr, Bash, Binutils, Coreutils, GCC, Glibc, Grep, Make, and Sed"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2492
 msgid "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
-msgstr ""
+msgstr "<ulink url=\"&blfs-book;postlfs/ed.html\">Ed</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2503
@@ -52561,6 +52579,8 @@ msgid ""
 "<ulink url=\"&blfs-book;postlfs/cracklib.html\">CrackLib</ulink> and <ulink "
 "url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;postlfs/cracklib.html\">CrackLib</ulink> 및 <ulink "
+"url=\"&blfs-book;postlfs/linux-pam.html\">Linux-PAM</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2918
@@ -52643,6 +52663,45 @@ msgid ""
 "url=\"https://xenproject.org\">Xen</ulink>, and <ulink url=\"&blfs-"
 "book;postlfs/zsh.html\">zsh</ulink>"
 msgstr ""
+"<ulink url=\"https://www.apparmor.net/\">AppArmor</ulink>, <ulink "
+"url=\"&github;/linux-audit/audit-userspace\"> audit-userspace</ulink>, "
+"<ulink url=\"&github;/scop/bash-completion\"> bash-completion</ulink>, "
+"<ulink url=\"&blfs-book;postlfs/btrfs-progs.html\">btrfs-progs</ulink>, "
+"<ulink url=\"&blfs-book;basicnet/curl.html\">cURL</ulink>, <ulink "
+"url=\"&blfs-book;postlfs/cryptsetup.html\">cryptsetup</ulink>, <ulink "
+"url=\"&blfs-book;pst/docbook.html\">docbook-xml</ulink>, <ulink url=\"&blfs-"
+"book;pst/docbook-xsl.html\">docbook-xsl-nons</ulink>, <ulink url=\"&blfs-"
+"book;general/git.html\">Git</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"gnutls.html\">GnuTLS</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"iptables.html\">iptables</ulink>, <ulink url='https://jekyllrb.com/'>jekyll</"
+"ulink>, <ulink url=\"https://www.kernel.org/pub/linux/utils/kernel/kexec/\"> "
+"kexec-tools</ulink>, <ulink url='&github;/libbpf/libbpf'>libbpf</ulink>, "
+"<ulink url=\"https://sourceware.org/elfutils/\">libdw</ulink>, <ulink "
+"url=\"https://developers.yubico.com/libfido2/\">libfido2</ulink>, <ulink "
+"url=\"&blfs-book;general/libgcrypt.html\">libgcrypt</ulink>, <ulink "
+"url=\"&blfs-book;general/libidn2.html\">libidn2</ulink>, <ulink "
+"url=\"https://www.gnu.org/software/libmicrohttpd/\"> libmicrohttpd</ulink>, "
+"<ulink url=\"&blfs-book;postlfs/libpwquality.html\">libpwquality</ulink>, "
+"<ulink url=\"&blfs-book;general/libseccomp.html\">libseccomp</ulink>, <ulink "
+"url=\"&blfs-book;general/libxkbcommon.html\">libxkbcommon</ulink>, <ulink "
+"url=\"&blfs-book;general/libxslt.html\">libxslt</ulink>, <ulink url=\"&blfs-"
+"book;postlfs/linux-pam.html\">Linux-PAM</ulink>, <ulink url=\"&blfs-"
+"book;general/python-modules.html#lxml\">lxml</ulink>, <ulink url=\"&blfs-"
+"book;postlfs/make-ca.html\">make-ca</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"p11-kit.html\">p11-kit</ulink>, <ulink url=\"&pypi-home;pefile\">pefile</"
+"ulink>, <ulink url=\"&blfs-book;postlfs/polkit.html\">Polkit</ulink>, <ulink "
+"url='&pypi-home;/pyelftools'>pyelftools</ulink>, <ulink url=\"&blfs-"
+"book;postlfs/qemu.html\">qemu</ulink>, <ulink url=\"&blfs-book;general/"
+"qrencode.html\">qrencode</ulink>, <ulink url=\"https://sourceforge.net/"
+"projects/linuxquota/\" >quota-tools</ulink>, <ulink url=\"https://"
+"rpm.org\">rpm</ulink>, <ulink url=\"&blfs-book;basicnet/rsync.html\">rsync</"
+"ulink>, <ulink url=\"&github;/SELinuxProject/selinux\"> SELinux</ulink>, "
+"<ulink url=\"&blfs-book;general/python-modules.html#sphinx\"> Sphinx</"
+"ulink>, <ulink url=\"https://sourceware.org/systemtap/\"> systemtap</ulink>, "
+"<ulink url=\"https://tpm2-tss.readthedocs.io/en/latest/\"> tpm2-tss</ulink>, "
+"<ulink url=\"&blfs-book;general/valgrind.html\">Valgrind</ulink>, <ulink "
+"url=\"https://xenproject.org\">Xen</ulink>, 및 <ulink url=\"&blfs-"
+"book;postlfs/zsh.html\">zsh</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3097
@@ -52728,6 +52787,15 @@ msgid ""
 "index.php.en\">po4a</ulink>, and <ulink url=\"&blfs-book;general/"
 "slang.html\">slang</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;general/asciidoctor.html\">Asciidoctor</ulink>, "
+"<ulink url=\"https://people.redhat.com/sgrubb/libcap-ng/\">Libcap-NG</"
+"ulink>, <ulink url=\"&github;/openSUSE/libeconf\">libeconf</ulink>, <ulink "
+"url=\"https://pagure.io/libuser/\">libuser</ulink>, <ulink url=\"&github;/"
+"altlinux/libutempter\">libutempter</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"linux-pam.html\">Linux-PAM</ulink>, <ulink url=\"&blfs-book;postlfs/"
+"smartmontools.html\">smartmontools</ulink>, <ulink url=\"https://po4a.org/"
+"index.php.en\">po4a</ulink>, 및 <ulink url=\"&blfs-book;general/"
+"slang.html\">slang</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3346
@@ -52752,6 +52820,11 @@ msgid ""
 "ruby.html\">Ruby</ulink>, and <ulink url=\"&blfs-book;general/"
 "gpm.html\">GPM</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;x/installing.html\">Xorg</ulink>, <ulink url=\"&blfs-"
+"book;x/gtk2.html\">GTK+2</ulink>, <ulink url=\"https://"
+"lesstif.sourceforge.net/\">LessTif</ulink>, <ulink url=\"&blfs-book;general/"
+"ruby.html\">Ruby</ulink>, 및 <ulink url=\"&blfs-book;general/gpm.html\">GPM</"
+"ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3391
