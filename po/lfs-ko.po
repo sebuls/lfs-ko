@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-26 03:57+0900\n"
-"PO-Revision-Date: 2026-06-26 03:57+0900\n"
+"POT-Creation-Date: 2026-06-26 22:29+0900\n"
+"PO-Revision-Date: 2026-06-26 22:28+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -12832,7 +12832,7 @@ msgid ""
 "objcopy, objdump, ranlib, readelf, size, strings, and strip"
 msgstr ""
 "addr2line, ar, as, c++filt, dwp, elfedit, gprof, gprofng, ld, ld.bfd, nm, "
-"objcopy, objdump, ranlib, readelf, size, strings, and strip"
+"objcopy, objdump, ranlib, readelf, size, strings, 및 strip"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:154
@@ -12840,7 +12840,7 @@ msgid ""
 "libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, and "
 "libsframe.so"
 msgstr ""
-"libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, and "
+"libbfd.so, libctf.so, libctf-nobfd.so, libgprofng.so, libopcodes.so, 및 "
 "libsframe.so"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -12861,6 +12861,9 @@ msgid ""
 "the executable to determine which source file and line number are associated "
 "with the address"
 msgstr ""
+"프로그램 주소를 파일 이름과 행 번호로 변환합니다. 주소와 실행 파일 이름이 주"
+"어지면, 실행 파일 내의 디버깅 정보를 사용하여 해당 주소와 연관된 소스 파일과 "
+"행 번호를 결정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:173
@@ -13068,6 +13071,8 @@ msgid ""
 "archive; the index lists all of the symbols defined by archive members that "
 "are relocatable object files"
 msgstr ""
+"아카이브 내용의 색인을 생성하여 해당 아카이브에 저장합니다. 이 색인은 아카이"
+"브 멤버 중 재배치 가능한 오브젝트 파일들에 정의된 모든 심볼을 나열"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:312
@@ -13117,6 +13122,9 @@ msgid ""
 "prints, by default, only the strings from the initializing and loading "
 "sections while for other types of files, it scans the entire file"
 msgstr ""
+"각 파일에 대하여, 지정된 길이(기본값은 4) 이상의 출력 가능한 문자열들을 출력"
+"합니다. 오브젝트 파일의 경우, 기본적으로 초기화 및 로딩 섹션에 있는 문자열만 "
+"출력하며, 다른 유형의 파일들은 전체 파일을 스캔"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:347
@@ -13210,6 +13218,9 @@ msgid ""
 "versions of instructions for the processor; it is used for building "
 "utilities like <command>objdump</command>"
 msgstr ""
+"프로세서 명령어의<quote>readable text</quote> 버전인 오피코드(opcode)를 다루"
+"기 위한 라이브러리입니다. 이 라이브러리는 <command>objdump</command> 같은 유"
+"틸리티를 빌드하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:411
@@ -13225,6 +13236,8 @@ msgstr "<filename class=\"libraryfile\">libsframe</filename>"
 #: en/chapter08/binutils.xml:419
 msgid "A library to support online backtracing using a simple unwinder"
 msgstr ""
+"간단한 언와인더(unwinder)를 사용하여 온라인 역추적(backtracing)을 지원하는 라"
+"이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:422
