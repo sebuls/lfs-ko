@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-27 14:52+0900\n"
-"PO-Revision-Date: 2026-06-27 14:52+0900\n"
+"POT-Creation-Date: 2026-06-28 02:54+0900\n"
+"PO-Revision-Date: 2026-06-28 02:54+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -578,6 +578,11 @@ msgid ""
 "the IRC network at <systemitem class='domainname'>irc.libera.chat</"
 "systemitem>.  The support channel is named #lfs-support."
 msgstr ""
+"LFS 커뮤니티의 여러 멤버가 인터넷 릴레이 챗(IRC, Internet Relay Chat)을 통해 "
+"도움을 제공하고 있습니다. 이 지원을 이용하기 전에, 여러분의 질문이 LFS FAQ 또"
+"는 메일링 리스트 보관소에 이미 답변되어 있지 않은지 확인 바랍니다. IRC 네트워"
+"크는 <systemitem class='domainname'>irc.libera.chat</systemitem>에 있으며, 지"
+"원 채널 이름은 #lfs-support 입니다."
 
 #. type: Attribute 'xreflabel' of: <sect1><sect2>
 #: en/chapter01/resources.xml:76
@@ -10762,7 +10767,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:64
 msgid "Now mount the remaining virtual kernel file systems:"
-msgstr ""
+msgstr "이제 나머지 가상 커널 파일 시스템을 마운트:"
 
 #.  Do not put any option after $LFS/${mountpoint} or jhalfs cannot
 #.            handle it! 
@@ -10783,7 +10788,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter07/kernfs.xml:75
 msgid "The meaning of the mount options for devpts:"
-msgstr ""
+msgstr "devpts에 대한 마운트 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/kernfs.xml:78
@@ -10823,6 +10828,10 @@ msgid ""
 "The /run tmpfs was mounted above so in this case only a directory needs to "
 "be created with the correct permissions."
 msgstr ""
+"일부 호스트 시스템에서 <filename>/dev/shm</filename>은 일반적으로 <filename "
+"class=\"directory\">/run/shm</filename> 디렉터리에 대한 심볼릭 링크입니다. /"
+"run tmpfs는 앞서 마운트되었으므로, 이 경우에는 올바른 권한을 가진 디렉터리만 "
+"생성하면 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:108
@@ -10832,6 +10841,9 @@ msgid ""
 "directory in the chroot environment. In this situation we must explicitly "
 "mount a tmpfs:"
 msgstr ""
+"다른 호스트 시스템에서 <filename>/dev/shm</filename>은 tmpfs를 위한 마운트 포"
+"인트입니다. 그 경우, 앞서 수행한 /dev 마운트는 chroot 환경에서 /dev/shm을 디"
+"렉터리로만 생성하게 됩니다. 이 상황에서는 명시적으로 tmpfs를 마운트:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/kernfs.xml:113
