@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-27 02:39+0900\n"
-"PO-Revision-Date: 2026-06-27 02:38+0900\n"
+"POT-Creation-Date: 2026-06-27 12:26+0900\n"
+"PO-Revision-Date: 2026-06-27 12:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -29182,6 +29182,10 @@ msgid ""
 "be used for various functions which are documented in <ulink role='man' "
 "url='&man;openssl.1'>openssl(1)</ulink>"
 msgstr ""
+"<application>OpenSSL</application> 암호화 라이브러리가 제공하는 다양한 암호"
+"화 기능을 셸에서 사용하기 위한 명령줄 도구입니다. 이 도구는 <ulink "
+"role='man' url='&man;openssl.1'>openssl(1)</ulink>에 문서화된 여러 기능을 수"
+"행하는 데 사용될 수 있음."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/openssl.xml:169
@@ -29203,6 +29207,10 @@ msgid ""
 "application>, <application>OpenPGP</application>, and other cryptographic "
 "standards"
 msgstr ""
+"다양한 인터넷 표준에서 사용되는 광범위한 암호화 알고리즘을 구현. 이 라이브러"
+"리가 제공하는 서비스는 SSL, TLS, S/MIME의 <application>OpenSSL</application> "
+"구현에 사용되며, <application>OpenSSH</application>, <application>OpenPGP</"
+"application> 및 기타 암호화 표준을 구현하는 데에도 사용됨"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/openssl.xml:187
@@ -29221,6 +29229,8 @@ msgid ""
 "rich API, documentation on which can be found in <ulink role='man' "
 "url='&man;ssl.7'>ssl(7)</ulink>"
 msgstr ""
+"전송 계층 보안(TLS v1) 프로토콜을 구현. 풍부한 API를 제공하며, 이에 대한 문서"
+"는 <ulink role='man' url='&man;ssl.7'>ssl(7)</ulink>에서 찾을 수 있음"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/openssl.xml:202
