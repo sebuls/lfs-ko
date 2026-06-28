@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-28 19:30+0900\n"
-"PO-Revision-Date: 2026-06-28 19:29+0900\n"
+"POT-Creation-Date: 2026-06-29 01:52+0900\n"
+"PO-Revision-Date: 2026-06-29 01:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -10504,6 +10504,12 @@ msgid ""
 "create only the directories that are really necessary. However, feel free to "
 "create more directories, if you wish."
 msgstr ""
+"이 디렉터리 트리는 Filesystem Hierarchy Standard(FHS, <ulink url=\"https://"
+"refspecs.linuxfoundation.org/fhs.shtml\"/>에서 가능)를 기반으로 합니다. FHS"
+"는 <filename class=\"directory\">/usr/local/games</filename> 및 <filename "
+"class=\"directory\">/usr/share/games</filename> 같이 선택적으로 존재할 수 있"
+"는 추가 디렉터리들도 명시하고 있습니다. LFS에서는 꼭 필요한 디렉터리들만 생성"
+"합니다. 그러나, 원하신다면 더 많은 디렉터리를 자유롭게 생성해도 좋습니다."
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter07/creatingdirs.xml:74
