@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-29 01:52+0900\n"
-"PO-Revision-Date: 2026-06-29 01:51+0900\n"
+"POT-Creation-Date: 2026-06-29 20:09+0900\n"
+"PO-Revision-Date: 2026-06-29 20:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1172,6 +1172,9 @@ msgid ""
 "machine. In this case the size of the swap partition should be at least as "
 "large as the system's installed RAM."
 msgstr ""
+"Linux의 최대 절전 모드(하이버네이션, suspend-to-disk) 기능을 사용하려면, 기기"
+"를 끄기 전에 RAM의 내용을 스왑 파티션에 기록해야 합니다. 이 경우 스왑 파티션"
+"의 크기는 시스템에 설치된 RAM 용량 이상이어야 합니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter02/creatingpartition.xml:96
@@ -1258,6 +1261,10 @@ msgid ""
 "disks, make this the first physical partition on your first disk drive.  A "
 "partition size of 200 megabytes is adequate."
 msgstr ""
+"/boot &ndash; 강력히 권장합니다. 이 파티션을 사용하여 커널과 기타 부팅 정보"
+"를 저장하십시오. 더 큰 디스크에서 발생할 수 있는 부팅 문제를 최소화하려면, "
+"이 파티션을 첫 번째 디스크 드라이브의 첫 번째 물리 파티션으로 만드십시오. 파"
+"티션 크기는 200메가바이트면 적철합니다,"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:140
@@ -1266,6 +1273,9 @@ msgid ""
 "system with UEFI.  Read <ulink url=\"&blfs-book;postlfs/grub-"
 "setup.html\">the BLFS page</ulink> for details."
 msgstr ""
+"/boot/efi &ndash; EFI 시스템 파티션으로, UEFI를 사용하여 시스템을 부팅할 때 "
+"필요합니다. 자세한 내용은 <ulink url=\"&blfs-book;postlfs/grub-"
+"setup.html\">BLFS page</ulink> 참고하십시오"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:145
@@ -1274,9 +1284,9 @@ msgid ""
 "customization across multiple distributions or LFS builds.  The size is "
 "generally fairly large and depends on available disk space."
 msgstr ""
-"/home &ndash; Highly recommended.  Share your home directory and user "
-"customization across multiple distributions or LFS builds.  The size is "
-"generally fairly large and depends on available disk space."
+"/home &ndash; 강력히 권장합니다. 여러 배포판이나 LFS 빌드 간에 사용자 홈 디렉"
+"터리와 사용자 설정 정보를 공유하십시오. 크기는 일반적으로 꽤 큰 편이며 가용"
+"한 디스크 공간에 따라 달라집니다."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:150
@@ -1296,6 +1306,20 @@ msgid ""
 "initramfs (not covered by LFS) will be needed to boot a system with a "
 "separate <filename class=\"directory\">/usr</filename> partition."
 msgstr ""
+"/usr &ndash; LFS에서 <filename class=\"directory\">/bin</filename>, "
+"<filename class=\"directory\">/lib</filename>, 및 <filename "
+"class=\"directory\">/sbin</filename> 디렉터리는 <filename "
+"class=\"directory\">/usr</filename> 내의 대응하는 디렉터리에 대한 심볼릭 링크"
+"입니다. 따라서 <filename class=\"directory\">/usr</filename> 디렉터리에는 시"
+"스템을 실행하는 데 필요한 모든 바이너리가 들어갑니다. LFS의 경우 <filename "
+"class=\"directory\">/usr</filename> 디렉터리를 위한 별도의 파티션은 보통 필요"
+"하지 않습니다. 만약 그럼에도 불구하고 별도로 생성한다면, 시스템의 모든 프로그"
+"램과 라이브러리를 담을 수 있을 만큼 큰 파티션을 만들어야 합니다. 이 구성에서"
+"는 루트 파티션을 매우 작게(예: 1기가바이트 정도) 만들 수 있으므로, 씬 클라이"
+"언트나 디스크가 없는 워크스테이션(이 경우 <filename class=\"directory\">/"
+"usr</filename>은 원격 서버에서 마운트됨)에 적합합니다. 다만, <filename "
+"class=\"directory\">/usr</filename> 파티션을 분리하여 시스템을 부팅하려면 "
+"(LFS에서는 다루지 않는) initramfs가 필요하다는 점을 유의해야 합니다."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:167
@@ -1304,9 +1328,9 @@ msgid ""
 "packages like KDE or Texlive can be installed without embedding the files in "
 "the /usr hierarchy.  If used, 5 to 10 gigabytes is generally adequate."
 msgstr ""
-"/opt &ndash; This directory is most useful for BLFS, where multiple large "
-"packages like KDE or Texlive can be installed without embedding the files in "
-"the /usr hierarchy.  If used, 5 to 10 gigabytes is generally adequate."
+"/opt &ndash; 이 디렉터리는 KDE나 TeX Live와 같은 여러 대형 패키지를 /usr 디렉"
+"터리 계층 구조에 포함하지 않고 설치할 수 있는 BLFS에서 가장 유용합니다. 사용"
+"한다면 일반적으로 5~10기가바이트면 충분합니다."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:173
@@ -1326,6 +1350,9 @@ msgid ""
 "behavior, follow <xref linkend='systemd-no-tmpfs'/> when configuring the LFS "
 "system."
 msgstr ""
+"/tmp &ndash; 기본적으로 systemd는 <systemitem class='filesystem'>tmpfs</"
+"systemitem> 여기 마운트합니다. 이 동작을 재정의(override)하려면, LFS 시스템"
+"을 구성할 때 <xref linkend='systemd-no-tmpfs'/>을 따르십시오,"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:186
@@ -1335,10 +1362,10 @@ msgid ""
 "used as a location for building BLFS packages. A reasonably large partition "
 "of 30-50 gigabytes provides plenty of room."
 msgstr ""
-"/usr/src &ndash; This partition is very useful for providing a location to "
-"store BLFS source files and share them across LFS builds. It can also be "
-"used as a location for building BLFS packages. A reasonably large partition "
-"of 30-50 gigabytes provides plenty of room."
+"/usr/src &ndash; 이 파티션은 BLFS 소스 파일을 저장하고 여러 LFS 빌드 간에 이"
+"를 공유하는 위치로 활용하기에 매우 유용합니다. 또한 BLFS 패키지를 빌드하기 위"
+"한 장소로도 사용할 수 있습니다. 30~50기가바이트 정도의 넉넉한 파티션을 할당하"
+"면 충분한 공간을 확보할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter02/creatingpartition.xml:194
