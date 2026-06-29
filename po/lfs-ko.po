@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-29 20:09+0900\n"
-"PO-Revision-Date: 2026-06-29 20:08+0900\n"
+"POT-Creation-Date: 2026-06-30 00:56+0900\n"
+"PO-Revision-Date: 2026-06-30 00:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30973,6 +30973,10 @@ msgid ""
 "This archive is then used to install the package on the local machine or "
 "even on other machines."
 msgstr ""
+"이 스킴에서는 앞서 설명한 심볼릭 링크 방식의 패키지 관리에서처럼, 패키지 설치"
+"가 별도의 디렉터리 구조로 가짜(fake) 설치됩니다. 설치 완료 후, 설치된 파일을 "
+"사용하여 패키지 아카이브가 생성됩니다. 이렇게 생성된 아카이브는 로컬 머신이"
+"나 심지어 다른 머신에 패키지를 설치할 때 쓰입니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:321
@@ -30985,6 +30989,13 @@ msgid ""
 "system.  A hint describing how to adopt this style of package management for "
 "LFS systems is located at <ulink url=\"&hints-root;fakeroot.txt\"/>."
 msgstr ""
+"이 접근 방식은 상용 배포판에서 볼 수 있는 대부분의 패키지 관리자가 사용하는 "
+"방식입니다. 이 방식을 따르는 패키지 관리자의 예로는 RPM(참고로, 이는 <ulink "
+"url=\"https://refspecs.linuxfoundation.org/lsb.shtml\">Linux Standard Base "
+"Specification</ulink>)사양에서 요구하는 것입니다), pkg-utils, 데비안(Debian)"
+"의 apt, 젠투(Gentoo)의 포티지(Portage) 시스템이 있습니다. LFS 시스템에 이러"
+"한 방식의 패키지 관리를 도입하는 방법에 대한 힌트는 <ulink url=\"&hints-"
+"root;fakeroot.txt\"/> 에 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:330
@@ -30992,6 +31003,8 @@ msgid ""
 "The creation of package files that include dependency information is "
 "complex, and beyond the scope of LFS."
 msgstr ""
+"의존성 정보를 포함하는 패키지 파일을 생성하는 것은 복잡하며, LFS의 범위를 벗"
+"어납니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:333
@@ -31001,6 +31014,11 @@ msgid ""
 "package managers do.  For details of Slackware package management, see "
 "<ulink url=\"https://www.slackbook.org/html/package-management.html\"/>."
 msgstr ""
+"Slackware는 패키지 아카이브에 <command>tar</command> 기반 시스템을 사용합니"
+"다. 이 시스템은 더 복잡한 패키지 관리자들이 하는 것처럼 패키지 의존성을 처리"
+"하지 않도록 의도적으로 설계되었습니다. Slackware 패키지 관리에 대한 자세한 내"
+"용은 <ulink url=\"https://www.slackbook.org/html/package-management.html\"/> "
+"참조."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:341
