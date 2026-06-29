@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-30 00:56+0900\n"
-"PO-Revision-Date: 2026-06-30 00:56+0900\n"
+"POT-Creation-Date: 2026-06-30 06:02+0900\n"
+"PO-Revision-Date: 2026-06-30 06:01+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -53418,7 +53418,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/part3intro/generalinstructions.xml:28
 msgid "Here are some things you should know about building each package:"
-msgstr ""
+msgstr "각 패키지를 빌드하는 것에 관해 알아야 할 몇 가지 사항:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:33
@@ -53432,6 +53432,13 @@ msgid ""
 "emphasis> may also be encountered when applying a patch. Do not worry about "
 "these warnings; the patch was still successfully applied."
 msgstr ""
+"일부 패키지는 컴파일 전에 패치가 적용되지만, 이는 문제를 우회하기 위해 패치"
+"가 필요한 경우에만 해당합니다. 패치는 현재 장과 다음 장 모두에서 필요한 경우"
+"가 많지만, 동일한 패키지를 여러 번 빌드할 때 즉시 패치가 필요하지 않을 수도 "
+"있습니다. 따라서 다운로드한 패치에 대한 설명이 누락된 것처럼 보이더라도 걱정"
+"하지 마세요. 패치를 적용할 때 <emphasis>offset</emphasis> 또는 "
+"<emphasis>fuzz</emphasis> 에 관한 경고 메시지가 나타날 수도 있습니다. 이러한 "
+"경고에 대해서는 걱정하지 마세요. 패치는 여전히 성공적으로 적용된 것입니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:45
@@ -53442,6 +53449,11 @@ msgid ""
 "standards change fairly often, and some packages have not yet been updated. "
 "This is not a serious problem, but it does cause the warnings to appear."
 msgstr ""
+"대부분의 패키지를 컴파일하는 동안, 화면에 몇 가지 경고가 지나갈 것입니다. 이"
+"는 정상적인 현상이며 안전하게 무시해도 됩니다. 이러한 경고들은 주로 C 또는 C+"
+"+ 문법의 폐기되었지만 유효하지는 않은 사용에 관한 것입니다. C 표준은 상당히 "
+"자주 바뀌는데, 일부 패키지들은 아직 업데이트되지 않았기 때문입니다. 이는 심각"
+"한 문제는 아니지만, 경고가 나타나게 하는 원인이 됩니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:54
@@ -53449,6 +53461,8 @@ msgid ""
 "Check one last time that the <envar>LFS</envar> environment variable is set "
 "up properly:"
 msgstr ""
+"<envar>LFS</envar> 환경변수가 올바르게 설정되었는지 마지막으로 한 번 더 확인"
+"하세요."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:59
@@ -53457,14 +53471,13 @@ msgid ""
 "which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
 "example."
 msgstr ""
-"Make sure the output shows the path to the LFS partition's mount point, "
-"which is <filename class=\"directory\">/mnt/lfs</filename>, using our "
-"example."
+"우리 예시를 사용하여, <filename class=\"directory\">/mnt/lfs</filename> LFS "
+"디렉터리의 마운트 지점으로 가는 경로가 출력에 표시되도록 확인하세요."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:66
 msgid "Finally, two important items must be emphasized:"
-msgstr ""
+msgstr "마지막으로, 두 가지 중요한 사항을 강조:"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><para>
 #: en/part3intro/generalinstructions.xml:70
