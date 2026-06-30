@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-30 06:02+0900\n"
-"PO-Revision-Date: 2026-06-30 06:01+0900\n"
+"POT-Creation-Date: 2026-06-30 21:30+0900\n"
+"PO-Revision-Date: 2026-06-30 21:30+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5725,6 +5725,11 @@ msgid ""
 "configure --help</command>. All the options can be listed at once with "
 "<command>./configure --help=recursive</command>."
 msgstr ""
+"다른 패키지와 달리, 아래 나열된 모든 옵션이 <command>./configure --help</"
+"command>를 실행할 때 나타나는 것은 아닙니다. 예를 들어, <option>--with-"
+"sysroot</option> 옵션을 찾으려면 <command>ld/configure --help</command> 를 실"
+"행해야 합니다. <command>./configure --help=recursive</command> 명령어를 사용"
+"하면 모든 옵션을 한 번에 나열할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist>
 #: en/chapter05/binutils-pass1.xml:93
