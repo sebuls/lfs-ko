@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-06-30 21:30+0900\n"
-"PO-Revision-Date: 2026-06-30 21:30+0900\n"
+"POT-Creation-Date: 2026-07-01 21:32+0900\n"
+"PO-Revision-Date: 2026-07-01 21:32+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1264,7 +1264,7 @@ msgstr ""
 "/boot &ndash; 강력히 권장합니다. 이 파티션을 사용하여 커널과 기타 부팅 정보"
 "를 저장하십시오. 더 큰 디스크에서 발생할 수 있는 부팅 문제를 최소화하려면, "
 "이 파티션을 첫 번째 디스크 드라이브의 첫 번째 물리 파티션으로 만드십시오. 파"
-"티션 크기는 200메가바이트면 적철합니다,"
+"티션 크기는 200메가바이트면 적철합니다."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:140
@@ -1275,7 +1275,7 @@ msgid ""
 msgstr ""
 "/boot/efi &ndash; EFI 시스템 파티션으로, UEFI를 사용하여 시스템을 부팅할 때 "
 "필요합니다. 자세한 내용은 <ulink url=\"&blfs-book;postlfs/grub-"
-"setup.html\">BLFS page</ulink> 참고하십시오"
+"setup.html\">BLFS page</ulink> 참고하십시오."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:145
@@ -12436,6 +12436,8 @@ msgid ""
 "Run the newly compiled <command>bash</command> program (replacing the one "
 "that is currently being executed):"
 msgstr ""
+"새로 컴파일된 <command>bash</command> 프로그램을 실행(현재 실행 중인 프로그램"
+"을 대체):"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/bash.xml:117
@@ -12445,7 +12447,7 @@ msgstr "Bash 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bash.xml:124
 msgid "bash, bashbug, and sh (link to bash)"
-msgstr "bash, bashbug, and sh (link to bash)"
+msgstr "bash, bashbug, 및 sh (bash 에 대한 링크)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/bash.xml:125
@@ -12466,6 +12468,8 @@ msgid ""
 "substitutions on a given command line before executing it, thus making this "
 "interpreter a powerful tool"
 msgstr ""
+"널리 사용되는 명령어 해석기입니다. 주어진 명령줄을 실행하기 전에 다양한 유형"
+"의 확장 및 치환을 수행하므로, 이 해석기는 강력한 도구가 됩니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bash.xml:142
@@ -12483,6 +12487,8 @@ msgid ""
 "A shell script to help the user compose and mail standard formatted bug "
 "reports concerning <command>bash</command>"
 msgstr ""
+"<command>bash</command> 관련된 표준 형식의 버그 보고서를 작성하고 메일로 보"
+"낼 수 있도록 도와주는 셸 스크립트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bash.xml:153
@@ -12502,6 +12508,10 @@ msgid ""
 "behavior of historical versions of <command>sh</command> as closely as "
 "possible, while conforming to the POSIX standard as well"
 msgstr ""
+"<command>bash</command> 프로그램에 대한 심볼릭 링크입니다. <command>sh</"
+"command> 호출될 때, <command>bash</command>는 POSIX 표준을 준수하면서도 역사"
+"적인 <command>sh</command> 버전의 시작 동작을 가능한 한 가깝게 모방하려고 시"
+"도"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bash.xml:167
@@ -23566,7 +23576,7 @@ msgstr "<command>zcmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:132
 msgid "Runs <command>cmp</command> on gzipped files"
-msgstr ""
+msgstr "gzip된 파일에서 <command>cmp</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:134
@@ -51618,7 +51628,7 @@ msgid ""
 "Ncurses, Patch, Readline, Sed, and Texinfo"
 msgstr ""
 "Bash, Binutils, Bison, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep, Make, "
-"Ncurses, Patch, Readline, Sed, and Texinfo"
+"Ncurses, Patch, Readline, Sed, 및 Texinfo"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:214 en/appendices/dependencies.xml:254
@@ -52301,7 +52311,7 @@ msgid ""
 "Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, and Sed"
 msgstr ""
 "Bash, Bc, Binutils, Coreutils, Diffutils, Findutils, GCC, Glibc, Grep, Gzip, "
-"Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, and Sed"
+"Kmod, Libelf, Make, Ncurses, OpenSSL, Perl, 및 Sed"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1892
@@ -52632,7 +52642,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2781
 msgid "Bash, Bc, and Gawk"
-msgstr "Bash, Bc, and Gawk"
+msgstr "Bash, Bc, 및 Gawk"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2806
@@ -54054,6 +54064,13 @@ msgid ""
 "compile the C source file with the cross-toolchain so the generated code "
 "will be able to run on <quote>the host.</quote>"
 msgstr ""
+"<quote>host</quote>에서 실행될 기계어를 생성하고 처리할 때는 크로스 툴체인을 "
+"사용해야 합니다. 이때 <quote>build</quote>환경에서 실행될 기계어를 생성하기 "
+"위해 <quote>build</quote> 환경의 네이티브 툴체인이 여전히 호출될 수 있다는 점"
+"에 유의하세요. 예를 들어, 빌드 시스템은 네이티브 툴체인으로 생성기(generator)"
+"를 빌드한 다음, 그 생성기로 C 소스 파일을 만들고, 마지막으로 크로스 툴체인을 "
+"사용하여 해당 C 소스 파일을 빌드하여 생성된 코드가 <quote>host</quote>에서 실"
+"행될 수 있도록 할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:229
@@ -54067,6 +54084,13 @@ msgid ""
 "<command>readelf</command> tool will be <command>&host-triplet;-readelf</"
 "command>."
 msgstr ""
+"Autoconf 기반 빌드 시스템에서는 <parameter>--host</parameter>스위치를 사용하"
+"여 <quote>the host</quote> 삼중항(triplet)을 지정함으로써 이러한 요구 사항을 "
+"보장합니다. 이 스위치를 사용하면 빌드 시스템은 '호스트'를 위한 기계어를 생성"
+"하고 처리하기 위해 <literal>&host-triplet;</literal> 접두사가 붙은 툴체인 구"
+"성 요소를 사용합니다. 예를 들어, 컴파일러는 <command>&host-triplet;-gcc</"
+"command>가 되고, <command>readelf</command> 도구는 <command>&host-triplet;-"
+"readelf</command>가 됩니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:243
