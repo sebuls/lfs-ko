@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-01 21:32+0900\n"
-"PO-Revision-Date: 2026-07-01 21:32+0900\n"
+"POT-Creation-Date: 2026-07-02 02:48+0900\n"
+"PO-Revision-Date: 2026-07-02 02:47+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -40535,9 +40535,8 @@ msgid ""
 "filename>, and depending on the contents of the file, sets the clock to "
 "either UTC or local time."
 msgstr ""
-"<command>systemd-timedated</command> reads <filename>/etc/adjtime</"
-"filename>, and depending on the contents of the file, sets the clock to "
-"either UTC or local time."
+"<command>systemd-timedated</command>는 <filename>/etc/adjtime</filename>를 읽"
+"고, 파일 내용에 따라 시계를 UTC 또는 현지 시간으로 맞춥니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:36
@@ -40545,6 +40544,8 @@ msgid ""
 "Create the <filename>/etc/adjtime</filename> file with the following "
 "contents if your hardware clock is set to local time:"
 msgstr ""
+"하드웨어 시계가 현지 시간으로 설정되어 있으면 <filename>/etc/adjtime</"
+"filename> 파일을 다음 내용으로 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/clock.xml:39
@@ -40569,6 +40570,9 @@ msgid ""
 "<command>systemd-timedated</command> will assume that hardware clock is set "
 "to UTC and adjust the file according to that."
 msgstr ""
+"<filename>/etc/adjtime</filename> 파일이 최초 부팅 시 없으면, "
+"<command>systemd-timedated</command>는 하드웨어 시계가 UTC로 설정되어 있다고 "
+"가정하고 그에 맞춰 파일을 맞춥니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:49
@@ -40577,6 +40581,9 @@ msgid ""
 "<command>systemd-timedated</command> if your hardware clock is set to UTC or "
 "local time:"
 msgstr ""
+"또한 <command>timedatectl</command> 유틸리티를 사용하여 <command>systemd-"
+"timedated</command>에게 하드웨어 시계가 UTC로 설정되어 있는지, 또는 현지 시간"
+"으로 설정되어 있는지 알려줄 수 있습니다:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/clock.xml:53
@@ -40590,13 +40597,13 @@ msgid ""
 "<command>timedatectl</command> can also be used to change system time and "
 "time zone."
 msgstr ""
-"<command>timedatectl</command> can also be used to change system time and "
-"time zone."
+"<command>timedatectl</command> 는 시스템 시간과 시간대를 변경할 때 쓸 수 있습"
+"니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:58
 msgid "To change your current system time, issue:"
-msgstr ""
+msgstr "현재 시스템 시간을 변경하려면:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/clock.xml:60
@@ -40607,12 +40614,12 @@ msgstr "<userinput>timedatectl set-time YYYY-MM-DD HH:MM:SS</userinput>"
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:62
 msgid "The hardware clock will also be updated accordingly."
-msgstr ""
+msgstr "하드웨어 시계도 그에 맞춰 업데이트됩니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:64
 msgid "To change your current time zone, issue:"
-msgstr ""
+msgstr "현재 시간대를 변경하려면 다음 명령을 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/clock.xml:66
@@ -40623,7 +40630,7 @@ msgstr "<userinput>timedatectl set-timezone TIMEZONE</userinput>"
 #. type: Content of: <sect1><para>
 #: en/chapter09/clock.xml:68
 msgid "You can get a list of available time zones by running:"
-msgstr ""
+msgstr "사용 가능한 시간대 목록을 얻을 수 있습니다. 다음 명령을 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter09/clock.xml:70
