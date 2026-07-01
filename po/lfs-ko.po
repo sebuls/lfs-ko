@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-02 02:48+0900\n"
-"PO-Revision-Date: 2026-07-02 02:47+0900\n"
+"POT-Creation-Date: 2026-07-02 04:54+0900\n"
+"PO-Revision-Date: 2026-07-02 04:53+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -14355,7 +14355,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:314
 msgid "chown"
-msgstr ""
+msgstr "chown"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:320
@@ -14372,7 +14372,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:325
 msgid "chroot"
-msgstr ""
+msgstr "chroot"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:331
@@ -14391,7 +14391,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:336
 msgid "cksum"
-msgstr ""
+msgstr "cksum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:342
@@ -14408,7 +14408,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:347
 msgid "comm"
-msgstr ""
+msgstr "comm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:353
@@ -16363,7 +16363,7 @@ msgstr "두 파일을 비교하여 바이트 단위로 차이점을 알려줌"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/diffutils.xml:84
 msgid "cmp"
-msgstr ""
+msgstr "cmp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/diffutils.xml:90
@@ -24981,7 +24981,7 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist J
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/jinja2.xml:54
 msgid "Contents of Jinja2"
-msgstr ""
+msgstr "Contents of Jinja2"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/jinja2.xml:61
@@ -25172,7 +25172,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:133
 msgid "chvt"
-msgstr ""
+msgstr "chvt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kbd.xml:139
@@ -28606,7 +28606,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:252
 msgid "clear"
-msgstr ""
+msgstr "clear"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ncurses.xml:258
@@ -29787,7 +29787,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/perl.xml:119
 msgid "Contents of Perl"
-msgstr ""
+msgstr "Contents of Perl"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/perl.xml:127
@@ -31284,7 +31284,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/procps.xml:103
 msgid "Contents of Procps-ng"
-msgstr ""
+msgstr "Contents of Procps-ng"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/procps.xml:111
@@ -32726,7 +32726,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:219
 msgid "To enable shadowed passwords, run the following command:"
-msgstr ""
+msgstr "섀도우 패스워드를 활성화하려면 다음 명령을 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:221
@@ -32737,7 +32737,7 @@ msgstr "<userinput>pwconv</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/shadow.xml:223
 msgid "To enable shadowed group passwords, run:"
-msgstr ""
+msgstr "섀도우 그룹 패스워드를 활성화하려면 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:225
@@ -32779,6 +32779,8 @@ msgid ""
 "useradd</filename> must be created and tailored to suit your particular "
 "needs. Create it with:"
 msgstr ""
+"둘째, 기본 매개변수를 변경하려면 <filename>/etc/default/useradd</filename> 파"
+"일을 생성하고 당신의 필요에 맞게 조정해야 합니다. 다음 명령어로 파일을 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:244
@@ -32849,6 +32851,8 @@ msgstr ""
 msgid ""
 "Choose a password for user <emphasis>root</emphasis> and set it by running:"
 msgstr ""
+"<emphasis>root</emphasis> 사용자의 비밀번호를 선택하고 다음 명령을 실행하여 "
+"설정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/shadow.xml:296
@@ -32945,7 +32949,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/shadow.xml:361
 msgid "chpasswd"
-msgstr ""
+msgstr "chpasswd"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:367
@@ -32960,7 +32964,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/shadow.xml:371
 msgid "chsh"
-msgstr ""
+msgstr "chsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/shadow.xml:377
@@ -35487,7 +35491,7 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&sysvinit-consolidated-patch;<
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/sysvinit.xml:88
 msgid "Contents of SysVinit"
-msgstr ""
+msgstr "Contents of SysVinit"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/sysvinit.xml:94
@@ -36598,7 +36602,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/udev.xml:230
 msgid "Contents of Udev"
-msgstr ""
+msgstr "Contents of Udev"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/udev.xml:238
@@ -37090,7 +37094,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:296
 msgid "chrt"
-msgstr ""
+msgstr "chrt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:302
@@ -37105,7 +37109,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:306
 msgid "col"
-msgstr ""
+msgstr "col"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:312
@@ -37122,7 +37126,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:317
 msgid "colcrt"
-msgstr ""
+msgstr "colcrt"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:323
@@ -37137,7 +37141,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:327
 msgid "colrm"
-msgstr ""
+msgstr "colrm"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:333
@@ -37152,7 +37156,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/util-linux.xml:337
 msgid "column"
-msgstr ""
+msgstr "column"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/util-linux.xml:343
@@ -39029,7 +39033,7 @@ msgstr "더 많은 정보는 <filename>runtime/spell/README.txt</filename> 참�
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/vim.xml:199
 msgid "Contents of Vim"
-msgstr ""
+msgstr "Contents of Vim"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/vim.xml:206
@@ -39260,7 +39264,7 @@ msgstr "<userinput remap=\"install\">pip3 install --no-index --find-links dist w
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/wheel.xml:54
 msgid "Contents of Wheel"
-msgstr ""
+msgstr "Contents of Wheel"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/wheel.xml:63
@@ -40086,7 +40090,7 @@ msgstr "LFS-Bootscripts 설치"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/bootscripts.xml:53
 msgid "Contents of LFS-Bootscripts"
-msgstr ""
+msgstr "Contents of LFS-Bootscripts"
 
 #. type: Content of: <sect1><sect2><segmentedlist><segtitle>
 #: en/chapter09/bootscripts.xml:55
@@ -40150,7 +40154,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:94
 msgid "cleanfs"
-msgstr ""
+msgstr "cleanfs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/bootscripts.xml:100
