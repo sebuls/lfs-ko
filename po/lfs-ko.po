@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-02 04:54+0900\n"
-"PO-Revision-Date: 2026-07-02 04:53+0900\n"
+"POT-Creation-Date: 2026-07-02 21:42+0900\n"
+"PO-Revision-Date: 2026-07-02 21:42+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -42084,6 +42084,9 @@ msgid ""
 "you'll also need to decide on an IP address. The syntax for a hosts file "
 "entry is:"
 msgstr ""
+"FQDN(fully-qualified domain name, 정규화된 도메인 이름)과 <filename>/etc/"
+"hosts</filename> 파일에 사용할 별칭들을 결정하세요. 고정 IP 주소를 사용하면, "
+"IP 주소도 결정해야 합니다. hosts 파일 항목의 구문:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/network.xml:186 en/chapter09/networkd.xml:323
@@ -42099,10 +42102,10 @@ msgid ""
 "users do not have this), make sure that the IP address is in the private "
 "network IP address range. Valid ranges are:"
 msgstr ""
-"Unless the computer is to be visible to the Internet (i.e., there is a "
-"registered domain and a valid block of assigned IP addresses&mdash;most "
-"users do not have this), make sure that the IP address is in the private "
-"network IP address range. Valid ranges are:"
+"컴퓨터가 인터넷에 노출될 예정이 아니라면(즉, 등록된 도메인과 유효하게 할당된 "
+"IP 주소 블록을 가지고 있지 않은 경우 &mdash; 대부분의 사용자는 해당하지 않습"
+"니다), IP 주소가 사설 네트워크 IP 주소 범위 내에 있는지 확인하세요. 유효한 범"
+"위."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/network.xml:193 en/chapter09/networkd.xml:330
@@ -42120,13 +42123,13 @@ msgid ""
 "x can be any number in the range 16-31. y can be any number in the range "
 "0-255."
 msgstr ""
-"x can be any number in the range 16-31. y can be any number in the range "
-"0-255."
+"x는 16에서 31 사이의 범위에 있는 어떤 숫자든 될 수 있고, y는 0에서 255 사이"
+"의 범위에 있는 어떤 숫자든 될 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:201
 msgid "A valid private IP address could be 192.168.1.2."
-msgstr ""
+msgstr "유효한 사설 IP 주소는 192.168.1.2 가 될 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:203 en/chapter09/networkd.xml:340
@@ -42137,6 +42140,10 @@ msgid ""
 "you need to contact the domain provider to resolve the FQDN to your public "
 "IP address."
 msgstr ""
+"컴퓨터가 인터넷에 보일 예정이라면, 유효한 FQDN은 도메인 이름 그 자체이거나, "
+"접두사(보통 호스트 이름)와 도메인 이름을 <quote>.</quote> 문자로 결합하여 만"
+"든 문자열이 될 수 있습니다. 그리고 도메인 제공업체에 연락하여 해당 FQDN이 여"
+"러분의 공인 IP 주소로 연결되도록 설정해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:209 en/chapter09/networkd.xml:346
@@ -42145,6 +42152,9 @@ msgid ""
 "for certain programs, such as MTAs, to operate properly.  A special FQDN, "
 "<literal>localhost.localdomain</literal>, can be used for this purpose."
 msgstr ""
+"컴퓨터가 인터넷에 노출되지 않더라도 MTA와 같은 특정 프로그램이 올바르게 작동"
+"하려면 FQDN이 필요합니다. 이를 위해 <literal>localhost.localdomain</literal>"
+"이라는 특수한 FQDN을 사용할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:214
@@ -42534,6 +42544,13 @@ msgid ""
 "environment, remove it so <command>systemd-resolved</command> will create "
 "the symlink on boot."
 msgstr ""
+"LFS 시스템에 <command>systemd-resolved</command>를 사용하려 하지만 chroot 환"
+"경에서 인터넷에 접속해야 할 경우(예를 들어 빌드 과정에서 인터넷 연결이 필요"
+"한 BLFS 패키지를 빌드하는 경우), chroot 환경 내에서 이름 확인(name "
+"resolution)이 작동하도록 아래 정적 구성을 따라 <filename>/etc/resolv.conf</"
+"filename>파일을 생성하세요. chroot 환경에서 나갈 때는 <command>systemd-"
+"resolved</command>가 부팅 시 심볼릭 링크를 생성할 수 있도록 해당 파일을 삭제"
+"하세요."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/networkd.xml:240
@@ -42597,7 +42614,7 @@ msgstr ""
 #: en/chapter09/networkd.xml:351
 msgid ""
 "Create the <filename>/etc/hosts</filename> file using the following command:"
-msgstr ""
+msgstr "다음 명령을 사용하여 <filename>/etc/hosts</filename> 파일을 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/networkd.xml:354
@@ -42637,6 +42654,13 @@ msgid ""
 "are using a connection configured with DHCP or IPv6 Autoconfiguration, or "
 "using <literal>localhost.localdomain</literal> as the FQDN."
 msgstr ""
+"<replaceable>&lt;192.168.0.2&gt;</replaceable> 및 <replaceable>&lt;FQDN&gt;</"
+"replaceable> 값은 특정 용도나 요구 사항에 맞게 변경해야 합니다(네트워크/시스"
+"템 관리자로부터 IP 주소를 할당받았고 해당 장비를 기존 네트워크에 연결할 경"
+"우). 선택 사항인 별칭 이름(들)은 생략할 수 있으며, DHCP나 IPv6 자동 구성을 사"
+"용하여 연결하거나 <literal>localhost.localdomain</literal> 을 FQDN으로 사용하"
+"는 경우에는 <replaceable>&lt;192.168.0.2&gt;</replaceable> 줄을 생략할 수 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:374
@@ -42647,6 +42671,12 @@ msgid ""
 "class='library'>myhostname</systemitem> NSS module, read the man page <ulink "
 "role='man' url='&man;nss-myhostname.8'>nss-myhostname(8)</ulink> for details."
 msgstr ""
+"<filename>/etc/hostname</filename> 파일에는 <literal>localhost</literal>, "
+"<literal>localhost.localdomain</literal> 또는 (도메인이 없는) 호스트 이름에 "
+"대한 항목이 포함되지 않습니다. 이는 해당 이름들이 <systemitem "
+"class='library'>myhostname</systemitem> NSS 모듈에 의해 처리되기 때문입니다. "
+"자세한 내용은 <ulink role='man' url='&man;nss-myhostname.8'>nss-"
+"myhostname(8)</ulink> 매뉴얼 페이지를 참조하세요."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:383
@@ -42654,6 +42684,8 @@ msgid ""
 "The ::1 entry is the IPv6 counterpart of 127.0.0.1 and represents the IPv6 "
 "loopback interface."
 msgstr ""
+"::1 항목은 127.0.0.1에 대응하는 IPv6 주소이며, IPv6 루프백 인터페이스를 나타"
+"냅니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/symlinks.xml:11
