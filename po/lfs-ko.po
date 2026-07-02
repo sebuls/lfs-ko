@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-02 21:42+0900\n"
-"PO-Revision-Date: 2026-07-02 21:42+0900\n"
+"POT-Creation-Date: 2026-07-03 02:19+0900\n"
+"PO-Revision-Date: 2026-07-03 02:18+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5343,6 +5343,9 @@ msgid ""
 "bash\"/> is not configured to load or execute <filename>/etc/bash.bashrc</"
 "filename>, so this file is useless on a completed LFS system."
 msgstr ""
+"<xref linkend=\"ch-system-bash\"/> 에서 빌드할 LFS Bash 패키지는 <filename>/"
+"etc/bash.bashrc</filename>를 로드하거나 실행하도록 구성되지 않았으므로, 이 파"
+"일은 완성된 LFS 시스템에서 쓸모가 없습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/settingenviron.xml:196
@@ -5383,6 +5386,8 @@ msgid ""
 "will be automatically used by <command>make</command> as command line "
 "options:"
 msgstr ""
+"또는 <envar>MAKEFLAGS</envar> 환경 변수를 설정하면 해당 내용이 "
+"<command>make</command>에 의해 자동으로 명령줄 옵션으로 사용:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/settingenviron.xml:217
@@ -5410,6 +5415,9 @@ msgid ""
 "linkend='chapter-cross-tools'/> and <xref linkend='chapter-temporary-tools'/"
 ">, set <envar>MAKEFLAGS</envar> now in <filename>.bashrc</filename>:"
 msgstr ""
+"<xref linkend='chapter-cross-tools'/> 및 <xref linkend='chapter-temporary-"
+"tools'/>에서 패키지를 빌드하는 데 사용 가능한 모든 논리 코어를 사용하려면, "
+"<envar>MAKEFLAGS</envar>를 지금 <filename>.bashrc</filename>에 설정:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/settingenviron.xml:235
@@ -5439,6 +5447,8 @@ msgid ""
 "temporary tools, force the <command>bash</command> shell to read the new "
 "user profile:"
 msgstr ""
+"마지막으로, 임시 도구를 빌드하기 위한 환경이 완벽하게 준비되었는지 확인하기 "
+"위해 <command>bash</command> 셸이 새로운 사용자 프로필을 읽도록 강제:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/settingenviron.xml:248
@@ -28717,7 +28727,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:326
 msgid "toe"
-msgstr ""
+msgstr "toe"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ncurses.xml:332
