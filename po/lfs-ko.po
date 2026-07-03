@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-03 02:19+0900\n"
-"PO-Revision-Date: 2026-07-03 02:18+0900\n"
+"POT-Creation-Date: 2026-07-03 12:14+0900\n"
+"PO-Revision-Date: 2026-07-03 12:14+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -29031,7 +29031,7 @@ msgstr "<command>ninja</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ninja.xml:130
 msgid "is the Ninja build system"
-msgstr "Ninja 빌드 시스템"
+msgstr "ninja 빌드 시스템"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/openssl.xml:14
@@ -47041,6 +47041,12 @@ msgid ""
 "additional packages and still provides a complete system for installing "
 "packages."
 msgstr ""
+"이 방법도 완전한 그래픽 환경을 제공하지만, 우선 LFS 시스템에 (보통 chroot 환"
+"경에서) <ulink url=\"&blfs-book;postlfs/openssh.html\">sshd</ulink> 설치해야 "
+"합니다. 또한 두 번째 컴퓨터가 필요합니다. 이 방법은 chroot 환경의 복잡함이 요"
+"구되지 않아 간단하다는 장점이 있습니다. 아울러 모든 추가 패키지에 대해 사용자"
+"가 빌드한 LFS 커널을 사용하며, 여전히 패키지 설치를 위한 완전한 시스템을 제공"
+"합니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:196
@@ -47054,6 +47060,14 @@ msgid ""
 "wget.html\">wget</ulink> in chroot (or upload their sources using "
 "<command>scp</command> after booting the LFS system)."
 msgstr ""
+"<command>scp</command>명령을 사용하여 빌드할 패키지 소스를 LFS 시스템으로 업"
+"로드할 수 있습니다. 만약 소스를 LFS 시스템에 직접 다운로드하고 싶다면, "
+"chroot 환경에서 <ulink url=\"&blfs-book;general/libtasn1.html\">libtasn1</"
+"ulink>, <ulink url=\"&blfs-book;postlfs/p11-kit.html\">p11-kit</ulink>, "
+"<ulink url=\"&blfs-book;postlfs/make-ca.html\">make-ca</ulink>, and <ulink "
+"url=\"&blfs-book;basicnet/wget.html\">wget</ulink>을 설치하세요(또는 LFS 시스"
+"템으로 부팅한 후 <command>scp</command> 사용하여 해당 소스들을 업로드해도 됩"
+"니다)."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter11/afterlfs.xml:209
@@ -47078,6 +47092,20 @@ msgid ""
 "and <keycombo> <keycap>Alt</keycap> <keycap function='right'/> </keycombo> "
 "combinations also will change the console."
 msgstr ""
+"이 방법은 chroot 환경에서 l<ulink url=\"&blfs-book;general/"
+"libtasn1.html\">libtasn1</ulink>, <ulink url=\"&blfs-book;postlfs/p11-"
+"kit.html\">p11-kit</ulink>, <ulink url=\"&blfs-book;postlfs/make-"
+"ca.html\">make-ca</ulink>, <ulink url=\"&blfs-book;basicnet/"
+"wget.html\">wget</ulink>, <ulink url=\"&blfs-book;general/gpm.html\">gpm</"
+"ulink>, and <ulink url=\"&blfs-book;basicnet/links.html\">links</ulink> (or "
+"<ulink url=\"&blfs-book;basicnet/lynx.html\">lynx</ulink>)를 설치한 다음, 새 "
+"LFS 시스템으로 재부팅해야 합니다. 이 시점에서 기본 시스템에는 6개의 가상 콘솔"
+"이 있습니다. 콘솔 전환은 <keycap>Fx</keycap>가 <keycap>F1</keycap> 및 "
+"<keycap>F6</keycap> 사이인 <keycombo> <keycap>Alt</keycap> <keycap>Fx</"
+"keycap> </keycombo> 키 조합을 사용하는 것만큼 간단합니다. <keycombo> "
+"<keycap>Alt</keycap> <keycap function='left'/> </keycombo> and <keycombo> "
+"<keycap>Alt</keycap> <keycap function='right'/> </keycombo>  조합으로도 콘솔"
+"을 변경할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:243
@@ -47320,6 +47348,10 @@ msgid ""
 "to ask for help at some point) to find out which LFS version is installed on "
 "the system. Create this file by running:"
 msgstr ""
+"<filename>/etc/lfs-release</filename> 파일을 생성해 두는 게 좋습니다. 이 파일"
+"을 가지고 있으면, 여러분이 시스템에 어떤 LFS 버전이 설치되어 있는지 확인하기"
+"가 매우 쉬워집니다(나중에 도움을 요청해야 할 경우도 마찬가지). 다음을 실행하"
+"여 이 파일을 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter11/theend.xml:34
@@ -47333,6 +47365,8 @@ msgid ""
 "Two files describing the installed system may be used by packages that can "
 "be installed on the system later, either in binary form or by building them."
 msgstr ""
+"설치된 시스템을 설명하는 파일 두개는 나중에 이진(binary) 형태나 빌드를 통해 "
+"시스템에 설치될 수 있는 패키지가 사용할 수 있습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/theend.xml:40
