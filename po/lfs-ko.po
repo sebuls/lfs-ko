@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-03 12:14+0900\n"
-"PO-Revision-Date: 2026-07-03 12:14+0900\n"
+"POT-Creation-Date: 2026-07-03 12:36+0900\n"
+"PO-Revision-Date: 2026-07-03 12:36+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -47374,6 +47374,8 @@ msgid ""
 "The first one shows the status of your new system with respect to the Linux "
 "Standards Base (LSB).  To create this file, run:"
 msgstr ""
+"첫 번째는 리눅스 표준 베이스(LSB)와 관련하여 우리 새 시스템의 상태를 보여줍니"
+"다. 이 파일을 생성하려면 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter11/theend.xml:44
@@ -47399,6 +47401,8 @@ msgid ""
 "The second one contains roughly the same information, and is used by systemd "
 "and some graphical desktop environments.  To create this file, run:"
 msgstr ""
+"두 번째 것은 거의 같은 정보를 담고 있으며, systemd와 일부 그래픽 데스크톱 환"
+"경에서 쓰입니다. 이 파일을 생성하려면 실행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter11/theend.xml:55
@@ -47430,6 +47434,8 @@ msgid ""
 "Be sure to customize the fields 'DISTRIB_CODENAME' and 'VERSION_CODENAME' to "
 "make the system uniquely yours."
 msgstr ""
+"'DISTRIB_CODENAME' 및 'VERSION_CODENAME' 필드를 커스터마이징하여 시스템을 담"
+"신만의 고유한 것으로 만드세요."
 
 #. type: Content of: <sect1><title>
 #: en/chapter11/whatnow.xml:11
