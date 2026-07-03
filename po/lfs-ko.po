@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-03 17:04+0900\n"
-"PO-Revision-Date: 2026-07-03 17:03+0900\n"
+"POT-Creation-Date: 2026-07-04 05:21+0900\n"
+"PO-Revision-Date: 2026-07-04 05:21+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46895,6 +46895,8 @@ msgid ""
 "additional packages. Unfortunately, the user environment is quite sparse.  "
 "There are a couple of ways to improve this:"
 msgstr ""
+"LFS로 처음 부팅하면 추가 패키지를 빌드하기 위한 모든 내부 도구를 갖춘 겁니"
+"다. 불행히도, 사용자 환경은 꽤 빈약합니다. 이를 개선하는 방법 몇 가지:"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter11/afterlfs.xml:76
@@ -46909,6 +46911,10 @@ msgid ""
 "applications like the host's version of wget to download package sources to "
 "a location available when working in the chroot environment."
 msgstr ""
+"이 방법은 완벽한 기능을 갖춘 브라우저와 복사/붙여넣기 기능을 사용할 수 있는 "
+"완전한 그래픽 환경을 제공합니다. 이 방법은 호스트의 wget 버전과 같은 애플리케"
+"이션을 허용하여, chroot 환경에서 작업할 때 접근 가능한 위치로 패키지 소스를 "
+"다운로드할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:87
@@ -46918,6 +46924,9 @@ msgid ""
 "One way to do this is to create a script on the <emphasis "
 "role=\"bold\">HOST</emphasis> system:"
 msgstr ""
+"chroot 환경에서 패키지를 올바르게 빌드하려면, 가상 파일 시스템이 아직 마운트"
+"되지 않은 경우 이를 마운트하는 것을 기억해야 합니다. 이걸 하는  방법 하나는 "
+"<emphasis role=\"bold\">HOST</emphasis> 시스템에 스크립트를 생성:"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter11/afterlfs.xml:93
@@ -47030,6 +47039,9 @@ msgid ""
 "useful if those directories are mounted as separate partitions on the host "
 "system and will be mounted when booting the completed LFS/BLFS system."
 msgstr ""
+"스크립트의 마지막 세 명령어가 주석 처리되어 있다는 점을 주의하세요. 이들은 해"
+"당 디렉터리들이 호스트 시스템에서 별도의 파티션으로 마운트되어 있고, 완성된 "
+"LFS/BLFS 시스템으로 부팅할 때 마운트될 예정이라면 쓸모 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:150
@@ -47038,6 +47050,9 @@ msgid ""
 "a regular user (recommended) or as &root;. If run as a regular user, sudo is "
 "required on the host system."
 msgstr ""
+"이 스크립트는 일반 사용자(권장) 또는 &root; 권한으로 <command>bash ~/mount-"
+"virt.sh</command> 사용하여 실행할 수 있습니다. 일반 사용자로 실행하면, 호스"
+"트 시스템에서 sudo 권한이 필요."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:156
@@ -47049,6 +47064,12 @@ msgid ""
 "chroot environment) /sources. In any case, the packages must be accessible "
 "inside the chroot environment."
 msgstr ""
+"스크립트에서 지적하는 또 다른 문제는 다운로드한 패키지 파일을 어디에 저장할 "
+"것인가 하는 겁니다. 이 위치는 임의입니다. 일반 사용자의 홈 디렉터리(예: ~/"
+"sources)가 될 수도 있고, /usr/src 처럼 전역 위치가 될 수도 있습니다. 우리의 "
+"권장 사항은 (chroot 환경에서 볼 때) /sources 디렉터리에 BLFS 소스와 LFS 소스"
+"를 섞지 말라는 겁니다. 어떤 경우든, 패키지는 chroot 환경 내부에서 접근할 수 "
+"있어야 합니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter11/afterlfs.xml:165
@@ -47057,6 +47078,9 @@ msgid ""
 "entering the chroot environment. This can be done with an alias placed in a "
 "user's ~/.bashrc file on the host system:"
 msgstr ""
+"여기에 제시된 마지막 편의 기능은 chroot 환경으로 진입하는 과정을 간소화하는 "
+"것입니다. 이는 호스트 시스템의 사용자 ~/.bashrc 파일에 별칭(alias)을 추가하"
+"여 수행 가능:"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter11/afterlfs.xml:170
@@ -47075,6 +47099,9 @@ msgid ""
 "characters. It must be all on a single line. The above command has been "
 "split in two for presentation purposes."
 msgstr ""
+"이 별칭은 인용 부호와 여러 단계의 백슬래시 문자 때문에 조금 까다롭습니다. 반"
+"드시 한 줄에 해야 합니다. 위 명령어는 보여주기 편하게 두 줄로 나누어져 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter11/afterlfs.xml:182
