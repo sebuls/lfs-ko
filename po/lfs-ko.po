@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-03 12:36+0900\n"
-"PO-Revision-Date: 2026-07-03 12:36+0900\n"
+"POT-Creation-Date: 2026-07-03 17:04+0900\n"
+"PO-Revision-Date: 2026-07-03 17:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -45363,6 +45363,11 @@ msgid ""
 "instructions provided in <ulink url=\"&blfs-book;postlfs/grub-"
 "setup.html\">the BLFS page</ulink>."
 msgstr ""
+"시스템이 UEFI를 지원하고 UEFI로 LFS를 부팅하려면, 이 페이지의 지침은 건너뛰어"
+"야 합니다. 그러니, <filename>grub.cfg</filename> 구문과 파일 내에서 파티션을 "
+"지정하는 방법은 이 페이지를 통해 학습해야 하며, <ulink url=\"&blfs-"
+"book;postlfs/grub-setup.html\">BLFS 페이지</ulink>에서 제공하는 지침을 사용하"
+"여 UEFI 지원과 함께 GRUB를 구성해야 합니다."
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter10/grub.xml:33
@@ -45372,6 +45377,10 @@ msgid ""
 "is not required to boot your LFS system.  You may just want to modify your "
 "current boot loader, e.g. Grub-Legacy, GRUB2, or LILO."
 msgstr ""
+"GRUB를 잘못 구성하면 CD-ROM이나 부팅 가능한 USB 드라이브와 같은 대체 부팅 장"
+"치 없이는 시스템을 사용할 수 없게 될 수 있습니다. 이 섹션은 LFS 시스템을 부팅"
+"하는 데 필수는 아닙니다. 기존의 부트로더(예: Grub-Legacy, GRUB2 또는 LILO)를 "
+"수정하는 것만으로 충분할 수도 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:39
@@ -45383,6 +45392,11 @@ msgid ""
 "<userinput>xorriso</userinput> from the <ulink url=\"&blfs-book;multimedia/"
 "libisoburn.html\"> libisoburn</ulink> package."
 msgstr ""
+"컴퓨터가 사용할 수 없게(부팅 불가능) 될 경우를 대비하여 컴퓨터를 "
+"<quote>rescue</quote>할 수 있는 비상 부팅 디스크가 준비되어 있는지 확인하십시"
+"오. 아직 부팅 장치가 없다면 하나를 생성할 수 있습니다. 아래 절차가 작동하려"
+"면, BLFS로 넘어가서 <ulink url=\"&blfs-book;multimedia/libisoburn.html\"> "
+"libisoburn</ulink> 패키지의 <userinput>xorriso</userinput> 설치해야 합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter10/grub.xml:47
@@ -45418,6 +45432,18 @@ msgid ""
 "<filename class=\"partition\">hdc</filename>, that second hard drive would "
 "still be <emphasis>(hd1)</emphasis>."
 msgstr ""
+"GRUB는 드라이브와 파티션에 대해 <emphasis>(hdn,m)</emphasis>형식의 자체적인 "
+"명명 구조를 사용합니다. 여기서 <emphasis>n</emphasis>은 하드 드라이브 번호이"
+"고, <emphasis>m</emphasis>은 파티션 번호입니다. 하드 드라이브 번호는 0부터 시"
+"작하지만, 파티션 번호는 일반 파티션의 경우 1부터 시작합니다(확장 파티션의 경"
+"우 5부터 시작). 이는 두 번호 모두 0부터 시작했던 이전 버전과는 다르다는 점을 "
+"유의하십시오. 예를 들어, 파티션 <filename class=\"partition\">sda1</filename>"
+"은 GRUB에서 <emphasis>(hd0,1)</emphasis>이고, <filename "
+"class=\"partition\">sdb3</filename>은 <emphasis>(hd1,3)</emphasis>입니다. 리"
+"눅스와 달리 GRUB는 CD-ROM 드라이브를 하드 드라이브로 간주하지 않습니다. 예를 "
+"들어, <filename class=\"partition\">hdb</filename>에 CD를 사용하고 <filename "
+"class=\"partition\">hdc</filename>에 두 번째 하드 드라이브가 있는 경우, 그 "
+"두 번째 하드 드라이브는 여전히 <emphasis>(hd1)</emphasis>이 됩니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/grub.xml:74
@@ -45431,6 +45457,9 @@ msgid ""
 "This area is not part of any file system.  The programs there access GRUB "
 "modules in the boot partition.  The default location is /boot/grub/."
 msgstr ""
+"GRUB는 하드 디스크의 첫 번째 물리 트랙에 데이터를 기록하는 방식으로 작동합니"
+"다. 이 영역은 어떤 파일 시스템에도 속하지 않습니다. 해당 위치의 프로그램들은 "
+"부팅 디렉터리 내의 GRUB 모듈에 접근합니다. 기본 위치는 /boot/grub/."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:81
@@ -45447,6 +45476,16 @@ msgid ""
 "class=\"directory\">/boot</filename>.  If you do this, be sure to update "
 "<filename>/etc/fstab</filename>."
 msgstr ""
+"부팅 디렉터리의 위치는 사용자가 선택할 수 있으며, 이는 설정에 영향을 미칩니"
+"다. 한 가지 권장 사항은 부팅 정보만을 위한 별도의 작은 파티션(권장 크기 200 "
+"MB)을 만드는 것입니다. 그렇게 하면 LFS든 상용 배포판이든 각 빌드에서 동일한 "
+"부팅 파일에 접근할 수 있으며, 부팅된 어떤 시스템에서든 접근이 가능합니다. 이 "
+"방식을 선택하려면 별도의 파티션을 마운트하고, 현재 <filename "
+"class=\"directory\">/boot</filename>디렉터리에 있는 모든 파일(예: 이전 섹션에"
+"서 방금 빌드한 리눅스 커널)을 새 파티션으로 이동해야 합니다. 그 다음 해당 파"
+"티션을 언마운트하고 <filename class=\"directory\">/boot</filename>로 다시 마"
+"운트해야 합니다. 이 작업을 수행한다면 <filename>/etc/fstab</filename>을 반드"
+"시 업데이트하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:93
@@ -45455,9 +45494,8 @@ msgid ""
 "partition will also work, but configuration for multiple systems is more "
 "difficult."
 msgstr ""
-"Leaving <filename class=\"directory\">/boot</filename> on the current LFS "
-"partition will also work, but configuration for multiple systems is more "
-"difficult."
+"<filename class=\"directory\">/boot</filename>를 현재 LFS 디렉터리에 그대로 "
+"두어도 작동은 하지만, 여러 시스템을 위한 설정은 더 어려워집니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:97
@@ -45467,6 +45505,9 @@ msgid ""
 "following example, it is assumed that the root (or separate boot) partition "
 "is <filename class=\"partition\">sda2</filename>."
 msgstr ""
+"위의 정보를 사용하여 루트 파티션(별도의 부팅 파티션을 사용하는 경우 부팅 파티"
+"션)에 대한 적절한 지정자를 결정하십시오. 다음 예시에서는 루트(또는 별도의 부"
+"팅) 파티션이 <filename class=\"partition\">sda2</filename>라고 가정."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/grub.xml:103
@@ -45474,6 +45515,8 @@ msgid ""
 "Install the GRUB files into <filename class=\"directory\">/boot/grub</"
 "filename> and set up the boot track:"
 msgstr ""
+"GRUB 파일을 <filename class=\"directory\">/boot/grub</filename> 디렉터리에 설"
+"치하고 부팅 트랙을 설정:"
 
 #. type: Content of: <sect1><sect2><warning><para>
 #: en/chapter10/grub.xml:107
@@ -45482,6 +45525,9 @@ msgid ""
 "command if this is not desired, for example, if using a third party boot "
 "manager to manage the Master Boot Record (MBR)."
 msgstr ""
+"다음 명령어는 현재 부트로더를 덮어씁니다. 마스터 부트 레코드(MBR)를 관리하기 "
+"위해 타사 부트 매니저를 사용하는 경우처럼, 이를 원하지 않는다면 이 명령어를 "
+"실행하지 마십시오."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter10/grub.xml:112
@@ -45498,6 +45544,11 @@ msgid ""
 "system\"/>.  If this is the case, add <option>--target i386-pc</option> to "
 "the command above."
 msgstr ""
+"시스템이 UEFI를 사용하여 부팅된 경우, <command>grub-install</command>은 "
+"<emphasis>x86_64-efi</emphasis> 대상을 위한 파일 설치를 시도하지만, 해당 파일"
+"들은 <xref linkend=\"chapter-building-system\"/>에서 설치되지 않았습니다. 이"
+"런 경우에는 위 명령어에 <option>--target i386-pc</option> 옵션을 추가하십시"
+"오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter10/grub.xml:126
