@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-04 16:15+0900\n"
-"PO-Revision-Date: 2026-07-04 16:15+0900\n"
+"POT-Creation-Date: 2026-07-05 03:03+0900\n"
+"PO-Revision-Date: 2026-07-05 03:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -279,7 +279,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter01/askforhelp.xml:132
 msgid "In this case, many people would just include the bottom section:"
-msgstr "이 경우, 많은 사람이 그냥 맨 아래 섹션만 포함합니다."
+msgstr "이 경우, 많은 사람이 그냥 맨 아래 섹션만 포함:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter01/askforhelp.xml:135
@@ -1352,7 +1352,7 @@ msgid ""
 msgstr ""
 "/tmp &ndash; 기본적으로 systemd는 <systemitem class='filesystem'>tmpfs</"
 "systemitem> 여기 마운트합니다. 이 동작을 재정의(override)하려면, LFS 시스템"
-"을 구성할 때 <xref linkend='systemd-no-tmpfs'/>을 따르십시오,"
+"을 구성할 때 <xref linkend='systemd-no-tmpfs'/>을 따르십시오."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:186
@@ -1540,7 +1540,7 @@ msgstr ""
 "장 오래된 커널 릴리스입니다. &min-kernel;보다 오래된 일부 커널 릴리스가 제3"
 "자 팀에 의해 여전히 지원될 수도 있지만, 공식 업스트림 커널 릴리스로 간주되지"
 "는 않습니다. 자세한 내용은 <ulink url='https://kernel.org/category/"
-"releases.html'/>를 참조:"
+"releases.html'/>를 참조."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:109
@@ -2152,7 +2152,7 @@ msgstr ""
 "널로 전환한 다음 <systemitem class=\"username\">root</systemitem> 사용자로 "
 "<xref linkend='ch-tools-bindmount'/> 및 <xref linkend='ch-tools-kernfsmount' "
 "role='.'/>에 있는 명령어들을 실행함으로써, chroot 환경에 진입하기 전 또는 진"
-"입한 후에 수행할 수 있습니다."
+"입한 후에 수행"
 
 #. type: Attribute 'xreflabel' of: <chapter>
 #: en/chapter03/chapter03.xml:8
@@ -4389,8 +4389,7 @@ msgid ""
 msgstr ""
 "패키지 외에도 몇 패치가 또 필요합니다. 이 패치는 패키지 유지관리자가 수정해"
 "야 할 오류들을 바로잡아 줍니다. 또한 패치를 통해 패키지를 더 쉽게 다룰 수 있"
-"도록 조금 수정하기도 합니다. LFS 시스템을 빌드하려면 다음 패치들이 필요합니"
-"다."
+"도록 조금 수정하기도 합니다. LFS 시스템을 빌드하려면 다음 패치 필요:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/patches.xml:47
@@ -5371,7 +5370,7 @@ msgstr ""
 "어가 존재합니다. 이 모든 논리 코어를 사용하는 한 가지 분명한 방법은 "
 "<command>make</command>가 최대 32개의 빌드 작업을 생성하도록 허용하는 것입니"
 "다. 이는 <command>make</command>에 <parameter>-j32</parameter> 옵션을 전달하"
-"여 수행할 수 있습니다."
+"여 수행:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter04/settingenviron.xml:209
@@ -8891,8 +8890,7 @@ msgid ""
 msgstr ""
 "먼저 빌드 호스트에서 <command>tic</command> 프로그램을 빌드하기 위해 다음 명"
 "령들을 실행합니다. 이 프로그램은 필요할 때 <envar>PATH</envar>에서 찾을 수 있"
-"도록 <filename class=\"directory\">$LFS/tools</filename> 디렉터리에 설치합니"
-"다."
+"도록 <filename class=\"directory\">$LFS/tools</filename> 디렉터리에 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/ncurses.xml:51
@@ -12479,7 +12477,7 @@ msgid ""
 "interpreter a powerful tool"
 msgstr ""
 "널리 사용되는 명령어 해석기입니다. 주어진 명령줄을 실행하기 전에 다양한 유형"
-"의 확장 및 치환을 수행하므로, 이 해석기는 강력한 도구가 됩니다."
+"의 확장 및 치환을 수행하므로, 이 해석기는 강력한 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bash.xml:142
@@ -12632,7 +12630,7 @@ msgid ""
 "editing feature of bc."
 msgstr ""
 "<application>Readline</application> 사용을 활성화하여 bc의 행 편집(line "
-"editing) 기능 향상"
+"editing) 기능 향상."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bc.xml:86
@@ -13409,7 +13407,7 @@ msgid ""
 msgstr ""
 "Yacc 라이브러리에는 Yacc 호환 <function>yyerror</function> and "
 "<function>main</function> 함수 구현이 들어있습니다. 이 라이브러리는 대개 큰 "
-"도움이 안 되지만, POSIX에서 이를 요구합니다."
+"도움이 안 되지만, POSIX에서 이를 요구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bison.xml:113
@@ -47241,11 +47239,14 @@ msgid ""
 "register as an LFS user by entering your name and the first LFS version you "
 "have used."
 msgstr ""
+"이제 책을 마쳤으니, LFS 사용자로 등록하고 싶은가요? <ulink url=\"&lfs-"
+"root;cgi-bin/lfscounter.php\"/>에 방문하고 이름과 처음 사용한 LFS 버전을 입력"
+"하고 LFS 사용자로 등록해 보세요."
 
 #. type: Content of: <sect1><para>
 #: en/chapter11/getcounted.xml:18
 msgid "Let's reboot into LFS now."
-msgstr "Let's reboot into LFS now."
+msgstr "이제 LFS로 재부팅합시다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter11/reboot.xml:11
