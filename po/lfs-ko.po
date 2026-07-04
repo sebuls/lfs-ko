@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-04 05:21+0900\n"
-"PO-Revision-Date: 2026-07-04 05:21+0900\n"
+"POT-Creation-Date: 2026-07-04 16:15+0900\n"
+"PO-Revision-Date: 2026-07-04 16:15+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -53940,7 +53940,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:65
 msgid "Let us first define some terms used in this context."
-msgstr "Let us first define some terms used in this context."
+msgstr "문맥에 따라 사용되는 용어들을 먼저 정의하겠습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:68
@@ -53993,6 +53993,11 @@ msgid ""
 "third, slow machine (C). We will build a compiler for machine C in three "
 "stages."
 msgstr ""
+"우리가 흔히 <quote>Canadian Cross</quote>라고 부르는 시나리오를 예로 들어보겠"
+"습니다. 느린 머신 A에서만 작동하는 컴파일러 ccA가 있다고 가정합시다. 또한 매"
+"우 빠른 머신 B가 있지만, 머신 B에서 작동하는 컴파일러는 아직 없습니다. 우리"
+"의 목표는 또 다른 느린 머신 C에서 실행될 코드를 생성하는 것입니다. 이를 위해 "
+"머신 C를 위한 컴파일러를 다음 세 단계에 걸쳐 빌드하게 됩니다."
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:102
@@ -54090,6 +54095,11 @@ msgid ""
 "no way to test the newly built programs until machine C itself is running. "
 "For example, to run a test suite on ccC, we may want to add a fourth stage:"
 msgstr ""
+"그런 다음, 머신 C에 필요한 모든 프로그램은 빠른 머신 B에서 cc2를 사용하여 빌"
+"드할 수 있습니다. 주의할 점은, 머신 B가 머신 C용으로 생성된 프로그램을 실행"
+"할 수 없다면 머신 C 자체가 구동되기 전까지는 새로 빌드된 프로그램들을 테스트"
+"할 방법이 없다는 것입니다. 예를 들어, ccC에 대한 테스트 스위트를 실행하려면 "
+"다음과 같은 네 번째 단계를 추가할 수 있습니다:"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:141
@@ -54109,6 +54119,10 @@ msgid ""
 "other compilers ccA and ccC produce code for the machine they are run on. "
 "Such compilers are called <emphasis>native</emphasis> compilers."
 msgstr ""
+"위의 예시에서 cc1과 cc2만 크로스 컴파일러(cross-compiler)입니다. 즉, 이들은 "
+"자신들이 실행되는 머신이 아닌 다른 머신을 위한 코드를 생성합니다. 반면, 나머"
+"지 컴파일러인 ccA와 ccC는 자신들이 실행되는 머신을 위한 코드를 생성합니다. 이"
+"러한 컴파일러를 <emphasis>native</emphasis> 컴파일러라고 부릅니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/part3intro/toolchaintechnotes.xml:156
