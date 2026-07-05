@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-05 03:03+0900\n"
-"PO-Revision-Date: 2026-07-05 03:02+0900\n"
+"POT-Creation-Date: 2026-07-05 16:11+0900\n"
+"PO-Revision-Date: 2026-07-05 16:11+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7683,6 +7683,9 @@ msgid ""
 "this option off, Bash will use the <function>malloc</function> functions "
 "from Glibc which are more stable."
 msgstr ""
+"이 옵션은 세그멘테이션 오류를 유발하는 것으로 알려진 Bash의 메모리 할당"
+"(<function>malloc</function>) 함수 사용을 끕니다. 이 옵션을 끄면 Bash는 더 안"
+"정적인 Glibc의 <function>malloc</function> 함수를 사용하게 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/bash.xml:77
@@ -7725,7 +7728,7 @@ msgstr "tools, pass 2"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/binutils-pass2.xml:36
 msgid "&binutils-tmpp2-sbu;"
-msgstr ""
+msgstr "&binutils-tmpp2-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/binutils-pass2.xml:37
