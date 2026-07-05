@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-05 16:11+0900\n"
-"PO-Revision-Date: 2026-07-05 16:11+0900\n"
+"POT-Creation-Date: 2026-07-05 19:44+0900\n"
+"PO-Revision-Date: 2026-07-05 19:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -45930,6 +45930,10 @@ msgid ""
 "see the <ulink url=\"&lfs-root;blfs/view/&short-version;/"
 "longindex.html#kernel-config-index\">BLFS Index of Kernel Settings</ulink>."
 msgstr ""
+"시스템 요구 사항에 따라 원할 수 있는 다른 옵션들이 몇 가지 더 있습니다. BLFS "
+"패키지에 필요한 옵션 목록은 <ulink url=\"&lfs-root;blfs/view/&short-version;/"
+"longindex.html#kernel-config-index\">BLFS Index of Kernel Settings</ulink> 보"
+"세요."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:182
@@ -46164,6 +46168,8 @@ msgid ""
 "some situations. See the <filename>README</filename> file for more "
 "information."
 msgstr ""
+"대안으로, 몇몇 상황에서는 <command>make oldconfig</command>가 더 적절할 수 있"
+"습니다. 더 자세한 정보는 <filename>README</filename> 파일을 확인."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:374
@@ -46469,6 +46475,8 @@ msgid ""
 "config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, and "
 "System.map-&linux-version;"
 msgstr ""
+"config-&linux-version;, vmlinuz-&linux-version;-lfs-&version;, 및 System.map-"
+"&linux-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter10/kernel.xml:544
@@ -46483,7 +46491,7 @@ msgstr "<filename>config-&linux-version;</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:556
 msgid "Contains all the configuration selections for the kernel"
-msgstr ""
+msgstr "커널을 위한 모든 설정 항목 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter10/kernel.xml:558
@@ -46505,6 +46513,11 @@ msgid ""
 "CPU into a multitasking machine capable of running scores of programs "
 "seemingly at the same time"
 msgstr ""
+"리눅스 시스템 엔진. 컴퓨터를 켤 때 커널은 운영 체제에서 가장 먼저 로드되는 부"
+"분입니다. 커널은 컴퓨터의 모든 하드웨어 구성 요소를 감지하고 초기화한 다음, "
+"이 구성 요소들을 소프트웨어가 사용할 수 있도록 파일 디렉터리 형태로 제공하"
+"며, 단일 CPU를 수많은 프로그램을 동시에 실행하는 것처럼 보이게 하는 멀티태스"
+"킹 머신으로 변환."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter10/kernel.xml:573
@@ -46522,6 +46535,8 @@ msgid ""
 "A list of addresses and symbols; it maps the entry points and addresses of "
 "all the functions and data structures in the kernel"
 msgstr ""
+"주소 및 심볼 목록. 커널 내 모든 함수와 데이터 구조의 진입점(entry point) 및 "
+"주소를 매핑."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter10/kernel.xml:585
@@ -51927,7 +51942,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:461
 msgid "Glibc and Systemd"
-msgstr "Glibc and Systemd"
+msgstr "Glibc 및 Systemd"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:468
@@ -52516,7 +52531,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:1967
 msgid "Zstd <phrase revision=\"systemd\">and Systemd</phrase>"
-msgstr "Zstd <phrase revision=\"systemd\">and Systemd</phrase>"
+msgstr "Zstd <phrase revision=\"systemd\"> 및 Systemd</phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2006
@@ -52756,8 +52771,8 @@ msgid ""
 "Systemd</phrase>"
 msgstr ""
 "Bash, Binutils, Coreutils, GCC, Glibc, Make, Ncurses, <phrase "
-"revision='sysv'>and </phrase>Pkgconf<phrase revision='systemd'>, and "
-"Systemd</phrase>"
+"revision='sysv'>및 </phrase>Pkgconf<phrase revision='systemd'>, 및 Systemd</"
+"phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2660
