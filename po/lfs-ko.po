@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-06 03:09+0900\n"
-"PO-Revision-Date: 2026-07-06 03:07+0900\n"
+"POT-Creation-Date: 2026-07-07 01:32+0900\n"
+"PO-Revision-Date: 2026-07-07 01:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -24965,7 +24965,7 @@ msgid ""
 "Jinja2 is a Python module that implements a simple pythonic template "
 "language."
 msgstr ""
-"Jinja2는 파이썬 모듈이며 단순하면서도 파이썬다운(pythonic) 템플릿 언어를 구현"
+"Jinja2는 파이썬 모듈이며 단순하면서도 파이썬스런(pythonic) 템플릿 언어를 구현"
 "합니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
@@ -34396,7 +34396,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:244 en/chapter08/udev.xml:172
 msgid "Install the man pages:"
-msgstr ""
+msgstr "man 페이지 설치:"
 
 #.  Please make sure systemd man pages tarball has a common leading
 #.          component in the path.  
@@ -34418,6 +34418,8 @@ msgid ""
 "Create the <filename>/etc/machine-id</filename> file needed by "
 "<command>systemd-journald</command>:"
 msgstr ""
+"<command>systemd-journald</command> 에서 필요로 하는 <filename>/etc/machine-"
+"id</filename> 파일 생성:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:255
@@ -34428,7 +34430,7 @@ msgstr "<userinput remap=\"adjust\">systemd-machine-id-setup</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/systemd.xml:257
 msgid "Set up the basic target structure:"
-msgstr ""
+msgstr "기본 타킷 구조 설정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/systemd.xml:259
@@ -34514,12 +34516,12 @@ msgstr "<command>bootctl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:324
 msgid "Is used to control EFI firmware boot settings on a system"
-msgstr ""
+msgstr "시스템의 EFI 펌웨어 부팅 설정을 제어하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:326
 msgid "bootctl"
-msgstr ""
+msgstr "bootctl"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:332
@@ -34529,7 +34531,7 @@ msgstr "<command>busctl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:334
 msgid "Is used to introspect and monitor the D-Bus bus"
-msgstr ""
+msgstr "D-Bus 버스를 조사하고 모니터링하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:336
@@ -34544,12 +34546,12 @@ msgstr "<command>coredumpctl</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/systemd.xml:344
 msgid "Is used to retrieve coredumps from the systemd journal"
-msgstr ""
+msgstr "systemd 저널에서부터 코어덤프(coredump)를 검색하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:346
 msgid "coredumpctl"
-msgstr ""
+msgstr "systemd 저널로부터 코어덤프(coredump)를 검색하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/systemd.xml:352 en/chapter08/sysvinit.xml:126
@@ -34565,6 +34567,10 @@ msgid ""
 "kernel to halt the system; it notes in the file <filename>/var/log/wtmp</"
 "filename> that the system is being brought down"
 msgstr ""
+"일반적으로 <command>shutdown</command> 명령을 <parameter>-h</parameter> 옵션"
+"과 함께 호출. 단, 이미 런레벨 0인 경우에는 예외적으로 커널에 시스템을 정지하"
+"라고 지시하며, 시스템이 종료되고 있다는 사실을 <filename>/var/log/wtmp</"
+"filename> 에 기록"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:360 en/chapter08/sysvinit.xml:134
@@ -35370,6 +35376,9 @@ msgid ""
 "uevents to finish, tests udev configuration, and triggers uevents for a "
 "given device"
 msgstr ""
+"udevd 데몬을 제어하고, udev 하드웨어 데이터베이스에서 정보를 제공하며, uevent"
+"를 모니터링하고, 완료될 때까지 대기하며, udev 구성을 테스트하고, 주어진 장치"
+"에 대한 uevent를 트리거하는 범용 udev 관리 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/systemd.xml:913 en/chapter08/udev.xml:258
