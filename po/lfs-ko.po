@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-07 01:32+0900\n"
-"PO-Revision-Date: 2026-07-07 01:31+0900\n"
+"POT-Creation-Date: 2026-07-08 02:23+0900\n"
+"PO-Revision-Date: 2026-07-08 02:22+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4089,6 +4089,8 @@ msgid ""
 "The Linux From Scratch team generates its own tarball of the man pages using "
 "the systemd source. This is done in order to avoid unnecessary dependencies."
 msgstr ""
+"Linux From Scratch 팀은 직접 매뉴얼 페이지의 타르볼(tarball)을 systemd 소스"
+"를 사용하여 생성합니다. 이는 불필요한 의존성을 피하기 위함입니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:795
@@ -4267,6 +4269,8 @@ msgid ""
 "The version of vim changes daily. To get the latest version, go to <ulink "
 "url=\"https://github.com/vim/vim/tags\"/>."
 msgstr ""
+"Vim 버전은 매일 바뀝니다. 최근 버전을 얻으려면 <ulink url=\"https://"
+"github.com/vim/vim/tags\"/>."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:894
@@ -4371,7 +4375,7 @@ msgstr "MD5 합: <literal>&zstd-md5;</literal>"
 #. type: Content of: <sect1><para>
 #: en/chapter03/packages.xml:940
 msgid "Total size of these packages: about <returnvalue/>"
-msgstr "Total size of these packages: about <returnvalue/>"
+msgstr "이 패키지 전체 크기: 약 <returnvalue/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter03/patches.xml:11
@@ -4490,7 +4494,7 @@ msgstr "MD5 합: <literal>&sysvinit-consolidated-patch-md5;</literal>"
 #. type: Content of: <sect1><para>
 #: en/chapter03/patches.xml:175
 msgid "Total size of these patches: about <returnvalue/>"
-msgstr "Total size of these patches: about <returnvalue/>"
+msgstr "패치 전체 크기: 약 <returnvalue/>"
 
 #. type: Content of: <sect1><para>
 #: en/chapter03/patches.xml:177
@@ -5239,6 +5243,12 @@ msgid ""
 "case, the following line adds <filename class=\"directory\">/bin</filename> "
 "to the path."
 msgstr ""
+"많은 현대 리눅스 배포판은 <filename class=\"directory\">/bin</filename> 및 "
+"<filename class=\"directory\">/usr/bin</filename> 디렉터리를 통합했습니다. 이"
+"런 경우, 표준 <envar>PATH</envar> 변수는 <xref linkend=\"chapter-temporary-"
+"tools\"/> 환경을 위해 <filename class=\"directory\">/usr/bin/</filename>로 설"
+"정되어야 합니다. 아니라면, 다음 줄을 사용하여 <filename class=\"directory\">/"
+"bin</filename>을 경로에 더합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:128
