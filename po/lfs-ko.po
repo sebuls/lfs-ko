@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-08 02:23+0900\n"
-"PO-Revision-Date: 2026-07-08 02:22+0900\n"
+"POT-Creation-Date: 2026-07-08 21:23+0900\n"
+"PO-Revision-Date: 2026-07-08 21:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -17618,6 +17618,8 @@ msgid ""
 "Tries to classify each given file; it does this by performing several "
 "tests&mdash;file system tests, magic number tests, and language tests"
 msgstr ""
+"각 파일을 분류하려고 시도하며, 파일 시스템 테스트, 매직 넘버 테스트, 언어 테"
+"스트 등 여러 테스트를 수행하여 이를 처리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/file.xml:94
@@ -17630,6 +17632,7 @@ msgid ""
 "Contains routines for magic number recognition, used by the <command>file</"
 "command> program"
 msgstr ""
+"<command>file</command> 프로그램에서 사용하는 매직 넘버 인식 루틴을 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/file.xml:99
