@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-08 21:23+0900\n"
-"PO-Revision-Date: 2026-07-08 21:23+0900\n"
+"POT-Creation-Date: 2026-07-09 02:56+0900\n"
+"PO-Revision-Date: 2026-07-09 02:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4557,6 +4557,10 @@ msgid ""
 "to build the example package.  Fortunately, most build times are shorter "
 "than one SBU."
 msgstr ""
+"예를 들어, 컴파일 시간이 4.5 SBU인 패키지를 생각해 봅시다. 이는 만약 여러분"
+"의 시스템이 첫 번째 binutils 패스를 컴파일하고 설치하는 데 4분이 걸렸다면, 예"
+"시 패키지를 빌드하는 데는 <emphasis>약</emphasis> 18분이 걸린다는 것을 뜻니"
+"다. 다행히, 대개 빌드 시간은 1 SBU 도 안 됩니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/aboutsbus.xml:34
@@ -4780,6 +4784,8 @@ msgid ""
 "This option adds user <systemitem class=\"username\">lfs</systemitem> to "
 "group <systemitem class=\"groupname\">lfs</systemitem>."
 msgstr ""
+"이 옵션은 사용자 <systemitem class=\"username\">lfs</systemitem> 를 그룹 "
+"<systemitem class=\"groupname\">lfs</systemitem> 에 더합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:46
@@ -4792,6 +4798,7 @@ msgid ""
 "This creates a home directory for <systemitem class=\"username\">lfs</"
 "systemitem>."
 msgstr ""
+"이것을 <systemitem class=\"username\">lfs</systemitem>용 홈 디렉터리 생성."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:54
@@ -4805,6 +4812,9 @@ msgid ""
 "(the default is <filename class=\"directory\">/etc/skel</filename>)  by "
 "changing the input location to the special null device."
 msgstr ""
+"이 매개변수는 입력 위치를 특수 null 디바이스로 바꿈으로써, 스켈레톤 디렉터리"
+"(기본값은 <filename class=\"directory\">/etc/skel</filename> 디렉터리)에서 파"
+"일이 복사되는 것을 막음"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/addinguser.xml:63
@@ -5004,11 +5014,11 @@ msgid ""
 "this directory does not exist."
 msgstr ""
 "LFS 편집자들은 <filename class=\"directory\">/usr/lib64</filename> 디렉터리"
-"를 사용하지 않기로 신중하게 결정했습니다. 툴체인이 이 디렉터리를 사용하지 않"
-"도록 여러 조치를 취합니다. (지침을 따르는 과정에서 실수를 했거나, LFS를 마친 "
-"후 이 디렉터리를 생성하는 바이너리 패키지를 설치하여) 어떤 이유로든 이 디렉터"
-"리가 나타나면 시스템이 망가질 수 있습니다. 따라서 이 디렉터리가 존재하지 않"
-"는 것을 항상 확인해야 합니다."
+"를 안 쓰기로 신중하게 결정했습니다. 툴체인이 이 디렉터리를 사용하지 않도록 여"
+"러 조치를 취합니다. (지침을 따르는 과정에서 실수를 했거나, LFS를 마친 후 이 "
+"디렉터리를 생성하는 바이너리 패키지를 설치하여) 어떤 이유로든 이 디렉터리가 "
+"나타나면 시스템이 망가질 수 있습니다. 따라서 이 디렉터리가 존재하지 않는 것"
+"을 항상 확인해야 합니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/introduction.xml:13
@@ -5304,6 +5314,8 @@ msgid ""
 "While the preceding commands have set some variables, in order to make them "
 "visible within any sub-shells, we export them."
 msgstr ""
+"앞선 명령어들로 몇몇 변수들을 설정한 동안, 이를 모든 하위 셸 내에서 볼 수 있"
+"게 하기 위해 해당 변수 export."
 
 #. type: Content of: <sect1><important><para>
 #: en/chapter04/settingenviron.xml:171
