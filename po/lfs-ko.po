@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-09 02:56+0900\n"
-"PO-Revision-Date: 2026-07-09 02:56+0900\n"
+"POT-Creation-Date: 2026-07-09 21:46+0900\n"
+"PO-Revision-Date: 2026-07-09 21:46+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9067,6 +9067,9 @@ msgid ""
 "command> program from the host.  Some versions of <command>mawk</command> "
 "can cause this package to fail to build."
 msgstr ""
+"이 스위치는 빌드 시스템이 호스트의 <command>mawk</command> 프로그램을 사용하"
+"는 것을 막습니다. 특정 버전의 <command>mawk</command>는 이 패키지를 빌드할 "
+"때 실패할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/ncurses.xml:153
@@ -9085,7 +9088,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter06/ncurses.xml:159
 msgid "The meaning of the install options:"
-msgstr ""
+msgstr "설치 옵션 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:162
@@ -9099,6 +9102,9 @@ msgid ""
 "we will build soon. We create this symlink to use <filename>libncursesw.so</"
 "filename> as a replacement."
 msgstr ""
+"곧 빌드할 몇몇 패키지에서 <filename>libncurses.so</filename> 라이브러리가 필"
+"요합니다. <filename>libncursesw.so</filename>를 대신 사용하기 위해 이 심볼릭 "
+"링크를 생성."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:171
@@ -9119,6 +9125,14 @@ msgid ""
 "use the wide-character data structure definition compatible with "
 "<filename>libncursesw.so</filename>."
 msgstr ""
+"<filename>curses.h</filename> 헤더 파일에는 다양한 Ncurses 데이터 구조체 정의"
+"가 들어 있습니다. 전처리기 매크로 정의를 어떻게 하느냐에 따라 두 가지 다른 데"
+"이터 구조체 정의 세트를 사용할 수 있는데, 8비트 정의는 "
+"<filename>libncurses.so</filename>와 호환되고 와이드 문자 정의는 "
+"<filename>libncursesw.so</filename>와 호환됩니다. 우리는 "
+"<filename>libncurses.so</filename> 대신 <filename>libncursesw.so</filename>"
+"를 사용하고 있으므로, 항상 <filename>libncursesw.so</filename>와 호환되는 와"
+"이드 문자 데이터 구조체 정의를 사용하도록 헤더 파일을 수정하십시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/ncurses.xml:194
