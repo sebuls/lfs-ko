@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-09 21:46+0900\n"
-"PO-Revision-Date: 2026-07-09 21:46+0900\n"
+"POT-Creation-Date: 2026-07-10 02:51+0900\n"
+"PO-Revision-Date: 2026-07-10 02:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7169,6 +7169,7 @@ msgid ""
 "This switch prevents the installation of precompiled include files, which "
 "are not needed at this stage."
 msgstr ""
+"이 스위치는 사전 컴파일된 헤더 파일 설치를 막는데, 이 단계에서 필요하지 않다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/libstdc++.xml:93
@@ -7196,11 +7197,22 @@ msgid ""
 "(in the <command>make install</command> command below)  and this switch "
 "causes the headers to be installed there."
 msgstr ""
+"헤더 파일을 위한 설치 디렉터리를 지정합니다. Libstdc++은 LFS를 위한 표준 C++ "
+"라이브러리이므로, 이 디렉터리는 C++ 컴파일러(<command>$LFS_TGT-g++</command>)"
+"가 표준 C++ 헤더 파일을 검색하는 위치와 일치해야 합니다. 일반적인 빌드 과정에"
+"서는 이 정보가 최상위 디렉터리로부터 Libstdc++의 <command>configure</"
+"command> 옵션으로 자동 전달됩니다. 그러나, 우리의 경우에는 이 정보를 명시적으"
+"로 제공해야 합니다. C++ 컴파일러는 GCC-pass1을 빌드할 때 지정했던 sysroot 경"
+"로인 <filename class=\"directory\">$LFS</filename> 를 헤더 파일 검색 경로 앞"
+"에 붙이므로, 실제로는 <filename class=\"directory\">$LFS/tools/$LFS_TGT/"
+"include/c++/&gcc-version;</filename> 경로에서 검색하게 됩니다. 아래 "
+"<command>make install</command>에 포함된 <parameter>DESTDIR</parameter> 변수"
+"와 이 스위치를 조합하면 헤더 파일들이 거기에 설치됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:116
 msgid "Compile Libstdc++ by running:"
-msgstr ""
+msgstr "Libstdc++ 컴파일 위해 실행:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/libstdc++.xml:120
