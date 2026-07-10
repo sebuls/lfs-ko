@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-10 02:51+0900\n"
-"PO-Revision-Date: 2026-07-10 02:51+0900\n"
+"POT-Creation-Date: 2026-07-11 03:26+0900\n"
+"PO-Revision-Date: 2026-07-11 03:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -42403,6 +42403,8 @@ msgid ""
 "If you prefer to use the classic or customized network interface names, "
 "there are three alternative ways to do that:"
 msgstr ""
+"클래식 또는 커스터마이즈된 네트워크 인터페이스 이름을 사용하고 싶으면, 가능"
+"한 세 가지 대안:"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para><screen>
 #: en/chapter09/networkd.xml:96
@@ -42416,6 +42418,8 @@ msgid ""
 "Mask udev's <filename class='extension'>.link</filename> file for the "
 "default policy: <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"기본 정책 <placeholder type=\"screen\" id=\"0\"/>에 대해 udev의 .<filename "
+"class='extension'>.link</filename> 파일을 마스크:"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter09/networkd.xml:102
@@ -42427,6 +42431,9 @@ msgid ""
 "select an explicit name or a better naming scheme for your network "
 "interfaces. For example:"
 msgstr ""
+"<literal>internet0</literal>, <literal>dmz0</literal>, 또는 <literal>lan0</"
+"literal> 처럼 수동으로 인터페이스 이름을 생성. /etc/systemd/network/ 디렉터리"
+"에 .<filename class='extension'>.link</filename> 파일을 생성하여 수행. 예시:"
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><screen>
 #: en/chapter09/networkd.xml:110
@@ -42456,6 +42463,8 @@ msgid ""
 "See <ulink role='man' url='&man;systemd.link.5'>systemd.link(5)</ulink> for "
 "more information."
 msgstr ""
+"더 자세한 정보는 <ulink role='man' "
+"url='&man;systemd.link.5'>systemd.link(5)</ulink> 참조."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter09/networkd.xml:126
@@ -42463,6 +42472,7 @@ msgid ""
 "In /boot/grub/grub.cfg, pass the option <option>net.ifnames=0</option> on "
 "the kernel command line."
 msgstr ""
+"/boot/grub/grub.cfg 커널 명령줄에 <option>net.ifnames=0</option> 옵션을 전달."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/networkd.xml:134
@@ -42475,6 +42485,8 @@ msgid ""
 "The command below creates a basic configuration file for a Static IP setup "
 "(using both systemd-networkd and systemd-resolved):"
 msgstr ""
+"아래 명령어는 고정 IP 설정을 위한 기본적인 구성 파일을 생성합니다 (systemd-"
+"networkd와 systemd-resolved를 모두 사용)."
 
 #.  jhalfs relies on the values for Name, Address, etc. If you want to change
 #.      them, please inform the jhalfs maintainer(s). 
@@ -42511,6 +42523,9 @@ msgid ""
 "not include DNS or Domains entries if you intend to use a static <filename>/"
 "etc/resolv.conf</filename> file."
 msgstr ""
+"DNS 서버가 하나보다 많으면 여러 DNS 항목을 추가할 수 있습니다. 고정된 "
+"<filename>/etc/resolv.conf</filename>디렉터리 파일을 사용하려는 경우에는 DNS "
+"또는 도메인 항목을 포함하지 마십시오."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/networkd.xml:159
@@ -42521,7 +42536,7 @@ msgstr "DHCP Configuration"
 #: en/chapter09/networkd.xml:161
 msgid ""
 "The command below creates a basic configuration file for an IPv4 DHCP setup:"
-msgstr ""
+msgstr "아래 명령어는 IPv4 DHCP 설정을 위한 기본적인 구성 파일을 생성:"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter09/networkd.xml:164
