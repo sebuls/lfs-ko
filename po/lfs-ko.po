@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-11 19:51+0900\n"
-"PO-Revision-Date: 2026-07-11 19:51+0900\n"
+"POT-Creation-Date: 2026-07-12 02:31+0900\n"
+"PO-Revision-Date: 2026-07-12 02:30+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49240,12 +49240,14 @@ msgid ""
 "This package produces key-table files, keyboard utilities for non-US "
 "keyboards, and a number of console fonts."
 msgstr ""
+"이 패키지는 키 테이블 파일, 미국 외 키보드를 위한 키보드 유틸리티, 그리고 콘"
+"솔 폰트 여럿을 생성합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:307
 msgid ""
 "This package supplies programs needed to administer Linux kernel modules."
-msgstr ""
+msgstr "이 패키지는 리눅스 커널 모듈을 관리하는 데 필요한 프로그램을 제공."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:314
@@ -49285,6 +49287,12 @@ msgid ""
 "used to call a given function. Libffi can be used in such programs to "
 "provide a bridge from the interpreter program to compiled code."
 msgstr ""
+"이 패키지는 다양한 호출 규약에 대한 이식성 높은 고수준 프로그래밍 인터페이스"
+"를 구현합니다. 일부 프로그램은 컴파일 시점에 함수에 전달될 인수를 모를 수 있"
+"습니다. 예를 들어, 인터프리터는 런타임에 특정 함수를 호출하는 데 사용되는 인"
+"수의 개수와 유형에 대한 정보를 전달받을 수 있습니다. Libffi는 이러한 프로그램"
+"에서 인터프리터 프로그램과 컴파일된 코드 사이의 가교 역할을 하는 데 사용될 "
+"수 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:353
@@ -49317,7 +49325,7 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:379
 msgid "Linux Kernel"
-msgstr "리눅스 커널"
+msgstr "Linux Kernel"
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:381
@@ -49572,6 +49580,9 @@ msgid ""
 "editor is a very personal choice for many users. Any other editor can be "
 "substituted, if you wish."
 msgstr ""
+"이 패키지는 편집기를 제공합니다. 이 편집기는 클래식 vi 편집기와의 호환성과 수"
+"많은 강력한 기능 때문에 선택했습니다. 많은 사용자에게 편집기는 매우 개인적인 "
+"선택입니다. 원한다면 다른 편집기로 대체할 수 있습니다."
 
 #. type: Content of: <appendix><bridgehead>
 #: en/prologue/why.xml:637 en/appendices/dependencies.xml:2443
@@ -49584,12 +49595,12 @@ msgstr "Wheel"
 msgid ""
 "This package supplies a Python module that is the reference implementation "
 "of the Python wheel packaging standard."
-msgstr ""
+msgstr "이 패키지는 파이썬 wheel 패키징 표준의 참조 구현인 파이썬 모듈을 제공."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:647
 msgid "This package is a Perl module that interfaces with Expat."
-msgstr ""
+msgstr "이 패키지는 Expat과 연동되는 Perl 모듈."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:651
@@ -49603,6 +49614,9 @@ msgid ""
 "provides the highest compression generally available and is useful for "
 "decompressing packages in XZ or LZMA format."
 msgstr ""
+"이 패키지에는 파일을 압축하고 압축을 해제하는 프로그램이 들어 있습니다. 일반"
+"적으로 제공되는 것 중 가장 높은 수준의 압축을 제공하며, XZ 또는 LZMA 형식의 "
+"패키지를 압축 해제하는 데 유용합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:661
@@ -49610,6 +49624,8 @@ msgid ""
 "This package contains compression and decompression routines used by some "
 "programs."
 msgstr ""
+"이 패키지에는 일부 프로그램에서 사용하는 압축 및 압축 해제 루틴이 들어있습니"
+"다."
 
 #. type: Content of: <appendix><bridgehead>
 #: en/prologue/why.xml:666 en/appendices/dependencies.xml:3544
@@ -54360,7 +54376,7 @@ msgstr ""
 "에 유의하세요. 예를 들어, 빌드 시스템은 네이티브 툴체인으로 생성기(generator)"
 "를 빌드한 다음, 그 생성기로 C 소스 파일을 만들고, 마지막으로 크로스 툴체인을 "
 "사용하여 해당 C 소스 파일을 빌드하여 생성된 코드가 <quote>host</quote>에서 실"
-"행될 수 있도록 할 수 있습니다."
+"행될 수 있도록 할 수 있습니다"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:229
