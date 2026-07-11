@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-11 03:26+0900\n"
-"PO-Revision-Date: 2026-07-11 03:26+0900\n"
+"POT-Creation-Date: 2026-07-11 19:51+0900\n"
+"PO-Revision-Date: 2026-07-11 19:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -10901,6 +10901,11 @@ msgid ""
 "a name, since the host system might use a different ID for its <systemitem "
 "class=\"groupname\">tty</systemitem> group."
 msgstr ""
+"이 설정은 모든 devpts가 생성한 디바이스 노드의 소유권을 그룹 ID 5로 지정합니"
+"다. 이는 나중에 <systemitem class=\"groupname\">tty</systemitem> 그룹에 사용"
+"할 ID입니다. 호스트 시스템마다 <systemitem class=\"groupname\">tty</"
+"systemitem> 그룹에 사용하는 ID가 다를 수 있기 때문에 이름 대신 그룹 ID를 사용"
+"합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/kernfs.xml:89
@@ -10916,6 +10921,11 @@ msgid ""
 "of grantpt(), meaning the Glibc <command>pt_chown</command> helper binary "
 "(which is not installed by default) is not necessary."
 msgstr ""
+"이 설정은 모든 devpts가 생성한 디바이스 노드의 모드를 0620(사용자 읽기/쓰기 "
+"가능, 그룹 쓰기 가능)으로 지정합니다. 앞서 언급한 옵션과 함께 사용하면, "
+"devpts가 grantpt()의 요구 사항을 충족하는 디바이스 노드를 생성하도록 보장하므"
+"로, Glibc의 <command>pt_chown</command> 헬퍼 바이너리(기본적으로 설치되지 않"
+"음)가 필요하지 않게 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:102
