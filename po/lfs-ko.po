@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-12 02:31+0900\n"
-"PO-Revision-Date: 2026-07-12 02:30+0900\n"
+"POT-Creation-Date: 2026-07-12 15:08+0900\n"
+"PO-Revision-Date: 2026-07-12 15:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30891,6 +30891,13 @@ msgid ""
 "<filename class='directory'>/opt/foo-1.2</filename> and the previous symlink "
 "is replaced by a symlink to the new version."
 msgstr ""
+"이것은 패키지를 관리하기 위한 별도의 프로그램이 안 필요한 단순한 패키지 관리 "
+"기법입니다. 각 패키지는 별도의 디렉터리에 설치됩니다. 예를 들어, foo-1.1 패키"
+"지는 <filename class='directory'>/opt/foo-1.1</filename> 에 설치되고 "
+"<filename>/opt/foo</filename> 에서 <filename class='directory'>/opt/foo-1.1</"
+"filename>로 심볼릭 링크가 생성됩니다. 새로운 버전인 foo-1.2가 나오면, 이 버전"
+"은 <filename class='directory'>/opt/foo-1.2</filename>에 설치되고 기존 심볼"
+"릭 링크는 새 버전으로 향하는 심볼릭 링크로 대체됩니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:209
@@ -30901,6 +30908,11 @@ msgid ""
 "ld.so.conf</filename> may need to be expanded to include the corresponding "
 "subdirectories in <filename class='directory'>/opt/foo-x.y</filename>."
 msgstr ""
+"<envar>PATH</envar>, <envar>MANPATH</envar>, <envar>INFOPATH</envar>, "
+"<envar>PKG_CONFIG_PATH</envar>, <envar>CPPFLAGS</envar>, <envar>LDFLAGS</"
+"envar>와 같은 환경 변수와 설정 파일인 <filename>/etc/ld.so.conf</filename>는 "
+"<filename class='directory'>/opt/foo-x.y</filename> 내의 해당 디렉터리들을 포"
+"함하도록 확장해야 할 수도 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:218
@@ -30911,6 +30923,11 @@ msgid ""
 "headers and Glibc) may not work well with this scheme.  <emphasis "
 "role='bold'>Never use this scheme system-wide.</emphasis>"
 msgstr ""
+"이 체계는 BLFS 책에서 일부 매우 큰 패키지를 더 쉽게 업그레이드하기 위해 설치"
+"하는 방식으로 사용됩니다. 그러나 몇 개 이상의 패키지를 설치하게 되면 이 체계"
+"는 관리하기 어려워집니다. 또한 일부 패키지(예: 리눅스 API 헤더 및 Glibc)는 "
+"이 체계에서 제대로 작동하지 않을 수 있습니다. <emphasis role='bold'>이 체계"
+"를 시스템 전체에 절대 사용하지 마십시오.</emphasis>"
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:228
