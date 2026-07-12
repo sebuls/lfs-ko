@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-12 15:08+0900\n"
-"PO-Revision-Date: 2026-07-12 15:08+0900\n"
+"POT-Creation-Date: 2026-07-12 20:44+0900\n"
+"PO-Revision-Date: 2026-07-12 20:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9454,6 +9454,7 @@ msgid ""
 "This tells the build system to install bison documentation into a versioned "
 "directory."
 msgstr ""
+"이것은 빌드 시스템에게 버전 지정된 디렉터리에 bison 문서를 설치하도록 지시."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/bison.xml:77
@@ -9511,7 +9512,7 @@ msgid ""
 "class=\"username\">root</systemitem> by running the following command:"
 msgstr ""
 "이 문제를 해결하려면 다음 명령어를 실행하여 <filename "
-"class=\"directory\">$LFS/*</filename>디렉터리의 소유권을 <systemitem "
+"class=\"directory\">$LFS/*</filename> 디렉터리의 소유권을 <systemitem "
 "class=\"username\">root</systemitem> 사용자로 변경:"
 
 #. type: Content of: <sect1><screen>
@@ -10504,6 +10505,7 @@ msgid ""
 "Create the required set of subdirectories below the root-level by issuing "
 "the following commands:"
 msgstr ""
+"아래 명령어를 실행하여 루트 레벨 아래에 필요한 하위 디렉터리 세트를 생성:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/creatingdirs.xml:27
@@ -10790,7 +10792,7 @@ msgstr ""
 msgid ""
 "Begin by creating the directories on which these virtual file systems will "
 "be mounted:"
-msgstr ""
+msgstr "이 가상 파일 시스템이 마운트될 디렉터리를 생성하는 것으로 시작:"
 
 #. type: Content of: <sect1><screen>
 #: en/chapter07/kernfs.xml:27
@@ -12444,6 +12446,8 @@ msgid ""
 "To prepare the tests, ensure that the <systemitem class=\"username\">tester</"
 "systemitem> user can write to the sources tree:"
 msgstr ""
+"테스트를 준비하려면, <systemitem class=\"username\">tester</systemitem> 사용"
+"자가 소스 트리(sources tree)에 쓰기 권한을 가질 수 있도록 하십시오:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bash.xml:74
@@ -12460,6 +12464,11 @@ msgid ""
 "application> and run the tests as the <systemitem class=\"username\">tester</"
 "systemitem> user:"
 msgstr ""
+"이 패키지의 테스트 스위트는 표준 입력에 연결된 터미널을 소유한 비-루트(non-"
+"&root; ) 사용자로 실행되도록 설계되었습니다. 이 요건을 충족하려면, "
+"<application>Expect</application>를 사용하여 새로운 의사 터미널(pseudo "
+"terminal)을 생성하고 <systemitem class=\"username\">tester</systemitem> 사용"
+"자로 테스트를 실행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bash.xml:82
@@ -12498,6 +12507,15 @@ msgid ""
 "the <literal>zh_TW.BIG5</literal> and <literal>ja_JP.SJIS</literal> locales, "
 "they are known to fail unless those locales are installed."
 msgstr ""
+"테스트 스위트는 테스트 스크립트 출력과 예상 출력 간의 차이를 감지하기 위해 "
+"<command>diff</command>를 사용합니다. 차이를 무시할 수 있다는 메시지가 있는 "
+"경우를 제외하고, <command>diff</command>로부터 나오는 모든 출력"
+"( <computeroutput>&lt;</computeroutput> 및 <computeroutput>&gt;</"
+"computeroutput>로 접두사가 붙음)은 테스트 실패를 나타냅니다. <filename>run-"
+"builtins</filename>라는 테스트는 일부 호스트 배포판에서 출력의 479번째 및 480"
+"번째 라인에 차이가 발생하여 실패하는 것으로 알려져 있습니다. 다른 몇몇 테스트"
+"는 <literal>zh_TW.BIG5</literal> 및 <literal>ja_JP.SJIS</literal> 로캘이 필요"
+"하며, 해당 로캘이 설치 안 되면 실패하는 것으로 알려져 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bash.xml:109
@@ -12523,7 +12541,7 @@ msgstr "bash, bashbug, 및 sh (bash 에 대한 링크)"
 msgid ""
 "/usr/include/bash, /usr/lib/bash, and /usr/share/doc/bash-&bash-version;"
 msgstr ""
-"/usr/include/bash, /usr/lib/bash, and /usr/share/doc/bash-&bash-version;"
+"/usr/include/bash, /usr/lib/bash, 및 /usr/share/doc/bash-&bash-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bash.xml:136
@@ -12599,6 +12617,8 @@ msgid ""
 "<productname>bc</productname> <productnumber>&bc-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>bc</productname> <productnumber>&bc-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/bc.xml:17
@@ -12771,7 +12791,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:34
 msgid "&binutils-fin-sbu;"
-msgstr ""
+msgstr "&binutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:35
