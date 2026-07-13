@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-12 20:44+0900\n"
-"PO-Revision-Date: 2026-07-12 20:44+0900\n"
+"POT-Creation-Date: 2026-07-13 21:20+0900\n"
+"PO-Revision-Date: 2026-07-13 21:20+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -45754,6 +45754,10 @@ msgid ""
 "need to change the <emphasis>set root</emphasis> line to point to the boot "
 "partition."
 msgstr ""
+"<application>GRUB</application>의 관점에서 커널 파일들은 사용된 파티션을 기준"
+"으로 상대적인 위치에 있습니다. 만약 별도의 /boot 파티션을 사용했다면, 위의 "
+"<emphasis>linux</emphasis>줄에서 /boot를 제거하십시오. 또한 <emphasis>set "
+"root</emphasis> 줄을 수정하여 부트 파티션을 가리키도록 변경해야 합니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/grub.xml:179
