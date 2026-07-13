@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-13 21:20+0900\n"
-"PO-Revision-Date: 2026-07-13 21:20+0900\n"
+"POT-Creation-Date: 2026-07-14 02:34+0900\n"
+"PO-Revision-Date: 2026-07-14 02:33+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7797,7 +7797,7 @@ msgstr "<userinput remap=\"pre\">sed '6031s/$add_dir//' -i ltmain.sh</userinput>
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/binutils-pass2.xml:60 en/chapter06/gcc-pass2.xml:72
 msgid "Create a separate build directory again:"
-msgstr ""
+msgstr "별도의 빌드 디렉터리를 다시 만들기:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/binutils-pass2.xml:65 en/chapter08/binutils.xml:50
@@ -8435,6 +8435,8 @@ msgid ""
 "If you are building on x86_64, change the default directory name for 64-bit "
 "libraries to <quote>lib</quote>:"
 msgstr ""
+"x86_64 환경에서 빌드하려면, 64비트 라이브러리를 위한 기본 디렉터리 이름을 "
+"<quote>lib</quote> 으로 변경:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gcc-pass2.xml:59 en/chapter08/gcc.xml:51
@@ -8460,6 +8462,8 @@ msgid ""
 "Override the build rules of the libgcc and libstdc++ headers to allow "
 "building these libraries with POSIX threads support:"
 msgstr ""
+"libgcc 및 libstdc++ 헤더의 빌드 규칙을 재정의해서 POSIX 스레드 지원을 통해 이"
+"러한 라이브러리 빌드 허융:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gcc-pass2.xml:69
@@ -8477,6 +8481,8 @@ msgid ""
 "Before starting to build GCC, remember to unset any environment variables "
 "that override the default optimization flags."
 msgstr ""
+"GCC 빌드를 시작하기 전에, 기본 최적화 플래그를 재정의하는 환경 변수를 모두 설"
+"정해제(unset)하는 것을 기억하시오."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:80
@@ -8598,6 +8604,12 @@ msgid ""
 "command> leaves the system administrator free to decide which C compiler to "
 "install:"
 msgstr ""
+"마무리 작업으로 유틸리티 심볼릭 링크를 생성하세요. 많은 프로그램과 스크립트"
+"가 <command>gcc</command> 대신 <command>cc</command> 명령어를 실행하는데, 이"
+"는 프로그램을 범용적으로 유지하여 GNU C 컴파일러가 항상 설치되어 있지 않은 모"
+"든 종류의 유닉스(UNIX) 시스템에서 사용할 수 있도록 하기 위함입니다. "
+"<command>cc</command> 실행하게 함으로써 시스템 관리자는 어떤 C 컴파일러를 설"
+"치할지 자유롭게 결정할 수 있습니다:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/gcc-pass2.xml:173
