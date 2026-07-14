@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-14 02:34+0900\n"
-"PO-Revision-Date: 2026-07-14 02:33+0900\n"
+"POT-Creation-Date: 2026-07-15 02:04+0900\n"
+"PO-Revision-Date: 2026-07-15 02:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -42137,6 +42137,8 @@ msgid ""
 "<varname>search</varname> statement.  See the man page for resolv.conf for "
 "more details."
 msgstr ""
+"<varname>domain</varname> 문은 생략하거나 <varname>search</varname> 문으로 대"
+"체할 수 있습니다. 자세한 내용은 resolv.conf의 매뉴얼 페이지를 참조하세요."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:128
@@ -42148,12 +42150,6 @@ msgid ""
 "<emphasis>nameserver</emphasis> line from the file. The IP address may also "
 "be a router on the local network."
 msgstr ""
-"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
-"the IP address of the DNS most appropriate for the setup. There will often "
-"be more than one entry (requirements demand secondary servers for fallback "
-"capability). If you only need or want one DNS server, remove the second "
-"<emphasis>nameserver</emphasis> line from the file. The IP address may also "
-"be a router on the local network."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter09/network.xml:136
@@ -42708,6 +42704,8 @@ msgid ""
 "If a static <filename>/etc/resolv.conf</filename> is desired, create it by "
 "running the following command:"
 msgstr ""
+"정적 <filename>/etc/resolv.conf</filename>가 필요하다면, 다음 명령어를 실행하"
+"여 생성:"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/networkd.xml:259
@@ -42720,13 +42718,13 @@ msgid ""
 "may also be a router on the local network. Another option is to use the "
 "Google Public DNS service using the IP addresses below as nameservers."
 msgstr ""
-"Replace <replaceable>&lt;IP address of the nameserver&gt;</replaceable> with "
-"the IP address of the DNS server most appropriate for your setup.  There "
-"will often be more than one entry (requirements demand secondary servers for "
-"fallback capability). If you only need or want one DNS server, remove the "
-"second <emphasis>nameserver</emphasis> line from the file.  The IP address "
-"may also be a router on the local network. Another option is to use the "
-"Google Public DNS service using the IP addresses below as nameservers."
+"<replaceable>&lt;IP address of the nameserver&gt;</replaceable> 을 우리 설정"
+"에 가장 적합한 DNS 서버의 IP 주소로 대체하세요. 종종 하나 이상의 항목이 필요"
+"할 수 있습니다(요구 사항에 따라 폴백 기능을 위해 보조 서버가 필요합니다). 하"
+"나의 DNS 서버만 필요하거나 사용하고 싶다면, 파일에서 두 번째 "
+"<emphasis>nameserver</emphasis> 줄을 제거하세요. IP 주소는 로컬 네트워크의 라"
+"우터가 될 수도 있습니다. 또 다른 옵션은 아래의 IP 주소를 네임서버로 사용하여 "
+"Google Public DNS 서비스를 이용하는 것입니다."
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/networkd.xml:269
@@ -42736,6 +42734,10 @@ msgid ""
 "<parameter>2001:4860:4860::8888</parameter> and "
 "<parameter>2001:4860:4860::8844</parameter> for IPv6."
 msgstr ""
+"Google Public IPv4 DNS 주소는 IPv4의 경우 <parameter>8.8.8.8</parameter> 및 "
+"<parameter>8.8.4.4</parameter>이며, IPv6의 경우 "
+"<parameter>2001:4860:4860::8888</parameter> 및 "
+"<parameter>2001:4860:4860::8844</parameter>."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/networkd.xml:279
