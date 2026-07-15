@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-15 02:04+0900\n"
-"PO-Revision-Date: 2026-07-15 02:03+0900\n"
+"POT-Creation-Date: 2026-07-16 02:31+0900\n"
+"PO-Revision-Date: 2026-07-16 02:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -48664,7 +48664,7 @@ msgstr "<emphasis>LSB Gtk3 and LSB Graphics (Trial Use):</emphasis>"
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: en/prologue/standards.xml:105
 msgid "Packages supplied by BLFS needed to satisfy the LSB Requirements"
-msgstr ""
+msgstr "LSB 요구사항을 충족하기 위해 필요한 BLFS에서 제공하는 패키지"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:113
@@ -48672,6 +48672,9 @@ msgid ""
 "At, Batch (a part of At), BLFS Bash Startup Files, Cpio, Ed, Fcrontab, LSB-"
 "Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (or Postfix or Exim), Time"
 msgstr ""
+"At, Batch(At의 일부), BLFS Bash 시작 파일(Bash Startup Files), Cpio, Ed, "
+"Fcrontab, LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail(또는 Postfix 또는 "
+"Exim), Time"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:123
@@ -48702,6 +48705,9 @@ msgid ""
 "Components not supplied or optionally supplied by LFS or BLFS needed to "
 "satisfy the LSB Requirements"
 msgstr ""
+"LSB(Linux Standard Base) 요구 사항을 충족하기 위해 LFS(Linux From System) 또"
+"는 BLFS(Beyond Linux From System)에서 제공하지 않거나 선택적으로 제공하는 구"
+"성 요소"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:163
@@ -48716,13 +48722,11 @@ msgid ""
 "Ncurses package)"
 msgstr ""
 "<command>install_initd</command>, <filename "
-"class='libraryfile'>libcrypt.so.1</filename> (can be provided with optional "
-"instructions for the LFS Libxcrypt package), <filename "
-"class='libraryfile'>libncurses.so.5</filename> (can be provided with "
-"optional instructions for the LFS Ncurses package), <filename "
-"class='libraryfile'>libncursesw.so.5</filename> (but <filename "
-"class='libraryfile'>libncursesw.so.6</filename> is provided by the LFS "
-"Ncurses package)"
+"class='libraryfile'>libcrypt.so.1</filename> (LFS Libxcrypt package 선택적 지"
+"침으로 제공 가능), <filename class='libraryfile'>libncurses.so.5</filename> "
+"(LFS Ncurses 패키지에 대한 선택적 지침으로 제공 가능), libncursesw.so.5(LFS "
+"Ncurses 패키지에서는  <filename class='libraryfile'>libncursesw.so.6</"
+"filename>이 제공됨)"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:181
@@ -48740,18 +48744,6 @@ msgid ""
 "(but <filename class='libraryfile'>libtiff.so.6</filename> is provided by "
 "the BLFS Libtiff package)"
 msgstr ""
-"<filename class='libraryfile'>libgdk-x11-2.0.so</filename> (but <filename "
-"class='libraryfile'>libgdk-3.so</filename> is provided by the BLFS GTK+-3 "
-"package), <filename class='libraryfile'>libgtk-x11-2.0.so</filename> (but "
-"<filename class='libraryfile'>libgtk-3.so</filename> and <filename "
-"class='libraryfile'>libgtk-4.so</filename> are provided by the BLFS GTK+-3 "
-"and GTK-4 packages), <filename class='libraryfile'>libpng12.so</filename> "
-"(but <filename class='libraryfile'>libpng16.so</filename> is provided by the "
-"BLFS Libpng package), <filename class='libraryfile'>libQt*.so.4</filename> "
-"(but <filename class='libraryfile'>libQt6*.so.6</filename> are provided by "
-"the BLFS Qt6 package), <filename class='libraryfile'>libtiff.so.4</filename> "
-"(but <filename class='libraryfile'>libtiff.so.6</filename> is provided by "
-"the BLFS Libtiff package)"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:204
@@ -48769,9 +48761,8 @@ msgid ""
 "class='libraryfile'>libpng16.so</filename> is provided by the BLFS Libpng "
 "package)"
 msgstr ""
-"<filename class='libraryfile'>libpng15.so</filename> (but <filename "
-"class='libraryfile'>libpng16.so</filename> is provided by the BLFS Libpng "
-"package)"
+"<filename class='libraryfile'>libpng15.so</filename>(단, BLFS Libpng 패키지에"
+"서는 <filename class='libraryfile'>libpng16.so</filename> 가 제공됨)"
 
 #. type: Content of: <sect1><title>
 #: en/prologue/typography.xml:11
