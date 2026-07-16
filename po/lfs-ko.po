@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-16 21:55+0900\n"
-"PO-Revision-Date: 2026-07-16 21:55+0900\n"
+"POT-Creation-Date: 2026-07-17 02:41+0900\n"
+"PO-Revision-Date: 2026-07-17 02:41+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1399,9 +1399,9 @@ msgid ""
 "be significantly longer than documented."
 msgstr ""
 "LFS 편집자들은 시스템 CPU가 최소 4개 이상의 코어를 갖추고, 메모리는 최소 8GB "
-"이상이기를 권장합니다. 이러한 요구 사항을 충족하지 못하는 구형 시스템에서도 "
-"여전히 동작은 하겠지만, 패키지를 빌드하는 데 걸리는 시간이 문서에 기재된 것보"
-"다 훨씬 더 길어질 겁니다."
+"이상을 권장합니다. 이러한 요구사항을 충족하지 못하는 구형 시스템에서도 여전"
+"히 동작은 하겠지만, 패키지를 빌드하는 데 걸리는 시간이 문서보다 훨씬 더 길어"
+"질 겁니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter02/hostreqs.xml:26
@@ -6780,6 +6780,8 @@ msgid ""
 "Fix a hard coded path to the executable loader in the <command>ldd</command> "
 "script:"
 msgstr ""
+"<command>ldd</command> 스크립트에서 실행 파일 로더에 대한 하드코딩된 경로를 "
+"수정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:190
@@ -6794,6 +6796,9 @@ msgid ""
 "compiling and linking will work as expected. We do this by performing some "
 "sanity checks:"
 msgstr ""
+"교차 툴체인이 준비되었으니, 컴파일과 링크가 예상대로 작동하는지 확인하는 것"
+"이 중요합니다. 우리는 몇 가지 정상 작동 확인(sanity checks)을 수행하여 이를 "
+"검증:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:196
@@ -6811,6 +6816,8 @@ msgid ""
 "There should be no errors, and the output of the last command will be "
 "(allowing for platform-specific differences in the dynamic linker name):"
 msgstr ""
+"오류가 없어야 하며, 마지막 명령의 출력 결과는 다음과 같아야 합니다(동적 링커 "
+"이름의 플랫폼별 차이 허용)."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:203 en/chapter08/gcc.xml:265
@@ -6828,6 +6835,12 @@ msgid ""
 "kernel would consider <filename class='directory'>$LFS</filename> as the "
 "root directory (<filename class='directory'>/</filename>)."
 msgstr ""
+"이 경로에는 <filename class='directory'>/mnt/lfs</filename> (또는 다른 값을 "
+"사용했다면 <envar>LFS</envar> 변수의 값)가 포함되어서는 안 된다는 점에 유의하"
+"십시오. 이 경로는 컴파일된 프로그램이 실행될 때 해석되는데, 이는 커널이 "
+"<filename class='directory'>$LFS</filename> 를 루트 디렉터리(<filename "
+"class='directory'>/</filename> )로 간주하는 chroot 환경에 진입한 후에만 발생"
+"해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:213 en/chapter08/gcc.xml:267
@@ -7311,7 +7324,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/linux-headers.xml:50
 msgid "Make sure there are no stale files embedded in the package:"
-msgstr "Make sure there are no stale files embedded in the package:"
+msgstr "오래된 파일이 패키지에 안 들어가게 하시오:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/linux-headers.xml:52 en/chapter10/kernel.xml:82
