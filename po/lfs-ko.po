@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-17 02:41+0900\n"
-"PO-Revision-Date: 2026-07-17 02:41+0900\n"
+"POT-Creation-Date: 2026-07-17 07:09+0900\n"
+"PO-Revision-Date: 2026-07-17 07:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -20269,8 +20269,8 @@ msgid ""
 "Generally a few tests do not pass. The test failures listed below are "
 "usually safe to ignore."
 msgstr ""
-"Generally a few tests do not pass. The test failures listed below are "
-"usually safe to ignore."
+"일반적으로 몇몇 테스트는 통과하지 못합니다. 아래 나열된 테스트 실패 항목은 대"
+"개 무시해도 안전합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:161
@@ -20280,9 +20280,9 @@ msgid ""
 "ignored. This is a list of the most common issues seen for recent versions "
 "of LFS:"
 msgstr ""
-"일부 테스트 실패가 날 수 있습니다. Glibc 테스트 스위트는 어느 정도 호스트 시"
-"스템에 의존적입니다. 6천개 넘는 테스트 중 몇 가지 실패는 일반적으로 무시할 "
-"수 있습니다. 최신 버전의 LFS에서 가장 흔히 발생하는 문제 목록:"
+"일부 테스트 실패할 수 있습니다. Glibc 테스트 스위트는 어느 정도 호스트 시스템"
+"에 의존적입니다. 6천개 넘는 테스트 중 몇 가지 실패는 일반적으로 무시할 수 있"
+"습니다. 최신 버전의 LFS에서 가장 흔히 발생하는 문제 목록:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:169
@@ -20335,6 +20335,8 @@ msgid ""
 "about the absence of <filename>/etc/ld.so.conf</filename>.  Prevent this "
 "warning with:"
 msgstr ""
+"해로운 메시지는 아니지만, Glibc의 설치 단계에서 <filename>/etc/ld.so.conf</"
+"filename> 디렉터리가 없다는 경고가 나타날 수 있습니다. 이 경고를 막으려면:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:215
@@ -20534,6 +20536,8 @@ msgid ""
 "Fix a hardcoded path to the executable loader in the <command>ldd</command> "
 "script:"
 msgstr ""
+"<command>ldd</command> 스크립트에서 실행 파일 로더로 연결되는 하드코딩된 경로"
+"를 수정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:360
@@ -20548,6 +20552,9 @@ msgid ""
 "language.  None of these locales are required, but if some of them are "
 "missing, the test suites of some packages will skip important test cases."
 msgstr ""
+"다음으로, 시스템이 다른 언어로 응답할 수 있도록 로캘을 설치합니다. 이 로캘이 "
+"반드시 필요한 것은 아니지만, 일부가 빠지면 몇몇 패키지 테스트 스위트가 중요"
+"한 테스트 케이스를 건너뛸 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:379
@@ -20561,6 +20568,12 @@ msgid ""
 "instructions will install the minimum set of locales necessary for the "
 "optimal coverage of tests:"
 msgstr ""
+"개별 로캘은 <command>localedef</command> 프로그램을 사용하여 설치할 수 있습니"
+"다. 예를 들어, 아래의 두 번째 <command>localedef</command> 명령은 <filename>/"
+"usr/share/i18n/locales/cs_CZ</filename> 문자셋 독립적 로캘 정의와 <filename>/"
+"usr/share/i18n/charmaps/UTF-8.gz</filename> 문자맵 정의를 결합하여 그 결과를 "
+"<filename>/usr/lib/locale/locale-archive</filename> 파일에 더합니다. 다음 지"
+"침은 테스트를 최적으로 수행하는 데 필요한 최소한의 로캘 세트를 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:390
@@ -20641,7 +20654,7 @@ msgstr ""
 msgid ""
 "In addition, install the locale for your own country, language and character "
 "set."
-msgstr ""
+msgstr "추가로, 여러분의 국가, 언어, 문자셋에 맞는 로캘을 설치."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:428
@@ -20651,6 +20664,9 @@ msgid ""
 "listed above and many more) at once with the following time-consuming "
 "command:"
 msgstr ""
+"또는, 아래의 오랜 시간 걸리는 명령어를 사용하여 <filename>glibc-&glibc-"
+"version;/localedata/SUPPORTED</filename> 파일에 나열된 모든 로캘(위에서 나열"
+"한 모든 로캘과 그 외 다수 포함)을 한 번에 설치:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:433
