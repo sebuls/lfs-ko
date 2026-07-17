@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-17 07:09+0900\n"
-"PO-Revision-Date: 2026-07-17 07:08+0900\n"
+"POT-Creation-Date: 2026-07-18 03:37+0900\n"
+"PO-Revision-Date: 2026-07-18 03:36+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -31015,6 +31015,13 @@ msgid ""
 "of the symlinks. A few of the popular ones include Stow, Epkg, Graft, and "
 "Depot."
 msgstr ""
+"이는 이전 패키지 관리 기법의 한 변종입니다. 각 패키지는 이전 방식과 같게 설치"
+"됩니다. 하지만 일반적인 패키지 이름을 통해 심볼릭 링크를 만드는 대신, 각 파일"
+"은 <filename class='directory'>/usr</filename> 디렉터리 계층 구조 안으로 심볼"
+"릭 링크됩니다. 이 방식은 환경 변수를 확장해야 할 필요성을 없애줍니다. 사용자"
+"가 직접 심볼릭 링크를 생성할 수도 있지만, 많은 패키지 관리자가 이 방식을 사용"
+"하며 심볼릭 링크 생성을 자동화합니다. 널리 사용되는 몇 가지 도구는 Stow, "
+"Epkg, Graft, Depot 등."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:239
@@ -31026,6 +31033,12 @@ msgid ""
 "example, suppose you are installing a package libfoo-1.1. The following "
 "instructions may not install the package properly:"
 msgstr ""
+"설치 스크립트를 속여야 하므로, 패키지는 <filename class=\"directory\">/usr</"
+"filename> 에 설치된 것처럼 생각하지만 실제로는 <filename "
+"class=\"directory\">/usr/pkg</filename> 디렉터리 계층에 설치됩니다. 이러한 방"
+"식으로 설치하는 것은 대개 간단한 작업이 아닙니다. 예를 들어, libfoo-1.1 패키"
+"지를 설치한다고 가정해 봅시다. 다음 명령은 패키지가 제대로 설치 안 될 수 있습"
+"니다:"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter08/pkgmgt.xml:247
@@ -31050,6 +31063,13 @@ msgid ""
 "correct approach is to use the <envar>DESTDIR</envar> variable to direct the "
 "installation. This approach works as follows:"
 msgstr ""
+"설치는 문제없이 동작하겠지만, 의존성 패키지들이 기대한 대로 libfoo에 연결되"
+"지 않을 수 있습니다. libfoo를 참조(link)하는 패키지를 컴파일할 때, 기대했던 "
+"<filename class='libraryfile'>/usr/lib/libfoo.so.1</filename>이 아닌 "
+"<filename class='libraryfile'>/usr/pkg/libfoo/1.1/lib/libfoo.so.1</filename>"
+"에 연결된 것을 확인할 수도 있습니다. 올바른 접근 방식은 <envar>DESTDIR</"
+"envar> 변수를 사용하여 설치 경로를 지정하는 것입니다. 이 방식은 다음과 같이 "
+"작동합니다:"
 
 #. type: Content of: <sect1><sect2><sect3><screen>
 #: en/chapter08/pkgmgt.xml:260
@@ -31071,6 +31091,10 @@ msgid ""
 "manually, or you may find that it is easier to install some problematic "
 "packages into <filename class='directory'>/opt</filename>."
 msgstr ""
+"대부분의 패키지는 이 방식을 지원하지만, 그렇지 않은 패키지들도 있습니다. 규격"
+"에 맞지 않는 패키지의 경우, 패키지를 수동으로 설치해야 하거나 일부 문제가 있"
+"는 패키지는 <filename class='directory'>/opt</filename> 디렉터리에 설치하는 "
+"것이 더 쉽다는 것을 알게 될 수도 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:272
