@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-18 22:34+0900\n"
-"PO-Revision-Date: 2026-07-18 22:33+0900\n"
+"POT-Creation-Date: 2026-07-19 04:31+0900\n"
+"PO-Revision-Date: 2026-07-19 04:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49597,6 +49597,8 @@ msgid ""
 "This package provides an interpreted language that has a design philosophy "
 "emphasizing code readability."
 msgstr ""
+"이 패키지는 코드 가독성을 강조하는 설계 철학을 가진 인터프리터 언어를 제공합"
+"니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:537
@@ -49604,6 +49606,8 @@ msgid ""
 "This package is a set of libraries that offer command-line editing and "
 "history capabilities.  It is used by Bash."
 msgstr ""
+"이 패키지는 명령줄 편집 및 기록 기능을 제공하는 라이브러리 모음입니다. 이 패"
+"키지는 Bash에서 씁니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:544
@@ -49611,11 +49615,13 @@ msgid ""
 "This package allows editing of text without opening it in a text editor. It "
 "is also needed by many LFS packages' configure scripts."
 msgstr ""
+"이 패키지는 텍스트 편집기에서 안 열고 텍스트를 편집할 수 있게 해 줍니다. 많"
+"은 LFS 패키지의 configure 스크립트에서도 필요합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:552
 msgid "This package contains programs for handling passwords securely."
-msgstr ""
+msgstr "이 패키지에는 암호를 안전하게 처리하기 위한 프로그램이 들어 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:559
@@ -49623,6 +49629,8 @@ msgid ""
 "This package provides a serverless, zero-configuration, transactional SQL "
 "database engine."
 msgstr ""
+"이 패키지는 서버 없는, 제로 구성 방식 트랜잭션 SQL 데이터베이스 엔진을 제공합"
+"니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:566
@@ -49630,6 +49638,8 @@ msgid ""
 "This package supplies programs for logging system messages, such as those "
 "emitted by the kernel or daemon processes when unusual events occur."
 msgstr ""
+"이 패키지는 커널이나 데몬 프로세스가 비정상적인 이벤트를 발생시킬 때 출력하"
+"는 시스템 메시지를 기록하기 위한 프로그램들을 제공합니다."
 
 #. type: Content of: <appendix><bridgehead>
 #: en/prologue/why.xml:572 en/appendices/dependencies.xml:2992
@@ -49643,6 +49653,9 @@ msgid ""
 "additional boot and system control capabilities as an alternative to "
 "SysVinit.  It is used by many Linux distributions."
 msgstr ""
+"이 패키지는 <application>init</application> 프로그램과 SysVinit의 대안으로 부"
+"팅 및 시스템 제어를 위한 여러 추가 기능을 제공합니다. 이 패키지는 많은 리눅"
+"스 배포판에서 씁니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:583
@@ -49650,6 +49663,8 @@ msgid ""
 "This package provides the <application>init</application> program, the "
 "parent of all the other processes on a running Linux system."
 msgstr ""
+"이 패키지는 실행 중인 리눅스 시스템에서 다른 모든 프로세스의 부모 "
+"<application>init</application> 프로그램을 제공합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:591
@@ -49658,6 +49673,9 @@ msgid ""
 "permissions, names, and symbolic links of device nodes in the /dev directory "
 "when devices are added to or removed from the system."
 msgstr ""
+"이 패키지는 장치 관리자입니다. 시스템에 장치가 추가되거나 제거될 때 /dev 디렉"
+"터리에 있는 장치 노드의 소유권, 권한, 이름 및 심볼릭 링크를 동적으로 제어합니"
+"다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:600
