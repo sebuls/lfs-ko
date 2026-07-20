@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-20 21:52+0900\n"
-"PO-Revision-Date: 2026-07-20 21:51+0900\n"
+"POT-Creation-Date: 2026-07-21 04:03+0900\n"
+"PO-Revision-Date: 2026-07-21 04:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49705,7 +49705,7 @@ msgstr ""
 #: en/prologue/why.xml:607
 msgid ""
 "This package contains the Tool Command Language used in many test suites."
-msgstr ""
+msgstr "이 패키지에는 Tool Command Language(Tcl)가 들어 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:614
@@ -49788,6 +49788,8 @@ msgid ""
 "programs. It provides high compression ratios and a very wide range of "
 "compression / speed trade-offs."
 msgstr ""
+"이 패키지는 일부 프로그램에서 사용하는 압축 및 압축 해제 루틴을 제공합니다. "
+"높은 압축률과 매우 폭넓은 압축/속도 간의 절충안을 제공합니다."
 
 #. type: Attribute 'xreflabel' of: <appendix>
 #: en/appendices/acknowledgments.xml:8
