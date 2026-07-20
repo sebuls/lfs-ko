@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-19 04:31+0900\n"
-"PO-Revision-Date: 2026-07-19 04:31+0900\n"
+"POT-Creation-Date: 2026-07-20 21:52+0900\n"
+"PO-Revision-Date: 2026-07-20 21:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4590,6 +4590,19 @@ msgid ""
 "Setting the power profile to <quote>performance</quote> will minimize this "
 "problem.  And obviously doing so will also make the system build LFS faster."
 msgstr ""
+"일부 최신 시스템에서는 메인보드가 시스템 클럭 속도를 제어할 수 있습니다. 이"
+"는 <command>powerprofilesctl</command> 같은 명령어로 제어할 수 있습니다. LFS"
+"에는 이 기능이 없지만, 호스트 배포판에서는 사용할 수 있을지도 모릅니다. LFS"
+"를 완료한 후에는 <ulink url='&blfs-book;sysutils/power-profiles-"
+"daemon.html'> BLFS power-profiles-daemon</ulink>  페이지의 절차에 따라 시스템"
+"에 추가할 수 있습니다. 패키지 빌드 시간을 측정하기 전에는 최대 성능(및 최대 "
+"전력 소비)을 위한 시스템 전원 프로필을 사용하는 것이 좋습니다. 그렇지 않으면 "
+"시스템이 <xref linkend='ch-tools-binutils-pass1'/> 이나 다른 패키지를 빌드할 "
+"때 다르게 반응할 수 있어 측정된 SBU 값이 부정확할 수 있습니다. 같은 프로필을 "
+"사용하더라도 빌드 절차를 시작할 때 시스템이 유휴 상태라면 반응이 느려질 수 있"
+"어 상당한 오차가 발생할 수 있다는 점을 유의하십시오. 전원 프로필을 "
+"<quote>performance</quote> 로 설정하면 이 문제를 최소화할 수 있습니다. 물론 "
+"이렇게 하면 LFS 빌드 속도도 더 빨라질 것입니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/aboutsbus.xml:61
@@ -9237,7 +9250,7 @@ msgstr "Patch 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/patch.xml:46 en/chapter08/patch.xml:45
 msgid "Prepare Patch for compilation:"
-msgstr "Prepare Patch for compilation:"
+msgstr "컴파일 위한 Patch 준비:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/patch.xml:65
@@ -42696,6 +42709,10 @@ msgid ""
 "placing the IP address of the DNS server, available from the ISP or network "
 "administrator, into <filename>/etc/resolv.conf</filename>."
 msgstr ""
+"시스템이 인터넷에 연결될 예정이라면, 인터넷 도메인 이름을 IP 주소로 변환하거"
+"나 그 반대의 경우를 위해 도메인 이름 시스템(DNS) 이름 해석 수단이 필요합니"
+"다. 이를 수행하는 가장 좋은 방법은 ISP나 네트워크 관리자로부터 받은 DNS 서버"
+"의 IP 주소를 <filename>/etc/resolv.conf</filename> 디렉터리에 넣는 것입니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/networkd.xml:194
