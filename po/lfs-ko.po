@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-21 22:00+0900\n"
-"PO-Revision-Date: 2026-07-21 22:00+0900\n"
+"POT-Creation-Date: 2026-07-22 04:14+0900\n"
+"PO-Revision-Date: 2026-07-22 04:14+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -54384,7 +54384,7 @@ msgstr "4"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:142
 msgid "Rebuild and test ccC using ccC on machine C."
-msgstr "Rebuild and test ccC using ccC on machine C."
+msgstr "머신 C에서 ccC를 써서 ccC를 다시 빌드하고 테스트."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:148
@@ -54510,7 +54510,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:212
 msgid "There are two key points for a cross-compilation:"
-msgstr ""
+msgstr "크로스 컴파일에 있는 두 가지 핵심 포인트:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:218
@@ -54563,6 +54563,13 @@ msgid ""
 "the utility may fail to run on <quote>the build</quote>: it's obviously "
 "impossible to run ARM64 machine code on a x86 CPU (without an emulator)."
 msgstr ""
+"빌드 시스템은 <quote>host</quote>에서 실행되도록 상정된 생성된 기계어 코드를 "
+"실행하려고 시도하면 안 됩니다. 예를 들어 유틸리티를 네이티브로 빌드할 때는 해"
+"당 유틸리티를 <parameter>--help</parameter> 스위치와 함께 실행하고 그 출력을 "
+"처리하여 매뉴얼 페이지를 생성할 수 있지만, (에뮬레이터가 없다면 x86 CPU에서 "
+"ARM64 기계어 코드를 실행하는 것이 명백히 불가능하듯이) 유틸리티가 "
+"<quote>build</quote>에서 실행되지 못할 수 있으므로 크로스 컴파일에서는 일반적"
+"으로 이를 수행할 수 없습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:254
@@ -54577,6 +54584,14 @@ msgid ""
 "build</quote> triplet is explicitly specified via the <parameter>--build</"
 "parameter> switch and it's different from <quote>the host</quote> triplet."
 msgstr ""
+"autoconf 기반 빌드 시스템에서 이 요구사항은 빌드 타임에 <quote>host</quote>"
+"용 기계어 코드를 실행해야 하는 선택적 기능들이 비활성화되는 <quote>cross-"
+"compilation mode</quote>에서 충족됩니다. <quote>host</quote> 트리플릿이 명시"
+"적으로 지정되면, <quote>cross-compilation mode</quote>는 <command>configure</"
+"command> 스크립트가 <quote>host</quote> 기계 코드로 컴파일된 더미 프로그램을 "
+"실행하는 데 실패하거나, 또는 <parameter>--build</parameter> 스위치를 통해 "
+"<quote>build</quote> 트리플릿이 명시적으로 지정되었으며 그것이 <quote>host</"
+"quote> 트리플릿과 다를 때에만 활성화됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:269
@@ -54848,6 +54863,10 @@ msgid ""
 "<envar>DESTDIR</envar> directory as the other programs, then the second pass "
 "of gcc is constructed, omitting some non-critical libraries."
 msgstr ""
+"<xref linkend=\"chapter-temporary-tools\"/> 끝에 네이티브 LFS 컴파일러가 설치"
+"됩니다. 먼저 다른 프로그램들과 똑같은 <envar>DESTDIR</envar> 디렉터리에 "
+"binutils-pass2가 빌드되고, 그 다음 일부 중요하지 않은 라이브러리를 제외하면"
+"서 gcc의 두 번째 패스가 빌드됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:462
