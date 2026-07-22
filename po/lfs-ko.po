@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-22 04:14+0900\n"
-"PO-Revision-Date: 2026-07-22 04:14+0900\n"
+"POT-Creation-Date: 2026-07-22 20:51+0900\n"
+"PO-Revision-Date: 2026-07-22 20:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49107,6 +49107,8 @@ msgid ""
 "are used to define fine-grained discretionary access rights for files and "
 "directories."
 msgstr ""
+"이 패키지는 접근 제어 목록(Access Control Lists)을 관리하는 유틸리티를 포함하"
+"는데, 파일과 디렉터리에 대한 세밀한 임의적 접근 권한을 정의하는 데 쓰입니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:35
@@ -49114,6 +49116,7 @@ msgid ""
 "This package contains programs for managing extended attributes on file "
 "system objects."
 msgstr ""
+"이 패키지는 파일 시스템 객체의 확장 속성을 관리하는 프로그램을 포함합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:43
@@ -49122,6 +49125,9 @@ msgid ""
 "automatically configure source code from a developer's template. It is often "
 "needed to rebuild a package after the build procedure has been updated."
 msgstr ""
+"이 패키지는 개발자 템플릿을 기반으로 소스 코드를 자동으로 구성할 수 있는 셸 "
+"스크립트를 생성하는 프로그램을 제공합니다. 빌드 절차가 업데이트된 후 패키지"
+"를 다시 빌드해야 하는 경우가 종종 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:52
@@ -49130,6 +49136,8 @@ msgid ""
 "is often needed to rebuild a package after the build procedure has been "
 "updated."
 msgstr ""
+"이 패키지는 템플릿으로부터 Make 파일을 생성하는 프로그램을 포함합니다. 빌드 "
+"절차가 업데이트된 후 패키지를 다시 빌드해야 하는 경우가 종종 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:60
