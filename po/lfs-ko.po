@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-22 20:51+0900\n"
-"PO-Revision-Date: 2026-07-22 20:51+0900\n"
+"POT-Creation-Date: 2026-07-23 01:26+0900\n"
+"PO-Revision-Date: 2026-07-23 01:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5294,6 +5294,8 @@ msgid ""
 "If <filename class=\"directory\">/bin</filename> is not a symbolic link, it "
 "must be added to the <envar>PATH</envar> variable."
 msgstr ""
+"<filename class=\"directory\">/bin</filename> 이 심볼릭 링크 아니면, "
+"<envar>PATH</envar> 변수에 추가해야 합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:136
@@ -5310,6 +5312,10 @@ msgid ""
 "hashing, limits the risk that the compiler from the host is used instead of "
 "the cross-compiler."
 msgstr ""
+"<filename class=\"directory\">$LFS/tools/bin</filename> 을 표준 <envar>PATH</"
+"envar> 앞에 배치하여, <xref linkend=\"chapter-cross-tools\"/> 시작에 설치된 "
+"크로스 컴파일러가 설치 직후 셸에 의해 선택됩니다. 이는 해싱 비활성화와 결합되"
+"어, 크로스 컴파일러 대신 호스트의 컴파일러가 사용될 위험을 제한합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:148
@@ -5325,6 +5331,11 @@ msgid ""
 "distributions from <filename>/usr/share/config.site</filename> on the host "
 "system. Override it to prevent potential contamination from the host."
 msgstr ""
+"<xref linkend=\"chapter-cross-tools\"/> 및 <xref linkend=\"chapter-temporary-"
+"tools\"/> 에서 이 변수가 설정되지 않으면 <command>configure</command> 스크립"
+"트가 호스트 시스템의 <filename>/usr/share/config.site</filename> 에서 일부 배"
+"포판에 특화된 설정 항목을 로드하려고 시도할 수 있습니다. 이를 재정의하여 호스"
+"트로부터의 잠재적인 오염을 막으쇼."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter04/settingenviron.xml:160
