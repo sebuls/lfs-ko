@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-23 01:26+0900\n"
-"PO-Revision-Date: 2026-07-23 01:26+0900\n"
+"POT-Creation-Date: 2026-07-24 02:58+0900\n"
+"PO-Revision-Date: 2026-07-24 02:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -54677,6 +54677,17 @@ msgid ""
 "delete the libtool archive (<filename class='extension'>.la</filename>) "
 "files and fix up an outdated libtool copy shipped with the Binutils code."
 msgstr ""
+"크로스 링커와 크로스 컴파일러를 빌드할 때 <parameter>--with-sysroot</"
+"parameter> 옵션을 써서 <quote>host</quote>에 필요한 파일을 어디서 찾을 수 있"
+"는지 알려줍니다. 이것은 <xref linkend=\"chapter-temporary-tools\"/> 에서 빌드"
+"되는 다른 프로그램 중 어느 것도 <quote>build</quote> 의 라이브러리에 링크되"
+"지 않음을 거의 보장합니다. autoconf 기반 빌드 시스템을 위한 컴파일러 및 링커"
+"의 <quote>호환</quote> 래퍼 <command>libtool</command>이 너무 영리하게 군 나"
+"머지 링커가 <quote>build.</quote>의 라이브러리를 찾을 수 있게 하는 옵션을 실"
+"수로 전달할 수 있기 때문에 <quote>nearly</quote> 라는 단어가 쓰였습니다. 이러"
+"한 부작용을 막기 위해, libtool 아카이브(<filename class='extension'>.la</"
+"filename>) 파일을 삭제하고 Binutils 코드와 함께 제공된 구버전 "
+"<command>libtool</command> 복사본을 수정해야 합니다."
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:324
@@ -54694,12 +54705,12 @@ msgstr "lfs"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:325
 msgid "Build cross-compiler cc1 using cc-pc on pc."
-msgstr ""
+msgstr "PC에서 cc-pc를 사용하여 크로스 컴파일러 cc1을 빌드"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:329
 msgid "Build compiler cc-lfs using cc1 on pc."
-msgstr ""
+msgstr "PC에서 cc1을 써서 컴파일러 cc-lfs를 빌."
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:333
@@ -54713,6 +54724,9 @@ msgid ""
 "machine using the already installed distribution. <quote>On lfs</quote> "
 "means the commands are run in a chrooted environment."
 msgstr ""
+"이전 표에서 <quote>on pc</quote>는 이미 설치된 배포판을 사용하는 머신에서 명"
+"령어가 실행됨을 뜻합니다. <quote>On lfs</quote>는 chroot 환경에서 명령어가 실"
+"행됨을 뜻합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:343
@@ -54732,6 +54746,18 @@ msgid ""
 "to build libstdc++. This last library will lack some of the functionality of "
 "libgcc."
 msgstr ""
+"이것은 아직 이야기의 끝이 아닙니다. C 언어는 단순히 컴파일러일 뿐만 아닙니"
+"다. 표준 라이브러리도 정의합니다. 이 책에서는 glibc라는 이름의 GNU C 라이브러"
+"리를 사용합니다(&quot;musl&quot; 대안도 있습니다). 이 라이브러리는 LFS 머신용"
+"으로, 즉 크로스 컴파일러 cc1을 사용하여 컴파일해야 합니다. 그러나 컴파일러 자"
+"체는 어셈블러 명령어 세트에서 사용할 수 없는 함수들을 위해 복잡한 서브루틴을 "
+"제공하는 내부 라이브러리를 사용합니다. 이 내부 라이브러리의 이름은 libgcc이"
+"며, 완전히 작동하려면 glibc 라이브러리에 링크되어야 합니다. 게다가 C++용 표"
+"준 라이브러리(libstdc++) 역시 glibc와 링크되어야 합니다. 이 닭과 달걀의 문제"
+"에 대한 해결책은 먼저 스레드 및 예외 처리 같은 일부 기능이 빠진 성능이 저하"
+"된 cc1 기반의 libgcc를 빌드한 다음, 이 성능이 저하된 컴파일러를 사용하여 "
+"glibc(glibc 자체의 성능이 저하되는 것은 아님)를 빌드하고 libstdc++도 빌드하"
+"는 것입니다. 이 마지막 라이브러리는 libgcc의 일부 기능이 모자라게 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:358
