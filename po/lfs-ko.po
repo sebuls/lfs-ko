@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-24 02:58+0900\n"
-"PO-Revision-Date: 2026-07-24 02:57+0900\n"
+"POT-Creation-Date: 2026-07-26 03:48+0900\n"
+"PO-Revision-Date: 2026-07-26 03:48+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49157,6 +49157,9 @@ msgid ""
 "interface to the system.  It was chosen over other shell packages because of "
 "its common usage and extensive capabilities."
 msgstr ""
+"이 패키지는 시스템에 본 셸(Bourne Shell) 인터페이스를 제공하기 위한 LSB 코어 "
+"요구 사항을 만족합니다. 널리 사용되고 뛰어난 기능들을 갖추고 있어 다른 셸 패"
+"키지들보다 우선적으로 선택했습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:69
@@ -49164,6 +49167,8 @@ msgid ""
 "This package provides an arbitrary precision numeric processing language.  "
 "It satisfies a requirement for building the Linux kernel."
 msgstr ""
+"이 패키지는 임의 정밀도 수치 처리 언어를 제공합니다. 리눅스 커널을 빌드하기 "
+"위한 요구 사항을 만족합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:76
@@ -49172,6 +49177,9 @@ msgid ""
 "object files. The programs in this package are needed to compile most of the "
 "packages in an LFS system."
 msgstr ""
+"이 패키지는 링커, 어셈블러, 그리고 오브젝트 파일을 처리하기 위한 기타 도구들"
+"을 제공합니다. 이 패키지의 프로그램들은 LFS 시스템의 대부분의 패키지를 컴파일"
+"하는 데 필요합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:84
@@ -49179,6 +49187,8 @@ msgid ""
 "This package contains the GNU version of yacc (Yet Another Compiler "
 "Compiler) needed to build several of the LFS programs."
 msgstr ""
+"이 패키지에는 LFS 프로그램 중 여러 개를 빌드하는 데 필요한 yacc(Yet Another "
+"Compiler Compiler)의 GNU 버전이 들어 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:91
@@ -49186,6 +49196,8 @@ msgid ""
 "This package contains programs for compressing and decompressing files.  It "
 "is required to decompress many LFS packages."
 msgstr ""
+"이 패키지에는 파일을 압축하고 압축을 해제하는 프로그램이 들어 있습니다. 많은 "
+"LFS 패키지를 압축 해제하는 데 필요합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:104
@@ -49195,6 +49207,9 @@ msgid ""
 "line file management, and are necessary for the installation procedures of "
 "every package in LFS."
 msgstr ""
+"이 패키지에는 파일과 디렉터리를 보고 조작하기 위한 여러 필수 프로그램이 들어 "
+"있습니다. 이 프로그램들은 명령행 파일 관리에 필요하며, LFS의 모든 패키지 설"
+"치 절차에 필요합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:113
@@ -49208,7 +49223,7 @@ msgstr ""
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:121
 msgid "This package supplies a framework for testing other programs."
-msgstr ""
+msgstr "이 패키지는 다른 프로그램을 테스트하기 위한 프레임워크를 제공합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:127
@@ -54772,6 +54787,14 @@ msgid ""
 "instead of the old, degraded build.  This makes the rebuilt libstdc++ fully "
 "functional."
 msgstr ""
+"앞 문단들의 결론은, cc1이 성능이 저하된 libgcc로는 완전히 기능하는 libstdc+"
+"+를 빌드할 수 없지만, cc1은 2단계 동안 C/C++ 라이브러리를 빌드하는 데 사용할 "
+"수 있는 유일한 컴파일러라는 점입니다. 우리가 논의한 바와 같이, <quote>the "
+"build</quote> (호스트 배포판)에서 사용할 수 없는 라이브러리, 코드 또는 데이터"
+"가 필요할 수 있으므로 pc(호스트 배포판)에서 cc-lfs를 실행할 수 없습니다. 따라"
+"서 gcc 2단계를 빌드할 때, 오래되고 성능이 저하된 빌드 대신 새로 빌드된 libgcc"
+"에 libstdc++가 링크되도록 라이브러리 검색 경로를 재정의합니다. 이를 통해 새"
+"로 빌드된 libstdc++가 완전 정상적 기능하게 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:369
@@ -54788,6 +54811,15 @@ msgid ""
 "the <quote>cross-compilation mode.</quote> Additionally, a minor reason for "
 "rebuilding the packages is to run the test suites."
 msgstr ""
+"&ch-final; (또는 <quote>stage 3</quote>)에서 LFS 시스템에 필요한 모든 패키지"
+"가 빌드됩니다. 이전 장에서 이미 LFS 시스템에 설치된 패키지라 하더라도 우리는 "
+"해당 패키지를 다시 빌드합니다. 이 패키지들을 다시 빌드하는 주된 이유는 안정성"
+"을 확보하기 위해서입니다. 완성된 LFS 시스템에 LFS 패키지를 재설치할 때, 재설"
+"치된 패키지의 내용은 &ch-final;에서 처음 설치했을 때의 동일한 패키지 내용과 "
+"같아야 합니다. &ch-tmp-cross; 또는 &ch-tmp-chroot;에 설치된 임시 패키지들은 "
+"누락된 의존성이나 <quote>cross-compilation mode.</quote> 중 하나로 인해 일부 "
+"선택적 기능이 비활성화되어 있기 때문에 이 요구사항을 충족할 수 없습니다. 부수"
+"적인 이유로는 테스트 수이트를 실행하기 위한 목적도 있습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/part3intro/toolchaintechnotes.xml:386
