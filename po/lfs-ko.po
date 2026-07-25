@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-26 03:48+0900\n"
-"PO-Revision-Date: 2026-07-26 03:48+0900\n"
+"POT-Creation-Date: 2026-07-26 07:03+0900\n"
+"PO-Revision-Date: 2026-07-26 07:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -54833,6 +54833,8 @@ msgid ""
 "class=\"directory\">$LFS/tools</filename> directory, since it will not be "
 "part of the final system."
 msgstr ""
+"크로스 컴파일러는 별도의 <filename class=\"directory\">$LFS/tools</filename>"
+"디렉터리에 설치되는데, 왜냐면 최종 시스템의 일부가 아니기 때문."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:392
@@ -54846,6 +54848,13 @@ msgid ""
 "distribution. A test suite failure will usually highlight this error before "
 "too much additional work is performed."
 msgstr ""
+"Binutils가 가장 먼저 설치되는 이유는 gcc 및 glibc <command>configure</"
+"command> 실행 과정에서 어셈블러와 링커에 대한 다양한 기능 테스트를 수행하여 "
+"활성화하거나 비활성화할 소프트웨어 기능을 결정하기 때문입니다. 이는 처음 생각"
+"하는 것보다 훨씬 중요합니다. 잘못 구성된 gcc나 glibc는 미묘하게 손상된 툴체인"
+"을 초래할 수 있으며, 이러한 손상의 영향은 전체 배포판 빌드가 거의 끝날 때까"
+"지 나타나지 않을 수 있습니다. 테스트 스위트 실패는 일반적으로 과도한 추가 작"
+"업이 수행되기 전에 이 오류를 부각시킵니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:401
@@ -54862,6 +54871,16 @@ msgid ""
 "class=\"username\">lfs</systemitem>. If you come back to this page later, "
 "replace <command>$LFS_TGT-ld</command> with <command>ld</command>)."
 msgstr ""
+"Binutils는 어셈블러와 링커를 <filename class=\"directory\">$LFS/tools/bin</"
+"filename> 및 <filename class=\"directory\">$LFS/tools/$LFS_TGT/bin</"
+"filename> 두 곳에 설치합니다. 한 위치 도구는 다른 위치에 하드 링크되어 있습니"
+"다. 링커의 중요한 측면은 라이브러리 검색 순서입니다. 자세한 정보는 "
+"<command>ld</command>에 <parameter>--verbose</parameter> 플래그를 전달하여 얻"
+"을 수 있습니다. 예를 들어, <command>$LFS_TGT-ld --verbose | grep SEARCH</"
+"command> 는 현재 검색 경로와 그 순서를 보여줄 것입니다. (참고로 이 예시는 "
+"<systemitem class=\"username\">lfs</systemitem> 사용자로 로그인한 상태에서만 "
+"위와 같이 실행할 수 있습니다. 나중에 이 페이지로 다시 돌아올 경우, "
+"<command>$LFS_TGT-ld</command> 를 <command>ld</command> 교체.)"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:414
@@ -54869,6 +54888,8 @@ msgid ""
 "The next package installed is gcc. An example of what can be seen during its "
 "run of <command>configure</command> is:"
 msgstr ""
+"다음으로 설치되는 패키지는 gcc. <command>configure</command> 실행되는 동안 "
+"볼 수 있는 예시:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/part3intro/toolchaintechnotes.xml:417
@@ -54910,6 +54931,8 @@ msgid ""
 "Next up: sanitized Linux API headers. These allow the standard C library "
 "(glibc) to interface with features that the Linux kernel will provide."
 msgstr ""
+"그 다음: 정제된 리눅스 API 헤더. 이를 통해 표준 C 라이브러리(glibc)가 리눅스 "
+"커널이 제공하는 기능과 인터페이스할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:442
@@ -54922,6 +54945,12 @@ msgid ""
 "<envar>DESTDIR</envar> variable is used to force installation into the LFS "
 "file system."
 msgstr ""
+"다음 단계: glibc. 이는 우리들이 크로스 컴파일하는 첫 번째 패키지입니다. 빌드 "
+"시스템이 <literal>$LFS_TGT-</literal> 접두사 붙은 도구들을 사용하도록 지정하"
+"기 위해 <parameter>--host=$LFS_TGT</parameter> 옵션을 사용하며, 앞서 논의한 "
+"바와 같이 <quote>the cross-compilation mode</quote> 활성화 위해 <parameter>--"
+"build=$(../scripts/config.guess)</parameter> 옵션 사용. <envar>DESTDIR</"
+"envar> 변수는 LFS 파일 시스템에 강제로 설치하도록 하는 데 쓰입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:451
@@ -54931,6 +54960,10 @@ msgid ""
 "cross-compiled to break circular dependencies at build time.  The steps for "
 "those packages are similar to the steps for glibc."
 msgstr ""
+"앞서 언급했듯이, 표준 C++ 라이브러리가 다음으로 빌드되며, <xref "
+"linkend=\"chapter-temporary-tools\"/>에서 빌드 시점의 순환 의존성을 끊기 위"
+"해 교차 컴파일되어야 하는 다른 프로그램들이 그 뒤를 이끕니다. 이 패키지의 단"
+"계는 glibc의 단계와 비슷합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:456
