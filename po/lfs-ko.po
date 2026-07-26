@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-26 07:03+0900\n"
-"PO-Revision-Date: 2026-07-26 07:02+0900\n"
+"POT-Creation-Date: 2026-07-27 06:14+0900\n"
+"PO-Revision-Date: 2026-07-27 06:14+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4155,7 +4155,7 @@ msgstr "MD5 합: <literal>&tcl-md5;</literal>"
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:822
 msgid "Tcl Documentation (&tcl-version;) - <token>&tcl-docs-size;</token>:"
-msgstr "Tcl Documentation (&tcl-version;) - <token>&tcl-docs-size;</token>:"
+msgstr "Tcl 문서 (&tcl-version;) - <token>&tcl-docs-size;</token>:"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter03/packages.xml:824
@@ -35959,13 +35959,13 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/tcl.xml:19
 msgid "Tcl-&tcl-version;"
-msgstr ""
+msgstr "Tcl-&tcl-version;"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter08/tcl.xml:22 en/prologue/why.xml:605
 #: en/appendices/dependencies.xml:3170
 msgid "Tcl"
-msgstr ""
+msgstr "Tcl"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:28
@@ -35975,21 +35975,24 @@ msgid ""
 "<application>Expect</application> package is written in <application>Tcl</"
 "application> (pronounced \"tickle\")."
 msgstr ""
+"<application>Tcl</application> 패키지에는 강력하고 범용적인 스크립팅 언어인 "
+"Tool Command Language 가 들어 있습니다. <application>Expect</application> 패"
+"키지는 <application>Tcl</application>(티클이라고 발음)로 쓰였습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/tcl.xml:37
 msgid "&tcl-tmp-sbu;"
-msgstr ""
+msgstr "&tcl-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/tcl.xml:38
 msgid "&tcl-tmp-du;"
-msgstr ""
+msgstr "&tcl-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/tcl.xml:45
 msgid "Installation of Tcl"
-msgstr "Installation of Tcl"
+msgstr "Tcl 설치"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:47
@@ -36004,7 +36007,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:53
 msgid "Prepare Tcl for compilation:"
-msgstr "Prepare Tcl for compilation:"
+msgstr "컴파일 위한Tcl 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:55
@@ -36122,6 +36125,7 @@ msgstr "<userinput remap=\"install\">chmod -v u+w /usr/lib/libtcl&tcl-major-vers
 #: en/chapter08/tcl.xml:117
 msgid "Install Tcl's headers. The next package, Expect, requires them."
 msgstr ""
+"Tcl의 헤더 파일들을 설치하세요. 다음 패키지인 Expect에 그것이 필요합니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:119
@@ -36132,7 +36136,7 @@ msgstr "<userinput remap=\"install\">make install-private-headers</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:121
 msgid "Now make a necessary symbolic link:"
-msgstr ""
+msgstr "이제 필요한 심볼링 링크를 만드시요:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:123
@@ -36155,7 +36159,7 @@ msgstr "<userinput remap=\"install\">mv -v /usr/share/man/man3/{Thread,Tcl_Threa
 #: en/chapter08/tcl.xml:129
 msgid ""
 "Optionally, install the documentation by issuing the following commands:"
-msgstr ""
+msgstr "선택적으로, 문서 설치. 아래 명령:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:132
@@ -36179,7 +36183,7 @@ msgstr "Tcl 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/tcl.xml:148
 msgid "tclsh (link to tclsh&tcl-major-version;) and tclsh&tcl-major-version;"
-msgstr ""
+msgstr "tclsh (link to tclsh&tcl-major-version;) 및 tclsh&tcl-major-version;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/tcl.xml:152
@@ -36194,12 +36198,12 @@ msgstr "<command>tclsh&tcl-major-version;</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:166
 msgid "The Tcl command shell"
-msgstr ""
+msgstr "Tcl 명령 shell"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:168
 msgid "tclsh&tcl-major-version;"
-msgstr ""
+msgstr "tclsh&tcl-major-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/tcl.xml:174
@@ -36209,12 +36213,12 @@ msgstr "<command>tclsh</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:176
 msgid "A link to tclsh&tcl-major-version;"
-msgstr ""
+msgstr "A link to tclsh&tcl-major-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:178
 msgid "tclsh"
-msgstr ""
+msgstr "tclsh"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/tcl.xml:184
@@ -36225,7 +36229,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:186
 msgid "The Tcl library"
-msgstr ""
+msgstr "Tcl라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:188
@@ -36242,7 +36246,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:196
 msgid "The Tcl Stub library"
-msgstr ""
+msgstr "Tcl Stub 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:198
@@ -52299,13 +52303,13 @@ msgid ""
 "Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Patch, Sed, "
 "and Tcl"
 msgstr ""
-"Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Patch, Sed, "
-"and Tcl"
+"Bash, Binutils, Coreutils, Diffutils, GCC, Glibc, Grep, Make, Patch, Sed, 및 "
+"Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:658
 msgid "Glibc and Tcl"
-msgstr "Glibc and Tcl"
+msgstr "Glibc 및 Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:680
@@ -52480,7 +52484,7 @@ msgstr "Acl, Bash, Gcc 및 Glibc"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:992
 msgid "Diffutils, Perl, and Tcl"
-msgstr "Diffutils, Perl, and Tcl"
+msgstr "Diffutils, Perl, 및 Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:999
@@ -53398,7 +53402,7 @@ msgstr ""
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3354
 msgid "Acl, Attr, Glibc, Python, Ncurses, and Tcl"
-msgstr "Acl, Attr, Glibc, Python, Ncurses, and Tcl"
+msgstr "Acl, Attr, Glibc, Python, Ncurses, 및 Tcl"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3376
