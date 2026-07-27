@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-28 03:00+0900\n"
-"PO-Revision-Date: 2026-07-28 02:58+0900\n"
+"POT-Creation-Date: 2026-07-28 07:07+0900\n"
+"PO-Revision-Date: 2026-07-28 07:07+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -23666,7 +23666,7 @@ msgid ""
 "zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew"
 msgstr ""
 "gunzip, gzexe, gzip, uncompress (hard link with gunzip), zcat, zcmp, zdiff, "
-"zegrep, zfgrep, zforce, zgrep, zless, zmore, and znew"
+"zegrep, zfgrep, zforce, zgrep, zless, zmore, 및 znew"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gzip.xml:80
@@ -23816,6 +23816,9 @@ msgid ""
 "compress them again; this can be useful when file names were truncated "
 "during a file transfer"
 msgstr ""
+"gzip 파일인 모든 주어진 파일에 <filename class=\"extension\">.gz</filename> "
+"확장자를 강제로 지정하여, <command>gzip</command>이 파일을 다시 빌드하지 않도"
+"록 합니다. 이는 파일 전송 중에 파일 이름이 잘렸을 때 유용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:177
@@ -23830,7 +23833,7 @@ msgstr "<command>zgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:185
 msgid "Runs <command>grep</command> on gzipped files"
-msgstr ""
+msgstr "<command>grep</command> 을 gzip 된 파일에 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:187
@@ -23845,7 +23848,7 @@ msgstr "<command>zless</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:195
 msgid "Runs <command>less</command> on gzipped files"
-msgstr ""
+msgstr "<command>less</command> 를 gzip 파일에 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:197
@@ -23860,7 +23863,7 @@ msgstr "<command>zmore</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:205
 msgid "Runs <command>more</command> on gzipped files"
-msgstr ""
+msgstr "gzip 된 파일에 <command>more</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:207
@@ -23879,9 +23882,9 @@ msgid ""
 "<command>gzip</command> format&mdash;<filename class=\"extension\">.Z</"
 "filename> to <filename class=\"extension\">.gz</filename>"
 msgstr ""
-"Re-compresses files from <command>compress</command> format to "
-"<command>gzip</command> format&mdash;<filename class=\"extension\">.Z</"
-"filename> to <filename class=\"extension\">.gz</filename>"
+"파일들을 <command>compress</command> 형식에서 <command>gzip</command> 형식으"
+"로 재압축 &mdash;<filename class=\"extension\">.Z</filename> 을 <filename "
+"class=\"extension\">.gz</filename> 으로"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:220
