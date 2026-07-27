@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-27 21:02+0900\n"
-"PO-Revision-Date: 2026-07-27 21:02+0900\n"
+"POT-Creation-Date: 2026-07-28 03:00+0900\n"
+"PO-Revision-Date: 2026-07-28 02:58+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49236,6 +49236,9 @@ msgid ""
 "directories. These programs can be used to create patches, and are also used "
 "in many packages' build procedures."
 msgstr ""
+"이 패키지에는 파일이나 디렉터리 간의 차이점을 보여주는 프로그램이 들어있다. "
+"이 프로그램은 패치를 생성하는 데 사용될 수 있으며, 많은 패키지의 빌드 절차에"
+"서도 쓰인다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:135
@@ -49244,6 +49247,9 @@ msgid ""
 "systems.  These are the most common and thoroughly tested file systems that "
 "Linux supports."
 msgstr ""
+"이 패키지는 ext2, ext3 및 ext4 파일 시스템을 처리하기 위한 유틸리티를 제공한"
+"다. 이들은 리눅스가 지원하는 가장 일반적이고 철저하게 테스트된 파일 시스템이"
+"다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:143
@@ -49282,6 +49288,9 @@ msgid ""
 "patterns in text.  It is the GNU version of the lex (lexical analyzer) "
 "program.  It is required to build several LFS packages."
 msgstr ""
+"이 패키지에는 텍스트에서 패턴을 인식하는 프로그램을 생성하기 위한 유틸리티가 "
+"들어있다. 이것은 lex(어휘 분석기) 프로그램의 GNU 버전이다. 여러 LFS 패키지를 "
+"빌드하는 데 필요하다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:181
