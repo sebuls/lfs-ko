@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-27 06:14+0900\n"
-"PO-Revision-Date: 2026-07-27 06:14+0900\n"
+"POT-Creation-Date: 2026-07-27 21:02+0900\n"
+"PO-Revision-Date: 2026-07-27 21:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -54916,6 +54916,13 @@ msgid ""
 "-print-prog-name=ld</command>. (Again, remove the <command>$LFS_TGT-</"
 "command> prefix if coming back to this later.)"
 msgstr ""
+"이것은 위에서 언급한 이유로 중요하다. 또한 이는 <command>gcc</command>의 "
+"configure 스크립트가 사용할 도구를 찾기 위해 PATH 디렉터리를 검색하지 않음을 "
+"보여준다. 하지만 <command>gcc</command> 자체의 실제 작동 중에는 동일한 검색 "
+"경로가 반드시 사용되는 것은 아니다. 표준 링커 gcc가 사용할 링커를 확인하려면 "
+"다음 실행: <command>$LFS_TGT-gcc -print-prog-name=ld</command>. (다시 말하지"
+"만, 나중에 이 작업을 다시 수행할 때는 <command>$LFS_TGT-</command> 접두사를 "
+"제거하라.)"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:429
@@ -54928,6 +54935,12 @@ msgid ""
 "compilation, and assembly stages, including <command>gcc</command>'s search "
 "paths for included headers and their order."
 msgstr ""
+"프로그램을 컴파일할 때 <command>gcc</command>에 <parameter>-v</parameter>명령"
+"줄 옵션을 전달하면 상세한 정보를 얻을 수 있습니다. 예를 들어, "
+"<command>$LFS_TGT-gcc -v <replaceable>example.c</replaceable></command> (또"
+"는 나중에 다시 돌아올 경우 <command> $LFS_TGT-</command> 제외)는 포함된 헤더"
+"에 대한 <command>gcc</command>의 검색 경로와 그 순서를 포함하여 전처리기, 컴"
+"파일 및 어셈블리 단계에 대한 상세한 정보를 보여줍니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:438
