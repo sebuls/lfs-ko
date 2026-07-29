@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-28 07:07+0900\n"
-"PO-Revision-Date: 2026-07-28 07:07+0900\n"
+"POT-Creation-Date: 2026-07-30 01:14+0900\n"
+"PO-Revision-Date: 2026-07-30 01:14+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -32037,6 +32037,9 @@ msgid ""
 "Some tests are known to occasionally hang indefinitely.  So to test the "
 "results, run the test suite but set a 2-minute time limit for each test case:"
 msgstr ""
+"일부 테스트는 간헐적으로 무한정 멈추는(hang) 것으로 알려져 있습니다. 따라서 "
+"결과를 테스트하려면, 테스트 스위트를 실행하되 각 테스트 케이스에 대해 시간 제"
+"한 2분 설정:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/python.xml:92
@@ -32053,6 +32056,10 @@ msgid ""
 "failed tests.  If a test failed but then passed when re-run, it should be "
 "considered as passed."
 msgstr ""
+"상대적으로 느린 시스템은 시간 제한을 늘려야 할 수도 있으며, 1 SBU(하나의 CPU "
+"코어로 Binutils 1차 패스를 빌드할 때 측정된 시간) 면 충분합니다. 일부 테스트"
+"는 불안정하므로, 테스트 스위트가 실패한 테스트를 자동으로 재실행합니다. 테스"
+"트가 실패했으나 재실행 시 통과했다면 통과된 것으로 간주해야 합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:104
@@ -32065,6 +32072,13 @@ msgid ""
 "user). A multi-line warning is triggered whenever <command>pip3</command> is "
 "issued by the <systemitem class='username'>root</systemitem> user."
 msgstr ""
+"이 책의 여러 곳에서 우리들은 파이썬 3 프로그램과 모듈을 모든 사용자를 위해 "
+"<systemitem class='username'>root</systemitem> 권한으로 <command>pip3</"
+"command> 명령어를 사용하여 설치합니다. 이는 패키지를 가상 환경에 설치하거나 "
+"일반 사용자의 홈 디렉터리에 설치(이 사용자로 <command>pip3</command>를 실행하"
+"여)하라는 파이썬 개발자들의 권장 사항과 상충됩니다. <systemitem "
+"class='username'>root</systemitem> 사용자가 <command>pip3</command> 실행할 때"
+"마다 여러 줄 경고가 납니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:113
@@ -32077,6 +32091,12 @@ msgid ""
 "environment, <command>pip3</command> cannot check for a new version of "
 "itself, and will produce a warning."
 msgstr ""
+"이 권장 사항의 주된 이유는 시스템 패키지 매니저(예: <command>dpkg</command>)"
+"와의 충돌을 피하기 위한 것입니다. LFS에는 시스템 전체를 관리하는 패키지 매니"
+"저가 없으므로 이는 문제가 되지 않습니다. 또한 <command>pip3</command>는 실행"
+"될 때마다 자체의 새 버전을 확인합니다. LFS chroot 디렉터리 환경에서는 아직 도"
+"메인 이름 해상도가 설정되어 있지 않기 때문에, <command>pip3</command> 는 자체"
+"의 새 버전을 확인할 수 없으며 경고가 납니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:123
@@ -32091,6 +32111,14 @@ msgid ""
 "as well. If you wish, you can suppress all these warnings by running the "
 "following command, which creates a configuration file:"
 msgstr ""
+"LFS 시스템을 부팅하고 네트워크 연결을 설정한 후에는, (새 버전이 나올 때마다) "
+"사용자에게 PyPI의 미리 빌드된 휠(wheel)로부터 <command>pip3</command>를 업데"
+"이트하라는 다른 경고가 발생할 것입니다. 그러나 LFS에서는 <command>pip3</"
+"command>를 파이썬 3의 일부로 간주하므로 별도로 업데이트해서는 안 됩니다. 또"
+"한 미리 빌드된 휠을 통한 업데이트는 소스 코드로부터 리눅스 시스템을 빌드한다"
+"는 우리의 목표에서 벗어나게 됩니다. 따라서 <command>pip3</command> 새 버전에 "
+"대한 경고 역시 무시해야 합니다. 원하면 다음 명령어를 실행하여 설정 파일을 생"
+"성함으로써 이 모든 경고를 억제:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/python.xml:133
