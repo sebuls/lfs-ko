@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-30 01:14+0900\n"
-"PO-Revision-Date: 2026-07-30 01:14+0900\n"
+"POT-Creation-Date: 2026-07-31 00:40+0900\n"
+"PO-Revision-Date: 2026-07-31 00:40+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -19094,6 +19094,9 @@ msgid ""
 "line. This program is only used to add \"link time optimization\" and is not "
 "useful with the default build options."
 msgstr ""
+"<command>ar</command> 명령어에 플러그인을 추가해 주는 래퍼. 이 프로그램은 오"
+"직 링크 타임 최적화를 추가하는 데만 사용되며, 기본 빌드 옵션에서는 쓸모가 없"
+"습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:451
@@ -19112,6 +19115,9 @@ msgid ""
 "line. This program is only used to add \"link time optimization\" and is not "
 "useful with the default build options."
 msgstr ""
+"<command>nm</command> 명령어에 플러그인을 추가해 주는 래퍼. 이 프로그램은 오"
+"직 \"link time optimization\" 을 덧붙이는 데만 사용되며, 기본 빌드 옵션에서"
+"는 쓸모가 없습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:464
@@ -19130,6 +19136,9 @@ msgid ""
 "line. This program is only used to add \"link time optimization\" and is not "
 "useful with the default build options."
 msgstr ""
+"<command>ranlib</command> 명령어에 플러그인을 추가해 주는 래퍼. 이 프로그램"
+"은 오직 \"link time optimization\"  추가하는 데만 사용되며, 기본 빌드 옵션에"
+"서는 쓸모가 없습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:477
@@ -19147,6 +19156,8 @@ msgid ""
 "A coverage testing tool; it is used to analyze programs to determine where "
 "optimizations will have the greatest effect"
 msgstr ""
+"커버리지 테스트 도구. 프로그램의 어디에 최적화를 적용해야 가장 큰 효과를 볼 "
+"수 있는지 분석하는 데 사용됩니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:488
@@ -19161,7 +19172,7 @@ msgstr "<command>gcov-dump</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:496
 msgid "Offline gcda and gcno profile dump tool"
-msgstr ""
+msgstr "오프라인 gcda 및 gcno 프로필 덤프 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:498
@@ -36121,6 +36132,10 @@ msgid ""
 "for the remainder of LFS, but may be needed if a package built later uses "
 "Tcl."
 msgstr ""
+"<quote>make</quote> 명령 뒤에 나오는 여러 <quote>sed</quote> 명령어들은 설정 "
+"파일에서 빌드 디렉터리에 대한 참조를 제거하고 이를 설치 디렉터리로 바꿉니다. "
+"이는 LFS 나머지 과정을 진행하는 데 필수는 아니지만, 나중에 빌드되는 패키지가 "
+"Tcl 사용하는 경우 필요할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:105
@@ -36244,7 +36259,7 @@ msgstr "<command>tclsh</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:176
 msgid "A link to tclsh&tcl-major-version;"
-msgstr "A link to tclsh&tcl-major-version;"
+msgstr "tclsh&tcl-major-version; 가리키는 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:178
