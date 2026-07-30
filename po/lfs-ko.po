@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-31 00:40+0900\n"
-"PO-Revision-Date: 2026-07-31 00:40+0900\n"
+"POT-Creation-Date: 2026-07-31 06:13+0900\n"
+"PO-Revision-Date: 2026-07-31 06:13+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -25602,6 +25602,8 @@ msgid ""
 "Changes the Enhanced Graphic Adapter (EGA) and Video Graphics Array (VGA) "
 "fonts on the console"
 msgstr ""
+"콘솔의 EGA(Enhanced Graphics Adapter) 및 VGA(Video Graphics Array) 폰트를 변"
+"경"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:298
@@ -25619,6 +25621,8 @@ msgid ""
 "Loads kernel scancode-to-keycode mapping table entries; this is useful if "
 "there are unusual keys on the keyboard"
 msgstr ""
+"커널 scancode-to-keycode 매핑 테이블 항목을 로드. 키보드에 특수한 키가 있는 "
+"경우 유용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:309
@@ -25633,7 +25637,7 @@ msgstr "<command>setleds</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:317
 msgid "Sets the keyboard flags and Light Emitting Diodes (LEDs)"
-msgstr ""
+msgstr "키보드 플래그와 LED(Light Emitting Diode)를 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:319
@@ -25648,7 +25652,7 @@ msgstr "<command>setmetamode</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:327
 msgid "Defines the keyboard meta-key handling"
-msgstr ""
+msgstr "키보드 메타 키 처리를 정의"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:329
@@ -25663,7 +25667,7 @@ msgstr "<command>setvtrgb</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:337
 msgid "Sets the console color map in all virtual terminals"
-msgstr ""
+msgstr "모든 가상 콘솔의 콘솔 컬러 맵을 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:339
@@ -25678,7 +25682,7 @@ msgstr "<command>showconsolefont</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:347
 msgid "Shows the current EGA/VGA console screen font"
-msgstr ""
+msgstr "현재 EGA/VGA 콘솔 화면 폰트를 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:349
@@ -25702,7 +25706,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:360
 msgid "showkey"
-msgstr ""
+msgstr "showkey"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kbd.xml:366
@@ -25716,9 +25720,9 @@ msgid ""
 "your keymap file is in the ISO-8859-1 encoding. For other encodings, this "
 "utility produces incorrect results.]"
 msgstr ""
-"Puts the keyboard and console in UNICODE mode [Don't use this program unless "
-"your keymap file is in the ISO-8859-1 encoding. For other encodings, this "
-"utility produces incorrect results.]"
+"키보드와 콘솔을 유니코드 모드로 전환합니다. [키맵 파일이 ISO-8859-1 인코딩인 "
+"경우가 아니라면 이 프로그램을 사용하지 마십시오. 다른 인코딩의 경우, 이 유틸"
+"리티는 잘못된 결과를 생성합니다.]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:372
@@ -25733,7 +25737,7 @@ msgstr "<command>unicode_stop</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:380
 msgid "Reverts keyboard and console from UNICODE mode"
-msgstr "Reverts keyboard and console from UNICODE mode"
+msgstr "유니코드 모드에서 키보드와 콘솔을 원래 상태로 되돌림"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:382
