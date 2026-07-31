@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-07-31 08:54+0900\n"
-"PO-Revision-Date: 2026-07-31 08:54+0900\n"
+"POT-Creation-Date: 2026-08-01 03:40+0900\n"
+"PO-Revision-Date: 2026-08-01 03:40+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9019,7 +9019,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/ncurses.xml:59 en/chapter08/ncurses.xml:44
 msgid "Prepare Ncurses for compilation:"
-msgstr "Prepare Ncurses for compilation:"
+msgstr "컴파일 위한 Ncurses 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter06/ncurses.xml:61
@@ -9130,6 +9130,9 @@ msgid ""
 "command> program from the host.  Using host tools on cross-compiled programs "
 "can cause failure."
 msgstr ""
+"이 스위치는 빌드 시스템이 호스트의 <command>strip</command> 프로그램을 사용하"
+"는 것을 막습니다. 크로스 컴파일된 프로그램에 호스트 도구를 사용하면 실패할 "
+"수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:136
@@ -28889,6 +28892,9 @@ msgid ""
 "[A terminfo file contains information on the capabilities of a certain "
 "terminal.]"
 msgstr ""
+"terminfo 소스 형식의 파일을 ncurses 라이브러리 루틴에 필요한 바이너리 형식으"
+"로 변환하는 terminfo 항목 설명 컴파일러입니다 [terminfo 파일에는 특정 단말기"
+"의 기능에 대한 정보가 들어 있습니다.]"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:315
