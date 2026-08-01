@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-02 02:09+0900\n"
-"PO-Revision-Date: 2026-08-02 02:08+0900\n"
+"POT-Creation-Date: 2026-08-02 06:23+0900\n"
+"PO-Revision-Date: 2026-08-02 06:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -5514,14 +5514,14 @@ msgstr "<userinput>source ~/.bash_profile</userinput>"
 #. type: Attribute 'xreflabel' of: <sect1>
 #: en/chapter05/binutils-pass1.xml:8
 msgid "binutils-pass1"
-msgstr ""
+msgstr "binutils-pass1"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter05/binutils-pass1.xml:14 en/chapter06/binutils-pass2.xml:14
 #: en/chapter08/binutils.xml:14
 #, no-wrap
 msgid "&binutils-url;"
-msgstr ""
+msgstr "&binutils-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter05/binutils-pass1.xml:12
@@ -5664,12 +5664,12 @@ msgstr "&diskspace;"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter05/binutils-pass1.xml:36
 msgid "&binutils-tmpp1-sbu;"
-msgstr ""
+msgstr "&binutils-tmpp1-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter05/binutils-pass1.xml:37
 msgid "&binutils-tmpp1-du;"
-msgstr ""
+msgstr "&binutils-tmpp1-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter05/binutils-pass1.xml:44
@@ -5812,6 +5812,8 @@ msgid ""
 "This tells the configure script to prepare to install the Binutils programs "
 "in the <filename class=\"directory\">$LFS/tools</filename> directory."
 msgstr ""
+"이 설정은 <filename class=\"directory\">$LFS/tools</filename> 디렉터리에 "
+"Binutils 프로그램을 설치하도록 준비하라고 configure 스크립트에 지시."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:105
@@ -5824,6 +5826,8 @@ msgid ""
 "For cross compilation, this tells the build system to look in $LFS for the "
 "target system libraries as needed."
 msgstr ""
+"크로스 컴파일 시 이 설정은 빌드 시스템에 필요에 따라 대상 시스템 라이브러리"
+"를 위해 $LFS 를 살펴보라고 지시."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:113
@@ -5838,6 +5842,9 @@ msgid ""
 "command> script, this switch will tell the <command>configure</command> "
 "script to adjust binutil's build system for building a cross linker."
 msgstr ""
+"<envar>LFS_TGT</envar> 변수 머신 설명이 <command>config.guess</command> 스크"
+"립트가 반환하는 값과 약간 다르므로, 이 스위치는 <command>configure</command> "
+"스크립트에 크로스 링커를 빌드하도록 binutils 빌드 시스템을 조정하라고 지시."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:124
@@ -5849,7 +5856,7 @@ msgstr "<parameter>--disable-nls</parameter>"
 msgid ""
 "This disables internationalization as i18n is not needed for the temporary "
 "tools."
-msgstr ""
+msgstr "임시 도구에는 i18n이 안 필요하므로 국제화를 비활성화."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:132
@@ -5860,7 +5867,7 @@ msgstr "<parameter>--enable-gprofng=no</parameter>"
 #: en/chapter05/binutils-pass1.xml:134
 msgid ""
 "This disables building gprofng which is not needed for the temporary tools."
-msgstr ""
+msgstr "임시 도구에 필요하지 않은 gprofng 빌드를 비활성화."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:140 en/chapter08/glibc.xml:90
@@ -5873,7 +5880,7 @@ msgstr "<parameter>--disable-werror</parameter>"
 msgid ""
 "This prevents the build from stopping in the event that there are warnings "
 "from the host's compiler."
-msgstr ""
+msgstr "호스트 컴파일러에서 경고가 발생하더라도 빌드가 중단되는 것을 막음."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:148
@@ -5889,6 +5896,10 @@ msgid ""
 "executables easier and works around potential issues in the test suite of "
 "some packages."
 msgstr ""
+"이 설정은 링커가 전통적인 <quote>runpath</quote> 태그를 <quote>rpath</quote> "
+"태그 대신 사용하여, 라이브러리 검색 경로를 실행 파일과 공유 라이브러리에 내장"
+"하도록 만듭니다. 동적으로 링크된 실행 파일의 디버깅을 더 쉽게 만들어 주며 일"
+"부 패키지의 테스트 스위트에서 발생할 수 있는 잠재적 문제를 우회합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/binutils-pass1.xml:159
