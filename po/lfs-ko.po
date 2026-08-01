@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-01 03:40+0900\n"
-"PO-Revision-Date: 2026-08-01 03:40+0900\n"
+"POT-Creation-Date: 2026-08-01 17:12+0900\n"
+"PO-Revision-Date: 2026-08-01 17:12+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -17983,7 +17983,7 @@ msgstr "Flex 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/flex.xml:54
 msgid "Prepare Flex for compilation:"
-msgstr "Prepare Flex for compilation:"
+msgstr "컴파일 위한 Flex 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/flex.xml:56
@@ -18030,7 +18030,7 @@ msgstr "Flex 내용"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/flex.xml:93
 msgid "flex, flex++ (link to flex), and lex (link to flex)"
-msgstr "flex, flex++ (link to flex), and lex (link to flex)"
+msgstr "flex, flex++ (flex 링크), 및 lex (flex 링크)"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/flex.xml:94
@@ -18054,6 +18054,8 @@ msgid ""
 "for the versatility to specify the rules for pattern-finding, eradicating "
 "the need to develop a specialized program"
 msgstr ""
+"텍스트에서 패턴을 인식하는 프로그램을 생성하는 도구. 패턴 검색 규칙을 지정할 "
+"수 있는 유연성을 제공하여 별도 전용 프로그램을 개발할 필요성을 없애줌"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/flex.xml:111
@@ -18071,6 +18073,8 @@ msgid ""
 "An extension of flex, is used for generating C++ code and classes. It is a "
 "symbolic link to <command>flex</command>"
 msgstr ""
+"flex의 확장 버전으로, C++ 코드와 클래스를 생성하는 데 쓰임. <command>flex</"
+"command>를 가리키는 심볼릭 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/flex.xml:122
@@ -18088,6 +18092,8 @@ msgid ""
 "A symbolic link that runs <command>flex</command> in <command>lex</command> "
 "emulation mode"
 msgstr ""
+"<command>lex</command> 에뮬레이션 모드로 <command>flex</command> 실행하는 심"
+"볼릭 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/flex.xml:133
@@ -18102,7 +18108,7 @@ msgstr "<filename class=\"libraryfile\">libfl</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/flex.xml:141
 msgid "The <filename class=\"libraryfile\">flex</filename> library"
-msgstr ""
+msgstr "<filename class=\"libraryfile\">flex</filename> 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/flex.xml:143
@@ -18127,7 +18133,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/flit-core.xml:17
 msgid "Flit-Core-&flit-core-version;"
-msgstr ""
+msgstr "Flit-Core-&flit-core-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter08/flit-core.xml:20
@@ -19063,7 +19069,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:418
 msgid "cpp"
-msgstr ""
+msgstr "cpp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gcc.xml:424
@@ -19408,7 +19414,7 @@ msgstr "<filename class=\"libraryfile\">libstdc++</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:652
 msgid "The standard C++ library"
-msgstr ""
+msgstr "표준 C++ 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:654
