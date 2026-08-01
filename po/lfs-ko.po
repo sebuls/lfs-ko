@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-01 17:12+0900\n"
-"PO-Revision-Date: 2026-08-01 17:12+0900\n"
+"POT-Creation-Date: 2026-08-02 02:09+0900\n"
+"PO-Revision-Date: 2026-08-02 02:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -31174,6 +31174,10 @@ msgid ""
 "installed after the timestamp file was created. A package manager that uses "
 "this approach is install-log."
 msgstr ""
+"이 기법에서는 패키지를 설치하기 전에 파일에 타임스탬프를 남깁니다. 설치가 완"
+"료된 후, 적절한 옵션과 함께 <command>find</command> 명령어를 간단히 사용하면 "
+"타임스탬프 파일이 생성된 이후에 설치된 모든 파일의 로그를 생성할 수 있습니"
+"다. 이 방식을 사용하는 패키지 관리자가 바로 install-log 입니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:280
@@ -31185,6 +31189,11 @@ msgid ""
 "at a time. The logs are not reliable if two packages are installed "
 "simultaneously from two different consoles."
 msgstr ""
+"이 방식은 단순하다는 장점이 있지만, 두 가지 단점이 있습니다. 설치 중 파일이 "
+"현재 시간이 아닌 다른 타임스탬프로 설치되면 패키지 관리자가 해당 파일을 추적"
+"하지 못합니다. 또한, 이 방식은 패키지를 한 번에 하나씩 설치할 때만 사용할 수 "
+"있습니다. 서로 다른 두 콘솔에서 패키지 두 개를 동시에 설치하면, 로그를 신뢰"
+"할 수 없습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:290
