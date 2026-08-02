@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-02 17:41+0900\n"
-"PO-Revision-Date: 2026-08-02 17:41+0900\n"
+"POT-Creation-Date: 2026-08-03 04:11+0900\n"
+"PO-Revision-Date: 2026-08-03 04:10+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6331,6 +6331,11 @@ msgid ""
 "the compiler will only produce temporary executables. But it is cleaner to "
 "have the temporary packages be as close as possible to the final ones."
 msgstr ""
+"이 스위치들은 GCC가 기본적으로 일부 보안 강화(hardening) 기능(제8장 <xref "
+"linkend=\"pie-ssp-info\"/> 자세한 내용을 확인할 수 있습니다)을 갖춘 프로그램"
+"을 컴파일하도록 허용합니다. 컴파일러가 임시 실행 파일만 생성할 것이므로 이 단"
+"계에서 엄격히 필요한 것은 아닙니다. 그러나 임시 패키지를 최종 패키지와 최대"
+"한 가깝게 만드는 것이 더 깔끔합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:168 en/chapter07/gettext.xml:57
@@ -6344,6 +6349,9 @@ msgid ""
 "this because the shared libraries require Glibc, which is not yet installed "
 "on the target system."
 msgstr ""
+"이 스위치는 GCC가 내부 라이브러리를 정적으로 링크하도록 강제합니다. 이게 필요"
+"한 까닭은 공유 라이브러리에는 아직 타겟 시스템에 설치되지 않은 Glibc가 필요하"
+"기 때문입니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:177
@@ -6356,6 +6364,8 @@ msgid ""
 "On x86_64, LFS does not support a multilib configuration.  This switch is "
 "harmless for x86."
 msgstr ""
+"x86_64에서 LFS는 multilib 구성을 지원 안 합니다. 이 스위치는 x86에서 무해합니"
+"다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:185
@@ -6376,6 +6386,10 @@ msgid ""
 "These features may fail to compile when building a cross-compiler and are "
 "not necessary for the task of cross-compiling the temporary libc."
 msgstr ""
+"이 스위치들은 각각 threading, libatomic, libgomp, libquadmath, libssp, "
+"libvtv 및 C++ 표준 라이브러리 지원을 비활성화합니다. 이 기능은 크로스 컴파일"
+"러를 빌드할 때 컴파일에 실패할 수 있으며, 임시 libc를 크로스 컴파일하는 작업"
+"에는 필요하지 않습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:199
@@ -6388,11 +6402,12 @@ msgid ""
 "This option ensures that only the C and C++ compilers are built.  These are "
 "the only languages needed now."
 msgstr ""
+"이 옵션은 C 및 C++ 컴파일러 빌드만 보장합니다. 이것만 지금 필요한 언어입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/gcc-pass1.xml:208
 msgid "Compile GCC by running:"
-msgstr ""
+msgstr "GCC 컴파일 하려면 실행:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/gcc-pass1.xml:216
