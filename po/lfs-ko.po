@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-02 06:23+0900\n"
-"PO-Revision-Date: 2026-08-02 06:23+0900\n"
+"POT-Creation-Date: 2026-08-02 17:41+0900\n"
+"PO-Revision-Date: 2026-08-02 17:41+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -25129,7 +25129,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/iproute2.xml:289
 msgid "tc"
-msgstr ""
+msgstr "tc"
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/jinja2.xml:14
@@ -25318,6 +25318,8 @@ msgid ""
 "This option prevents the vlock utility from being built because it requires "
 "the PAM library, which isn't available in the chroot environment."
 msgstr ""
+"이 옵션은 vlock 유틸리티가 빌드되는 것을 막는데 왜냐면 chroot 환경에서 사용"
+"할 수 없는 PAM 라이브러리가 필요하기 때문."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter08/kbd.xml:92
@@ -25376,7 +25378,7 @@ msgstr "<command>chvt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:131
 msgid "Changes the foreground virtual terminal"
-msgstr ""
+msgstr "전경 가상 터미널 변경"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:133
@@ -25391,7 +25393,7 @@ msgstr "<command>deallocvt</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:141
 msgid "Deallocates unused virtual terminals"
-msgstr ""
+msgstr "사용 안 하는 터미널 할당 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:143
@@ -25406,7 +25408,7 @@ msgstr "<command>dumpkeys</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:151
 msgid "Dumps the keyboard translation tables"
-msgstr ""
+msgstr "키보든 변환 테이블 덤프"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:153
@@ -25451,7 +25453,7 @@ msgstr "<command>kbdinfo</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:181
 msgid "Obtains information about the status of a console"
-msgstr ""
+msgstr "콘솔 상태 관한 정보 얻기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:183
@@ -25466,7 +25468,7 @@ msgstr "<command>kbd_mode</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:191
 msgid "Reports or sets the keyboard mode"
-msgstr ""
+msgstr "키보드 모드 보고 또는 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:193
@@ -25481,7 +25483,7 @@ msgstr "<command>kbdrate</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:201
 msgid "Sets the keyboard repeat and delay rates"
-msgstr ""
+msgstr "키보드 반복 및 지연율 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:203
@@ -25496,7 +25498,7 @@ msgstr "<command>loadkeys</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:211
 msgid "Loads the keyboard translation tables"
-msgstr ""
+msgstr "키보드 변황 테이블 로드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:213
@@ -25511,7 +25513,7 @@ msgstr "<command>loadunimap</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kbd.xml:221
 msgid "Loads the kernel unicode-to-font mapping table"
-msgstr ""
+msgstr "커널 유니코드 폰트 맵 테이블 로드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:223
@@ -25530,11 +25532,13 @@ msgid ""
 "mapping table into the console driver; this is now done by <command>setfont</"
 "command>"
 msgstr ""
+"사용자가 정의한 출력 문자 매핑 테이블을 콘솔 드라이버에 로드하는 데 사용되던 "
+"구형 프로그램.현재는 <command>setfont</command> 통해 수행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kbd.xml:235
 msgid "mapscrn"
-msgstr ""
+msgstr "mapscrn"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/kbd.xml:241
