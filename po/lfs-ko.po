@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-04 01:45+0900\n"
-"PO-Revision-Date: 2026-08-04 01:45+0900\n"
+"POT-Creation-Date: 2026-08-04 02:57+0900\n"
+"PO-Revision-Date: 2026-08-04 02:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6702,7 +6702,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:136
 msgid "During this stage the following warning might appear:"
-msgstr ""
+msgstr "이 단계에서 다음 경고가 나타날 수 있습니다:"
 
 #. type: Content of: <sect1><sect2><blockquote><screen>
 #: en/chapter05/glibc.xml:139
@@ -6727,6 +6727,9 @@ msgid ""
 "harmless. This <command>msgfmt</command> program is part of the Gettext "
 "package, which the host distribution should provide."
 msgstr ""
+"누락되거나 호환되지 않는 <command>msgfmt</command> 프로그램은 일반적으로 무해"
+"합니다. 이 <command>msgfmt</command> 프로그램은 호스트 배포판에서 제공해야 하"
+"는 Gettext 패키지의 일부입니다."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter05/glibc.xml:150
@@ -6833,6 +6836,11 @@ msgid ""
 "class=\"directory\"> $LFS</filename>, which will become the root directory "
 "in <xref linkend= \"ch-tools-chroot\" role='.'/>"
 msgstr ""
+"<envar>DESTDIR</envar> make 변수는 패키지가 설치되어야 할 위치를 정의하기 위"
+"해 거의 모든 패키지에서 사용됩니다. 이 변수가 설정되지 않은 경우, 기본값은 "
+"root (<filename class=\"directory\">/</filename>) 디렉터리입니다. 여기서는 패"
+"키지가  $LFS에 설치되도록 지정하며, 이 디렉터리는 <xref linkend= \"ch-tools-"
+"chroot\" role='.'/> 에서 루트 디렉터리가 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:187
