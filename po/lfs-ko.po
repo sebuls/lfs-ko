@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-03 04:11+0900\n"
-"PO-Revision-Date: 2026-08-03 04:10+0900\n"
+"POT-Creation-Date: 2026-08-04 01:45+0900\n"
+"PO-Revision-Date: 2026-08-04 01:45+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -49379,6 +49379,8 @@ msgid ""
 "This package contains a program for carrying out scripted dialogues with "
 "other interactive programs.  It is commonly used for testing other packages."
 msgstr ""
+"이 패키지에는 다른 대화형 프로그램들과 스크립트 기반의 대화를 수행하기 위한 "
+"프로그램이 들어 있습니다. 다른 패키지들을 테스트하는 데 흔히 사용됩니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:158
@@ -49386,6 +49388,8 @@ msgid ""
 "This package contains a utility for determining the type of a given file or "
 "files. A few packages need it in their build scripts."
 msgstr ""
+"이 패키지에는 주어진 파일의 형식을 판별하기 위한 유틸리티가 들어 있습니다. 몇"
+"몇 패키지는 빌드 스크립트에서 이를 필요로 합니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:165
@@ -49393,6 +49397,8 @@ msgid ""
 "This package provides programs to find files in a file system.  It is used "
 "in many packages' build scripts."
 msgstr ""
+"이 패키지는 파일 시스템에서 파일을 찾는 프로그램들을 제공합니다. 많은 패키지"
+"의 빌드 스크립트에서 쓰입니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:172
@@ -49412,6 +49418,9 @@ msgid ""
 "version of awk (Aho-Weinberg-Kernighan). It is used in many other packages' "
 "build scripts."
 msgstr ""
+"이 패키지는 텍스트 파일을 조작하기 위한 프로그램을 제공합니다. awk(Aho-"
+"Weinberg-Kernighan)의 GNU 버전입니다. 다른 많은 패키지의 빌드 스크립트에서 씁"
+"니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:189
@@ -49419,6 +49428,8 @@ msgid ""
 "This is the Gnu Compiler Collection.  It contains the C and C++ compilers as "
 "well as several others not built by LFS."
 msgstr ""
+"이것은 GNU 컴파일러 모음(GCC)입니다. 여기에는 C 및 C++ 컴파일러뿐만 아니라 "
+"LFS에서 빌드하지 않는 여러 다른 컴파일러도 들어 있습니다."
 
 #. type: Content of: <sect1><itemizedlist><listitem><para>
 #: en/prologue/why.xml:197
