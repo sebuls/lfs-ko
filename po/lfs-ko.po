@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-05 02:15+0900\n"
-"PO-Revision-Date: 2026-08-05 02:15+0900\n"
+"POT-Creation-Date: 2026-08-05 02:23+0900\n"
+"PO-Revision-Date: 2026-08-05 02:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11121,7 +11121,7 @@ msgstr "Perl 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/perl.xml:46
 msgid "Prepare Perl for compilation:"
-msgstr "Prepare Perl for compilation:"
+msgstr "컴파일 위해 Perl 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter07/perl.xml:48
@@ -29985,6 +29985,8 @@ msgid ""
 "This ensures that <userinput>less</userinput> is used instead of "
 "<userinput>more</userinput>."
 msgstr ""
+"이것은 <userinput>less</userinput>가 <userinput>more</userinput> 대신 사용되"
+"도록 보장."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:85
@@ -30001,6 +30003,8 @@ msgid ""
 "Since Groff is not installed yet, <command>Configure</command> will not "
 "create man pages for Perl.  These parameters override this behavior."
 msgstr ""
+"Groff가 아직 설치 안 되었으므로 <command>Configure</command>는 Perl 의 매뉴"
+"얼 페이지를 생성 안 합니다. 이러한 파라미터는 이 동작을 재정의."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:95
@@ -30010,7 +30014,7 @@ msgstr "<parameter>-D usethreads</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:97
 msgid "Build Perl with support for threads."
-msgstr ""
+msgstr "스레드 지원을 포함하여 Perl을 빌드."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/perl.xml:109
