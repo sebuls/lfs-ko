@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-04 02:57+0900\n"
-"PO-Revision-Date: 2026-08-04 02:57+0900\n"
+"POT-Creation-Date: 2026-08-05 02:15+0900\n"
+"PO-Revision-Date: 2026-08-05 02:15+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7856,7 +7856,7 @@ msgstr "&binutils-tmpp2-sbu;"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/binutils-pass2.xml:37
 msgid "&binutils-tmpp2-du;"
-msgstr ""
+msgstr "&binutils-tmpp2-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/binutils-pass2.xml:44 en/chapter08/binutils.xml:42
@@ -7981,7 +7981,7 @@ msgstr "크로스 컴파일 임시 도구"
 #: en/chapter06/coreutils.xml:14 en/chapter08/coreutils.xml:14
 #, no-wrap
 msgid "&coreutils-url;"
-msgstr ""
+msgstr "&coreutils-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter06/coreutils.xml:12 en/chapter08/coreutils.xml:12
@@ -7995,7 +7995,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter06/coreutils.xml:17 en/chapter08/coreutils.xml:17
 msgid "Coreutils-&coreutils-version;"
-msgstr ""
+msgstr "Coreutils-&coreutils-version;"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/chapter06/coreutils.xml:20 en/chapter08/coreutils.xml:20
@@ -8003,17 +8003,17 @@ msgstr ""
 #: en/appendices/dependencies.xml:403 en/appendices/dependencies.xml:1303
 #: en/appendices/dependencies.xml:2897
 msgid "Coreutils"
-msgstr ""
+msgstr "Coreutils"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/coreutils.xml:36
 msgid "&coreutils-tmp-sbu;"
-msgstr ""
+msgstr "&coreutils-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/coreutils.xml:37
 msgid "&coreutils-tmp-du;"
-msgstr ""
+msgstr "&coreutils-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/coreutils.xml:44 en/chapter08/coreutils.xml:42
@@ -9367,7 +9367,7 @@ msgstr "이 패키지 상세 <xref linkend=\"contents-sed\" role=\".\"/>"
 #: en/chapter06/tar.xml:14 en/chapter08/tar.xml:14
 #, no-wrap
 msgid "&tar-url;"
-msgstr ""
+msgstr "&tar-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter06/tar.xml:12 en/chapter08/tar.xml:12
@@ -9381,23 +9381,23 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter06/tar.xml:17 en/chapter08/tar.xml:17
 msgid "Tar-&tar-version;"
-msgstr ""
+msgstr "Tar-&tar-version;"
 
 #. type: Content of: <appendix><bridgehead>
 #: en/chapter06/tar.xml:20 en/chapter08/tar.xml:20 en/prologue/why.xml:598
 #: en/appendices/dependencies.xml:1363 en/appendices/dependencies.xml:3130
 msgid "Tar"
-msgstr ""
+msgstr "Tar"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/tar.xml:36
 msgid "&tar-tmp-sbu;"
-msgstr ""
+msgstr "&tar-tmp-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter06/tar.xml:37
 msgid "&tar-tmp-du;"
-msgstr ""
+msgstr "&tar-tmp-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter06/tar.xml:44 en/chapter08/tar.xml:44
@@ -10965,7 +10965,7 @@ msgstr "<userinput>mount -v --bind /dev $LFS/dev</userinput>"
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter07/kernfs.xml:62
 msgid "Mounting Virtual Kernel File Systems"
-msgstr ""
+msgstr "Mounting Virtual Kernel File Systems"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/kernfs.xml:64
@@ -11165,6 +11165,8 @@ msgid ""
 "This is a combination of three options: -d uses defaults for all items; -e "
 "ensures completion of all tasks; -s silences non-essential output."
 msgstr ""
+"이건 세 옵션의 조합입니다: -d는 모든 항목에 기본값을 사용하고, -e는 모든 작업"
+"의 완료를 보장하며, -s는 필수 아닌 출력을 억제."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:72
@@ -11177,6 +11179,8 @@ msgid ""
 "This ensures <command>perl</command> knows how to tell packages where they "
 "should install their Perl modules."
 msgstr ""
+"이것은 <command>perl</command> 이 패키지에 Perl 모듈을 설치해야 할 위치를 알"
+"려주는 방법을 정확히 알 수 있도록 보장."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:80
@@ -11189,6 +11193,8 @@ msgid ""
 "Build <systemitem class='library'>libperl</systemitem> needed by some Perl "
 "modules as a shared library, instead of a static library."
 msgstr ""
+"정적 라이브러리 대신 공유 라이브러리로 일부 Perl 모듈에 필요한 <systemitem "
+"class='library'>libperl</systemitem> 를 빌드."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/perl.xml:89
@@ -12900,7 +12906,7 @@ msgstr "&binutils-fin-sbu;"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/binutils.xml:35
 msgid "&binutils-fin-du;"
-msgstr ""
+msgstr "&binutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/binutils.xml:52
@@ -14142,12 +14148,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/coreutils.xml:34
 msgid "&coreutils-fin-sbu;"
-msgstr ""
+msgstr "&coreutils-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/coreutils.xml:35
 msgid "&coreutils-fin-du;"
-msgstr ""
+msgstr "&coreutils-fin-du;"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:44
@@ -14513,7 +14519,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:291
 msgid "chgrp"
-msgstr ""
+msgstr "chgrp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:297
@@ -14533,7 +14539,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:303
 msgid "chmod"
-msgstr ""
+msgstr "chmod"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:309
@@ -15711,7 +15717,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1078
 msgid "tac"
-msgstr ""
+msgstr "tac"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:1084
@@ -15728,7 +15734,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1089
 msgid "tail"
-msgstr ""
+msgstr "tail"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:1095
@@ -15747,7 +15753,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1100
 msgid "tee"
-msgstr ""
+msgstr "tee"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:1106
@@ -15762,7 +15768,7 @@ msgstr "값을 비교하고 파일 형식을 확인"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:1110
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:1116
