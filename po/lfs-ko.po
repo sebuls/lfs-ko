@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-05 02:23+0900\n"
-"PO-Revision-Date: 2026-08-05 02:23+0900\n"
+"POT-Creation-Date: 2026-08-06 04:04+0900\n"
+"PO-Revision-Date: 2026-08-06 04:04+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6913,7 +6913,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:213 en/chapter08/gcc.xml:267
 msgid "Now make sure that we're set up to use the correct start files:"
-msgstr ""
+msgstr "이제 올바른 시작 파일을 사용하도록 설정되어 있는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:215
@@ -6942,7 +6942,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:223 en/chapter08/gcc.xml:284
 msgid "Verify that the compiler is searching for the correct header files:"
-msgstr ""
+msgstr "컴파일러가 올바른 헤더 파일을 검색하고 있는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:226
@@ -6953,7 +6953,7 @@ msgstr "<userinput>grep -B3 \"^ $LFS/usr/include\" dummy.log</userinput>"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:228 en/chapter08/gcc.xml:289
 msgid "This command should return the following output:"
-msgstr ""
+msgstr "이 명령어는 다음 출력을 반환:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:230
@@ -6975,12 +6975,14 @@ msgid ""
 "Again, the directory named after your target triplet may be different than "
 "the above, depending on your system architecture."
 msgstr ""
+"다시 한 번 말씀드리지만, 타겟 삼중항(triplet)의 이름을 딴 디렉터리는 시스템 "
+"아키텍처에 따라 위의 내용과 다를 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:238 en/chapter08/gcc.xml:300
 msgid ""
 "Next, verify that the new linker is being used with the correct search paths:"
-msgstr ""
+msgstr "다음으로, 새 링커가 올바른 검색 경로와 함께 사용되고 있는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter05/glibc.xml:240 en/chapter08/gcc.xml:302
@@ -7027,6 +7029,9 @@ msgid ""
 "literal>), which would be replaced with the sysroot directory that we've "
 "configured for the linker."
 msgstr ""
+"32비트 시스템에서는 몇 가지 다른 디렉터리를 사용할 수도 있지만, 여기서 중요"
+"한 점은 모든 경로가 등호(<literal>=</literal>) 로 시작해야 하며, 이 등호는 링"
+"커를 위해 구성한 시스루트(sysroot) 디렉터리로 바뀐다는 것."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:259 en/chapter08/gcc.xml:328
