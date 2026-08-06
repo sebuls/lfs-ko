@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-06 04:04+0900\n"
-"PO-Revision-Date: 2026-08-06 04:04+0900\n"
+"POT-Creation-Date: 2026-08-06 21:38+0900\n"
+"PO-Revision-Date: 2026-08-06 21:37+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -7249,8 +7249,8 @@ msgid ""
 "Specifies that the cross-compiler we have just built should be used instead "
 "of the one in <filename>/usr/bin</filename>."
 msgstr ""
-"Specifies that the cross-compiler we have just built should be used instead "
-"of the one in <filename>/usr/bin</filename>."
+"방금 빌드한 크로스 컴파일러를 <filename>/usr/bin</filename> 에 있는 것 대신 "
+"사용해야 함을 설명합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/libstdc++.xml:85
@@ -8640,6 +8640,13 @@ msgid ""
 "of this location. This switch is needed so those tools will find the needed "
 "files in <filename class=\"directory\">$LFS</filename>, and not on the host."
 msgstr ""
+"일반적으로 <parameter>--host</parameter> 사용하면 GCC 빌드에 크로스 컴파일러"
+"가 사용되도록 보장되며, 해당 컴파일러는 헤더와 라이브러리를 <filename "
+"class=\"directory\">$LFS</filename>에서 찾아야 한다는 것을 알게 됩니다. 하지"
+"만 GCC의 빌드 시스템은 이 위치를 인식하지 못하는 추가 도구들을 사용합니다. "
+"이 스위치는 그러한 도구들이 호스트가 아닌 <filename "
+"class=\"directory\">$LFS</filename> 에서 필요한 파일을 찾도록 하기 위해 필요"
+"합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:118
@@ -8658,6 +8665,14 @@ msgid ""
 "is not supported, so using the host's compilers may cause the build to fail. "
 "This parameter ensures the libraries are built by GCC pass 1."
 msgstr ""
+"우리는 크로스 컴파일 중이므로, 이 패스에서 컴파일된 GCC 바이너리로 타겟 라이"
+"브러리(<filename class=\"libraryfile\">libgcc</filename> 및 <filename "
+"class=\"libraryfile\">libstdc++</filename>)를 빌드하는 것은 불가능합니다. "
+"&mdash; 해당 바이너리들은 호스트에서 실행되지 않기 때문입니다. 기본적으로 "
+"GCC 빌드 시스템은 우회책으로 호스트의 C 및 C++ 컴파일러를 사용하려고 시도합니"
+"다. 서로 다른 버전의 GCC로 GCC 타겟 라이브러리를 빌드하는 것은 지원되지 않으"
+"므로, 호스트의 컴파일러를 사용하면 빌드가 실패할 수 있습니다. 이 매개변수는 "
+"라이브러리가 GCC 패스 1에 의해 빌드되도록 보장합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:134
@@ -8673,6 +8688,11 @@ msgid ""
 ">.  The previous version cannot properly support C++ exception handling "
 "because it was built without libc support."
 msgstr ""
+"<filename class=\"libraryfile\">libstdc++</filename> 가 <xref linkend='ch-"
+"tools-gcc-pass1'/> 에서 빌드된 이전 버전 대신, 이번 패스에서 빌드 중인 "
+"<filename class=\"libraryfile\">libgcc</filename>를 사용하도록 허용합니다. 이"
+"전 버전은 libc 지원 없이 빌드되었기 때문에 C++ 예외 처리를 제대로 지원할 수 "
+"없습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/gcc-pass2.xml:146
@@ -8687,6 +8707,10 @@ msgid ""
 "implied by <parameter>--disable-libstdcxx</parameter>, and now we can "
 "explicitly pass it."
 msgstr ""
+"GCC 새니타이저 런타임 라이브러리를 비활성화합니다. 임시 설치에는 필요하지 않"
+"습니다. <xref linkend='ch-tools-gcc-pass1'/>에서는 <parameter>--disable-"
+"libstdcxx</parameter>에 의해 암시되었으며, 이제 명시적으로 전달할 수 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/gcc-pass2.xml:166
