@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-06 21:38+0900\n"
-"PO-Revision-Date: 2026-08-06 21:37+0900\n"
+"POT-Creation-Date: 2026-08-07 03:16+0900\n"
+"PO-Revision-Date: 2026-08-07 03:16+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -19265,7 +19265,7 @@ msgstr "<command>gcov-tool</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:506
 msgid "Offline gcda profile processing tool"
-msgstr ""
+msgstr "오프라인 gcda 프로필 처리 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:508
@@ -19281,6 +19281,7 @@ msgstr "<command>lto-dump</command>"
 #: en/chapter08/gcc.xml:516
 msgid "Tool for dumping object files produced by GCC with LTO enabled"
 msgstr ""
+"LTO가 활성화된 상태로 GCC에서 생성된 오브젝트 파일을 덤프하기 위한 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:519
@@ -19295,7 +19296,7 @@ msgstr "<filename class=\"libraryfile\">libasan</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:527
 msgid "The Address Sanitizer runtime library"
-msgstr ""
+msgstr "주소 새니타이저 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:529
@@ -19310,7 +19311,7 @@ msgstr "<filename class=\"libraryfile\">libatomic</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:537
 msgid "GCC atomic built-in runtime library"
-msgstr ""
+msgstr "GCC 원자적(atomic) 내장 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:539
@@ -19325,7 +19326,7 @@ msgstr "<filename class=\"libraryfile\">libcc1</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:547
 msgid "A library that allows GDB to make use of GCC"
-msgstr ""
+msgstr "GDB가 GCC를 활용할 수 있게 해주는 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:549
@@ -19340,7 +19341,7 @@ msgstr "<filename class=\"libraryfile\">libgcc</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:557
 msgid "Contains run-time support for <command>gcc</command>"
-msgstr ""
+msgstr "<command>gcc</command>에 대한 런타임 지원 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:559
@@ -19358,6 +19359,7 @@ msgid ""
 "This library is linked into a program when GCC is instructed to enable "
 "profiling"
 msgstr ""
+"이 라이브러리는 GCC에 프로파일링을 활성화하도록 지시할 때 프로그램에 링크됨"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:570
@@ -19375,6 +19377,8 @@ msgid ""
 "GNU implementation of the OpenMP API for multi-platform shared-memory "
 "parallel programming in C/C++ and Fortran"
 msgstr ""
+"C/C++ 및 Fortran에서의 다중 플랫폼 공유 메모리 병렬 프로그래밍을 위한 OpenMP "
+"API의 GNU 구현"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:581
@@ -19389,7 +19393,7 @@ msgstr "<filename class=\"libraryfile\">libhwasan</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:589
 msgid "The Hardware-assisted Address Sanitizer runtime library"
-msgstr ""
+msgstr "하드웨어 지원 주소 새니타이저 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:591
@@ -19404,7 +19408,7 @@ msgstr "<filename class=\"libraryfile\">libitm</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:599
 msgid "The GNU transactional memory library"
-msgstr ""
+msgstr "GNU 트랜잭셔널 메모리 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:601
@@ -19419,7 +19423,7 @@ msgstr "<filename class=\"libraryfile\">liblsan</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:609
 msgid "The Leak Sanitizer runtime library"
-msgstr ""
+msgstr "Leak Sanitizer 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:611
@@ -19437,6 +19441,8 @@ msgid ""
 "GCC's LTO plugin allows Binutils to process object files produced by GCC "
 "with LTO enabled"
 msgstr ""
+"GCC의 LTO 플러그인은 Binutils가 LTO가 활성화된 상태로 GCC가 생성한 오브젝트 "
+"파일을 처리할 수 있도록 허용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:622
@@ -19451,7 +19457,7 @@ msgstr "<filename class=\"libraryfile\">libquadmath</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:630
 msgid "GCC Quad Precision Math Library API"
-msgstr ""
+msgstr "GCC 4중 정밀도 수학 라이브러리 API"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:632
@@ -19469,6 +19475,8 @@ msgid ""
 "Contains routines supporting GCC's stack-smashing protection functionality.  "
 "Normally it is not used, because Glibc also provides those routines."
 msgstr ""
+"GCC의 스택 가로채기(stack-smashing) 보호 기능을 지원하는 루틴들을 포함. 대개 "
+"이건 안 쓰는데, 왜냐면 Glibc도 이러한 루틴들을 제공하기 때문."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:644
@@ -19543,7 +19551,7 @@ msgstr "<filename class=\"libraryfile\">libtsan</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:693
 msgid "The Thread Sanitizer runtime library"
-msgstr ""
+msgstr "Thread Sanitizer 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:695
@@ -19559,6 +19567,7 @@ msgstr "<filename class=\"libraryfile\">libubsan</filename>"
 #: en/chapter08/gcc.xml:703
 msgid "The Undefined Behavior Sanitizer runtime library"
 msgstr ""
+"정의 안 된 동작 새니타이저(Undefined Behavior Sanitizer) 런타임 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:705
