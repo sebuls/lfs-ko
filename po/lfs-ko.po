@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-07 03:16+0900\n"
-"PO-Revision-Date: 2026-08-07 03:16+0900\n"
+"POT-Creation-Date: 2026-08-08 04:15+0900\n"
+"PO-Revision-Date: 2026-08-08 04:15+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6290,6 +6290,9 @@ msgid ""
 "compiled by pass1 GCC will run in the chroot environment, which is isolated "
 "from libc of the host distro."
 msgstr ""
+"이 옵션은 타겟에서 사용될 Glibc 버전을 지정합니다. 호스트 배포판의 libc와는 "
+"관련이 없는데, 왜냐면 pass1 GCC로 컴파일된 모든 것은 호스트 배포판의 libc와 "
+"격리된 chroot 환경에서 실행되므로."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:135
@@ -6303,6 +6306,9 @@ msgid ""
 "inhibit_libc constant is defined when building libgcc. This prevents the "
 "compiling of any code that requires libc support."
 msgstr ""
+"작동하는 C 라이브러리를 아직 사용할 수 없으므로, 이것은 libgcc를 빌드할 때 "
+"inhibit_libc 상수가 정의되도록 보장합니다. 이는 libc 지원이 필요한 모든 코드"
+"의 컴파일을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:144
@@ -6316,6 +6322,9 @@ msgid ""
 "compatible with the target system. For our purposes these headers will not "
 "be needed. This switch prevents GCC from looking for them."
 msgstr ""
+"완전한 크로스 컴파일러를 생성할 때 GCC는 타겟 시스템과 호환되는 표준 헤더가 "
+"필요합니다. 우리의 목적상 이러한 헤더는 필요하지 않습니다. 이 스위치는 GCC가 "
+"헤더를 찾는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter05/gcc-pass1.xml:154
@@ -7583,7 +7592,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/asm/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:95
 msgid "The Linux API ASM Headers"
-msgstr ""
+msgstr "Linux API ASM 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:97
@@ -7598,7 +7607,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/asm-generic/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:105
 msgid "The Linux API ASM Generic Headers"
-msgstr ""
+msgstr "Linux API ASM 일반 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:107
@@ -7613,7 +7622,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/drm/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:115
 msgid "The Linux API DRM Headers"
-msgstr ""
+msgstr "Linux API DRM 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:117
@@ -7628,7 +7637,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/linux/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:125
 msgid "The Linux API Linux Headers"
-msgstr ""
+msgstr "Linux API Linux 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:127
@@ -7643,7 +7652,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/misc/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:135
 msgid "The Linux API Miscellaneous Headers"
-msgstr ""
+msgstr "Linux API 기타 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:137
@@ -7658,7 +7667,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/mtd/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:145
 msgid "The Linux API MTD Headers"
-msgstr ""
+msgstr "Linux API MTD 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:147
@@ -7673,7 +7682,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/rdma/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:155
 msgid "The Linux API RDMA Headers"
-msgstr ""
+msgstr "Linux API RDMA 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:157
@@ -7688,7 +7697,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/scsi/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:165
 msgid "The Linux API SCSI Headers"
-msgstr ""
+msgstr "Linux API SCSI 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:167
@@ -7703,7 +7712,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/sound/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:175
 msgid "The Linux API Sound Headers"
-msgstr ""
+msgstr "Linux API Sound 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:177
@@ -7718,7 +7727,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/video/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:185
 msgid "The Linux API Video Headers"
-msgstr ""
+msgstr "Linux API Video 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:187
@@ -7733,7 +7742,7 @@ msgstr "<filename class=\"headerfile\">/usr/include/xen/*.h</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/linux-headers.xml:195
 msgid "The Linux API Xen Headers"
-msgstr ""
+msgstr "Linux API Xen 헤더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter05/linux-headers.xml:197
@@ -7752,6 +7761,8 @@ msgid ""
 "<productname>bash</productname> <productnumber>&bash-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>bash</productname> <productnumber>&bash-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter06/bash.xml:17 en/chapter08/bash.xml:17
@@ -7944,6 +7955,7 @@ msgstr "<parameter>--enable-shared</parameter>"
 msgid ""
 "Builds <filename class=\"libraryfile\">libbfd</filename> as a shared library."
 msgstr ""
+"<filename class=\"libraryfile\">libbfd</filename> 를 공유 라이브러리로 빌드."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/binutils-pass2.xml:92
@@ -7956,6 +7968,8 @@ msgid ""
 "Enables 64-bit support (on hosts with smaller word sizes).  This may not be "
 "needed on 64-bit systems, but it does no harm."
 msgstr ""
+"64비트 지원을 활성화합니다(워드 크기가 더 작은 호스트에서). 64비트 시스템에서"
+"는 필요하지 않을 수 있지만, 무해합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter06/binutils-pass2.xml:109
