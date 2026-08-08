@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-08 04:15+0900\n"
-"PO-Revision-Date: 2026-08-08 04:15+0900\n"
+"POT-Creation-Date: 2026-08-08 21:19+0900\n"
+"PO-Revision-Date: 2026-08-08 21:17+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11586,6 +11586,9 @@ msgid ""
 "would not be overwritten or removed when building the final util-linux "
 "package."
 msgstr ""
+"이것은 FHS에 따라 하드웨어 시계에 대한 정보를 기록하는 파일의 위치를 설정합니"
+"다. 이 임시 도구에는 엄격하게 필요하지 않지만, 최종 util-linux 패키지를 빌드"
+"할 때 덮어쓰여지거나 제거되지 않을 다른 위치에 파일이 생성되는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:84
@@ -11599,6 +11602,9 @@ msgid ""
 "symlinks targeting the shared library file in the same directory (<filename "
 "class=\"directory\">/usr/lib</filename>) directly."
 msgstr ""
+"이 스위치는 동일한 디렉터리(<filename class=\"directory\">/usr/lib</"
+"filename>)에 있는 공유 라이브러리 파일을 직접 가리키는 <filename "
+"class=\"extension\">.so</filename> 심볼릭 링크가 생성되도록 보장합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter07/util-linux.xml:96
@@ -11606,6 +11612,8 @@ msgid ""
 "These switches prevent warnings about building components that require "
 "packages not in LFS or not installed yet."
 msgstr ""
+"이 스위치는 LFS에 없거나 아직 설치되지 않은 패키지가 필요한 구성 요소를 빌드"
+"하는 것에 대한 경고를 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:102
@@ -11618,6 +11626,8 @@ msgid ""
 "This switch disables using <application>Python</application>.  It avoids "
 "trying to build unneeded bindings."
 msgstr ""
+"이 스위치는 <application>Python</application> 사용을 비활성화합니다. 불필요"
+"한 바인딩을 빌드하려는 시도를 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter07/util-linux.xml:110
@@ -11630,6 +11640,9 @@ msgid ""
 "This switch sets the location of the socket used by <command>uuidd</command> "
 "and <filename class=\"libraryfile\">libuuid</filename> correctly."
 msgstr ""
+"이 스위치는 <command>uuidd</command> 및 <filename "
+"class=\"libraryfile\">libuuid</filename>에서 쓰는 소켓의 위치를 올바르게 설정"
+"합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter07/util-linux.xml:133
