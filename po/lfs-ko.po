@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-15 19:27+0900\n"
-"PO-Revision-Date: 2026-08-15 19:25+0900\n"
+"POT-Creation-Date: 2026-08-16 04:05+0900\n"
+"PO-Revision-Date: 2026-08-16 04:05+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -31351,6 +31351,8 @@ msgid ""
 "In this approach, the commands that the installation scripts perform are "
 "recorded.  There are two techniques that one can use:"
 msgstr ""
+"이 접근에는 설치 스크립트가 수행하는 명령이 기록됩니다. 사용할 수 있는 두 가"
+"지 기술:"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:295
@@ -31366,6 +31368,15 @@ msgid ""
 "idea to perform some tests to ensure that the package manager does not break "
 "anything, and that it logs all the appropriate files."
 msgstr ""
+"<envar>LD_PRELOAD</envar> 환경 변수는 설치 전에 미리 로드할 라이브러리를 가리"
+"키도록 설정할 수 있습니다. 설치하는 동안 이 라이브러리는 <command>cp</"
+"command>, <command>install</command>, <command>mv</command> 처럼 다양한 실행 "
+"파일에 자신을 연결하여 파일 시스템을 수정하는 시스템 호출을 추적함으로써 설치"
+"되는 패키지를 추적합니다. 이런 접근이 작동하려면 모든 실행 파일이 suid 또는 "
+"sgid 비트 없이 동적으로 링크 되어야 합니다. 라이브러리를 미리 로드하면 설치 "
+"중에 원치 않는 부작용이 발생할 수 있습니다. 따라서 패키지 관리자가 아무것도 "
+"망가뜨리지 않으며 모든 적절한 파일을 올바르게 기록하는지 확인하기 위해 몇 가"
+"지 테스트를 수행하는 것이 좋습니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:307
@@ -31373,11 +31384,13 @@ msgid ""
 "Another technique is to use <command>strace</command>, which logs all the "
 "system calls made during the execution of the installation scripts."
 msgstr ""
+"또 다른 기술은 설치 스크립트가 실행되는 동안 발생하는 모든 시스템 호출을 기록"
+"하는 <command>strace</command>를 사용하는 것입니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:313
 msgid "Creating Package Archives"
-msgstr ""
+msgstr "Creating Package Archives"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:315
@@ -31438,7 +31451,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter08/pkgmgt.xml:341
 msgid "User Based Management"
-msgstr ""
+msgstr "User Based Management"
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/pkgmgt.xml:343
