@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-16 20:21+0900\n"
-"PO-Revision-Date: 2026-08-16 20:20+0900\n"
+"POT-Creation-Date: 2026-08-17 03:31+0900\n"
+"PO-Revision-Date: 2026-08-17 03:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -16477,6 +16477,9 @@ msgid ""
 "command>, which itself uses <application>Tcl</application> (Tool Command "
 "Language)."
 msgstr ""
+"<application>DejaGnu</application> 패키지는 GNU 도구에서 테스트 스위트를 실행"
+"하기 위한 프레임워크를 포함합니다. 이 패키지는 그 자체로 Tcl(Tool Command "
+"Language)을 사용하는 <command>expect</command>로 쓰여 있습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/dejagnu.xml:35
@@ -16497,12 +16500,12 @@ msgstr "DejaGNU 설치"
 #: en/chapter08/dejagnu.xml:45
 msgid ""
 "The upstream recommends building DejaGNU in a dedicated build directory:"
-msgstr ""
+msgstr "업스트림에서는 전용 빌드 디렉터리에서 DejaGNU를 빌드할 것을 권장:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/dejagnu.xml:51
 msgid "Prepare DejaGNU for compilation:"
-msgstr "Prepare DejaGNU for compilation:"
+msgstr "컴파일용 DejaGNU준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/dejagnu.xml:53
@@ -16544,7 +16547,7 @@ msgstr "설치된 프로그램"
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/dejagnu.xml:77
 msgid "dejagnu and runtest"
-msgstr "dejagnu and runtest"
+msgstr "dejagnu 및 runtest"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/dejagnu.xml:87
@@ -16554,7 +16557,7 @@ msgstr "<command>dejagnu</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/dejagnu.xml:89
 msgid "DejaGNU auxiliary command launcher"
-msgstr "DejaGNU auxiliary command launcher"
+msgstr "DejaGNU 보조 명령어 실행기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/dejagnu.xml:91
@@ -16572,6 +16575,8 @@ msgid ""
 "A wrapper script that locates the proper <command>expect</command> shell and "
 "then runs DejaGNU"
 msgstr ""
+"적절한 <command>expect</command> 셸을 찾아낸 후 DejaGNU를 실행하는 래퍼 스크"
+"립트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/dejagnu.xml:102
@@ -17677,6 +17682,8 @@ msgid ""
 "Expect needs PTYs to work.  Verify that the PTYs are working properly inside "
 "the chroot environment by performing a simple test:"
 msgstr ""
+"Expect가 동작하려면 PTY가 필요합니다. 간단한 테스트를 수행하여 chroot 환경 내"
+"에서 PTY가 제대로 작동하는지 확인:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expect.xml:55
@@ -17699,11 +17706,21 @@ msgid ""
 "the test suites of Bash, Binutils, GCC, GDBM, and of course Expect itself) "
 "will fail catastrophically, and other subtle breakages may also happen."
 msgstr ""
+"이 명령은 <computeroutput>ok</computeroutput> 출력해야 합니다. 대신, 출력에 "
+"<computeroutput>OSError: out of pty devices</computeroutput> 포함되어 있다"
+"면, 환경이 올바른 PTY 동작을 하도록 설정되지 않은 것입니다. chroot 환경에서 "
+"나가서 <xref linkend='ch-tools-kernfs'/> 다시 읽고, <systemitem "
+"class=\"filesystem\">devpts</systemitem> 파일 시스템(및 기타 가상 커널 파일 "
+"시스템)이 올바르게 마운트되었는지 확인해야 합니다. 그런 다음 <xref "
+"linkend='ch-tools-chroot'/> 에 따라 chroot 환경에 다시 진입하세요. 계속 진행"
+"하기 전에 이 문제를 해결해야 하며, 그렇지 않으면 Expect를 요구하는 테스트 스"
+"위트(예: Bash, Binutils, GCC, GDBM, 그리고 물론 Expect 자체의 테스트 스위트)"
+"가 치명적으로 실패할 것이고, 다른 미묘한 문제가 생길 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:70
 msgid "Now, make some changes to allow the package with gcc-15.1 or later:"
-msgstr ""
+msgstr "이제 gcc-15.1 이상 버전에서 패키지를 사용할 수 있도록 몇 가지 변경:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expect.xml:72
@@ -17796,7 +17813,7 @@ msgstr "<command>expect</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/expect.xml:141
 msgid "Communicates with other interactive programs according to a script"
-msgstr ""
+msgstr "스크립트에 따라 다른 대화형 프로그램들과 통신"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expect.xml:150
@@ -17811,6 +17828,8 @@ msgid ""
 "Contains functions that allow Expect to be used as a Tcl extension or to be "
 "used directly from C or C++ (without Tcl)"
 msgstr ""
+"Tcl 확장 기능으로 사용하거나 Tcl 없이 C 또는 C++에서 직접 사용할 수 있도록 "
+"Expect를 지원하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/expect.xml:155
@@ -30781,7 +30800,7 @@ msgstr "<command>pkgconf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pkgconf.xml:92
 msgid "Returns meta information for the specified library or package"
-msgstr "Returns meta information for the specified library or package"
+msgstr "지정된 라이브러리 또는 패키지에 대한 메타 정보를 반환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pkgconf.xml:95
@@ -30797,11 +30816,13 @@ msgstr "<command>bomtool</command>"
 #: en/chapter08/pkgconf.xml:103
 msgid "Generates a Software Bill Of Materials from pkg-config .pc files"
 msgstr ""
+"pkg-config .pc 파일로부터 소프트웨어 자재 명세서(SBOM, Software Bill Of "
+"Materials) 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pkgconf.xml:106
 msgid "bomtool"
-msgstr ""
+msgstr "bomtool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pkgconf.xml:112
@@ -30814,6 +30835,8 @@ msgid ""
 "Contains most of pkgconf's functionality, while allowing other tools like "
 "IDEs and compilers to use its frameworks"
 msgstr ""
+"IDE나 컴파일러 같은 다른 도구들이 프레임워크를 사용할 수 있도록 허용하면서 "
+"pkgconf 기능의 대부분을 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/pkgconf.xml:117
@@ -36240,6 +36263,10 @@ msgid ""
 "reassuring, if not essential, to know that the most important tools are "
 "working properly."
 msgstr ""
+"이 패키지와 다음 두 개의 패키지(Expect 및 DejaGNU)는 Binutils, GCC 및 기타 패"
+"키지의 테스트 스위트 실행을 지원하기 위해 설치됩니다. 테스트 목적으로 패키지 "
+"3개 설치하는 것이 과해 보일 수 있지만, 가장 중요한 도구들이 제대로 작동하는"
+"지 아는 것은 필수는 아니라 하더라도 매우 안심이 되는 일입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:53
