@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-16 04:05+0900\n"
-"PO-Revision-Date: 2026-08-16 04:05+0900\n"
+"POT-Creation-Date: 2026-08-16 20:21+0900\n"
+"PO-Revision-Date: 2026-08-16 20:20+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -14096,6 +14096,8 @@ msgid ""
 "The library implementing lossless, block-sorting data compression, using the "
 "Burrows-Wheeler algorithm"
 msgstr ""
+"무손실 블록 정렬 데이터 압축을 구현하는 라이브러리, Burrows-Wheeler 알고리즘 "
+"사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bzip2.xml:268
@@ -17645,6 +17647,14 @@ msgid ""
 "difficult with anything else. The <application>DejaGnu</application> "
 "framework is written in <application>Expect</application>."
 msgstr ""
+"<application>Expect</application> 패키지는 스크립트 대화를 통해 "
+"<command>telnet</command>, <command>ftp</command>, <command>passwd</"
+"command>, <command>fsck</command>, <command>rlogin</command>, 및 "
+"<command>tip</command> 처럼 대화형 응용 프로그램을 자동화하기 위한 도구들을 "
+"포함합니다. 또한 Expect는 이러한 응용 프로그램들을 테스트하는 데 유용할 뿐만 "
+"아니라, 다른 방법으로는 극도로 어려운 온갖 종류의 작업들을 수월하게 만들어 줍"
+"니다. <application>DejaGnu</application> 프레임워크는 <application>Expect</"
+"application>로 만들었습니다."
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/expect.xml:41
@@ -20353,11 +20363,13 @@ msgid ""
 "utilities will be installed into <filename class=\"directory\">/usr/sbin</"
 "filename>:"
 msgstr ""
+"<command>ldconfig</command> and <command>sln</command> 유틸리티가 <filename "
+"class=\"directory\">/usr/sbin</filename> 에 설치되도록 보장:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:77
 msgid "Prepare Glibc for compilation:"
-msgstr "Prepare Glibc for compilation:"
+msgstr "컴파일용 Glibc준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/glibc.xml:79
@@ -24810,7 +24822,7 @@ msgid ""
 "the BLFS book."
 msgstr ""
 "라이브러리에 대한 더 자세한 논의는 BLFS 책 <ulink url=\"&blfs-"
-"book;introduction/libraries.html\">라이브러리: 정적 또는 공유?</ulink> 참조."
+"book;introduction/libraries.html\">Libraries: Static or shared?</ulink> 참조."
 
 #. type: Content of: <sect1><sect1info><address>
 #: en/chapter08/iproute2.xml:14
@@ -36263,6 +36275,10 @@ msgid ""
 "rpath for an installation into the standard location, and rpath may "
 "sometimes cause unwanted effects or even security issues."
 msgstr ""
+"이 매개변수는 바이너리 실행 파일과 공유 라이브러리에 라이브러리 검색 경로"
+"(rpath)가 하드코딩되는 것을 막습니다. 이 패키지는 표준 위치에 설치할 때 rpath"
+"가 필요하지 않으며, rpath는 때때로 원치 않는 부작용이나 보안 문제를 일으킬 "
+"수 있습니다."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:78
@@ -36376,7 +36392,7 @@ msgstr "<userinput remap=\"install\">ln -sfv tclsh&tcl-major-version; /usr/bin/t
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/tcl.xml:125
 msgid "Rename a man page that conflicts with a Perl man page:"
-msgstr "Rename a man page that conflicts with a Perl man page:"
+msgstr "Perl 매뉴얼 페이지와 충돌하는 매뉴얼 페이지의 이름을 변경:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/tcl.xml:127
@@ -39880,12 +39896,12 @@ msgid ""
 "xzcmp (link to xzdiff), xzdec, xzdiff, xzegrep (link to xzgrep), xzfgrep "
 "(link to xzgrep), xzgrep, xzless, and xzmore"
 msgstr ""
-"lzcat (link to xz), lzcmp (link to xzdiff), lzdiff (link to xzdiff), lzegrep "
-"(link to xzgrep), lzfgrep (link to xzgrep), lzgrep (link to xzgrep), lzless "
-"(link to xzless), lzma (link to xz), lzmadec, lzmainfo, lzmore (link to "
-"xzmore), unlzma (link to xz), unxz (link to xz), xz, xzcat (link to xz), "
-"xzcmp (link to xzdiff), xzdec, xzdiff, xzegrep (link to xzgrep), xzfgrep "
-"(link to xzgrep), xzgrep, xzless, and xzmore"
+"lzcat (xz 가리키는 링크), lzcmp (xzdiff 가리키는 링크), lzdiff (xzdiff 가리키"
+"는 링크), lzegrep (link to xzgrep), lzfgrep (link to xzgrep), lzgrep (link "
+"to xzgrep), lzless (link to xzless), lzma (link to xz), lzmadec, lzmainfo, "
+"lzmore (link to xzmore), unlzma (link to xz), unxz (link to xz), xz, xzcat "
+"(link to xz), xzcmp (link to xzdiff), xzdec, xzdiff, xzegrep (link to "
+"xzgrep), xzfgrep (link to xzgrep), xzgrep, xzless, 및 xzmore"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/xz.xml:101
