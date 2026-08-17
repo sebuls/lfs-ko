@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-17 17:47+0900\n"
-"PO-Revision-Date: 2026-08-17 17:47+0900\n"
+"POT-Creation-Date: 2026-08-18 03:59+0900\n"
+"PO-Revision-Date: 2026-08-18 03:59+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -42549,13 +42549,15 @@ msgid ""
 "During the boot process, the file <filename>/etc/hostname</filename> is used "
 "for establishing the system's hostname."
 msgstr ""
+"부팅 과정에서 <filename>/etc/hostname</filename> 파일은 시스템의 호스트 이름"
+"을 설정하는 데 쓰입니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/network.xml:152 en/chapter09/networkd.xml:289
 msgid ""
 "Create the <filename>/etc/hostname</filename> file and enter a hostname by "
 "running:"
-msgstr ""
+msgstr "<filename>/etc/hostname</filename> 파일을 생성하고 호스트 이름을 입력:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter09/network.xml:155 en/chapter09/networkd.xml:292
@@ -42570,6 +42572,10 @@ msgid ""
 "given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
 "here. That information goes in the <filename>/etc/hosts</filename> file."
 msgstr ""
+"<replaceable>&lt;lfs&gt;</replaceable> 는 컴퓨터에 지정한 이름으로 교체해야 "
+"합니다. 여기에 (Fully Qualified Domain Name (정규화된 도메인 이름)FQDN)을 입"
+"력하지 마십시오. 해당 정보는 <filename>/etc/hosts</filename> 파일에 들어갑니"
+"다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/network.xml:165 en/chapter09/networkd.xml:302
@@ -43137,11 +43143,14 @@ msgid ""
 "given to the computer. Do not enter the Fully Qualified Domain Name (FQDN) "
 "here. That information is put in the <filename>/etc/hosts</filename> file."
 msgstr ""
+"<replaceable>&lt;lfs&gt;</replaceable> 는 컴퓨터에 지정한 이름으로 교체해야 "
+"합니다. 여기에 Fully Qualified Domain Name (FQDN)을 입력하지 마십시오. 그 정"
+"보는 <filename>/etc/hosts</filename>파일에 입력됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:338
 msgid "A valid private IP address could be 192.168.1.1."
-msgstr ""
+msgstr "유효한 사설 IP 주소는 192.168.1.1 일 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/networkd.xml:351
