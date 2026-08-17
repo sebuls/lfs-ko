@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-17 03:31+0900\n"
-"PO-Revision-Date: 2026-08-17 03:31+0900\n"
+"POT-Creation-Date: 2026-08-17 17:47+0900\n"
+"PO-Revision-Date: 2026-08-17 17:47+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -27316,7 +27316,7 @@ msgstr "<command>lz4</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/lz4.xml:89
 msgid "Compresses or decompresses files using the LZ4 format"
-msgstr ""
+msgstr "LZ4 형식으로 파일을 압축하거나 압축 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/lz4.xml:91
@@ -27331,7 +27331,7 @@ msgstr "<command>lz4c</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/lz4.xml:99
 msgid "Compresses files using the LZ4 format"
-msgstr ""
+msgstr "LZ4 형식으로 파일을 압축"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/lz4.xml:101
@@ -27346,7 +27346,7 @@ msgstr "<command>lz4cat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/lz4.xml:109
 msgid "Lists the contents of a file compressed using the LZ4 format"
-msgstr ""
+msgstr "LZ4 형식으로 압축된 파일의 내용을 나열"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/lz4.xml:111
@@ -27361,7 +27361,7 @@ msgstr "<command>unlz4</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/lz4.xml:119
 msgid "Decompresses files using the LZ4 format"
-msgstr ""
+msgstr "LZ4 형식을 사용하여 파일의 압축을 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/lz4.xml:121
@@ -27590,6 +27590,9 @@ msgid ""
 "This disables making the <command>man</command> program setuid to user "
 "<systemitem class=\"username\">man</systemitem>."
 msgstr ""
+"이 설정은 <command>man</command> 프로그램이 <systemitem "
+"class=\"username\">man</systemitem> 사용자에 대해 setuid로 동작하는 것을 비활"
+"성화."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:78
@@ -27602,6 +27605,8 @@ msgid ""
 "This changes ownership of the system-wide cache files to user <systemitem "
 "class=\"username\">bin</systemitem>."
 msgstr ""
+"이 설정은 시스템 전체 캐시 파일의 소유권을 user <systemitem "
+"class=\"username\">bin</systemitem> 로 변경."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/man-db.xml:86
@@ -27638,6 +27643,7 @@ msgstr "<parameter>--with-systemd...</parameter>"
 msgid ""
 "These parameters prevent installing unneeded systemd directories and files."
 msgstr ""
+"이 파라미터들은 불필요한 systemd 디렉터리 및 파일이 설치되는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/man-db.xml:125
@@ -27984,6 +27990,8 @@ msgid ""
 "accessdb, apropos (link to whatis), catman, lexgrog, man, man-recode, mandb, "
 "manpath, and whatis"
 msgstr ""
+"accessdb, apropos (whatis 링크), catman, lexgrog, man, man-recode, mandb, "
+"manpath, 및 whatis"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/man-db.xml:313
@@ -28009,6 +28017,7 @@ msgstr "<command>accessdb</command>"
 msgid ""
 "Dumps the <command>whatis</command> database contents in human-readable form"
 msgstr ""
+"<command>whatis</command> 데이터베이스 내용을 사람이 읽기 쉬운 형태로 덤프"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/man-db.xml:330
@@ -28026,6 +28035,8 @@ msgid ""
 "Searches the <command>whatis</command> database and displays the short "
 "descriptions of system commands that contain a given string"
 msgstr ""
+"<command>whatis</command> 데이터베이스를 검색하여 주어진 문자열을 포함하는 시"
+"스템 명령어의 짧은 설명을 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/man-db.xml:342
@@ -28040,7 +28051,7 @@ msgstr "<command>catman</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/man-db.xml:350
 msgid "Creates or updates the pre-formatted manual pages"
-msgstr ""
+msgstr "사전 포맷된 매뉴얼 페이지를 생성하거나 업데이트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/man-db.xml:352
