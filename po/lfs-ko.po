@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-18 03:59+0900\n"
-"PO-Revision-Date: 2026-08-18 03:59+0900\n"
+"POT-Creation-Date: 2026-08-19 03:31+0900\n"
+"PO-Revision-Date: 2026-08-19 03:31+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -9139,6 +9139,8 @@ msgid ""
 "This prevents Ncurses from installing compressed manual pages, which may "
 "happen if the host distribution itself has compressed manual pages."
 msgstr ""
+"호스트 배포판 자체에 압축된 매뉴얼 페이지가 있는 경우 발생할 수 있는, Ncurses"
+"가 압축된 매뉴얼 페이지를 설치하는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:87 en/chapter08/ncurses.xml:60
@@ -9148,7 +9150,7 @@ msgstr "<parameter>--with-shared</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:89 en/chapter08/ncurses.xml:62
 msgid "This makes Ncurses build and install shared C libraries."
-msgstr ""
+msgstr "이 설정은 Ncurses가 공유 C 라이브러리를 빌드하고 설치하도록 만듭니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:94 en/chapter08/ncurses.xml:67
@@ -9158,7 +9160,7 @@ msgstr "<parameter>--without-normal</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter06/ncurses.xml:96
 msgid "This prevents Ncurses from building and installing static C libraries."
-msgstr ""
+msgstr "Ncurses가 정적 C 라이브러리를 빌드하고 설치하는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:102 en/chapter08/ncurses.xml:75
@@ -9169,6 +9171,7 @@ msgstr "<parameter>--without-debug</parameter>"
 #: en/chapter06/ncurses.xml:104
 msgid "This prevents Ncurses from building and installing debug libraries."
 msgstr ""
+"이 설정은 Ncurses가 디버그 라이브러리를 빌드하고 설치하는 것을 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:110 en/chapter08/ncurses.xml:83
@@ -9181,6 +9184,8 @@ msgid ""
 "This makes Ncurses build and install shared C++ bindings. It also prevents "
 "it building and installing static C++ bindings."
 msgstr ""
+"이 설정은 Ncurses가 공유 C++ 바인딩을 빌드하고 설치하도록 만듭니다. 또한 정"
+"적 C++ 바인딩을 빌드하고 설치하는 것도 막습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:118
@@ -9194,6 +9199,9 @@ msgid ""
 "may be present on the host but will not be available once we enter the "
 "<command>chroot</command> environment."
 msgstr ""
+"Ncurses가 Ada 컴파일러에 대한 지원을 빌드하지 않도록 보장. Ada 컴파일러는 호"
+"스트에 존재할 수 있지만 <command>chroot</command> 환경에 진입하면 사용할 수 "
+"없게 됩니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter06/ncurses.xml:127
