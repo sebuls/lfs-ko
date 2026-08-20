@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-20 20:25+0900\n"
-"PO-Revision-Date: 2026-08-20 20:25+0900\n"
+"POT-Creation-Date: 2026-08-21 05:08+0900\n"
+"PO-Revision-Date: 2026-08-21 05:07+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30268,6 +30268,7 @@ msgid ""
 "Builds a Perl extension for the Encode module from either Unicode Character "
 "Mappings or Tcl Encoding Files"
 msgstr ""
+"유니코드 문자 매핑 또는 Tcl 인코딩 파일에서 Encode 모듈용 Perl 확장을 빌드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:181
@@ -30432,7 +30433,7 @@ msgstr "<command>perldoc</command>"
 msgid ""
 "Displays a piece of documentation in pod format that is embedded in the Perl "
 "installation tree or in a Perl script"
-msgstr ""
+msgstr "Perl 설치 디렉터리나 Perl 스크립트에 내장된 pod 형식의 문서를 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:290
@@ -30450,6 +30451,8 @@ msgid ""
 "The Perl Installation Verification Procedure; it can be used to verify that "
 "Perl and its libraries have been installed correctly"
 msgstr ""
+"Perl 설치 검증 절차. Perl과 그 라이브러리가 올바르게 설치되었는지 확인하는 "
+"데 사용 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:302
@@ -30710,7 +30713,7 @@ msgstr "<command>zipdetails</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:488
 msgid "Displays details about the internal structure of a Zip file"
-msgstr ""
+msgstr "Zip 파일의 내부 구조에 대한 세부 정보를 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:490
