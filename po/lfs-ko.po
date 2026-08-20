@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-19 03:31+0900\n"
-"PO-Revision-Date: 2026-08-19 03:31+0900\n"
+"POT-Creation-Date: 2026-08-20 20:25+0900\n"
+"PO-Revision-Date: 2026-08-20 20:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -21658,6 +21658,10 @@ msgid ""
 "Motif applications) running. See comments in <filename>glibc-&glibc-version;/"
 "locale/broken_cur_max.c</filename> for more information"
 msgstr ""
+"일부 깨진 프로그램(예: 일부 Motif 애플리케이션)이 구동되도록 하기 위한 엉터"
+"리 꼼수(gross hack)로 Glibc 내부에서 사용됩니다. 자세한 내용은 "
+"<filename>glibc-&glibc-version;/locale/broken_cur_max.c</filename> 안의 주석 "
+"보기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:906
@@ -21676,6 +21680,9 @@ msgid ""
 "lookup library, whose functions are now in <filename "
 "class='libraryfile'>libc</filename>"
 msgstr ""
+"어떤 함수도 포함하지 않는 더미 라이브러리. 이전에는 비동기 이름 조회 라이브러"
+"리였으나, 현재 해당 함수들은 <filename class='libraryfile'>libc</filename> "
+"에 들어감"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:918
@@ -21874,6 +21881,10 @@ msgid ""
 "Extensions, now the functions are in <filename class=\"libraryfile\">libc</"
 "filename>"
 msgstr ""
+"어떠한 함수도 포함하지 않는 더미 라이브러리. 이전에는 POSIX.1c 스레드 확장에"
+"서 지정한 인터페이스의 대부분과 POSIX.1b 실시간 확장에서 지정한 세마포어 인터"
+"페이스를 제공하는 함수들을 포함하고 있었으나, 현재 해당 함수는 <filename "
+"class=\"libraryfile\">libc</filename> 안에"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1051
@@ -21890,7 +21901,7 @@ msgstr "<filename class=\"libraryfile\">libresolv</filename>"
 msgid ""
 "Contains functions for creating, sending, and interpreting packets to the "
 "Internet domain name servers"
-msgstr ""
+msgstr "인터넷 도메인 네임 서버로 패킷을 생성, 전송 및 해석하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1062
