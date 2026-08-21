@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-21 05:08+0900\n"
-"PO-Revision-Date: 2026-08-21 05:07+0900\n"
+"POT-Creation-Date: 2026-08-22 04:03+0900\n"
+"PO-Revision-Date: 2026-08-22 04:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -12542,6 +12542,12 @@ msgid ""
 "filename> file and generates the corresponding <filename>Makefile.in</"
 "filename> file.]"
 msgstr ""
+"<filename>Makefile.am</filename>파일로부터 <filename>Makefile.in</filename> "
+"파일을 자동으로 생성해 주는 도구입니다. (패키지의 모든 "
+"<filename>Makefile.in</filename> 파일을 생성하려면 최상위 디렉터리에서 이 프"
+"로그램을 실행하세요. <filename>configure.in</filename> 파일을 스캔하여 적절"
+"한 각 <filename>Makefile.am</filename> 파일을 자동으로 찾아 그에 상응하는 "
+"<filename>Makefile.in</filename> 파일을 생성.)"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/automake.xml:125
@@ -12556,7 +12562,7 @@ msgstr "<command>automake-&am-minor-version;</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/automake.xml:133
 msgid "A hard link to <command>automake</command>"
-msgstr ""
+msgstr "<command>automake</command> 가리키는 하드 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/automake.xml:135
@@ -24675,7 +24681,7 @@ msgstr "<command>intltool-merge</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:114
 msgid "Merges translated strings into various file types"
-msgstr ""
+msgstr "번역된 문자열을 다양한 파일 형식에 병합"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:116
@@ -24690,7 +24696,7 @@ msgstr "<command>intltool-prepare</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:124
 msgid "Updates pot files and merges them with translation files"
-msgstr ""
+msgstr "pot 파일을 업데이트하고 번역 파일과 병합"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:126
@@ -24705,7 +24711,7 @@ msgstr "<command>intltool-update</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/intltool.xml:134
 msgid "Updates the po template files and merges them with the translations"
-msgstr ""
+msgstr "po 템플릿 파일을 업데이트하고 번역과 병합"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/intltool.xml:136
@@ -39866,7 +39872,7 @@ msgstr "XML::Parser 설치"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xml-parser.xml:44
 msgid "Prepare XML::Parser for compilation:"
-msgstr "Prepare XML::Parser for compilation:"
+msgstr "컴파일용 XML::Parser 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/xml-parser.xml:46
@@ -39897,7 +39903,7 @@ msgstr "<filename class=\"libraryfile\">Expat</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xml-parser.xml:81
 msgid "provides the Perl Expat interface"
-msgstr "provides the Perl Expat interface"
+msgstr "Perl Expat 인터페이스 제공"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/xz.xml:26
