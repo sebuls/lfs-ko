@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-22 04:03+0900\n"
-"PO-Revision-Date: 2026-08-22 04:03+0900\n"
+"POT-Creation-Date: 2026-08-23 05:04+0900\n"
+"PO-Revision-Date: 2026-08-23 05:03+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -19204,6 +19204,8 @@ msgid ""
 "The C preprocessor; it is used by the compiler to expand the #include, "
 "#define, and similar directives in the source files"
 msgstr ""
+"C 전처리기. 컴파일러가 소스 파일의 #include, #define 및 유사한 지시문들을 확"
+"장(expand)하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:418
@@ -19606,7 +19608,7 @@ msgstr "<filename class=\"libraryfile\">libsupc++</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:682
 msgid "Provides supporting routines for the C++ programming language"
-msgstr "Provides supporting routines for the C++ programming language"
+msgstr "C++ 프로그래밍 언어를 위한 지원 루틴을 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:685
