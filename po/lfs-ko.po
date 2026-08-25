@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-25 21:13+0900\n"
-"PO-Revision-Date: 2026-08-25 21:13+0900\n"
+"POT-Creation-Date: 2026-08-26 03:53+0900\n"
+"PO-Revision-Date: 2026-08-26 03:53+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30362,6 +30362,8 @@ msgid ""
 "Shell script for examining installed Perl modules; it can create a tarball "
 "from an installed module"
 msgstr ""
+"설치된 Perl 모듈을 검사하기 위한 셸 스크립트. 설치된 모듈로부터 tarball을 생"
+"성할 수 있다"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:225
@@ -30412,6 +30414,8 @@ msgid ""
 "<command>awk</command> and <command>sh</command> into a single Swiss Army "
 "language"
 msgstr ""
+"C, <command>sed</command>, <command>awk</command> 및 <command>sh</command> 장"
+"점 중 일부를 결합하여 다목적 스위스 아미(Swiss Army) 언어로 만듦"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:258
@@ -30426,7 +30430,7 @@ msgstr "<command>perl&perl-version;</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:266
 msgid "A hard link to <command>perl</command>"
-msgstr ""
+msgstr "<command>perl</command> 가리키는 하드 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:268
@@ -30444,6 +30448,8 @@ msgid ""
 "Used to generate bug reports about Perl, or the modules that come with it, "
 "and mail them"
 msgstr ""
+"Perl 또는 그에 포함된 모듈에 대한 버그 보고서를 생성하고 메일로 보내는 데 사"
+"용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:279
@@ -30494,7 +30500,7 @@ msgstr "<command>perlthanks</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:310
 msgid "Used to generate thank you messages to mail to the Perl developers"
-msgstr ""
+msgstr "Perl 개발자들에게 보낼 감사 메시지를 생성하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:313
@@ -30632,7 +30638,7 @@ msgstr "<command>prove</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:404
 msgid "Command line tool for running tests against the Test::Harness module"
-msgstr ""
+msgstr "Test::Harness 모듈을 대상으로 테스트를 실행하기 위한 명령줄 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:407
@@ -30647,7 +30653,7 @@ msgstr "<command>ptar</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:426
 msgid "A <command>tar</command>-like program written in Perl"
-msgstr ""
+msgstr "Perl로 쓴 <command>tar</command> 비슷한 프로그램"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:428
@@ -30663,7 +30669,7 @@ msgstr "<command>ptardiff</command>"
 #: en/chapter08/perl.xml:436
 msgid ""
 "A Perl program that compares an extracted archive with an unextracted one"
-msgstr ""
+msgstr "추출된 아카이브와 추출되지 않은 아카이브를 비교하는 Perl 프로그램"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:439
@@ -30680,7 +30686,7 @@ msgstr "<command>ptargrep</command>"
 msgid ""
 "A Perl program that applies pattern matching to the contents of files in a "
 "tar archive"
-msgstr ""
+msgstr "tar 아카이브 내 파일들의 내용에 패턴 매칭을 적용하는 Perl 프로그램"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:450
@@ -30711,6 +30717,7 @@ msgstr "<command>splain</command>"
 #: en/chapter08/perl.xml:468
 msgid "Is used to force verbose warning diagnostics in Perl"
 msgstr ""
+"Perl에서 상세한 경고 진단(verbose warning diagnostics)을 강제하는 데 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:470
@@ -30725,7 +30732,7 @@ msgstr "<command>xsubpp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:478
 msgid "Converts Perl XS code into C code"
-msgstr ""
+msgstr "Perl XS code 를 C code로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:480
