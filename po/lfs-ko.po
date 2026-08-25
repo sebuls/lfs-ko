@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-23 05:04+0900\n"
-"PO-Revision-Date: 2026-08-23 05:03+0900\n"
+"POT-Creation-Date: 2026-08-25 21:13+0900\n"
+"PO-Revision-Date: 2026-08-25 21:13+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6706,7 +6706,7 @@ msgstr "<parameter>--disable-nscd</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter05/glibc.xml:129 en/chapter08/glibc.xml:122
 msgid "Do not build the name service cache daemon which is no longer used."
-msgstr ""
+msgstr "더이상 안 쓰이는 name service cache daemon 을 빌드하지 않습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:136
@@ -20430,6 +20430,8 @@ msgid ""
 "This option disables the -Werror option passed to GCC.  This is necessary "
 "for running the test suite."
 msgstr ""
+"이 옵션은 GCC에 전달된 -Werror 옵션을 비활성화합니다. 테스트 모음(test suite)"
+"을 실행하는 데 필요합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:100
@@ -20438,6 +20440,9 @@ msgid ""
 "as old as &min-kernel;. This means generating workarounds in case a system "
 "call introduced in a later version cannot be used."
 msgstr ""
+"이 옵션은 빌드 시스템에 이 Glibc가 &min-kernel; 처럼 오래된 커널과 함께 사용"
+"될 수 있음을 알립니다. 이는 이후 버전에 도입된 시스템 콜을 사용할 수 없는 경"
+"우에 대비해 임시 방편(workaround)을 생성함을 의미합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:108
@@ -20452,6 +20457,10 @@ msgid ""
 "explicitly overrides the default of GCC, so this option is still needed even "
 "though we've already specified <option>--enable-default-ssp</option> for GCC."
 msgstr ""
+"이 옵션은 스택 스매싱 공격 같은 버퍼 오버플로를 검사하는 추가 코드를 추가하"
+"여 시스템 보안을 강화합니다. Glibc는 항상 GCC의 기본값을 명시적으로 덮어쓰므"
+"로, GCC에 이미 <option>--enable-default-ssp</option>를 지정했더라도 이 옵션"
+"이 여전히 필요합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:130
@@ -20459,6 +20468,8 @@ msgid ""
 "This variable sets the correct library for all systems.  We do not want "
 "lib64 to be used."
 msgstr ""
+"이 변수는 모든 시스템에 올바른 라이브러리를 설정합니다. 우리는 lib64가 사용되"
+"는 것을 원치 않습니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/glibc.xml:142
@@ -21493,8 +21504,8 @@ msgid ""
 "Reads and interprets a memory trace file and displays a summary in human-"
 "readable format"
 msgstr ""
-"Reads and interprets a memory trace file and displays a summary in human-"
-"readable format"
+"메모리 추적(trace) 파일을 읽고 해석하여 사람이 읽기 쉬운 형식으로 요약 정보"
+"를 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:791
@@ -21587,6 +21598,7 @@ msgid ""
 "Asks the user about the location of the system and reports the corresponding "
 "time zone description"
 msgstr ""
+"사용자에게 시스템의 위치를 묻고 그에 해당하는 시간대(time zone) 설명을 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:852
@@ -21739,6 +21751,9 @@ msgid ""
 "interface library, whose functions are now in <filename "
 "class=\"libraryfile\">libc</filename>"
 msgstr ""
+"함수가 포함되어 있지 않은 더미 라이브러리. 이전에는 동적 링킹 인터페이스 라이"
+"브러리였으며, 해당 라이브러리의 함수들은 현재 <filename "
+"class=\"libraryfile\">libc</filename>에 있다"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:950
@@ -21854,6 +21869,10 @@ msgid ""
 "by <filename class='libraryfile'>libc</filename> according to the "
 "configuration in <filename>/etc/nsswitch.conf</filename>"
 msgstr ""
+"호스트 이름, 사용자 이름, 그룹 이름, 별칭(alias), 서비스, 프로토콜 등을 확인"
+"(resolving)하는 함수들을 포함하는 네임 서비스 스위치(Name Service Switch) 모"
+"듈들입니다. <filename>/etc/nsswitch.conf</filename> 설정에 따라 <filename "
+"class='libraryfile'>libc</filename> 가 로드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1027
