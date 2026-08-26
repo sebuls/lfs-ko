@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-26 03:53+0900\n"
-"PO-Revision-Date: 2026-08-26 03:53+0900\n"
+"POT-Creation-Date: 2026-08-27 04:01+0900\n"
+"PO-Revision-Date: 2026-08-27 04:01+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -54839,7 +54839,7 @@ msgstr "B"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:108
 msgid "Build cross-compiler cc1 using ccA on machine A."
-msgstr ""
+msgstr "머신 A에서 ccA를 사용하여 크로스 컴파일러 cc1을 빌드."
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:111
@@ -54857,7 +54857,7 @@ msgstr "C"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:112
 msgid "Build cross-compiler cc2 using cc1 on machine A."
-msgstr ""
+msgstr "머신 A에서 cc1 사용하여 크로스 컴파일러 cc2 빌드."
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:115
@@ -54868,7 +54868,7 @@ msgstr "3"
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:116
 msgid "Build compiler ccC using cc2 on machine B."
-msgstr ""
+msgstr "머신 B에서 cc2 사용하여 크로스 컴파일러 ccC 빌드."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:122
@@ -55298,7 +55298,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/part3intro/toolchaintechnotes.xml:386
 msgid "Other Procedural Details"
-msgstr ""
+msgstr "다른 절차 상세"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/part3intro/toolchaintechnotes.xml:388
