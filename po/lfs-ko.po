@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-27 04:01+0900\n"
-"PO-Revision-Date: 2026-08-27 04:01+0900\n"
+"POT-Creation-Date: 2026-08-28 06:59+0900\n"
+"PO-Revision-Date: 2026-08-28 06:59+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -20507,8 +20507,8 @@ msgid ""
 "<emphasis>io/tst-lchmod</emphasis> is known to fail in the LFS chroot "
 "environment."
 msgstr ""
-"<emphasis>io/tst-lchmod</emphasis> is known to fail in the LFS chroot "
-"environment."
+"<emphasis>io/tst-lchmod</emphasis> 는 LFS chroot 환경에서실패하는 것으로 알려"
+"졌습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:183
@@ -20519,6 +20519,11 @@ msgid ""
 "test suite with multiple parallel make jobs).  These tests can be identified "
 "with:"
 msgstr ""
+"<emphasis>nss/tst-nss-files-hosts-multi</emphasis> 및 <emphasis>nptl/tst-"
+"thread-affinity*</emphasis> 같은 일부 테스트는 (특히 시스템이 상대적으로 느리"
+"거나 여러 개의 병렬 make 작업으로 테스트 스위트를 실행할 때) 시간 초과"
+"(timeout)로 인해 실패하는 것으로 알려져 있습니다. 이러한 테스트는 다음으로 식"
+"별 가능:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><screen>
 #: en/chapter08/glibc.xml:190
@@ -20544,6 +20549,9 @@ msgid ""
 "example <emphasis>elf/tst-cpu-features-cpuinfo</emphasis>) or host kernel "
 "version (for example <emphasis>stdlib/tst-arc4random-thread</emphasis>)."
 msgstr ""
+"게다가, 일부 테스트는 비교적 오래된 CPU 모델(예: <emphasis>elf/tst-cpu-"
+"features-cpuinfo</emphasis>)이나 호스트 커널 버전(예: <emphasis>stdlib/tst-"
+"arc4random-thread</emphasis>)에서 실패할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/glibc.xml:211
@@ -21771,6 +21779,8 @@ msgid ""
 "Dummy library containing no functions. Previously was a runtime library for "
 "<command>g++</command>"
 msgstr ""
+"함수 없는 더미 라이브러리. 이전에는 <command>g++</command> 위한 런타임 라이브"
+"러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:961
@@ -21785,7 +21795,7 @@ msgstr "<filename class=\"libraryfile\">libm</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:969
 msgid "The mathematical library"
-msgstr ""
+msgstr "수학 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:971
