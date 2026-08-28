@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-28 06:59+0900\n"
-"PO-Revision-Date: 2026-08-28 06:59+0900\n"
+"POT-Creation-Date: 2026-08-29 02:51+0900\n"
+"PO-Revision-Date: 2026-08-29 02:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1442,8 +1442,8 @@ msgid ""
 "<emphasis role=\"strong\">Bash-3.2</emphasis> (/bin/sh should be a symbolic "
 "or hard link to bash)"
 msgstr ""
-"<emphasis role=\"strong\">Bash-3.2</emphasis> (/bin/sh should be a symbolic "
-"or hard link to bash)"
+"<emphasis role=\"strong\">Bash-3.2</emphasis> (/bin/sh 는 bash 가리키는 "
+"symbolic 또는 하드 링크)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:48
@@ -1451,8 +1451,8 @@ msgid ""
 "<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (Versions greater than "
 "&binutils-version; are not recommended as they have not been tested)"
 msgstr ""
-"<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (Versions greater than "
-"&binutils-version; are not recommended as they have not been tested)"
+"<emphasis role=\"strong\">Binutils-2.13.1</emphasis> (&binutils-version; 보"
+"다 큰 버전 권장. 왜냐면 테스트 안 되었으므로)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:54
@@ -1461,7 +1461,7 @@ msgid ""
 "link to bison or a small script that executes bison)"
 msgstr ""
 "<emphasis role=\"strong\">Bison-2.7</emphasis> (/usr/bin/yacc는 bison 링크 또"
-"는 bison을 실행하는 작은 스크립트여야 합니다)"
+"는 bison을 실행하는 작은 스크립트일 겁니다)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:60
@@ -1484,8 +1484,8 @@ msgid ""
 "<emphasis role=\"strong\">Gawk-4.0.1</emphasis> (/usr/bin/awk should be a "
 "link to gawk)"
 msgstr ""
-"<emphasis role=\"strong\">Gawk-4.0.1</emphasis> (/usr/bin/awk should be a "
-"link to gawk)"
+"<emphasis role=\"strong\">Gawk-4.0.1</emphasis> (/usr/bin/awk는 gawk 가리키"
+"는 링크)"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:78
@@ -1496,11 +1496,10 @@ msgid ""
 "(with headers) must also be present so the C++ compiler can build hosted "
 "programs"
 msgstr ""
-"<emphasis role=\"strong\">GCC-5.4</emphasis> including the C++ compiler, "
-"<command>g++</command> (Versions greater than &gcc-version; are not "
-"recommended as they have not been tested). C and C++ standard libraries "
-"(with headers) must also be present so the C++ compiler can build hosted "
-"programs"
+"<emphasis role=\"strong\">GCC-5.4</emphasis> (C++ 컴파일러인 <command>g++</"
+"command> 포함; &gcc-version; 보다 높은 버전은 테스트되지 않았으므로 권장 안 "
+"함). C++ 컴파일러가 호스티드(hosted) 프로그램을 빌드할 수 있도록 헤더가 포함"
+"된 C 및 C++ 표준 라이브러리도 반드시 있어야 함"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:86
@@ -1531,16 +1530,15 @@ msgid ""
 "upstream kernel releases; read <ulink url='https://kernel.org/category/"
 "releases.html'/> for the details."
 msgstr ""
-"커널 버전 요구 사항이 있는 이유는 우리가 <xref linkend=\"chapter-cross-"
-"tools\"/>와 <xref linkend=\"chapter-building-system\"/>에서 "
-"<application>glibc</application>를 빌드할 때 해당 버전을 지정하기 때문입니"
-"다. 이렇게 하면 이전 버전 커널을 위한 임시방편(workarounds) 기능들이 활성화되"
-"지 않아, 컴파일된 <application>glibc</application>가 약간 더 빠르고 크기도 작"
-"아집니다. 2024년 12월 기준 &min-kernel;은 커널 개발자들이 여전히 지원하는 가"
-"장 오래된 커널 릴리스입니다. &min-kernel;보다 오래된 일부 커널 릴리스가 제3"
-"자 팀에 의해 여전히 지원될 수도 있지만, 공식 업스트림 커널 릴리스로 간주되지"
-"는 않습니다. 자세한 내용은 <ulink url='https://kernel.org/category/"
-"releases.html'/>를 참조."
+"커널 버전 요구 사항이 있는 까닭은 <xref linkend=\"chapter-cross-tools\"/>와 "
+"<xref linkend=\"chapter-building-system\"/> 에서 <application>glibc</"
+"application> 를 빌드할 때 해당 버전을 지정하기 때문입니다. 이렇게 하면 이전 "
+"버전 커널을 위한 임시방편(workarounds) 기능들이 활성화되지 않아, 컴파일된 "
+"<application>glibc</application>가 약간 더 빠르고 크기도 작아집니다. 2024년 "
+"12월 기준 &min-kernel;은 커널 개발자들이 여전히 지원하는 가장 오래된 커널 릴"
+"리스입니다. &min-kernel;보다 오래된 일부 커널 릴리스가 제3자 팀에 의해 여전"
+"히 지원될 수도 있지만, 공식 업스트림 커널 릴리스로 간주되지는 않습니다. 자세"
+"한 내용은 <ulink url='https://kernel.org/category/releases.html'/> 참조."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter02/hostreqs.xml:109
