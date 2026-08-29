@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-29 20:51+0900\n"
-"PO-Revision-Date: 2026-08-29 20:51+0900\n"
+"POT-Creation-Date: 2026-08-30 04:03+0900\n"
+"PO-Revision-Date: 2026-08-30 04:02+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -44293,14 +44293,12 @@ msgid ""
 "with the relevant major and minor device numbers for every possible device "
 "that might exist in the world."
 msgstr ""
-"Linux systems in general traditionally used a static device creation method, "
-"whereby a great many device nodes were created under <filename "
-"class=\"directory\">/dev</filename> (sometimes literally thousands of "
-"nodes), regardless of whether the corresponding hardware devices actually "
-"existed. This was typically done via a <command>MAKEDEV</command> script, "
-"which contained a number of calls to the <command>mknod</command> program "
-"with the relevant major and minor device numbers for every possible device "
-"that might exist in the world."
+"전통적으로 리눅스 시스템은 정적 장치 생성 방식을 사용하여, 실제 해당 하드웨"
+"어 장치의 존재 여부와 상관없이 <filename class=\"directory\">/dev</filename> "
+"디렉터리 아래에 수많은 장치 노드(말 그대로 수천 개의 노드인 경우도 있음)를 생"
+"성했습니다. 이는 일반적으로 세상에 존재할 수 있는 모든 장치에 대해 관련 주"
+"(major) 및 부(minor) 장치 번호로 <command>mknod</command> 프로그램을 호출하"
+"는 명령이 들어간 <command>MAKEDEV</command> 스크립트를 통해 수행되었습니다."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/udev.xml:33
@@ -44733,7 +44731,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/udev.xml:318
 msgid "Additional helpful documentation is available at the following sites:"
-msgstr ""
+msgstr "추가 도움 문서는 아래 사이트:"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/udev.xml:324
@@ -44742,6 +44740,9 @@ msgid ""
 "systemitem> <ulink url=\"http://www.kroah.com/linux/talks/"
 "ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf\"/>"
 msgstr ""
+"<systemitem class=\"filesystem\">devfs</systemitem> <ulink url=\"http://"
+"www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-"
+"OLS2003.pdf\"/> 의 Userspace 구현"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/udev.xml:329
@@ -44754,7 +44755,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter09/usage.xml:12
 msgid "System V Bootscript Usage and Configuration"
-msgstr "System V Bootscript Usage and Configuration"
+msgstr "System V Bootscript Usage 및 Configuration"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/usage.xml:20
