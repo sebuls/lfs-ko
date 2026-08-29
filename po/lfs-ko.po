@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-29 02:51+0900\n"
-"PO-Revision-Date: 2026-08-29 02:51+0900\n"
+"POT-Creation-Date: 2026-08-29 20:51+0900\n"
+"PO-Revision-Date: 2026-08-29 20:51+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -11528,7 +11528,7 @@ msgid ""
 "filename> directory as the location for the <filename>adjtime</filename> "
 "file. Create this directory with:"
 msgstr ""
-"FHS는  <filename class=\"directory\">/var/lib/hwclock</filename>디렉터리를 "
+"FHS는  <filename class=\"directory\">/var/lib/hwclock</filename> 디렉터리를 "
 "<filename class=\"directory\">/etc</filename> 디렉터리 대신 "
 "<filename>adjtime</filename> 파일의 위치로 사용할 것을 권장합니다. 이 디렉터"
 "리를 생성:"
@@ -21118,6 +21118,10 @@ msgid ""
 "zones, or care about the correct time, you could save 1.9MB by omitting the "
 "<filename class=\"directory\">right</filename> directory."
 msgstr ""
+"이는 올바른 시간대를 생성합니다. 윤초 포함. 공간이 부족하고 시간대를 업데이트"
+"할 계획이 없거나 정확한 시간을 신경 쓰지 않는 임베디드 시스템에서는 "
+"<filename class=\"directory\">right</filename> 디렉터리를 생략하여 1.9MB를 절"
+"약 가능."
 
 #. type: Content of: <sect1><sect2><sect3><variablelist><varlistentry><term>
 #: en/chapter08/glibc.xml:552
@@ -21131,6 +21135,8 @@ msgid ""
 "because POSIX requires the daylight saving time rules to be in accordance "
 "with US rules."
 msgstr ""
+"이는 <filename>posixrules</filename> 파일을 생성합니다. POSIX에서는 일광 절"
+"약 시간 규칙이 US 규칙을 따르도록 요구하기 때문에 뉴욕(New York)을 사용."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter08/glibc.xml:562
@@ -21335,7 +21341,7 @@ msgstr "<command>gencat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:674
 msgid "Generates message catalogues"
-msgstr ""
+msgstr "메시지 카타로그 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:676
@@ -21351,7 +21357,7 @@ msgstr "<command>getconf</command>"
 #: en/chapter08/glibc.xml:684
 msgid ""
 "Displays the system configuration values for file system specific variables"
-msgstr ""
+msgstr "파일 시스템 관련 변수에 대한 시스템 설정 값을 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:687
@@ -21988,6 +21994,9 @@ msgid ""
 "<quote>standard</quote> functions used in many different Unix utilities. "
 "These functions are now in <filename class=\"libraryfile\">libc</filename>"
 msgstr ""
+"함수가 안 들어간 더미 라이브러리. 이전에는 많은 서로 다른 유닉스 유틸리티에"
+"서 사용되는 <quote>standard</quote> 함수들의 코드가 들어 있었습니다. 이 함수"
+"들은 이제 <filename class=\"libraryfile\">libc</filename> 안에 있음"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1097
@@ -30981,7 +30990,7 @@ msgid ""
 "fits your needs."
 msgstr ""
 "패키지 관리에 관해 작성된 몇 가지 힌트가 있습니다. <ulink url=\"&hints-root;"
-"\">Hints Project</ulink> 방문하고 본인의 필요에 맞는 것이 있는지 보십쇼."
+"\">Hints Project</ulink> 방문하고 본인의 필요에 맞는 것이 있는지 보시오."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/pkgmgt.xml:46
@@ -31113,7 +31122,7 @@ msgstr ""
 "는 정의를 제공하기 때문에 해당 패키지가 오작동할 수 있습니다. 이는 공유 라이"
 "브러리를 제공하는 패키지가 업그레이드된 후, 이전 공유 라이브러리에 링크된 패"
 "키지들 중 일부만 재컴파일하고 전부는 하지 않았을 때 발생할 수 있습니다. 이러"
-"한 문제를 방지하려면, 세벌 님은 개정판이 업데이트된(예: libfoo.so.2에서 "
+"한 문제를 방지하려면, 사용자는 개정판이 업데이트된(예: libfoo.so.2에서 "
 "libfoo.so.3으로) 공유 라이브러리에 링크된 모든 패키지를 가능한 한 빨리 다시 "
 "빌드해야 합니다."
 
@@ -49294,9 +49303,8 @@ msgid ""
 "whitespace characters like spaces or tab characters will create incorrect "
 "results."
 msgstr ""
-"세벌 님, 백슬래시 바로 뒤에는 반드시 줄 바꿈이 와야 한다는 점을 유의해 주세"
-"요. 공백이나 탭 문자와 같은 다른 공백 문자가 포함되면 올바르지 않은 결과가 생"
-"깁니다."
+"백슬래시 바로 뒤에는 반드시 줄 바꿈이 와야 한다는 점을 유의해 주세요. 공백이"
+"나 탭 문자와 같은 다른 공백 문자가 포함되면 올바르지 않은 결과가 생깁니다."
 
 #. type: Content of: <sect1><screen>
 #: en/prologue/typography.xml:34
