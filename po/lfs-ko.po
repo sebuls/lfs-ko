@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-30 04:03+0900\n"
-"PO-Revision-Date: 2026-08-30 04:02+0900\n"
+"POT-Creation-Date: 2026-08-31 03:30+0900\n"
+"PO-Revision-Date: 2026-08-31 03:30+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -28831,12 +28831,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:69
 msgid "This prevents Ncurses building and installing static C libraries."
-msgstr ""
+msgstr "이는 Ncurses가 정적 C 라이브러리를 빌드하고 설치하는 것을 막는다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:77
 msgid "This prevents Ncurses building and installing debug libraries."
-msgstr ""
+msgstr "이는 Ncurses가 디버그 라이브러리를 빌드하고 설치하는 것을 막는다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ncurses.xml:91
@@ -28846,7 +28846,7 @@ msgstr "<parameter>--enable-pc-files</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:93
 msgid "This switch generates and installs .pc files for pkg-config."
-msgstr ""
+msgstr "이 스위치는 pkg-config 위한 .pc 파일을 생성하고 설치한다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/ncurses.xml:118
@@ -29034,7 +29034,7 @@ msgstr "<command>captoinfo</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:240
 msgid "Converts a termcap description into a terminfo description"
-msgstr ""
+msgstr "termcap 설명을 terminfo 설명으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:242
@@ -29049,7 +29049,7 @@ msgstr "<command>clear</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:250
 msgid "Clears the screen, if possible"
-msgstr ""
+msgstr "스크린 지우기, 가능하면"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:252
@@ -29064,7 +29064,7 @@ msgstr "<command>infocmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:260
 msgid "Compares or prints out terminfo descriptions"
-msgstr ""
+msgstr "terminfo 설명 비교 또는 출력"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:262
@@ -29079,7 +29079,7 @@ msgstr "<command>infotocap</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:270
 msgid "Converts a terminfo description into a termcap description"
-msgstr ""
+msgstr "terminfo 설명을 termcap 설명으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:272
@@ -29124,12 +29124,12 @@ msgstr "<command>tabs</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:300
 msgid "Clears and sets tab stops on a terminal"
-msgstr ""
+msgstr "터미널에서 탭 정지(tab stop)를 지우기 및 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:302
 msgid "tabs"
-msgstr ""
+msgstr "tabs"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/ncurses.xml:308
@@ -29164,6 +29164,7 @@ msgid ""
 "Lists all available terminal types, giving the primary name and description "
 "for each"
 msgstr ""
+"사용 가능한 모든 터미널 유형을 나열하며, 각각의 기본 이름과 설명을 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:326
@@ -29214,6 +29215,8 @@ msgid ""
 "screen; a good example of the use of these functions is the menu displayed "
 "during the kernel's <command>make menuconfig</command>"
 msgstr ""
+"터미널 화면에 다양한 복잡한 방식으로 텍스트를 표시하는 함수를 포함. 이러한 함"
+"수의 좋은 예로는 커널의 <command>make menuconfig</command> 중에 표시되는 메뉴"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:361
@@ -29228,7 +29231,7 @@ msgstr "<filename class=\"libraryfile\">libncurses++w</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:369
 msgid "Contains C++ binding for other libraries in this package"
-msgstr ""
+msgstr "이 패키지의 다른 라이브러리를 위한 C++ 바인딩을 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:371
@@ -29243,7 +29246,7 @@ msgstr "<filename class=\"libraryfile\">libformw</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:379
 msgid "Contains functions to implement forms"
-msgstr ""
+msgstr "폼을 구현하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:381
@@ -29258,7 +29261,7 @@ msgstr "<filename class=\"libraryfile\">libmenuw</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:389
 msgid "Contains functions to implement menus"
-msgstr ""
+msgstr "메뉴 구현하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:391
@@ -29273,7 +29276,7 @@ msgstr "<filename class=\"libraryfile\">libpanelw</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/ncurses.xml:399
 msgid "Contains functions to implement panels"
-msgstr ""
+msgstr "패널 구현하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/ncurses.xml:401
