@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-08-31 03:30+0900\n"
-"PO-Revision-Date: 2026-08-31 03:30+0900\n"
+"POT-Creation-Date: 2026-09-01 00:34+0900\n"
+"PO-Revision-Date: 2026-09-01 00:33+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -21901,7 +21901,7 @@ msgstr "<filename class=\"libraryfile\">libpcprofile</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:1035
 msgid "Can be preloaded to PC profile an executable"
-msgstr ""
+msgstr "실행 파일의 프로파일링을 위해 PC(Program Counter)에 미리 로드 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1037
@@ -21960,6 +21960,8 @@ msgid ""
 "Contains functions providing most of the interfaces specified by the "
 "POSIX.1b Real-time Extensions"
 msgstr ""
+"POSIX.1b 실시간 확장(Real-time Extensions)에서 지정한 대부분의 인터페이스를 "
+"제공하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1073
@@ -21975,7 +21977,7 @@ msgstr "<filename class=\"libraryfile\">libthread_db</filename>"
 #: en/chapter08/glibc.xml:1081
 msgid ""
 "Contains functions useful for building debuggers for multi-threaded programs"
-msgstr ""
+msgstr "다중 스레드 프로그램용 디버거를 빌드하는 데 유용한 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1084
