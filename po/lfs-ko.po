@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-01 00:34+0900\n"
-"PO-Revision-Date: 2026-09-01 00:33+0900\n"
+"POT-Creation-Date: 2026-09-01 21:59+0900\n"
+"PO-Revision-Date: 2026-09-01 21:58+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -3481,6 +3481,9 @@ msgid ""
 "both full minor version and any desired patch will both need to be "
 "downloaded."
 msgstr ""
+"이 시점에서 커널의 더 새로운 포인트 버전이 필요하면 더 새로운 패치만 필요합니"
+"다. 그러나, 새로운 마이너 버전이 필요하면 전체 마이너 버전과 원하는 패치를 모"
+"두 다운로드해야 합니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:513
@@ -4023,6 +4026,8 @@ msgid ""
 "pages using the sqlite documentation zip file. This is done in order to "
 "avoid unnecessary dependencies."
 msgstr ""
+"Linux From Scratch 팀은 sqlite 문서 zip 파일을 사용하여 문서 페이지의 자체 타"
+"르볼을 생성합니다. 이는 불필요한 의존성을 피하기 위함입니다."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter03/packages.xml:761
