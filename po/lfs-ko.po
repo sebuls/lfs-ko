@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-01 21:59+0900\n"
-"PO-Revision-Date: 2026-09-01 21:58+0900\n"
+"POT-Creation-Date: 2026-09-02 21:38+0900\n"
+"PO-Revision-Date: 2026-09-02 21:38+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -4850,7 +4850,7 @@ msgstr "<parameter>lfs</parameter>"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter04/addinguser.xml:65
 msgid "This is the name of the new user."
-msgstr "이것은새 사용자 이름."
+msgstr "이것은 새 사용자 이름."
 
 #. type: Content of: <sect1><para>
 #: en/chapter04/addinguser.xml:71
@@ -9753,8 +9753,8 @@ msgid ""
 msgstr ""
 "사용 가능한 모든 논리 코어를 사용하고 싶지 않다면, 이번 장과 다음 장에서 패키"
 "지를 빌드할 때 사용하려는 논리 코어 수로 <replaceable>$(nproc)</replaceable>"
-"를 대체하세요. &ch-final;에 있는 일부 패키지(특히 Autoconf, Libtool, Tar)의 "
-"테스트 제품군은 <envar>MAKEFLAGS</envar> 영향을 받지 않고, 대신 "
+"를 대체하세요. &ch-final; 에 있는 일부 패키지(특히 Autoconf, Libtool, Tar)의 "
+"테스트 스위트는 <envar>MAKEFLAGS</envar> 영향을 받지 않고, 대신 "
 "<envar>TESTSUITEFLAGS</envar> 환경 변수를 사용합니다. 우리는 이러한 테스트 제"
 "품군을 여러 코어로 실행하기 위해 여기에서 해당 변수도 함께 설정합니다."
 
@@ -21377,7 +21377,7 @@ msgstr "<command>getent</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:695
 msgid "Gets entries from an administrative database"
-msgstr ""
+msgstr "관리 데이터베이스에서 항목을 가져오기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:697
@@ -21392,7 +21392,7 @@ msgstr "<command>iconv</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:705
 msgid "Performs character set conversion"
-msgstr ""
+msgstr "문자 세트 변환 수행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:707
@@ -21407,7 +21407,7 @@ msgstr "<command>iconvconfig</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:715
 msgid "Creates fastloading <command>iconv</command> module configuration files"
-msgstr ""
+msgstr "빠르게 로드되는 <command>iconv</command> 모듈 설정 파일을 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:718
@@ -21422,7 +21422,7 @@ msgstr "<command>ldconfig</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:726
 msgid "Configures the dynamic linker runtime bindings"
-msgstr ""
+msgstr "동적 링커 런타임 바인딩을 설정"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:728
@@ -21459,6 +21459,8 @@ msgid ""
 "Assists <command>ldd</command> with object files.  It does not exist on "
 "newer architectures like x86_64"
 msgstr ""
+"객체 파일과 관련된 <command>ldd</command>를 지원. x86_64와 같은 최신 아키텍처"
+"에는 없음"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:750
@@ -21488,7 +21490,7 @@ msgstr "<command>localedef</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:768
 msgid "Compiles locale specifications"
-msgstr ""
+msgstr "locale specification 컴파일"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:770
