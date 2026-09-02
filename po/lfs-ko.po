@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-02 21:38+0900\n"
-"PO-Revision-Date: 2026-09-02 21:38+0900\n"
+"POT-Creation-Date: 2026-09-03 02:50+0900\n"
+"PO-Revision-Date: 2026-09-03 02:50+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -43809,6 +43809,9 @@ msgid ""
 "-b</userinput> command as the <systemitem class=\"username\">root</"
 "systemitem> user."
 msgstr ""
+"부트 메시지는 <userinput>journalctl -b</userinput> 명령어를 <systemitem "
+"class=\"username\">root</systemitem> 사용자로 사용하여 언제든지 검토할 수 있"
+"습니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:51
@@ -43862,22 +43865,22 @@ msgstr "자동 파일 생성 및 삭제 구성"
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:77
 msgid "There are several services that create or delete files or directories:"
-msgstr ""
+msgstr "파일이나 디렉터리를 생성하거나 지우는 여러 서비스가 있습니다."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:81
 msgid "systemd-tmpfiles-clean.service"
-msgstr ""
+msgstr "systemd-tmpfiles-clean.service"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:82
 msgid "systemd-tmpfiles-setup-dev.service"
-msgstr ""
+msgstr "systemd-tmpfiles-setup-dev.service"
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:83
 msgid "systemd-tmpfiles-setup.service"
-msgstr ""
+msgstr "systemd-tmpfiles-setup.service"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:86
@@ -43890,6 +43893,13 @@ msgid ""
 "<ulink role='man' url='&man;tmpfiles.d.5'>tmpfiles.d(5)</ulink> manual page "
 "for file format details."
 msgstr ""
+"설정 파일의 시스템 위치는 <filename>/usr/lib/tmpfiles.d/*.conf</filename>입니"
+"다. 로컬 설정 파일은 <filename class=\"directory\">/etc/tmpfiles.d</"
+"filename> 에 있습니다. <filename class=\"directory\">/etc/tmpfiles.d</"
+"filename>의 파일들은 <filename class=\"directory\">/usr/lib/tmpfiles.d</"
+"filename>에 있는 똑같은 이름의 파일들을 재정의(override)합니다. 파일 형식에 "
+"대한 자세한 내용은 <ulink role='man' url='&man;tmpfiles.d.5'>tmpfiles.d(5)</"
+"ulink> 매뉴얼 페이지를 참조하세요."
 
 #. type: Content of: <sect1><sect2><para><screen>
 #: en/chapter09/systemd-custom.xml:103
@@ -43911,6 +43921,14 @@ msgid ""
 "Contents of the directory will be subject to time based cleanup if the age "
 "argument is specified."
 msgstr ""
+"<filename>/usr/lib/tmpfiles.d/*.conf</filename> 파일 구문은 혼동스러울 수 있"
+"으므로 주의해야 합니다. 예를 들어, /tmp 디렉터리의 기본 파일 삭제 설정은 "
+"<filename>/usr/lib/tmpfiles.d/tmp.conf</filename>에 다음과 같은 줄에 위치: "
+"<placeholder type=\"screen\" id=\"0\"/> 형식 필드인 q는 btrfs 파일 시스템에"
+"만 실제로 적용되는 쿼터가 있는 서브볼륨의 생성을 나타냅니다. 이는 다시 d(디렉"
+"터리)를 참조하는 v 형식을 참조합니다. 이 경우 지정된 디렉터리가 존재하지 않으"
+"면 생성하고 지정된 대로 권한과 소유권을 조정합니다. 디렉터리의 내용은 age 인"
+"수가 지정된 경우 시간 기반 정리의 대상이 됩니다."
 
 #. type: Content of: <sect1><sect2><para><screen>
 #: en/chapter09/systemd-custom.xml:118
@@ -43929,6 +43947,9 @@ msgid ""
 "<filename class=\"directory\">/etc/tmpfiles.d</filename> and edited as "
 "desired.  For example: <placeholder type=\"screen\" id=\"0\"/>"
 msgstr ""
+"기본 매개변수를 원하지 않는다면, 파일을 <filename class=\"directory\">/etc/"
+"tmpfiles.d</filename>로 복사한 후 원하는 대로 편집해야 합니다. 예를 들면: "
+"<placeholder type=\"screen\" id=\"0\"/>"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/systemd-custom.xml:125
