@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-03 02:50+0900\n"
-"PO-Revision-Date: 2026-09-03 02:50+0900\n"
+"POT-Creation-Date: 2026-09-04 03:57+0900\n"
+"PO-Revision-Date: 2026-09-04 03:57+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -20544,6 +20544,12 @@ msgid ""
 "command> will re-run <emphasis>nss/tst-nss-files-hosts-multi</emphasis> with "
 "ten times the original timeout."
 msgstr ""
+"<command>TIMEOUTFACTOR=<replaceable>&lt;factor&gt;</replaceable> make test "
+"t=<replaceable>&lt;test name&gt;</replaceable></command> 쓰면 타임아웃을 늘려"
+"서 단일 테스트를 다시 실행할 수 있습니다. 예를 들어, "
+"<command>TIMEOUTFACTOR=10 make test t=nss/tst-nss-files-hosts-multi</"
+"command> will re-run <emphasis>nss/tst-nss-files-hosts-multi</emphasis>  다"
+"시 실행."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter08/glibc.xml:203
@@ -21439,9 +21445,7 @@ msgstr "<command>ldd</command>"
 msgid ""
 "Reports which shared libraries are required by each given program or shared "
 "library"
-msgstr ""
-"Reports which shared libraries are required by each given program or shared "
-"library"
+msgstr "주어진 각 프로그램이나 공유 라이브러리에 필요한 공유 라이브러리를 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:739
@@ -21475,7 +21479,7 @@ msgstr "<command>locale</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:758
 msgid "Prints various information about the current locale"
-msgstr "Prints various information about the current locale"
+msgstr "현재 로케일에 대한 다양한 정보를 출력"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:760
@@ -21505,7 +21509,7 @@ msgstr "<command>makedb</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:778
 msgid "Creates a simple database from textual input"
-msgstr ""
+msgstr "텍스트 입력으로부터 간단한 데이터베이스를 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:780
@@ -21584,7 +21588,7 @@ msgstr "<command>sotruss</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:829
 msgid "Traces shared library procedure calls of a specified command"
-msgstr ""
+msgstr "지정된 명령어의 공유 라이브러리 프로시저 호출을 추적"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:831
@@ -21633,7 +21637,7 @@ msgstr "<command>xtrace</command>"
 #: en/chapter08/glibc.xml:860
 msgid ""
 "Traces the execution of a program by printing the currently executed function"
-msgstr ""
+msgstr "현재 실행 중인 함수를 출력하여 프로그램의 실행을 추적"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:863
@@ -21736,7 +21740,7 @@ msgstr "<filename class=\"libraryfile\">libc</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:926
 msgid "The main C library"
-msgstr ""
+msgstr "주 C 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:928
@@ -21751,7 +21755,7 @@ msgstr "<filename class=\"libraryfile\">libc_malloc_debug</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:936
 msgid "Turns on memory allocation checking when preloaded"
-msgstr ""
+msgstr "미리 로드(preload)될 때 메모리 할당 검사를 활성화"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:938
@@ -21824,6 +21828,8 @@ msgid ""
 "The vector math library, linked in as needed when <filename "
 "class='libraryfile'>libm</filename> is used"
 msgstr ""
+"벡터 수학 라이브러리. <filename class='libraryfile'>libm</filename>이 사용될 "
+"때 필요에 따라 링크됨"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:982
@@ -21838,7 +21844,7 @@ msgstr "<filename class=\"libraryfile\">libmcheck</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:990
 msgid "Turns on memory allocation checking when linked to"
-msgstr ""
+msgstr "링크될 때 메모리 할당 검사를 활성화"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:992
@@ -21856,6 +21862,8 @@ msgid ""
 "Used by <command>memusage</command> to help collect information about the "
 "memory usage of a program"
 msgstr ""
+"<command>memusage</command>에서 쓰입니다. 프로그램의 메모리 사용량에 대한 정"
+"보를 수집하는 데 도움"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1003
@@ -21870,7 +21878,7 @@ msgstr "<filename class=\"libraryfile\">libnsl</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:1011
 msgid "The network services library, now deprecated"
-msgstr ""
+msgstr "네트워크 서비스 라이브러리. 현재는 사용이 중단됨"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:1013
