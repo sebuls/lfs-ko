@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-07 03:31+0900\n"
-"PO-Revision-Date: 2026-09-07 03:30+0900\n"
+"POT-Creation-Date: 2026-09-08 04:00+0900\n"
+"PO-Revision-Date: 2026-09-08 04:00+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -13769,7 +13769,7 @@ msgstr "<userinput remap=\"pre\">sed -i \"s@(PREFIX)/man@(PREFIX)/share/man@g\" 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bzip2.xml:58
 msgid "Prepare Bzip2 for compilation with:"
-msgstr "Prepare Bzip2 for compilation with:"
+msgstr "다음 명령어로 컴파일을 위해 Bzip2를 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/bzip2.xml:60
@@ -40246,7 +40246,7 @@ msgstr "<command>xz</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:248
 msgid "Compresses or decompresses files using the XZ format"
-msgstr ""
+msgstr "XZ 형식을 사용하여 파일을 압축하거나 압축 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:250
@@ -40271,7 +40271,7 @@ msgstr "<command>xzcmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:268
 msgid "Runs <command>cmp</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축 파일에 <command>cmp</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:270
@@ -40286,7 +40286,7 @@ msgstr "<command>xzdec</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:278
 msgid "A small and fast decoder for XZ compressed files"
-msgstr ""
+msgstr "XZ 압축 파일을 위한 작고 빠른 디코더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:280
@@ -40301,7 +40301,7 @@ msgstr "<command>xzdiff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:288
 msgid "Runs <command>diff</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축파일에 <command>diff</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:290
@@ -40331,7 +40331,7 @@ msgstr "<command>xzfgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:308
 msgid "Runs <command>fgrep</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축파일에 <command>fgrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:310
@@ -40346,7 +40346,7 @@ msgstr "<command>xzgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:318
 msgid "Runs <command>grep</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축파일에 <command>grep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:320
@@ -40361,7 +40361,7 @@ msgstr "<command>xzless</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:328
 msgid "Runs <command>less</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축파일에 <command>less</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:330
@@ -40376,7 +40376,7 @@ msgstr "<command>xzmore</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:338
 msgid "Runs <command>more</command> on XZ compressed files"
-msgstr ""
+msgstr "XZ 압축파일에 <command>more</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:340
@@ -40600,7 +40600,7 @@ msgstr "<command>zstd</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/zstd.xml:96
 msgid "Compresses or decompresses files using the ZSTD format"
-msgstr ""
+msgstr "ZSTD 형식 사용하여 파일 압촉 또는 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/zstd.xml:104
@@ -40610,7 +40610,7 @@ msgstr "<command>zstdgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/zstd.xml:106
 msgid "Runs <command>grep</command> on ZSTD compressed files"
-msgstr ""
+msgstr "ZSTD 압축 파일에 <command>grep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/zstd.xml:108
@@ -40625,7 +40625,7 @@ msgstr "<command>zstdless</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/zstd.xml:116
 msgid "Runs <command>less</command> on ZSTD compressed files"
-msgstr ""
+msgstr "ZSTD 압축 파일에 <command>less</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/zstd.xml:118
