@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-08 22:24+0900\n"
-"PO-Revision-Date: 2026-09-08 22:23+0900\n"
+"POT-Creation-Date: 2026-09-09 04:06+0900\n"
+"PO-Revision-Date: 2026-09-09 04:05+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30301,12 +30301,12 @@ msgstr "<command>corelist</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:157
 msgid "A command line front end to Module::CoreList"
-msgstr ""
+msgstr "Module::CoreList의 명령행 프론트엔드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:159
 msgid "corelist"
-msgstr ""
+msgstr "corelist"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:165
@@ -30318,12 +30318,12 @@ msgstr "<command>cpan</command>"
 msgid ""
 "Interact with the Comprehensive Perl Archive Network (CPAN)  from the "
 "command line"
-msgstr ""
+msgstr "명령행에서 Comprehensive Perl Archive Network(CPAN)와 상호작용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:170
 msgid "cpan"
-msgstr ""
+msgstr "cpan"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/perl.xml:176
@@ -30369,6 +30369,8 @@ msgid ""
 "Converts <filename class=\"extension\">.h</filename> C header files to "
 "<filename class=\"extension\">.ph</filename> Perl header files"
 msgstr ""
+"<filename class=\"extension\">.h</filename> C 헤더 파일을 <filename "
+"class=\"extension\">.ph</filename> Perl 헤더 파일로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:203
@@ -30386,6 +30388,7 @@ msgid ""
 "Converts <filename class=\"extension\">.h</filename> C header files to Perl "
 "extensions"
 msgstr ""
+"<filename class=\"extension\">.h</filename> C 헤더 파일을 Perl 확장으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:214
@@ -30419,7 +30422,7 @@ msgstr "<command>json_pp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:233
 msgid "Converts data between certain input and output formats"
-msgstr ""
+msgstr "특정 입력 형식과 출력 형식 간에 데이터를 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:235
@@ -30437,6 +30440,8 @@ msgid ""
 "Can be used to configure the <filename class=\"libraryfile\">libnet</"
 "filename> Perl module"
 msgstr ""
+"<filename class=\"libraryfile\">libnet</filename> Perl 모듈을 설정하는 데 사"
+"용 가능"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:246
@@ -30557,7 +30562,7 @@ msgstr "<command>piconv</command>"
 #: en/chapter08/perl.xml:321
 msgid ""
 "A Perl version of the character encoding converter <command>iconv</command>"
-msgstr ""
+msgstr "문자 인코딩 변환기 <command>iconv</command>의 Perl 버전"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:324
@@ -30575,6 +30580,8 @@ msgid ""
 "A rough tool for converting Perl4 <filename class=\"extension\">.pl</"
 "filename> files to Perl5 <filename class=\"extension\">.pm</filename> modules"
 msgstr ""
+"Perl4 <filename class=\"extension\">.pl</filename> 파일을 Perl5 <filename "
+"class=\"extension\">.pm</filename> 모듈로 변환하기 위한 대략적인 도구"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:336
@@ -30589,7 +30596,7 @@ msgstr "<command>pod2html</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:344
 msgid "Converts files from pod format to HTML format"
-msgstr ""
+msgstr "파일 pod 형식을 HTML 형식으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:346
@@ -30604,7 +30611,7 @@ msgstr "<command>pod2man</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:354
 msgid "Converts pod data to formatted *roff input"
-msgstr ""
+msgstr "pod 데이터를 서식화된 *roff 입력으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:356
@@ -30619,7 +30626,7 @@ msgstr "<command>pod2text</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:364
 msgid "Converts pod data to formatted ASCII text"
-msgstr ""
+msgstr "pod 데이터를 서식화된 ASCII 텍스트로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:366
@@ -30649,7 +30656,7 @@ msgstr "<command>podchecker</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:384
 msgid "Checks the syntax of pod format documentation files"
-msgstr ""
+msgstr "pod 형식 문서 파일의 구문을 검사"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:386
@@ -30664,7 +30671,7 @@ msgstr "<command>podselect</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:394
 msgid "Displays selected sections of pod documentation"
-msgstr ""
+msgstr "pod 문서의 선택된 섹션을 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:396
