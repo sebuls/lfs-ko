@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-09 04:06+0900\n"
-"PO-Revision-Date: 2026-09-09 04:05+0900\n"
+"POT-Creation-Date: 2026-09-09 22:17+0900\n"
+"PO-Revision-Date: 2026-09-09 22:16+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -30011,6 +30011,8 @@ msgid ""
 "This option enables Just-in-time compiling, which can greatly speed up "
 "pattern matching."
 msgstr ""
+"이 옵션은 실시간(Just-in-time) 컴파일을 활성화하여 패턴 매칭 속도를 크게 향상"
+"시킬 수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:81
@@ -30020,7 +30022,7 @@ msgstr "<parameter>--enable-pcre2-16</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pcre.xml:84
 msgid "This option enables 16 bit character support."
-msgstr ""
+msgstr "이 옵션은 16비트 문자를 지원한다"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:90
@@ -30030,7 +30032,7 @@ msgstr "<parameter>--enable-pcre2-32</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pcre.xml:93
 msgid "This option enables 32 bit character support."
-msgstr ""
+msgstr "이 옵션은 32비트 문자를 지원한다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:99
@@ -30040,7 +30042,7 @@ msgstr "<parameter>--enable-pcre2grep-libz</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/pcre.xml:102
 msgid "This option adds support for reading .gz compressed files to pcre2grep."
-msgstr ""
+msgstr "이 옵션은 pcre2grep 에 .gz 압축 파일 읽기 지원을 추가합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:108
@@ -30051,7 +30053,7 @@ msgstr "<parameter>--enable-pcre2grep-libbz2</parameter>"
 #: en/chapter08/pcre.xml:111
 msgid ""
 "This option adds support for reading .bz2 compressed files to pcre2grep."
-msgstr ""
+msgstr "이 옵션은 pcre2grep에 .bz2 압축 파일 읽기 지원을 추가합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/pcre.xml:117
