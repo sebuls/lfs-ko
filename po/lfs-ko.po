@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-10 22:44+0900\n"
-"PO-Revision-Date: 2026-09-10 22:44+0900\n"
+"POT-Creation-Date: 2026-09-11 04:45+0900\n"
+"PO-Revision-Date: 2026-09-11 04:45+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -21607,7 +21607,7 @@ msgstr "<command>sprof</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/glibc.xml:839
 msgid "Reads and displays shared object profiling data"
-msgstr "Reads and displays shared object profiling data"
+msgstr "공유 개체 프로파일링 데이터를 읽고 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/glibc.xml:841
@@ -40662,7 +40662,7 @@ msgstr "<filename class=\"libraryfile\">libzstd</filename>"
 #: en/chapter08/zstd.xml:126
 msgid ""
 "The library implementing lossless data compression, using the ZSTD algorithm"
-msgstr ""
+msgstr "ZSTD 알고리즘을 사용하여 무손실 데이터 압축을 구현하는 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/zstd.xml:129
@@ -40692,7 +40692,7 @@ msgstr "LFS-Bootscripts-&lfs-bootscripts-version;"
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter09/bootscripts.xml:20 en/chapter09/usage.xml:15
 msgid "Bootscripts"
-msgstr ""
+msgstr "Bootscripts"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/bootscripts.xml:26
