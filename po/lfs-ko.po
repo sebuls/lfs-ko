@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-11 04:45+0900\n"
-"PO-Revision-Date: 2026-09-11 04:45+0900\n"
+"POT-Creation-Date: 2026-09-13 03:59+0900\n"
+"PO-Revision-Date: 2026-09-13 03:58+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -17468,6 +17468,8 @@ msgid ""
 "Used by <command>dumpe2fs</command>, <command>chattr</command>, and "
 "<command>lsattr</command>"
 msgstr ""
+"<command>dumpe2fs</command>, <command>chattr</command>, 및 <command>lsattr</"
+"command> 가 씀"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/e2fsprogs.xml:537
@@ -19903,7 +19905,7 @@ msgid ""
 "gettext, and /usr/share/gettext-&gettext-version;"
 msgstr ""
 "/usr/lib/gettext, /usr/share/doc/gettext-&gettext-version;, /usr/share/"
-"gettext, and /usr/share/gettext-&gettext-version;"
+"gettext, 및 /usr/share/gettext-&gettext-version;"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/gettext.xml:109
@@ -19960,7 +19962,7 @@ msgstr "<command>gettext.sh</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gettext.xml:143
 msgid "Primarily serves as a shell function library for gettext"
-msgstr "Primarily serves as a shell function library for gettext"
+msgstr "주로 gettext를 위한 셸 함수 라이브러리 역할"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gettext.xml:145
