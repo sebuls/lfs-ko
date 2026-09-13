@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-13 16:25+0900\n"
-"PO-Revision-Date: 2026-09-13 16:25+0900\n"
+"POT-Creation-Date: 2026-09-14 04:17+0900\n"
+"PO-Revision-Date: 2026-09-14 04:16+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -6716,7 +6716,7 @@ msgstr "더이상 안 쓰이는 name service cache daemon 을 빌드하지 않�
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter05/glibc.xml:136
 msgid "During this stage the following warning might appear:"
-msgstr "이 단계에서 다음 경고가 나타날 수 있습니다:"
+msgstr "이 단계에서 나타날 수 있는 경고:"
 
 #. type: Content of: <sect1><sect2><blockquote><screen>
 #: en/chapter05/glibc.xml:139
@@ -11750,6 +11750,8 @@ msgid ""
 "<productname>acl</productname> <productnumber>&acl-version;</productnumber> "
 "<placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>acl</productname> <productnumber>&acl-version;</productnumber> "
+"<placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/acl.xml:17
@@ -12141,6 +12143,8 @@ msgid ""
 "<productname>autoconf</productname> <productnumber>&autoconf-version;</"
 "productnumber> <placeholder type=\"address\" id=\"0\"/>"
 msgstr ""
+"<productname>autoconf</productname> <productnumber>&autoconf-version;</"
+"productnumber> <placeholder type=\"address\" id=\"0\"/>"
 
 #. type: Content of: <sect1><title>
 #: en/chapter08/autoconf.xml:17
@@ -12524,7 +12528,7 @@ msgstr "<command>aclocal-&am-minor-version;</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/automake.xml:106
 msgid "A hard link to <command>aclocal</command>"
-msgstr ""
+msgstr "<command>aclocal</command> 가리키는 하드 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/automake.xml:108
@@ -19585,7 +19589,7 @@ msgstr "<filename class=\"libraryfile\">libstdc++exp</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gcc.xml:662
 msgid "Experimental C++ Contracts library"
-msgstr "Experimental C++ Contracts library"
+msgstr "실험적 C++ Contracts 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gcc.xml:664
@@ -49093,7 +49097,7 @@ msgstr ""
 #. type: Content of: <sect1><variablelist><bridgehead>
 #: en/prologue/standards.xml:57
 msgid "Packages supplied by LFS needed to satisfy the LSB Requirements"
-msgstr ""
+msgstr "LSB 요구 사항을 충족하는 데 필요한 LFS 제공 패키지"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/prologue/standards.xml:63 en/prologue/standards.xml:111
@@ -49184,7 +49188,7 @@ msgstr "<emphasis>LSB Desktop:</emphasis>"
 #: en/appendices/dependencies.xml:3525 en/appendices/dependencies.xml:3539
 #: en/appendices/dependencies.xml:3563 en/appendices/dependencies.xml:3579
 msgid "None"
-msgstr "None"
+msgstr "없음"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/prologue/standards.xml:82 en/prologue/standards.xml:130
@@ -49226,6 +49230,9 @@ msgid ""
 "Glib2, GLU, Icon-naming-utils, Libjpeg-turbo, Libxml2, Mesa, Pango, Xdg-"
 "utils, Xorg"
 msgstr ""
+"Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig, Gdk-pixbuf, "
+"Glib2, GLU, Icon-naming-utils, Libjpeg-turbo, Libxml2, Mesa, Pango, Xdg-"
+"utils, Xorg"
 
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/prologue/standards.xml:132
@@ -49404,6 +49411,8 @@ msgid ""
 "The fixed-width text is also used to show filenames, such as <filename>/etc/"
 "ld.so.conf</filename>."
 msgstr ""
+"고정 폭 텍스트는  파일 이름을 표시하는 데도 사용됩니다. <filename>/etc/"
+"ld.so.conf</filename> 처럼."
 
 #. type: Content of: <sect1><note><para>
 #: en/prologue/typography.xml:44
@@ -49478,7 +49487,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:71
 msgid "<replaceable>&lt;REPLACED TEXT&gt;</replaceable>"
-msgstr ""
+msgstr "<replaceable>&lt;REPLACED TEXT&gt;</replaceable>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:73
@@ -49492,7 +49501,7 @@ msgstr ""
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:76
 msgid "<replaceable>[OPTIONAL TEXT]</replaceable>"
-msgstr ""
+msgstr "<replaceable>[OPTIONAL TEXT]</replaceable>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:78
@@ -49502,7 +49511,7 @@ msgstr "이 형식은 선택적인 텍스트를 감싸는 데 쓰입니다."
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:80
 msgid "<ulink role='man' url='&man;passwd.5'>passwd(5)</ulink>"
-msgstr ""
+msgstr "<ulink role='man' url='&man;passwd.5'>passwd(5)</ulink>"
 
 #. type: Content of: <sect1><para>
 #: en/prologue/typography.xml:82
@@ -53634,6 +53643,8 @@ msgid ""
 "<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
 "url='&blfs-book;general/elogind.html'>elogind</ulink> </phrase>"
 msgstr ""
+"<phrase revision='systemd'>None</phrase> <phrase revision='sysv'> <ulink "
+"url='&blfs-book;general/elogind.html'>elogind</ulink> </phrase>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2674
@@ -53747,6 +53758,8 @@ msgid ""
 "<ulink url=\"&blfs-book;general/libarchive.html\">libarchive</ulink> and "
 "<ulink url=\"https://thrysoee.dk/editline/\">libedit</ulink>"
 msgstr ""
+"<ulink url=\"&blfs-book;general/libarchive.html\">libarchive</ulink> 및 "
+"<ulink url=\"https://thrysoee.dk/editline/\">libedit</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:2959
@@ -54005,6 +54018,7 @@ msgstr "Expat, Glibc, and Perl"
 msgid ""
 "<ulink url=\"https://metacpan.org/pod/LWP::UserAgent\">LWP::UserAgent</ulink>"
 msgstr ""
+"<ulink url=\"https://metacpan.org/pod/LWP::UserAgent\">LWP::UserAgent</ulink>"
 
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3473
@@ -54029,7 +54043,7 @@ msgstr "Binutils, Coreutils, GCC, Glibc, Gzip, Lz4, Make, Xz, 및 Zlib"
 #. type: Content of: <appendix><segmentedlist><seglistitem><seg>
 #: en/appendices/dependencies.xml:3570
 msgid "Binutils, File, GCC, Kmod, Libelf, Python, and &systemd-udev;"
-msgstr ""
+msgstr "Binutils, File, GCC, Kmod, Libelf, Python, 및 &systemd-udev;"
 
 #. type: Attribute 'xreflabel' of: <appendix>
 #: en/appendices/license.xml:8 en/appendices/udev-rules.xml:9
@@ -54607,7 +54621,7 @@ msgstr ""
 #. type: Attribute 'xreflabel' of: <sect1><itemizedlist><listitem><important><orderedlist><listitem>
 #: en/part3intro/generalinstructions.xml:106
 msgid "Package build instructions"
-msgstr ""
+msgstr "패키지 빌드 명령"
 
 #. type: Content of: <sect1><itemizedlist><listitem><important><orderedlist><listitem><para>
 #: en/part3intro/generalinstructions.xml:107
@@ -54819,7 +54833,7 @@ msgstr "문맥에 따라 사용되는 용어들을 먼저 정의하겠습니다.
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:68
 msgid "The build"
-msgstr ""
+msgstr "빌드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:69
@@ -54832,7 +54846,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:73
 msgid "The host"
-msgstr ""
+msgstr "호스트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:74
@@ -54846,7 +54860,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/part3intro/toolchaintechnotes.xml:79
 msgid "The target"
-msgstr ""
+msgstr "타깃"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/part3intro/toolchaintechnotes.xml:80
@@ -54878,14 +54892,14 @@ msgstr ""
 #: en/part3intro/toolchaintechnotes.xml:136
 #: en/part3intro/toolchaintechnotes.xml:319
 msgid "Stage"
-msgstr ""
+msgstr "스테이지"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:102
 #: en/part3intro/toolchaintechnotes.xml:136
 #: en/part3intro/toolchaintechnotes.xml:319
 msgid "Build"
-msgstr ""
+msgstr "빌드"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:102
@@ -54899,7 +54913,7 @@ msgstr "Host"
 #: en/part3intro/toolchaintechnotes.xml:137
 #: en/part3intro/toolchaintechnotes.xml:320
 msgid "Target"
-msgstr ""
+msgstr "타깃"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:103
@@ -55001,7 +55015,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><title>
 #: en/part3intro/toolchaintechnotes.xml:156
 msgid "Implementation of Cross-Compilation for LFS"
-msgstr ""
+msgstr "LFS 위한 크로스 컴파일 구현"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/part3intro/toolchaintechnotes.xml:159
