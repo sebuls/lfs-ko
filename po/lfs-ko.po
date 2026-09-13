@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-13 03:59+0900\n"
-"PO-Revision-Date: 2026-09-13 03:58+0900\n"
+"POT-Creation-Date: 2026-09-13 16:25+0900\n"
+"PO-Revision-Date: 2026-09-13 16:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -13636,7 +13636,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/bison.xml:88
 msgid "bison"
-msgstr ""
+msgstr "bison"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/bison.xml:94
@@ -14211,7 +14211,7 @@ msgstr ""
 #: en/chapter08/cleanup.xml:39
 #, no-wrap
 msgid "<userinput>userdel -r tester</userinput>"
-msgstr ""
+msgstr "<userinput>userdel -r tester</userinput>"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/coreutils.xml:26
@@ -14699,7 +14699,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:357
 msgid "cp"
-msgstr ""
+msgstr "cp"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:363
@@ -15153,7 +15153,7 @@ msgstr "Reports or checks Message Digest 5 (MD5) checksums"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/coreutils.xml:654
 msgid "md5sum"
-msgstr ""
+msgstr "md5sum"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/coreutils.xml:660
@@ -20397,7 +20397,7 @@ msgid ""
 "data in the FHS-compliant locations:"
 msgstr ""
 "일부 Glibc 프로그램은 FHS를 준수하지 않는 <filename class=\"directory\">/var/"
-"db</filename>디렉터리를 씁니다. 런타임 데이터를 저장하기 위해. 이러한 프로그"
+"db</filename> 디렉터리를 씁니다. 런타임 데이터를 저장하기 위해. 이러한 프로그"
 "램들이 런타임 데이터를 FHS를 준수하는 위치에 저장하도록 다음 패치를 적용:"
 
 #. type: Content of: <sect1><sect2><para>
@@ -22623,7 +22623,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:122
 msgid "chem"
-msgstr ""
+msgstr "chem"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/groff.xml:128
@@ -23064,7 +23064,7 @@ msgstr "<command>pdfroff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:411
 msgid "Creates pdf documents using groff"
-msgstr ""
+msgstr "groff 이용한 pdf 문서 생성"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:413
@@ -23128,7 +23128,7 @@ msgstr "<command>post-grohtml</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:454 en/chapter08/groff.xml:476
 msgid "Translates the output of GNU <command>troff</command> to HTML"
-msgstr ""
+msgstr "GNU <command>troff</command> 출력을 HTML로 번역"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:457
@@ -23189,7 +23189,7 @@ msgstr "<command>roff2dvi</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:501
 msgid "Transforms roff files into DVI format"
-msgstr ""
+msgstr "roff 파일을 DVI 형식으로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:503
@@ -23204,7 +23204,7 @@ msgstr "<command>roff2html</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:511
 msgid "Transforms roff files into HTML format"
-msgstr ""
+msgstr "roff 파일을 HTML 형식으로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:513
@@ -23219,7 +23219,7 @@ msgstr "<command>roff2pdf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:521
 msgid "Transforms roff files into PDFs"
-msgstr ""
+msgstr "roff 파일을 PDF 로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:523
@@ -23234,7 +23234,7 @@ msgstr "<command>roff2ps</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:531
 msgid "Transforms roff files into ps files"
-msgstr ""
+msgstr "roff 파일을 ps 파일로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:533
@@ -23249,7 +23249,7 @@ msgstr "<command>roff2text</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:541
 msgid "Transforms roff files into text files"
-msgstr ""
+msgstr "roff 파일을 텍스트 파일로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:543
@@ -23264,7 +23264,7 @@ msgstr "<command>roff2x</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/groff.xml:551
 msgid "Transforms roff files into other formats"
-msgstr ""
+msgstr "roff 파일을 다른 형식으로 번환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/groff.xml:553
