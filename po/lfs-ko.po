@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-14 04:17+0900\n"
-"PO-Revision-Date: 2026-09-14 04:16+0900\n"
+"POT-Creation-Date: 2026-09-15 02:08+0900\n"
+"PO-Revision-Date: 2026-09-15 02:08+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -41407,6 +41407,8 @@ msgid ""
 "This variable specifies the key mapping table for the keyboard. If unset, it "
 "defaults to <literal>us</literal>."
 msgstr ""
+"이 변수는 키보드의 키 매핑 테이블을 지정합니다. 설정 안 하면 기본값은 "
+"<literal>us</literal>."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:46
@@ -41419,6 +41421,8 @@ msgid ""
 "This variable can be used to configure a second toggle keymap and is unset "
 "by default."
 msgstr ""
+"이 변수는 두 번째 토글 키맵을 설정하는 데 사용할 수 있으며 기본값은 설정 안 "
+"되어있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:54 en/chapter09/usage.xml:392
@@ -41428,7 +41432,7 @@ msgstr "FONT"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:56
 msgid "This variable specifies the font used by the virtual console."
-msgstr ""
+msgstr "이 변수는 가상 콘솔에서 사용하는 글꼴을 지정."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:62
@@ -41438,7 +41442,7 @@ msgstr "FONT_MAP"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:64
 msgid "This variable specifies the console map to be used."
-msgstr ""
+msgstr "이 변수는 사용할 콘솔 맵을 지정."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:69
@@ -41448,7 +41452,7 @@ msgstr "FONT_UNIMAP"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:71
 msgid "This variable specifies the Unicode font map."
-msgstr ""
+msgstr "이 변수는 유니코드 글꼴 맵을 지정."
 
 #. type: Content of: <sect1><para>
 #: en/chapter09/consoled.xml:77
@@ -41566,7 +41570,7 @@ msgstr "list-x11-keymap-models"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:129
 msgid "Shows known X11 keyboard mapping models."
-msgstr ""
+msgstr "알려진 X11 키보드 매핑 모델들을 표시."
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:134
@@ -41576,7 +41580,7 @@ msgstr "list-x11-keymap-layouts"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:136
 msgid "Shows known X11 keyboard mapping layouts."
-msgstr ""
+msgstr "알려진 X11 키보드 매핑 레이아웃들을 표시"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:141
@@ -41586,7 +41590,7 @@ msgstr "list-x11-keymap-variants"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:143
 msgid "Shows known X11 keyboard mapping variants."
-msgstr ""
+msgstr "알려진 X11 키보드 매핑 변수들을 표시"
 
 #. type: Content of: <sect1><variablelist><varlistentry><term>
 #: en/chapter09/consoled.xml:148
@@ -41596,7 +41600,7 @@ msgstr "list-x11-keymap-options"
 #. type: Content of: <sect1><variablelist><varlistentry><listitem><para>
 #: en/chapter09/consoled.xml:150
 msgid "Shows known X11 keyboard mapping options."
-msgstr ""
+msgstr "알려진 X11 키보드 매핑 옵션들을 표시"
 
 #. type: Content of: <sect1><note><para>
 #: en/chapter09/consoled.xml:156
