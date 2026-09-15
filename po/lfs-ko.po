@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-15 02:08+0900\n"
-"PO-Revision-Date: 2026-09-15 02:08+0900\n"
+"POT-Creation-Date: 2026-09-16 04:57+0900\n"
+"PO-Revision-Date: 2026-09-16 04:56+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -44509,6 +44509,13 @@ msgid ""
 "will initially be exposed to userspace with a fixed name, permissions, and "
 "owner."
 msgstr ""
+"장치 파일은 커널에 의해 <systemitem class=\"filesystem\">devtmpfs</"
+"systemitem> 파일 시스템에 생성됩니다. 장치 노드를 등록하려는 모든 드라이버는 "
+"이를 수행하기 위해 (드라이버 코어를 통해) <systemitem "
+"class=\"filesystem\">devtmpfs</systemitem> 를 씁니다. <systemitem "
+"class=\"filesystem\">devtmpfs</systemitem> 인스턴스가 <filename "
+"class=\"directory\">/dev</filename> 에 마운트되면, 장치 노드는 초기 고정 이"
+"름, 권한 및 소유자와 함께 사용자 공간에 나타납니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:109
@@ -44522,6 +44529,13 @@ msgid ""
 "change its permissions, owner, or group, or modify the internal "
 "<command>udevd</command> database entry (name) for that object."
 msgstr ""
+"잠시 후, 커널은 <command> udevd</command>에 uevent를 보냅니다. <filename "
+"class=\"directory\">/etc/udev/rules.d</filename>, <filename "
+"class=\"directory\">/usr/lib/udev/rules.d</filename>, 및 <filename "
+"class=\"directory\">/run/udev/rules.d</filename> 디렉터리 내의 파일들에 지정"
+"된 규칙에 따라, <command> udevd</command>는 장치 노드에 대한 추가 심볼릭 링크"
+"를 생성하거나, 권한, 소유자 또는 그룹을 변경하거나, 해당 객체에 대한 내부 "
+"<command>udevd</command> 데이터베이스 항목(이름)을 수정합니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:118
@@ -44532,6 +44546,10 @@ msgid ""
 "whatever <systemitem class=\"filesystem\">devtmpfs</systemitem> used "
 "initially."
 msgstr ""
+"이 세 디렉터리의 규칙들은 번호가 매겨져 있으며 세 디렉터리 모두 하나로 병합됩"
+"니다. <command>udevd</command>가 생성 중인 장치에 대한 규칙을 찾을 수 없으"
+"면, 권한과 소유권을 <systemitem class=\"filesystem\">devtmpfs</systemitem> "
+"가 처음에 사용했던 상태 그대로 둡니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/udev.xml:125
