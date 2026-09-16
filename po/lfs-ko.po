@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-16 04:57+0900\n"
-"PO-Revision-Date: 2026-09-16 04:56+0900\n"
+"POT-Creation-Date: 2026-09-17 05:04+0900\n"
+"PO-Revision-Date: 2026-09-17 05:04+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -32371,6 +32371,8 @@ msgid ""
 "This switch enables linking against the system version of "
 "<application>Expat</application>."
 msgstr ""
+"이 스위치는 시스템 버전의 <application>Expat</application>에 대한 링크를 활성"
+"화."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/python.xml:72
@@ -32384,6 +32386,9 @@ msgid ""
 "interpreter is built twice; tests performed on the first build are used to "
 "improve the optimized final version."
 msgstr ""
+"이 스위치는 광범위하지만 시간이 오래 걸리는 최적화 단계를 활성화합니다. 인터"
+"프리터가 두 번 빌드됩니다. 첫 번째 빌드에서 수행된 테스트는 최적화된 최종 버"
+"전을 개선하는 데 쓰임."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:88
@@ -32530,7 +32535,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/python.xml:167
 msgid "If desired, install the preformatted documentation:"
-msgstr ""
+msgstr "원하시는 경우, 미리 서식화된 문서를 설치."
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/python.xml:169
@@ -32555,13 +32560,14 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><title>
 #: en/chapter08/python.xml:178
 msgid "The meaning of the documentation install commands:"
-msgstr ""
+msgstr "문서 설치 명령어의 뜻:"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/python.xml:181
 msgid ""
 "<option>--no-same-owner</option> and <option>--no-same-permissions</option>"
 msgstr ""
+"<option>--no-same-owner</option> 및 <option>--no-same-permissions</option>"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/python.xml:183
@@ -32570,6 +32576,9 @@ msgid ""
 "Without these options, <application>tar</application> will install the "
 "package files with the upstream creator's values."
 msgstr ""
+"설치된 파일들이 올바른 소유권과 권한을 갖도록 합니다. 이 옵션들이 없으면 "
+"<application>tar</application>는 업스트림 제작자의 값으로 패키지 파일을 설치"
+"합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/python.xml:195
@@ -32955,7 +32964,7 @@ msgstr "단 한 번의 패스로 텍스트 파일을 필터링 및 변환"
 #: en/chapter08/setuptools.xml:14
 #, no-wrap
 msgid "&setuptools-url;"
-msgstr ""
+msgstr "&setuptools-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter08/setuptools.xml:12
