@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-17 05:04+0900\n"
-"PO-Revision-Date: 2026-09-17 05:04+0900\n"
+"POT-Creation-Date: 2026-09-19 02:48+0900\n"
+"PO-Revision-Date: 2026-09-19 02:47+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -23999,7 +23999,7 @@ msgstr "<command>uncompress</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:112
 msgid "Decompresses compressed files"
-msgstr ""
+msgstr "압축 파일 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:114
@@ -24014,7 +24014,7 @@ msgstr "<command>zcat</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:122
 msgid "Decompresses the given gzipped files to standard output"
-msgstr ""
+msgstr "주어인 gzip 파일을 표준 출력으로 압축해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:124
@@ -24044,7 +24044,7 @@ msgstr "<command>zdiff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:142
 msgid "Runs <command>diff</command> on gzipped files"
-msgstr ""
+msgstr "Gziip된 파일에 <command>diff</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:144
@@ -24074,7 +24074,7 @@ msgstr "<command>zfgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gzip.xml:162
 msgid "Runs <command>fgrep</command> on gzipped files"
-msgstr ""
+msgstr "Gziip된 파일에 <command>fgrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gzip.xml:164
@@ -40102,7 +40102,7 @@ msgstr "<command>lzcmp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:128
 msgid "Runs <command>cmp</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축된 파일에 <command>cmp</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:130
@@ -40117,7 +40117,7 @@ msgstr "<command>lzdiff</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:138
 msgid "Runs <command>diff</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축된 파일에 <command>diff</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:140
@@ -40147,7 +40147,7 @@ msgstr "<command>lzfgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:158
 msgid "Runs <command>fgrep</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축된 파일에 <command>fgrep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:160
@@ -40162,7 +40162,7 @@ msgstr "<command>lzgrep</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:168
 msgid "Runs <command>grep</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축된 파일에 <command>grep</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:170
@@ -40177,7 +40177,7 @@ msgstr "<command>lzless</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:178
 msgid "Runs <command>less</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축된 파일에 <command>less</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:180
@@ -40192,7 +40192,7 @@ msgstr "<command>lzma</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:188
 msgid "Compresses or decompresses files using the LZMA format"
-msgstr ""
+msgstr "LZMA 형식 사용한 파일을 압축 또는 해제"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:190
@@ -40207,7 +40207,7 @@ msgstr "<command>lzmadec</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:198
 msgid "A small and fast decoder for LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축 파일 용 작고 빠른 디코더"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:200
@@ -40222,7 +40222,7 @@ msgstr "<command>lzmainfo</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:208
 msgid "Shows information stored in the LZMA compressed file header"
-msgstr ""
+msgstr "LZMA 압축된 파일 해더에 저장된 정보 보기 "
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:210
@@ -40237,7 +40237,7 @@ msgstr "<command>lzmore</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:218
 msgid "Runs <command>more</command> on LZMA compressed files"
-msgstr ""
+msgstr "LZMA 압축 파일에 <command>more</command> 실행"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:220
@@ -40252,7 +40252,7 @@ msgstr "<command>unlzma</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:228
 msgid "Decompresses files using the LZMA format"
-msgstr ""
+msgstr "LZMA 형식 사용한 파일 압축 풀기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:230
@@ -40267,7 +40267,7 @@ msgstr "<command>unxz</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/xz.xml:238
 msgid "Decompresses files using the XZ format"
-msgstr ""
+msgstr "XZ 형식 사용한 파일 압축 풀기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/xz.xml:240
