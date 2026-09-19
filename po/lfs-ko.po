@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-19 02:48+0900\n"
-"PO-Revision-Date: 2026-09-19 02:47+0900\n"
+"POT-Creation-Date: 2026-09-20 03:27+0900\n"
+"PO-Revision-Date: 2026-09-20 03:26+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -19812,7 +19812,7 @@ msgstr "<filename class=\"libraryfile\">libgdbm</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/gdbm.xml:139
 msgid "Contains functions to manipulate a hashed database"
-msgstr ""
+msgstr "해시된 데이터베이스를 조작하는 함수 포함"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/gdbm.xml:141
@@ -24379,6 +24379,9 @@ msgid ""
 "program, which is used by scripts to pass messages to the System Log Daemon. "
 "Do not install it because Util-linux installs a more recent version."
 msgstr ""
+"이 옵션은 스크립트가 시스템 로그 데몬에 메시지를 전달하는 데 쓰이는 "
+"<command>logger</command> 프로그램을 설치하는 것을 막습니다. 이것을 설치하지 "
+"마세요.왜? Util-linux가 더 최신 버전을 설치하므로."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:74
@@ -24392,6 +24395,9 @@ msgid ""
 "client, which is out of date. Instructions for a better <command>whois</"
 "command> client are in the BLFS book."
 msgstr ""
+"이 옵션은 오래된 Inetutils <command>whois</command> 클라이언트의 빌드를 비활"
+"성화합니다. 더 나은 <command>whois</command> 클라이언트에 대한 지침은 BLFS 책"
+"에 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:83
@@ -24405,6 +24411,9 @@ msgid ""
 "due to security issues. The functions provided by these programs can be "
 "provided by the <application>openssh</application> package in the BLFS book."
 msgstr ""
+"이 매개변수는 보안 문제로 인해 안 써야 하는 구식 프로그램들의 빌드를 비활성화"
+"합니다. 이 프로그램이 제공하는 기능은 BLFS 책의 <application>openssh</"
+"application> 패키지로 제공될 수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/inetutils.xml:93
@@ -24420,6 +24429,10 @@ msgid ""
 "on trusted networks. Note that better replacements are available for many of "
 "these servers."
 msgstr ""
+"이 옵션은 Inetutils 패키지의 일부로 포함된 다양한 네트워크 서버들의 설치를 비"
+"활성화합니다. 이 서버들은 기본적인 LFS 시스템에 적절하지 않다고 간주됩니다. "
+"일부는 본질적으로 안전하지 않으며 신뢰할 수 있는 네트워크에서만 안전하다고 여"
+"겨집니다. 이러한 서버 중 상당수에 대해 더 나은 대안을 사용할 수 있음에 유의."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/inetutils.xml:128
@@ -24454,7 +24467,7 @@ msgstr "<command>dnsdomainname</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:154
 msgid "Show the system's DNS domain name"
-msgstr ""
+msgstr "시스템의 DNS 도메인 이름을 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:156
@@ -24469,7 +24482,7 @@ msgstr "<command>ftp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:164
 msgid "Is the file transfer protocol program"
-msgstr ""
+msgstr " file transfer protocol 프로그램"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:166
@@ -24515,7 +24528,7 @@ msgstr "<command>ping</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:194
 msgid "Sends echo-request packets and reports how long the replies take"
-msgstr ""
+msgstr "echo-request 패킷을 보내고 응답이 얼마나 걸리나 보고"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:197
@@ -24530,7 +24543,7 @@ msgstr "<command>ping6</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:205
 msgid "A version of <command>ping</command> for IPv6 networks"
-msgstr ""
+msgstr "IPv6 위한 <command>ping</command> 버전"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:207
@@ -24545,7 +24558,7 @@ msgstr "<command>talk</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:215
 msgid "Is used to chat with another user"
-msgstr ""
+msgstr "다른 사용자와 chat 할 때 쓰임"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:217
@@ -24560,7 +24573,7 @@ msgstr "<command>telnet</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:225
 msgid "An interface to the TELNET protocol"
-msgstr ""
+msgstr "TELNET 프로토콜 인터페이스"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:227
@@ -24575,7 +24588,7 @@ msgstr "<command>tftp</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:235
 msgid "A trivial file transfer program"
-msgstr ""
+msgstr "trivial file transfer program"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:237
@@ -27094,7 +27107,7 @@ msgstr "<command>libtool</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/libtool.xml:94
 msgid "Provides generalized library-building support services"
-msgstr "Provides generalized library-building support services"
+msgstr "일반화된 라이브러리 빌드 지원 서비스 제공"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/libtool.xml:96
