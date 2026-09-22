@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-22 22:16+0900\n"
-"PO-Revision-Date: 2026-09-22 22:16+0900\n"
+"POT-Creation-Date: 2026-09-23 04:24+0900\n"
+"PO-Revision-Date: 2026-09-23 04:23+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -12619,6 +12619,9 @@ msgid ""
 "filename> library that is already installed on the system rather than using "
 "its own readline version."
 msgstr ""
+"이 옵션은 Bash가 시스템에 이미 설치된 <filename "
+"class=\"libraryfile\">readline</filename> 디렉터리를 자체 readline 버전 대신 "
+"사용하도록 지시."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/bash.xml:69 en/chapter08/coreutils.xml:122
@@ -24497,7 +24500,7 @@ msgstr "<command>hostname</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:174
 msgid "Reports or sets the name of the host"
-msgstr "Reports or sets the name of the host"
+msgstr "host 이름을 보고하거나 설정"
 
 #. type: Content of: <sect1><sect2><indexterm><primary>
 #: en/chapter08/inetutils.xml:176 en/chapter09/network.xml:145
@@ -24513,7 +24516,7 @@ msgstr "<command>ifconfig</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/inetutils.xml:184
 msgid "Manages network interfaces"
-msgstr "Manages network interfaces"
+msgstr "네트워크 인터페이스 관리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/inetutils.xml:186
@@ -24719,7 +24722,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/intltool.xml:81
 msgid "/usr/share/doc/intltool-&intltool-version; and /usr/share/intltool"
-msgstr "/usr/share/doc/intltool-&intltool-version; and /usr/share/intltool"
+msgstr "/usr/share/doc/intltool-&intltool-version; 및 /usr/share/intltool"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/intltool.xml:92
@@ -30667,7 +30670,7 @@ msgstr "<command>pod2usage</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:374
 msgid "Prints usage messages from embedded pod docs in files"
-msgstr "Prints usage messages from embedded pod docs in files"
+msgstr "파일 내에 임베디된 pod 문서에서 사용법 메시지를 출력"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:376
@@ -30775,7 +30778,7 @@ msgstr "<command>shasum</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/perl.xml:458
 msgid "Prints or checks SHA checksums"
-msgstr "Prints or checks SHA checksums"
+msgstr "SHA checksums을 출력 또는 점검"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/perl.xml:460
