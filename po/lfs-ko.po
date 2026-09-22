@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-20 03:27+0900\n"
-"PO-Revision-Date: 2026-09-20 03:26+0900\n"
+"POT-Creation-Date: 2026-09-22 22:16+0900\n"
+"PO-Revision-Date: 2026-09-22 22:16+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -26110,7 +26110,7 @@ msgstr "<parameter>-D manpages=false</parameter>"
 msgid ""
 "This option disables generating the man pages which requires an external "
 "program."
-msgstr ""
+msgstr "이 옵션은 외부 프로그램이 필요한 매뉴얼 페이지 생성을 비활성화합니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/kmod.xml:72
@@ -26174,7 +26174,7 @@ msgstr "<command>insmod</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kmod.xml:118
 msgid "Installs a loadable module in the running kernel"
-msgstr ""
+msgstr "실행 중인 커널에 로드 가능한 모듈을 설치"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kmod.xml:120
@@ -26204,7 +26204,7 @@ msgstr "<command>lsmod</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kmod.xml:138
 msgid "Lists currently loaded modules"
-msgstr ""
+msgstr "현재 로드된 모듈 나열"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kmod.xml:140
@@ -26241,6 +26241,8 @@ msgid ""
 "Uses a dependency file, created by <command>depmod</command>, to "
 "automatically load relevant modules"
 msgstr ""
+"<command>depmod</command>가 생성한 의존성 파일을 사용하여 관련 모듈을 자동으"
+"로 로드"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kmod.xml:162
@@ -26255,7 +26257,7 @@ msgstr "<command>rmmod</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/kmod.xml:170
 msgid "Unloads modules from the running kernel"
-msgstr ""
+msgstr "실행되는 커널로부터 모듈은 내림"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kmod.xml:172
@@ -26272,6 +26274,7 @@ msgstr "<filename class=\"libraryfile\">libkmod</filename>"
 msgid ""
 "This library is used by other programs to load and unload kernel modules"
 msgstr ""
+"이 라이브러리는 다른 프로그램들이 커널 모듈을 로드하고 언로드할 때 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/kmod.xml:183
@@ -28583,8 +28586,8 @@ msgid ""
 "Puts the created wheels into the <filename class='directory'>dist</filename> "
 "directory."
 msgstr ""
-"Puts the created wheels into the <filename class='directory'>dist</filename> "
-"directory."
+"생성된 wheel 파일을 <filename class='directory'>dist</filename> 디렉터리에 넣"
+"습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/meson.xml:69
