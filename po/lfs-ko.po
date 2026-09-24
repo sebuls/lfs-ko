@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-24 09:26+0900\n"
-"PO-Revision-Date: 2026-09-24 09:25+0900\n"
+"POT-Creation-Date: 2026-09-24 23:01+0900\n"
+"PO-Revision-Date: 2026-09-24 23:01+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -13031,7 +13031,7 @@ msgstr "<parameter>--enable-ld=default</parameter>"
 msgid ""
 "Build the original bfd linker and install it as both ld (the default linker) "
 "and ld.bfd."
-msgstr ""
+msgstr "원본 bfd 링커를 빌드하고 기본 링커인 ld와 ld.bfd 둘 다로 설치하세요."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:75
@@ -13041,7 +13041,7 @@ msgstr "<parameter>--enable-plugins</parameter>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:77
 msgid "Enables plugin support for the linker."
-msgstr ""
+msgstr "링커에 대한 플러그인 지원을 활성화."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/binutils.xml:82 en/chapter08/gcc.xml:131
@@ -40811,12 +40811,6 @@ msgid ""
 "filename>, <filename>/fastboot</filename>, and <filename>/forcefsck</"
 "filename> files"
 msgstr ""
-"Removes files that should not be preserved between reboots, such as those in "
-"<filename class=\"directory\">/run/</filename> and <filename "
-"class=\"directory\">/var/lock/</filename>; it re-creates <filename>/run/"
-"utmp</filename> and removes the possibly present <filename>/etc/nologin</"
-"filename>, <filename>/fastboot</filename>, and <filename>/forcefsck</"
-"filename> files"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter09/bootscripts.xml:94
@@ -41893,12 +41887,6 @@ msgid ""
 "usually named <command>rc</command>, controls the execution of a set of "
 "additional scripts that perform the tasks required to initialize the system."
 msgstr ""
-"System V is the classic boot process that has been used in Unix and Unix-"
-"like systems such as Linux since about 1983.  It consists of a small "
-"program, <command>init</command>, that sets up basic processes such as "
-"<command>login</command> (via getty) and runs a script.  This script, "
-"usually named <command>rc</command>, controls the execution of a set of "
-"additional scripts that perform the tasks required to initialize the system."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/introduction.xml:32
