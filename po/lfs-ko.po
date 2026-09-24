@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-23 04:24+0900\n"
-"PO-Revision-Date: 2026-09-23 04:23+0900\n"
+"POT-Creation-Date: 2026-09-24 09:26+0900\n"
+"PO-Revision-Date: 2026-09-24 09:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -13394,6 +13394,8 @@ msgid ""
 "the particular information to display; the information shown is useful to "
 "programmers who are working on the compilation tools"
 msgstr ""
+"표시할 특정 정보를 제어하는 옵션과 함께 주어진 오브젝트 파일에 대한 정보를 표"
+"시. 표시되는 정보는 컴파일 도구를 작업하는 프로그래머에게 유용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:300
@@ -13428,7 +13430,7 @@ msgstr "<command>readelf</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:320
 msgid "Displays information about ELF type binaries"
-msgstr ""
+msgstr "ELF 형식 바이너리 관련 정보 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:322
@@ -13443,7 +13445,7 @@ msgstr "<command>size</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:330
 msgid "Lists the section sizes and the total size for the given object files"
-msgstr ""
+msgstr "주어진 객체 파일의 섹션 크기와 전체 크기를 나열"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:333
@@ -13480,7 +13482,7 @@ msgstr "<command>strip</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:355
 msgid "Discards symbols from object files"
-msgstr ""
+msgstr "객체 파일에서 심볼 버리기"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:357
@@ -13495,7 +13497,7 @@ msgstr "<filename class=\"libraryfile\">libbfd</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:365
 msgid "The Binary File Descriptor library"
-msgstr ""
+msgstr "바이너리 파일 설명자 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:367
@@ -13510,7 +13512,7 @@ msgstr "<filename class=\"libraryfile\">libctf</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:375
 msgid "The Compat ANSI-C Type Format debugging support library"
-msgstr ""
+msgstr "호환 ANSI-C 타입 형식 디버깅 지원 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:377
@@ -13525,7 +13527,7 @@ msgstr "<filename class=\"libraryfile\">libctf-nobfd</filename>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:385
 msgid "A libctf variant which does not use libbfd functionality"
-msgstr ""
+msgstr "libbfd 기능을 안 쓰는 libctf 변형"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:387
@@ -13541,6 +13543,7 @@ msgstr "<filename class=\"libraryfile\">libgprofng</filename>"
 #: en/chapter08/binutils.xml:395
 msgid "A library containing most routines used by <command>gprofng</command>"
 msgstr ""
+"<command>gprofng</command> 에서 쓰는 대부분의 루틴을 포함하는 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:398
@@ -54956,7 +54959,7 @@ msgstr "빌드"
 #: en/part3intro/toolchaintechnotes.xml:136
 #: en/part3intro/toolchaintechnotes.xml:319
 msgid "Host"
-msgstr "Host"
+msgstr "호스트"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><thead><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:103
@@ -54970,7 +54973,7 @@ msgstr "타깃"
 #: en/part3intro/toolchaintechnotes.xml:137
 #: en/part3intro/toolchaintechnotes.xml:320
 msgid "Action"
-msgstr "Action"
+msgstr "액션"
 
 #. type: Content of: <sect1><sect2><informaltable><tgroup><tbody><row><entry>
 #: en/part3intro/toolchaintechnotes.xml:107
