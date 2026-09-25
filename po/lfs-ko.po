@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-24 23:01+0900\n"
-"PO-Revision-Date: 2026-09-24 23:01+0900\n"
+"POT-Creation-Date: 2026-09-25 18:25+0900\n"
+"PO-Revision-Date: 2026-09-25 18:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -36667,12 +36667,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/tcl.xml:186
 msgid "The Tcl library"
-msgstr "Tcl라이브러리"
+msgstr "Tcl 라이브러리"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/tcl.xml:188
 msgid "libtcl&tcl-major-version;.so"
-msgstr "libtcl&tcl-major-version;.so"
+msgstr "`libtcl&tcl-major-version;.so"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/tcl.xml:194
@@ -44213,6 +44213,7 @@ msgid ""
 "<command>coredumpctl -1 info</command>: shows the information from the last "
 "core dump."
 msgstr ""
+"<command>coredumpctl -1 info</command>: 마지막 코어 덤프의 정보를 표시."
 
 #. type: Content of: <sect1><sect2><itemizedlist><listitem><para>
 #: en/chapter09/systemd-custom.xml:238
@@ -44220,6 +44221,8 @@ msgid ""
 "<command>coredumpctl -1 debug</command>: loads the last core dump into "
 "<ulink url=\"&blfs-book;general/gdb.html\">GDB</ulink>."
 msgstr ""
+"<command>coredumpctl -1 debug</command>: 마지막 코어 덤프를 <ulink "
+"url=\"&blfs-book;general/gdb.html\">GDB</ulink> 안에 로드."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter09/systemd-custom.xml:244
@@ -44344,6 +44347,11 @@ msgid ""
 "command for systemd. This completely disables the ability of systemd to kill "
 "user processes at session end."
 msgstr ""
+"<emphasis>Disable at build-time</emphasis>: systemd 용 <command>meson</"
+"command> 명령어에 <parameter>-D default-kill-user-processes=false</"
+"parameter> 스위치를 추가하여 systemd를 빌드하는 동안 기본적으로 링거링"
+"(lingering)을 비활성화할 수 있습니다. 이는 세션 종료 시 사용자 프로세스를 종"
+"료하는 systemd의 기능을 완전히 비활성화합니다."
 
 #. type: Content of: <sect1><title>
 #: en/chapter09/udev.xml:11
