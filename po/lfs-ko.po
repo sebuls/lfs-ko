@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-25 18:25+0900\n"
-"PO-Revision-Date: 2026-09-25 18:25+0900\n"
+"POT-Creation-Date: 2026-09-26 08:26+0900\n"
+"PO-Revision-Date: 2026-09-26 08:25+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -43193,7 +43193,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/networkd.xml:204
 msgid "To disable systemd-resolved, issue the following command:"
-msgstr ""
+msgstr "systemd-resolved 를 비활성화 하려면, 다음 명령 실행:"
 
 #. type: Content of: <sect1><sect2><sect3><note><screen>
 #: en/chapter09/networkd.xml:206
@@ -43211,6 +43211,12 @@ msgid ""
 "<filename>/run/systemd/resolve/stub-resolv.conf</filename>. So it's "
 "unnecessary to create a <filename>/etc/resolv.conf</filename> manually."
 msgstr ""
+"DNS 구성을 위해 <command>systemd-resolved</command> 사용할 때, 이 서비스는 "
+"<filename>/run/systemd/resolve/stub-resolv.conf</filename> 파일을 생성합니"
+"다. 그리고 <filename>/etc/resolv.conf</filename> 파일이 없으면, "
+"<command>systemd-resolved</command>에 의해 해당 파일의 심볼릭 링크로 자동 생"
+"성됩니다. 따라서 <filename>/etc/resolv.conf</filename>를 수동으로 만들 필요"
+"가 없습니다."
 
 #. type: Content of: <sect1><sect2><sect3><note><para>
 #: en/chapter09/networkd.xml:219
