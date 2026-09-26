@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-26 15:21+0900\n"
-"PO-Revision-Date: 2026-09-26 15:21+0900\n"
+"POT-Creation-Date: 2026-09-26 19:01+0900\n"
+"PO-Revision-Date: 2026-09-26 19:01+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -44610,6 +44610,21 @@ msgid ""
 "thus loading all modules whose aliases match this string after wildcard "
 "expansion."
 msgstr ""
+"모듈로 컴파일된 장치 드라이버에는 내부에 별칭(alias)이 포함되어 있을 수 있습"
+"니다. 별칭은 <command>modinfo</command> 프로그램의 출력 결과에서 확인할 수 있"
+"으며, 대개 해당 모듈이 지원하는 장치의 버스별 식별자와 관련이 있습니다. 예를 "
+"들어, <emphasis>snd-fm801</emphasis> 드라이버는 공급업체 ID가 0x1319이고 장"
+"치 ID가 0x0801인 PCI 장치를 지원하며, "
+"<literal>pci:v00001319d00000801sv*sd*bc04sc01i*</literal> 별칭을 가집니다. 대"
+"부분의 장치에서 버스 드라이버는 <systemitem class=\"filesystem\">sysfs</"
+"systemitem>를 통해 해당 장치를 처리할 드라이버의 별칭을 내보냅니다. 예를 들"
+"어 <filename>/sys/bus/pci/devices/0000:00:0d.0/modalias</filename> 파일에는 "
+"<literal>pci:v00001319d00000801sv00001319sd00001319bc04sc01i00</literal> 같"
+"은 문자열이 들어있을 수 있습니다. udev와 함께 제공되는 기본 규칙 덕분에 "
+"<command>udevd</command>는 (sysfs의 modalias 파일 내용과 같아야 하는) "
+"<envar>MODALIAS</envar> uevent 환경 변수 값을 가지고 <command>/sbin/"
+"modprobe</command>를 호출하게 되며, 이에 따라 와일드카드 확장 후 이 문자열과 "
+"별칭이 일치하는 모든 모듈이 로드됩니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:146
@@ -44619,6 +44634,9 @@ msgid ""
 "will be loaded if it is available. See below for ways in which the loading "
 "of unwanted drivers can be prevented."
 msgstr ""
+"이 예시에서 이는 <emphasis>snd-fm801</emphasis> 외에도, 만약 사용 가능한 상태"
+"라면 구식(이고 원치 않는) <emphasis>forte</emphasis> 드라이버까지 함께 로드됨"
+"을 의미합니다. 원치 않는 드라이버의 로드를 방지하는 방법은 아래 참고."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:152
@@ -44626,6 +44644,8 @@ msgid ""
 "The kernel itself is also able to load modules for network protocols, "
 "filesystems, and NLS support on demand."
 msgstr ""
+"커널 자체도 필요에 따라 네트워크 프로토콜, 파일 시스템, NLS 지원을 위한 모듈"
+"을 직접 로드할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/udev.xml:158
@@ -44640,6 +44660,9 @@ msgid ""
 "uevent. This uevent is then handled by <command>udevd</command> as described "
 "above."
 msgstr ""
+"범용 직렬 버스(USB) MP3 플레이어 같은 장치를 연결하면, 커널은 장치가 연결되었"
+"음을 인식하고 uevent를 생성합니다. 이 uevent는 앞서 설명한 대로 "
+"<command>udevd</command> 가 처리합니다."
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter09/udev.xml:170
@@ -44652,6 +44675,7 @@ msgid ""
 "There are a few possible problems when it comes to automatically creating "
 "device nodes."
 msgstr ""
+"장치 노드를 자동으로 생성할 때 발생할 수 있는 몇 가지 문제점이 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/udev.xml:176
@@ -44668,6 +44692,12 @@ msgid ""
 "load properly-written drivers for INPUT, IDE, PCI, USB, SCSI, SERIO, and "
 "FireWire devices."
 msgstr ""
+"Udev는 버스 고유의 별칭이 있고 버스 드라이버가 필요한 별칭을 <systemitem "
+"class=\"filesystem\">sysfs</systemitem>에 올바르게 내보내는 때만 모듈을 로드"
+"합니다. 그 외의 경우에는 다른 방법으로 모듈 로드를 처리해야 합니다. Linux-"
+"&linux-version; 기준, udev는 INPUT, IDE, PCI, USB, SCSI, SERIO 및 FireWire 장"
+"치용으로 올바르게 작성된 드라이버를 정상적으로 로드하는 것으로 알려져 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:185
@@ -44678,6 +44708,10 @@ msgid ""
 "sys/bus</filename> and check whether there is a <filename>modalias</"
 "filename> file there."
 msgstr ""
+"필요한 장치 드라이버가 udev에 필요한 지원을 갖추고 있는지 확인하려면, 모듈 이"
+"름을 인수로 전달하여 <command>modinfo</command> 실행하세요. 이제 <filename "
+"class=\"directory\">/sys/bus</filename> 아래에서 장치 디렉터리를 찾아보고 그"
+"곳에 <filename>modalias</filename> 파일이 있는지 확인하시오."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:191
@@ -44688,6 +44722,10 @@ msgid ""
 "driver. Load the driver without the help from udev and expect the issue to "
 "be fixed later."
 msgstr ""
+"<systemitem class=\"filesystem\">sysfs</systemitem>에 <filename>modalias</"
+"filename> 파일이 존재하고, 드라이버가 해당 장치를 지원하여 직접 통신할 수 있"
+"음에도 별칭이 없다면 이는 드라이버의 버그입니다. udev의 도움 없이 드라이버를 "
+"로드하고 향후 문제가 수정되기를 기다리시오."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:197
@@ -44698,6 +44736,11 @@ msgid ""
 "Linux-&linux-version;, this is the case with ISA busses. Expect this issue "
 "to be fixed in later kernel versions."
 msgstr ""
+"<filename class=\"directory\">/sys/bus</filename> 아래의 관련 디렉터리에 "
+"<filename>modalias</filename> 파일이 없다면, 이는 커널 개발자들이 아직 해당 "
+"버스 유형에 modalias 지원을 추가하지 않았음을 의미합니다. Linux-&linux-"
+"version;의 경우, ISA 버스가 여기에 해당합니다. 이 문제는 향후 커널 버전에서 "
+"수정될 것으로 기대됩니다."
 
 #. type: Content of: <sect1><sect2><sect3><para>
 #: en/chapter09/udev.xml:203
@@ -44706,6 +44749,9 @@ msgid ""
 "<emphasis>snd-pcm-oss</emphasis> and non-hardware drivers such as "
 "<emphasis>loop</emphasis> at all."
 msgstr ""
+"Udev는 <emphasis>snd-pcm-oss</emphasis> 같은 <quote>wrapper</quote> 드라이버"
+"나 <emphasis>loop</emphasis>와 같은 비하드웨어 드라이버는 애초에 로드하도록 "
+"설계되지 않았습니다."
 
 #. type: Content of: <sect1><sect2><sect3><title>
 #: en/chapter09/udev.xml:210
