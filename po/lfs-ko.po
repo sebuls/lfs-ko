@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-26 08:26+0900\n"
-"PO-Revision-Date: 2026-09-26 08:25+0900\n"
+"POT-Creation-Date: 2026-09-26 15:21+0900\n"
+"PO-Revision-Date: 2026-09-26 15:21+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46548,7 +46548,7 @@ msgstr ""
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:80
 msgid "Prepare for compilation by running the following command:"
-msgstr "Prepare for compilation by running the following command:"
+msgstr "컴파일 준비 위해 다음 명령:"
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:84
@@ -46557,6 +46557,9 @@ msgid ""
 "recommends that this command be issued prior to each kernel compilation. Do "
 "not rely on the source tree being clean after un-tarring."
 msgstr ""
+"이 작업은 커널 소스 트리가 완벽하게 정리된 상태를 유지하도록 보장합니다. 커"
+"널 팀은 매번 커널을 빌드하기 전에 이 명령어를 실행할 것을 권장합니다. 압축을 "
+"해제한 직후에 소스 트리가 깨끗할 것이라고 믿으면 안 됩니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter10/kernel.xml:89
@@ -46564,6 +46567,8 @@ msgid ""
 "There are several ways to configure the kernel options. Usually, this is "
 "done through a menu-driven interface, for example:"
 msgstr ""
+"커널 옵션을 설정하는 방법에는 여러 가지가 있습니다. 대개, 다음과 같은 메뉴 기"
+"반 인터페이스를 통해 수행:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter10/kernel.xml:92
@@ -46588,6 +46593,9 @@ msgid ""
 "be needed for a proper menuconfig ncurses interface line drawing on a UTF-8 "
 "linux text console."
 msgstr ""
+"이 설정은 로캘을 호스트에서 사용하는 설정으로 지정합니다. UTF-8 리눅스 텍스"
+"트 콘솔에서 menuconfig의 ncurses 인터페이스가 선(box-drawing)을 올바르게 그리"
+"려면 이 작업이 필요할 수 있습니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter10/kernel.xml:104
@@ -46597,6 +46605,10 @@ msgid ""
 "host.  You can alternatively use instead the host's value of <envar>$LC_ALL</"
 "envar> or <envar>$LC_CTYPE</envar>."
 msgstr ""
+"사용한다면 <replaceable>&lt;host_LANG_value&gt;</replaceable> 를 호스트의 "
+"<envar>$LANG</envar> 변수 값으로 반드시 교체하세요. 대신 호스트의 "
+"<envar>$LC_ALL</envar>또는 <envar>$LC_CTYPE</envar> 값을 사용할 수도 있습니"
+"다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter10/kernel.xml:113
@@ -46609,6 +46621,8 @@ msgid ""
 "This launches an ncurses menu-driven interface. For other (graphical) "
 "interfaces, type <command>make help</command>."
 msgstr ""
+"이 명령어는 ncurses 기반의 메뉴 인터페이스를 실행합니다. 다른 (그래픽) 인터페"
+"이스를 사용하려면 <command>make help</command> 입력하세요."
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:126
