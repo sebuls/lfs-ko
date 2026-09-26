@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-26 19:01+0900\n"
-"PO-Revision-Date: 2026-09-26 19:01+0900\n"
+"POT-Creation-Date: 2026-09-27 05:21+0900\n"
+"PO-Revision-Date: 2026-09-27 05:20+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -46699,6 +46699,11 @@ msgid ""
 "<parameter>CONFIG_X86_X2APIC</parameter> because an option only shows up "
 "after its dependencies are selected."
 msgstr ""
+"64비트 시스템을 빌드한다면 몇 가지 추가 기능을 활성화하세요. menuconfig를 사"
+"용한다면 <parameter>CONFIG_PCI_MSI</parameter> 먼저 활성화한 다음 "
+"<parameter>CONFIG_IRQ_REMAP</parameter>, 마지막으로 "
+"<parameter>CONFIG_X86_X2APIC</parameter> 를 활성화하세요. 왜냐면, 종속성이 선"
+"택된 후에야 옵션이 나타나므로,"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:154
@@ -46706,6 +46711,8 @@ msgid ""
 "If you are building a 32-bit system, adjust the configuration so the kernel "
 "will be able to use up to 4GB physical RAM:"
 msgstr ""
+"32비트 시스템을 빌드하려면, 커널이 최대 4GB 물리 RAM을 사용할 수 있도록 설정 "
+"조정:"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:161
@@ -46714,6 +46721,9 @@ msgid ""
 "for the partition is <filename>/dev/nvme*</filename> instead of <filename>/"
 "dev/sd*</filename>), enable NVME support or the LFS system won't boot:"
 msgstr ""
+"LFS 시스템용 파티션이 NVME SSD에 있으면(즉, 파티션의 장치 노드가 <filename>/"
+"dev/sd*</filename> 대신 <filename>/dev/nvme*</filename>), NVME 지원을 활성화"
+"하십시오. 안 그러면 LFS 시스템이 부팅 안 됨:"
 
 #. type: Content of: <sect1><sect2><note><para>
 #: en/chapter10/kernel.xml:171
