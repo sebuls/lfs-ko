@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lfs.13\n"
-"POT-Creation-Date: 2026-09-27 05:21+0900\n"
-"PO-Revision-Date: 2026-09-27 05:20+0900\n"
+"POT-Creation-Date: 2026-10-03 21:44+0900\n"
+"PO-Revision-Date: 2026-10-03 21:44+0900\n"
 "Last-Translator: Sangdo Jun <sebuls@gmail.com>\n"
 "Language-Team: Kor\n"
 "Language: ko\n"
@@ -1341,6 +1341,11 @@ msgid ""
 "class='filesystem'>tmpfs</systemitem> on /tmp to make access to temporary "
 "files faster."
 msgstr ""
+"/tmp &ndash; 별도의 /tmp 디렉터리는 드물지만 씬 클라이언트(thin client)를 구"
+"성할 때는 유용합니다. 이 디렉터리를 사용하는 경우, 보통 몇 기가바이트를 넘을 "
+"필요가 없습니다. RAM이 충분하다면 /tmp에 <systemitem "
+"class='filesystem'>tmpfs</systemitem>를 마운트하여 임시 파일에 대한 접근 속도"
+"를 더 빠르게 만들 수 있습니다."
 
 #. type: Content of: <sect1><sect2><sect3><itemizedlist><listitem><para>
 #: en/chapter02/creatingpartition.xml:180
@@ -13085,6 +13090,15 @@ msgid ""
 "on an Intel machine that generates code that can be executed on PowerPC "
 "machines)."
 msgstr ""
+"보통, tooldir(실행 파일이 최종적으로 위치할 디렉터리)는 <filename "
+"class=\"directory\">$(exec_prefix)/$(target_alias)</filename>로 설정됩니다. "
+"예를 들어 x86_64 머신에서는 이를 <filename class=\"directory\">/usr/x86_64-"
+"pc-linux-gnu</filename>로 확장합니다. 이는 커스텀 시스템이므로 <filename "
+"class=\"directory\">/usr</filename> 내의 이러한 타겟 지정 디렉터리는 필요하"
+"지 않습니다. 시스템을 교차 컴파일(cross-compile)하는 데 사용하는 경우(예: 인"
+"텔 머신에서 PowerPC 머신에서 실행할 수 있는 코드를 생성하는 패키지를 컴파일하"
+"는 경우) <filename class=\"directory\">$(exec_prefix)/$(target_alias)</"
+"filename>가 쓰입니다."
 
 #. type: Content of: <sect1><sect2><important><para>
 #: en/chapter08/binutils.xml:118
@@ -13236,7 +13250,7 @@ msgstr "<command>as</command>"
 msgid ""
 "An assembler that assembles the output of <command>gcc</command> into object "
 "files"
-msgstr ""
+msgstr "<command>gcc</command>의 출력을 객체 파일로 어셈블하는 어셈블러"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:194
@@ -13254,6 +13268,8 @@ msgid ""
 "Used by the linker to de-mangle C++ and Java symbols and to keep overloaded "
 "functions from clashing"
 msgstr ""
+"링커가 C++ 및 자바(Java) 심볼의 맹글링을 해제(de-mangle)하고 오버로드된 함수"
+"들이 충돌하는 것을 방지하기 위해 사용"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:205
@@ -13283,7 +13299,7 @@ msgstr "<command>elfedit</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:223
 msgid "Updates the ELF headers of ELF files"
-msgstr ""
+msgstr "Elf 파일 Elf 헤더 업데이트"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:225
@@ -13298,7 +13314,7 @@ msgstr "<command>gprof</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:233
 msgid "Displays call graph profile data"
-msgstr ""
+msgstr "콜 그래프 프로필 데이터를 표시"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:235
@@ -13313,7 +13329,7 @@ msgstr "<command>gprofng</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:243
 msgid "Gathers and analyzes performance data"
-msgstr ""
+msgstr "성능 데이터 수집 및 분석"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:245
@@ -13331,6 +13347,8 @@ msgid ""
 "A linker that combines a number of object and archive files into a single "
 "file, relocating their data and tying up symbol references"
 msgstr ""
+"여러 개의 객체 파일(object file)과 아카이브 파일을 하나의 파일로 결합하고, 이"
+"들의 데이터를 재배치하며, 심볼 참조를 연결(tie up)하는 링커"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:257
@@ -13345,7 +13363,7 @@ msgstr "<command>ld.bfd</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:265
 msgid "A hard link to <command>ld</command>"
-msgstr ""
+msgstr "<command>ld</command> 가리키는 하드 링크"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:267
@@ -13360,7 +13378,7 @@ msgstr "<command>nm</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:275
 msgid "Lists the symbols occurring in a given object file"
-msgstr ""
+msgstr "주어진 객체 파일에 포함된 심볼들을 나열"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:277
@@ -13375,7 +13393,7 @@ msgstr "<command>objcopy</command>"
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: en/chapter08/binutils.xml:285
 msgid "Translates one type of object file into another"
-msgstr ""
+msgstr "하나의 개체 파일을 다른 형식으로 변환"
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><indexterm><primary>
 #: en/chapter08/binutils.xml:287
@@ -17762,7 +17780,7 @@ msgstr "<userinput remap=\"pre\">patch -Np1 -i ../&expect-gcc15-patch;</userinpu
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:74
 msgid "Prepare Expect for compilation:"
-msgstr "Prepare Expect for compilation:"
+msgstr "컴파일 위한 Expect 준비:"
 
 #. type: Content of: <sect1><sect2><screen>
 #: en/chapter08/expect.xml:76
@@ -17793,6 +17811,8 @@ msgid ""
 "This parameter is needed to tell <command>configure</command> where the "
 "<command>tclConfig.sh</command> script is located."
 msgstr ""
+"이 매개변수는 <command>configure</command> 스크립트에 <command>tclConfig.sh</"
+"command> 스크립트가 위치한 경로를 알려주기 위해 필요합니다."
 
 #. type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: en/chapter08/expect.xml:96
@@ -17803,6 +17823,7 @@ msgstr "<parameter>--with-tclinclude=/usr/include</parameter>"
 #: en/chapter08/expect.xml:98
 msgid "This explicitly tells Expect where to find Tcl's internal headers."
 msgstr ""
+"이 매개변수는 Expect에 Tcl의 내부 헤더가 어디에 있는지 명시적으로 알려줍니다."
 
 #. type: Content of: <sect1><sect2><para>
 #: en/chapter08/expect.xml:105 en/chapter08/flit-core.xml:43
@@ -34671,7 +34692,7 @@ msgstr ""
 #: en/chapter08/systemd.xml:14 en/chapter08/udev.xml:14
 #, no-wrap
 msgid "&systemd-url;"
-msgstr ""
+msgstr "&systemd-url;"
 
 #. type: Content of: <sect1><sect1info>
 #: en/chapter08/systemd.xml:12
@@ -34685,7 +34706,7 @@ msgstr ""
 #. type: Content of: <sect1><title>
 #: en/chapter08/systemd.xml:17
 msgid "Systemd-&systemd-version;"
-msgstr ""
+msgstr "Systemd-&systemd-version;"
 
 #. type: Content of: <sect1><indexterm><primary>
 #: en/chapter08/systemd.xml:20
@@ -34704,12 +34725,12 @@ msgstr ""
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:34
 msgid "&systemd-fin-sbu;"
-msgstr ""
+msgstr "&systemd-fin-sbu;"
 
 #. type: Content of: <sect1><sect2><segmentedlist><seglistitem><seg>
 #: en/chapter08/systemd.xml:35
 msgid "&systemd-fin-du;"
-msgstr ""
+msgstr "&systemd-fin-du;"
 
 #. type: Content of: <sect1><sect2><title>
 #: en/chapter08/systemd.xml:41
